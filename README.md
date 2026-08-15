@@ -1,2 +1,2 @@
 # Odin-KBase
-Knowledge base of Odin, containing all project documentation and information. 
+Literature repository of Odin, containing all research papers and metadata. 
