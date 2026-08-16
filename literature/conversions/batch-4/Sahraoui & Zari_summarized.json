@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.5281/zenodo.17074353⟩",
+  "designation": "international-algorithm-specific",
+  "title": "Targeting Social Assistance Beneficiaries Using Machine Learning: A Poverty Probability-Based Approach Ciblage des bnficiaires de laide sociale par lapprentissage automatique: Une approche fonde sur la probabilit de pauvret Chaymae Sahraoui, Tarek Zari",
+  "authors": "Targeting Social Assistance Beneficiaries Using Machine",
+  "year": 2016,
+  "venue": "International Journal of Accounting",
+  "odin_topics": [
+    "14.A",
+    "4.B",
+    "5.C"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "14.A",
+        "name": "14.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Targeting Social Assistance Beneficiaries Using Machine Learning: A Poverty Prob"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Targeting Social Assistance Beneficiaries Using Machine Learning: A Poverty Prob",
+    "Year: 2016",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Sahraoui & Zari_marked.md",
+      "converted_at": "2026-07-21T08:26:44Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "paper_id": "10.63282/3050-922X.ICRCEDA25-143",
+  "designation": "international-algorithm-specific",
+  "title": "Explainable and Context-Aware Financial Nudges via Event-Driven Microservices",
+  "authors": "Mandaleeka, A. P.",
+  "year": 2025,
+  "venue": "International Journal of Emerging Research in Engineering and Technology",
+  "odin_topics": ["5.A", "6.A", "7.A", "7.B", "7.C", "8.A", "9.A", "9.B", "10.A", "10.B", "10.C", "11.A", "11.B", "12.B", "14.B"],
+  "tldr": "Presents a modular, event-driven microservices framework that integrates SHAP-based explainable AI to deliver context-aware, transparent financial nudges in real-time fintech applications.",
+  "problem_and_motivation": "Existing financial notification systems often deliver generic, opaque alerts that fail to engage users or build trust. There is a significant gap in integrating real-time context, explainability, and modular scalability into a single financial advisory system.",
+  "approach": [
+    "Proposes a Kafka-based microservices architecture with five modular services: Data Ingestor, Context Processor, Nudge Decision Engine, XAI Module, and Notification Service.",
+    "Ingests multi-modal data streams including transactions, user behavior signals, and opt-in geolocation via open banking APIs.",
+    "Enriches events with historical behavior, budget goals, temporal patterns, and location context to create a holistic user snapshot.",
+    "Uses a Nudge Decision Engine with rule-based logic or a trained ML model to classify events as 'nudge-worthy'.",
+    "Integrates a SHAP-based XAI module that generates feature attributions and converts them into human-readable, templated explanations.",
+    "Evaluates the framework on synthetic and anonymized financial datasets to simulate diverse user behaviors.",
+    "Implements performance optimizations like caching, fast SHAP variants, and asynchronous explanation generation via Kafka.",
+    "Adheres to security and privacy principles including OAuth 2.0, TLS encryption, RBAC, and user consent management."
+  ],
+  "findings": [
+    "num: Contextual triggers (e.g., time, location, prior habits) are effective in increasing user engagement.",
+    "num: Explainability boosts users' perceived relevance and trust in the system.",
+    "The proposed framework bridges the gap between intelligent personalization and transparent automation in fintech.",
+    "SHAP provides local interpretability with formal guarantees of fairness, consistency, and local accuracy.",
+    "The microservices architecture ensures modularity, fault isolation, and data minimization for privacy-sensitive environments."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Diagram of Personalized Financial Alerts Nudge System → Shows high-level flow from user to notification.",
+    "Figure 2: System overview of microservices and Kafka topics → Illustrates modular, event-driven pipeline architecture.",
+    "Figure 3: Example of system data ingestion → Depicts sequence from bank account to generated alert.",
+    "Table 1: Example SHAP Attribution Output → Lists features with corresponding SHAP values for a nudge decision."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, a model-agnostic framework for interpreting predictions."},
+    {"term": "Kafka", "definition": "A distributed event-streaming platform for building real-time data pipelines."},
+    {"term": "PII", "definition": "Personally Identifiable Information."},
+    {"term": "RBAC", "definition": "Role-Based Access Control."}
+  ],
+  "citations": [
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 1,
+      "paragraph": 0,
+      "claim": "Introduced SHAP, a model-agnostic approach that explains predictions by attributing contributions to individual input features.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kim",
+      "year": 2021,
+      "page": 1,
+      "paragraph": 0,
+      "claim": "Adopted explainability frameworks in regulated financial contexts like credit scoring and financial ratings.",
+      "role": "context"
+    },
+    {
+      "author": "Ben-David",
+      "year": 2021,
+      "page": 1,
+      "paragraph": 0,
+      "claim": "User study found that explanations like SHAP outputs increased trust and compliance with automated financial advice.",
+      "role": "finding"
+    },
+    {
+      "author": "Kreps",
+      "year": 2011,
+      "page": 1,
+      "paragraph": 0,
+      "claim": "Kafka is widely adopted for real-time event processing due to its strong delivery guarantees, partitioning, and replayability.",
+      "role": "baseline"
+    },
+    {
+      "author": "Carl",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Kafka offers strong guarantees for event ordering and service decoupling essential in real-time financial pipelines.",
+      "role": "methodology"
+    },
+    {
+      "author": "Arsenault",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Emphasized the need for temporal explainability in financial applications.",
+      "role": "context"
+    },
+    {
+      "author": "Maree",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Employed SHAP in explainable trading models and responsible transaction classifiers.",
+      "role": "context"
+    },
+    {
+      "author": "Kumar",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Applied SHAP for explainable reinforcement learning on financial stock trading.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Uses behavioral signals and interaction history to adapt nudges."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Uses ML classification to predict 'nudge-worthy' events."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Core to the system, uses budget thresholds and goals to trigger alerts."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Provides actionable advice based on budget adherence."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "low", "justification": "Mentions budget goals but focuses on alerting, not formal optimization."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "medium", "justification": "Detects deviations from spending baselines and flag budget violations."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "contextual", "justification": "System designed for modern fintech apps, but design principles not detailed."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "contextual", "justification": "Mentions in-app notifications and user-facing explanations."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Dedicated section on security, privacy-by-design, encryption, and consent."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "high", "justification": "A primary motivation; uses XAI to build trust and transparency."},
+      {"code": "10.C", "name": "Consent Management and Data Portability", "relevance": "medium", "justification": "Explicitly discusses user consent management and data minimization."},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "high", "justification": "Core goal is to increase engagement through relevance and explainability."},
+      {"code": "11.B", "name": "Retention Mechanisms and Engagement Design", "relevance": "medium", "justification": "Nudges and explanations aim to improve user retention and behavioral compliance."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Evaluation on synthetic data to demonstrate effectiveness of triggers and explainability."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Focuses on real-time deployment in a microservices architecture."}
+    ],
+    "contribution_to_field": "This paper contributes a novel applied framework that integrates event-driven microservices, machine learning, and explainable AI for real-time financial nudging. It addresses the gap between personalization and transparency in fintech by embedding SHAP-based explanations directly into a modular, scalable pipeline. The architecture provides a practical blueprint for deploying ethical, user-centered financial advisory systems that prioritize trust, privacy, and regulatory compliance. By combining Kafka's event streaming with XAI, it demonstrates a path toward more interpretable and auditable automated financial advice.",
+    "directly_justifies": [
+      "Contextual triggers like time, location, and prior habits effectively increase user engagement.",
+      "Explainability boosts users' perceived relevance and trust in the system.",
+      "The architecture adheres to principles of modularity, fault isolation, and data minimization.",
+      "SHAP provides local interpretability with formal guarantees of fairness, consistency, and local accuracy."
+    ],
+    "limits": [
+      "The system is evaluated only on synthetic and anonymized datasets, not real-world user data.",
+      "The specific ML model used for classification is not identified or detailed.",
+      "Real-world effectiveness of nudges and explanations requires behavioral A/B testing.",
+      "Computational cost of SHAP in real-time applications is acknowledged but not fully addressed."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper is highly relevant to domains concerning budgeting (7.A, 7.B), user trust and privacy (10.A, 10.B, 10.C), and engagement (11.A, 11.B). It has medium relevance to predictive modeling (6.A), anomaly detection (8.A), and algorithm evaluation (12.B) as these are components of the proposed system. Domains like culturally specific financial practices (2.A, 2.B, 2.C, 2.D) and savings/debt management (13.A, 13.B, 13.C) were rejected as the paper does not focus on these specific Filipino or user-declared contexts. The topic codes selected reflect the paper's core contributions to modular, explainable, and secure real-time financial advisory systems."
+  },
+  "limitations": [
+    "Evaluation is conducted on synthetic and anonymized data, not real-world user data [unacknowledged].",
+    "Specific performance metrics (e.g., engagement increase percentage) are not provided [unacknowledged].",
+    "Details of the ML model architecture and training process are omitted [unacknowledged].",
+    "Scalability and latency benchmarks for the proposed architecture are not presented [unacknowledged]."
+  ],
+  "remember_this": [
+    "Contextual triggers and explainability improve user engagement and trust.",
+    "The system uses SHAP to generate human-readable explanations for financial nudges.",
+    "Microservices and Kafka enable modular, scalable, and fault-tolerant real-time processing.",
+    "Security and privacy are enforced through OAuth, TLS, RBAC, and user consent management.",
+    "Future work includes behavioral A/B testing and extension to debt and savings domains."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mandaleeka_marked.md",
+      "converted_at": "2026-07-21T14:11:04Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

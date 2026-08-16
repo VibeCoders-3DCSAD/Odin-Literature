@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.21203/rs.3.rs-7730348/v1",
+  "designation": "international",
+  "title": "Mental Accounting Through Two-stage Budgeting Under Bounded Rationality",
+  "authors": "Mental Accounting Through Two",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "13.B",
+    "4.B"
+  ],
+  "tldr": "We propose a model that generalizes two-stage budgeting to incorporate frictions which induce budgetary stickiness and mental accounting behavior. Inattention limits the fungibility of money across mental accounts, leading to boundedly rational behavior. Financial atten- tiveness is cognitively costly, so consumers might re-assess only a subset of spending budgets every period. Over- or under-spen",
+  "problem_and_motivation": "We propose a model that generalizes two-stage budgeting to incorporate frictions which induce budgetary stickiness and mental accounting behavior. Inattention limits the fungibility of money across mental accounts, leading to boundedly rational behavior. Financial atten- tiveness is cognitively costly, so consumers might re-assess only a subset of spending budgets every period. Over- or under-spending affects future budgeting and expenditure decisions. Using agent-level weekly expenditure data, ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Mental Accounting Through Two-stage Budgeting Under Bounded Rationality"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Mental Accounting Through Two-stage Budgeting Under Bounded Rationality",
+    "Year: 2014",
+    "Designation: international"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pretnar et al_marked.md",
+      "converted_at": "2026-07-21T08:12:40Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

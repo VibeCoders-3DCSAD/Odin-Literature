@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1007/978-3-031-74325-6_10",
+  "designation": "international",
+  "title": "Performance Evaluation of Recurrent Neural Network Architectures",
+  "authors": "Das, A.; Biswas, S.; Mallik, S.; Bhowmick, S.",
+  "year": 2025,
+  "venue": "Springer Book Chapter (Proceedings of IEMTRIS 2024)",
+  "odin_topics": ["14.A"],
+  "tldr": "Educational chapter comparing foundational RNN architectures (Simple RNN, LSTM, GRU, Bidirectional LSTM) on time-series prediction, textual sentiment analysis, and image classification tasks.",
+  "problem_and_motivation": "Recurrent Neural Networks are widely used for sequential data but different architectures (vanilla RNN, LSTM, GRU, Bidirectional LSTM) have different strengths and limitations. Practitioners need clear comparative guidance on architecture selection.",
+  "approach": [
+    "Compared four RNN architectures: Simple RNN, LSTM, GRU, and Bidirectional LSTM.",
+    "Evaluated on three task types: time-series prediction (synthetic sine wave), textual sentiment analysis (IMDb reviews), and image classification (MNIST as sequence).",
+    "Used identical hyperparameters across architectures for fair comparison.",
+    "Metrics: training time, convergence speed, accuracy, and loss.",
+    "Provided detailed explanation of each architecture's mathematical formulation and gating mechanisms."
+  ],
+  "findings": [
+    "LSTM achieves best overall accuracy across all three tasks, particularly for long-sequence dependencies.",
+    "GRU matches LSTM accuracy on sentiment analysis with 15% faster training time.",
+    "Simple RNN struggles with long sequences due to vanishing gradient, performing poorly on sentiment analysis.",
+    "num: Bidirectional LSTM achieves 92.5% accuracy on sentiment vs. 89.2% for standard LSTM.",
+    "Bidirectional LSTM requires approximately 2x training time compared to standard LSTM.",
+    "For time-series prediction, all architectures converge but GRU offers best accuracy-speed trade-off."
+  ],
+  "key_figures_tables": [
+    "Table 1: Performance metrics across architectures and tasks",
+    "Figure 4: Training convergence curves for each architecture",
+    "Figure 6: Gradient magnitude comparison showing vanishing gradient in Simple RNN"
+  ],
+  "key_equations": [
+    {"equation": "h_t = tanh(W_hh · h_{t-1} + W_xh · x_t + b_h)", "explanation": "Simple RNN hidden state update."},
+    {"equation": "f_t = σ(W_f · [h_{t-1}, x_t] + b_f); i_t, o_t, C̃_t similarly", "explanation": "LSTM gating mechanism: forget, input, cell candidate, and output gates."},
+    {"equation": "z_t = σ(W_z · [h_{t-1}, x_t]); r_t = σ(W_r · [h_{t-1}, x_t]); h̃_t = tanh(W · [r_t ⊙ h_{t-1}, x_t])", "explanation": "GRU with update and reset gates — simplified LSTM."}
+  ],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory — RNN with gating mechanisms to control information flow and mitigate vanishing gradients."},
+    {"term": "GRU", "definition": "Gated Recurrent Unit — simplified LSTM with update and reset gates, fewer parameters."},
+    {"term": "Vanishing gradient", "definition": "Gradients shrink exponentially during backpropagation through time, preventing learning of long-range dependencies."}
+  ],
+  "citations": [
+    {"author": "Hochreiter", "year": 1997, "page": 0, "paragraph": 0, "claim": "LSTM introduces cell state and gating mechanisms to overcome vanishing gradient.", "role": "context"},
+    {"author": "Cho", "year": 2014, "page": 0, "paragraph": 0, "claim": "GRU simplifies LSTM architecture by combining forget and input gates.", "role": "context"},
+    {"author": "Graves", "year": 2005, "page": 0, "paragraph": 0, "claim": "Bidirectional RNNs process sequences in both forward and backward directions.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Comparative evaluation of RNN architectures applicable to financial time-series prediction in PFMS."}
+    ],
+    "contribution_to_field": "Provides a clear, reproducible comparison of foundational RNN architectures that can guide architecture selection for financial time-series prediction in PFMS. While the chapter uses generic benchmarks, the findings on LSTM vs. GRU trade-offs (accuracy vs. speed) are directly applicable to spending prediction and income forecasting modules.",
+    "directly_justifies": [
+      "LSTM achieves best accuracy for long-sequence dependencies at higher computational cost.",
+      "GRU offers the best accuracy-speed trade-off for time-series prediction tasks.",
+      "Bidirectional processing improves accuracy but doubles training time."
+    ],
+    "limits": [
+      "Educational chapter using synthetic and standard benchmarks, not financial-specific data. [unacknowledged]",
+      "Limited hyperparameter search; uses fixed settings. [unacknowledged]",
+      "Does not address financial sequence characteristics (seasonality, trends, regime changes). [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 14.A was flagged as high relevance because the paper provides foundational knowledge on RNN architectures applicable to PFMS time-series prediction. Domains 1-13 and 14.B were rejected as the paper is an educational chapter on neural architectures using generic benchmarks, without direct connection to PFMS tasks, user aspects, or the Philippines context."
+  },
+  "limitations": [
+    "Uses synthetic and standard benchmarks, not financial datasets. [unacknowledged]",
+    "Fixed hyperparameters limit architecture-specific optimization. [unacknowledged]",
+    "Does not address financial time-series characteristics. [unacknowledged]"
+  ],
+  "remember_this": [
+    "LSTM: best accuracy for long sequences, highest computational cost.",
+    "GRU: matches LSTM on sentiment, 15% faster training, best speed-accuracy trade-off for time-series.",
+    "Bidirectional LSTM: +3% accuracy but 2x training time.",
+    "Simple RNN: fails on long sequences due to vanishing gradient."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:02:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Das et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.1016/j.eswa.2024.124567",
+  "designation": "international-algorithm-specific",
+  "title": "Deep Neural Network Architectures for Financial Forecasting: A Comparative Study of DNN, LSTM, and GRU",
+  "authors": "Dhanekula, R. K.; Munira, S.",
+  "year": 2025,
+  "venue": "Expert Systems with Applications",
+  "odin_topics": ["6.A", "6.B", "14.A"],
+  "tldr": "Compares DNN, LSTM, and GRU architectures for stock price and financial index forecasting, finding that a hybrid CNN-LSTM-GRU architecture achieves 2.3% lower MAPE than the best individual model.",
+  "problem_and_motivation": "Financial time-series forecasting is critical for personal investment decisions but challenging due to non-stationarity, volatility, and complex temporal dependencies. Individual neural architectures have complementary strengths but no single architecture consistently outperforms.",
+  "approach": [
+    "Compared four architectures: standard DNN, LSTM, GRU, and Hybrid CNN-LSTM-GRU.",
+    "Dataset: daily closing prices for S&P 500, NASDAQ, and three individual stocks (2010-2024).",
+    "Hybrid model: CNN layers for local feature extraction → LSTM for long-term dependencies → GRU for short-term patterns.",
+    "Preprocessing: Min-Max normalization, sliding window of 60 days for sequence input.",
+    "Hyperparameter optimization using Bayesian optimization.",
+    "Evaluation: RMSE, MAPE, MAE, and Directional Accuracy (DA).",
+    "Statistical significance testing using Diebold-Mariano test."
+  ],
+  "findings": [
+    "num: Hybrid CNN-LSTM-GRU achieved lowest MAPE (1.87%) vs. GRU (2.41%), LSTM (2.53%), DNN (3.12%).",
+    "num: Directional accuracy of hybrid model: 68.3% vs. GRU 63.1% and LSTM 61.5%.",
+    "CNN layers effectively extract local price patterns and volatility regimes before sequence modeling.",
+    "Hybrid model shows particular improvement during high-volatility periods (35% lower error vs. individual models).",
+    "Bayesian hyperparameter optimization improved all models by 8-12% over default settings.",
+    "All models degrade in performance beyond 30-day forecast horizon; hybrid model degrades most slowly."
+  ],
+  "key_figures_tables": [
+    "Table 5: Performance comparison across models and datasets",
+    "Figure 7: Forecast vs. actual for hybrid model during high-volatility period (2020 COVID crash)",
+    "Figure 9: Error degradation by forecast horizon"
+  ],
+  "key_equations": [
+    {"equation": "ŷ_t = Dense(GRU(LSTM(CNN(X_{t-60:t}))))", "explanation": "Hybrid CNN-LSTM-GRU architecture: CNN extracts local features, LSTM models long-term dependencies, GRU captures short-term patterns."},
+    {"equation": "MAPE = (100/n) Σ |y_t - ŷ_t| / |y_t|", "explanation": "Mean Absolute Percentage Error — primary evaluation metric."}
+  ],
+  "definitions": [
+    {"term": "Directional Accuracy", "definition": "Percentage of correctly predicted direction of price movement (up/down)."},
+    {"term": "Diebold-Mariano test", "definition": "Statistical test comparing forecast accuracy of two models."}
+  ],
+  "citations": [
+    {"author": "Hochreiter", "year": 1997, "page": 0, "paragraph": 0, "claim": "LSTM introduces cell state and gating to capture long-term dependencies.", "role": "context"},
+    {"author": "Cho", "year": 2014, "page": 0, "paragraph": 0, "claim": "GRU simplifies LSTM with fewer gates while maintaining performance.", "role": "context"},
+    {"author": "Kim", "year": 2014, "page": 0, "paragraph": 0, "claim": "CNN layers extract local features from time-series data.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Spending Prediction in PFMS", "relevance": "medium", "justification": "Financial time-series forecasting methodology applicable to spending prediction."},
+      {"code": "6.B", "name": "Income and Expense Forecasting", "relevance": "high", "justification": "Core contribution: forecasting financial time-series including prices relevant to income and expense prediction."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Comparative study of neural architectures with novel hybrid CNN-LSTM-GRU design."}
+    ],
+    "contribution_to_field": "Provides clear evidence that hybrid architectures combining CNN (local features), LSTM (long-term dependencies), and GRU (short-term patterns) outperform individual models for financial time-series forecasting. The hybrid model's robustness during high-volatility periods is particularly relevant for PFMS operating in emerging markets. The Bayesian optimization methodology is transferable to PFMS model development.",
+    "directly_justifies": [
+      "Hybrid CNN-LSTM-GRU outperforms individual DNN, LSTM, and GRU for financial forecasting.",
+      "CNN layers improve feature extraction from financial time-series.",
+      "Hybrid models show particular advantage during high-volatility periods.",
+      "Bayesian hyperparameter optimization improves model performance by 8-12%."
+    ],
+    "limits": [
+      "Focused on stock/ index prices, not personal income/expense forecasting. [acknowledged]",
+      "No evaluation on individual-level financial data. [unacknowledged]",
+      "Computational cost of hybrid model not compared. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 6.B (income/expense forecasting) and 14.A (ML approaches) were flagged as highly relevant because the paper compares neural architectures for financial time-series forecasting. Domain 6.A was flagged as medium relevance because the methodology applies to spending prediction. Domains 1-5, 7-13, 14.B were rejected as the paper focuses on financial index forecasting without personal finance user aspects or PFMS-specific modules."
+  },
+  "limitations": [
+    "Stock/index forecasting, not personal finance. [acknowledged]",
+    "No evaluation on individual-level transaction data. [unacknowledged]",
+    "Computational cost comparison not provided. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Hybrid CNN-LSTM-GRU: MAPE 1.87%, DA 68.3%, best overall.",
+    "Hybrid model excels during high-volatility periods (35% lower error).",
+    "Bayesian optimization improves all models by 8-12%.",
+    "CNN extracts local patterns, LSTM long-term, GRU short-term dependencies."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:04:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dhanekula & Munira_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "paper_id": "aaaef819-b6aa-5919-aac1-b04e7011c521",
+  "designation": "international",
+  "title": "Impact of Mental Representation on Consumer Behaviors: Implications for Mental Budgeting and Prediction Algorithm Preferences",
+  "authors": "Fei, L.",
+  "year": 2023,
+  "venue": "PhD Dissertation, University of Chicago Booth School of Business",
+  "odin_topics": [
+    "1.C",
+    "7.A",
+    "3.A",
+    "6.A"
+  ],
+  "tldr": "Consumers' mental representation of expenditures influences spending and savings decisions, and people prefer prediction algorithms that replicate the event being predicted.",
+  "problem_and_motivation": "How consumers mentally represent their choices and contexts generates new predictions about their financial behaviors, but the relationship between mental representation and spending/savings decisions is not well understood.",
+  "approach": [
+    "Chapter 1: Examines relationship between mental representation of concepts and spending behaviors through multiple studies.",
+    "Chapter 2: Explores how people represent prediction events and how this influences their prediction algorithm choices.",
+    "Uses multidimensional scaling, clustering, and experimental methods across consumer and prediction domains.",
+    "Studies include expenditure categorization, taxonomic distance analysis, and algorithm preference experiments."
+  ],
+  "findings": [
+    "Consumers organize expenditures into taxonomic mental categories that influence spending adjustment decisions.",
+    "Greater taxonomic distance between compared products leads to different spending adjustment patterns.",
+    "People prefer prediction algorithms they perceive as replicating the event being predicted.",
+    "Replicativeness perception mediates willingness to use prediction algorithms."
+  ],
+  "key_figures_tables": [
+    "Figure 1.5: Spending adjustment on comparison items → Taxonomic distance affects spending adjustment.",
+    "Figure 2.1: Likelihood-to-use and replicativeness rating → Replicativeness predicts algorithm preference."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Mental Representation",
+      "definition": "How consumers cognitively organize and encode expenditure and prediction information."
+    },
+    {
+      "term": "Taxonomic Distance",
+      "definition": "Perceived categorical difference between compared products or expenditures."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Studies consumer spending behavior though not Filipino-specific."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Mental budgeting is a core focus of the dissertation."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Taxonomic categorization of expenditures is central to Chapter 1."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Chapter 2 focuses on prediction algorithm preferences and mental models of prediction."
+      }
+    ],
+    "contribution_to_field": "Connects mental representation theory to consumer financial behaviors. Shows that how consumers mentally categorize expenditures affects their spending and savings decisions. Demonstrates that people prefer prediction algorithms matching their mental model of the prediction task.",
+    "directly_justifies": [
+      "Taxonomic distance between expenditure categories affects spending adjustment.",
+      "People prefer prediction algorithms perceived as replicating the prediction event.",
+      "Mental representation structures influence consumer financial decisions."
+    ],
+    "limits": [
+      "Experimental studies with US participants limits cultural generalizability.",
+      "Not specifically focused on Filipino or Philippine context."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 7.A, 3.A, 6.A (high), 1.C (contextual). Rejected Philippine-specific topics (2.A-2.D) as this is US-based experimental research."
+  },
+  "limitations": [
+    "Experimental studies conducted with US participants; cultural generalizability limited.",
+    "Primarily lab-based experiments rather than field studies."
+  ],
+  "remember_this": [
+    "Taxonomic distance between expenditure categories affects spending decisions.",
+    "People prefer prediction algorithms that replicate the predicted event.",
+    "Mental representation theory explains consumer budgeting behaviors."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Fei_marked.md",
+      "converted_at": "2026-07-22T13:22:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

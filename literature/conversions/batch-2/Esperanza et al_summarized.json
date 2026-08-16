@@ -1,0 +1,120 @@
+{
+  "paper_id": "55a0f784-3ad8-54a2-81e9-5c7951b6a24b",
+  "designation": "local",
+  "title": "Digital Lending Efficacy on Debt Management of Wage Earners",
+  "authors": "Esperanza, D. N.; Bithay, L. L.; Jesus, J. B.; Ople-Alviola, C.; Sumilhig, J. M.; Basilisco, G. L.",
+  "year": 2025,
+  "venue": "ASEAN Journal of Management & Innovation",
+  "odin_topics": [
+    "1.C",
+    "2.A",
+    "13.B",
+    "7.B"
+  ],
+  "tldr": "Perceived quality of digital lending significantly affects PAY and CAUTION debt behaviors, while frequent usage negatively relates to STOP practices, revealing a behavioral paradox in Cebu City wage earners.",
+  "problem_and_motivation": "Digital lending is growing rapidly in emerging economies, but its effectiveness in shaping responsible debt management behaviors among wage earners is not well understood.",
+  "approach": [
+    "Descriptive-correlational design with 100 wage earners in Cebu City using simple random sampling.",
+    "Guided by Technology Acceptance Model and Financial Capability Framework.",
+    "Measures digital lending: accessibility, usage, and quality.",
+    "Three debt strategies: STOP (budget restraint), PAY (repayment), CAUTION (informed borrowing).",
+    "Multiple linear regression analysis."
+  ],
+  "findings": [
+    "Perceived quality of digital lending significantly affects PAY and CAUTION behaviors.",
+    "Frequent usage negatively related to STOP practices, revealing a behavioral paradox.",
+    "Accessibility did not have significant effects on debt management.",
+    "Digital lending alone is insufficient to ensure responsible borrowing."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "STOP",
+      "definition": "Budget restraint strategy in debt management."
+    },
+    {
+      "term": "PAY",
+      "definition": "Repayment behavior strategy in debt management."
+    },
+    {
+      "term": "CAUTION",
+      "definition": "Informed borrowing strategy in debt management."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Studies debt management behaviors of Filipino wage earners."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Philippines-specific digital lending and debt management study."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Core focus on debt management strategies and digital lending."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "STOP strategy relates to budget restraint recommendations."
+      }
+    ],
+    "contribution_to_field": "Identifies a behavioral paradox where greater digital lending access may reduce financial restraint. Shows perceived quality matters more than accessibility for responsible borrowing. The STOP-PAY-CAUTION framework offers structured debt management evaluation.",
+    "directly_justifies": [
+      "Perceived quality of digital lending promotes responsible borrowing.",
+      "Frequent digital lending usage reduces budget restraint.",
+      "Digital lending requires financial education for responsible use."
+    ],
+    "limits": [
+      "Sample of 100 wage earners in one city limits generalizability.",
+      "Cross-sectional design limits causal inference."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 1.C, 2.A, 13.B (high), 7.B (medium). Rejected algorithmic topics as this is a survey-based behavioral study."
+  },
+  "limitations": [
+    "Sample limited to 100 wage earners in Cebu City.",
+    "Cross-sectional design cannot establish causality.",
+    "Urban focus limits applicability to rural areas."
+  ],
+  "remember_this": [
+    "Perceived quality of digital lending promotes responsible borrowing.",
+    "Frequent usage reduces budget restraint (behavioral paradox).",
+    "Digital lending requires financial education for responsible use."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Esperanza et al_marked.md",
+      "converted_at": "2026-07-22T13:16:32Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

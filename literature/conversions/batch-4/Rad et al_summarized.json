@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.3390/electronics14081505",
+  "designation": "local-algorithm-specific",
+  "title": "Modeling Investment Decisions Through Decision Tree RegressionA Behavioral Finance Theory Approach",
+  "authors": "Modeling Investment Decisions Through Decision Tree",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "11.A",
+    "6.A",
+    "7.B"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Modeling Investment Decisions Through Decision Tree RegressionA Behavioral Finan"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Modeling Investment Decisions Through Decision Tree RegressionA Behavioral Finan",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rad et al_marked.md",
+      "converted_at": "2026-07-21T08:15:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

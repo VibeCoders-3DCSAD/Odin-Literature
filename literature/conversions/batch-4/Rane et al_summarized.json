@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.70593/deepsci.0202014",
+  "designation": "international-algorithm-specific",
+  "title": "AI and Machine Learning in Business Analytics: A Comprehensive Review of Applications and Challenges",
+  "authors": "International Journal; Applied Resilience",
+  "year": 2017,
+  "venue": "International Journal of Applied Resilience and Sustainability",
+  "odin_topics": [
+    "10.A",
+    "12.A",
+    "4.B",
+    "6.A",
+    "7.B",
+    "8.A"
+  ],
+  "tldr": "Article Info: Received 02 January 2026 Revised 06 February 2026 Accepted 16 February 2026 Published 19 February 2026",
+  "problem_and_motivation": "Article Info: Received 02 January 2026 Revised 06 February 2026 Accepted 16 February 2026 Published 19 February 2026",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: AI and Machine Learning in Business Analytics: A Comprehensive Review of Applica"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: AI and Machine Learning in Business Analytics: A Comprehensive Review of Applica",
+    "Year: 2017",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rane et al_marked.md",
+      "converted_at": "2026-07-21T08:17:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

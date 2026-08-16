@@ -1,0 +1,89 @@
+{
+  "paper_id": "10.5281/zenodo.0000000",
+  "designation": "international-algorithm-specific",
+  "title": "Rethinking Time Encoding via Learnable Transformation Functions",
+  "authors": "Chen, X.; Tang, Y.; Xu, J.; Zhang, J.; Zhang, S.; Peng, S.; Zheng, X.; Xiong, Y.",
+  "year": 2025,
+  "venue": "Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)",
+  "odin_topics": ["6.B", "14.B"],
+  "tldr": "Proposes LeTE, a learnable time encoding method using deep function learning that generalizes previous encodings and captures diverse periodic, non-periodic, and mixed temporal patterns.",
+  "problem_and_motivation": "Existing time encoding methods rely on fixed inductive biases (e.g., trigonometric functions for periodicity), limiting their ability to handle diverse and complex real-world temporal patterns. Hand-crafted and functional encodings cannot model non-periodic or mixed patterns effectively.",
+  "approach": [
+    "Proposes LeTE (Learnable Transformation-based Generalized Time Encoding) using deep function learning to parameterize non-linear transformations.",
+    "Parameterizes transformation functions to be learnable and jointly optimizable with downstream task supervision.",
+    "Proves invariance to time rescaling and that LeTE generalizes previous methods as specific cases.",
+    "Evaluates on event-based image classification, time series forecasting (5 baselines, 6 datasets), and dynamic graph link prediction (4 baselines, 4 datasets).",
+    "Tests on a real-world financial risk control dataset with 483K users and 26.8M transactions."
+  ],
+  "findings": [
+    "LeTE outperforms hand-crafted and functional time encodings across all evaluated tasks with a 95% win rate in time series forecasting.",
+    "Learnable transformations enable capturing of non-periodic patterns like abrupt changes and irregular trends.",
+    "LeTE achieves superior results with fewer dimensions than previous time encodings.",
+    "In financial risk control, LeTE improved default risk prediction over baseline time encodings."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison of time encoding methods → LeTE generalizes hand-crafted and functional approaches.",
+    "Table 5: Time series prediction MSE results → LeTE achieves 95% win rate over hand-crafted encoding.",
+    "Table 6: Dynamic graph link prediction (AUC-ROC) → LeTE improves TGAT, TGN, TCL, DyGFormer.",
+    "Table 4: Dynamic graph dataset statistics → Wikipedia, Reddit, MOOC, LastFM datasets used."
+  ],
+  "key_equations": [
+    {"equation": "\\phi_j(x) = \\sum_{i=1}^{D} \\sum_{m=1}^{K} W_{j,i,m}^{(\\cos)} \\cos(mx_i) + W_{j,i,m}^{(\\sin)} \\sin(mx_i) + b_j", "explanation": "Fourier-based LeTE with learnable weights and biases."},
+    {"equation": "\\phi_i(x) = b_i(x) + \\text{spline}_i(x)", "explanation": "Spline-based LeTE using B-spline basis functions."}
+  ],
+  "definitions": [
+    {"term": "LeTE", "definition": "Learnable Transformation-based Generalized Time Encoding"},
+    {"term": "FTE", "definition": "Functional Time Encoding using pre-defined non-linear transformations"},
+    {"term": "HCTE", "definition": "Hand-Crafted Time Encoding using manually split temporal components"},
+    {"term": "TGAT", "definition": "Temporal Graph Attention Network for dynamic graph learning"}
+  ],
+  "citations": [
+    {"author": "Kazemi", "year": 2019, "page": 1, "paragraph": 3, "claim": "Proposed Time2Vec functional time encoding using periodic activations.", "role": "methodology"},
+    {"author": "Xu", "year": 2019, "page": 1, "paragraph": 3, "claim": "Proposed Functional Time Representation for dynamic graphs.", "role": "methodology"},
+    {"author": "Vaswani", "year": 2017, "page": 16, "paragraph": 2, "claim": "Transformer architecture with self-attention for sequences.", "role": "methodology"},
+    {"author": "Liu", "year": 2021, "page": 16, "paragraph": 2, "claim": "Pyraformer with pyramid attention for long sequences.", "role": "baseline"},
+    {"author": "Liu", "year": 2022, "page": 16, "paragraph": 2, "claim": "Non-stationary Transformer for dynamic data distributions.", "role": "baseline"},
+    {"author": "Wu", "year": 2023, "page": 16, "paragraph": 2, "claim": "TimesNet models time series in frequency domain via DFT.", "role": "baseline"},
+    {"author": "Xu", "year": 2020, "page": 17, "paragraph": 2, "claim": "TGAT with temporal attention for temporal graph learning.", "role": "baseline"},
+    {"author": "Rossi", "year": 2020, "page": 17, "paragraph": 2, "claim": "TGN with memory module for dynamic node representations.", "role": "baseline"},
+    {"author": "Yu", "year": 2023, "page": 17, "paragraph": 2, "claim": "DyGFormer with patching technique for temporal graphs.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Proposes a novel time encoding method evaluated on time series forecasting and financial risk control"},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "low", "justification": "LeTE integrates as a plug-and-play module for existing forecasting models"}
+    ],
+    "contribution_to_field": "This paper introduces LeTE, a generalized time encoding method that replaces fixed inductive biases with learnable transformation functions. It proves that LeTE generalizes previous time encoding methods, satisfies time rescaling invariance, and achieves superior dimensional efficiency. The method is validated across time series forecasting, dynamic graph learning, and financial risk control applications.",
+    "directly_justifies": [
+      "LeTE achieves 95% win rate over hand-crafted time encoding in forecasting.",
+      "LeTE replaces fixed trigonometric functions with learnable non-linear transformations.",
+      "Learnable transformations capture non-periodic patterns beyond previous methods."
+    ],
+    "limits": [
+      "Increased computational cost from learnable transformation parameters.",
+      "Requires sufficient training data to learn meaningful transformation functions."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topic 6.B (Forecasting Algorithms) was rated high because LeTE directly improves time series forecasting and is evaluated on financial risk control. Topic 14.B (ML Model Serving) was rated low as LeTE's plug-and-play design relates to deployment compatibility. Topics 1.x-5.x, 7.x-14.A, and 14.C were rejected as the paper is an algorithmic contribution to time encoding, not personal finance system design."
+  },
+  "limitations": [
+    "Learnable transformations require more training data than fixed encodings.",
+    "Computational overhead from parameterized transformations may limit resource-constrained deployments. [unacknowledged]",
+    "Paper does not explore fully unsupervised time encoding scenarios."
+  ],
+  "remember_this": [
+    "LeTE generalizes all previous time encoding methods as special cases.",
+    "Achieved 95% win rate over hand-crafted encoding across 5 baselines and 6 datasets.",
+    "Learnable transformations capture periodic, non-periodic, and mixed time patterns.",
+    "LeTE maintains invariance to time rescaling proven mathematically.",
+    "Fewer embedding dimensions needed than previous methods for equivalent performance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chen X. et al_marked.md",
+      "converted_at": "2026-07-22T12:54:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

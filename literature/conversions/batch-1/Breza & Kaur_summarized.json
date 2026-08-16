@@ -1,0 +1,182 @@
+{
+  "paper_id": "10.3386/w34753",
+  "designation": "international",
+  "title": "Psychology and Development: Applications from Cognitive and Social Psychology",
+  "authors": "Emily Breza and Supreet Kaur",
+  "year": 2026,
+  "venue": "NBER Working Paper No. 34753, prepared for the Handbook of Development Economics",
+  "odin_topics": [
+    "1.A.III",
+    "1.C.III",
+    "1.C.IV",
+    "2.A.I",
+    "5.A.III",
+    "5.B.I",
+    "6.A.I",
+    "6.A.II",
+    "7.B.II",
+    "8.A.I"
+  ],
+  "tldr": "Psychological constraints—self-control, limited cognition, self-beliefs, mental health, and social norms—amplify poverty and shape market function in developing economies through missing markets for behavioral aids.",
+  "problem_and_motivation": "Development economics has long focused on external constraints (missing markets, weak institutions) but neglected how innate psychological features impede escaping poverty. Five features of poverty—proximity to subsistence, high volatility, market failures, weak institutions, and reliance on social ties—amplify the consequences of behavioral biases. Markets systematically under-supply the behavioral aids needed to overcome these biases due to naivete, firm incentives, tailoring difficulties, and contracting frictions.",
+  "approach": [
+    "Applies a missing-markets lens to rationalize why behavioral aids are under-supplied and biases persist in equilibrium even among experienced agents",
+    "Reviews self-control through β-δ present bias models, hard vs soft commitment devices, and psychologically grounded alternatives like attention and affect",
+    "Examines cognitive constraints via selective attention, reminder effects, recency bias, planning fallacy, retrieval failures, and mental accounting in field settings",
+    "Synthesizes evidence on how cash-on-hand, environmental stressors, nutrition, and cognitive training affect cognitive performance and productivity",
+    "Reviews psychosocial interventions targeting aspirations, self-efficacy, growth mindset, and locus of control with measured field outcomes",
+    "Analyzes mental health through depression, CBT, trauma/PTSD, social isolation, and demand/supply of care in low-resource settings",
+    "Explores social norms, social image, redistributive norms (kin tax), inter-group bias, and contact hypothesis through field experiments",
+    "Integrates findings across constructs to identify proof-of-concept vs meaningful-impact evidence and gaps for future research"
+  ],
+  "findings": [
+    "num: Missing markets for behavioral aids arise from naivete, firm exploitation of biases, tailoring difficulty, and standard contracting frictions",
+    "num: 28.4% of bank clients chose commitment savings accounts (Ashraf et al. 2006); 36% of workers chose dominated commitment contracts (Kaur et al. 2015)",
+    "num: 66% of commitment account users failed nicotine tests and forfeited savings (Giné et al. 2010); commitment may decrease welfare under partial naivete",
+    "num: Selective attention caused persistent 8%+ earnings losses among experienced farmers ignoring pod-size optimality (Hanna et al. 2014)",
+    "num: Retrieval failure intervention increased savings by 20% and yields by 9% by correcting planning fallacy (Augenblick et al. 2023)",
+    "num: Cash-on-hand improved worker productivity by 7% through reduced attentional mistakes, concentrated among poorer workers (Kaur et al. 2025)",
+    "num: Growth mindset interventions improved math scores by 0.2 SD (Alan et al. 2019); self-efficacy training raised student math by 0.09 SD (Kaur 2024)",
+    "num: Psychotherapy for depression/anxiety produced 0.16 SD aggregate effect on labor outcomes (Lund et al. 2024 meta-analysis)",
+    "num: Social norms create wage floors: take-up at prevailing wage was 33%, falling to 1.8% at 10% below when observable (Breza et al. 2025b)",
+    "num: Contact interventions reduce prejudice by ~0.1 SD on average (Lowe 2024 meta-analysis of 41 preregistered experiments)"
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Behavioral aid", "definition": "A tool, product, or service that mitigates the impact of a psychological constraint (e.g. commitment device, reminder, decision aid, psychotherapy)."},
+    {"term": "Present bias / β-δ model", "definition": "Quasi-hyperbolic discounting where β captures present focus (0 < β < 1) and δ captures standard long-run discounting; time inconsistency arises when β ≠ 1."},
+    {"term": "Hard commitment", "definition": "A commitment device with monetary or externally enforceable costs for failing to meet a pre-specified action (e.g. losing savings, forfeiting deposits)."},
+    {"term": "Soft commitment", "definition": "A commitment device relying on internal psychological costs or social pressure rather than monetary enforcement (e.g. labeling, lockbox, social monitoring)."},
+    {"term": "Planning fallacy", "definition": "Systematic over-optimism about completing future actions, driven by under-estimation of future expenses and retrieval failures rather than time inconsistency alone."},
+    {"term": "Bandwidth tax", "definition": "The reduction in cognitive resources available for tasks outside immediate financial concerns, caused by involuntary attentional capture by scarcity-related worries."},
+    {"term": "Tunneling", "definition": "Improved performance on tasks directly related to pressing financial concerns, potentially at the expense of neglecting other important domains."},
+    {"term": "Social tax / kin tax", "definition": "Redistributive pressure from social networks that compels individuals to share income, distorting labor supply, savings, and investment behavior."},
+    {"term": "Pluralistic ignorance", "definition": "A situation where individuals privately reject a norm but mistakenly believe others endorse it, creating stable but unwanted social equilibria."},
+    {"term": "Cognitive endurance", "definition": "The ability to sustain cognitive performance over time during effortful tasks; hypothesized to be malleable and shaped by practice and schooling quality."}
+  ],
+  "citations": [
+    {"author": "Ashraf, Karlan, and Yin", "year": 2006, "page": 9, "paragraph": 1, "claim": "28.4% of bank clients in the Philippines opened commitment savings accounts; ITT effect of 81% on savings relative to pre-intervention mean of ~$10.", "role": "finding"},
+    {"author": "Kaur, Kremer, and Mullainathan", "year": 2015, "page": 10, "paragraph": 2, "claim": "Workers exhibited payday effect cycles (8% output increase over pay week) and selected dominated commitment contracts 36% of the time.", "role": "finding"},
+    {"author": "Schilbach", "year": 2019, "page": 11, "paragraph": 1, "claim": "One-third to one-half of workers chose dominated incentive payments to reduce alcohol consumption; reduced daytime drinking but no impact on total consumption.", "role": "finding"},
+    {"author": "Hanna, Mullainathan, and Schwartzstein", "year": 2014, "page": 23, "paragraph": 2, "claim": "Experienced farmers systematically ignored pod-size optimality due to selective attention, causing large earnings losses.", "role": "finding"},
+    {"author": "Augenblick, Jack, Kaur, Masiye, and Swanson", "year": 2023, "page": 25, "paragraph": 1, "claim": "86% of households showed over-optimistic savings predictions (average error ~80%); retrieval intervention increased savings 20% and yields 9%.", "role": "finding"},
+    {"author": "Kaur, Masiye, and Swanson", "year": 2025, "page": 32, "paragraph": 1, "claim": "Cash-on-hand increased worker productivity by 7% via reduced attentional mistakes, concentrated among lower-income workers.", "role": "finding"},
+    {"author": "Breza and Kaur", "year": 2025, "page": 4, "paragraph": 1, "claim": "Five features of poverty (proximity to subsistence, volatility, market failures, weak institutions, reliance on social ties) amplify psychological constraint impacts.", "role": "methodology"},
+    {"author": "Mani, Mullainathan, Shafir, and Zhao", "year": 2013, "page": 31, "paragraph": 2, "claim": "Sugarcane farmers showed lower cognitive function pre-harvest (cash poor) than post-harvest (cash rich) on Raven's Matrices and cognitive control tasks.", "role": "finding"},
+    {"author": "Banerjee and Mullainathan", "year": 2010, "page": 18, "paragraph": 2, "claim": "Model where temptation spending share declines in consumption; explains savings, debt, and investment patterns of the poor.", "role": "methodology"},
+    {"author": "Casaburi and Macchiavello", "year": 2019, "page": 15, "paragraph": 1, "claim": "86% of Kenyan dairy farmers preferred monthly cooperative payments despite 15% premium for daily payments, revealing commitment demand.", "role": "finding"},
+    {"author": "Breza and Chandrasekhar", "year": 2019, "page": 16, "paragraph": 2, "claim": "Social monitoring increased savings by 36% and reduced unmitigated shock exposure in rural India.", "role": "finding"},
+    {"author": "Orkin, Garlick, Mahmud, Sedlmayr, Haushofer, and Dercon", "year": 2024, "page": 43, "paragraph": 2, "claim": "Aspirations workshop increased labor supply, investment, revenue, and living standards after 17 months among Kenyan women.", "role": "finding"},
+    {"author": "Alan, Boneva, and Ertac", "year": 2019, "page": 44, "paragraph": 1, "claim": "Growth mindset teacher training improved math scores by 0.2 SD after 2 years among Turkish elementary students.", "role": "finding"},
+    {"author": "Baranov, Bhalotra, Biroli, and Maselko", "year": 2020, "page": 47, "paragraph": 2, "claim": "CBT for prenatal depression in Pakistan produced 0.2-0.3 SD increases in financial and time investments in children.", "role": "finding"},
+    {"author": "Lund et al.", "year": 2024, "page": 47, "paragraph": 2, "claim": "Meta-analysis: psychotherapy for depression/anxiety yields 0.16 SD aggregate effect on labor market outcomes.", "role": "finding"},
+    {"author": "Breza et al.", "year": 2025, "page": 60, "paragraph": 2, "claim": "33% of agricultural workers took jobs at prevailing wage vs 1.8% at 10% below when observable; 26% took below-prevailing wage in private.", "role": "finding"},
+    {"author": "Lowe", "year": 2024, "page": 69, "paragraph": 1, "claim": "Meta-analysis of 41 preregistered contact experiments: ~0.1 SD average effect on prejudice reduction.", "role": "finding"},
+    {"author": "Bursztyn, González, and Yanagizawa-Drott", "year": 2020, "page": 66, "paragraph": 1, "claim": "Correcting pluralistic ignorance about women's work norms in Saudi Arabia increased women's job search.", "role": "finding"},
+    {"author": "Ridley, Rao, Schilbach, and Patel", "year": 2020, "page": 46, "paragraph": 2, "claim": "Comprehensive review of bidirectional causal relationship between poverty and depression/anxiety.", "role": "context"},
+    {"author": "Dupas and Robinson", "year": 2013, "page": 13, "paragraph": 1, "claim": "Lockbox for health savings had 71% continued use at 12 months; 75% increase in preventive health spending.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C.III",
+        "name": "Budget failure points: irregular tracking, impulse overspending, and unplanned obligatory expenses",
+        "relevance": "high",
+        "justification": "Paper extensively documents self-control problems (present bias, temptation spending) and cognitive constraints (planning fallacy, retrieval failures) as mechanisms underlying impulse overspending and budget failures, with direct evidence from developing-country field experiments."
+      },
+      {
+        "code": "1.A.III",
+        "name": "Financial literacy levels and the gap between knowledge and behavior",
+        "relevance": "high",
+        "justification": "The paper argues that behavioral biases—not lack of knowledge—explain why 97.7% of farmers intend to use fertilizer but only 36.4% do, and why 86% over-predict savings. The missing-markets framework directly explains why literacy-only interventions fail."
+      },
+      {
+        "code": "8.A.I",
+        "name": "Role of budget recommendation as a behavioral aid",
+        "relevance": "high",
+        "justification": "The paper's central framework defines behavioral aids as tools mitigating psychological constraints. Budget recommendations, reminders, and commitment devices are explicitly analyzed as behavioral aids, with the missing-markets lens justifying policy intervention."
+      },
+      {
+        "code": "2.A.I",
+        "name": "Informal financial mechanisms: paluwagan, rotating savings, and community lending",
+        "relevance": "high",
+        "justification": "Paper provides extensive analysis of ROSCAs, susu collectors, money guards, and informal savings groups as naturally occurring commitment devices that arise to solve self-control problems in settings with missing formal markets."
+      },
+      {
+        "code": "7.B.II",
+        "name": "Comparative performance of candidate algorithms for overspending detection",
+        "relevance": "medium",
+        "justification": "Paper documents cognitive constraints (selective attention, retrieval failures, recency bias) that cause individuals to fail to detect their own overspending patterns, supporting the need for automated anomaly detection as a behavioral aid."
+      },
+      {
+        "code": "5.A.III",
+        "name": "Behavioral dimensions as meaningful profile differentiators: income stability and obligation weight",
+        "relevance": "high",
+        "justification": "Paper demonstrates that income volatility, proximity to subsistence, and obligation burden (social tax, family obligations) are key moderators of how behavioral biases manifest, supporting income stability and obligation weight as profile dimensions."
+      },
+      {
+        "code": "6.A.I",
+        "name": "Survey of forecasting methods applied to personal or household spending data",
+        "relevance": "medium",
+        "justification": "Paper documents the planning fallacy and retrieval failures that make individuals systematically over-optimistic about future spending, establishing that forecasting is a cognitive challenge ordinary users cannot solve unaided."
+      },
+      {
+        "code": "1.C.IV",
+        "name": "Evidence that intelligent adaptive tools outperform financial literacy-only interventions",
+        "relevance": "high",
+        "justification": "The missing-markets framework for behavioral aids directly justifies tool-based interventions (commitment devices, reminders, decision aids) over informational approaches, arguing markets undersupply these aids and policy can correct this failure."
+      },
+      {
+        "code": "5.B.I",
+        "name": "Concept drift as the framework for progressive profile updates over time",
+        "relevance": "medium",
+        "justification": "Paper shows cash-on-hand changes cognitive performance and decision-making, and that environmental conditions (stress, volatility, seasonality) affect financial behavior, supporting the need for profiles that update with changing circumstances."
+      },
+      {
+        "code": "6.A.II",
+        "name": "Temporal dependency in spending data: prior periods as predictors of subsequent periods",
+        "relevance": "medium",
+        "justification": "Paper documents payday cycles in spending and labor supply, seasonal consumption patterns (hungry seasons), and the role of recency bias in insurance demand, all establishing temporal dependencies in financial behavior."
+      }
+    ],
+    "contribution_to_field": "This paper provides the most comprehensive behavioral development economics handbook chapter to date, systematically reviewing five psychological constructs through a unified missing-markets lens. It argues that behavioral aids are systematically under-supplied by markets, justifying policy intervention on efficiency rather than paternalistic grounds. The paper documents proof-of-concept studies but emphasizes that most evidence remains nascent, with only a few studies showing meaningful impacts on education, investment, and earnings. It identifies five features of poverty that amplify psychological constraints and calls for a complementary research approach that starts from observed behaviors (ROSCAs, high-interest debt cycles, cooperative payment preferences) rather than researcher-introduced interventions. For Odin, this paper provides the core behavioral economic justification for building an intelligent budget management system: users face genuine cognitive and self-control constraints that tools can address, and markets alone will not supply these aids.",
+    "directly_justifies": [
+      "Odin's budget recommendation module functions as a behavioral aid addressing self-control and cognitive constraints",
+      "Odin's anomaly detection serves as a decision aid compensating for limited attention and selective monitoring",
+      "Odin's forecasting module addresses the planning fallacy and retrieval failures documented in the paper",
+      "Odin's financial behavioral profiles capture income stability as a key dimension affecting behavioral bias severity"
+    ],
+    "limits": [
+      "Paper does not test or validate any specific ML algorithm for budget recommendation or forecasting",
+      "Developing-country field evidence may not fully generalize to Filipino young professionals in Metro Manila",
+      "Many reviewed studies remain at proof-of-concept stage without established effect sizes for replication"
+    ],
+    "topic_mapping_rationale": "I systematically scanned all 14 Odin topic codes and their subtopics against the paper's five core psychological constructs (self-control, cognitive constraints, self-beliefs, mental health, social norms) and the missing-markets framework. Topics 1.C.III (budget failure points) and 1.A.III (literacy-behavior gap) received 'high' relevance because the paper directly explains why behavioral biases—not lack of knowledge—cause budget failures and why literacy-only interventions are insufficient. Topic 8.A.I received 'high' because the paper's central policy implication is that behavioral aids (tools, products, services) are needed to compensate for psychological constraints—a direct justification for a budget recommendation system. Topic 2.A.I received 'high' because the paper extensively analyzes informal financial mechanisms (ROSCAs, susu, lockboxes) as endogenous commitment devices. Topics 5.A.III and 1.C.IV received 'high' for providing the behavioral microfoundations for profiling based on income stability and for tool-over-literacy intervention design. Topics 7.B.II, 6.A.I, 5.B.I, and 6.A.II received 'medium' because the paper establishes the behavioral phenomena these modules would address without engaging the technical implementation details."
+  },
+  "limitations": [
+    "Evidence base remains largely at proof-of-concept stage; few studies demonstrate first-order economic impacts on poverty",
+    "Publication bias may skew available evidence toward positive results, particularly in psychology-of-poverty and priming literatures",
+    "Measurement challenges persist: lab-based cognitive tests poorly validated in developing-country settings; self-reported aspirations and beliefs are difficult to distinguish empirically",
+    "Methodological challenges in eliciting time preferences in LMICs (trust, liquidity constraints, uncertainty) make present-bias measurement unreliable",
+    "Soft commitment mechanisms (lockboxes, labeling) lack clear theoretical grounding in present-bias models alone; underlying psychology underexplored",
+    "Replicability concerns in priming studies and self-beliefs interventions; intensity and content heterogeneity across studies limits generalizability",
+    "Cross-country mental health comparisons confounded by data quality, cultural differences in symptom expression, and survey standardization issues"
+  ],
+  "remember_this": [
+    "Missing markets for behavioral aids justify policy intervention",
+    "Five poverty features amplify psychological constraint impacts",
+    "Soft commitment often outperforms hard commitment in practice",
+    "Cash-on-hand affects cognition even when fully expected",
+    "Social norms create wage floors and market power in LMICs"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Breza & Kaur_marked.md",
+      "converted_at": "2026-07-22T12:24:51Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

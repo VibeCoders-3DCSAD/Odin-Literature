@@ -1,0 +1,313 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3529023",
+  "designation": "international-algorithm-specific",
+  "title": "RFMVDA: An Enhanced Deep Learning Approach for Customer Behavior Classification in E-Commerce Environments",
+  "authors": "Kim, K.; Jo, M.; Ra, I.; Park, S.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "8.B",
+    "8.C",
+    "12.A",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "Extends the RFM model with Visits, Durations, and Actions to classify both purchasing and non-purchasing e-commerce customers, achieving 92.98% segmentation prediction accuracy with a DNN.",
+  "problem_and_motivation": "Traditional RFM models fail to capture continuous and diverse customer behaviors in e-commerce, as they focus only on purchasing customers and ignore non-purchasing visitors. This limits the ability to understand and target the full customer journey in online environments.",
+  "approach": [
+    "Proposes RFMVDA model adding Visits, Durations, Actions to RFM for purchasing customers.",
+    "Proposes VDAR model using Visits, Durations, Actions, Referral Keyword for non-purchasing customers.",
+    "Models customer data into three components: information, session, and behavior units.",
+    "Implements a DNN with two hidden layers of 128 neurons each, using ReLU and sigmoid activations.",
+    "Uses categorical cross-entropy loss and Adam optimizer for multi-class classification.",
+    "Trains on a 3-month dataset from a South Korean e-commerce site with 9,416 customers.",
+    "Performs hyperparameter tuning via grid search and repeated stratified K-fold cross-validation.",
+    "Evaluates model with RMSE, Macro F1 Score, and Micro F1 Score metrics.",
+    "Analyzes feature importance using SHAP values.",
+    "Compares segmentation results against the LRFM model."
+  ],
+  "findings": [
+    "num: The RFMVDA model achieved a segmentation prediction accuracy of 92.98%.",
+    "num: Training accuracy reached 99.54% with the optimal DNN configuration.",
+    "num: Repeated stratified K-fold cross-validation yielded an average accuracy of 96.9%.",
+    "num: The best hyperparameter configuration included ReLU activation, batch size 32, dropout rate 0.2, 200 epochs, and Adam optimizer.",
+    "num: RMSE for the 80%-20% split was 1.1778, indicating low prediction error.",
+    "num: Macro F1 Score was 0.7923 and Micro F1 Score was 0.9390 for the 80%-20% split.",
+    "Session duration, first action time, and desktop visits were the most influential features for segmentation.",
+    "The VDAR model segmented 4,742 non-purchasing customers into 9 distinct behavior-based groups.",
+    "RFMVDA reclassified 16 of 140 LRFM-defined 'Lost Customers' as 'Potential Loyal Customers'.",
+    "The RFMVDA model produced 14 distinct customer segments, compared to 4 from the LRFM model."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Flow diagram of customer data modeling into information, session, and behavior units → Data is structured hierarchically for analysis.",
+    "Table 1: Definition of RFMVDA attributes (R, F, M, V, D, A) → Defines the six key features for purchasing customer segmentation.",
+    "Table 2: Definition of VDAR attributes (V, D, A, Referral Keyword) → Defines features for non-purchasing customer segmentation.",
+    "Figure 2: DNN configuration with 29 input parameters, two hidden layers, and output layer → Architecture used for customer classification.",
+    "Figure 8: Training and validation accuracy over 200 epochs → Model shows high performance and minimal overfitting.",
+    "Figure 9: SHAP feature importance for customer segmentation → Session duration, first action time, and desktop visits are most influential.",
+    "Figure 10: Confusion matrices for 70%-30% and 80%-20% splits → Larger training set improves classification balance and accuracy."
+  ],
+  "key_equations": [
+    {
+      "equation": "L = -\\frac{1}{N} \\sum_{i=1}^{N} \\sum_{j=1}^{C} t_{ij} \\log(y_{ij})",
+      "explanation": "Categorical cross-entropy loss for multi-class classification."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "RFM",
+      "definition": "Recency, Frequency, Monetary model for customer segmentation."
+    },
+    {
+      "term": "RFMVDA",
+      "definition": "Recency, Frequency, Monetary, Visits, Durations, Actions model extending RFM for e-commerce."
+    },
+    {
+      "term": "VDAR",
+      "definition": "Visits, Durations, Actions, Referral Keyword model for non-purchasing customer segmentation."
+    },
+    {
+      "term": "DNN",
+      "definition": "Deep Neural Network, a multi-layer artificial neural network."
+    },
+    {
+      "term": "LRFM",
+      "definition": "Length, Recency, Frequency, Monetary model, an extension of RFM."
+    },
+    {
+      "term": "CDP",
+      "definition": "Customer Data Platform, a system for storing and managing customer data."
+    },
+    {
+      "term": "CRM",
+      "definition": "Customer Relationship Management, a system for managing customer interactions."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, a method for explaining model predictions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Wei",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "The RFM model is widely used for customer segmentation in various industries.",
+      "role": "context"
+    },
+    {
+      "author": "Wu",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "The LRFM model adds a Length factor to RFM, enabling segmentation into core, potential, lost, and new customers.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mahfuza",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "Companies use the RFM model to classify customers into loyal, potential, and lost categories.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "The RFM model categorizes customers based on recency, frequency, and monetary value.",
+      "role": "context"
+    },
+    {
+      "author": "Zoeram",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "Clustering algorithms like K-means and fuzzy inference are applied to RFM data for segmentation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sakar",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 4,
+      "claim": "LSTM recurrent neural networks predict online shoppers' purchasing intention.",
+      "role": "baseline"
+    },
+    {
+      "author": "Issaoui",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 4,
+      "claim": "An LSTM-RF model produces purchase probability outputs through a fully connected layer.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 4,
+      "claim": "The SONN model clusters customer data using RFM, SOM, and DNN.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kasem",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "AI-driven approaches improve segmentation accuracy and predict sales trends in direct marketing.",
+      "role": "context"
+    },
+    {
+      "author": "Sriprasadh",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Machine learning algorithms like K-means and DBSCAN achieve ~93% accuracy in identifying target customer segments.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Proposes a new behavioral segmentation framework (RFMVDA) for categorizing customer interactions."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses CRM and CDP systems as context for customer data collection."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Critiques traditional RFM and LRFM models for failing to capture non-purchasing behavior and continuous e-commerce interactions."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Segments customers into 14 behavioral profiles based on purchasing and site interaction data."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Uses a DNN to classify customers into segments based on their behavioral profile."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Predicts customer segment membership rather than future financial behavior."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Uses DNNs, but not for forecasting sequential spending; focuses on classification of current behavior."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Segmentation can inform marketing strategies, but no direct budgeting application is discussed."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "No budget recommendation is proposed; relevance is contextual as segmentation could support such systems."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Potential application for identifying 'At Risk' customers, but not a primary focus."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "No anomaly detection algorithms are evaluated."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "No cold-start or anomaly detection baselines are discussed."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses accuracy, RMSE, F1 scores, and cross-validation to evaluate the model."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Provides a comprehensive evaluation of the proposed DNN-based segmentation algorithm."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "low",
+        "justification": "Evaluation focuses on segmentation accuracy, not on budget recommendation."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a new behavioral segmentation model (RFMVDA) that addresses the limitations of traditional RFM-based approaches in e-commerce settings. It demonstrates that incorporating non-transactional behavioral dimensions significantly improves the granularity of customer classification. The work also provides a methodology for segmenting non-purchasing customers using the VDAR model, a gap not previously addressed in the literature. Empirically, it validates the approach using real-world e-commerce data and a Deep Neural Network, showing strong predictive performance.",
+    "directly_justifies": [
+      "Traditional RFM models fail to capture non-purchasing customer behavior in e-commerce.",
+      "The RFMVDA model achieves 92.98% segmentation prediction accuracy.",
+      "The VDAR model segments non-purchasing customers into distinct behavioral groups.",
+      "DNNs are well-suited for modeling complex customer behavior patterns in large e-commerce datasets."
+    ],
+    "limits": [
+      "The analysis is based on a single e-commerce website over a 3-month period, which may not generalize to other contexts or capture seasonal trends.",
+      "The paper does not perform direct comparisons with other machine learning algorithms like Random Forests or Gradient Boosting.",
+      "No quantitative link is established between segmentation outcomes and financial metrics such as customer lifetime value.",
+      "The study does not address how the model would perform with sparse data typical of new users."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core contribution falls under domains 3 (Expense Categorization Frameworks), 4 (Limitations and Gaps in Existing Systems), 5 (Financial Behavioral Profiles and Classification), and 12 (Evaluation Frameworks). Topic 3.A was selected as medium relevance due to the proposal of the RFMVDA segmentation framework. Topics 4.B and 5.C were rated high as the paper directly criticizes existing models and proposes a new classification approach. Topic 12.B was rated high for its thorough algorithmic evaluation. Domains such as 7 (Budgeting) and 8 (Anomaly Detection) were considered but rejected as the paper does not address budget recommendation or anomaly detection directly, though some contextual relevance exists. Topics related to Filipino professionals, cultural practices, and mobile-first design (1.A-2.D, 9.A-9.C) were rejected as the paper focuses on a general South Korean e-commerce context. Privacy (10.A-10.C) and Engagement (11.A-11.B) are not addressed. Synthetic data, deployment, and savings/debt management (13.A-14.C) are also not covered."
+  },
+  "limitations": [
+    "Analysis based on a single e-commerce website over a 3-month period, which may not generalize to other contexts. [unacknowledged]",
+    "No direct comparisons with other machine learning algorithms like Random Forests or Gradient Boosting.",
+    "No quantitative link established between segmentation outcomes and key financial metrics like customer lifetime value.",
+    "The study does not explore performance with sparse data or cold-start scenarios.",
+    "Feature engineering and model selection may not generalize beyond the studied dataset. [unacknowledged]"
+  ],
+  "remember_this": [
+    "RFMVDA model adds Visits, Durations, and Actions to RFM for e-commerce customer segmentation.",
+    "Achieved 92.98% prediction accuracy using a DNN with 128-neuron hidden layers.",
+    "VDAR model segments non-purchasing customers based on Visits, Durations, Actions, and Referral Keyword.",
+    "Session duration and first action time were the most influential features for segmentation.",
+    "The model reclassified 16 of 140 LRFM-defined 'Lost Customers' as 'Potential Loyal Customers'."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kim K. et al_marked.md",
+      "converted_at": "2026-07-21T13:49:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

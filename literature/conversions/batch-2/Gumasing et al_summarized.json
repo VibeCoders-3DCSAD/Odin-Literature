@@ -1,0 +1,92 @@
+{
+  "paper_id": "10.1016/j.heliyon.2023.e20644",
+  "designation": "local-algorithm-specific",
+  "title": "A machine learning ensemble approach to predicting factors affecting the intention and usage behavior towards online groceries applications in the Philippines",
+  "authors": "Gumasing, M. J. J.; Ong, A. K. S.; Sy, M. A. P. C.; Prasetyo, Y. T.; Persada, S. F.",
+  "year": 2023,
+  "venue": "Heliyon",
+  "odin_topics": ["1.A", "1.C", "5.A", "5.C", "6.A", "6.B"],
+  "tldr": "Predicts Filipino consumer intention and usage behavior toward online grocery apps using an ensemble of artificial neural network and random forest classifier, achieving over 96% accuracy.",
+  "problem_and_motivation": "Limited understanding exists of how Filipino consumers adopt online grocery applications, especially during health crises. Existing studies show inconsistent factors driving behavioral intention, and no prior Philippine study has applied machine learning ensembles to this problem.",
+  "approach": [
+    "Integrated Protection Motivation Theory (PMT) with extended Unified Theory of Acceptance and Use of Technology (UTAUT2) as the theoretical framework.",
+    "Collected survey responses from 373 Filipino online grocery consumers covering constructs like performance expectancy, perceived benefits, and perceived vulnerability.",
+    "Applied an ensemble of Artificial Neural Network (96.63% accuracy) and Random Forest Classifier (96% accuracy, 0.00 SD) to predict behavioral intention and usage behavior.",
+    "Compared algorithm performance and identified the most significant predictors via feature importance analysis.",
+    "Validated the machine learning ensemble approach against traditional SEM-based methods for measuring behavioral intention."
+  ],
+  "findings": [
+    "num: ANN achieved 96.63% accuracy and Random Forest Classifier achieved 96% accuracy with 0.00 standard deviation.",
+    "Perceived Benefits was the most significant factor predicting behavioral intention, followed by Perceived Vulnerability, Behavioral Intention, Performance Expectancy, and Perceived Severity.",
+    "Machine learning ensemble effectively predicted consumer behavior and addressed limitations of traditional SEM approaches.",
+    "Integrated PMT-UTAUT2 framework provided holistic measurement of technology acceptance during health-related concerns."
+  ],
+  "key_figures_tables": [
+    "Figure 1: E-Commerce growth rate → Philippines showed 12.93% growth. ",
+    "Figure 2: Conceptual framework → Integrated PMT and UTAUT2 constructs with machine learning ensemble."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "UTAUT2", "definition": "Unified Theory of Acceptance and Use of Technology, extended version"},
+    {"term": "PMT", "definition": "Protection Motivation Theory, a health-behavior framework"},
+    {"term": "ANN", "definition": "Artificial Neural Network"},
+    {"term": "RF", "definition": "Random Forest classifier"}
+  ],
+  "citations": [
+    {"author": "Venkatesh et al.", "year": 2012, "page": 0, "paragraph": 0, "claim": "Proposed UTAUT2 as a unified model of technology acceptance.", "role": "methodology"},
+    {"author": "Ong et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Presented machine learning ensemble for measuring behavioral intention.", "role": "methodology"},
+    {"author": "Chang et al.", "year": 2019, "page": 0, "paragraph": 0, "claim": "Linked UTAUT2 discrepancies to culture and technological advancement.", "role": "context"},
+    {"author": "Chuenyindee et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Integrated PMT with UTAUT2 for health-related technology acceptance.", "role": "methodology"},
+    {"author": "Prasetyo et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Showed Filipino adaptation to food delivery apps during pandemic.", "role": "context"},
+    {"author": "Gutama & Dewi Intan", "year": 2022, "page": 0, "paragraph": 0, "claim": "Examined digital supermarket acceptance in Indonesia using TAM.", "role": "context"},
+    {"author": "Van Droogenbroeck & Van Hove", "year": 2020, "page": 0, "paragraph": 0, "claim": "Investigated repurchase intention in e-groceries using extended UTAUT2.", "role": "context"},
+    {"author": "Woody", "year": 2019, "page": 0, "paragraph": 0, "claim": "Criticized SEM due to indirect effects and mediators in models.", "role": "critique"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "medium", "justification": "Study samples Filipino consumers but skews toward general population, not specifically young professionals."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "medium", "justification": "Examines spending and usage behavior of online groceries in a Philippine context."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "low", "justification": "Focuses on technology acceptance behavior rather than financial behavioral profiles."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "contextual", "justification": "Uses RF and ANN classifiers but for intention prediction, not financial profile classification."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Demonstrates predictive ML ensemble for consumer behavior, applicable to spending prediction."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "low", "justification": "Uses classification algorithms but not on sequential spending; cross-sectional survey data."}
+    ],
+    "contribution_to_field": "This paper provides an empirical demonstration of a machine learning ensemble (ANN + RF) applied to technology acceptance modeling, showing that ML methods can outperform traditional SEM approaches for behavioral prediction. It validates an integrated PMT-UTAUT2 theoretical framework specific to online grocery adoption during a health crisis. The study contributes to the literature on Philippine e-commerce adoption by identifying key drivers of intention and usage in an understudied population.",
+    "directly_justifies": [
+      "Machine learning ensemble can effectively predict consumer behavioral intention with over 96% accuracy.",
+      "Perceived Benefits is the strongest predictor of Filipino online grocery intention.",
+      "Integrated PMT-UTAUT2 framework captures health-related technology acceptance better than UTAUT2 alone."
+    ],
+    "limits": [
+      "Focus on technology acceptance rather than financial behavior limits direct applicability to personal finance systems.",
+      "Cross-sectional survey design does not capture temporal behavioral dynamics.",
+      "Philippine-specific context may not generalize to other populations."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains (1.A-14.C) was performed. Domains 1 (Filipino Young Professionals) and 6 (Predictive Modeling) were flagged as relevant because the paper studies Filipino consumer behavior using ML classification algorithms. Domain 5 (Profiles) received low/contextual relevance as the focus is on intention prediction, not financial profiles. All other domains (2-4, 7-14) were rejected because the paper does not address expense categorization, budgeting, anomaly detection, mobile UX, privacy, engagement, evaluation frameworks, savings, debt, synthetic data, or ML serving. Borderline case: Domain 6.B was assigned low because the data is cross-sectional, not sequential."
+  },
+  "limitations": [
+    "Cross-sectional survey data limits causal inference about behavioral dynamics. [unacknowledged]",
+    "Sample of 373 respondents may not fully represent Philippine population. [unacknowledged]",
+    "Self-report measures may introduce social desirability bias in behavioral intention responses."
+  ],
+  "remember_this": [
+    "ANN and RF both achieved over 96% accuracy predicting online grocery usage intention.",
+    "Perceived Benefits was the most significant predictor of behavioral intention.",
+    "Integrated PMT-UTAUT2 framework outperformed models using UTAUT2 alone.",
+    "First Philippine study applying ML ensemble to online grocery acceptance behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gumasing et al_marked.md",
+      "converted_at": "2026-07-22T13:29:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

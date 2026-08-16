@@ -1,0 +1,144 @@
+{
+  "paper_id": "10.5555/3545946.3546054",
+  "designation": "international-algorithm-specific",
+  "title": "A Recommendation System for Participatory Budgeting",
+  "authors": "Leibiker, G.; Talmon, N.",
+  "year": 2023,
+  "venue": "Proceedings of the 22nd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023)",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "7.A",
+    "7.B",
+    "7.E",
+    "12.A",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "Introduces machine learning and recommendation system techniques to estimate complete voter ballots from partial inputs, reducing cognitive burden in participatory budgeting.",
+  "problem_and_motivation": "Voters in participatory budgeting face an information overload problem due to large project sets, making full ballot completion time-consuming and attention-demanding. This cognitive burden can lower participation and decision quality. Existing PB processes lack mechanisms to efficiently estimate voter preferences from limited inputs.",
+  "approach": [
+    "Defines a model of PB with partial ballots where each voter has approved, disapproved, and hidden project sets.",
+    "Proposes three algorithmic setups (random, offline, online) differing in how project preferences are revealed to the system.",
+    "Implements sampling modules that select projects to reveal based on popularity, consensus, or controversiality among full-ballot voters.",
+    "Uses binary classification (XGBoost), matrix factorization, and factorization machines to predict hidden ballot entries.",
+    "Applies the greedy approval voting rule to determine the final winning bundle from predicted full ballots.",
+    "Evaluates on 10 real-world PB datasets from Warsaw (2020-2023), varying sample degree and LV degree (proportion of full-ballot voters).",
+    "Employs precision, recall, F1, symmetric distance, and fractional allocation (FA) score as evaluation metrics.",
+    "Compares proposed methods against a naive sampling baseline that uses only full-ballot voters."
+  ],
+  "findings": [
+    "Classification (XGBoost) consistently outperforms matrix factorization and factorization machines across all setups and sample degrees.",
+    "The online and offline-popularity classification setups achieve higher FA scores than the naive sampling method, particularly at low sample degrees (0.1-0.3).",
+    "num: The Classification-online setup at sample degree 0.1 produced higher FA scores than the sampling method at sample degree 0.3.",
+    "num: Increasing the sample degree from 0.1 to 0.9 improves FA scores across all LV degrees, with the Classification-offline-popularity achieving the maximum FA at 0.5 sample degree.",
+    "The random sampling module generally underperforms compared to offline and online setups, confirming that strategic project selection improves prediction.",
+    "Increasing the LV degree (more voters providing full ballots) consistently improves FA scores and reduces symmetric distance.",
+    "Prediction accuracy for voter ballots is high enough to produce winning bundles that closely match those from full-ballot data."
+  ],
+  "key_figures_tables": [
+    "Figure 5: Heatmap of FA scores vs sample and LV degrees → FA increases with both.",
+    "Figure 6: Heatmap of symmetric distance vs sample and LV degrees → SD decreases with both.",
+    "Figure 7: FA at sample degree 0.1 → classification-online and -offline-popularity beat sampling.",
+    "Figure 10: FA at sample degree 0.5 → classification-offline-popularity achieves max FA.",
+    "Table 1: Real-world PB dataset characteristics → 10 Warsaw districts, 67-111 projects, budgets 0.4M-6.6M.",
+    "Table 2: Voter and project attributes → includes age, gender, cost, category, population segments."
+  ],
+  "key_equations": [
+    {
+      "equation": "$score(p) = |\\{v_i \\in V : p \\in v_i\\}|$",
+      "explanation": "Number of voters approving project p."
+    },
+    {
+      "equation": "$consensus(p) = abs(|\\{v_i \\in V : p \\in v_i\\}| - |\\{v_i \\in V : p \\notin v_i\\}|)$",
+      "explanation": "Absolute difference between approval and disapproval counts."
+    },
+    {
+      "equation": "$FA = \\lambda / B,\\ \\lambda = \\sum_{p \\in pb \\cap rb} cost(p)$",
+      "explanation": "Fraction of budget correctly allocated to winning projects."
+    },
+    {
+      "equation": "$F_1 = 2 \\cdot precision \\cdot recall / (precision + recall)$",
+      "explanation": "Harmonic mean of precision and recall."
+    }
+  ],
+  "definitions": [
+    {"term": "PB", "definition": "Participatory Budgeting — a democratic process where community members decide on public budget allocation."},
+    {"term": "RS", "definition": "Recommendation System — machine learning tool that predicts user preferences for items."},
+    {"term": "MF", "definition": "Matrix Factorization — latent factor model for collaborative filtering."},
+    {"term": "FM", "definition": "Factorization Machines — hybrid model combining linear models and matrix factorization."},
+    {"term": "LV", "definition": "Learning Voters — voters providing full ballots, used for training."},
+    {"term": "TV", "definition": "Target Voters — voters providing partial ballots, requiring prediction."},
+    {"term": "FA", "definition": "Fractional Allocation score — fraction of budget correctly allocated to predicted winning projects."},
+    {"term": "SD", "definition": "Symmetric Distance — distance measure between two bundles, symmetric in both directions."},
+    {"term": "AAMAS", "definition": "International Conference on Autonomous Agents and Multiagent Systems."}
+  ],
+  "citations": [
+    {"author": "Aziz", "year": 2017, "page": 1, "paragraph": 2, "claim": "Combinatorial PB is a formal generalization of multiwinner elections.", "role": "context"},
+    {"author": "Aziz", "year": 2021, "page": 2, "paragraph": 2, "claim": "Approval-based combinatorial PB is the most studied model of PB.", "role": "methodology"},
+    {"author": "Benade", "year": 2021, "page": 2, "paragraph": 0, "claim": "Preference elicitation for PB can be optimized for budgetary outcomes.", "role": "context"},
+    {"author": "Cabannes", "year": 2004, "page": 2, "paragraph": 0, "claim": "PB gives communities power to propose and decide on public projects.", "role": "context"},
+    {"author": "Cantador", "year": 2018, "page": 2, "paragraph": 1, "claim": "Recommender systems can support electronic participatory budgeting.", "role": "baseline"},
+    {"author": "Chen", "year": 2016, "page": 2, "paragraph": 1, "claim": "XGBoost is a scalable tree boosting system that outperforms other algorithms.", "role": "methodology"},
+    {"author": "Edmunds", "year": 2000, "page": 1, "paragraph": 4, "claim": "Information overload occurs when too much information interferes with decision making.", "role": "context"},
+    {"author": "Koren", "year": 2009, "page": 2, "paragraph": 4, "claim": "Matrix factorization captures latent user and item factors for recommendations.", "role": "methodology"},
+    {"author": "Rendle", "year": 2010, "page": 3, "paragraph": 1, "claim": "Factorization machines combine linear models and MF to learn from sparse data.", "role": "methodology"},
+    {"author": "Ricci", "year": 2011, "page": 2, "paragraph": 2, "claim": "RS are information filtering systems providing personalized predictions.", "role": "context"},
+    {"author": "Talmon", "year": 2019, "page": 3, "paragraph": 2, "claim": "Greedy approval is the most popular voting rule for PB.", "role": "methodology"},
+    {"author": "Wang", "year": 2020, "page": 2, "paragraph": 1, "claim": "Imbalance-XGBoost leverages weighted losses for imbalanced classification.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "medium", "justification": "Project categories and population segments used as attributes."},
+      {"code": "3.B", "name": "Expense Category Design Considerations", "relevance": "low", "justification": "Mentions project categories but does not analyze their design."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "contextual", "justification": "RS and PB discussed in general terms, not specific finance systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Explicitly addresses information overload as a key limitation in PB."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "contextual", "justification": "Budget constraints and project costs are core to PB formulation."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Proposes recommendation system for budget allocation recommendations."},
+      {"code": "7.E", "name": "Onboarding and Cold-Start for Budget Recommendation", "relevance": "high", "justification": "Partial ballots mimic cold-start; algorithms predict preferences from limited data."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Uses FA score and SD as evaluation metrics for budget allocation quality."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Compares prediction modules (XGBoost, MF, FM) using precision, recall, F1."},
+      {"code": "12.C", "name": "Evaluation Methodologies for Budget Recommendation Systems", "relevance": "high", "justification": "Evaluates winning bundles against real outcomes using FA and SD."}
+    ],
+    "contribution_to_field": "This paper contributes a formalized model of participatory budgeting with partial ballots and algorithmic solutions for preference completion. It provides empirical evidence that strategic project selection and classification-based prediction improve budget allocation quality over naive sampling. The work bridges computational social choice and machine learning, offering a scalable approach to reduce voter cognitive burden. It also provides a comprehensive evaluation framework using both ballot-level and bundle-level metrics on real-world PB data.",
+    "directly_justifies": [
+      "Information overload reduces voter participation and decision quality in PB.",
+      "Classification (XGBoost) outperforms MF and FM in predicting hidden ballot entries.",
+      "Strategic project selection improves prediction accuracy over random sampling.",
+      "Predicted winning bundles closely approximate full-ballot outcomes using FA and SD metrics.",
+      "The proposed system permits all voters to express opinions while reducing cognitive load."
+    ],
+    "limits": [
+      "Experiments limited to Warsaw PB data; generalizability to other cities or cultures untested.",
+      "Approval-based PB only; other PB variants (e.g., cumulative, ordinal) not explored.",
+      "Interactive settings where voters can correct predictions are not tested.",
+      "The cold-start scenario where all ballots are empty is only suggested as future work."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic taxonomy domains flagged 3.A, 3.B, 4.A, 4.B, 7.A, 7.B, 7.E, 12.A, 12.B, and 12.C as relevant. Domains related to culturally specific practices (2.A, 2.B, 2.C, 2.D), Filipino demographics (1.A, 1.B, 1.C), financial behavioral profiles (5.A, 5.B, 5.C), predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B, 8.C), mobile design (9.A, 9.B, 9.C), privacy (10.A, 10.B, 10.C), engagement (11.A, 11.B), savings/debt (13.A, 13.B, 13.C), and ML deployment (14.A, 14.B, 14.C) were rejected as not covered. Borderline cases: 7.E (cold-start) was assigned high relevance because partial ballots directly parallel cold-start scenarios; 4.A was contextual as PB is not a personal finance system but shares mechanisms; 3.B was low because category design is mentioned but not analyzed. Overall, the paper's core contributions are algorithmic and evaluative, with clear relevance to budget recommendation and evaluation methodologies."
+  },
+  "limitations": [
+    "The study is limited to a single geographic region (Warsaw, Poland), potentially limiting generalizability.",
+    "Only approval-based combinatorial PB is considered; other PB variants are not evaluated.",
+    "The cold-start scenario with no prior voter data is not addressed empirically.",
+    "The paper does not explore interactive feedback loops where voters correct predictions. [unacknowledged]",
+    "No analysis of privacy implications or user trust in the recommendation system. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Classification (XGBoost) outperforms MF and FM in predicting partial PB ballots.",
+    "Strategic project selection by popularity or consensus improves FA scores over random selection.",
+    "FA scores increase with both sample degree and LV degree across all setups.",
+    "At low sample degrees (0.1), classification-online beats naive sampling at higher sample degrees (0.3).",
+    "The approach permits all voters to contribute while reducing cognitive load."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Leibiker & Talmon_marked.md",
+      "converted_at": "2026-07-21T13:56:45Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

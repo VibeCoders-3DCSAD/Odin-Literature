@@ -1,0 +1,116 @@
+{
+  "paper_id": "4ba85348-3343-5fe7-86b9-308f8244c963",
+  "designation": "local-algorithm-specific",
+  "title": "FairLend-Africa: An Explainable Machine Learning Framework for Alternative Credit Scoring Using Behavioral Financial Data in Financially Excluded African Communities",
+  "authors": "An Explainable Machine Learning",
+  "year": 2015,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "12.A",
+    "13.B",
+    "14.A",
+    "4.A",
+    "4.B",
+    "5.C"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "14.A",
+        "name": "14.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: FairLend-Africa: An Explainable Machine Learning Framework for Alternative Credi"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: FairLend-Africa: An Explainable Machine Learning Framework for Alternative Credi",
+    "Year: 2015",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Olabintan_marked.md",
+      "converted_at": "2026-07-21T07:54:09Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

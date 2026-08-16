@@ -1,0 +1,268 @@
+{
+  "paper_id": "10.3390/info15120786",
+  "designation": "international-algorithm-specific",
+  "title": "Evolving Strategies in Machine Learning: A Systematic Review of Concept Drift Detection",
+  "authors": "Hovakimyan, G.; Bravo, J.M.",
+  "year": 2024,
+  "venue": "Information",
+  "odin_topics": [
+    "2.C",
+    "3.A",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "12.A"
+  ],
+  "tldr": "A systematic review of concept drift detection methods over two decades, categorizing drift detection mechanisms, window-based mechanisms, unsupervised and semi-supervised methods, ensemble methods, and neural networks.",
+  "problem_and_motivation": "Machine learning models assume static data distributions, but concept drift degrades performance in streaming data across finance, healthcare, and other domains. Existing methods have varied strengths, but a comprehensive, up-to-date synthesis of strategies is needed to guide practitioners. This review addresses the gap by systematically categorizing and evaluating drift detection approaches.",
+  "approach": [
+    "Adhered to PRISMA guidelines for systematic review methodology.",
+    "Used T5 NLP model to screen and extract data from 490 initial studies.",
+    "Sourced papers from IEEE and Science Direct APIs, plus additional databases.",
+    "Categorized methods into five types: DDMs, WBMs, USSMs, EMs, and NNs.",
+    "Quality-assessed 111 eligible studies using an adapted Newcastle-Ottawa Scale.",
+    "Identified 65 high-impact studies for in-depth comparative analysis.",
+    "Extracted comparison criteria including prequential error and handling imbalanced data.",
+    "Synthesized datasets commonly used for evaluating drift detection (e.g., SEA, Elec2, KDD)."
+  ],
+  "findings": [
+    "num: 45% of the 111 reviewed studies were rated high quality (score 4-5).",
+    "DDMs offer high accuracy with low computational cost, ideal for real-time use.",
+    "WBMs are sensitive to noise but effective for sudden drift detection.",
+    "USSMs excel at novel class detection but are computationally intensive.",
+    "EMs and NNs provide very high accuracy at a higher computational cost.",
+    "Handling imbalanced data remains a significant challenge for many algorithms.",
+    "Concept drift detection in regression and non-tabular data (images) is underexplored."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Distribution-based drift types (virtual, real, novel class) → shows changes in P(X) and P(Y|X).",
+    "Figure 2: Pattern-based drift types (sudden, incremental, gradual, recurrent) → illustrates temporal drift patterns.",
+    "Figure 3: PRISMA flow diagram → documents the study selection and exclusion process.",
+    "Table 1: Quality assessment scores → 45% of studies rated as high quality.",
+    "Table 2: Summary of concept drift types → provides real-world examples for each drift type.",
+    "Table 3: Characteristics of included studies → summarizes each study's drift type, method, and findings.",
+    "Table 4: Comparison of detection methods → compares methods by accuracy, cost, and applicability.",
+    "Table 5: Summary of datasets used → lists datasets like SEA, Hyperplane, and Credit Card Fraud Detection."
+  ],
+  "key_equations": [
+    {
+      "equation": "Acc_{t+1} = \\frac{t \\times Acc_t + \\delta_{t+1}}{t + 1}",
+      "explanation": "Incremental accuracy calculation for prequential error."
+    },
+    {
+      "equation": "s_t = \\sqrt{\\frac{p_t(1 - p_t)}{t}}",
+      "explanation": "Standard deviation of the error rate in DDM."
+    },
+    {
+      "equation": "p_t + s_t \\geq p_{min} + 3 \\times s_{min}",
+      "explanation": "Drift level threshold for DDM, triggering model replacement."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Concept Drift",
+      "definition": "Changes in the statistical properties of the target variable over time, degrading model performance."
+    },
+    {
+      "term": "Virtual Drift",
+      "definition": "Changes in input feature distribution P(X) without affecting the target variable P(Y|X)."
+    },
+    {
+      "term": "Real Drift",
+      "definition": "Changes in the conditional probability P(Y|X), directly impacting model accuracy."
+    },
+    {
+      "term": "DDM",
+      "definition": "Drift Detection Mechanism, using statistical tests and control charts for detection."
+    },
+    {
+      "term": "WBM",
+      "definition": "Window-Based Mechanism, using sliding or adaptive windows to manage data streams."
+    },
+    {
+      "term": "USSM",
+      "definition": "Unsupervised and Semi-Supervised Methods, using clustering and density estimation for drift detection."
+    },
+    {
+      "term": "EM",
+      "definition": "Ensemble Method, combining multiple models to improve detection accuracy and robustness."
+    },
+    {
+      "term": "NN",
+      "definition": "Neural Network, using deep learning architectures for detecting complex drifts."
+    },
+    {
+      "term": "ELM",
+      "definition": "Extreme Learning Machine, a fast single-hidden-layer feedforward neural network."
+    },
+    {
+      "term": "PRISMA",
+      "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a set of guidelines for systematic reviews."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lu",
+      "year": 2019,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Concept drift degrades model performance, requiring adaptive methods.",
+      "role": "context"
+    },
+    {
+      "author": "Gama",
+      "year": 2004,
+      "page": 13,
+      "paragraph": 1,
+      "claim": "Introduced DDM, a benchmark for drift detection using error rate monitoring.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 14,
+      "paragraph": 2,
+      "claim": "ADWIN uses adaptive windowing for efficient drift detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Brzezinski",
+      "year": 2014,
+      "page": 15,
+      "paragraph": 4,
+      "claim": "OAUE adapts ensemble weights based on recent performance for high accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Ross",
+      "year": 2012,
+      "page": 9,
+      "paragraph": 4,
+      "claim": "EWMA charts maintain a constant false positive rate without storing data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cavalcante",
+      "year": 2015,
+      "page": 16,
+      "paragraph": 2,
+      "claim": "ELMs are efficient for drift detection in financial time series.",
+      "role": "finding"
+    },
+    {
+      "author": "Barros",
+      "year": 2018,
+      "page": 16,
+      "paragraph": 3,
+      "claim": "Ensemble techniques are robust across drift types but computationally costly.",
+      "role": "baseline"
+    },
+    {
+      "author": "Hinder",
+      "year": 2024,
+      "page": 16,
+      "paragraph": 3,
+      "claim": "Unsupervised methods are effective with sparse labels but prone to noise.",
+      "role": "finding"
+    },
+    {
+      "author": "Lobo",
+      "year": 2018,
+      "page": 16,
+      "paragraph": 3,
+      "claim": "Evolving spiking neural networks are effective for online learning over drifting streams.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dawid",
+      "year": 1984,
+      "page": 17,
+      "paragraph": 1,
+      "claim": "Prequential error is a standard metric for evaluating model accuracy on streams.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "contextual",
+        "justification": "Mentions recommendation systems adapting to user preferences, but not a core focus."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Not directly addressed; relevance is tangential via data stream classification."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Financial time series prediction and credit card fraud detection are used as examples."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "General forecasting is discussed, but not specifically for sequential spending data."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Fraud detection is a primary example of anomaly detection in personal finance."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Algorithms discussed are general, not specifically for personal spending data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses evaluation criteria (e.g., prequential error, imbalanced handling) applicable to any system."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive, systematic synthesis of concept drift detection methodologies spanning two decades. It introduces a novel T5-based screening process for literature reviews and offers a clear taxonomy of detection methods (DDMs, WBMs, USSMs, EMs, NNs). The review identifies key challenges, including imbalanced data, computational efficiency, and underexplored areas like regression and non-tabular data, while also summarizing common datasets and evaluation metrics.",
+    "directly_justifies": [
+      "45% of the 111 reviewed studies were rated high quality.",
+      "DDMs offer high accuracy with low computational cost.",
+      "Ensemble methods and neural networks provide the highest accuracy.",
+      "Handling imbalanced data remains a significant challenge.",
+      "Concept drift detection in regression tasks is underexplored."
+    ],
+    "limits": [
+      "The paper does not focus on personal finance systems specifically, limiting direct applicability to that domain.",
+      "Only a subset of cited methods may be directly relevant to the specific topic codes.",
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan of the taxonomy was performed. Domains 6.A (Predictive Modeling) and 8.A (Anomaly Detection) were flagged as medium relevance due to frequent mentions of financial forecasting and fraud detection. Domain 12.A (Evaluation Frameworks) was also medium, as the review extensively discusses evaluation metrics. Domain 6.B (Forecasting Algorithms) and 8.B (Anomaly Detection Algorithms) were rated low because the algorithms are generic and not specific to personal spending data. Domains 2.C (User Preferences) and 3.A (Expense Categorization) were contextual at best, as they appear only as passing examples. The overall coverage is theoretical and methodological, primarily applicable to general machine learning rather than the specific context of personal finance systems."
+  },
+  "limitations": [
+    "The review's focus on high-impact studies may introduce selection bias, potentially excluding relevant but lower-cited research. [unacknowledged]",
+    "The use of T5 for abstract screening, while innovative, might have missed nuanced papers not well-summarized by the model. [unacknowledged]",
+    "The review does not compare methods using a standardized experimental benchmark, making direct performance comparisons difficult. [unacknowledged]",
+    "Computational efficiency, especially for real-time deployment, remains a key limitation that is acknowledged but not fully addressed. [acknowledged]"
+  ],
+  "remember_this": [
+    "45% of reviewed studies were rated high quality.",
+    "DDMs are cost-effective and easy to apply in real-time.",
+    "Handling imbalanced data remains a major challenge.",
+    "Concept drift detection in regression tasks is underexplored.",
+    "Ensemble methods offer high accuracy but at higher computational cost."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Hovakimyan & Bravo_marked.md",
+      "converted_at": "2026-07-21T13:33:25Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

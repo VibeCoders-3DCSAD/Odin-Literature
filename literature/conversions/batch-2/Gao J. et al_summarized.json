@@ -1,0 +1,84 @@
+{
+  "paper_id": "10.1007/s10462-025-11255-1",
+  "designation": "international",
+  "title": "Agent-in-the-loop to distill expert knowledge into artificial intelligence models: a survey",
+  "authors": "Gao, J.; Zhang, Y.; Chen, Y.; Dong, Y.; Chen, Y.; Song, S.; Tang, B.; Gu, Y.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": ["5.C", "7.A", "14.B"],
+  "tldr": "Surveys Agent-in-the-Loop ML (AIL-ML) where humans and large models collaborate to construct domain-specific AI with lower costs and enhanced expert knowledge integration.",
+  "problem_and_motivation": "Large neural networks excel in general domains but struggle in expert knowledge areas (healthcare, law) due to data sparsity and high annotation costs. Human-in-the-loop ML addresses this but overlooked the potential of large models as human proxies.",
+  "approach": [
+    "Conducted an extensive literature survey of works from top CS and HCI conferences (2018-2024) plus arXiv (2023-2024).",
+    "Proposes the AIL-ML framework unifying Human-in-the-Loop (HIL-ML) and Large-Model-in-the-Loop (LMIL-ML).",
+    "Categorizes methods by data processing stage: data collection, initialization, quality enhancement, annotation, and model development stages.",
+    "Provides formal mathematical descriptions for each AIL-ML category including data-level and model-level agent interventions.",
+    "Reviews applications in expert domains and discusses future research directions."
+  ],
+  "findings": [
+    "AIL-ML combines human intuition and expertise with large model computational power and reasoning.",
+    "LMIL-ML reduces reliance on human annotation by using large models as proxies in the modeling loop.",
+    "Existing HIL-ML surveys fail to address the role of large models as participants in the loop.",
+    "Agent interventions span data acquisition, processing, model development, and optimization stages.",
+    "AIL-ML improves model accuracy, adaptability, explainability, and reduces privacy risks in expert domains."
+  ],
+  "key_figures_tables": [
+    "Figure 1: HIL-ML workflow with four main stages from data acquisition to model optimization.",
+    "Figure 2: AIL-ML methodology framework with data processing and model development phases.",
+    "Table 1: Comparative analysis of existing HIL-ML surveys across multiple dimensions."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "AIL-ML", "definition": "Agent-in-the-Loop Machine Learning, unifying human and large model agents."},
+    {"term": "HIL-ML", "definition": "Human-in-the-Loop Machine Learning incorporating expert domain knowledge."},
+    {"term": "LMIL-ML", "definition": "Large-Model-in-the-Loop Machine Learning using LLMs as human proxies."},
+    {"term": "Agent", "definition": "Either a human expert or a large model participating in the ML loop."}
+  ],
+  "citations": [
+    {"author": "Wu et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Comprehensive overview of HIL-ML from data management perspective.", "role": "baseline"},
+    {"author": "Mosqueira-Rey et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "State-of-the-art HIL-ML survey covering interaction modalities.", "role": "baseline"},
+    {"author": "Cui et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Understanding interactions in HCI for ML systems.", "role": "context"},
+    {"author": "Radford et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "GPT series demonstrating near-human language capabilities.", "role": "context"},
+    {"author": "Touvron et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "LLaMA large language model architecture.", "role": "context"},
+    {"author": "LeCun et al.", "year": 2015, "page": 0, "paragraph": 0, "claim": "Deep learning revolution in computer vision and NLP.", "role": "context"},
+    {"author": "Brown et al.", "year": 2020, "page": 0, "paragraph": 0, "claim": "Large models as potential participants in HIL-ML.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "low", "justification": "AIL-ML methods could inform classification in finance."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "low", "justification": "Expert knowledge distillation relevant to budget strategy systems."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Discusses model deployment and serving in expert domains."}
+    ],
+    "contribution_to_field": "Provides the first comprehensive survey of Agent-in-the-Loop ML, unifying human and large model participation in a single framework. Formalizes a taxonomy of intervention methods across the ML pipeline. Highlights the underexplored role of large models as active participants rather than passive tools in the ML loop.",
+    "directly_justifies": [
+      "Large models can serve as human proxies in expert domain ML tasks.",
+      "AIL-ML reduces annotation costs while improving model accuracy.",
+      "Agent interventions span all stages from data to model optimization."
+    ],
+    "limits": [
+      "Survey paper without empirical validation of the proposed framework.",
+      "Financial applications of AIL-ML are not specifically addressed."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 14.B medium relevance for ML deployment discussion. Assigned 5.C and 7.A low for potential cross-domain applicability. Rejected most personal finance-specific topics (1.A-4.C, 6.A-13.C) as the paper surveys general ML methodology for expert domains."
+  },
+  "limitations": [
+    "Survey methodology may miss recent works after 2024 cutoff. [unacknowledged]",
+    "Proposed AIL-ML framework not empirically validated.",
+    "Limited discussion of domain-specific challenges in personal finance."
+  ],
+  "remember_this": [
+    "AIL-ML unifies human and large model agents in the ML loop.",
+    "Large models can substitute for humans in annotation and data processing.",
+    "Existing HIL-ML surveys overlook large models as active participants.",
+    "Agent interventions improve accuracy, explainability, and privacy."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gao J. et al_marked.md",
+      "converted_at": "2026-07-22T13:23:14Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

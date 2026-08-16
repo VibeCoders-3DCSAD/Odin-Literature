@@ -1,0 +1,123 @@
+{
+  "paper_id": "10.32996/fcsai",
+  "designation": "local-algorithm-specific",
+  "title": "Artificial Intelligence for High-Stakes Decision Support: Architectures, Applications, and Deployment Challenges",
+  "authors": "Computer Science; Artificial Intelligence",
+  "year": 2016,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "11.A",
+    "12.A",
+    "2.A",
+    "4.B",
+    "5.C",
+    "6.A",
+    "7.B"
+  ],
+  "tldr": "Artificial intelligence (AI) is increasingly embedded in consequential decision-making processes across healthcare, assistive technologies, smart infrastructure, agriculture, business analytics, cybersecurity, and sustainability. Unlike general-purpose AI deployments, high-stakes decision support demands not only predictive accuracy but also explainability, robustness, privacy, scalability, human ",
+  "problem_and_motivation": "Artificial intelligence (AI) is increasingly embedded in consequential decision-making processes across healthcare, assistive technologies, smart infrastructure, agriculture, business analytics, cybersecurity, and sustainability. Unlike general-purpose AI deployments, high-stakes decision support demands not only predictive accuracy but also explainability, robustness, privacy, scalability, human oversight, and governance readiness. This structured critical review synthesizes to map the current ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Artificial Intelligence for High-Stakes Decision Support: Architectures, Applica"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Artificial Intelligence for High-Stakes Decision Support: Architectures, Applica",
+    "Year: 2016",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Molla & Zobayed_marked.md",
+      "converted_at": "2026-07-21T07:35:41Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

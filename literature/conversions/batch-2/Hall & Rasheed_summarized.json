@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.3390/app15115957",
+  "designation": "international-algorithm-specific",
+  "title": "A Survey of Machine Learning Methods for Time Series Prediction",
+  "authors": "Hall, T.; Rasheed, K.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "odin_topics": ["6.A", "6.B"],
+  "tldr": "Comprehensive survey of 79 papers comparing tree-based and deep learning methods for time series prediction under identical experimental conditions, finding LightGBM and RNNs top-performing.",
+  "problem_and_motivation": "Existing survey papers on time series prediction struggle to draw meaningful model comparisons because they analyze studies using different implementations and datasets. This heterogeneity obscures true performance differences between tree-based and deep learning approaches.",
+  "approach": [
+    "Systematically searched Web of Science for papers comparing tree-based (XGBoost, LightGBM, CatBoost) and deep learning (RNN, LSTM, GRU, CNN, Transformer) methods on identical datasets.",
+    "Selected 79 influential papers published between 2017-2024 using citation-based and temporal sampling criteria.",
+    "Introduced Fractional Performance Advantage (FPA) and Weighted Rank Advantage (WRA) metrics for cross-paper comparison.",
+    "Analyzed performance by task type (classification, regression), dataset size, time interval, and research focus area.",
+    "Reviewed error metrics and hyperparameter tuning methods used across the surveyed literature."
+  ],
+  "findings": [
+    "num: Tree-based methods like LightGBM deliver best overall balance of accuracy and computational efficiency.",
+    "Tree-based models achieve competitive accuracy with deep learning at a fraction of the training and inference cost.",
+    "RNN/LSTM-based deep learning models excel on large-scale, long-sequence time series data.",
+    "Dataset size and time interval significantly influence relative model performance rankings.",
+    "M5 competition winners used LightGBM; M6 winners used a mix of tree-based and neural approaches."
+  ],
+  "key_figures_tables": [
+    "Figure 1: RF and GBDT Architecture → Structural differences between Random Forest and Gradient-Boosted Decision Trees.",
+    "Figure 2: FFNN, CNN, and RNN Architecture → Modifications needed to transform FFNN into CNN or RNN.",
+    "Figure 2.3: Overall Model Performance FPA and WRA scores → Tree-based models lead on average across all studies."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "TBML", "definition": "Tree-Based Machine Learning"},
+    {"term": "DL", "definition": "Deep Learning"},
+    {"term": "FPA", "definition": "Fractional Performance Advantage, metric for cross-paper model comparison"},
+    {"term": "WRA", "definition": "Weighted Rank Advantage, ranking metric across multiple models"},
+    {"term": "GBDT", "definition": "Gradient-Boosted Decision Trees"}
+  ],
+  "citations": [
+    {"author": "Chen", "year": 2014, "page": 0, "paragraph": 0, "claim": "Introduced XGBoost, a scalable tree-boosting system.", "role": "methodology"},
+    {"author": "Ke et al.", "year": 2017, "page": 0, "paragraph": 0, "claim": "Developed LightGBM with histogram-based learning and leaf-wise growth.", "role": "methodology"},
+    {"author": "Prokhorenkova et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Introduced CatBoost with ordered target encoding for categorical features.", "role": "methodology"},
+    {"author": "Hochreiter & Schmidhuber", "year": 1997, "page": 0, "paragraph": 0, "claim": "Introduced Long Short-Term Memory networks for sequential data.", "role": "methodology"},
+    {"author": "Vaswani et al.", "year": 2017, "page": 0, "paragraph": 0, "claim": "Introduced Transformer architecture with self-attention for sequence modeling.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core survey of predictive ML methods directly applicable to financial time series modeling."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Systematic comparison of forecasting algorithms including LSTM, GRU, CNN, and tree-based methods."}
+    ],
+    "contribution_to_field": "This survey provides a structured comparison of tree-based versus deep learning methods for time series prediction, using novel FPA and WRA metrics to enable cross-paper analysis. It establishes that LightGBM and RNN/LSTM architectures are the top performers, with tree-based methods offering superior computational efficiency. The paper provides practical guidelines for model selection based on task type, dataset size, and computational constraints.",
+    "directly_justifies": [
+      "Tree-based and deep learning methods both top-performing for time series prediction tasks.",
+      "LightGBM offers best accuracy-to-efficiency ratio among surveyed methods.",
+      "RNN/LSTM preferred for large-scale, long-sequence time series data.",
+      "Dataset size and time interval significantly influence optimal model choice."
+    ],
+    "limits": [
+      "Survey limited to papers comparing both TBML and deep learning within same experimental setup.",
+      "Transformer-based time series methods may be underrepresented due to publication date cutoff.",
+      "Does not cover probabilistic forecasting or uncertainty quantification methods."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 6 (Predictive Modeling and Forecasting Algorithms) was flagged as high relevance because the paper directly surveys and compares ML methods for time series prediction. All other domains (1-5, 7-14) were rejected: the paper does not address demographics, financial behavior, expense categorization, budgeting, anomaly detection, mobile UX, privacy, engagement, evaluation frameworks, savings, synthetic data, or ML serving. Borderline case: Domain 7.C (Constrained Optimization) was considered but rejected because the survey does not cover budget optimization approaches."
+  },
+  "limitations": [
+    "Survey limited to 79 papers from Web of Science, may miss relevant work from other databases.",
+    "Citation-based selection may introduce bias toward established rather than novel methods.",
+    "FPA and WRA metrics are novel and not externally validated as comparison tools."
+  ],
+  "remember_this": [
+    "LightGBM and RNN/LSTM are top-performing time series prediction methods.",
+    "Tree-based methods offer competitive accuracy with significantly lower computational cost.",
+    "Model choice depends on task type, dataset size, and time interval of historical data.",
+    "FPA and WRA metrics enable direct comparison across heterogeneous experimental setups."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hall & Rasheed_marked.md",
+      "converted_at": "2026-07-22T13:29:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

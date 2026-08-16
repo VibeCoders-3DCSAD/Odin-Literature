@@ -1,0 +1,57 @@
+{
+  "paper_id": "10.1080/13229400.2022.2074869",
+  "designation": "international",
+  "title": "She's Like Family: transnational Filipino families, voluntary kin and the circulation of care",
+  "authors": "Gotehus, A.",
+  "year": 2023,
+  "venue": "Journal of Family Studies",
+  "odin_topics": ["2.A"],
+  "tldr": "Examines how transnational Filipino families in Norway use voluntary kin relationships to circulate care across borders, showing that non-familial relationships substitute and supplement family-based care.",
+  "problem_and_motivation": "Transnational families face care deficits due to geographic separation. Traditional family-based care models fail to account for voluntary kin relationships that emerge in migration contexts.",
+  "approach": [
+    "Qualitative study using in-depth interviews with transnational Filipino families in Norway.",
+    "Analyzes care circulation patterns across borders between Philippines and Norway.",
+    "Examines voluntary kin relationships as care provision mechanisms.",
+    "Explores welfare regime differences between Philippines and Norway affecting care arrangements."
+  ],
+  "findings": [
+    "Voluntary kin (non-blood relations treated as family) play crucial roles in care circulation.",
+    "Care flows bidirectionally between Norway-based migrants and Philippines-based relatives.",
+    "Welfare state provisions in Norway shape different care arrangements than in Philippines.",
+    "Non-familial relationships both supplement and substitute traditional family care."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Voluntary kin", "definition": "Non-blood relations treated as family members in care networks."},
+    {"term": "Care circulation", "definition": "Bidirectional flow of care across transnational family networks."}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "low", "justification": "Filipino care practices and remittance culture context."}
+    ],
+    "contribution_to_field": "Documents the role of voluntary kin in Filipino transnational care arrangements. Contrasts welfare regime effects on care practices between Norway and Philippines. Highlights culturally specific care circulation patterns.",
+    "directly_justifies": [],
+    "limits": ["Focused on care practices, not financial systems or technology."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 2.A low relevance for cultural practices background. Rejected all finance and technology topics as the paper is a sociological study of care."
+  },
+  "limitations": [
+    "Qualitative study with limited sample size.",
+    "Norway-specific context may not generalize to other migrant destinations."
+  ],
+  "remember_this": [
+    "Voluntary kin substitute for family in transnational care networks.",
+    "Care flows bidirectionally between migrants and home-country relatives.",
+    "Welfare regimes shape different care arrangement patterns."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gotehus_marked.md",
+      "converted_at": "2026-07-22T13:27:06Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

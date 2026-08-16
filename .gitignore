@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Raw binaries never enter this repo (ground truth lives in Odin-Paper + Drive)
+papers/
+bucket/
+archive/
+*.pdf
+*.xlsx
+*.csv
+*.zip
+
+# Derived heavy artifacts (regenerable via scripts/embed.py)
+cache/
+
+# Local scratch
+*.log
+.DS_Store

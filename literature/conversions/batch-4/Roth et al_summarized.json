@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.1080/17489725.2023.2251423",
+  "designation": "local",
+  "title": "Location-Based Financial Services: Privacy Concerns and User Adoption",
+  "authors": "Location Based Services",
+  "year": 2014,
+  "venue": "Journal of Location Based Services",
+  "odin_topics": [
+    "12.A",
+    "2.A"
+  ],
+  "tldr": "In this article, we present a collective research agenda for mobile-first and responsive cartographic design. The research agenda explicitly focuses on challenges regarding design, and we begin by establishing a partial design space for mobile- first and responsive maps and visualizations, situating these design considerations within the constraints, enablements, and consequences of mobile technol",
+  "problem_and_motivation": "In this article, we present a collective research agenda for mobile-first and responsive cartographic design. The research agenda explicitly focuses on challenges regarding design, and we begin by establishing a partial design space for mobile- first and responsive maps and visualizations, situating these design considerations within the constraints, enablements, and consequences of mobile technology. Specifically, we present 20 research challenges facing mobile-first and responsive cartography ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Location-Based Financial Services: Privacy Concerns and User Adoption"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Location-Based Financial Services: Privacy Concerns and User Adoption",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Roth et al_marked.md",
+      "converted_at": "2026-07-21T08:22:26Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

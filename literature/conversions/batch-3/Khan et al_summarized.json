@@ -1,0 +1,267 @@
+{
+  "paper_id": "10.1007/s10462-025-11215-9",
+  "designation": "international",
+  "title": "Model-agnostic explainable artificial intelligence methods in finance: a systematic review, recent developments, limitations, challenges and future directions",
+  "authors": "Khan, F. S.; Mazhar, S. S.; Mazhar, K.; AlSaleh, D. A.; Mazhar, A.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.B",
+    "12.B",
+    "12.C",
+    "5.C",
+    "4.A",
+    "4.B",
+    "8.A",
+    "10.A",
+    "11.A",
+    "11.B"
+  ],
+  "tldr": "A systematic review of model-agnostic XAI methods in finance identifies SHAP and LIME as most frequently used, examines challenges in balancing interpretability with predictive accuracy, and outlines future directions toward hybrid, computationally efficient, and regulatory-compliant explainability frameworks.",
+  "problem_and_motivation": "The increasing integration of complex, opaque AI models in finance creates critical concerns about transparency, trust, and regulatory compliance. Existing AI models, often acting as 'black boxes,' lack the interpretability needed for stakeholders to understand and validate decisions, which is especially problematic in regulated financial domains.",
+  "approach": [
+    "Conducted a systematic literature review following PRISMA guidelines, screening 1,115 initial papers down to 150 high-quality studies. ",
+    "Categorized XAI techniques using a taxonomy based on model-specific vs. model-agnostic, global vs. local, and intrinsic vs. post-hoc. ",
+    "Quantitatively analyzed the frequency of MA-XAI methods, AI/ML algorithms, and datasets used in the reviewed financial research. ",
+    "Examined performance metrics for both model accuracy and explanation quality, including fidelity, consistency, and sparsity. ",
+    "Identified key limitations of MA-XAI methods, such as challenges with high-dimensional data and computational efficiency. "
+  ],
+  "findings": [
+    "num: LIME and SHAP account for 52% of the total MA-XAI methods used in the finance studies reviewed.",
+    "num: The review found that India has published the highest number of articles in this domain, followed by the United States and Germany.",
+    "num: Artificial Neural Networks (ANNs) and Boosting ML algorithms (e.g., XGBoost, LightGBM) dominate financial AI research, accounting for 50% of total applications.",
+    "A key challenge identified is the trade-off between model interpretability and predictive accuracy, especially in deep learning models.",
+    "MA-XAI methods like SHAP and LIME face scalability and computational efficiency issues, hindering real-time financial decision-making."
+  ],
+  "key_figures_tables": [
+    "Figure 2: Comparative overview of AI models in finance → Shows roles of ML, DL, and XAI in financial decisions.",
+    "Figure 4: Comparison of black-box vs. XAI models → Emphasizes need for interpretability in high-stakes finance.",
+    "Figure 7: Trade-off between explainability and performance → Visualizes balance between interpretability and predictive power.",
+    "Figure 10: PRISMA flowchart → Details the systematic literature review selection process.",
+    "Table 4: Author-wise MA-XAI publications → Lists LIME and SHAP as the most frequently used methods."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "A collection of techniques designed to empower human users to comprehend, trust, and oversee AI outputs and decisions by making the decision-making process transparent and comprehensible."
+    },
+    {
+      "term": "MA-XAI",
+      "definition": "Model-Agnostic Explainable AI techniques that can be applied to any machine learning model to provide explanations, regardless of the model's underlying architecture."
+    },
+    {
+      "term": "SHAP",
+      "definition": "Shapley Additive Explanations, a unified approach based on cooperative game theory that explains the contribution of each feature to a model's prediction."
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations, a technique that explains individual predictions by locally approximating a complex black-box model with an interpretable one."
+    },
+    {
+      "term": "PDPs",
+      "definition": "Partial Dependence Plots, a method for showing the marginal effect one or two features have on the predicted outcome of a model."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced SHAP, a unified approach for interpreting model predictions based on Shapley values.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ribeiro",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed LIME, a technique to explain individual predictions of any classifier by approximating it locally.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ribeiro",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed Anchors, a method providing high-precision, human-interpretable explanations for ML decisions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Friedman",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Partial Dependence Plots (PDPs) as a tool for explaining model predictions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Goldstein",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Individual Conditional Expectation (ICE) plots for a more granular view of feature effects.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bhowmik",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A fraud detection methodology using XAI achieved 94% accuracy with a 70:30 train-validation split.",
+      "role": "finding"
+    },
+    {
+      "author": "Ozbayoglu",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "An LSTM model for stock price forecasting achieved 91.5% accuracy, surpassing traditional methods.",
+      "role": "finding"
+    },
+    {
+      "author": "Bussmann",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explored the role of XAI in fintech risk management using Shapley values for peer-to-peer lending.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gramegna",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Used XAI to understand why policyholders purchase or discontinue non-life insurance coverage.",
+      "role": "context"
+    },
+    {
+      "author": "Černevičienė",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Classified multi-criteria decision-making methods to develop explainable and interpretable AI for finance.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews ML and DL models for financial prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Discusses LSTM and GRU for financial time-series forecasting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions XAI's role in interpreting loan approvals and credit risk."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews applications of XAI in fraud detection and financial anomaly detection."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Discusses classification models (e.g., RF, SVM) for credit scoring and customer segmentation."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Addresses fairness, bias mitigation, and regulatory compliance (e.g., GDPR)."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Analyzes performance metrics for XAI methods like fidelity and consistency."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Uses metrics like accuracy and AUC for financial model evaluation."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews the application of AI in credit scoring, fraud detection, and portfolio management."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies limitations of black-box AI and MA-XAI methods."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Briefly touches upon building trust through transparency."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "low",
+        "justification": "Mentions that XAI fosters trust, which can affect retention."
+      }
+    ],
+    "contribution_to_field": "This systematic review consolidates and structures the disparate literature on Model-Agnostic XAI methods in finance. It provides a comprehensive taxonomy and quantitative analysis of commonly used MA-XAI techniques, revealing SHAP and LIME as the dominant methods. The study systematically identifies persistent challenges, including the trade-off between accuracy and interpretability, computational costs, and regulatory compliance. It also synthesizes future research directions, promoting hybrid models and frameworks designed for regulatory alignment, which advances the theoretical and practical understanding of XAI in financial contexts.",
+    "directly_justifies": [
+      "LIME and SHAP provide clear, human-understandable explanations for complex financial models.",
+      "A trade-off exists between model accuracy and explainability in financial AI applications.",
+      "MA-XAI methods often struggle with high-dimensional and temporal financial data.",
+      "Future research should focus on hybrid XAI models and regulatory-compliant frameworks.",
+      "AI models in finance often lack transparency, limiting stakeholder trust."
+    ],
+    "limits": [
+      "The review does not assess the effectiveness of XAI methods in non-financial domains.",
+      "The findings are based on a systematic review of literature and may not capture all existing MA-XAI techniques, especially very recent or proprietary ones.",
+      "The study focuses on model-agnostic methods and does not provide a detailed comparison with model-specific XAI techniques."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to predictive modeling (6.A, 6.B), anomaly detection (8.A), and evaluation frameworks (12.B, 12.C) were flagged as highly relevant because the paper extensively reviews ML/DL models for financial prediction, forecasting, fraud detection, and the metrics used to evaluate them. Classification approaches (5.C) and the landscape/limitations of existing systems (4.A, 4.B) were deemed of medium relevance as the paper discusses models for credit scoring and the limitations of black-box AI. Data privacy (10.A) and engagement dynamics (11.A, 11.B) were considered medium or low relevance as they are peripheral, mentioned in the context of fairness/trust but not a primary focus. Topics related to Filipino-specific demographics or spending patterns were rejected due to the paper's international scope and general financial domain focus. The overall coverage centers on the technical evaluation and challenges of applying MA-XAI to general financial AI systems."
+  },
+  "limitations": [
+    "The review acknowledges a trade-off between explainability and predictive accuracy, where interpretable models often have lower accuracy. [unacknowledged]",
+    "Computational complexity and scalability are critical concerns for methods like SHAP and LIME when applied to large financial datasets. [unacknowledged]",
+    "The generalizability of XAI methods across diverse financial contexts is still uncertain. [unacknowledged]",
+    "The analysis is based on 150 selected studies, which may introduce selection bias despite the systematic approach. [unacknowledged]"
+  ],
+  "remember_this": [
+    "LIME and SHAP are the most widely used MA-XAI methods in finance, comprising 52% of applications.",
+    "ANN and boosting algorithms dominate financial AI research, representing 50% of the models used.",
+    "A key challenge is the inherent trade-off between model accuracy and interpretability.",
+    "Computational inefficiency of methods like SHAP limits their use in real-time financial applications.",
+    "Future research should prioritize hybrid XAI models and regulatory-compliant explainability frameworks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20260514",
+    "conversion_reference": {
+      "file": "Khan et al_marked.md",
+      "converted_at": "2026-07-21T13:46:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

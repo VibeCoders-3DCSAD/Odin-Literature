@@ -1,0 +1,152 @@
+{
+  "paper_id": "10.55248/gengpi.6.0525.1716",
+  "designation": "local",
+  "title": "The Gig Economy: Financial Challenges and Opportunities Faced by Freelancers",
+  "authors": "Casalhay, S.F.; Guevarra, C.M.; Bragas, C.M.",
+  "year": 2025,
+  "venue": "International Journal of Research Publication and Reviews",
+  "odin_topics": [
+    "5.A",
+    "7.A",
+    "4.A",
+    "4.B",
+    "2.C",
+    "13.A"
+  ],
+  "tldr": "Qualitative study of Metro Manila freelancers reveals income volatility, limited access to benefits, and financial service barriers as primary challenges, with budgeting, emergency savings, and digital tools as common coping strategies.",
+  "problem_and_motivation": "Freelancers in the gig economy face significant financial challenges including income volatility, lack of traditional employment benefits, and limited access to tailored financial services.",
+  "approach": [
+    "Semi-structured interviews with 50 freelancers in Metro Manila across diverse fields.",
+    "Purposive and snowball sampling to ensure at least six months of gig work experience.",
+    "Thematic analysis of qualitative transcripts.",
+    "Use of NVivo software for coding and organizing themes.",
+    "Interview guide pre-tested with 2-3 freelancers."
+  ],
+  "findings": [
+    "Income instability is the primary financial challenge, driven by seasonal fluctuations, client volume dependence, and unpredictable payments.",
+    "Freelancers lack traditional benefits such as health insurance, retirement plans, and paid leave.",
+    "Barriers to financial services include difficulty accessing loans, high interest rates, and documentation issues.",
+    "Financial tools like budgeting apps, digital wallets, and spreadsheets are widely used but have limitations.",
+    "Freelancers employ budgeting strategies including expense consciousness, structured allocation, and manual tracking.",
+    "Emergency fund saving and automated saving are common practices among freelancers.",
+    "Affordable health insurance tailored to freelancers would improve financial stability.",
+    "Policy and regulatory changes are needed to protect freelancers from non-payment and financial risks."
+  ],
+  "citations": [
+    {
+      "author": "De Stefano",
+      "year": 2016,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Freelancers operate in a precarious labor market with contingent, short-term, project-based employment leading to income volatility.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wood",
+      "year": 2019,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Gig workers often lack access to essential benefits like health insurance, retirement savings, and paid leave.",
+      "role": "finding"
+    },
+    {
+      "author": "Huws",
+      "year": 2018,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Income variability is one of the primary concerns for freelancers.",
+      "role": "finding"
+    },
+    {
+      "author": "Minter",
+      "year": 2017,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Financial institutions view freelancers as high-risk clients due to inconsistent earnings.",
+      "role": "baseline"
+    },
+    {
+      "author": "Hwang",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "The gig economy is characterized by unstable income and growing financial insecurity.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Study explores financial behaviors of freelancers including budgeting, saving, and tool usage."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Documents budgeting strategies employed by freelancers to manage irregular income."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses financial tools and services used by freelancers."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gaps in financial products tailored to freelancers needs."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "medium",
+        "justification": "Interview data captures freelancers stated financial preferences and coping mechanisms."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "low",
+        "justification": "Discusses emergency fund saving and automated saving practices."
+      }
+    ],
+    "contribution_to_field": "Comprehensive qualitative analysis of financial challenges and opportunities faced by freelancers in the gig economy. Identifies income volatility, lack of traditional benefits, and barriers to financial services as primary challenges.",
+    "directly_justifies": [
+      "Income instability is the primary financial challenge for freelancers.",
+      "Freelancers lack traditional benefits such as health insurance, retirement plans, and paid leave.",
+      "Barriers to financial services include difficulty accessing loans, high interest rates, and documentation issues.",
+      "Emergency fund saving and automated saving are common practices among freelancers."
+    ],
+    "limits": [
+      "Qualitative design limits generalizability to larger populations.",
+      "Sample restricted to freelancers in Metro Manila.",
+      "Self-reported data may be subject to recall bias.",
+      "No longitudinal analysis of financial behavior changes over time."
+    ]
+  },
+  "limitations": [
+    "Qualitative design limits generalizability to larger populations.",
+    "Sample restricted to freelancers in Metro Manila, may not represent other regions.",
+    "Self-reported data may be subject to recall bias.",
+    "No longitudinal analysis of financial behavior changes over time."
+  ],
+  "remember_this": [
+    "Income volatility is the primary financial challenge for freelancers in the gig economy.",
+    "Freelancers lack traditional benefits and face barriers to financial services.",
+    "Budgeting, emergency saving, and digital tools are common coping strategies.",
+    "Affordable health insurance tailored to freelancers would improve financial stability.",
+    "Policy and regulatory changes are needed to protect freelancers."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Casalhay et al_marked.md",
+      "converted_at": "2026-07-22T12:41:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

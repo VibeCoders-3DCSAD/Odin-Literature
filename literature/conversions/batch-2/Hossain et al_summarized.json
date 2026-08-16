@@ -1,0 +1,80 @@
+{
+  "paper_id": "10.55640/business/volume06issue07-02",
+  "designation": "international-algorithm-specific",
+  "title": "Enhancing Credit Scoring with Multimodal Deep Learning: A Hybrid Neural Network Approach Using Structured and Unstructured Financial Data",
+  "authors": "Hossain, M. R.; Pabel, M. A. H.; Ul Haque, M. S.; Khan, M. S.; Obaid, M. O.; Akter, S.; Ahmed, M.",
+  "year": 2025,
+  "venue": "International Interdisciplinary Business Economics Advancement Journal",
+  "odin_topics": ["5.C", "6.A"],
+  "tldr": "Proposes a hybrid deep neural network integrating structured financial data with unstructured text (customer service logs, news, social media) for credit scoring, achieving 87% accuracy and 0.91 AUC-ROC.",
+  "problem_and_motivation": "Traditional credit models rely on structured data and fail to assess borrowers with limited credit footprints. Unstructured data sources rich in behavioral cues remain underutilized in credit risk assessment.",
+  "approach": [
+    "Collected a multimodal dataset of over 100,000 loan profiles combining structured data (Lending Club, Give Me Some Credit) and unstructured text (customer service logs, financial news, Twitter sentiment).",
+    "Developed a bi-directional LSTM architecture for processing textual data from customer interactions and news.",
+    "Fused structured and unstructured features via a deep learning framework for credit risk prediction.",
+    "Evaluated against baselines: logistic regression, random forest, XGBoost, and single-input DNNs.",
+    "Ensured ethical sourcing and anonymization per GDPR and HIPAA compliance."
+  ],
+  "findings": [
+    "num: Hybrid DNN achieved 87% accuracy and AUC-ROC of 0.91.",
+    "num: Hybrid model significantly outperformed logistic regression, random forest, XGBoost, and single-input DNNs.",
+    "Integration of unstructured data improved prediction for borrowers with limited credit history.",
+    "Bi-directional LSTM effectively captured semantic features from financial text sources."
+  ],
+  "key_figures_tables": [
+    "Table 1: Dataset Details → Describes Lending Club, Give Me Some Credit, financial institution logs, news, and Twitter data."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "DNN", "definition": "Deep Neural Network"},
+    {"term": "LSTM", "definition": "Long Short-Term Memory network"},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic curve"},
+    {"term": "XGBoost", "definition": "Extreme Gradient Boosting, a tree-based ML algorithm"}
+  ],
+  "citations": [
+    {"author": "Malekipirbazari & Aksakalli", "year": 0, "page": 0, "paragraph": 0, "claim": "Deep neural networks offered performance advantages over conventional credit models.", "role": "context"},
+    {"author": "Cerchiello et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Sentiment analysis on financial news enhances firm credit scoring.", "role": "finding"},
+    {"author": "Mai et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Twitter sentiment improves bankruptcy prediction models.", "role": "finding"},
+    {"author": "Bazarbash", "year": 0, "page": 0, "paragraph": 0, "claim": "AI-enhanced credit scoring reduces misclassification errors with text narratives.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Core contribution is a classification model for creditworthiness profiling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Applies hybrid deep learning for predictive credit risk assessment."}
+    ],
+    "contribution_to_field": "This paper demonstrates that integrating unstructured textual data into deep neural networks significantly improves credit scoring accuracy over traditional structured-only models. The bi-directional LSTM architecture for text processing provides a template for multimodal financial risk assessment. The work expands the evidence base for alternative data sources in credit evaluation, particularly for underserved borrowers.",
+    "directly_justifies": [
+      "Hybrid DNN outperforms logistic regression, RF, and XGBoost for credit scoring.",
+      "Unstructured text data improves prediction for thin-file borrowers.",
+      "Bi-directional LSTM effectively processes financial text for risk assessment."
+    ],
+    "limits": [
+      "Synthetic integration of structured and unstructured data may not reflect real-world data pipelines. [unacknowledged]",
+      "Twitter and news data timeliness and relevance to individual credit risk is uncertain.",
+      "Model interpretability for regulatory compliance not addressed."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 5.C (Classification Approaches) was flagged as high relevance because the paper's core contribution is a credit classification model. Domain 6.A (Predictive Modeling) was flagged as high because the DNN is applied to predictive financial risk assessment. All other domains were rejected as the paper addresses credit scoring methodology, not personal budgeting or financial management."
+  },
+  "limitations": [
+    "Data integration pipeline may introduce inconsistencies between structured and unstructured sources. [unacknowledged]",
+    "No analysis of model interpretability for regulatory compliance in credit decisions.",
+    "Twitter and news data may not be reliably available for production credit systems."
+  ],
+  "remember_this": [
+    "Hybrid DNN achieves 87% accuracy and 0.91 AUC-ROC for credit scoring.",
+    "Unstructured text data improves predictions for thin-file borrowers.",
+    "Multimodal deep learning outperforms logistic regression, RF, and XGBoost.",
+    "Customer service logs, news, and social media contain credit-relevant signals."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hossain et al_marked.md",
+      "converted_at": "2026-07-22T13:35:20Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "paper_id": "10.2139/nduka.benedicto.2024.nursing.financial.independence",
+  "designation": "local",
+  "title": "Nursing Career Towards Financial Independence",
+  "authors": "Mary Grace B. Nduka, Michael B. Benedicto",
+  "year": 2024,
+  "venue": "International Journal of Research Publication, 162(1): 413-423",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "2.A",
+    "2.B",
+    "2.C",
+    "8.A",
+    "8.B",
+    "9.A"
+  ],
+  "tldr": "A qualitative phenomenological study exploring how 28 Filipino nurses from Metro Manila government hospitals perceive nursing as a pathway to financial independence, identifying seven themes and proposing the N-FERP framework for nurse financial empowerment.",
+  "problem_and_motivation": "Despite heavy outmigration of Filipino nurses seeking higher pay abroad, there is limited research on the financial experiences of nurses who remain in the Philippines. Understanding how nursing careers help or hinder financial independence is critical for workforce retention policy.",
+  "approach": [
+    "Qualitative phenomenological design using Colaizzi's method of data analysis",
+    "Purposive sampling of 28 Registered Nurses from 3 government hospitals in Metro Manila",
+    "Semi-structured in-depth interviews and focus group discussions",
+    "Data analysis through seven procedural steps: collection, extraction, formulation of meanings, theme clustering, integration, member checking, and validation",
+    "Demographic profiling to understand participant backgrounds (age, sex, civil status, educational attainment, number of dependents)",
+    "Thematic analysis to identify patterns in financial experiences",
+    "Proposal of N-FERP (Nurse Financial Empowerment and Resilience Program) framework"
+  ],
+  "findings": [
+    "cat: Majority were female (64.29%), aged 33-39 (53.57%), married (57.14%), with master's degrees (53.57%).",
+    "cat: 89.29% were family breadwinners; 53.57% supported 4 or more dependents beyond themselves.",
+    "cat: Job positions ranged from Nurse I to Nurse V with salary grades from SG-2 to SG-6 (50%).",
+    "cat: Seven emergent themes identified: Personal Security, Professional Motivation, Family Support, Career Development, Stress Reduction, Autonomy, and Retirement.",
+    "qlt: Single nurses living alone can cover basic needs but cannot accumulate savings.",
+    "qlt: Single nurses acting as breadwinners face substantial financial strain.",
+    "qlt: Married nurses share financial responsibilities but face challenges with large family sizes.",
+    "qlt: N-FERP proposed as a five-component program: Financial Literacy Training, Structured Savings and Investment Programs, Career Advancement Support, Mental Health and Wellness Support, and Policy Advocacy and Workplace Reforms."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic Profile by Sex, Age Group, and Civil Status.",
+    "Table 2: Demographic Profile by Educational Attainment, Position, and Salary Grade.",
+    "Table 3: Number of Dependents and Breadwinner Status.",
+    "Figure 1: The N-FERP (Nurse Financial Empowerment and Resilience Program) Framework."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "Financial Independence",
+      "definition": "The state of having sufficient personal wealth to live without having to work actively for basic necessities."
+    },
+    {
+      "term": "Phenomenological Design",
+      "definition": "A qualitative research approach that seeks to understand the lived experiences of individuals regarding a particular phenomenon."
+    },
+    {
+      "term": "N-FERP",
+      "definition": "Nurse Financial Empowerment and Resilience Program; a proposed five-component framework for improving financial well-being of nurses."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Yap et al.",
+      "year": 2022,
+      "page": 414,
+      "paragraph": 1,
+      "claim": "Nurses face heavy workloads, long hours, and relatively low compensation given their responsibilities.",
+      "role": "context"
+    },
+    {
+      "author": "Dumancas and Bautista",
+      "year": 2020,
+      "page": 414,
+      "paragraph": 1,
+      "claim": "Better opportunities and pay abroad contribute to nursing outmigration from the Philippines.",
+      "role": "context"
+    },
+    {
+      "author": "Shen et al.",
+      "year": 2020,
+      "page": 414,
+      "paragraph": 2,
+      "claim": "Financial wellness significantly correlates with mental health outcomes among healthcare professionals.",
+      "role": "support"
+    },
+    {
+      "author": "Kim and Yeo",
+      "year": 2021,
+      "page": 414,
+      "paragraph": 2,
+      "claim": "Explored financial stress and its impact on job satisfaction among nurses in South Korea.",
+      "role": "context"
+    },
+    {
+      "author": "Kaddourah et al.",
+      "year": 2018,
+      "page": 414,
+      "paragraph": 2,
+      "claim": "Financial well-being influences nursing retention and job performance.",
+      "role": "support"
+    },
+    {
+      "author": "Martsolf et al.",
+      "year": 2021,
+      "page": 415,
+      "paragraph": 1,
+      "claim": "Low salary levels are a primary driver for nurses leaving the profession.",
+      "role": "support"
+    },
+    {
+      "author": "Ayalew et al.",
+      "year": 2021,
+      "page": 415,
+      "paragraph": 2,
+      "claim": "Career advancement and educational opportunities are key predictors of nurse retention.",
+      "role": "support"
+    },
+    {
+      "author": "Santos and Reyes",
+      "year": 2019,
+      "page": 415,
+      "paragraph": 3,
+      "claim": "Explored financial literacy levels among Filipino workers and their impact on savings behavior.",
+      "role": "context"
+    },
+    {
+      "author": "Cruz and Dela Cruz",
+      "year": 2022,
+      "page": 421,
+      "paragraph": 4,
+      "claim": "Proposed financial education programs for public-sector workers in the Philippines.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Financial Literacy and Education",
+        "relevance": "high",
+        "justification": "N-FERP proposes financial literacy training as a core component for nurse financial empowerment."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Behavior and Decision-Making",
+        "relevance": "high",
+        "justification": "Explores how nurses' financial decisions are shaped by family obligations, breadwinner status, and career stage."
+      },
+      {
+        "code": "2.A",
+        "name": "Employment and Income",
+        "relevance": "high",
+        "justification": "Directly examines salary grades, job positions, and breadwinner status of government nurses."
+      },
+      {
+        "code": "2.B",
+        "name": "Career Development and Advancement",
+        "relevance": "high",
+        "justification": "Career development is one of the seven identified themes; N-FERP includes career advancement support."
+      },
+      {
+        "code": "2.C",
+        "name": "Workplace Environment and Benefits",
+        "relevance": "high",
+        "justification": "Explores workplace-related stress, salary adequacy, and government benefits affecting financial independence."
+      },
+      {
+        "code": "8.A",
+        "name": "Socioeconomic Impact and Financial Inclusion",
+        "relevance": "high",
+        "justification": "Examines how nurses' financial struggles affect their families and communities in the Philippine context."
+      },
+      {
+        "code": "8.B",
+        "name": "Policy and Regulation (Financial/Professional)",
+        "relevance": "medium",
+        "justification": "N-FERP includes policy advocacy and workplace reform recommendations."
+      },
+      {
+        "code": "9.A",
+        "name": "Qualitative Research Methods",
+        "relevance": "high",
+        "justification": "Uses Colaizzi's phenomenological method with purposive sampling, interviews, and thematic analysis."
+      }
+    ],
+    "contribution_to_field": "Provides a nuanced qualitative understanding of how Filipino government hospital nurses experience financial (in)dependence within the nursing career, highlighting the tension between professional fulfillment and financial strain, and proposing a multi-component intervention framework.",
+    "directly_justifies": [
+      "Odin's user studies on financial behavior should account for career-related and cultural factors like breadwinner culture.",
+      "Qualitative research methods complement quantitative financial modeling in understanding user needs.",
+      "Financial independence concerns vary significantly by career stage, marital status, and family obligations."
+    ],
+    "limits": [
+      "Limited to 28 participants from only 3 hospitals in Metro Manila; not generalizable to all Philippine nurses.",
+      "Qualitative methodology does not include quantitative financial metrics or causal analysis.",
+      "N-FERP proposed but not implemented or evaluated."
+    ],
+    "topic_mapping_rationale": "Non-algorithmic Philippine study on career financial experiences, covering financial literacy, employment, career development, workplace context, and socioeconomic impact."
+  },
+  "limitations": [
+    "Small sample size of 28 nurses from only three government hospitals in Metro Manila.",
+    "Qualitative, phenomenological design limits generalizability and does not provide statistical or causal evidence.",
+    "Potential social desirability bias in self-reported financial experiences during interviews.",
+    "N-FERP remains a proposed framework with no implementation or outcome evaluation.",
+    "Findings specific to Philippine public hospital context; not generalizable to private hospitals or other countries."
+  ],
+  "remember_this": [
+    "89.29% of Filipino government nurses are family breadwinners; 53.57% support 4+ dependents.",
+    "Seven themes: Personal Security, Professional Motivation, Family Support, Career Development, Stress Reduction, Autonomy, Retirement.",
+    "Single nurses living alone cover basic needs but cannot save; single breadwinner nurses face severe financial strain.",
+    "N-FERP proposed: Financial Literacy Training, Savings Programs, Career Support, Mental Health, Policy Advocacy."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Nduka & Benedicto_marked.md",
+      "converted_at": "2026-07-21T07:45:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

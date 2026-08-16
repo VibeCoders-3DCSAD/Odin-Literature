@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.1108/AJAR-09-2020-0086",
+  "designation": "local-algorithm-specific",
+  "title": "Determinants of Financial Literacy Among Filipino Millennials",
+  "authors": "Integrative Business; Economics Research",
+  "year": 2015,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "11.A"
+  ],
+  "tldr": "Considering the various investment alternatives available in the market, investors are confronted with a decision to buy, hold, or sell investment portfolios. The study examines the impact of behavioral biases on the investment decisions of Generation Y and Z investors. It measures the moderating effect of financial literacy on the impact of behavioral biases on investment decisions. The study uti",
+  "problem_and_motivation": "Considering the various investment alternatives available in the market, investors are confronted with a decision to buy, hold, or sell investment portfolios. The study examines the impact of behavioral biases on the investment decisions of Generation Y and Z investors. It measures the moderating effect of financial literacy on the impact of behavioral biases on investment decisions. The study utilized a structured survey questionnaire among Filipino retail investors in Metro Manila. The results",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "1.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Determinants of Financial Literacy Among Filipino Millennials"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Determinants of Financial Literacy Among Filipino Millennials",
+    "Year: 2015",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Patiu et al_marked.md",
+      "converted_at": "2026-07-21T08:05:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

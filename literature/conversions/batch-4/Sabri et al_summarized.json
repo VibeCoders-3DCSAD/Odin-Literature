@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.1057/s41264-023-00234-8",
+  "designation": "local-algorithm-specific",
+  "title": "Impact of Financial Behaviour on Financial Well-Being: Evidence Among Young Adults in Malaysia",
+  "authors": "Financial Services Marketing",
+  "year": 2014,
+  "venue": "Journal of Financial Services Marketing",
+  "odin_topics": [
+    "1.C",
+    "13.B",
+    "5.C"
+  ],
+  "tldr": "The high cost of living and prolonged lockdowns due to the COVID-19 pandemic made the financial well-being of indi- viduals vulnerable, especially young adults. This paper examines the impact of financial behaviour on financial well-being (FWB) among young Malaysians during the COVID-19 pandemic. The study collected variable data on financial literacy, financial behaviour, financial socialisation,",
+  "problem_and_motivation": "The high cost of living and prolonged lockdowns due to the COVID-19 pandemic made the financial well-being of indi- viduals vulnerable, especially young adults. This paper examines the impact of financial behaviour on financial well-being (FWB) among young Malaysians during the COVID-19 pandemic. The study collected variable data on financial literacy, financial behaviour, financial socialisation, self-control, financial technology and FWB. To collect a representative sample of Malaysian young a",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Journal of Financial Services Marketing https://doiorg/101057/s41264-023-00234-8"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Journal of Financial Services Marketing https://doiorg/101057/s41264-023-00234-8",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Sabri et al_marked.md",
+      "converted_at": "2026-07-21T08:24:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

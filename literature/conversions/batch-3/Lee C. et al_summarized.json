@@ -1,0 +1,275 @@
+{
+  "paper_id": "10.1145/3706598.3714113",
+  "designation": "international-algorithm-specific",
+  "title": "VeriPlan: Integrating Formal Verification and LLMs into End-User Planning",
+  "authors": "Lee, C. P.; Porfirio, D.; Wang, X. J.; Zhao, K. C.; Mutlu, B.",
+  "year": 2025,
+  "venue": "CHI Conference on Human Factors in Computing Systems",
+  "odin_topics": [
+    "7.A",
+    "7.B",
+    "7.C",
+    "7.D",
+    "7.E",
+    "8.A",
+    "8.B",
+    "8.C",
+    "9.A",
+    "9.B",
+    "10.A",
+    "10.B",
+    "11.A",
+    "11.B",
+    "12.A",
+    "12.B",
+    "12.C",
+    "5.A",
+    "5.B",
+    "5.C"
+  ],
+  "tldr": "Introduces VeriPlan, a system that applies model checking to verify and refine LLM-generated plans against user-defined constraints, improving perceived output quality and user satisfaction.",
+  "problem_and_motivation": "LLMs show promise for end-user planning but suffer from consistency, accuracy, and trust issues, and lack reliable self-verification. Traditional planning tools are inaccessible to everyday users due to complex formal languages. There is a need for systems that combine LLM accessibility with formal verification to ensure reliable, user-aligned planning outputs.",
+  "approach": [
+    "Uses GPT-4 as the LLM planner to generate initial plans from natural language prompts.",
+    "Implements a rule translator that maps user constraints from natural language to LTL properties via a predefined temporal constraint template.",
+    "Provides flexibility sliders that allow users to adjust the strictness (hard/soft) of each constraint.",
+    "Employs the PRISM model checker to formally verify LLM-generated plans against the translated LTL constraints.",
+    "Feeds verification feedback (violated rules) back to the LLM for iterative plan regeneration.",
+    "Conducts a within-subjects ablation study (n=12) comparing the full VeriPlan system against versions lacking the rule translator or flexibility sliders.",
+    "Evaluates user experience using the USE questionnaire and the FATE performance scale.",
+    "Analyzes interview data using thematic analysis to gain qualitative insights."
+  ],
+  "findings": [
+    "num: Full VeriPlan significantly outperformed the no-translator (p=.0011) and no-features (p=.0013) conditions in perceived LLM performance.",
+    "num: Full VeriPlan was significantly more useful than conditions without sliders (p=.047), without translator (p=.009), and without features (p=.0257).",
+    "num: Full VeriPlan was significantly more satisfying than the no-translator (p=.007) and no-features (p=.0101) conditions.",
+    "The rule translator improved performance, satisfaction, and usefulness by enabling user control over rigidity and aligning expectations.",
+    "Flexibility sliders showed potential to improve usefulness, especially for adaptive scenarios requiring personalization.",
+    "The model checker improved efficiency and transparency, acting as a safety net that enabled creative exploration.",
+    "Users desired actionable suggestions from the model checker, such as constraint adjustments or rephrasing guidance.",
+    "The mind map-based interface supported usability by helping users understand planning content and apply feedback.",
+    "User control over verification enforces rigidity, while control over strictness enables flexibility and creativity in planning.",
+    "Model checking provides deterministic boundaries for probabilistic LLMs, enhancing reliability and user confidence."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Overview of VeriPlan pipeline comparing LLM-only vs. LLM with verification → Takeaway: VeriPlan adds a verification loop to catch rule violations.",
+    "Figure 2: VeriPlan interface showing rule translation, sliders, and model checker outputs → Takeaway: Interface organizes planning components for user control.",
+    "Figure 6: Quantitative results across ablation conditions → Takeaway: Full system significantly improves performance, usefulness, and satisfaction.",
+    "Table 1: Template of temporal constraints for translating natural language to LTL → Takeaway: Defines six categories for formal rule extraction."
+  ],
+  "key_equations": [
+    {
+      "equation": "G (Monday \\wedge midnight) \\rightarrow [ ( F \\, writingBlock ) \\wedge G (writingBlock \\rightarrow F ( Tuesday \\wedge 9:00PM ) ) ]",
+      "explanation": "LTL for a fixed-time block."
+    },
+    {
+      "equation": "G (\\neg brownMeatballs \\, U \\, mixingMeatballIngredients)",
+      "explanation": "LTL for strict sequential order."
+    },
+    {
+      "equation": "G (bakingCheesecake \\rightarrow F \\, servingCheesecake)",
+      "explanation": "LTL for flexible sequential order."
+    },
+    {
+      "equation": "G ( morningAlarm \\rightarrow F \\, startCoffeeMachine )",
+      "explanation": "LTL for conditional constraints (start)."
+    },
+    {
+      "equation": "G ( startAtL1(P1) \\wedge ... \\wedge startAtL1(P4) ) \\rightarrow F (arriveAtL2(P1) \\wedge ... \\wedge arriveAtL2(P4))",
+      "explanation": "LTL for global completion constraints."
+    }
+  ],
+  "definitions": [
+    { "term": "LLM", "definition": "Large Language Model." },
+    { "term": "LTL", "definition": "Linear Temporal Logic, a formalism for expressing temporal properties." },
+    { "term": "Model Checking", "definition": "A formal verification technique that systematically checks if a system model satisfies a given specification." },
+    { "term": "PRISM", "definition": "A probabilistic model checker used in VeriPlan for verification." },
+    { "term": "PDDL", "definition": "Planning Domain Definition Language, a standard for describing planning problems." },
+    { "term": "FATE", "definition": "Fairness, Accountability, Transparency, and Explainability scale." },
+    { "term": "USE", "definition": "Usefulness, Satisfaction, and Ease of use questionnaire." }
+  ],
+  "citations": [
+    {
+      "author": "Valmeekam",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GPT-4 achieves a 12% average success rate in planning tasks (location approximate, see Section 2.3).",
+      "role": "finding"
+    },
+    {
+      "author": "Kambhampati",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLMs cannot plan independently but can help within modular frameworks (location approximate, see Section 2.3).",
+      "role": "context"
+    },
+    {
+      "author": "Gundawar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced an LLM-Modulo Framework that checks plans against critics for feedback (location approximate, see Section 2.1).",
+      "role": "methodology"
+    },
+    {
+      "author": "Xie",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLMs struggle to generate plans and feedback for complex scenarios with constraints (location approximate, see Section 2.3).",
+      "role": "critique"
+    },
+    {
+      "author": "Bender",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLMs are prone to generating coherent but factually incorrect information (hallucinations) (location approximate, see Section 2.2).",
+      "role": "context"
+    },
+    {
+      "author": "Subramonyam",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Users face cognitive challenges in prompt-based interactions with LLMs (location approximate, see Section 2.2).",
+      "role": "context"
+    },
+    {
+      "author": "Zamfirescu-Pereira",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Non-AI experts struggle to design effective prompts for LLMs (location approximate, see Section 2.2).",
+      "role": "context"
+    },
+    {
+      "author": "Amershi",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Human-AI interaction guidelines emphasize designing for correction when systems produce incorrect output (location approximate, see Section 1).",
+      "role": "context"
+    },
+    {
+      "author": "Ma",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Interactive environments with user-controllable parameters help build understanding of LLM capabilities (location approximate, see Section 2.2).",
+      "role": "baseline"
+    },
+    {
+      "author": "Fox",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced PDDL2.1 for expressing temporal planning domains (location approximate, see Section 2.1).",
+      "role": "methodology"
+    },
+    {
+      "author": "Baier",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Model checking is a formal technique for verifying system requirements (location approximate, see Section 2.4).",
+      "role": "methodology"
+    },
+    {
+      "author": "Dixon",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LTL is used to express requirements in assistive robotics (location approximate, see Section 2.4).",
+      "role": "context"
+    },
+    {
+      "author": "Yang",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Applying constraints to LLM-driven robot agents improves safety (location approximate, see Section 2.3).",
+      "role": "baseline"
+    },
+    {
+      "author": "Shin",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed the FATE scale to measure perceived quality of AI outputs (location approximate, see Section 4.3).",
+      "role": "methodology"
+    },
+    {
+      "author": "Lund",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced the USE questionnaire for measuring usability (location approximate, see Section 4.3).",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      { "code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "medium", "justification": "Focuses on planning as a domain, but not specifically on budgeting." },
+      { "code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "contextual", "justification": "Provides a general framework for constraint-based recommendations, not specifically budget-related." },
+      { "code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "medium", "justification": "Addresses constrained planning with user-defined rules, directly relevant to optimization." },
+      { "code": "7.D", "name": "Infeasibility Handling and Reduction Hierarchies", "relevance": "high", "justification": "Handles infeasible plans through iterative refinement and flexibility sliders (soft/hard constraints)." },
+      { "code": "7.E", "name": "Onboarding and Cold-Start for Budget Recommendation", "relevance": "medium", "justification": "Addresses cold-start through rule translator and user engagement, but not specifically for budgets." },
+      { "code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "contextual", "justification": "Focuses on verification rather than anomaly detection, though model checking could be applied to identify anomalous constraints." },
+      { "code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "low", "justification": "Does not address anomaly detection algorithms." },
+      { "code": "8.C", "name": "Cold-Start Baseline Strategies for Anomaly Detection", "relevance": "low", "justification": "Not directly addressed." },
+      { "code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "low", "justification": "Not a focus, though the interface design principles could apply to mobile." },
+      { "code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "low", "justification": "Not specifically for mobile." },
+      { "code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "low", "justification": "Not a focus, though verification could help ensure privacy constraints are met." },
+      { "code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "high", "justification": "Directly addresses user trust through reliability and verification." },
+      { "code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "medium", "justification": "Discusses user engagement and control features that improve satisfaction." },
+      { "code": "11.B", "name": "Retention Mechanisms and Engagement Design", "relevance": "medium", "justification": "Focuses on user experience and perceived usefulness, which are key to retention." },
+      { "code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Uses USE and FATE scales to evaluate user experience and perceived performance." },
+      { "code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Evaluates the algorithm (model checker and LLM) through user study and quantitative metrics." },
+      { "code": "12.C", "name": "Evaluation Methodologies for Budget Recommendation Systems", "relevance": "medium", "justification": "Provides a methodological framework for evaluating recommendation-style systems (planning constraints)." },
+      { "code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "low", "justification": "Does not focus on financial behavior profiles specifically." },
+      { "code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "medium", "justification": "Addresses cold-start through user-defined rules but does not model profiles dynamically." },
+      { "code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "low", "justification": "Does not involve classification." }
+    ],
+    "contribution_to_field": "This paper contributes a novel system, VeriPlan, that integrates formal verification with large language models for end-user planning, demonstrating the viability of model checking as a guardrail for LLM outputs. It provides empirical evidence through a user study that verification and user control features significantly enhance user-perceived performance, satisfaction, and usefulness of LLMs in planning contexts. The work also offers a template-based approach for translating natural language constraints into formal logic (LTL), reducing the technical barrier for user engagement. Finally, it contributes design implications for integrating verification methods and user control features into future AI systems, emphasizing the importance of deterministic boundaries for probabilistic models.",
+    "directly_justifies": [
+      "Model checking improves user experience with LLMs in planning tasks.",
+      "User control over constraint verification enforces rigidity in LLMs.",
+      "Control over strictness enables flexibility and creativity in planning.",
+      "Verification helped align expectations and refine prompts.",
+      "Model checking provides deterministic boundaries for probabilistic LLM systems."
+    ],
+    "limits": [
+      "The types of temporal constraints available are a limited subset, not covering all possible user needs.",
+      "The modeling framework (PRISM/Stormpy) restricts the logical expressions that can be formulated in LTL.",
+      "The evaluation is limited to only three planning scenarios.",
+      "Sample size is limited to 12 participants."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to planning constraints (7.A, 7.C, 7.D, 7.E), user trust (10.B), user engagement (11.A, 11.B), and evaluation frameworks (12.A, 12.B, 12.C) were flagged as highly relevant due to the paper's direct focus on verifying LLM-generated plans with user-defined constraints and its rigorous user study. The domains of budget-specific recommendations (7.B) and anomaly detection (8.A, 8.B, 8.C) were considered but assigned lower relevance due to the paper's general planning context, though the methodology could be applied to those areas. Behavioral profiling (5.A, 5.B, 5.C) was considered borderline; while the cold-start problem (5.B) is addressed through user-defined rules, the paper does not model financial behavior profiles or use classification, hence the low relevance scores. Mobile-first design (9.A, 9.B) and data privacy (10.A) were rejected as direct topics, as they are not core to the paper's contribution. The overall coverage is strongest in constrained optimization, evaluation methodologies, and human-AI interaction aspects."
+  },
+  "limitations": [
+    "Limited set of temporal constraints in the template.",
+    "PRISM/Stormpy restricts expressiveness of LTL logic.",
+    "Evaluation limited to three scenarios. [unacknowledged]",
+    "Sample size of 12 participants. [unacknowledged]",
+    "Potential ambiguity in slider strictness impact. [unacknowledged]"
+  ],
+  "remember_this": [
+    "VeriPlan uses model checking to verify LLM plans against user-defined constraints.",
+    "User control through rule verification and flexibility sliders improves trust and satisfaction.",
+    "The full system significantly outperformed versions without the rule translator or sliders.",
+    "Model checking provides deterministic guardrails for probabilistic LLMs.",
+    "Future work should expand constraint templates and test in more planning domains."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lee C. et al_marked.md",
+      "converted_at": "2026-07-21T13:54:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

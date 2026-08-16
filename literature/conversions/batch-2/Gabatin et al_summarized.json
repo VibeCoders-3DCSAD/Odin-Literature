@@ -1,0 +1,87 @@
+{
+  "paper_id": "10.1145/iceme2025.gabatin",
+  "designation": "local",
+  "title": "Understanding the Impulse Buying Behavior in the Digital Age: Influential Factors in Online Consumer Behavior",
+  "authors": "Gabatin, R. A.; Sierra, S. M.; Maniago, M. G.; Capole, A.; Torres, R.",
+  "year": 2025,
+  "venue": "ICEME 2025, Beijing, China",
+  "odin_topics": ["2.A", "4.A", "5.A"],
+  "tldr": "Examines impulse buying drivers in Filipino digital shoppers using the SOR framework with 381 survey respondents, finding website usability and urgency as key direct predictors.",
+  "problem_and_motivation": "Impulse buying is widespread in e-commerce but the interplay of social, marketing, website, and consumer factors remains unclear for the Filipino market. Existing studies lack integration of the SOR framework with Filipino consumer data.",
+  "approach": [
+    "Applied the Stimulus-Organism-Response (SOR) framework with six latent constructs: social, marketing, and website factors, consumer characteristics, urgency to buy, and impulse buying.",
+    "Collected survey data from 381 online shoppers in Cabuyao, Laguna, Philippines using validated instruments.",
+    "Employed Partial Least Squares Structural Equation Modeling (PLS-SEM) for hypothesis testing.",
+    "Evaluated structural model using path coefficients, effect sizes, R-squared, and Stone-Geisser Q-squared.",
+    "Tested 13 hypotheses including direct and mediated paths plus moderation by age and gender."
+  ],
+  "findings": [
+    "num: Website-related factors significantly affect urgency to buy (beta=0.099, p=0.026) and urgency directly predicts impulse buying (beta=0.804, p<0.001).",
+    "num: Social-related factors strongly predict website-related factors (beta=0.868, p<0.001), while marketing factors predict consumer characteristics (beta=0.714, p<0.001).",
+    "num: The model explains 80.4% of variance in impulse buying (R-squared=0.804).",
+    "Social and marketing factors do not directly drive impulse buying but operate through website usability and consumer characteristics.",
+    "Age and gender do not moderate the urgency-impulse buying relationship.",
+    "Word of mouth and peer influence enhance website appeal, driving indirect impulse behavior."
+  ],
+  "key_figures_tables": [
+    "Table 1: Convergent validity and reliability measures for all six constructs.",
+    "Table 2: Discriminant validity using Fornell-Larcker criterion.",
+    "Table 3: Full collinearity, R-squared, and Q-squared values.",
+    "Table 4: Structural model evaluation with path coefficients, p-values, and effect sizes.",
+    "Figure 2: Final structural model showing significant paths."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "SOR", "definition": "Stimulus-Organism-Response framework for consumer behavior analysis."},
+    {"term": "PLS-SEM", "definition": "Partial Least Squares Structural Equation Modeling."},
+    {"term": "Impulse buying", "definition": "Unplanned, spur-of-the-moment purchase decisions."},
+    {"term": "AVIF", "definition": "Average Variance Inflation Factor, assessing multicollinearity."},
+    {"term": "AVE", "definition": "Average Variance Extracted, measuring convergent validity."}
+  ],
+  "citations": [
+    {"author": "Cohen", "year": 1988, "page": 0, "paragraph": 0, "claim": "Defined thresholds for large effect sizes in behavioral sciences.", "role": "methodology"},
+    {"author": "Beatty & Ferrell", "year": 1998, "page": 0, "paragraph": 0, "claim": "Modeled precursors of impulse buying behavior.", "role": "context"},
+    {"author": "Hair et al.", "year": 2006, "page": 0, "paragraph": 0, "claim": "Provided multivariate data analysis methodology for SEM.", "role": "methodology"},
+    {"author": "Aprilia & Wibowo", "year": 2016, "page": 0, "paragraph": 0, "claim": "Examined individual and social factors in mobile messaging.", "role": "context"},
+    {"author": "Gunawan et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Studied social influence and peer influence on e-commerce purchase intention.", "role": "context"},
+    {"author": "Azul et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Profiled impulse buying behavior and financial well-being of young Filipinos.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "medium", "justification": "Examines Filipino consumer impulse buying in digital contexts."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "low", "justification": "Background on e-commerce consumer behavior influencing spending."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "low", "justification": "Relates to consumer purchasing decision profiles."}
+    ],
+    "contribution_to_field": "Contributes to impulse buying literature by integrating the SOR framework within the Filipino e-commerce context. Demonstrates that website usability and urgency are stronger direct drivers of impulse purchases than social or marketing factors alone. Provides empirical validation of mediated pathways where social factors influence website appeal which then drives impulse behavior.",
+    "directly_justifies": [
+      "Website usability and urgency directly predict impulse buying in Filipino online shoppers.",
+      "Social factors influence impulse buying indirectly through website-related factors.",
+      "Marketing factors influence impulse buying indirectly through consumer characteristics."
+    ],
+    "limits": [
+      "Limited to a single Philippine city (Cabuyao, Laguna), reducing generalizability.",
+      "Does not address specific personal finance management systems or algorithmic approaches."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Flagged 2.A as medium relevance for Filipino consumer behavior patterns, 4.A as low for e-commerce context, and 5.A as low for behavioral profiles. Rejected most topics (1.B, 1.C, 3.A-3.C, 6.A-14.C) as the paper focuses on consumer psychology rather than financial system design or algorithmic methods."
+  },
+  "limitations": [
+    "Cross-sectional survey design limits causal inference. [unacknowledged]",
+    "Sample drawn from a single city limits generalizability to wider Filipino population. [unacknowledged]",
+    "Self-reported data may introduce social desirability bias."
+  ],
+  "remember_this": [
+    "Website-related factors and urgency directly drive impulse buying.",
+    "Social and marketing factors influence impulse buying indirectly via mediators.",
+    "Age and gender do not moderate the urgency-impulse buying relationship.",
+    "The model explains 80.4% of variance in impulse buying behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gabatin et al_marked.md",
+      "converted_at": "2026-07-22T13:23:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

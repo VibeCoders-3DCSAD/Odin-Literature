@@ -1,0 +1,68 @@
+{
+  "paper_id": "10.61108/",
+  "designation": "local",
+  "title": "Impact of Financial Literacy on Financial Performance in Select Multi-Purpose Cooperatives in Tagbilaran City, Bohol, Philippines",
+  "authors": "Gudelosao, E. T.; Cafe, A. J. C.; Liray, K.; Tabaco, J. G. I.; Felicitas, L. N. H.",
+  "year": 2026,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": ["1.B", "1.C", "2.A"],
+  "tldr": "Finds that financial attitude fully mediates the pathway from financial knowledge to financial behavior among cooperative members, but members' financial literacy has no significant effect on cooperative financial performance.",
+  "problem_and_motivation": "Cooperative members exhibit low financial literacy which may affect financial decisions and organizational performance. The mechanism through which literacy translates to behavior and performance remains unclear.",
+  "approach": [
+    "Quantitative descriptive-correlational design with mediation analysis.",
+    "Surveyed 100 members from four registered multi-purpose cooperatives in Tagbilaran City, Bohol.",
+    "Measured financial knowledge, attitude, and behavior using questionnaire.",
+    "Obtained cooperative financial performance indicators from organizational records.",
+    "Applied regression and mediation analysis to test pathways."
+  ],
+  "findings": [
+    "num: Financial knowledge significantly increases financial attitude (beta=0.525, p<0.001).",
+    "num: Financial attitude significantly increases financial behavior (beta=0.592, p<0.001).",
+    "num: Financial knowledge has no direct effect on behavior (beta=0.024, p=0.797).",
+    "num: Financial attitude fully mediates the knowledge-behavior pathway (indirect effect beta=0.311, p<0.001).",
+    "num: Members' financial literacy has no significant effect on cooperative performance (beta=0.048, p=0.632, R-squared=0.002).",
+    "Organizational factors (governance, management, internal controls) likely exert more impact on performance than member literacy."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Mediation analysis", "definition": "Statistical method testing indirect effects through intervening variables."},
+    {"term": "Multi-purpose cooperative", "definition": "Cooperative offering multiple services including credit and savings."}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Analyzes cooperative member financial literacy and performance."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Examines knowledge-attitude-behavior pathways."},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "medium", "justification": "Cooperative financial context specific to Philippines."}
+    ],
+    "contribution_to_field": "Demonstrates that financial attitude fully mediates the knowledge-behavior gap in cooperative members. Finds that member literacy does not predict cooperative financial performance, suggesting organizational factors dominate. Highlights the importance of addressing attitudinal factors rather than just knowledge in financial education.",
+    "directly_justifies": [
+      "Financial attitude fully mediates the knowledge-to-behavior pathway.",
+      "Member financial literacy does not predict cooperative financial performance.",
+      "Organizational factors may matter more than member literacy for cooperative outcomes."
+    ],
+    "limits": ["Small sample (n=100) limits statistical power."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 1.B, 1.C high for financial literacy and behavior. Assigned 2.A medium for cultural context. Rejected algorithmic topics as paper uses mediation analysis not ML."
+  },
+  "limitations": [
+    "Small sample size (n=100) limits generalizability.",
+    "Single-city focus (Tagbilaran City, Bohol).",
+    "Cooperative performance data may have varying quality across organizations."
+  ],
+  "remember_this": [
+    "Financial attitude fully mediates knowledge-behavior pathway.",
+    "Member literacy does not predict cooperative financial performance.",
+    "Organizational governance likely matters more than member literacy.",
+    "Financial knowledge requires attitude change to influence behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gudelosao et al_marked.md",
+      "converted_at": "2026-07-22T13:27:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

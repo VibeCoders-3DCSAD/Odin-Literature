@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.11594/ijmaber.04.04.16",
+  "designation": "local",
+  "title": "Knowledge and Practice of Personal Finance of Non-Teaching Staff in a Private University in Cebu City",
+  "authors": "Research Article",
+  "year": 2015,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "13.B",
+    "7.B"
+  ],
+  "tldr": "The purpose of the study is to examine the degree of knowledge and practice of personal finance of the non-teaching staff at a private uni- versity and to determine if the degree of knowledge of the respondents in terms of the variables under personal finance has a significant rela- tionship to the degree of practice. The formulated questions were ad- dressed using a descriptive-correlational appr",
+  "problem_and_motivation": "The purpose of the study is to examine the degree of knowledge and practice of personal finance of the non-teaching staff at a private uni- versity and to determine if the degree of knowledge of the respondents in terms of the variables under personal finance has a significant rela- tionship to the degree of practice. The formulated questions were ad- dressed using a descriptive-correlational approach. Fifty (50) non- teaching staff were chosen to participate in the data collection using simple ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY: APPLIED BUSINESS AND EDUCATION RESEA"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: INTERNATIONAL JOURNAL OF MULTIDISCIPLINARY: APPLIED BUSINESS AND EDUCATION RESEA",
+    "Year: 2015",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Polinar et al_marked.md",
+      "converted_at": "2026-07-21T08:10:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

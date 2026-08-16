@@ -1,0 +1,102 @@
+{
+  "paper_id": "a8b681d5-4e3b-5744-be8d-5d7477e2ca0b",
+  "designation": "international-algorithm-specific",
+  "title": "Latenrgy: Model Agnostic Latency and Energy Consumption Prediction for Binary Classiers",
+  "authors": "Model Agnostic Latency; Energy Consumption Prediction",
+  "year": 2016,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "12.A",
+    "4.B",
+    "6.A",
+    "8.A"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Latenrgy: Model Agnostic Latency and Energy Consumption Prediction for Binary Cl"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Latenrgy: Model Agnostic Latency and Energy Consumption Prediction for Binary Cl",
+    "Year: 2016",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pittman_marked.md",
+      "converted_at": "2026-07-21T08:10:05Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

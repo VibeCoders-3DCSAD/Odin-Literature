@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.3390/su17208976",
+  "designation": "international",
+  "title": "Digital Financial Services and Sustainable Development: Temporal Trade-Offs and the Moderating Role of Financial Literacy",
+  "authors": "Han, J.; Ko, D.",
+  "year": 2025,
+  "venue": "Sustainability",
+  "odin_topics": ["1.B", "1.C", "2.C", "5.A"],
+  "tldr": "Examines how mobile financial services usage affects short-term and long-term financial behaviors differently, with financial literacy dimensions moderating these effects, using data from 21,757 U.S. adults.",
+  "problem_and_motivation": "Mobile financial services may simultaneously improve long-term planning and undermine short-term financial discipline, but no study has empirically tested these dual temporal effects or how financial literacy dimensions differentially moderate them.",
+  "approach": [
+    "Analyzed data from 21,757 U.S. adults in the 2021 National Financial Capability Study using structural equation modeling.",
+    "Drew on Construal Level Theory, Dual Process Theory, and Social Cognitive Theory as the theoretical framework.",
+    "Measured financial literacy across three dimensions: objective knowledge (OK), subjective knowledge (SK), and perceived ability (PA).",
+    "Modeled both short-term financial behaviors (spending control, emergency preparedness) and long-term behaviors (retirement planning, investment).",
+    "Examined MFS effects through the lens of Sustainable Development Goals 1, 8, and 10."
+  ],
+  "findings": [
+    "num: MFS usage negatively affects short-term behaviors (spending control and emergency preparedness).",
+    "num: MFS usage positively influences long-term behaviors (retirement planning and investment participation).",
+    "Objective knowledge (OK) provides protective benefits against MFS-induced short-term risks.",
+    "Perceived ability (PA) paradoxically exacerbates adverse short-term effects of MFS usage.",
+    "Subjective knowledge (SK) shows different moderating patterns from OK and PA."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "MFS", "definition": "Mobile Financial Services"},
+    {"term": "OK", "definition": "Objective Knowledge, a dimension of financial literacy"},
+    {"term": "SK", "definition": "Subjective Knowledge, a dimension of financial literacy"},
+    {"term": "PA", "definition": "Perceived Ability, a dimension of financial literacy"},
+    {"term": "CLT", "definition": "Construal Level Theory"},
+    {"term": "DPT", "definition": "Dual Process Theory"},
+    {"term": "SCT", "definition": "Social Cognitive Theory"}
+  ],
+  "citations": [
+    {"author": "Prelec & Loewenstein", "year": 1998, "page": 0, "paragraph": 0, "claim": "Introduced 'pain of paying' phenomenon for cash vs. digital transactions.", "role": "methodology"},
+    {"author": "Kamolsareeratana & Kouwenberg", "year": 2024, "page": 0, "paragraph": 0, "claim": "Mobile payment usage increases financial anxiety through overspending.", "role": "finding"},
+    {"author": "Soman", "year": 2003, "page": 0, "paragraph": 0, "claim": "Digital transactions eliminate psychological barriers that support self-control.", "role": "context"},
+    {"author": "Trope & Liberman", "year": 2010, "page": 0, "paragraph": 0, "claim": "Construal Level Theory explains how psychological distance affects decision-making.", "role": "methodology"},
+    {"author": "Kahneman", "year": 2011, "page": 0, "paragraph": 0, "claim": "Dual Process Theory distinguishes System 1 and System 2 decision-making.", "role": "methodology"},
+    {"author": "Bandura", "year": 1986, "page": 0, "paragraph": 0, "claim": "Social Cognitive Theory emphasizes self-regulation and self-efficacy.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "low", "justification": "U.S. data but provides insights on digital finance effects applicable to any demographic structure analysis."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "medium", "justification": "Examines digital financial behavior patterns that may generalize to Filipino young professionals."},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "medium", "justification": "Analyzes self-reported financial behaviors and literacy, informing user preference modeling."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Profiles financial behavior types differentiated by literacy dimensions and temporal orientation."}
+    ],
+    "contribution_to_field": "This paper provides the first large-scale empirical test of the dual temporal effects of MFS on financial behavior, confirming that digital convenience simultaneously undermines short-term discipline and enhances long-term planning. It demonstrates that financial literacy dimensions have differential moderating effects, with objective knowledge protecting against short-term risks while perceived ability can exacerbate them. The study connects individual financial behaviors to systemic sustainable development outcomes.",
+    "directly_justifies": [
+      "MFS usage has opposing effects on short-term vs. long-term financial behaviors.",
+      "Objective financial knowledge protects against MFS-related short-term spending risks.",
+      "Perceived financial ability may paradoxically increase risky behavior in digital environments."
+    ],
+    "limits": [
+      "U.S.-specific sample may not generalize to Philippine or other developing-country contexts.",
+      "Cross-sectional design limits causal inference about MFS effects on behavior.",
+      "Self-reported financial behaviors may differ from actual transaction data."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 1 (Financial Behavior) was flagged as medium relevance because the paper examines digital financial behavior patterns. Domain 2 (Financial Preferences) was flagged as medium because user-declared financial literacy moderates behavior. Domain 5 (Profiles) was flagged as medium because differential effects across literacy dimensions imply behavioral profiles. All other domains were rejected: the paper does not address expense categorization, predictive modeling, budgeting algorithms, anomaly detection, mobile UX design, or ML serving."
+  },
+  "limitations": [
+    "U.S.-only sample limits cross-cultural applicability, especially to Philippine context. [unacknowledged]",
+    "Cross-sectional survey data prevents causal attribution of MFS effects.",
+    "Self-report measures may introduce recall and social desirability bias."
+  ],
+  "remember_this": [
+    "MFS improves long-term planning but undermines short-term spending control.",
+    "Objective knowledge protects against digital overspending; perceived ability can worsen it.",
+    "Study of 21,757 U.S. adults reveals systematic temporal trade-offs in digital finance.",
+    "Digital-specific financial literacy programs should emphasize realistic risk assessment."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Han & Ko_marked.md",
+      "converted_at": "2026-07-22T13:30:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

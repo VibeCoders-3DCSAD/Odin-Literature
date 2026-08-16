@@ -1,0 +1,246 @@
+{
+  "paper_id": "10.13140/ICLR.2026.ng.ai-baam",
+  "designation": "international-algorithm-specific",
+  "title": "AI-BAAM: AI-Driven Bank Statement Analytics as Alternative Data for Malaysian MSME Credit Scoring",
+  "authors": "Kok Hoe Ng, Fadhlan Hafizhelmi Kamaru Zaman, Mohd Fauzi Othman, Weng Kin Lai, Muhammad Izzuddin Rumee",
+  "year": 2026,
+  "venue": "International Conference on Learning Representations (ICLR) 2026",
+  "odin_topics": [
+    "2.A",
+    "3.A",
+    "3.B",
+    "3.C",
+    "4.C",
+    "5.A",
+    "5.B",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "9.A",
+    "9.B"
+  ],
+  "tldr": "Proposes AI-BAAM, an AI-driven bank statement analytics pipeline using Logistic Regression with WOE/IV feature selection, template-matching OCR, and cash flow analysis to achieve AUROC 0.806 for MSME credit scoring, a 24.6% improvement over traditional application-only models.",
+  "problem_and_motivation": "MSMEs globally face a credit gap of $5.2 trillion, with 68% lacking access to formal credit due to insufficient credit history. Traditional credit scoring relying on application-only data fails to capture true financial health; bank transaction data offers rich alternative indicators but remains underutilized due to complexity.",
+  "approach": [
+    "CRISP-DM methodology for structuring the machine learning lifecycle.",
+    "Six-module cash flow underwriting workflow: Key Information Extraction, Transaction Table Extraction, Fraud Analysis, Network Analysis, Cash Flow Analysis, Data & Scoring.",
+    "Template-matching approach for OCR extraction of bank statement data achieving 0.01s per document, 100% accuracy, $0 cost.",
+    "Feature engineering using Weight of Evidence (WOE) and Information Value (IV) framework for variable selection.",
+    "Logistic Regression as primary classifier for interpretable credit scoring.",
+    "Dataset of 611 loan applicants from a Malaysian consulting firm with bank statements and application data.",
+    "Comparison of application-only features vs. bank statement features vs. combined features for model performance.",
+    "Three simulated scenarios: single-borrower, joint-borrower with weaker co-borrower, joint-borrower with stronger co-borrower."
+  ],
+  "findings": [
+    "num: Logistic Regression with bank statement features achieved AUROC 0.806, a 24.6% improvement over application-only models (AUROC 0.647).",
+    "num: Combined application + bank statement features achieved AUROC 0.832, a 28.6% improvement over application-only.",
+    "num: Model with only bank statement features outperformed application-only models, demonstrating value of transaction data for thin-file borrowers.",
+    "num: Template matching for OCR extraction achieved 100% accuracy at 0.01 seconds per document with zero cost.",
+    "cat: Fraud analysis module generated a 'Red Flag' metric by flagging inconsistent information between application data and bank statements.",
+    "cat: Cash flow analysis provided holistic understanding of income and expenditure patterns over 6-12 month windows.",
+    "cat: Network analysis identified financial interconnectedness and potential business linkages among applicants.",
+    "cat: Simulated scenarios showed single-borrower model already improved; joint-borrower with stronger co-borrower yielded best risk assessment."
+  ],
+  "key_figures_tables": [
+    "Figure 1: AI-BAAM Six-Module Cash Flow Underwriting Workflow.",
+    "Figure 2: Inconsistency Detection Output - High vs. Low Inconsistency Cases.",
+    "Figure 3: Cash Flow Analysis Visualization.",
+    "Figure 4: Classification Performance Comparison Across Feature Sets.",
+    "Table 1: AUROC Comparison - Application vs. Bank Statement vs. Combined Features.",
+    "Figure 5: Simulated Scoring Scenarios Across Different Borrower Combinations."
+  ],
+  "key_equations": [
+    {
+      "equation": "WOE = ln(% of Non-events / % of Events) × 100 per bin",
+      "explanation": "Weight of Evidence measures the strength of each feature bin in separating good (non-event) from bad (event) borrowers."
+    },
+    {
+      "equation": "IV = Σ(% Non-events - % Events) × WOE",
+      "explanation": "Information Value quantifies the overall predictive power of a feature. IV > 0.30 indicates a strong predictor."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "WOE (Weight of Evidence)",
+      "definition": "A measure of how well a feature distinguishes between good and bad credit risks, calculated as the log-ratio of non-event to event proportions per bin."
+    },
+    {
+      "term": "IV (Information Value)",
+      "definition": "A metric that aggregates WOE across all bins of a feature to quantify its overall predictive strength in credit scoring."
+    },
+    {
+      "term": "Cash Flow Underwriting",
+      "definition": "A credit assessment approach that evaluates loan applicants based on their actual bank transaction history rather than self-reported application data alone."
+    }
+  ],
+  "citations": [
+    {
+      "author": "World Bank",
+      "year": 2023,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "MSMEs face a global credit gap of $5.2 trillion with 68% lacking access to formal credit.",
+      "role": "context"
+    },
+    {
+      "author": "Al Khatib et al.",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Alternative data sources can improve credit assessment for thin-file borrowers outside traditional banking channels.",
+      "role": "support"
+    },
+    {
+      "author": "Kamunya et al.",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 3,
+      "claim": "Mobile money transaction data can serve as alternative data for credit scoring in emerging markets.",
+      "role": "support"
+    },
+    {
+      "author": "Ekinci and Erdal",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Evaluated machine learning methods for credit scoring and found tree-based models achieve high accuracy but sacrifice interpretability.",
+      "role": "context"
+    },
+    {
+      "author": "Bhatore et al.",
+      "year": 2020,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Machine learning techniques can capture non-linear relationships in credit risk assessment.",
+      "role": "support"
+    },
+    {
+      "author": "Madaan et al.",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Proposed OCR-based document processing for financial document analysis.",
+      "role": "support"
+    },
+    {
+      "author": "Mohamad et al.",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 4,
+      "claim": "Template matching can achieve high accuracy on standardized bank statement formats in Malaysia.",
+      "role": "support"
+    },
+    {
+      "author": "Huang et al.",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 4,
+      "claim": "Found that fraud detection from transaction data improves when integrated with application-level inconsistencies.",
+      "role": "support"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Employment and Income",
+        "relevance": "high",
+        "justification": "Core to MSME credit scoring: analyzing income patterns from bank statements to assess repayment capacity."
+      },
+      {
+        "code": "3.A",
+        "name": "Credit Scoring and Risk Assessment",
+        "relevance": "high",
+        "justification": "Primary focus: AI-driven credit scoring for MSMEs using alternative data from bank statements."
+      },
+      {
+        "code": "3.B",
+        "name": "Lending and Borrowing",
+        "relevance": "high",
+        "justification": "Directly addresses MSME lending gap and proposes improved credit assessment for loan origination."
+      },
+      {
+        "code": "3.C",
+        "name": "Alternative Data in Credit Assessment",
+        "relevance": "high",
+        "justification": "Core contribution: bank transaction data as alternative data source for thin-file MSME borrowers."
+      },
+      {
+        "code": "5.B",
+        "name": "Cash Flow Management and Analysis",
+        "relevance": "high",
+        "justification": "Cash flow analysis is a dedicated module extracting income/expenditure patterns from bank transaction histories."
+      },
+      {
+        "code": "6.A",
+        "name": "AI/ML Model Development and Evaluation",
+        "relevance": "high",
+        "justification": "Logistic Regression with WOE/IV feature engineering; CRISP-DM methodology; comprehensive evaluation metrics."
+      },
+      {
+        "code": "6.B",
+        "name": "AI Explainability and Interpretability",
+        "relevance": "medium",
+        "justification": "Logistic Regression chosen specifically for interpretability; WOE/IV framework ensures transparent feature importance."
+      },
+      {
+        "code": "7.A",
+        "name": "Data Collection and Integration",
+        "relevance": "medium",
+        "justification": "OCR-based automated extraction of bank statement data, integration of application data with transaction data."
+      },
+      {
+        "code": "7.B",
+        "name": "Data Security and Privacy",
+        "relevance": "medium",
+        "justification": "Mentions compliance considerations and fraud detection; bank statement data requires secure handling."
+      },
+      {
+        "code": "9.A",
+        "name": "Quantitative Research Methods",
+        "relevance": "high",
+        "justification": "CRISP-DM methodology, statistical feature selection (WOE/IV), AUROC-based model evaluation with 611 loan applicant samples."
+      }
+    ],
+    "contribution_to_field": "Demonstrates that bank statement alternative data alone (AUROC 0.806) substantially outperforms traditional application-only models (AUROC 0.647) for MSME credit scoring, and introduces an affordable ($0) template-matching OCR pipeline for bank statement extraction.",
+    "directly_justifies": [
+      "Odin's use of bank transaction data as alternative data for credit scoring.",
+      "WOE/IV feature selection methodology for credit risk modeling.",
+      "Cash flow underwriting approach for SME lending assessment.",
+      "Interpretable Logistic Regression for regulated financial environments."
+    ],
+    "limits": [
+      "Dataset limited to 611 Malaysian loan applicants from a single consulting firm.",
+      "Template-matching OCR only works with standardized Malaysian bank statement formats.",
+      "Logistic Regression may not capture complex non-linear patterns; no comparison with XGBoost or deep learning.",
+      "Model not validated on out-of-time or out-of-sample data from different economic periods."
+    ],
+    "topic_mapping_rationale": "Algorithmic credit scoring paper using ML with bank statement alternative data. Covers credit risk, lending, cash flow analysis, ML modeling, and quantitative methodology."
+  },
+  "limitations": [
+    "Small dataset of 611 loan applicants from a single source limits generalizability.",
+    "Template-matching OCR approach is format-dependent and may not generalize to other bank statement layouts.",
+    "Logistic Regression, while interpretable, may underperform compared to ensemble or deep learning methods on complex patterns.",
+    "No external validation on out-of-time or cross-institutional datasets.",
+    "Potential sample bias: labeled default data from a single consulting firm's portfolio."
+  ],
+  "remember_this": [
+    "Bank statement features alone (AUROC 0.806) beat application-only models (AUROC 0.647) by 24.6%.",
+    "Template-matching OCR: 100% accuracy, 0.01s/doc, $0 cost.",
+    "WOE/IV framework for transparent, interpretable feature selection in credit scoring.",
+    "Cash flow underwriting is the six-module pipeline: Extraction, Transaction Parsing, Fraud, Network, Cash Flow, Scoring.",
+    "Combined application + bank statement features achieved AUROC 0.832 (28.6% improvement)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ng et al_marked.md",
+      "converted_at": "2026-07-21T07:45:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

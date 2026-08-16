@@ -1,0 +1,184 @@
+{
+  "paper_id": "10.5281/zenodo.8053932",
+  "designation": "local",
+  "title": "Personal Financial Management Practices Among Selected Personnel of the Bureau of the Treasury \u2013 Central Office",
+  "authors": "Cortez, D. D.",
+  "year": 2023,
+  "venue": "Guild of Educators in TESOL International Journal, Volume I Issue 2",
+  "odin_topics": ["1.B", "1.C", "2.A", "3.A", "5.A", "7.A", "13.A", "13.B"],
+  "tldr": "A descriptive survey of 183 Bureau of Treasury personnel finds agreement on financial planning, money management, income protection, and investment practices, with highest scores for goal-setting and saving to avoid borrowing.",
+  "problem_and_motivation": "Personal financial management practices among government employees directly affect organizational productivity and national wealth. No existing study had examined the financial practices of personnel at the Bureau of the Treasury \u2013 Central Office, despite its central role in managing national finances.",
+  "approach": [
+    "Descriptive survey design using a researcher-constructed questionnaire administered to 183 personnel across 35 divisions, selected via simple random probability sampling.",
+    "Instrument achieved Cronbach\u2019s Alpha of 0.896 in pre-testing, indicating high internal consistency and reliability.",
+    "Survey covered four PFM dimensions: Financial Planning (5 items), Money Management (10 items), Income and Asset Protection (5 items), and Investments (5 items), each with 5-point Likert scale responses.",
+    "Data analysis used descriptive statistics (percentage, frequency, weighted mean, ranking) and inferential statistics (T-test and one-way ANOVA) to test differences across demographic groups.",
+    "Respondents were predominantly female (60.1%), single (63.9%), aged 26\u201335 (37.7%), bachelor\u2019s degree holders (78.7%), rank-and-file (78.1%), permanent (86.9%), with 5 years or fewer tenure (53.0%) and monthly compensation of P15,001\u2013P30,000 (38.8%)."
+  ],
+  "findings": [
+    "num: Financial planning obtained the highest overall weighted mean of 4.26 (Agree), with goal-setting ranking first at 4.39.",
+    "num: Money management overall weighted mean was 4.02 (Agree); saving to avoid borrowing ranked highest at 4.47, while credit card use ranked lowest at 2.99.",
+    "num: Income and asset protection overall weighted mean was 3.58 (Agree); considering future uncertainties ranked highest at 4.30, while non-life insurance acquisition ranked lowest at 2.96.",
+    "num: Investments overall weighted mean was 3.15 (Moderately Agree); purchasing government securities ranked highest at 3.79.",
+    "The study found no significant differences in PFM assessments when respondents were grouped by age, sex, civil status, educational attainment, job position, employment status, tenure, or monthly compensation."
+  ],
+  "key_figures_tables": [
+    "Table 10: Financial planning weighted means \u2014 goal-setting highest (4.39), social media influence lowest (3.98).",
+    "Table 11: Money management weighted means \u2014 saving to avoid borrowing highest (4.47), credit use lowest (2.99).",
+    "Table 12: Income and asset protection \u2014 future uncertainty consideration highest (4.30), non-life insurance lowest (2.96).",
+    "Table 13: Investment practices \u2014 government securities highest (3.79), derivatives market lowest (2.62).",
+    "Table 2\u20139: Respondent demographic profiles \u2014 majority female, single, 26\u201335 years old, rank-and-file, permanent."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "PFM", "definition": "Personal Financial Management"},
+    {"term": "Financial Planning", "definition": "Setting short- and long-term financial goals, tracking spending, and adjusting plans"},
+    {"term": "Money Management", "definition": "Practices related to spending, saving, budgeting, and debt avoidance"},
+    {"term": "Income and Asset Protection", "definition": "Insurance coverage, estate planning, and consideration of future uncertainties"},
+    {"term": "Investments", "definition": "Purchasing securities, mutual funds, stocks, and engaging in the derivatives market"}
+  ],
+  "citations": [
+    {
+      "author": "Brounen",
+      "year": 2016,
+      "page": 7,
+      "paragraph": 1,
+      "claim": "Households urged to adopt proactive approach to personal money, especially financial planning.",
+      "role": "context"
+    },
+    {
+      "author": "Kassim",
+      "year": 2019,
+      "page": 9,
+      "paragraph": 1,
+      "claim": "Individuals who save more have less financial stress and better quality of life.",
+      "role": "context"
+    },
+    {
+      "author": "O'Neill",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Average age in the Philippines will be 25.7 years, suggesting reduced birth rate and older population.",
+      "role": "context"
+    },
+    {
+      "author": "Ilmakunnas",
+      "year": 2014,
+      "page": 5,
+      "paragraph": 2,
+      "claim": "Single employees are most mobile, passionate, and adaptable in recruiting.",
+      "role": "context"
+    },
+    {
+      "author": "Mayall",
+      "year": 2015,
+      "page": 7,
+      "paragraph": 1,
+      "claim": "Employee longevity plays an important role for any institution.",
+      "role": "context"
+    },
+    {
+      "author": "De Dios",
+      "year": 2021,
+      "page": 9,
+      "paragraph": 2,
+      "claim": "Non-life insurance sector in the Philippines not given due recognition due to financial constraints.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Provides salary distribution data (P15K\u2013P75K+) of government employees aged 26\u201335."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Core subject: assesses financial planning, saving, spending, and investment behaviors."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Documents debt-averse saving culture and social media influence on financial planning."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Uses four-category PFM framework (planning, money management, protection, investments) but no granular categorization."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Profiles respondents by financial behaviors across four PFM dimensions with weighted means."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Directly measures budget planning adherence (weighted mean 4.10, Agree) and list-making before shopping."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Saving to avoid borrowing ranked first in money management (4.47); saving for medical emergencies also measured."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Credit card use and borrowing measured (lowest score 2.99); strong debt-averse preference documented."
+      }
+    ],
+    "contribution_to_field": "This paper provides empirical baseline data on personal financial management practices among Philippine government employees, specifically at the Bureau of the Treasury. It operationalizes PFM across four standardized dimensions (financial planning, money management, income and asset protection, investments) and measures each with Likert-scale instruments. The finding that debt-averse saving behavior dominates among rank-and-file government workers contributes descriptive evidence to the literature on Filipino financial behavior. The study also demonstrates that demographic variables do not significantly differentiate PFM practices within this population, suggesting uniform financial engagement across employee profiles.",
+    "directly_justifies": [
+      "Government employees prioritize saving to avoid borrowing over credit-based purchasing (money management rank 1).",
+      "Financial goal-setting is the highest-rated financial planning practice among Bureau of Treasury personnel.",
+      "Non-life insurance and derivatives market participation are the lowest-rated PFM practices, indicating gaps in financial product awareness.",
+      "Demographic variables (age, sex, education, tenure) do not significantly differentiate PFM assessment scores."
+    ],
+    "limits": [
+      "Single-agency scope (Bureau of Treasury only) limits generalizability to other government or private-sector populations.",
+      "Self-reported Likert-scale data may reflect perceived rather than actual financial practices.",
+      "Study does not examine digital or app-based financial management tools, limiting relevance to PFMS design.",
+      "No longitudinal dimension; captures only a single snapshot of practices."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains was conducted. Domains flagged as relevant: Domain 1 (Filipino Young Professionals) \u2014 codes 1.B (medium, salary data) and 1.C (high, core financial behavior assessment); Domain 2 (Culturally Specific Practices) \u2014 code 2.A (medium, documents debt-averse culture and social media influence); Domain 3 (Expense Categorization) \u2014 code 3.A (low, uses four broad PFM categories but no granular classification); Domain 5 (Financial Behavioral Profiles) \u2014 code 5.A (medium, profiles respondents by weighted mean scores); Domain 7 (Budgeting Strategies) \u2014 code 7.A (high, directly measures budget plan adherence); Domain 13 (Savings and Debt) \u2014 codes 13.A (high, saving behavior) and 13.B (high, credit/debt aversion). Rejected domains: Domain 4 (Personal Finance Systems) \u2014 no system evaluation or landscape discussion; Domain 6 (Predictive Modeling) \u2014 no algorithmic or forecasting content; Domain 8 (Anomaly Detection), Domain 9 (Mobile-First), Domain 10 (Privacy/Security), Domain 11 (Engagement), Domain 12 (Evaluation Frameworks), Domain 14 (ML/Deployment) \u2014 entirely absent from the paper. The paper provides moderate topical coverage relevant to understanding Filipino financial behavior but does not address system design or algorithmic approaches."
+  },
+  "limitations": [
+    "Single-agency scope limits generalizability across Philippine government or private-sector populations. [unacknowledged]",
+    "Self-reported Likert-scale measures may reflect perceived rather than actual financial management practices. [unacknowledged]",
+    "No longitudinal or repeated-measures design; results represent a single cross-sectional snapshot. [unacknowledged]",
+    "No examination of digital financial tools, mobile apps, or PFMS technology adoption. [unacknowledged]",
+    "Sample drawn during COVID-19 period (data collected 2021) which may have influenced financial behaviors abnormally."
+  ],
+  "remember_this": [
+    "Saving to avoid borrowing is the top money management practice (weighted mean 4.47).",
+    "Financial goal-setting ranks highest in financial planning (weighted mean 4.39).",
+    "Non-life insurance (2.96) and derivatives (2.62) have the lowest adoption rates.",
+    "Demographic variables do not significantly differentiate PFM practices in this population.",
+    "Government employees show strong debt aversion and preference for saving over credit."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Cortez_marked.md",
+      "converted_at": "2026-07-22T13:01:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

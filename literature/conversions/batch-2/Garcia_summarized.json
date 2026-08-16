@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.69569/jip.2025.324",
+  "designation": "local",
+  "title": "Financial Literacy and Financial Health of Public Junior High School Teachers",
+  "authors": "Garcia, E. C.",
+  "year": 2025,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.C"],
+  "tldr": "Assesses financial literacy and health of 241 public junior high school teachers in Quezon City, finding high literacy but 'Financially Coping' health with critical gaps in savings and retirement planning.",
+  "problem_and_motivation": "Public school teachers face financial insecurity from low wages and rising costs, yet localized research on their financial literacy and health remains scarce. Existing studies lack focus on urban districts with intense financial pressures.",
+  "approach": [
+    "Used descriptive-quantitative design with validated questionnaires adapted from Financial Health Network and Surendar & Subramanya Sarma.",
+    "Collected data from 241 randomly selected teachers across 5 public junior high schools in District VI, Quezon City.",
+    "Measured financial literacy across knowledge, behavior, attitude, budgeting, investment, and retirement planning.",
+    "Measured financial health across spending, saving, borrowing, and financial planning dimensions.",
+    "Applied Kruskal-Wallis H and Mann-Whitney U tests for demographic comparison analysis."
+  ],
+  "findings": [
+    "num: Overall financial literacy mean score was 4.02 (High), with financial knowledge highest at 4.24 and retirement planning lowest at 3.75.",
+    "num: Financial health categorized as Financially Coping (overall mean 61.2), with spending at 63.17, saving at 51.87, borrowing at 72.40, and planning at 60.22.",
+    "num: Significant differences in literacy found across sex, age, number of children, income, education, teaching position, experience, and specialization.",
+    "num: 58.9% of teachers fall in lower middle-income bracket (PHP 19,040-38,080).",
+    "Teachers struggled with surplus income after expenses (mean 39.00, Financially Vulnerable).",
+    "Retirement planning scored lowest among literacy dimensions (mean 3.75)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Financial literacy assessment in terms of financial knowledge.",
+    "Table 9: Financial literacy in terms of planning retirement and estate.",
+    "Table 10: Financial health assessment in terms of spending.",
+    "Table 11: Financial health assessment in terms of saving.",
+    "Table 12: Financial health in terms of borrowing."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Financial literacy", "definition": "Knowledge, behavior, and attitudes regarding financial management."},
+    {"term": "Financial health", "definition": "Overall financial well-being across spending, saving, borrowing, and planning."},
+    {"term": "Financially Coping", "definition": "Category indicating ability to meet basic needs but with limited surplus."},
+    {"term": "Financially Vulnerable", "definition": "Category indicating difficulty meeting financial obligations."}
+  ],
+  "citations": [
+    {"author": "Villagonzalo & Mibato", "year": 2020, "page": 0, "paragraph": 0, "claim": "Public school teachers showed good financial management but poor attitudes.", "role": "baseline"},
+    {"author": "Burgonio", "year": 2023, "page": 0, "paragraph": 0, "claim": "Entry-level teachers earn PHP 27,000 gross, take home PHP 23,465.50.", "role": "context"},
+    {"author": "Lusardi", "year": 2009, "page": 0, "paragraph": 0, "claim": "Higher education linked to better retirement planning.", "role": "finding"},
+    {"author": "Van Rooij et al.", "year": 2011, "page": 0, "paragraph": 0, "claim": "Financial literacy critical for long-term financial security.", "role": "finding"},
+    {"author": "Bai R.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Financial planning and budgeting improve financial health.", "role": "finding"},
+    {"author": "Parker et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Financially coping individuals meet needs but lack surplus for savings.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Studies Filipino public school teachers as a professional demographic."},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Analyzes income distribution, financial obligations, and economic constraints."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Assesses spending, saving, borrowing behavior and financial planning."},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "medium", "justification": "Self-reported financial literacy and health preferences surveyed."}
+    ],
+    "contribution_to_field": "Provides empirical financial literacy and health data for a specific Filipino professional demographic. Identifies retirement planning as the weakest literacy dimension among teachers. Demonstrates that high financial literacy does not translate to strong financial health, highlighting the gap between knowledge and outcomes.",
+    "directly_justifies": [
+      "Filipino public school teachers show high financial literacy but Financially Coping health.",
+      "Retirement planning is the weakest financial literacy dimension.",
+      "Many teachers have no surplus income after monthly expenses.",
+      "Demographic factors significantly influence financial literacy and health."
+    ],
+    "limits": [
+      "Limited to one school district in Quezon City.",
+      "Self-reported data may overstate actual financial literacy."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 1.A, 1.B, 1.C high relevance for Filipino teacher demographic and financial profiles. Assigned 2.C medium for self-declared preferences. Rejected algorithmic topics (5.A-14.C) as the paper uses descriptive statistics not ML methods."
+  },
+  "limitations": [
+    "Sample limited to one district in Quezon City, reducing generalizability.",
+    "Self-reported financial literacy may not reflect actual competence.",
+    "Cross-sectional design prevents causal inference."
+  ],
+  "remember_this": [
+    "Teachers have high financial literacy but Financially Coping health status.",
+    "Retirement planning is the weakest area of financial literacy.",
+    "Most teachers lack surplus income after monthly expenses.",
+    "Demographics significantly influence both literacy and health outcomes."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Garcia_marked.md",
+      "converted_at": "2026-07-22T13:24:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

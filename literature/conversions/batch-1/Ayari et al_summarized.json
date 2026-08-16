@@ -1,0 +1,414 @@
+{
+  "paper_id": "10.1007/s10462-025-11416-2",
+  "designation": "international",
+  "title": "Machine learning powered financial credit scoring: a systematic literature review",
+  "authors": "Ayari, H.; Guetari, R.; Kraiem, N.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "A systematic review of 63 studies shows ensemble and hybrid ML models consistently outperform traditional methods for credit scoring, while deep learning faces interpretability and data availability constraints.",
+  "problem_and_motivation": "Traditional credit scoring models based on logistic regression and scorecards are limited by their assumption of linear relationships and narrow feature sets, failing to capture complex borrower behavioral patterns. The rapid growth of ML techniques for credit scoring has produced a fragmented literature with inconsistent datasets, preprocessing methods, and evaluation metrics.",
+  "approach": [
+    "Conducted a PRISMA 2020-compliant systematic literature review with five research questions targeting ML models, strengths, limitations, metrics, trends, and adoption challenges.",
+    "Searched four databases (SpringerLink, ACM, IEEE Xplore, Google Scholar) for publications from 2018 to 2024, extracting 330 papers and selecting 63 primary studies after quality assessment.",
+    "Categorized reviewed studies into traditional ML, deep learning, and ensemble learning groups.",
+    "Evaluated model performance using accuracy and AUC across four benchmark datasets: German, Australian, Japanese, and Lending Club.",
+    "Applied VOSviewer for bibliometric analysis including bibliographic coupling and keyword co-occurrence.",
+    "Examined emerging trends including alternative data sources and explainability methods such as SHAP and LIME."
+  ],
+  "findings": [
+    "Ensemble and hybrid ML models consistently outperform traditional single classifiers across all benchmark datasets in credit scoring tasks.",
+    "num: 93.16% accuracy achieved by multi-stage ensemble on the Japanese dataset, the highest reported across all benchmark datasets.",
+    "num: 92.60% AUC achieved by GA+NN model on the German dataset.",
+    "num: 91.70% accuracy and 93.78% AUC achieved by GSCI ensemble model on the Lending Club dataset.",
+    "Accuracy and AUC are the most frequently reported metrics (49 and 31 studies respectively) but accuracy alone is misleading for imbalanced credit scoring datasets.",
+    "Hybrid and ensemble approaches integrating neural networks, optimization algorithms, or boosting demonstrate consistently superior performance and lower variability.",
+    "Traditional models like logistic regression remain competitive when interpretability and transparency are prioritized over raw predictive performance.",
+    "Model interpretability through LIME and SHAP has shifted from a technical option to a regulatory and operational requirement in credit scoring.",
+    "num: 63 primary studies were selected from 330 extracted papers across four databases for the final systematic review."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA 2020 Flow Diagram showing study selection from 345 identified to 63 included studies.",
+    "Figure 2: Comparative accuracy of ML models showing random forest and hybrid ML approaches achieving highest accuracies.",
+    "Figure 3: Comparative accuracy of DL models showing CNN and hybrid DL configurations providing robust performance.",
+    "Figure 4: Comparative accuracy of EL models showing XGBoost-BO and proposed ensembles capturing peak performance.",
+    "Figure 5: Bibliographic coupling network revealing three main clusters.",
+    "Figure 6: Keyword co-occurrence map showing six thematic clusters.",
+    "Table 4: Summary of traditional ML models with datasets and evaluation metrics.",
+    "Table 5: Summary of deep learning models including CNN, LSTM, and hybrid DL architectures.",
+    "Table 6: Summary of ensemble learning models covering GBDT, XGBoost, and hybrid ensemble approaches.",
+    "Table 7: Ranked comparative evaluation on German dataset showing GA+NN achieving highest accuracy (91.91%) and AUC (92.60%).",
+    "Table 8: Ranked comparative evaluation on Australian dataset showing multi-stage ensemble achieving highest accuracy (92.36%) and AUC (96.65%).",
+    "Table 9: Ranked comparative evaluation on Japanese dataset showing multi-stage ensemble achieving highest accuracy (93.16%) and AUC (96.95%).",
+    "Table 10: Ranked comparative evaluation on Lending Club dataset showing GSCI model achieving highest accuracy (91.70%) and AUC (93.78%)."
+  ],
+  "key_equations": [
+    {
+      "equation": "P(Y=1|x) = 1 / (1 + e^(-(beta_0 + beta^T x)))",
+      "explanation": "Logistic regression sigmoid function estimating probability of default."
+    },
+    {
+      "equation": "ell(beta_0, beta) = sum_{i=1}^{N} [y_i log p(x_i) + (1-y_i) log(1-p(x_i))]",
+      "explanation": "Log-likelihood function for estimating logistic regression parameters."
+    },
+    {
+      "equation": "Accuracy = (TP+TN) / (TP+TN+FP+FN)",
+      "explanation": "Overall correctness measure for classification performance evaluation."
+    },
+    {
+      "equation": "Precision = TP / (TP+FP)",
+      "explanation": "Proportion of true positives among all predicted positive cases."
+    },
+    {
+      "equation": "Recall = TP / (TP+FN)",
+      "explanation": "Proportion of true positives among all actual positive cases."
+    },
+    {
+      "equation": "F1-Score = 2 * (Precision * Recall) / (Precision + Recall)",
+      "explanation": "Harmonic mean of precision and recall for balanced evaluation."
+    },
+    {
+      "equation": "Specificity = TN / (TN+FP)",
+      "explanation": "Proportion of true negatives among all actual negative cases."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ML",
+      "definition": "Machine learning, a subfield of AI focused on designing algorithms that enable systems to learn from data."
+    },
+    {
+      "term": "DL",
+      "definition": "Deep learning, a subset of ML based on artificial neural networks with multiple layers."
+    },
+    {
+      "term": "EL",
+      "definition": "Ensemble learning, a technique integrating multiple learning algorithms to enhance predictive performance."
+    },
+    {
+      "term": "LR",
+      "definition": "Logistic regression, a probabilistic classification model estimating binary outcome probability."
+    },
+    {
+      "term": "DT",
+      "definition": "Decision tree, a supervised model for regression and classification using tree-like decision rules."
+    },
+    {
+      "term": "RF",
+      "definition": "Random forest, an ensemble method aggregating multiple decision trees via bootstrap aggregation."
+    },
+    {
+      "term": "SVM",
+      "definition": "Support vector machine, a supervised model that separates data using an optimal hyperplane."
+    },
+    {
+      "term": "KNN",
+      "definition": "K-nearest neighbors, a non-parametric classifier based on distance to nearby data points."
+    },
+    {
+      "term": "CNN",
+      "definition": "Convolutional neural network, a deep feedforward network for feature extraction and classification."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long short-term memory, a recurrent neural network architecture for sequential data processing."
+    },
+    {
+      "term": "XGBoost",
+      "definition": "Extreme gradient boosting, an ensemble model combining tree models with gradient boosting."
+    },
+    {
+      "term": "GBDT",
+      "definition": "Gradient boosting decision trees, an ensemble method combining weak learners through error minimization."
+    },
+    {
+      "term": "ANN",
+      "definition": "Artificial neural network, computational models inspired by biological neural structures."
+    },
+    {
+      "term": "AUC",
+      "definition": "Area under the ROC curve, measuring a model's ability to distinguish between classes."
+    },
+    {
+      "term": "SMOTE",
+      "definition": "Synthetic minority oversampling technique, addressing class imbalance in datasets."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, a method quantifying each feature's contribution to predictions."
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations, providing locally accurate explanations for individual predictions."
+    },
+    {
+      "term": "IFRS 9",
+      "definition": "International Financial Reporting Standard 9, mandating Expected Credit Loss estimation."
+    },
+    {
+      "term": "PD",
+      "definition": "Probability of Default, the likelihood a borrower will fail to meet repayment obligations."
+    },
+    {
+      "term": "EAD",
+      "definition": "Exposure at Default, the loan amount exposed to credit risk at the time of default."
+    },
+    {
+      "term": "LGD",
+      "definition": "Loss Given Default, the proportion of unrecovered assets calculated as one minus recovery rate."
+    },
+    {
+      "term": "KS",
+      "definition": "Kolmogorov-Smirnov statistic, measuring a model's discriminatory power in credit scoring."
+    },
+    {
+      "term": "G-Mean",
+      "definition": "Geometric mean, a metric balancing sensitivity and specificity for imbalanced datasets."
+    },
+    {
+      "term": "PRISMA",
+      "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, guidelines for conducting systematic reviews."
+    },
+    {
+      "term": "SLR",
+      "definition": "Systematic literature review, a structured methodology for synthesizing research findings."
+    },
+    {
+      "term": "PLTR",
+      "definition": "Penalised logistic tree regression, combining decision tree rules with logistic regression."
+    },
+    {
+      "term": "DGHNL",
+      "definition": "Deep Genetic Hierarchical Network of Learners, combining evolutionary computation, EL, and DL."
+    },
+    {
+      "term": "gcForest",
+      "definition": "Multi-grained cascade forest, a deep forest model processing high-dimensional feature information."
+    },
+    {
+      "term": "P2P",
+      "definition": "Peer-to-peer lending, a lending model connecting borrowers directly with individual lenders."
+    },
+    {
+      "term": "FICO",
+      "definition": "Fair Isaac Corporation score, a standardized credit scoring model used by major credit bureaus."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Dastile",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Examined 74 studies on statistical and ML models for credit scoring, finding ensemble methods like RF and XGBoost outperformed single classifiers reaching 79% accuracy.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kumar",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Focused on credit scoring in rural finance emphasizing the role of fintech and ML/AI in improving access to underserved populations.",
+      "role": "context"
+    },
+    {
+      "author": "Hayashi",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Conducted a systematic review on DL in credit scoring highlighting superior performance of Deep Belief Networks over traditional models.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lenka",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Analyzed ensemble learning for imbalanced credit scoring datasets exploring SMOTE and feature selection methods including GA-based selection with CatBoost achieving 86.70% accuracy.",
+      "role": "baseline"
+    },
+    {
+      "author": "Markov",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reviewed credit scoring methodologies from 2016 to 2021 highlighting the growing prominence of ensemble models.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kamimura",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Conducted a review of 46 studies on optimization methods for credit scoring models identifying logistic regression (13%) and growing trend toward hybrid models (72%).",
+      "role": "baseline"
+    },
+    {
+      "author": "Dumitrescu",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Penalized Logistic Tree Regression achieving best AUC with 92.99% on Australian dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "Kazemi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed GA and neural networks method achieving highest accuracy 91.91% and AUC 92.60% on Australian dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "Zhang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced multi-stage ensemble model with outlier adaptation achieving 93.16% accuracy and 96.95% AUC on Japanese dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "He",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed novel ensemble model using BalanceCascade, RF, and XGBoost with stacking and PSO achieving 88.04% F1-score and 92.79% AUC on Japanese dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed ensemble model using generalized Shapley value and Choquet integral achieving 94.53% recall and 91.43% AUC on Australian dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "Bussmann",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed interpretable AI model for credit risk management using correlation networks and Shapley values.",
+      "role": "methodology"
+    },
+    {
+      "author": "Buchner",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed framework for enhancing interpretability of credit scoring models using LIME and SHAP achieving interpretability comparable to traditional scorecards.",
+      "role": "methodology"
+    },
+    {
+      "author": "Slack",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Demonstrated that LIME and SHAP techniques can be susceptible to adversarial attacks raising concerns about their reliability.",
+      "role": "critique"
+    },
+    {
+      "author": "Page",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Established the PRISMA 2020 guidelines for transparent and reproducible systematic review methodology.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Systematically surveys the full landscape of ML models applied to credit scoring in personal finance."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies key limitations of traditional and ML-based credit scoring including interpretability, bias, and dimensionality."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews predictive modeling approaches including logistic regression, neural networks, and ensemble methods."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Analyzes evaluation metrics and provides ranked comparative performance tables across benchmark datasets."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Compares performance of specific algorithmic approaches including RF, LSTM, XGBoost, and hybrid models."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "low",
+        "justification": "Discusses evaluation protocols relevant to credit recommendation systems though not directly about budgeting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "Reviews LSTM and recurrent architectures applicable to sequential credit data though the paper focuses on classification."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses borrower behavioral variables and psychometric profiling though not centered on profiling systems."
+      }
+    ],
+    "contribution_to_field": "This systematic literature review provides a comprehensive synthesis of 63 studies on ML applications in financial credit scoring from 2018 to 2024.",
+    "directly_justifies": [
+      "Ensemble and hybrid ML models consistently outperform traditional single classifiers across all benchmark datasets.",
+      "Hybrid approaches integrating optimization algorithms with neural networks achieve the highest accuracy and AUC scores.",
+      "Explainability methods such as SHAP and LIME have shifted from optional technical tools to regulatory requirements.",
+      "Alternative data sources including social media and mobile phone usage enhance credit scoring for borrowers without formal credit histories.",
+      "Traditional models like logistic regression remain competitive when interpretability and regulatory compliance are prioritized."
+    ],
+    "limits": [
+      "The review was confined to four databases potentially missing relevant studies from other sources.",
+      "The lack of standardized evaluation metrics across reviewed studies makes direct performance comparisons potentially subjective.",
+      "The fast-evolving nature of ML techniques means the review may not capture the most recent advances.",
+      "The review does not include a reproducible empirical benchmark experiment to independently validate reported performance figures."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. Domain 4 was flagged as highly relevant because the paper comprehensively surveys ML methods for credit scoring. Domain 6 was flagged as highly relevant because the paper reviews multiple predictive modeling approaches. Domain 12 was flagged as highly relevant because the paper provides ranked comparative evaluations. Domain 5 was flagged as contextual because borrower behavioral variables are discussed. Domain 6.B was flagged as contextual because LSTM and sequential models are reviewed though the paper focuses on classification."
+  },
+  "limitations": [
+    "The review was limited to four digital libraries potentially missing relevant studies from other sources.",
+    "Lack of standardized evaluation metrics across reviewed studies complicates direct performance comparisons.",
+    "The search period (2018-2024) may not capture the most recent advances given the fast-evolving nature of ML.",
+    "The review does not independently validate reported performance through reproducible empirical benchmarking."
+  ],
+  "remember_this": [
+    "Ensemble and hybrid ML models consistently outperform traditional single classifiers in credit scoring across benchmark datasets.",
+    "num: Multi-stage ensemble achieved 93.16% accuracy on the Japanese dataset, the highest reported across all benchmarks.",
+    "Interpretability through SHAP and LIME has become a regulatory requirement not just a technical option.",
+    "Traditional logistic regression remains competitive when transparency and regulatory compliance are prioritized.",
+    "Alternative data sources including social media and psychometrics enhance credit scoring for borrowers without formal credit histories."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ayari et al_marked.md",
+      "converted_at": "2026-07-22T12:05:34Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

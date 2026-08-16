@@ -1,0 +1,119 @@
+{
+  "paper_id": "10.69569/jip.2025.063a",
+  "designation": "local",
+  "title": "Knowledge, Attitudes, and Practices in Financial Literacy among Business Administration Students in Urban College in the Philippines",
+  "authors": "Espiritu, M. J. M.",
+  "year": 2025,
+  "venue": "Journal of Interdisciplinary Perspectives",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "2.A",
+    "7.A",
+    "13.A"
+  ],
+  "tldr": "Business administration students show positive attitudes toward financial literacy but knowledge and practices vary significantly by age, sex, income, and year level.",
+  "problem_and_motivation": "Financial literacy among business students is increasingly important due to complex financial products and economic uncertainty, but curriculum gaps in financial education persist.",
+  "approach": [
+    "Survey-based quantitative approach assessing financial literacy knowledge, attitudes, and practices.",
+    "Respondents: Business Administration students in urban Philippine college.",
+    "Analyzes demographic factors: age, sex, monthly income, and year level.",
+    "Statistical tests for significant differences and relationships."
+  ],
+  "findings": [
+    "Students generally have a positive attitude toward financial literacy.",
+    "Knowledge varies significantly by age, sex, and year level.",
+    "Attitude varies significantly by age, monthly income, and year level.",
+    "Practice varies significantly by age, sex, monthly income, and year level.",
+    "Significant relationship between knowledge, attitude, and practices (R=0.697, p=0.000)."
+  ],
+  "key_figures_tables": [
+    "Table 5: Practices by demographic profile → All demographic factors significant.",
+    "Table 6: Relationship among knowledge, attitude, practices → R=0.697, p=0.000, significant."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "Knowledge, attitudes, and practices regarding income, expenses, debt, credit, and savings."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Studies Filipino business students, future young professionals."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Examines financial knowledge, attitudes, and practices directly."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Philippine context provides cultural specificity."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Financial practices component includes budgeting behaviors."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Savings practices are part of financial literacy assessment."
+      }
+    ],
+    "contribution_to_field": "Identifies demographic factors significantly influencing financial literacy dimensions among Filipino business students. Shows strong correlation (R=0.697) between knowledge, attitudes, and practices.",
+    "directly_justifies": [
+      "Financial knowledge, attitudes, and practices are strongly correlated (R=0.697).",
+      "Demographic factors significantly affect all financial literacy dimensions."
+    ],
+    "limits": [
+      "Single institution study limits generalizability.",
+      "Cross-sectional design limits causal claims."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 1.A, 1.C (high), 2.A, 7.A, 13.A (medium). Rejected algorithmic topics."
+  },
+  "limitations": [
+    "Single urban college limits generalizability.",
+    "Self-reported data may introduce bias.",
+    "Cross-sectional design captures point-in-time only."
+  ],
+  "remember_this": [
+    "Financial knowledge, attitude, and practices are strongly correlated (R=0.697).",
+    "Demographic factors significantly influence all financial literacy dimensions.",
+    "Curriculum gaps in financial education need addressing."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu M.-2025_marked.md",
+      "converted_at": "2026-07-22T13:17:04Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "paper_id": "d3f70c39-a3ac-52f8-be2c-a88a29bd8d85",
+  "designation": "international-algorithm-specific",
+  "title": "AI-Powered Financial Insights Platform",
+  "authors": "Powered Financial Insights Platform",
+  "year": 2021,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "The AI-Powered Financial Insights Platform is designed to address the increasing complexity of decentralized applications and digital asset management systems. As blockchain ecosystems expand, users often struggle to interpret detailed transaction data, understand staking mechanisms, or navigate complex on-chain information. This platform leverages advancements in Artificial Intelligence, real-tim",
+  "problem_and_motivation": "The AI-Powered Financial Insights Platform is designed to address the increasing complexity of decentralized applications and digital asset management systems. As blockchain ecosystems expand, users often struggle to interpret detailed transaction data, understand staking mechanisms, or navigate complex on-chain information. This platform leverages advancements in Artificial Intelligence, real-time blockchain indexing, and decentralized protocols to convert unintuitive data into easily interpret",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: AI-Powered Financial Insights Platform"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: AI-Powered Financial Insights Platform",
+    "Year: 2021",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Reddy et al_marked.md",
+      "converted_at": "2026-07-21T08:19:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

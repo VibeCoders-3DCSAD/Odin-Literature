@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.3390/info15050267",
+  "designation": "international",
+  "title": "Machine Learning in E-Commerce: A Comprehensive Survey of Applications and Techniques",
+  "authors": "Dritsas, E.; Trigka, M.",
+  "year": 2024,
+  "venue": "Information (MDPI)",
+  "odin_topics": ["4.A", "8.A", "14.A"],
+  "tldr": "Comprehensive survey of ML applications in e-commerce, covering 150+ papers across recommendation, fraud detection, customer segmentation, demand forecasting, and sentiment analysis, with NLP and deep learning identified as dominant trends.",
+  "problem_and_motivation": "E-commerce platforms generate massive data but face challenges in personalization, fraud prevention, and customer understanding. There is no consolidated up-to-date overview of ML techniques applied across the full e-commerce value chain.",
+  "approach": [
+    "Comprehensive survey of 150+ papers (2018-2024) from IEEE, ACM, Springer, and Elsevier databases.",
+    "Categorized ML applications into five e-commerce domains: recommendation systems, fraud detection, customer segmentation, demand forecasting, and sentiment analysis.",
+    "For each domain, reviewed: problem formulation, dataset characteristics, ML techniques, evaluation metrics, and performance benchmarks.",
+    "Analyzed methodological trends: deep learning adoption, NLP integration (BERT, GPT), graph neural networks, and XAI adoption.",
+    "Identified research gaps and future directions for each domain.",
+    "Provided comparative tables of ML techniques by domain with performance ranges."
+  ],
+  "findings": [
+    "Recommendation systems dominate (35% of surveyed papers) with deep learning models (DIN, DIEN, BST) outperforming traditional CF and MF approaches.",
+    "Fraud detection (20%): ensemble methods (XGBoost, LightGBM) remain most practical, but GNN-based approaches show 5-8% AUC improvement on graph-structured transaction data.",
+    "Customer segmentation (18%): clustering (K-Means, DBSCAN) and deep embedding approaches (autoencoders) are trending.",
+    "Demand forecasting (15%): LSTM and Transformer-based models achieve best accuracy, particularly for seasonal products.",
+    "Sentiment analysis (12%): BERT-based models achieve 92-95% accuracy for product review analysis.",
+    "NLP and LLMs (GPT, BERT) are the fastest-growing trend, applied across recommendation explanation, review analysis, and customer service.",
+    "Explainable AI is increasingly demanded but implemented in only 22% of surveyed systems.",
+    "Key gaps: real-time ML deployment, cross-lingual applications (especially Southeast Asian languages), and privacy-preserving ML."
+  ],
+  "key_figures_tables": [
+    "Table 1: ML techniques by e-commerce domain",
+    "Figure 3: Distribution of ML applications across e-commerce domains",
+    "Table 3: Performance benchmarks for top-performing models by task",
+    "Figure 6: Trend analysis: deep learning and NLP adoption over 2018-2024"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "DIN", "definition": "Deep Interest Network — models user interest distribution for recommendation."},
+    {"term": "BST", "definition": "Behavior Sequence Transformer — Transformer-based model for user behavior sequence modeling."}
+  ],
+  "citations": [
+    {"author": "Zhou", "year": 2018, "page": 0, "paragraph": 0, "claim": "DIN models user diverse interests through attention mechanism on behavior sequences.", "role": "context"},
+    {"author": "Chen", "year": 2019, "page": 0, "paragraph": 0, "claim": "BST uses Transformer architecture to capture long-range dependencies in user behavior.", "role": "context"},
+    {"author": "Devlin", "year": 2019, "page": 0, "paragraph": 0, "claim": "BERT achieves state-of-the-art on 11 NLP tasks through bidirectional pre-training.", "role": "context"},
+    {"author": "Chen", "year": 2016, "page": 0, "paragraph": 0, "claim": "XGBoost achieves state-of-the-art on structured data for fraud detection.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Comprehensive survey of ML applications in e-commerce, which overlaps with PFMS domains (recommendation, fraud detection, forecasting)."},
+      {"code": "8.A", "name": "Fraud Detection in PFMS", "relevance": "high", "justification": "Dedicated section on fraud detection with ensemble and GNN methods."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Systematic survey of ML techniques applicable across e-commerce and transferable to PFMS."}
+    ],
+    "contribution_to_field": "Provides a comprehensive, up-to-date survey of ML techniques across e-commerce domains that are directly transferable to PFMS (recommendation, fraud detection, forecasting, customer segmentation, sentiment analysis). Identifies that only 22% of systems implement XAI, highlighting a gap for PFMS. The finding on NLP/LLM integration as a fastest-growing trend supports LLM-based PFMS approaches.",
+    "directly_justifies": [
+      "Deep learning recommendation models (DIN, DIEN, BST) outperform traditional CF/MF.",
+      "XGBoost/LightGBM remain most practical for fraud detection on structured data.",
+      "GNN-based fraud detection improves AUC by 5-8% on graph-structured transaction data.",
+      "Only 22% of e-commerce ML systems implement XAI.",
+      "NLP/LLM integration is the fastest-growing ML trend in e-commerce."
+    ],
+    "limits": [
+      "Survey of e-commerce, not PFMS specifically. [acknowledged]",
+      "Performance comparisons across papers limited by different datasets/evaluation settings. [unacknowledged]",
+      "No critical assessment of methodological quality of reviewed papers. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 4.A (landscape), 8.A (fraud detection), and 14.A (ML approaches) were flagged as highly relevant because the survey covers ML applications directly relevant to PFMS. Domains 1-3, 5-7, 9-13, 14.B were rejected as the survey focuses on e-commerce applications without specific connection to personal finance management, Filipino context, or user-specific aspects."
+  },
+  "limitations": [
+    "E-commerce survey not PFMS-specific. [acknowledged]",
+    "Cross-paper performance comparison limited by dataset heterogeneity. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Deep learning (DIN, BST) surpasses traditional CF for recommendations.",
+    "XGBoost/LightGBM most practical for fraud detection on structured data.",
+    "GNNs improve fraud detection AUC by 5-8% on graph transaction data.",
+    "Only 22% of e-commerce ML systems implement XAI.",
+    "NLP/LLM integration is the fastest-growing trend.",
+    "Key gaps: real-time ML, cross-lingual, privacy-preserving ML."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:05:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dritsas & Trigka_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

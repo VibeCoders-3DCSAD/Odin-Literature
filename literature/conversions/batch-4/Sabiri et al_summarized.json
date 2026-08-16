@@ -1,0 +1,170 @@
+{
+  "paper_id": "10.3390/jimaging11010012",
+  "designation": "international",
+  "title": "Hybrid Quality-Based Recommender Systems: A Systematic Literature Review",
+  "authors": "Sabiri, B.; Khtira, A.; El Asri, B.; Rhanoui, M.",
+  "year": 2025,
+  "venue": "Journal of Imaging",
+  "odin_topics": ["None"],
+  "tldr": "A systematic literature review of 52 hybrid recommender system papers that catalogs hybridization strategies, datasets, evaluation metrics, and open challenges in big-data e-commerce contexts.",
+  "problem_and_motivation": "Data sparsity, cold-start problems, and bias limit the performance of single-strategy recommender systems. Hybrid approaches that combine collaborative, content-based, and demographic filtering promise higher accuracy and user satisfaction but lack a consolidated evidence base. No prior SLR had systematically mapped hybridization techniques, application domains, and evaluation practices across 52 recent studies.",
+  "approach": [
+    "Searched ACM, Google Scholar, Scopus, Springer, and Web of Science with a Boolean query combining hybrid, quality-based, recommender, and big-data terms.",
+    "Applied PRISMA guidelines and Cochrane/Kitchenham protocols; used ASReview active-learning AI for secondary screening.",
+    "Filtered from 5857 preliminary studies down to 52 final papers through date, language, content, and quality-score thresholds (minimum 0.80).",
+    "Extracted 15 attributes per paper: title, authors, application domain, approach, contribution, evaluation method, dataset, and results.",
+    "Classified studies by hybridization strategy: content-collaborative, deep-learning, matrix-factorization, demographic-collaborative, and knowledge-based.",
+    "Assessed quality via nine weighted questions covering problem description, experimental design, metrics, dataset detail, and clarity of findings.",
+    "Performed word-frequency and word-cloud analyses from abstracts and full texts to identify dominant research themes.",
+    "Mapped dataset usage across all 52 studies, finding web and survey data as the most common sources at 26% each."
+  ],
+  "findings": [
+    "num: 75% of reviewed studies were published in the last three years, indicating surging interest in hybrid recommender systems.",
+    "num: The MLK-rBO ontology-based model achieved 98.36% accuracy, outperforming DT, RF, and SVM baselines.",
+    "num: The OpExHAN hierarchical attention model reached 94.68% accuracy, 91.67% precision, and 91.25% recall on Amazon review data.",
+    "num: A content-neighborhood hybrid ran at least 2x faster than pure collaborative filtering with comparable accuracy.",
+    "num: Web datasets and survey data each accounted for 26% of evaluations; social media data contributed another 13%.",
+    "num: The hybrid QORECT framework achieved a relevance score of 0.64 versus 0.60 for content-only baselines on OER recommendations.",
+    "num: Precision of 0.80, recall of 0.92, and F1 of 0.86 were observed across the selected hybrid systems.",
+    "Contrastive learning improved sparse-data recommendation accuracy from 57.72% (5% labeled) to 88.70% (supervised tuning).",
+    "Springer contributed 40% of included papers, followed by ACM (24%), Scopus (17%), Web of Science (12%), and Google Scholar (7%).",
+    "Cold-start, data sparsity, overfitting, and algorithmic bias are the most frequently reported challenges across studies."
+  ],
+  "key_figures_tables": [
+    "Table 1: Six research questions (RQ1-RQ6) covering challenges, hybridization strategies, datasets, outcomes, methodologies, and future directions.",
+    "Figure 8: PRISMA flow diagram showing 5857 initial records reduced to 52 included studies through four filtering stages.",
+    "Figure 11: Publication-year distribution showing accelerating output from 2020 (7 papers) to 2023 (16 papers).",
+    "Table 10: Nine quality-assessment questions with assigned weights (0.5-1.5) and a 0.80 acceptance threshold.",
+    "Figure 19: Dataset-usage distribution revealing web and survey datasets as the dominant evaluation sources at 26% each."
+  ],
+  "key_equations": [
+    {
+      "equation": "Evaluation_{paper} = (1/N) * sum(qw_i * ar_i)",
+      "explanation": "Quality score: product of question weight and answer rating, averaged over 9 items."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Hybrid Recommender System (HRS)",
+      "definition": "A recommendation system combining two or more filtering strategies to improve accuracy and mitigate individual weaknesses."
+    },
+    {
+      "term": "Cold-start problem",
+      "definition": "Inability to generate recommendations for new users or items due to insufficient historical interaction data."
+    },
+    {
+      "term": "ASReview",
+      "definition": "An open-source active-learning tool that prioritizes relevant documents during systematic literature screening."
+    },
+    {
+      "term": "Content-Collaborative Hybridization",
+      "definition": "Merging item-attribute-based filtering with user-behavior-based collaborative filtering to produce more comprehensive recommendations."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kitchenham and Charters",
+      "year": 2007,
+      "page": 10,
+      "paragraph": 2,
+      "claim": "Provided the SLR methodology principles followed for bias reduction and research transparency.",
+      "role": "methodology"
+    },
+    {
+      "author": "Higgins et al.",
+      "year": 2019,
+      "page": 10,
+      "paragraph": 1,
+      "claim": "The Cochrane Handbook guidelines were adopted to ensure review quality and completeness.",
+      "role": "methodology"
+    },
+    {
+      "author": "Page et al.",
+      "year": 2021,
+      "page": 19,
+      "paragraph": 2,
+      "claim": "PRISMA 2020 statement used as the reporting framework for the systematic review process.",
+      "role": "methodology"
+    },
+    {
+      "author": "Van de Schoot et al.",
+      "year": 2021,
+      "page": 28,
+      "paragraph": 3,
+      "claim": "ASReview active learning can skip up to 95% of documents while maintaining screening accuracy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Backstrom et al.",
+      "year": 2011,
+      "page": 3,
+      "paragraph": 6,
+      "claim": "Facebook's hybrid friend-suggestion algorithm promotes user engagement through meaningful connections.",
+      "role": "context"
+    },
+    {
+      "author": "Sivasankari et al.",
+      "year": 2024,
+      "page": 7,
+      "paragraph": 1,
+      "claim": "COOT optimization algorithm improves precision, recall, and MRR in scientific article recommendation.",
+      "role": "finding"
+    },
+    {
+      "author": "Guo et al.",
+      "year": 2024,
+      "page": 7,
+      "paragraph": 2,
+      "claim": "Kernel-mapping group recommender (KGR) leverages user-trust relationships to address cold-start and sparsity.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "General SLR on hybrid recommender systems; no direct PFMS or Filipino-context coverage."
+      }
+    ],
+    "contribution_to_field": "This paper provides the most comprehensive systematic literature review of hybrid quality-based recommender systems to date, consolidating 52 studies across five major databases. It catalogs five distinct hybridization strategies (content-collaborative, deep-learning, matrix-factorization, demographic-collaborative, and knowledge-based) with representative implementations and performance results for each. The review identifies cold-start, data sparsity, overfitting, and algorithmic bias as the dominant challenges, while documenting a clear trend toward deep-learning and transformer-based approaches in recent years. It establishes a reproducible SLR methodology using ASReview active learning that other survey studies can adopt. The paper contributes a structured taxonomy of datasets, evaluation metrics, and quality-assessment criteria specific to hybrid recommendation research.",
+    "directly_justifies": [
+      "Hybrid approaches consistently outperform single-strategy recommenders on precision, recall, and diversity.",
+      "Cold-start and data sparsity remain the most critical open challenges in recommendation systems.",
+      "Deep-learning and transformer models are the dominant emerging trend in hybrid recommendation research.",
+      "Evaluation across HRS studies relies primarily on precision, recall, and F1-score as summary measures.",
+      "User engagement, diversity, and novelty metrics are increasingly valued alongside accuracy metrics."
+    ],
+    "limits": [
+      "None of the 52 reviewed studies address personal finance management or budget recommendation as an application domain.",
+      "The SLR excludes gray literature, workshop papers, and non-English publications, potentially omitting relevant work.",
+      "No Philippine-specific datasets, user populations, or cultural contexts are represented in the reviewed studies.",
+      "Topic coverage is limited to general e-commerce, music, video, and social-media recommendation; no PFMS-specific hybrid designs are analyzed."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains from the Odin taxonomy were systematically scanned for coverage. This paper is a general systematic literature review on hybrid quality-based recommender systems operating in e-commerce, music, video streaming, and social-media domains. It addresses none of the Odin-specific topics: there is no coverage of Filipino young professionals (Topic 1), Filipino cultural financial practices (Topic 2), expense categorization (Topic 3), personal finance management systems (Topic 4), behavioral profiling (Topic 5), spending forecasting (Topic 6), budget recommendation (Topic 7), anomaly detection (Topic 8), mobile-first design (Topic 9), privacy and trust (Topic 10), retention (Topic 11), evaluation (Topic 12), savings and debt (Topic 13), or ML pipeline (Topic 14) in the context of personal finance. The paper's contribution is to the broader field of recommender systems hybridization, not to the PFMS domain that the Odin taxonomy is designed to capture. Therefore, odin_topics is set to ['None']."
+  },
+  "limitations": [
+    "Search restricted to five academic databases; gray literature and non-English sources excluded.",
+    "Quality threshold of 0.80 may have excluded methodologically sound but less completely reported studies.",
+    "Focus on open-access articles for some databases may introduce availability bias.",
+    "ASReview active-learning prioritization may have excluded relevant papers never presented to reviewers.",
+    "The 2020-2024 date filter excludes foundational hybrid RS papers published before 2020."
+  ],
+  "remember_this": [
+    "Hybrid recommenders outperform single-strategy systems but face persistent cold-start and sparsity problems.",
+    "Over 75% of reviewed HRS papers were published in 2021-2023, showing rapid field growth.",
+    "The ASReview AI tool screened 5857 papers down to 52 relevant studies with documented methodology.",
+    "Dataset diversity is limited: web and survey data account for over half of all HRS evaluations.",
+    "No reviewed hybrid system targets personal finance management or budget recommendation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Sabiri et al_marked.md",
+      "converted_at": "2026-07-21T08:24:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

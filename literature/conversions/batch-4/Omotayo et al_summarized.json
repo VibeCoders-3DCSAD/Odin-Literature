@@ -1,0 +1,102 @@
+{
+  "paper_id": "10.62225/2583049X.2023.3.6.4736",
+  "designation": "local-algorithm-specific",
+  "title": "Behavior-Driven Personalization Framework to Improve Repeat Usage in Mobile-Enabled Financial Ecosystems",
+  "authors": "Driven Personalization Framework; Improve Repeat Usage",
+  "year": 2021,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "11.A",
+    "12.A",
+    "4.A",
+    "4.B"
+  ],
+  "tldr": "As mobile-enabled financial platforms proliferate globally, improving user retention has become a critical challenge for product teams and fintech providers. While initial adoption is high, sustained engagement remains limited due to the generic and non-responsive nature of many user experiences. This paper proposes a behavior-driven personalization framework designed to enhance repeat usage withi",
+  "problem_and_motivation": "As mobile-enabled financial platforms proliferate globally, improving user retention has become a critical challenge for product teams and fintech providers. While initial adoption is high, sustained engagement remains limited due to the generic and non-responsive nature of many user experiences. This paper proposes a behavior-driven personalization framework designed to enhance repeat usage within mobile financial ecosystems by leveraging real-time user behavior data. Grounded in behavioral sci",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Int j adv multidisc res stud 2023 3(6):2098-2106"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Int j adv multidisc res stud 2023 3(6):2098-2106",
+    "Year: 2021",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Omotayo et al_marked.md",
+      "converted_at": "2026-07-21T07:56:09Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

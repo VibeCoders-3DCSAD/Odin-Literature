@@ -1,0 +1,112 @@
+{
+  "paper_id": "10.59431/jda.v4i1.660",
+  "designation": "local-algorithm-specific",
+  "title": "Development of Budget Management System Using Visual Basic .NET and MySQL Database: A Desktop Application for Personal Financial Tracking",
+  "authors": "Janobe, J.",
+  "year": 2025,
+  "venue": "Journal Dekstop Application",
+  "odin_topics": ["3.A", "4.A", "9.A", "9.B", "9.C", "10.A", "10.B", "13.A"],
+  "tldr": "A desktop budget management system using Visual Basic .NET and MySQL was developed to provide offline, privacy-focused personal financial tracking with automated income/expense summaries and balance calculation.",
+  "problem_and_motivation": "Many individuals lack reliable, accessible tools for consistent financial discipline, while existing manual methods and cloud-based alternatives suffer from errors, privacy risks, or connectivity dependencies. There is a need for a simple, secure, offline, and cost-free personal finance application that provides real-time financial insights and promotes financial literacy.",
+  "approach": [
+    "The system was developed using a developmental research design following the Software Development Life Cycle (SDLC) framework with six stages: planning, analysis, design, implementation, testing, and deployment.",
+    "A two-tier client-server architecture separates the presentation layer (Visual Basic .NET) from the data layer (MySQL) for modularity and maintainability.",
+    "The MySQL database db_budget contains a transactions table with fields for transaction_id, amount, remarks, transaction_type, and transaction_date.",
+    "The Visual Basic .NET interface provides an input panel, action toolbar with CRUD operations, a DataGridView for transaction display, and a summary panel for real-time financial totals.",
+    "Parameterized SQL queries are used for all database operations to prevent SQL injection vulnerabilities.",
+    "Date-based filtering enables users to analyze financial data within specific timeframes.",
+    "Performance testing confirmed that operations remained responsive with databases containing up to 5,000 entries.",
+    "The system operates entirely offline after initial database configuration, eliminating dependency on internet connectivity."
+  ],
+  "findings": [
+    "num: Transaction insertion, modification, and deletion were completed in under 0.5 seconds.",
+    "num: Data retrieval and aggregation queries remained responsive at under 1 second for databases containing up to 5,000 entries.",
+    "Unit and integration tests confirmed accurate interaction between the Visual Basic .NET interface and MySQL database.",
+    "Functional testing validated all user-facing features including recording, viewing, filtering, updating, and summarizing transactions.",
+    "Usability testing with participants of diverse technical backgrounds confirmed the interface was intuitive and accessible with minimal guidance required.",
+    "Color-coded visual indicators (green for surplus, red for deficit) provide immediate feedback on financial status.",
+    "The system maintains complete user privacy by storing all financial records locally without cloud dependency.",
+    "Open-source design enables transparency, customizability, and educational value for students and novice developers."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Budget Management System Interface in Visual Basic .NET → Shows intuitive dashboard with input panel, action buttons, transaction table, and summary statistics."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\text{Current Balance} = \\sum \\text{Income} - \\sum \\text{Expenses}",
+      "explanation": "Balance calculated from total income minus total expenses."
+    }
+  ],
+  "definitions": [
+    {"term": "SDLC", "definition": "Software Development Life Cycle, a structured framework for software development with planning, analysis, design, implementation, testing, and deployment phases."},
+    {"term": "ADO.NET", "definition": "A data access framework within .NET for connecting applications to databases and executing SQL operations."},
+    {"term": "MySQL Connector/NET", "definition": "A driver that enables communication between Visual Basic .NET applications and MySQL databases."},
+    {"term": "XAMPP", "definition": "A free and open-source cross-platform web server solution stack package containing Apache, MySQL, and PHP."},
+    {"term": "DataGridView", "definition": "A Windows Forms control for displaying and editing tabular data in a grid format."},
+    {"term": "CRUD", "definition": "Create, Read, Update, Delete—the four basic operations for persistent storage manipulation."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "Individuals who actively manage their finances are more likely to achieve financial stability and make sound economic decisions.", "role": "context"},
+    {"author": "Fernandes", "year": 2014, "page": 0, "paragraph": 0, "claim": "Financial literacy and education influence downstream financial behaviors.", "role": "context"},
+    {"author": "Ameriks", "year": 2003, "page": 0, "paragraph": 0, "claim": "Individuals with a higher propensity to plan accumulate more wealth.", "role": "context"},
+    {"author": "Patel", "year": 2016, "page": 0, "paragraph": 0, "claim": "Combining programming languages with relational databases creates user-oriented financial systems that enhance accuracy and efficiency.", "role": "methodology"},
+    {"author": "Andriana", "year": 2021, "page": 0, "paragraph": 0, "claim": "Database-driven systems using Visual Basic and MySQL effectively manage organizational budgets with structured data handling.", "role": "baseline"},
+    {"author": "Tafonao", "year": 2023, "page": 0, "paragraph": 0, "claim": "Visual Basic and MySQL-based systems improve budget accuracy and transparency in institutional and governmental settings.", "role": "baseline"},
+    {"author": "Troelsen", "year": 2017, "page": 0, "paragraph": 0, "claim": "Visual Basic .NET provides robust libraries for user interface design, data connectivity through ADO.NET, and error handling.", "role": "methodology"},
+    {"author": "Oracle Corporation", "year": 2023, "page": 0, "paragraph": 0, "claim": "MySQL is an open-source relational database management system recognized for scalability, reliability, and SQL support.", "role": "methodology"},
+    {"author": "Grable", "year": 2004, "page": 0, "paragraph": 0, "claim": "Manual tracking methods are time-consuming and error-prone, limiting their effectiveness for dynamic financial insights.", "role": "critique"},
+    {"author": "Thaler", "year": 2008, "page": 0, "paragraph": 0, "claim": "Accessible budgeting tools encourage deliberate spending and saving by enhancing awareness of financial status.", "role": "context"},
+    {"author": "Ramsey", "year": 2013, "page": 0, "paragraph": 0, "claim": "Budgeting tools can promote proactive financial planning and discipline.", "role": "context"},
+    {"author": "Xiao", "year": 2016, "page": 0, "paragraph": 0, "claim": "Consumer financial education is positively associated with financial capability.", "role": "context"},
+    {"author": "Shim", "year": 2010, "page": 0, "paragraph": 0, "claim": "Financial socialization through parents, work, and education influences financial behaviors.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "System categorizes transactions as 'Received' or 'Expense' but does not implement detailed expense categorization frameworks."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Literature review discusses commercial tools like Mint, YNAB, Quicken, and PocketGuard as context for the system's positioning."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "low", "justification": "Paper discusses desktop advantages and mentions mobile as a future direction, but does not address mobile-first design principles."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "contextual", "justification": "Mobile UX is mentioned only as a future enhancement; no substantive discussion of mobile design."},
+      {"code": "9.C", "name": "Offline-First Architecture", "relevance": "high", "justification": "System is explicitly designed for offline operation with local data storage and no internet dependency."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Privacy is a defining characteristic with all data stored locally and no third-party access."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Privacy and local control are framed as trust-building features, though not explicitly measured."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "low", "justification": "System tracks balance and surplus but lacks explicit savings goal features; surplus is mentioned in future recommendations."}
+    ],
+    "contribution_to_field": "The paper contributes a practical, open-source desktop application that demonstrates the integration of Visual Basic .NET and MySQL for personal financial management. It provides an offline, privacy-preserving alternative to commercial cloud-based tools. The system serves as an educational model for students learning database-driven software development. The work validates that accessible, simple technology can effectively support personal financial literacy and independence. It identifies clear directions for future enhancement including installation automation, cross-platform support, and advanced visualization.",
+    "directly_justifies": [
+      "Simple, well-structured desktop applications can effectively support individual financial literacy.",
+      "Local data storage provides users full control over their financial information.",
+      "Offline capability eliminates reliance on internet connectivity and recurring costs.",
+      "The system occupies a unique niche between basic spreadsheets and complex commercial software."
+    ],
+    "limits": [
+      "The database configuration process requires manual setup through XAMPP and phpMyAdmin, which may challenge non-technical users.",
+      "The application depends on Windows, restricting cross-platform deployment.",
+      "The single-user design limits shared budgeting scenarios such as household or group use.",
+      "Data backup must be performed manually, creating potential risks of data loss."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper was flagged as relevant to domains 3.A (Expense Categorization Frameworks), 4.A (Landscape of Existing Personal Finance Systems), 9.A (Mobile-First Design), 9.B (Mobile UX), 9.C (Offline-First Architecture), 10.A (Data Privacy), 10.B (User Trust), and 13.A (Savings Goal Management). Domains 1.A-1.C (Filipino Young Professionals) were considered and rejected because the paper does not focus on any specific demographic. Domains 2.A-2.D (Culturally Specific Practices, Seasonal Spending) were rejected as the paper does not address cultural or seasonal patterns. Domains 3.B-3.C (Category Design, Allocation Constraints) were rejected for lacking discussion of category design principles. Domains 4.B (Limitations and Gaps) was considered and rejected due to no systematic gap analysis. Domains 5.A-7.E (Behavioral Profiles, Predictive Modeling, Budgeting Strategies) were rejected as the paper does not address these algorithmic or modeling approaches. Domains 8.A-8.C (Anomaly Detection) were rejected for no anomaly detection. Domains 10.C (Consent Management) was rejected for no data portability discussion. Domains 11.A-14.C were rejected for no engagement, evaluation, debt management, synthetic data, or ML deployment. Overall topical coverage is focused on desktop application development, offline operation, and privacy preservation."
+  },
+  "limitations": [
+    "Manual installation process requiring MySQL configuration via XAMPP presents barriers for non-technical users. [unacknowledged]",
+    "Single-user design restricts collaborative and household budgeting scenarios. [unacknowledged]",
+    "Windows-only dependency limits cross-platform compatibility for macOS, Linux, and mobile users. [unacknowledged]",
+    "Manual backup requirement creates data loss risks if users fail to perform regular backups. [unacknowledged]",
+    "Lack of automated setup, expense categorization, graphical reporting, and recurring transaction features. [unacknowledged]"
+  ],
+  "remember_this": [
+    "The system is a desktop-based offline personal finance application built with Visual Basic .NET and MySQL.",
+    "All financial data is stored locally, providing complete user control and privacy without cloud dependency.",
+    "The system dynamically calculates total income, total expenses, and current balance with color-coded visual indicators.",
+    "Performance testing confirmed query responsiveness under 1 second for databases with up to 5,000 entries.",
+    "The system prioritizes simplicity, accessibility, and educational value over complex commercial features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Janobe_marked.md",
+      "converted_at": "2026-07-21T13:37:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "paper_id": "10.69987/JACS.2024.40407",
+  "designation": "international-algorithm-specific",
+  "title": "Going Concern and Bankruptcy Prediction under Extreme Class Imbalance: Cost-Sensitive Learning, Resampling, and Focal Loss with Explainable Financial-Ratio Portraits",
+  "authors": "Chen, Y.; Zhang, Y.; Sherman, M.",
+  "year": 2024,
+  "venue": "Journal of Advanced Computing Systems (JACS)",
+  "odin_topics": ["6.A", "6.B", "8.A", "8.B"],
+  "tldr": "Evaluates cost-sensitive learning, resampling, and focal loss for bankruptcy prediction under extreme imbalance on the Polish Companies dataset, finding tree ensembles with missing indicators achieve best AUPRC.",
+  "problem_and_motivation": "Going-concern prediction involves extreme class imbalance (fewer than 5% firms fail) where misclassifying a distressed firm is far costlier than false alarms. Standard classifiers suffer from bias toward the majority class and evaluation metrics like accuracy are misleading.",
+  "approach": [
+    "Uses the Polish Companies Bankruptcy benchmark (64 financial ratios, 43,405 firm-year records, five forecasting horizons) from UCI.",
+    "Compares three imbalance-aware strategy families: cost-sensitive learning via class-weighted objectives, resampling (ROS, RUS, SMOTE), and focal loss.",
+    "Base learners are logistic regression and random forest with 200 trees.",
+    "Evaluates using AUPRC and Recall@Top-k with k values from 0.5% to 20%.",
+    "Augments features with binary missing-value indicators to exploit missingness as a predictive signal."
+  ],
+  "findings": [
+    "num: Cost-sensitive random forest with missing indicators achieved AUPRC of 0.640 (1stYear), 0.480, 0.459, 0.567, and 0.601 for five horizons.",
+    "num: Augmenting with missing-value indicators increased AUPRC from 0.480 to 0.640 in the 1stYear case.",
+    "num: Auditing top 5% of firms ranked by best model recovered 62.96% of bankruptcies vs 12.35% for logistic regression.",
+    "Tree ensembles dominated linear models across all five forecasting horizons.",
+    "Focal loss did not provide consistent gains over cost-sensitive weighting."
+  ],
+  "key_figures_tables": [
+    "Table 3: Financial ratios subset used in explainability analysis.",
+    "Top-k hit rate versus audit sampling cost curves show operational gains."
+  ],
+  "key_equations": [{"equation": "Recall@Top-k = fraction of bankrupt firms in audited top-k subset", "explanation": "Proportion of bankruptcies captured within review budget."}],
+  "definitions": [
+    {"term": "AUPRC", "definition": "Area Under Precision-Recall Curve for imbalanced evaluation"},
+    {"term": "Recall@Top-k", "definition": "Recall when auditing the top k fraction of ranked firms"},
+    {"term": "ROS/RUS", "definition": "Random Over-Sampling / Random Under-Sampling"},
+    {"term": "SMOTE", "definition": "Synthetic Minority Over-sampling TEchnique"},
+    {"term": "+MI", "definition": "Missing-value Indicator features augmented to input"}
+  ],
+  "citations": [
+    {"author": "Altman", "year": 1968, "page": 2, "paragraph": 1, "claim": "Z-score using linear combination of ratios for bankruptcy prediction.", "role": "methodology"},
+    {"author": "Ohlson", "year": 1980, "page": 2, "paragraph": 1, "claim": "Logit model for probabilistic bankruptcy prediction.", "role": "methodology"},
+    {"author": "Chawla", "year": 2002, "page": 3, "paragraph": 2, "claim": "SMOTE oversampling technique for imbalanced learning.", "role": "methodology"},
+    {"author": "Lin", "year": 2017, "page": 3, "paragraph": 3, "claim": "Focal loss for dense object detection focusing on hard examples.", "role": "methodology"},
+    {"author": "Davis", "year": 2006, "page": 4, "paragraph": 1, "claim": "Relationship between ROC and PR curves formalized.", "role": "methodology"},
+    {"author": "Zadrozny", "year": 2003, "page": 2, "paragraph": 2, "claim": "Cost-proportionate weighting for cost-sensitive learning.", "role": "methodology"},
+    {"author": "Lundberg", "year": 2017, "page": 4, "paragraph": 1, "claim": "SHAP for local feature attribution in model explanations.", "role": "methodology"},
+    {"author": "Ribeiro", "year": 2016, "page": 4, "paragraph": 1, "claim": "LIME for local interpretable model-agnostic explanations.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Evaluates predictive models for bankruptcy as a form of financial distress prediction"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justification": "Compares forecasting algorithms across five time horizons for bankruptcy prediction"},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Bankruptcy detection as a rare-event anomaly detection problem with extreme class imbalance"},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "medium", "justification": "Evaluates cost-sensitive learning, resampling, and focal loss for imbalanced detection"}
+    ],
+    "contribution_to_field": "This paper provides a reproducible empirical comparison of three imbalance-handling strategy families for bankruptcy prediction across five forecasting horizons. It demonstrates that missingness patterns carry predictive signal that can substantially improve AUPRC, and that audit-oriented metrics like Recall@Top-k provide operationally meaningful evaluation. The explainable financial-ratio portrait bridges predictive modeling with actionable accounting evidence.",
+    "directly_justifies": [
+      "Missing-value indicators improved AUPRC from 0.480 to 0.640 in 1stYear case.",
+      "Recall@Top-5% recovered 62.96% of bankruptcies vs 12.35% for logistic regression.",
+      "Tree ensembles dominated linear models across all five forecasting horizons."
+    ],
+    "limits": [
+      "Single dataset (Polish Companies) limits generalizability to other economies.",
+      "Focal loss evaluation limited to logistic regression, not tested with tree ensembles."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 6.A (Predictive Modeling) and 8.A (Anomaly Detection) were rated high as the paper addresses bankruptcy prediction under extreme imbalance. Topic 6.B (Forecasting Algorithms) was rated medium as the approach spans multiple time horizons. Topic 8.B (Anomaly Detection Algorithms) was rated medium for its comparison of imbalance-handling techniques. Topics 1.x-5.x, 7.x, 9.x-14.x were rejected as the paper focuses on financial ratio-based bankruptcy prediction, not personal finance system design."
+  },
+  "limitations": [
+    "Single dataset from Polish companies limits cross-economy generalizability.",
+    "Focal loss only evaluated on logistic regression, not on tree ensembles.",
+    "No investigation of deep learning alternatives beyond tree ensembles."
+  ],
+  "remember_this": [
+    "Missing-value indicators improved AUPRC from 0.480 to 0.640 in 1stYear case.",
+    "Auditing top 5% of firms recovered 62.96% of bankruptcies.",
+    "Tree ensembles dominated linear models across all five horizons.",
+    "Recall@Top-k provides operationally meaningful evaluation for audit triage.",
+    "Cost-sensitive random forest with missing indicators achieved best overall AUPRC."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chen Y. et al_marked.md",
+      "converted_at": "2026-07-22T12:55:50Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

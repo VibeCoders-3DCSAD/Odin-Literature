@@ -1,0 +1,232 @@
+{
+  "paper_id": "10.48550/arXiv.2026.nie.llm.finance.survey",
+  "designation": "international-algorithm-specific",
+  "title": "A Survey of Large Language Models for Financial Applications: Progress, Prospects and Challenges",
+  "authors": "Yuqi Nie, Yaxuan Kong, Xiaowen Dong, John M. Mulvey, H. Vincent Poor, Qingsong Wen, Stefan Zohren",
+  "year": 2025,
+  "venue": "arXiv preprint (submitted to Journal of Machine Learning), 2025",
+  "odin_topics": [
+    "5.A",
+    "5.D",
+    "6.A",
+    "6.B",
+    "6.C",
+    "7.A",
+    "7.C",
+    "8.A",
+    "10.A",
+    "10.B",
+    "11.A",
+    "11.B"
+  ],
+  "tldr": "A comprehensive survey of LLMs in finance covering 500+ papers across linguistic tasks, sentiment analysis, time series forecasting, financial reasoning, and agent-based modeling with a unified evaluation framework and public repository.",
+  "problem_and_motivation": "Finance generates vast unstructured text data (news, reports, transcripts) but traditional NLP models struggle with domain-specific terminology, temporal context, and complex reasoning. Foundation models offer new capabilities but face challenges in hallucination, domain adaptation, and data pollution. A systematic survey is needed to map progress and open challenges.",
+  "approach": [
+    "Systematic literature review covering over 500 papers (2020-2024) on LLMs for financial applications.",
+    "Five-category taxonomy of financial tasks: Financial Linguistic Tasks, Financial Sentiment Analysis, Financial Time Series, Financial Reasoning, Financial Agent-based Modeling.",
+    "Comprehensive collection of publicly available datasets, benchmarks, and model checkpoints in a unified GitHub repository.",
+    "Evaluation framework categorizing human-centered vs. outcome-based metrics across six dimensions: Fluency, Factuality, Faithfulness, Conciseness, Domain-specific applicability, and Downstream task performance.",
+    "Analysis of base architectures: BERT, RoBERTa, ELECTRA, T5, and GPT-family variants adapted to finance.",
+    "Domain-specific model survey: FinBERT, BloombergGPT, FinMA, FinGPT, XuanYuan, CFGPT, and others.",
+    "Analysis of key challenges: lookahead bias, legal implications, data pollution, signal decay, and interpretability."
+  ],
+  "findings": [
+    "cat: Financial LLMs are categorized into base model improvements (retraining, domain-adaptive pretraining), post-processing improvements (RAG, prompt engineering, fine-tuning), and evaluation.",
+    "cat: FinBERT and its derivatives (FinBERT-FL, FineFinBERT) remain dominant for sentiment analysis with state-of-the-art performance on FiQA, Financial PhraseBank, and FP datasets.",
+    "cat: BloombergGPT (50B, trained on Bloomberg's financial data) excels on financial tasks but underperforms on general NLP benchmarks vs. LLaMA2-70B.",
+    "cat: FinMA (series from 7B to 70B) uses LLaMA and Mistral as base models with instruction tuning for universal financial task coverage.",
+    "num: ChatGPT achieved 74.2% accuracy on FinQA, outperforming fine-tuned models without explicit training on financial data.",
+    "cat: Financial time series forecasting increasingly uses LLMs as feature extractors (LLM4TS, FinTime) and as generative forecasters.",
+    "cat: LLM-based agents (FinMem, FinAgent, FinChain) combine LLMs with tools for automated financial analysis and trading.",
+    "cat: Key challenges include lookahead bias in training data, legal liability for AI-generated advice, data pollution from overlapping benchmarks, signal decay in trading strategies, and lack of interpretability."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Distribution of Financial LLM Publications Over Time (2020-2024, 500+ papers).",
+    "Figure 2: Taxonomy of Financial Tasks with LLM Applications.",
+    "Table 1: Comparison of Financial LLMs - Model Size, Domain-specific Performance, General Performance.",
+    "Table 2: Summary of Financial Sentiment Analysis Datasets (FiQA, Financial PhraseBank, FP, etc.).",
+    "Table 3: Financial Reasoning Datasets and Benchmarks (FinQA, ConvFinQA, TAT-QA).",
+    "Figure 3: Unified Evaluation Framework - Dimensions and Metrics Hierarchy.",
+    "Table 4: Summary of Open Challenges and Proposed Mitigation Strategies."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {
+      "term": "Lookahead Bias",
+      "definition": "A type of data leakage where financial training data inadvertently incorporates future information, inflating model performance metrics."
+    },
+    {
+      "term": "Signal Decay",
+      "definition": "The phenomenon where financial predictive signals diminish over time as market participants adapt to and arbitrage away systematic patterns."
+    },
+    {
+      "term": "Financial Agent",
+      "definition": "An LLM-based autonomous system that can reason about financial data, make decisions, and execute actions in financial environments."
+    },
+    {
+      "term": "Domain-Adaptive Pretraining (DAPT)",
+      "definition": "Continued pretraining of a general-purpose LLM on a domain-specific corpus to adapt its knowledge and vocabulary to finance."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Vaswani et al.",
+      "year": 2017,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Introduced the Transformer architecture that serves as the foundation for all modern LLMs.",
+      "role": "support"
+    },
+    {
+      "author": "Devlin et al.",
+      "year": 2019,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Proposed BERT, establishing the pretraining-finetuning paradigm adopted by financial LLMs.",
+      "role": "support"
+    },
+    {
+      "author": "Brown et al.",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 3,
+      "claim": "Demonstrated in-context learning capabilities of GPT-3 at scale.",
+      "role": "support"
+    },
+    {
+      "author": "Araci",
+      "year": 2019,
+      "page": 12,
+      "paragraph": 1,
+      "claim": "Introduced FinBERT, the first domain-specific BERT model pretrained on financial text for sentiment analysis.",
+      "role": "support"
+    },
+    {
+      "author": "Wu et al.",
+      "year": 2023,
+      "page": 15,
+      "paragraph": 2,
+      "claim": "Proposed BloombergGPT, a 50B-parameter LLM trained on Bloomberg's financial data corpus.",
+      "role": "support"
+    },
+    {
+      "author": "Zhang et al.",
+      "year": 2024,
+      "page": 18,
+      "paragraph": 1,
+      "claim": "Developed FinMA, an instruction-tuned family of financial LLMs built on LLaMA and Mistral.",
+      "role": "support"
+    },
+    {
+      "author": "Yang et al.",
+      "year": 2024,
+      "page": 20,
+      "paragraph": 3,
+      "claim": "Proposed FinGPT, an open-source framework for financial LLMs with modular design.",
+      "role": "support"
+    },
+    {
+      "author": "Cao et al.",
+      "year": 2024,
+      "page": 25,
+      "paragraph": 1,
+      "claim": "Developed FinMem, an LLM-based agent with hierarchical memory for financial analysis.",
+      "role": "support"
+    },
+    {
+      "author": "Li et al.",
+      "year": 2024,
+      "page": 40,
+      "paragraph": 2,
+      "claim": "Identified data pollution challenges in financial LLM evaluation benchmarks with overlapping training and test sets.",
+      "role": "support"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Forecasting and Prediction",
+        "relevance": "high",
+        "justification": "Comprehensive survey of LLMs for time series forecasting, stock price predictions, and economic indicator forecasting."
+      },
+      {
+        "code": "5.D",
+        "name": "Financial Text Mining and Analysis",
+        "relevance": "high",
+        "justification": "Core survey focus on financial NLP: summarization, report generation, information extraction from financial documents."
+      },
+      {
+        "code": "6.A",
+        "name": "AI/ML Model Development and Evaluation",
+        "relevance": "high",
+        "justification": "Detailed taxonomy of financial LLM architectures, training methodologies, and benchmarks with systematic evaluation."
+      },
+      {
+        "code": "6.B",
+        "name": "AI Explainability and Interpretability",
+        "relevance": "high",
+        "justification": "Identifies interpretability as a key open challenge; discusses human-centered and outcome-based evaluation."
+      },
+      {
+        "code": "6.C",
+        "name": "Foundation Models and Transfer Learning",
+        "relevance": "high",
+        "justification": "Core focus: adapting foundation models (GPT, BERT, LLaMA) to financial domains via DAPT, fine-tuning, prompt engineering."
+      },
+      {
+        "code": "7.C",
+        "name": "Data Quality and Bias",
+        "relevance": "high",
+        "justification": "Extensive discussion of data pollution, lookahead bias, benchmark contamination, and data quality challenges."
+      },
+      {
+        "code": "10.B",
+        "name": "Financial Advisory and Decision Support Systems",
+        "relevance": "high",
+        "justification": "LLM-based agents for financial analysis, advisory, and automated decision-making are a key category."
+      },
+      {
+        "code": "11.A",
+        "name": "Ethical and Legal Implications of FinTech",
+        "relevance": "medium",
+        "justification": "Discusses legal liability of AI-generated financial advice and regulatory compliance challenges."
+      }
+    ],
+    "contribution_to_field": "Provides the most comprehensive systematic survey (500+ papers) of LLM applications in finance with a unified taxonomy, evaluation framework, and curated repository of datasets, models, and benchmarks.",
+    "directly_justifies": [
+      "Odin's use of LLMs and foundation models for financial applications needs to account for domain adaptation strategies.",
+      "RAG and prompt engineering are viable approaches for financial text tasks.",
+      "Lookahead bias and data pollution are critical concerns for any financial ML system.",
+      "Financial agent architectures combining LLMs with tools are a promising direction."
+    ],
+    "limits": [
+      "Survey nature; does not contribute new models or empirical results.",
+      "Coverage up to early 2024; rapidly evolving field may have newer advancements.",
+      "Evaluation framework is proposed but not validated against practitioners."
+    ],
+    "topic_mapping_rationale": "Comprehensive survey of algorithmic LLM methods for finance. Covers forecasting, text mining, ML development, and explainability."
+  },
+  "limitations": [
+    "Survey covers literature only up to early 2024; the field evolves rapidly.",
+    "Proposed evaluation framework is conceptual and not empirically validated.",
+    "Does not provide direct model comparisons on identical benchmarks (heterogeneous evaluation settings across papers).",
+    "Potential selection bias toward English-language financial LLM research."
+  ],
+  "remember_this": [
+    "500+ papers surveyed; unified taxonomy across 5 financial task categories.",
+    "FinBERT remains dominant for sentiment analysis; BloombergGPT excels at finance but lags on general tasks.",
+    "Key challenges: lookahead bias, data pollution, signal decay, legal liability, interpretability.",
+    "FinMA, FinGPT, and financial agents (FinMem, FinAgent) are state-of-the-art directions.",
+    "Evaluation framework: Fluency, Factuality, Faithfulness, Conciseness, Domain applicability, Downstream performance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Nie et al_marked.md",
+      "converted_at": "2026-07-21T07:45:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "paper_id": "10.1062/67270.1",
+  "designation": "international-algorithm-specific",
+  "title": "A High-Recall Cost-Sensitive Machine Learning Framework for Real-Time Online Banking Transaction Fraud Detection",
+  "authors": "Karthikeyan, V.R.; Kavinraaj, S.; Premnath, S.; Sangeetha, J.",
+  "year": 2026,
+  "venue": "Unknown",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "6.A",
+    "14.B",
+    "4.A",
+    "4.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Presents an ensemble machine learning system with cost-sensitive threshold optimization to maximize fraud recall in highly imbalanced online banking transaction data, achieving 98.6% recall.",
+  "problem_and_motivation": "Existing rule-based and precision-focused fraud detection methods fail to adapt to evolving scams and miss rare but costly fraudulent transactions due to class imbalance and fixed thresholds. The asymmetric cost of undetected fraud (high) versus false alarms (low) is not adequately addressed, leading to significant financial losses.",
+  "approach": [
+    "An ensemble of classifiers (Logistic Regression, Random Forest, XGBoost) is trained on a large-scale, imbalanced public transaction dataset from UCI and Kaggle.",
+    "The system applies cost-sensitive decision threshold optimization to minimize expected misclassification costs, prioritizing fraud recall over overall accuracy.",
+    "The optimized threshold is selected based on recall-oriented performance criteria, shifting the decision boundary to detect more fraudulent cases.",
+    "The fraud detection model is integrated into a real-time online banking transaction pipeline, evaluating each transaction before execution.",
+    "A supporting Chrome browser extension using a hybrid deep learning and rule-based model detects phishing URLs as an auxiliary security layer.",
+    "The core system is validated on a separate test set, with performance assessed using confusion matrices, PR curves, ROC curves, and threshold analysis.",
+    "The architecture is designed for low-latency, real-time performance using efficient tree-based models for quick inference.",
+    "The system includes a module for feature extraction from transactional, behavioral, temporal, and contextual data.",
+    "The phishing detection module operates independently to respect banking system operational constraints and isolation requirements.",
+    "Model predictions and decisions are logged for auditability and future model updates."
+  ],
+  "findings": [
+    "num: Proposed model achieved 98.6% fraud recall on the test dataset.",
+    "num: The proposed model attained 98.3% accuracy, 96.8% precision, and a 0.996 ROC-AUC.",
+    "num: XGBoost with a fixed threshold (0.5) achieved 92.4% recall, 97.8% accuracy, and 0.988 ROC-AUC.",
+    "num: Random Forest achieved 88.7% recall, 97.1% accuracy, and 0.981 ROC-AUC.",
+    "num: Logistic Regression achieved 71.2% recall, 95.4% accuracy, and 0.942 ROC-AUC.",
+    "Cost-sensitive threshold optimization effectively minimizes expected classification costs (C_FN >> C_FP).",
+    "The proposed model demonstrated high precision across a wide range of recall values, indicating effective fraud identification with minimized false positives.",
+    "The system's strong discriminative capability is shown by a steep ROC curve ascent toward the upper-left corner.",
+    "The model maintains acceptable false-positive rates while prioritizing fraud recall, suitable for safety-critical real-time applications.",
+    "The system is validated in a live online banking setup, proving its ability to run fast enough for real-world use without delays."
+  ],
+  "key_figures_tables": [
+    "Figure 1: System architecture of the proposed transaction fraud detection framework → Shows three main components: data processing, fraud detection engine, and real-time decision module.",
+    "Figure 2: Confusion matrix of the proposed fraud detection model on the test dataset → Demonstrates high true positive and low false negative rates.",
+    "Figure 3: Precision–Recall (PR) curve of the proposed framework → Shows consistently high precision across a wide range of recall values under class imbalance.",
+    "Figure 4: Receiver Operating Characteristic (ROC) curve of the proposed model → Exhibits steep ascent toward upper-left corner, indicating strong discriminative capability.",
+    "Figure 5: Effect of decision threshold on model performance → Illustrates trade-off between detection accuracy and classification sensitivity.",
+    "Table I: Performance comparison with baseline models → Summarizes accuracy, precision, recall, F1-score, and ROC-AUC for all models."
+  ],
+  "key_equations": [
+    {
+      "equation": "P(y = 1 | x) \\geq \\tau",
+      "explanation": "Classification rule: fraud if probability exceeds optimized threshold."
+    },
+    {
+      "equation": "C(\\tau) = C_{FN} \\cdot FN(\\tau) + C_{FP} \\cdot FP(\\tau)",
+      "explanation": "Expected classification cost as a function of the threshold."
+    },
+    {
+      "equation": "C_{FN} \\gg C_{FP}",
+      "explanation": "Assumption that false negatives are far more costly than false positives."
+    },
+    {
+      "equation": "\\tau^* = \\arg\\min_{\\tau} C(\\tau)",
+      "explanation": "Optimal threshold minimizes the expected misclassification cost."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ROC-AUC",
+      "definition": "Area Under the Receiver Operating Characteristic Curve, measuring discriminative ability."
+    },
+    {
+      "term": "PR curve",
+      "definition": "Precision-Recall curve, a performance metric suitable for imbalanced classification."
+    },
+    {
+      "term": "Cost-sensitive learning",
+      "definition": "A machine learning approach that accounts for the different costs of misclassification errors."
+    },
+    {
+      "term": "Ensemble learning",
+      "definition": "A method that combines predictions from multiple base models to improve robustness and generalization."
+    },
+    {
+      "term": "Threshold optimization",
+      "definition": "The process of selecting a decision threshold to achieve a specific performance objective, such as maximizing recall."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Dal Pozzolo",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adaptive Machine Learning for Credit Card Fraud Detection.",
+      "role": "context"
+    },
+    {
+      "author": "Elkan",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The foundations of cost-sensitive learning.",
+      "role": "methodology"
+    },
+    {
+      "author": "Breiman",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random Forests.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost: A Scalable Tree Boosting System.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ke",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree.",
+      "role": "context"
+    },
+    {
+      "author": "Prokhorenkova",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CatBoost: Unbiased Boosting with Categorical Features.",
+      "role": "context"
+    },
+    {
+      "author": "Bahnsen",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Example-Dependent Cost-Sensitive Decision Trees.",
+      "role": "methodology"
+    },
+    {
+      "author": "Fawcett",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "An Introduction to ROC Analysis.",
+      "role": "methodology"
+    },
+    {
+      "author": "Davis",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The relationship between precision-recall and ROC curves.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bhattacharyya",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data Mining for Credit Card Fraud: A Comparative Study.",
+      "role": "baseline"
+    },
+    {
+      "author": "Dal Pozzolo",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit card fraud detection.",
+      "role": "context"
+    },
+    {
+      "author": "Rao",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Detection of Phishing Websites.",
+      "role": "context"
+    },
+    {
+      "author": "Hand",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Statistical techniques for fraud detection.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly addresses fraud detection as a core anomaly detection task in financial transactions."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Proposes and evaluates ensemble learning and threshold optimization for anomaly detection."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses predictive modeling (classification) to predict fraud probability in real-time transactions."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Discusses integration of the model into a real-time online banking transaction pipeline."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews existing rule-based and machine learning fraud detection systems and their limitations."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies key gaps: fixed thresholds, accuracy-centric evaluation, and lack of live-system integration."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses ROC-AUC, PR curves, and confusion matrices to evaluate the system's performance."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Detailed evaluation of the classification algorithm's performance against baselines and via cost-sensitive metrics."
+      }
+    ],
+    "contribution_to_field": "This paper advances the field of fraud detection by operationalizing cost-sensitive learning within a real-time banking transaction pipeline, moving beyond static benchmark evaluations. It demonstrates that systematic threshold tuning based on asymmetric misclassification costs significantly improves fraud recall, a critical metric for financial institutions. The integration of a live deployment pipeline and an auxiliary phishing detection layer provides a more comprehensive, system-level approach to online banking security. The work highlights the practical gap between accuracy-centric academic models and the recall-oriented requirements of real-world financial systems.",
+    "directly_justifies": [
+      "Catching nearly all fraud matters most, even if overall correctness appears lower.",
+      "Missing real fraud carries heavier consequences than raising false alarms.",
+      "The optimal decision threshold should be selected to minimize expected classification cost.",
+      "Real-time integration is essential for immediate risk mitigation.",
+      "Phishing detection acts as a supporting defense layer but must be decoupled from core transaction processing."
+    ],
+    "limits": [
+      "The study relies on a single public dataset (UCI/Kaggle) which may not fully capture the diversity of all real-world banking fraud patterns.",
+      "The phishing detection component is described as a supporting mechanism but is not deeply integrated or evaluated within the unified framework.",
+      "The paper acknowledges the need for adapting to shifting fraud behaviors over time, suggesting future work on continuous learning.",
+      "The dataset was balanced prior to model development, which may not reflect the true extreme imbalance seen in live production systems."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. Domains 8.A and 8.B (Anomaly Detection) were flagged as high relevance, as fraud detection is the central focus, with specific algorithms (ensemble models, threshold optimization) proposed and evaluated. Domain 6.A (Predictive Modeling) is highly relevant as the core method is a predictive classification model. Domain 14.B (ML Model Serving) is medium relevance due to the system's real-time integration. Domains 4.A and 4.B are relevant for their background context and critical analysis of existing systems, with 4.B being high relevance for identifying limitations. Domains 12.A and 12.B are relevant for the performance evaluation methodology. Domains related to Filipino demographics (1.A, 1.B, 1.C), culturally specific practices (2.A, 2.B, 2.D), expense categorization (3.A, 3.B, 3.C), user profiles (5.A, 5.B, 5.C), budgeting (7.A-E), cold-start problems (7.E, 8.C), mobile design (9.A-C), privacy (10.A-C), engagement (11.A, 11.B), savings/debt (13.A-C), and synthetic data generation (14.A) were considered and rejected as the paper's content does not address these specific subtopics. The paper's scope is narrowly focused on the algorithmic and operational aspects of transaction fraud detection in a generic online banking context, not on user behavior, budgeting, or localized financial practices. The overall topical coverage is concentrated on algorithmic fraud detection, system deployment, and performance evaluation in an imbalanced, real-time setting."
+  },
+  "limitations": [
+    "The paper does not specify the exact imbalance ratio of the test dataset beyond stating it is highly imbalanced. [unacknowledged]",
+    "The computational cost and latency of the ensemble model in a high-throughput banking environment are not quantitatively analyzed. [unacknowledged]",
+    "The integration of the phishing detection component is described but its independent evaluation and impact on overall system security are not presented. [unacknowledged]",
+    "The dataset balancing prior to model development is mentioned but the potential impact on real-world performance is not discussed. [unacknowledged]",
+    "The paper acknowledges the need for future work on adapting to shifting fraud behaviors and continuous learning."
+  ],
+  "remember_this": [
+    "Proposed model achieved 98.6% fraud recall with an optimized threshold.",
+    "Cost-sensitive threshold tuning prioritizes catching fraud over overall accuracy.",
+    "Ensemble learning and threshold optimization work together for high recall.",
+    "The system is integrated into a real-time banking pipeline for immediate enforcement.",
+    "Phishing detection acts as a separate, auxiliary security layer."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Karthikeyan et al_marked.md",
+      "converted_at": "2026-07-21T13:41:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "paper_id": "64caff97-a0e9-5303-9640-fdf9258389fe",
+  "designation": "international-algorithm-specific",
+  "title": "Artificial Intelligence Powered Personal Finance Management System",
+  "authors": "Chahar, P.; Vishwakarma, Y.K.; Mishra, R.; Paliwal, G.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "An AI-powered personal finance management system combining Random Forest, SVM, and LSTM classifiers with a Flask-React web stack delivers automated expense categorization, predictive forecasting, and personalized budget recommendations, achieving high user satisfaction in preliminary evaluation.",
+  "problem_and_motivation": "Existing personal finance tools rely on static rule-based methods and offer generic guidance, failing to adapt to individual spending behaviors or diverse income streams.",
+  "approach": [
+    "A modular system architecture integrates data collection, expense classification, predictive analytics, recommendation, NLP interface, and security modules.",
+    "Supervised ML algorithms including Random Forest, Support Vector Machine, and LSTM networks trained on labeled transaction datasets.",
+    "Feature engineering uses transaction metadata with TF-IDF and word embeddings for text vectorization.",
+    "Time series forecasting models including ARIMA and LSTM applied to predict future expenses and cash flow trends.",
+    "Technology stack combines React.js for frontend UI, Flask for backend ML operations, MongoDB for data storage, and Firebase for authentication.",
+    "Security measures include end-to-end encryption, role-based access control, anonymization during training, and GDPR compliance."
+  ],
+  "findings": [
+    "num: User survey yielded overall satisfaction rating of 4.4 out of 5 across financial management requirements.",
+    "Convenience of use received the highest user rating at 4.5 out of 5.",
+    "Goal-setting functionality received a user satisfaction score of 4.3 out of 5.",
+    "Transaction categorization correctness scored 4.2 out of 5.",
+    "System performed well for users with stable income but struggled with variable or irregular spending patterns.",
+    "Data quality directly impacted prediction accuracy."
+  ],
+  "citations": [
+    {
+      "author": "Siami-Namini",
+      "year": 2018,
+      "page": 3,
+      "paragraph": 5,
+      "claim": "ARIMA and LSTM networks have been applied to predict future expenses or cash flow trends.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cao",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Comprehensive examination of AI strategies classifying analytics and learning approaches supporting financial tasks.",
+      "role": "context"
+    },
+    {
+      "author": "Zhang",
+      "year": 2007,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Decision trees, SVMs, and neural networks categorize transactions based on descriptions and amounts with high accuracy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Luef",
+      "year": 2020,
+      "page": 3,
+      "paragraph": 6,
+      "claim": "Collaborative filtering and content-based methods provide personalized saving tips and investment advice.",
+      "role": "baseline"
+    },
+    {
+      "author": "Molina-Garcia",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 3,
+      "claim": "University students risk tolerance and literacy were negatively correlated, supporting educational interventions.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Core focus on ML-based automated expense categorization using RF, SVM, and LSTM."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Systematic literature review of Mint, YNAB, Digit, Tally, and academic tools."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps in adaptability, personalization, and privacy across current tools."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses ARIMA and LSTM for predicting future expenses and cash flow."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "References LSTM for sequential financial time series forecasting."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Discusses budgeting approaches and theoretical connections to spending biases."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Proposes personalized budget recommendations based on user behavior and goals."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Addresses encryption, access control, anonymization, and GDPR compliance."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates system using accuracy, precision, MAE, and F1 metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates classification and forecasting models across key functionalities."
+      }
+    ],
+    "contribution_to_field": "Contributes a comprehensive modular system design integrating multiple AI capabilities including expense classification, predictive analytics, recommendation, and NLP into a single personal finance platform. Provides systematic literature review of existing AI-powered personal finance tools.",
+    "directly_justifies": [
+      "Machine learning algorithms such as decision trees, SVM, and neural networks categorize transactions with high accuracy.",
+      "Time series models including ARIMA and LSTM predict future expenses or cash flow trends.",
+      "Existing personal finance tools rely on static rules rather than adaptive learning models.",
+      "Consumer acceptability of AI finance tools varies significantly across demographics."
+    ],
+    "limits": [
+      "Preliminary prototype lacks quantitative experimental comparison against established baselines.",
+      "No specific dataset size or benchmark accuracy numbers are reported for classification models.",
+      "System adaptability is limited for users with irregular or fluctuating income streams.",
+      "Paper does not address the cold-start problem for new users without historical data.",
+      "Evaluation relies primarily on user surveys rather than rigorous algorithmic benchmarking."
+    ]
+  },
+  "limitations": [
+    "No quantitative algorithmic benchmark results reported for the proposed classifiers.",
+    "No comparison against established baselines or state-of-the-art models for expense classification.",
+    "Evaluation relies primarily on user survey scores rather than rigorous algorithmic performance metrics.",
+    "Model adaptability is limited for users with irregular or fluctuating income streams.",
+    "Data quality dependency acknowledged as a factor impacting prediction accuracy."
+  ],
+  "remember_this": [
+    "System combines Random Forest, SVM, and LSTM classifiers for automated expense categorization.",
+    "User survey reported 4.4 out of 5 overall satisfaction with the proposed system.",
+    "Convenience of use scored highest at 4.5 out of 5 in user evaluation.",
+    "Model struggles with users having irregular or fluctuating income streams.",
+    "Security includes end-to-end encryption, role-based access, and GDPR compliance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chahar et al_marked.md",
+      "converted_at": "2026-07-22T12:44:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

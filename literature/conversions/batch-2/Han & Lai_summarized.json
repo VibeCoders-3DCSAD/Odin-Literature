@@ -1,0 +1,78 @@
+{
+  "paper_id": "10.69987/JACS.2026.60403",
+  "designation": "international-algorithm-specific",
+  "title": "Temporal Feature Engineering and Threshold Optimization for Early Warning in Healthcare Claims Anomaly Detection",
+  "authors": "Han, M.; Lai, J.",
+  "year": 2026,
+  "venue": "Journal of Advanced Computing Systems (JACS)",
+  "odin_topics": ["8.A", "8.B"],
+  "tldr": "Develops a systematic temporal feature engineering framework and adaptive threshold optimization for detecting anomalous healthcare claims, evaluated on Medicare Part B data.",
+  "problem_and_motivation": "Healthcare fraud accounts for billions in annual losses, but existing detection systems struggle with high false-positive rates and cannot adapt to evolving fraud tactics. The temporal dimension of claims data remains underutilized despite its potential to reveal subtle fraudulent patterns.",
+  "approach": [
+    "Developed a systematic framework for extracting temporal features from claim sequences including interval patterns, frequency, service timing characteristics, and seasonal variations.",
+    "Combined statistical analysis with machine learning-based feature construction to capture complex temporal dependencies.",
+    "Designed adaptive threshold optimization algorithms that dynamically balance detection sensitivity with operational constraints.",
+    "Conducted a retrospective case study using Medicare Part B claims data to evaluate engineered temporal features.",
+    "Compared performance against baseline rule-based and statistical anomaly detection methods."
+  ],
+  "findings": [
+    "num: Temporal feature engineering improved anomaly detection performance over baseline approaches.",
+    "Adaptive threshold optimization maintained detection effectiveness while controlling false positive rates.",
+    "LSTM networks demonstrated superior performance in capturing long-range temporal dependencies in claims data.",
+    "Dynamic threshold adjustment based on historical false positive rates improved operational efficiency."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory network, a recurrent neural network architecture"},
+    {"term": "RNN", "definition": "Recurrent Neural Network for sequential data modeling"}
+  ],
+  "citations": [
+    {"author": "Reference 1", "year": 0, "page": 0, "paragraph": 0, "claim": "U.S. healthcare expenditure exceeds $4.3 trillion annually.", "role": "context"},
+    {"author": "Reference 2", "year": 0, "page": 0, "paragraph": 0, "claim": "Fraud rates range from 3% to 10% of total healthcare expenditures.", "role": "context"},
+    {"author": "Reference 4", "year": 0, "page": 0, "paragraph": 0, "claim": "Deep learning architectures like LSTM capture long-range temporal dependencies.", "role": "methodology"},
+    {"author": "Reference 6", "year": 0, "page": 0, "paragraph": 0, "claim": "Graph-based methods analyze relationships between providers for fraud detection.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "medium", "justification": "Methodology for healthcare claims anomaly detection is transferable to financial anomaly detection."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Core algorithmic contribution is temporal feature engineering for sequential anomaly detection."}
+    ],
+    "contribution_to_field": "This paper advances anomaly detection methodology by providing a systematic temporal feature engineering framework that captures multi-scale temporal patterns in sequential transactional data. The adaptive threshold optimization algorithm addresses the critical operational challenge of balancing detection sensitivity with false positive management. The work establishes practical guidelines for deploying temporal anomaly detection in production environments.",
+    "directly_justifies": [
+      "Temporal feature engineering significantly improves anomaly detection over baseline methods.",
+      "Adaptive threshold optimization balances detection sensitivity with operational constraints.",
+      "LSTM networks effectively capture temporal dependencies in claims sequences."
+    ],
+    "limits": [
+      "Healthcare claims focus limits direct applicability to personal spending anomaly detection.",
+      "Medicare data may not generalize to other payment systems or regions.",
+      "No comparison with state-of-the-art unsupervised anomaly detection methods. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 8 (Anomaly Detection) was flagged as high relevance because the paper's core contribution is temporal feature engineering for anomaly detection in sequential data. Domain 6 (Predictive Modeling) was considered but rejected because the focus is anomaly detection, not forecasting. All other domains were rejected as the paper does not address demographics, financial behavior, budgeting, mobile UX, or other topics. Borderline: Domain 8.A received medium because healthcare claims differ from personal finance transactions."
+  },
+  "limitations": [
+    "Healthcare-specific dataset may not generalize to personal spending anomaly detection.",
+    "No ablation study quantifying contribution of individual temporal features. [unacknowledged]",
+    "Adaptive threshold method assumes stable investigative capacity constraints."
+  ],
+  "remember_this": [
+    "Temporal feature engineering improves healthcare claims anomaly detection.",
+    "Adaptive threshold optimization balances detection and false positive rates.",
+    "LSTM captures long-range temporal dependencies in sequential claims data.",
+    "Framework provides production-ready guidelines for threshold parameter selection."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Han & Lai_marked.md",
+      "converted_at": "2026-07-22T13:30:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

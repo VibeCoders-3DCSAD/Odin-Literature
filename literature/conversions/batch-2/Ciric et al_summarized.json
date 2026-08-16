@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.3390/electronics12122616",
+  "designation": "international-algorithm-specific",
+  "title": "Single and Multiple Separate LSTM Neural Networks for Multiple Output Feature Purchase Prediction",
+  "authors": "Ciric, M.; Predic, B.; Stojanovic, D.; Ciric, I.",
+  "year": 2023,
+  "venue": "Electronics",
+  "odin_topics": ["6.A", "6.B", "3.A"],
+  "tldr": "Compares single multivariate LSTM versus multiple separate LSTM networks for predicting next purchase timing and product category from medical vendor transaction data.",
+  "problem_and_motivation": "Predicting both the timing and product category of a customer's next purchase is challenging because these outputs require different modeling approaches and may benefit from shared or separate representations.",
+  "approach": [
+    "Uses transaction data from a medical drugs and devices vendor with GPI classification for product categories.",
+    "Transforms original purchase transactions into time series of input features for next purchase prediction.",
+    "Compares single multivariate LSTM (SMLSTM) against multi-network configurations (MLSTM + PMLSTM) for simultaneous category and day prediction.",
+    "Evaluates across three dataset sizes: 100+ purchases, 20+ purchases, and 5+ purchases.",
+    "Measures prediction accuracy for drug group/category vectors and next purchase day."
+  ],
+  "findings": [
+    "num: For drug category prediction, dedicated LSTMs (MLSTM) significantly outperform single multivariate LSTM (SMLSTM).",
+    "num: For next purchase day prediction, single multivariate LSTM (SMLSTM) generally outperforms dedicated LSTMs.",
+    "num: For 95.7% of customers, at least one purchased drug category was correctly predicted.",
+    "num: At least four categories correctly predicted for 51.19% of customers.",
+    "num: No more than one category incorrectly predicted for 81.17% of customers."
+  ],
+  "key_figures_tables": [
+    "Table 1: 100+ purchases dataset results → GPI drug groups prediction with LSTM and SimpleRNN.",
+    "Figure 5: Prediction results for 100+ dataset → Drug groups and next purchase day.",
+    "Figure 8: Correctly predicted categories by percentage → 95.7% predict at least one category.",
+    "Figure 9: Incorrectly predicted categories by percentage → 81.17% have at most one error."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory network for sequential data"},
+    {"term": "SMLSTM", "definition": "Single Multivariate LSTM for simultaneous output prediction"},
+    {"term": "MLSTM", "definition": "Multivariate LSTM dedicated to category vector prediction"},
+    {"term": "PMLSTM", "definition": "Pseudo-multivariate LSTM dedicated to purchase day prediction"},
+    {"term": "GPI", "definition": "Generic Product Identifier classification system for medical products"}
+  ],
+  "citations": [
+    {"author": "Hochreiter", "year": 1997, "page": 1, "paragraph": 1, "claim": "Introduced LSTM architecture for sequential data.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Proposes LSTM models for next purchase prediction from transaction data"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Compares single vs multiple LSTM architectures for temporal purchase forecasting"},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "medium", "justification": "Uses GPI classification system for product category prediction in purchases"}
+    ],
+    "contribution_to_field": "This paper provides a systematic comparison of single multivariate LSTM versus multiple dedicated LSTM networks for purchase prediction. It demonstrates that dedicated networks perform better for category prediction while shared networks perform better for timing prediction. The data transformation approach from transaction format to time series enables personalized marketing systems based on next-purchase forecasting.",
+    "directly_justifies": [
+      "Dedicated LSTMs outperform single LSTM for drug category prediction.",
+      "Single multivariate LSTM outperforms dedicated LSTMs for next purchase day prediction.",
+      "95.7% of customers have at least one correct category prediction."
+    ],
+    "limits": [
+      "Medical vendor data limits generalizability to general retail or personal finance.",
+      "No comparison with non-LSTM architectures like Transformers.",
+      "Data transformation process requires proprietary GPI classification system."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 6.A (Predictive Modeling) and 6.B (Forecasting Algorithms) were rated high for the LSTM purchase prediction models. Topic 3.A (Expense Categorization) was rated medium for the GPI classification system. Topics 1.x-2.x, 4.x-5.x, 7.x-14.x were rejected as the paper focuses on algorithmic purchase prediction from transaction data, not personal finance demographics, system design, or budgeting."
+  },
+  "limitations": [
+    "Medical vendor data may not generalize to consumer retail or personal finance.",
+    "No comparison with Transformer or attention-based architectures.",
+    "Limited evaluation metrics; no precision/recall for timing prediction accuracy."
+  ],
+  "remember_this": [
+    "Dedicated LSTMs outperform single LSTM for product category prediction.",
+    "Single LSTM outperforms dedicated networks for next purchase day prediction.",
+    "95.7% of customers have at least one correctly predicted purchase category.",
+    "Data transformation from transactions to time series enables personalized marketing.",
+    "GPI classification system used for 100 medical drug groups and 16 categories."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Ciric et al_marked.md",
+      "converted_at": "2026-07-22T12:59:26Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

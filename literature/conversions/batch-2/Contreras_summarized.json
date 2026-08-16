@@ -1,0 +1,78 @@
+{
+  "paper_id": "10.62762/JSE.2026.605759",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Risk Evaluation in FinTech Systems via Reinforcement-Based Continuous Policy Optimization",
+  "authors": "Contreras, E.",
+  "year": 2026,
+  "venue": "ICCK Journal of Software Engineering",
+  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "14.B"],
+  "tldr": "Proposes ARL-CPO, a reinforcement learning-based continuous policy optimization framework for adaptive risk scoring that outperforms Random Forest, Gradient Boosting, and Transformer baselines.",
+  "problem_and_motivation": "FinTech systems require real-time risk assessment with low latency that is robust to concept drift and can be updated without service disruption. Existing models (Random Forest, Gradient Boosting, Transformers) require periodic batch retraining and cannot adapt continuously.",
+  "approach": [
+    "Models risk evaluation as a continuous-action Markov Decision Process with streaming transactional data.",
+    "Implements ARL-CPO as a deployable architecture separating online learning from inference serving via microservice.",
+    "Uses an asynchronous update loop for continuous model updating without batch retraining.",
+    "Evaluates on credit default prediction and adaptive asset allocation using 8.5 million credit records from a custom simulator.",
+    "Compares with Random Forest, Gradient Boosting, and Transformer baselines."
+  ],
+  "findings": [
+    "num: ARL-CPO achieved 97.4% classification accuracy, outperforming all baselines.",
+    "num: 98.8% trend adaptation rate (responsiveness to distributional shifts).",
+    "num: 96.1% cumulative long-term performance index (normalized long-horizon reward).",
+    "ARL-CPO enables continuous policy updates without periodic batch retraining.",
+    "The microservice architecture enables modular integration into production risk pipelines."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "ARL-CPO", "definition": "Adaptive Risk Learning via Continuous Policy Optimization (RL-based framework)"},
+    {"term": "MDP", "definition": "Markov Decision Process for sequential decision-making under uncertainty"},
+    {"term": "Concept drift", "definition": "Change in data distribution over time affecting model performance"}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Proposes RL-based risk scoring model for credit default prediction"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Uses continuous-action MDP with streaming transactional data for adaptive forecasting"},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Adaptive risk scoring detects anomalous credit behavior in real-time"},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "medium", "justification": "RL-based approach for adaptive anomaly detection with concept drift handling"},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "high", "justification": "Describes deployable microservice architecture separating learning from inference"}
+    ],
+    "contribution_to_field": "This paper introduces a reinforcement learning-based approach to adaptive risk scoring that continuously optimizes its policy via streaming feedback without batch retraining. The ARL-CPO framework achieves 97.4% accuracy and 98.8% trend adaptation rate, outperforming RF, GBT, and Transformer baselines. The modular microservice architecture enables practical deployment in production risk pipelines.",
+    "directly_justifies": [
+      "ARL-CPO achieved 97.4% classification accuracy on credit default prediction.",
+      "98.8% trend adaptation rate to distributional shifts demonstrated.",
+      "Enables continuous policy updates without periodic batch retraining."
+    ],
+    "limits": [
+      "Evaluation uses a custom simulator rather than real-world financial data.",
+      "Single dataset (8.5M records) limits generalizability.",
+      "RL-based approach requires careful reward function design for production."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 6.A (Predictive Modeling), 6.B (Forecasting Algorithms), 8.A (Anomaly Detection), and 14.B (ML Model Serving) were rated high for the core RL risk scoring algorithm and deployment architecture. Topic 8.B (Anomaly Detection Algorithms) was rated medium. Topics 1.x-5.x, 7.x, 9.x-14.A, 14.C were rejected as the paper focuses on algorithmic risk scoring, not personal finance demographics, budgeting, or mobile UX."
+  },
+  "limitations": [
+    "Evaluation on custom simulator data, not real-world financial records.",
+    "Single experimental dataset limits generalizability of results.",
+    "RL-based approach requires incentive-compatible reward design for production use.",
+    "No discussion of sample complexity or training stability. [unacknowledged]"
+  ],
+  "remember_this": [
+    "ARL-CPO achieved 97.4% classification accuracy for credit default prediction.",
+    "98.8% trend adaptation rate to distributional shifts.",
+    "Continuous policy updates without batch retraining via RL.",
+    "Outperformed Random Forest, Gradient Boosting, and Transformer baselines.",
+    "Modular microservice architecture separates learning from inference serving."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Contreras_marked.md",
+      "converted_at": "2026-07-22T13:01:36Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.54268/baskara.v5i2.16363",
+  "designation": "local",
+  "title": "Scaling the Frame of Mind: Money Attitude and Financial Well-Being of Generation Zoomers (Gen-Zs) in Rizal Province",
+  "authors": "Money Attitude",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "11.A",
+    "13.B"
+  ],
+  "tldr": "The purpose of study is to examine the money attitudes using the money attitude scale of power- prestige, retention-time, anxiety, distrust in terms of spending behavior, saving behavior, borrowing money, financial planning, controlling finances, financial protection, financial education and giving donations, and its significance to the financial well-being in terms of autonomy, competence and rel",
+  "problem_and_motivation": "The purpose of study is to examine the money attitudes using the money attitude scale of power- prestige, retention-time, anxiety, distrust in terms of spending behavior, saving behavior, borrowing money, financial planning, controlling finances, financial protection, financial education and giving donations, and its significance to the financial well-being in terms of autonomy, competence and relatedness. This study used a quantitative approach using a survey questionnaire and qualitative metho",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "1.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Scaling the Frame of Mind: Money Attitude and Financial Well-Being of Generation"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Scaling the Frame of Mind: Money Attitude and Financial Well-Being of Generation",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Razalan_marked.md",
+      "converted_at": "2026-07-21T08:18:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

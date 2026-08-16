@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1145/3675094.3677599",
+  "designation": "international-algorithm-specific",
+  "title": "A User-Centric Exploration of Axiomatic Explainable AI in Participatory Budgeting",
+  "authors": "Hashemi, M.; Darejeh, A.; Cruz, F.",
+  "year": 2024,
+  "venue": "UbiComp Companion '24, ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+  "odin_topics": ["7.A", "7.C", "10.B"],
+  "tldr": "Proposes an axiomatic explainable AI approach using integer linear programming for participatory budgeting, finding users prefer general explanations over counterfactual ones and perceive outcomes as fairer.",
+  "problem_and_motivation": "Participatory budgeting mechanisms lack transparency, making it difficult for citizens to understand why certain projects are funded. Despite complex voting rules that satisfy desirable axioms, explainability remains a barrier to trust and adoption.",
+  "approach": [
+    "Formulated participatory budgeting as an integer linear programming (ILP) problem with axioms as constraints.",
+    "Used Gurobi optimizer to enumerate all allocations satisfying feasibility, exhaustiveness, and utilitarian welfare-consistent axioms.",
+    "Conducted a user study with real-world participants to evaluate explanation effectiveness.",
+    "Compared general explanations against counterfactual explanations for user comprehension and trust.",
+    "Evaluated perceived fairness, helpfulness, and trustworthiness of the axiomatic approach."
+  ],
+  "findings": [
+    "num: Users generally find axiomatic explanations helpful for understanding system decisions.",
+    "Users perceive outcomes as fairer when explanations are provided.",
+    "Users prefer general explanations over counterfactual explanations.",
+    "Linear nature of axioms reduces computational complexity of the explanation generation."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "F: <Vote, B, cost(x)> -> {C | C ⊆ 2^X, Σ cost(c_k) ≤ B}", "explanation": "PB voting rule maps votes and budget to feasible allocations."},
+    {"equation": "max Σ x_j subject to x_j ∈ [0,1]", "explanation": "ILP objective to maximize number of funded projects."},
+    {"equation": "(B - Σ cost(c_k)) < cost(c'), c' ∈ X\\C", "explanation": "Exhaustiveness axiom: no project can be added with leftover budget."},
+    {"equation": "Σ u_i(C') > Σ u_i(C)", "explanation": "Utilitarian welfare-consistent axiom prefers higher utility allocations."}
+  ],
+  "definitions": [
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence"},
+    {"term": "PB", "definition": "Participatory Budgeting, democratic allocation of public funds"},
+    {"term": "ILP", "definition": "Integer Linear Programming"},
+    {"term": "Axiom", "definition": "Desired property used as constraint for outcome justification"}
+  ],
+  "citations": [
+    {"author": "Procaccia", "year": 2019, "page": 0, "paragraph": 0, "claim": "Axioms capture what is desirable for explaining outcomes to voters.", "role": "methodology"},
+    {"author": "Cailloux et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Developed logic-based language for voting rule strengths and weaknesses.", "role": "context"},
+    {"author": "Boixel et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Viewed finding outcome arguments as constraint-solving problem.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Participatory budgeting is a form of collective budget allocation strategy."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "high", "justification": "Core methodology uses ILP constrained optimization for budget allocation."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "XAI explanations directly address user trust and perceived fairness of allocation decisions."}
+    ],
+    "contribution_to_field": "This paper introduces a novel application of axiomatic XAI to participatory budgeting, demonstrating that treating axioms as constraints enables transparent and justifiable budget allocations. It provides empirical evidence from a user study that explanations improve perceived fairness and user trust. The work establishes that general explanations are preferred over counterfactual ones in this domain, informing the design of explainable resource allocation systems.",
+    "directly_justifies": [
+      "Axiomatic XAI improves user trust and perceived fairness in budget allocation.",
+      "Users prefer general explanations over counterfactual explanations.",
+      "Integer linear programming effectively models participatory budgeting with axioms as constraints."
+    ],
+    "limits": [
+      "Pilot study with limited sample size; results require replication with larger populations.",
+      "Non-divisible project assumption may not reflect all real-world PB scenarios.",
+      "Approval voting simplification does not capture ranked or scored preferences."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 7 (Budgeting Strategies and Budget Recommendation) was flagged as high relevance because participatory budgeting is a constrained budget allocation problem. Domain 10 (User Trust) was flagged as medium because the XAI approach directly addresses trust in allocation systems. All other domains (1-6, 8-9, 11-14) were rejected. Borderline case: Domain 10.A (Privacy) was considered but rejected as the paper does not address data privacy."
+  },
+  "limitations": [
+    "Small-scale pilot user study limits statistical power and generalizability.",
+    "Simplified PB scenario with non-divisible projects may not reflect real-world complexity. [unacknowledged]",
+    "No comparison with other XAI methods (feature importance, LIME) for PB."
+  ],
+  "remember_this": [
+    "Axiomatic XAI improves perceived fairness of participatory budgeting outcomes.",
+    "Users prefer general explanations over counterfactual ones.",
+    "ILP formulation with axiom-constraints enables transparent resource allocation.",
+    "Linear axiom properties reduce computational complexity of explanation generation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hashemi et al_marked.md",
+      "converted_at": "2026-07-22T13:31:58Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

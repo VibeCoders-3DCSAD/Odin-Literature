@@ -1,0 +1,212 @@
+{
+  "paper_id": "10.17559/TV-20220430111309",
+  "designation": "international-algorithm-specific",
+  "title": "An Overview of Forecasting Methods for Monthly Electricity Consumption",
+  "authors": "Krstev, S.; Forcan, J.; Krneta, D.",
+  "year": 2023,
+  "venue": "Tehnički vjesnik (Technical Gazette)",
+  "odin_topics": [
+    "6.A",
+    "6.B"
+  ],
+  "tldr": "Classical time series methods outperform machine learning for mid-term electricity load forecasting on a small monthly dataset from Bosnia and Herzegovina, with the NNAR neural network model achieving the lowest error.",
+  "problem_and_motivation": "Mid-term electricity load forecasting (MTLF) is critical for grid upkeep and procurement planning, but is under-researched compared to short-term forecasting. The accuracy of modern machine learning methods relative to classical time series approaches on monthly consumption data is unclear, particularly for datasets with limited sample sizes.",
+  "approach": [
+    "The study compares twelve forecasting methods on monthly electricity consumption data from January 2000 to March 2020, obtained from a Distribution System Operator in Bosnia and Herzegovina.",
+    "Classical time series methods include seasonal naïve, ARIMA, ETS, and structural (BSM) models, implemented using the 'forecast' package in R.",
+    "Machine learning methods include Linear regression, Elastic net, KNN, Random forest, XGBM, SVM, and a neural network autoregression (NNAR), using 24 lagged features selected via lm and PCA.",
+    "Models are trained on data from 2000 to 2018 and tested on data from January 2019 to March 2020, with MAPE as the primary accuracy metric.",
+    "The NNAR model is a three-layer network with non-seasonal (p=3) and seasonal (P=1) lagged inputs, and six hidden neurons (k=6)."
+  ],
+  "findings": [
+    "num: The NNAR(3, 1, 6) model achieved the lowest MAPE of 2.67%.",
+    "num: The ETS(A, N, A) model achieved a MAPE of 3.28%.",
+    "num: The ARIMA(1, 0, 1)(1, 1, 1) model achieved a MAPE of 3.36%.",
+    "num: The seasonal naïve model achieved a MAPE of 4.16%.",
+    "num: PCA feature selection generally improved ML model accuracy over lm, except for XGBM which performed better with lm.",
+    "num: PCA+KNN achieved the best MAPE among classical ML models at 4.38%.",
+    "Classical time series methods (ETS, ARIMA) showed better overall accuracy than other machine learning methods.",
+    "All models produced errors between 3% and 8%, considered acceptable for MTLF in practice.",
+    "The study confirms prior findings that small sample sizes favor statistical approaches over ML for univariate time series forecasting.",
+    "The best model varies by month, with ETS performing best for several months and NNAR for the majority of the test period."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Outlier detection via Loess decomposition → Data shows a sudden consumption drop in 2017, complicating forecasting.",
+    "Figure 2: Trend, seasonal, and remainder decomposition → Clear positive trend from 2010-2017 and strong seasonality.",
+    "Figure 3: Seasonal plot by month → Consumption decreases from January to August and increases from September to December.",
+    "Figure 4: Classical time series forecasts → ARIMA, ETS, and BSM all outperform the seasonal naïve model visually.",
+    "Figure 5: ML forecasts (lm feature selection) → ML models are competitive with classical methods, but less accurate overall.",
+    "Figure 6: ML forecasts (PCA feature selection) → PCA slightly improves accuracy over lm for most ML models.",
+    "Figure 7: Neural network forecast → NNAR model shows the closest fit to actual data.",
+    "Figure 8: MAPE comparison bar chart → NNAR has lowest MAPE, classical methods are next best, and other ML methods are least accurate.",
+    "Table 1: Overview of MTLF forecasting methods from literature → Categorizes statistical, AI-based, and hybrid methods.",
+    "Table 2: MAPE for ML methods with lm and PCA → PCA+KNN achieves lowest (4.38%) and PCA+XGBM highest (7.35%).",
+    "Table 3: Absolute relative errors per month for ETS, PCA+KNN, NNAR → NNAR is most accurate for 9 of 15 months."
+  ],
+  "key_equations": [
+    {
+      "equation": "$y'_{T+h|T} = y_{T+h-m(k+1)}$",
+      "explanation": "Seasonal naïve forecast uses the value from the same period in the previous cycle."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "MTLF",
+      "definition": "Mid-term load forecast, covering a time horizon from two weeks to two years."
+    },
+    {
+      "term": "STLF",
+      "definition": "Short-term load forecast, covering a time horizon from one hour to two weeks."
+    },
+    {
+      "term": "LTLF",
+      "definition": "Long-term load forecast, covering a period longer than two years."
+    },
+    {
+      "term": "MAPE",
+      "definition": "Mean absolute percentage error, a measure of forecasting accuracy."
+    },
+    {
+      "term": "DSO",
+      "definition": "Distribution System Operator, the utility company managing the distribution network."
+    },
+    {
+      "term": "BSM",
+      "definition": "Basic Structural Model, a state-space model decomposing time series into trend, seasonal, and noise components."
+    },
+    {
+      "term": "NNAR",
+      "definition": "Neural Network AutoRegressive model, a neural network using lagged values of the time series as inputs."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kyriakides",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Short-term load forecasting is used for daily planning, reserves, and operations.",
+      "role": "context"
+    },
+    {
+      "author": "Berk",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Load forecasting is critical for risk management in deregulated electricity markets.",
+      "role": "context"
+    },
+    {
+      "author": "Abdel-Aal",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SARIMA outperformed regression and abductive network models for Saudi Arabian electricity consumption.",
+      "role": "finding"
+    },
+    {
+      "author": "Khuntia",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MTLF and LTLF are highly complex and require data-centric analysis and domain experience.",
+      "role": "context"
+    },
+    {
+      "author": "Cerqueira",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Small sample sizes favor statistical methods over machine learning for time series forecasting.",
+      "role": "finding"
+    },
+    {
+      "author": "Makridakis",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Classical statistical methods gave better accuracy than ML for univariate time series from the M3 Competition.",
+      "role": "finding"
+    },
+    {
+      "author": "Doveh",
+      "year": 1999,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A neural network model predicted monthly load in Israel better than statistical approaches.",
+      "role": "baseline"
+    },
+    {
+      "author": "Elkateb",
+      "year": 1998,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-based (neural/fuzzy) models outperformed ARIMA for medium-term load forecasting.",
+      "role": "baseline"
+    },
+    {
+      "author": "Ghiassi",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A dynamic ANN (DAN2) outperformed traditional and other neural models for system load forecasting.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Compares statistical and ML forecasting models for time-series data."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Directly evaluates ARIMA, ETS, NNAR, and other algorithms on monthly sequential consumption data."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive comparative analysis of twelve forecasting methods for mid-term electricity load forecasting, a relatively understudied area. It demonstrates that for small monthly datasets, classical time series models (especially ETS) and neural network autoregression (NNAR) outperform standard machine learning approaches. The study contributes empirical evidence supporting the data-centric view that sample size strongly influences the relative performance of statistical versus ML methods in time series forecasting. It also offers a practical benchmark for utilities in deregulated markets and highlights the importance of monthly error analysis over aggregate metrics.",
+    "directly_justifies": [
+      "Classical time series models perform better than machine learning methods for this monthly electricity consumption data.",
+      "The NNAR neural network achieved the lowest MAPE at 2.67%, outperforming all other tested methods.",
+      "Sample size is a critical factor: small datasets favor statistical approaches over ML for univariate forecasting.",
+      "PCA feature selection generally improves ML model accuracy over linear method selection for time-series lag features."
+    ],
+    "limits": [
+      "The dataset is specific to a single DSO in Bosnia and Herzegovina, limiting generalizability.",
+      "The study does not test hybrid models or newer deep learning architectures (e.g., LSTM) in its own comparison, though these are mentioned in the literature review.",
+      "The paper's dataset size (228 training months) may be insufficient for more complex ML models to outperform classical methods.",
+      "The study only uses MAPE as the primary accuracy metric, which may not fully capture model performance in all operational contexts.",
+      "The authors themselves note that a fair comparison with other published works would require the same dataset, which is not available.",
+      "No sensitivity analysis is performed on the selection of lag features or the hyperparameters of the ML models. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "A systematic scan of the entire topic taxonomy was performed. The paper's core focus is on comparing forecasting algorithms (6.A, 6.B) for monthly consumption data, which is structurally similar to spending data in personal finance. It was flagged as 'high' for 6.B because it directly evaluates and compares multiple forecasting algorithms, and 'medium' for 6.A because it discusses predictive modeling in a general time-series context applicable to finance. Topics related to user behavior (1.A, 1.B, 1.C, 2.A, 2.B, 2.C, 2.D), budgeting (7.A-7.E), anomaly detection (8.A-8.C), mobile design (9.A-9.C), privacy (10.A-10.C), engagement (11.A-11.B), evaluation of personal finance systems (12.A-12.C), savings/debt (13.A-13.C), and deployment (14.A-14.C) were rejected as the paper does not mention personal finance, spending behavior, or system-specific design. The paper discusses evaluation of algorithms (12.B, 12.C) in a general sense, but the specific evaluation context is electricity load forecasting, not personal finance systems. However, the comparative methodology (12.A) is tangentially related, but the domain is different. Thus, only codes 6.A and 6.B were selected. The overall topical coverage is narrowly focused on mid-term time series forecasting methodology."
+  },
+  "limitations": [
+    "The dataset is specific to a single DSO in Bosnia and Herzegovina, limiting generalizability.",
+    "The study does not test hybrid models or newer deep learning architectures (e.g., LSTM) in its own comparison, though these are mentioned in the literature review.",
+    "The paper's dataset size (228 training months) may be insufficient for more complex ML models to outperform classical methods.",
+    "The study only uses MAPE as the primary accuracy metric, which may not fully capture model performance in all operational contexts.",
+    "The authors themselves note that a fair comparison with other published works would require the same dataset, which is not available.",
+    "No sensitivity analysis is performed on the selection of lag features or the hyperparameters of the ML models. [unacknowledged]"
+  ],
+  "remember_this": [
+    "The NNAR neural network achieved the lowest error at 2.67% MAPE.",
+    "Classical time series models (ETS, ARIMA) outperformed most machine learning methods.",
+    "Small sample sizes favor statistical approaches over machine learning for forecasting.",
+    "All evaluated models produced errors between 3% and 8%, acceptable for mid-term load forecasting.",
+    "PCA feature selection improved accuracy over linear selection for most ML models."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Krstev et al_marked.md",
+      "converted_at": "2026-07-21T13:53:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

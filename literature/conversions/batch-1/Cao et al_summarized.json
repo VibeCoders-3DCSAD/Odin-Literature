@@ -1,0 +1,140 @@
+{
+  "paper_id": "2e23192c-f418-5e6b-ad9d-e6851061805a",
+  "designation": "international-algorithm-specific",
+  "title": "TEMPO: Prompt-Based Generative Pre-Trained Transformer for Time Series Forecasting",
+  "authors": "Cao, D.; Jia, F.; Arik, S.O.; Pfister, T.; Zheng, Y.; Ye, W.; Liu, Y.",
+  "year": 2024,
+  "venue": "International Conference on Learning Representations (ICLR 2024)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "TEMPO decomposes time series into trend, seasonal, and residual components and feeds them with learned prompts into a GPT-2 backbone, achieving state-of-the-art zero-shot forecasting across seven benchmark datasets.",
+  "problem_and_motivation": "Deep learning architectures for time series forecasting vary widely across domains and require per-task training from scratch, limiting generalization.",
+  "approach": [
+    "Decompose each input channel into trend, seasonal, and residual components via STL.",
+    "Learnable parameters align local decomposition with global STL decomposition through MSE loss.",
+    "Apply reverse instance normalization to each component separately.",
+    "Patch time series into tokens and embed each component into GPT-2 input space.",
+    "Design component-specific semi-soft prompts using semantic initialization.",
+    "Feed concatenated prompt-plus-component embeddings through 6-layer GPT-2 decoder with LoRA adaptation.",
+    "Split GPT-2 output into component-specific predictions and sum them for final forecast.",
+    "Construct interpretable GAM on GPT-2 output to quantify component contributions via SHAP values.",
+    "Evaluate under zero-shot many-to-one setting across diverse source and target domains."
+  ],
+  "findings": [
+    "num: TEMPO improves MAE by 6.5% over PatchTST on weather benchmark dataset.",
+    "num: TEMPO improves MAE by 19.1% over PatchTST on ETTm1 benchmark dataset.",
+    "num: Removing prompt component reduces average MSE and MAE across all benchmarks.",
+    "num: SHAP analysis reveals seasonal component has dominant influence on predictions for strongly periodic datasets.",
+    "num: TEMPO zero-shot performance surpasses full-shot state-of-the-art models on ETTh1 and ETTh2.",
+    "num: Semi-soft and hard prompts outperform purely soft random-init prompts.",
+    "num: Pre-trained language model baselines outperform transformer-from-scratch models in zero-shot cross-domain forecasting."
+  ],
+  "citations": [
+    {
+      "author": "Cleveland",
+      "year": 1990,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "STL provides additive seasonal-trend decomposition using locally weighted scatterplot smoothing.",
+      "role": "methodology"
+    },
+    {
+      "author": "Radford",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GPT-2 is a decoder-based language model used as TEMPO backbone architecture.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "PatchTST segments time series into subseries patches with channel independence.",
+      "role": "baseline"
+    },
+    {
+      "author": "Hu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LoRA enables efficient parameter adaptation by updating only low-rank weight matrices.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP provides unified feature attribution based on Shapley values.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Introduces TEMPO, a GPT-based predictive model for time series forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Proposes STL decomposition plus prompt-tuned GPT-2 for zero-shot forecasting of sequential data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates across multiple benchmark datasets with MSE, MAE, and SMAPE."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Ablation study isolates contributions of prompt design, decomposition, and decomposition loss alignment."
+      }
+    ],
+    "contribution_to_field": "TEMPO introduces a prompt-based generative transformer architecture for time series forecasting that adapts pre-trained language models through STL decomposition and learned soft prompts. Demonstrates that decomposing time series into trend, seasonal, and residual components before feeding to GPT-2 yields significant zero-shot forecasting gains.",
+    "directly_justifies": [
+      "Time series decomposition into trend, seasonal, and residual components is essential because self-attention cannot disentangle non-orthogonal signals.",
+      "TEMPO improves MAE by 6.5% and 19.1% over PatchTST on weather and ETTm1 benchmarks.",
+      "Zero-shot TEMPO performance surpasses full-shot state-of-the-art models on ETTh1 and ETTh2.",
+      "Semi-soft prompts with semantic initialization outperform purely soft random-initialized prompts."
+    ],
+    "limits": [
+      "Paper acknowledges superior LLMs with better numerical reasoning might yield better results.",
+      "Experiments limited to GPT-2 backbone; larger models not explored.",
+      "Zero-shot evaluation relies on specific many-to-one training protocol."
+    ]
+  },
+  "limitations": [
+    "Paper acknowledges superior LLMs with better numerical reasoning might yield better results.",
+    "Larger backbone models beyond GPT-2 6-layer were not explored.",
+    "Zero-shot many-to-one training protocol assumes equal sampling from source domains.",
+    "Prompt pool design is noted as initial exploration with substantial room for advancing."
+  ],
+  "remember_this": [
+    "TEMPO decomposes time series into trend, seasonal, and residual components before GPT-2 backbone with learned prompts.",
+    "Self-attention alone cannot disentangle non-orthogonal trend and seasonal signals.",
+    "TEMPO improves MAE by 19.1% over PatchTST on ETTm1 in zero-shot settings.",
+    "Zero-shot TEMPO outperforms full-shot state-of-the-art models on ETTh1 and ETTh2.",
+    "The TETS dataset combines S&P 500 financial metrics with textual summaries for multimodal forecasting."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cao et al_marked.md",
+      "converted_at": "2026-07-22T12:36:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

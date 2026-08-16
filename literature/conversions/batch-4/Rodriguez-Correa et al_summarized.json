@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.12688/f1000research.159085.1",
+  "designation": "international",
+  "title": "Financial Literacy Among Young College Students: Advancements and Future Directions",
+  "authors": "Paula Andrea Rodr; Arias Garc",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "13.B",
+    "4.A",
+    "4.B"
+  ],
+  "tldr": "Financial literacy is an essential life skill for young adults, particularly college students facing increasing financial responsibilities. This study conducted a systematic literature review following the PRISMA methodology, analyzing 44 peer-reviewed studies to identify the most prevalent dimensions of financial literacy among college students. The results show that while research focuses primar",
+  "problem_and_motivation": "Financial literacy is an essential life skill for young adults, particularly college students facing increasing financial responsibilities. This study conducted a systematic literature review following the PRISMA methodology, analyzing 44 peer-reviewed studies to identify the most prevalent dimensions of financial literacy among college students. The results show that while research focuses primarily on broad categories such as financial knowledge and behavior, more specific subtopics, such as b",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: F1000Research 2025, 14:113 Last updated: 04 SEP 2025"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: F1000Research 2025, 14:113 Last updated: 04 SEP 2025",
+    "Year: 2014",
+    "Designation: international"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rodriguez-Correa et al_marked.md",
+      "converted_at": "2026-07-21T08:19:53Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "paper_id": "10.58536/j-hytel.166",
+  "designation": "local-algorithm-specific",
+  "title": "Enhancing Financial Literacy in Young Adults: An Android-Based Personal Finance Management Tool",
+  "authors": "Imawan, R.; Putra, W. P.; Alqahtani, R.; Milakis, E. D.; Dumchykov, M.",
+  "year": 2025,
+  "venue": "Journal of Hypermedia & Technology-Enhanced Learning",
+  "odin_topics": ["3.A", "3.B", "7.A", "9.A", "9.B", "11.A", "11.B", "12.A"],
+  "tldr": "An Android personal finance app using the Waterfall model achieved a 4.6/5 usability score with 50 young adult users, demonstrating high satisfaction and engagement through income tracking, budgeting, and goal-setting features.",
+  "problem_and_motivation": "Young adults face unique financial challenges including limited experience, fluctuating income, and vulnerability to debt, yet existing financial tools are not tailored to their needs or behaviors. This gap is critical because financial habits formed in early adulthood have long-term implications and deficits can perpetuate cycles of debt and instability. A targeted mobile solution is needed to instill positive financial behaviors and resilience in this demographic.",
+  "approach": [
+    "Used the Waterfall software development methodology with phases: requirements analysis, design, implementation, testing, and deployment.",
+    "Conducted interviews and surveys with young adults in higher education to map user workflows and identify core financial management processes.",
+    "Developed the application using Laravel backend and Flutter frontend, with modules for login, income/expense tracking, financial goals, budget projection, and notifications.",
+    "Implemented local SQLite database for offline functionality and cloud sync options, with encrypted credential storage and secure password recovery.",
+    "Conducted black-box testing on all modules to validate functionality, reliability, and user experience against expected outcomes.",
+    "Performed direct user evaluation with 50 university students aged 19-34 over a two-week period using a 5-point Likert scale survey across 6 aspects.",
+    "Calculated aspect scores by averaging indicator scores and overall application score by averaging aspect scores, categorized from Excellent to Very Poor.",
+    "Gathered user feedback indicating strong satisfaction while identifying improvement areas such as trend analysis and additional customization."
+  ],
+  "findings": [
+    "num: Overall application satisfaction score was 4.60/5, rated 'Excellent' across all evaluation aspects.",
+    "num: Over 90% of users rated usability indicators at 4 or above, confirming intuitive design and accessibility.",
+    "num: 78% of users rated engagement indicator ENG2 ('likely to continue using') at 5, suggesting strong retention potential.",
+    "The financial goal-setting feature with visual progress bars was cited as a key motivator for consistent engagement.",
+    "Users requested more detailed financial trend analysis and additional customization options for budget categories and notification timing.",
+    "Notification reminders were effective in encouraging consistent tracking but users desired personalized alert scheduling.",
+    "The budget projection feature helped users monitor spending but needed more nuanced categories for improved utility.",
+    "Income and expense tracking were the most highly rated features in both functionality and satisfaction."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Waterfall model phases → Shows sequential development stages from requirements to deployment.",
+    "Figure 2: Application flowchart → Maps user journey from login to feature interaction and exit.",
+    "Figure 3: Activity diagrams for login and home → Models authentication and navigation workflows.",
+    "Figure 4: Activity diagrams for income/expense tracking and goals → Shows transaction input and goal management flows.",
+    "Figure 5: Activity diagrams for budget projection and reports → Models budget setting and financial data summarization.",
+    "Figure 10: Average scores by evaluation aspect → All six aspects scored 4.54-4.76, with Engagement highest at 4.74.",
+    "Table 13: Evaluation scores by aspect → Shows percentage distributions and indicator-level performance."
+  ],
+  "key_equations": [
+    {
+      "equation": "Aspect Score = ∑(Indicator Scores) / Number of Indicators",
+      "explanation": "Computes average score for each evaluation dimension."
+    },
+    {
+      "equation": "Overall Application Score = ∑(Aspect Scores) / Number of Aspects",
+      "explanation": "Averages all aspect scores for total performance measure."
+    }
+  ],
+  "definitions": [
+    {"term": "Waterfall model", "definition": "Linear, phase-gated software development methodology with sequential phases."},
+    {"term": "Black-box testing", "definition": "Testing approach that evaluates functionality from end-user perspective without inspecting internal code."},
+    {"term": "Likert scale", "definition": "Rating scale measuring user responses from 1 (Very Poor) to 5 (Excellent)."},
+    {"term": "MVC architecture", "definition": "Model-View-Controller pattern used by Laravel for structured web application development."},
+    {"term": "RESTful API", "definition": "Representational State Transfer API for communication between frontend and backend."}
+  ],
+  "citations": [
+    {
+      "author": "Koskelainen",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy in the digital age requires a dedicated research agenda for effective intervention.",
+      "role": "context"
+    },
+    {
+      "author": "Ozili",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Digital finance has significant impact on financial inclusion and stability in emerging economies.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is critically important for financial wellbeing and responsible behavior.",
+      "role": "finding"
+    },
+    {
+      "author": "Save",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mobile-first design is essential for engaging younger users in digital applications.",
+      "role": "context"
+    },
+    {
+      "author": "Jones",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Future-focused mobile interaction design must consider emergent users' unique needs.",
+      "role": "context"
+    },
+    {
+      "author": "Bitrián",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Gamification features in mobile apps significantly enhance user engagement.",
+      "role": "context"
+    },
+    {
+      "author": "Petersen",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Waterfall model provides structured large-scale development with clear phase gates.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chari",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Incorrect requirements in Waterfall projects can significantly impact outcomes.",
+      "role": "baseline"
+    },
+    {
+      "author": "Roman",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Black-box testing techniques validate software from an end-user perspective without internal code inspection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sarker",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning has broad real-world applications across multiple research domains.",
+      "role": "context"
+    },
+    {
+      "author": "Zhang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Theory integration is essential for lifestyle behavior change interventions in the digital age.",
+      "role": "finding"
+    },
+    {
+      "author": "Davis",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Multiple theories of behavior and behavior change inform scoping reviews across disciplines.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gardner",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Guidelines for tracking real-world habit formation require systematic measurement approaches.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hommel",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GOALIATH theory describes goal-directed behavior with specific cognitive mechanisms.",
+      "role": "finding"
+    },
+    {
+      "author": "Ferdous",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "App-based mobile financial services engagement is boosted by marketing strategy and app design.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Implements explicit expense categorization (Food, Rent, Entertainment) for user transactions."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "medium",
+        "justification": "Users requested additional customization options for budget categories in feedback."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Design incorporates budget projection and monitoring as core financial literacy strategies."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "high",
+        "justification": "Android-based app developed with mobile-first rationale explicitly discussed in introduction."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "high",
+        "justification": "Usability evaluation focuses on interface design, navigation, and user satisfaction metrics."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Evaluated engagement through indicators on organization, continued use, and motivation."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "medium",
+        "justification": "Notification reminders and goal progress bars designed specifically to maintain engagement."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses structured Likert-scale evaluation across multiple aspects with scoring framework."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a concrete implementation of a Waterfall-based Android personal finance application specifically designed for young adults in higher education. It provides empirical evidence through a systematic usability evaluation showing that targeted mobile tools can achieve high user satisfaction and engagement with core financial management features. The study advances understanding of how design features like progress bars, notifications, and goal setting can be integrated to foster financial literacy and behavior change. It also identifies practical design considerations such as customization needs and trend analysis features that can inform future development of financial applications for young demographics.",
+    "directly_justifies": [
+      "Young adults aged 19-34 account for 63% of Indonesian online loan users.",
+      "Fewer than 50% of surveyed students consistently recorded their finances.",
+      "Only 20% of students regularly reviewed income and expenses.",
+      "Just 40% of students adhered to a monthly budget.",
+      "Overall application satisfaction score was 4.60/5, rated Excellent."
+    ],
+    "limits": [
+      "The study does not address Filipino-specific financial practices or spending cycles.",
+      "No algorithmic methods are proposed for personal finance optimization.",
+      "The evaluation does not measure actual improvement in users' financial literacy or behavior change quantitatively.",
+      "The application does not include advanced features such as AI-driven recommendations or anomaly detection.",
+      "No treatment of data privacy frameworks or consent management beyond basic credential security."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic taxonomy domains was performed. Domains 3 (Expense Categorization), 7 (Budgeting Strategies), 9 (Mobile-First Design), 11 (Engagement Dynamics), and 12 (Evaluation Frameworks) were flagged as directly relevant. Topic 3.A and 3.B were selected because the app implements categorization and users requested category customization. Topic 7.A was selected for budget projection as a core feature. Topics 9.A and 9.B captured the mobile-first rationale and UX evaluation. Topics 11.A and 11.B were relevant for engagement evaluation and retention mechanisms. Topic 12.A was selected for the structured Likert-scale evaluation framework. Domains 1 (Filipino Young Professionals), 2 (Culturally Specific Practices), 4 (Existing Systems), 5 (Behavioral Profiles), 6 (Predictive Modeling), 8 (Anomaly Detection), 10 (Data Privacy), 13 (Savings/Debt Management), and 14 (Synthetic Data) were rejected as the paper does not address Filipino demographic specifics, algorithmic prediction, anomaly detection, privacy frameworks, or advanced ML techniques. The paper focuses on application development and usability evaluation rather than behavioral modeling or optimization algorithms. Overall topical coverage centers on mobile personal finance app design, usability, and engagement evaluation."
+  },
+  "limitations": [
+    "Short evaluation period of two weeks may not capture long-term habit formation. [unacknowledged]",
+    "Sample size of 50 users, while representative, is limited for statistical generalization. [unacknowledged]",
+    "No longitudinal follow-up was conducted to measure sustained impact on financial behavior. [acknowledged]",
+    "The study did not include a control group to establish causality between app use and financial literacy improvement. [unacknowledged]",
+    "User feedback indicates need for additional features (trend analysis, customization) that were not implemented. [acknowledged]"
+  ],
+  "remember_this": [
+    "Application achieved 4.60/5 overall satisfaction score rated Excellent.",
+    "Financial goal progress bars and notifications were key engagement drivers.",
+    "Over 90% of users rated usability at 4 or above.",
+    "Users specifically requested trend analysis and budget customization.",
+    "Short evaluation period limits conclusions about long-term behavior change."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Imawan et al_marked.md",
+      "converted_at": "2026-07-21T13:35:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

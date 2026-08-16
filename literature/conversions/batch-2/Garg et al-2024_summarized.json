@@ -1,0 +1,84 @@
+{
+  "paper_id": "10.63282/3050-9246.IJETCSIT-V5I3P105",
+  "designation": "international-algorithm-specific",
+  "title": "A Multi-Layered AI-IoT Framework for Adaptive Financial Services",
+  "authors": "Garg, A.; Pandey, M.; Pathak, A. R.",
+  "year": 2024,
+  "venue": "International Journal of Emerging Trends in Computer Science and Information Technology",
+  "odin_topics": ["4.A", "4.B", "10.A", "11.A", "14.B"],
+  "tldr": "Proposes a three-layer AI-IoT convergence framework (Input, Intelligence, Experience) with edge computing, federated learning, and zero-trust security for adaptive banking services.",
+  "problem_and_motivation": "IoT and AI convergence in banking remains fragmented, with isolated solutions for fraud detection, credit scoring, and personalization. No unified architecture exists that integrates streaming IoT data with AI analytics securely.",
+  "approach": [
+    "Used design science methodology to develop a three-layer architectural model for AI-IoT converged banking.",
+    "Input Layer: IoT endpoints (smartphones, ATMs, wearables, voice assistants, geolocation sensors) collecting raw data.",
+    "Intelligence Layer: ML, NLP, and deep learning for pattern extraction from IoT data streams.",
+    "Experience Layer: Dynamic service delivery through mobile apps, voice bots, and smartwatch displays.",
+    "Incorporates edge computing, federated learning, zero-trust architecture, and blockchain-based identity management."
+  ],
+  "findings": [
+    "AI-IoT convergence enables real-time fraud detection, personalized credit scoring, and emotion-aware interfaces.",
+    "Edge computing reduces latency by processing data closer to the source (e.g., smart ATM edge AI chips).",
+    "Federated learning allows model training across devices without centralizing sensitive data.",
+    "Zero-trust architecture ensures continuous verification across all network layers.",
+    "Three-layer model is modular and scalable for both large banks and small fintech environments."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Architectural model showing Input, Intelligence, and Experience layers.",
+    "Table 1: Applications of IoT and AI in banking with functions and benefits.",
+    "Table 2: Comparison of traditional vs AI-IoT enabled banking systems."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Federated learning", "definition": "Training AI models across decentralized devices without centralizing data."},
+    {"term": "Zero-trust architecture", "definition": "Security model requiring continuous verification of all devices and users."},
+    {"term": "Edge computing", "definition": "Processing data near the source to reduce latency and improve responsiveness."},
+    {"term": "Design science", "definition": "Methodology for constructing and evaluating technological frameworks."}
+  ],
+  "citations": [
+    {"author": "Buyya et al.", "year": 2009, "page": 0, "paragraph": 0, "claim": "Cloud computing infrastructure for scalable IoT systems.", "role": "context"},
+    {"author": "Atzori et al.", "year": 2010, "page": 0, "paragraph": 0, "claim": "IoT architecture for large-scale data-driven applications.", "role": "context"},
+    {"author": "Perera et al.", "year": 2014, "page": 0, "paragraph": 0, "claim": "Context-aware computing using sensor data.", "role": "context"},
+    {"author": "Islam et al.", "year": 2015, "page": 0, "paragraph": 0, "claim": "ML for IoT anomaly detection in financial systems.", "role": "context"},
+    {"author": "Mirza et al.", "year": 2025, "page": 0, "paragraph": 0, "claim": "Deep RL for dynamic portfolio risk prediction.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Proposes unified AI-IoT architecture for banking systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Addresses fragmented integration of AI and IoT in banking."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Incorporates zero-trust, federated learning, and blockchain for security."},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "medium", "justification": "Experience layer designed for dynamic user engagement."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Discusses edge inference and federated model deployment."}
+    ],
+    "contribution_to_field": "Proposes a unified three-layer architecture integrating IoT sensing, AI intelligence, and user experience layers for adaptive banking. Incorporates privacy-preserving techniques (federated learning, zero-trust) as core architectural components. Provides a modular framework adaptable across institutions of varying scales.",
+    "directly_justifies": [
+      "AI-IoT convergence requires three-layer architecture for adaptive banking.",
+      "Edge computing and federated learning preserve privacy while enabling real-time analytics.",
+      "Modular design supports both large banks and small fintech deployments."
+    ],
+    "limits": [
+      "Conceptual framework without empirical implementation results.",
+      "No quantitative performance metrics for the proposed architecture."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 4.A, 4.B, 10.A high relevance for system architecture, gaps, and security. Assigned 11.A and 14.B medium for engagement and ML deployment. Rejected behavioral and algorithmic topics (1.A-3.C, 5.A-9.C) as architectural focus."
+  },
+  "limitations": [
+    "Conceptual framework without empirical validation or deployment results.",
+    "No specific algorithmic performance benchmarks reported.",
+    "Lacks comparison with existing integrated banking architectures."
+  ],
+  "remember_this": [
+    "Three-layer architecture spans Input, Intelligence, and Experience layers.",
+    "Edge computing and federated learning enhance privacy and reduce latency.",
+    "Zero-trust architecture ensures continuous security verification.",
+    "Modular design scales across bank sizes and fintech environments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Garg et al-2024_marked.md",
+      "converted_at": "2026-07-22T13:24:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

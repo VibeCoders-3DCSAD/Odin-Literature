@@ -1,0 +1,261 @@
+{
+  "paper_id": "arXiv:2402.10425",
+  "designation": "international-algorithm-specific",
+  "title": "Comprehensive Exploration of Synthetic Data Generation: A Survey",
+  "authors": "Bauer, A.; Trapp, S.; Stenger, M.; Leppich, R.; Kounev, S.; Leznik, M.; Chard, K.; Foster, I.",
+  "year": 2024,
+  "venue": "arXiv preprint arXiv:2402.10425",
+  "odin_topics": [
+    "14.A",
+    "14.A.I",
+    "14.A.II",
+    "14.A.III",
+    "5.C.IV",
+    "10.C.III"
+  ],
+  "tldr": "Surveys 417 synthetic data generation models over the last decade, classifying them into 20 types and 42 subtypes with trend analysis, performance evaluation, and a model selection guideline.",
+  "problem_and_motivation": "ML progress is impeded by scarcity of training data due to expensive acquisition and privacy legislation. Synthetic data offers a solution, but the abundance of released models and limited overview literature make it difficult for researchers to select appropriate approaches. Existing surveys are limited in scope, often overlooking recent advancements or focusing on single domains.",
+  "approach": [
+    "Scrutinized 417 SDG model papers from the last decade, categorized into 20 distinct model types and 42 subtypes.",
+    "Classified models by metadata, data structure, data type, sampling requirements, training process, performance, and privacy.",
+    "Conducted trend analysis tracking model popularity, citation counts, and compositional relationships over time.",
+    "Built predecessor graphs based on reported performance comparisons to map model improvement trajectories.",
+    "Developed a practical decision-tree guideline for selecting appropriate SDG models for given use cases.",
+    "Compared this survey's scope to existing comprehensive reviews, covering more models and aspects than prior work.",
+    "Identified common evaluation datasets and metrics per domain, exposing the lack of standardization.",
+    "Analyzed privacy-preserving data generation separately, noting its reliance on simpler probabilistic models."
+  ],
+  "findings": [
+    "Computer vision is the most popular application field; GANs are the most popular SDG model type.",
+    "num: 417 models were surveyed, revealing 20 distinct model types and 42 subtypes.",
+    "num: GANs received the highest citation counts over the last decade on a logarithmic scale.",
+    "num: 70% of reviewed RL models use RNNs for sequential data generation.",
+    "num: GANs and autoencoders are applied to almost all data types due to flexible architecture.",
+    "Different data types require different model types: RNNs/transformers for sequences, CNNs/GANs for static data.",
+    "A clear trend of combining model types: GANs and autoencoders act as frameworks with CNNs/RNNs as building blocks.",
+    "Privacy-preserving data generation is nascent, limited to low-dimensional data using Markov chains, BNs, and GANs.",
+    "No common standardized evaluation metric or dataset exists, making model comparison challenging.",
+    "Training and computational costs are seldom reported, necessitating attention in future research."
+  ],
+  "key_figures_tables": [
+    "Figure 44: Total and normalized number of models per year and model category → trend analysis of SDG research output.",
+    "Figure 45: Google Scholar citations per model category over ten years → GANs dominate in citations.",
+    "Figure 46: Weighted dependency graph for model compositions → CNNs, RNNs, and autoencoders are most-used submodels.",
+    "Figure 56: Performance predecessor relationships → newer models generally outperform older ones.",
+    "Figure 59: Decision tree for model selection → guides users to appropriate SDG models.",
+    "Table 1: Comparison of this survey to other surveys → this work covers 417 models vs. 12-267 in prior work."
+  ],
+  "key_equations": [
+    {
+      "equation": "p(V) = p(V1, ..., VN) = ∏_{j=1}^{N} p(Vj|Paj)",
+      "explanation": "Bayesian Network joint distribution factorization."
+    },
+    {
+      "equation": "θ∗, θ′∗ = arg min (1/n) ∑ L(x(i), gθ′(fθ(x(i))))",
+      "explanation": "Autoencoder reconstruction error minimization objective."
+    },
+    {
+      "equation": "min_G max_D V(D, G) = E_x[log D(x)] + E_z[log(1 - D(G(z)))]",
+      "explanation": "GAN minimax objective: generator vs. discriminator competition."
+    },
+    {
+      "equation": "ˆp(x) = (1/n) ∑_{i=1}^{n} K(x - xi, h)",
+      "explanation": "Kernel Density Estimator with smoothing parameter h."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Synthetic Data Generation (SDG)",
+      "definition": "Automated process of generating artificial data and labels by estimating the probability distribution of training data, distinct from data augmentation."
+    },
+    {
+      "term": "Generative Adversarial Net (GAN)",
+      "definition": "A framework where a generator network creates synthetic samples and a discriminator network distinguishes real from fake, trained adversarially."
+    },
+    {
+      "term": "Variational Autoencoder (VAE)",
+      "definition": "A generative model combining an encoder mapping data to a latent distribution and a decoder reconstructing data from latent samples, optimized via ELBO."
+    },
+    {
+      "term": "Differential Privacy",
+      "definition": "A framework that introduces randomness to data provision, resulting in plausible deniability of any outcome and limiting information leakage."
+    },
+    {
+      "term": "Normalizing Flow",
+      "definition": "A generative model using invertible transformations to map a simple base distribution to a complex data distribution with tractable likelihood."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Harshvardhan et al.",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comprehensive survey of generative models in ML with 20-30 works.",
+      "role": "baseline"
+    },
+    {
+      "author": "Eigenschink et al.",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data-driven framework evaluating SDG models on sequential data independently of internal workings.",
+      "role": "baseline"
+    },
+    {
+      "author": "Nikolenko",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Book on synthetic data for deep learning covering computer vision, privacy, and domain shift.",
+      "role": "context"
+    },
+    {
+      "author": "Goodfellow et al.",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Generative Adversarial Nets (GANs), the most popular SDG model type.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kingma and Welling",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Variational Autoencoders (VAEs), foundational to modern SDG.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ho et al.",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Denoising Diffusion Probabilistic Models (DDPMs), competitive with GANs for image generation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vaswani et al.",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transformer architecture, applied to SDG for sequential and text data.",
+      "role": "context"
+    },
+    {
+      "author": "Borji",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Pros and cons of GAN evaluation measures including FID and Inception Score.",
+      "role": "critique"
+    },
+    {
+      "author": "Dwork et al.",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Algorithmic foundations of differential privacy for private data release.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dankar and Ibrahim",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Guidelines for effective synthetic data generation and privacy-utility tradeoff.",
+      "role": "context"
+    },
+    {
+      "author": "Goodfellow",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "NIPS 2016 tutorial on GANs providing comprehensive introduction.",
+      "role": "context"
+    },
+    {
+      "author": "Sohl-Dickstein et al.",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep unsupervised learning using nonequilibrium thermodynamics, precursor to diffusion models.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "The paper is a comprehensive survey of 417 SDG models covering all types, architectures, evaluation methods, and privacy considerations directly applicable to generating synthetic financial data for ML training."
+      },
+      {
+        "code": "14.A.I",
+        "name": "Persona Generation from Survey Data",
+        "relevance": "high",
+        "justification": "Surveys GMMs, BNs, VAEs, GANs, and other generative models capable of learning distributions from survey data to generate synthetic personas with realistic feature distributions."
+      },
+      {
+        "code": "14.A.II",
+        "name": "Transaction Simulation",
+        "relevance": "high",
+        "justification": "Covers RNNs, GANs, VAEs, and Markov chain models for sequential data generation suitable for simulating realistic financial transaction histories with temporal patterns."
+      },
+      {
+        "code": "14.A.III",
+        "name": "Validation of Synthetic Data Against Real-World Distributions",
+        "relevance": "high",
+        "justification": "Dedicates substantial analysis to the challenge of non-standardized evaluation metrics, identifies FID, IS, NLL as common but insufficient measures, and calls for systematic evaluation approaches."
+      },
+      {
+        "code": "5.C.IV",
+        "name": "Training a Profile Classifier Without Labeled Real User Data",
+        "relevance": "medium",
+        "justification": "The entire survey is about SDG methods that can produce training data for classifier training when real labeled data is unavailable at launch."
+      },
+      {
+        "code": "10.C.III",
+        "name": "Privacy-Preserving ML: Model Training Without Exposing Raw Transaction Data",
+        "relevance": "medium",
+        "justification": "Section 3.10 analyzes privacy-preserving data generation using Markov chains, BNs, and GANs with differential privacy, identifying the nascent stage and privacy-utility tradeoff."
+      }
+    ],
+    "contribution_to_field": "This survey provides the most comprehensive catalog of SDG models to date, covering 417 models across 20 types and 42 subtypes. It identifies key trends: GANs dominate computer vision SDG, RNNs and transformers excel at sequential data, and privacy-preserving generation remains underdeveloped. The work exposes the critical lack of standardized evaluation metrics and datasets, which impedes meaningful model comparison. The proposed predecessor-based performance graph offers a novel way to track model improvement, and the decision-tree guideline provides practical model selection support for practitioners. For financial ML specifically, the survey identifies which model families (VAEs, GANs, RNNs, diffusion models) are best suited for tabular and time-series synthetic data generation.",
+    "directly_justifies": [
+      "Use of VAEs/GANs for generating synthetic financial transactions for classifier training.",
+      "Markov chains and Bayesian networks as simpler alternatives for privacy-preserving financial data.",
+      "Predecessor performance graphs as evaluation method when standardized benchmarks are absent.",
+      "Need for systematic evaluation of synthetic data quality using common metrics and datasets."
+    ],
+    "limits": [
+      "Does not provide empirical comparison of SDG models on financial datasets specifically.",
+      "Performance evaluation relies on author-reported outperformance claims rather than uniform re-evaluation.",
+      "Survey scope ends at 2022 models; newer advances (e.g., large language models for SDG) are not covered."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains from the Odin taxonomy were systematically scanned against this paper's content. Topics 1-4 (Filipino demographics, cultural practices, expense categorization, existing PFMS) were found irrelevant as the paper has no geographic or cultural specificity. Topics 5-8 (profiling, forecasting, budgeting, anomaly detection) have indirect relevance through the general applicability of SDG methods to training ML models in those domains. Topics 9-13 (mobile design, privacy, retention, evaluation, savings/debt) intersect with the paper's privacy and evaluation sections. Topic 14 (ML pipeline) is the primary match, as this paper is fundamentally about synthetic data generation methods."
+  },
+  "limitations": [
+    "No uniform empirical re-evaluation; relies on authors' own reported performance comparisons.",
+    "Computational cost and training resource requirements are seldom reported in surveyed works.",
+    "Survey scope covers literature up to 2022; subsequent advances (LLM-based SDG, etc.) are excluded.",
+    "Evaluation metrics are not standardized across surveyed models, limiting direct comparability of findings."
+  ],
+  "remember_this": [
+    "417 SDG models surveyed; 20 types, 42 subtypes identified.",
+    "GANs most cited; diffusion models compete for image quality.",
+    "No standardized evaluation metrics or datasets for SDG.",
+    "Privacy-preserving SDG nascent; relies on simple models.",
+    "Decision tree guideline aids model selection for practitioners."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Bauer A. et al_marked.md",
+      "converted_at": "2026-07-22T12:15:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

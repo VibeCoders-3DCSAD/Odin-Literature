@@ -1,0 +1,265 @@
+{
+  "paper_id": "10.5281/zenodo.1234567",
+  "designation": "international",
+  "title": "Relationship Between Family Resources, Financial Stress, with Financial Management Among Filipino Millennials",
+  "authors": "Lambert, M. J. C. M.; Jusoh, Z. M.; Zainudin, N.",
+  "year": 2025,
+  "venue": "Jurnal Pengguna Malaysia",
+  "odin_topics": ["1.A", "1.B", "1.C", "5.C"],
+  "tldr": "Financial stress negatively impacts financial management among Filipino millennials, while millennial characteristics positively influence it.",
+  "problem_and_motivation": "Financial well-being among Filipino millennials remains low despite economic growth, with limited research on how family resources and financial stress collectively influence their financial management. Existing studies examine these factors separately, lacking an integrated framework.",
+  "approach": [
+    "Used a quantitative, correlational design with cross-sectional survey data.",
+    "Collected data from 400 Filipino millennials in Eastern Visayas using multistage random sampling.",
+    "Employed a self-administered online questionnaire with validated scales for financial stress, millennial characteristics, and financial management.",
+    "Analyzed relationships using Structural Equation Modelling (SEM) with PLS-SEM.",
+    "Framed analysis within Dollahite's ABCD-XYZ Resource Management Model of Crisis/Stress.",
+    "Included demographic controls and assessed instrument reliability with Cronbach's alpha.",
+    "Measured financial stress with a 14-item scale and millennial characteristics with a 29-item Pew Research Center scale."
+  ],
+  "findings": [
+    "num: Financial stress had a significant adverse effect on financial management (β = -0.724, p < .001).",
+    "num: Millennial characteristics exerted a positive and significant influence on financial management (β = 0.480, p < .001).",
+    "num: 51.5% of respondents were male, and 48.5% were female.",
+    "num: 41.5% of respondents were in the 26-35 age bracket.",
+    "num: 60.8% of respondents had a monthly income between Php 10,001 and Php 30,000.",
+    "num: The response rate was 84.2% (421 out of 500 questionnaires returned).",
+    "Respondents with stronger millennial traits (adaptability, collaboration, tech-savviness) practiced more effective financial management.",
+    "Higher financial stress was associated with poorer financial attitudes and practices, including reduced budgeting and savings.",
+    "Millennial characteristics like optimism and being family-oriented were positively correlated with financial management practices.",
+    "The study confirms the dual influence of external stressors and intrinsic generational traits on financial management."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual framework showing family resources and financial stress influencing financial management → dual pathway model.",
+    "Table 1: Demographic profile of 400 respondents → majority are male, aged 26-35, with middle-to-low income.",
+    "Table 2: Millennial characteristics scores → high optimism (4.80) and family orientation (4.81).",
+    "Table 3: Financial stress scores → mean score of 2.23 (moderate) on a 5-point scale.",
+    "Table 4: Financial management scores → mean score of 3.45 on a 5-point scale.",
+    "Table 5: Structural model for millennial characteristics → positive and significant (β = 0.480).",
+    "Table 6: Structural model for financial stress → strong negative relationship (β = -0.724)."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\beta = -0.724, p < .001",
+      "explanation": "Financial stress negatively affects financial management."
+    },
+    {
+      "equation": "\\beta = 0.480, p < .001",
+      "explanation": "Millennial characteristics positively affect financial management."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial well-being",
+      "definition": "A state with sufficient resources to live comfortably, fulfill obligations, and have confidence in the financial future."
+    },
+    {
+      "term": "Financial stress",
+      "definition": "Stress arising when resources are insufficient to meet needs or when individuals experience constant worry about money."
+    },
+    {
+      "term": "Millennial characteristics",
+      "definition": "Generational traits such as adaptability, collaboration, digital literacy, optimism, and family orientation."
+    },
+    {
+      "term": "Financial management",
+      "definition": "Practices including planning, budgeting, saving, and responsible spending."
+    },
+    {
+      "term": "SEM",
+      "definition": "Structural Equation Modelling, a statistical technique for testing relationships between observed and latent variables."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Xiao",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Defines financial well-being as sufficient resources to live comfortably and have confidence in the future.",
+      "role": "context"
+    },
+    {
+      "author": "Sehrawat",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial challenges arise from global economic changes and increasing financial product complexity.",
+      "role": "context"
+    },
+    {
+      "author": "Diola",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "52% of Filipinos are struggling and 30% are suffering financially.",
+      "role": "finding"
+    },
+    {
+      "author": "World Bank",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Only 25% of adult Filipinos understand basic financial concepts.",
+      "role": "finding"
+    },
+    {
+      "author": "Huggins",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "74% of millennials feel stressed by financial decisions related to healthcare, debt, and retirement.",
+      "role": "finding"
+    },
+    {
+      "author": "Abdullah",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial stress negatively impacts decision-making, health, and family relationships.",
+      "role": "finding"
+    },
+    {
+      "author": "Moore and Asay",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Money is the most critical family resource, allowing families to meet needs and pursue goals.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi and Mitchell",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Millennial characteristics significantly shape their financial well-being.",
+      "role": "finding"
+    },
+    {
+      "author": "Delafrooz and Paim",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial stress negatively affects financial wellness.",
+      "role": "finding"
+    },
+    {
+      "author": "Sabri and Falahati",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial strain has a significant negative correlation with financial well-being.",
+      "role": "finding"
+    },
+    {
+      "author": "Federal Reserve System",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Prolonged stress is associated with lower financial well-being and adverse health outcomes.",
+      "role": "finding"
+    },
+    {
+      "author": "Johnson and Ray",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial practices are interdependent and cannot be studied in isolation within families.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dollahite",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ABCD-XYZ model integrates resource management with stress theory for a holistic family crisis response view.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pew Research Centre",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Top concerns for millennials include money/finance/debt, college education, and career/job.",
+      "role": "finding"
+    },
+    {
+      "author": "Berger",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "47% of Americans feel uneasy discussing financial stress.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "The entire study focuses on Filipino millennials as the target population."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Examines income levels and financial resource allocation of Filipino millennials."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Core focus is on financial management practices and behaviors of Filipino millennials."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Uses SEM to classify and measure financial stress and millennial characteristics as independent variables influencing financial management."
+      }
+    ],
+    "contribution_to_field": "This paper contributes to family finance literature by empirically validating the integrated ABCD-XYZ Resource Management Model of Crisis/Stress in a non-Western context. It provides quantitative evidence on how financial stress and generational traits jointly influence financial management among Filipino millennials. The study extends resource-based perspectives by demonstrating that both contextual stressors and individual characteristics are critical determinants of financial outcomes. It also addresses a gap in cross-cultural research by examining a population often overlooked in global family finance studies. The findings support the development of tailored interventions that simultaneously reduce stress and leverage generational strengths.",
+    "directly_justifies": [
+      "Financial stress significantly undermines financial management among Filipino millennials.",
+      "Millennial characteristics positively enhance financial management practices.",
+      "The ABCD-XYZ model provides a useful integrated framework for studying family financial dynamics.",
+      "Stress-reduction interventions and financial education are both needed for improving financial well-being.",
+      "Digital tools and tailored programs can leverage millennial strengths in financial management."
+    ],
+    "limits": [
+      "The study is cross-sectional, limiting causal inference.",
+      "Data are self-reported, which may introduce social desirability bias.",
+      "The sample is limited to Eastern Visayas, Philippines, restricting generalizability.",
+      "The study does not account for cultural nuances beyond Filipino millennial characteristics.",
+      "Potential confounding variables such as social support networks are not fully explored.",
+      "No qualitative data were collected to understand the lived experience of financial stress.",
+      "The study's reliance on SEM assumes linear relationships, which may oversimplify complex financial behaviors."
+    ],
+    "topic_mapping_rationale": "All topic domains in the taxonomy were systematically scanned for relevance. The domain of Filipino Young Professionals as a Demographic (1.A) was flagged as highly relevant because the entire study population consists of Filipino millennials. Financial Structure (1.B) and Financial Behavior (1.C) were also highly relevant as the study examines income levels and financial management practices. Classification Approaches (5.C) was deemed medium relevance due to the use of SEM to classify and measure the relationships between financial stress, millennial characteristics, and financial management. Topics such as Culturally Specific Financial Practices (2.A) and Seasonal Spending Patterns (2.B) were considered but rejected because the paper does not address these cultural or temporal dimensions. Expense Categorization Frameworks (3.A) and Budget Recommendation (7.B) were not covered, as the paper focuses on financial behavior rather than specific categorization or recommendation algorithms. The paper does not address Mobile-First Design (9.A), Data Privacy (10.A), or Engagement Dynamics (11.A), so these domains were rejected. Overall, the paper's coverage is concentrated on understanding Filipino millennial financial behavior through a resource-stress lens, with no algorithmic or system design contributions."
+  },
+  "limitations": [
+    "Cross-sectional design limits causal inference. [unacknowledged]",
+    "Self-reported data may introduce social desirability bias. [unacknowledged]",
+    "Sample limited to Eastern Visayas, restricting generalizability. [unacknowledged]",
+    "No qualitative data to understand lived experiences of financial stress. [unacknowledged]",
+    "Potential confounding variables like social support are not fully explored. [unacknowledged]",
+    "Reliance on SEM assumes linear relationships. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Financial stress has a strong negative effect (β = -0.724) on financial management.",
+    "Millennial characteristics positively influence financial management (β = 0.480).",
+    "The study uses the integrated ABCD-XYZ model to examine family financial dynamics.",
+    "61% of respondents had middle-to-low monthly income between Php 10,001 and Php 30,000.",
+    "74% of millennials experience financial stress related to healthcare, debt, and retirement."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lambert et al_marked.md",
+      "converted_at": "2026-07-21T13:54:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

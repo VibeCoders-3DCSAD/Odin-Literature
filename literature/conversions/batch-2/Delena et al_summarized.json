@@ -1,0 +1,79 @@
+{
+  "paper_id": "10.53422/jcrt.2024.120608",
+  "designation": "local-algorithm-specific",
+  "title": "Predicting Student Retention Using Machine Learning: A Philippine Higher Education Case Study",
+  "authors": "Delena, M. T.; Fernandez, A.; Santos, J. R.",
+  "year": 2024,
+  "venue": "Journal of Computational Research and Technology",
+  "odin_topics": ["5.A", "14.A"],
+  "tldr": "Develops an ensemble ML model (Random Forest + XGBoost) for predicting student retention at a Philippine university, achieving 94.2% accuracy, with academic performance and financial aid status as top predictors.",
+  "problem_and_motivation": "Student attrition is a significant challenge for Philippine universities, but existing retention prediction models are developed in Western contexts and may not transfer to Philippine higher education due to different socioeconomic factors (e.g., remittances, informal financial support).",
+  "approach": [
+    "Dataset: 8,542 student records from a Philippine university spanning 2018-2023 academic years.",
+    "Features: 28 variables including demographics, academic performance (GPA, units enrolled), financial indicators (scholarship status, family income bracket, payment history), and engagement metrics.",
+    "Preprocessing: handling missing values (mean/median imputation), outlier detection, SMOTE for class imbalance (retention rate 72%).",
+    "Feature selection: Recursive Feature Elimination with Cross-Validation (RFECV).",
+    "Models tested: Logistic Regression, Decision Tree, Random Forest, XGBoost, and ensemble (RF+XGBoost stacking).",
+    "Evaluation: 5-fold cross-validation with accuracy, precision, recall, F1-score, AUC-ROC."
+  ],
+  "findings": [
+    "num: Ensemble model (RF + XGBoost) achieved 94.2% accuracy, 0.96 AUC-ROC for retention prediction.",
+    "Top predictors: cumulative GPA (feature importance 0.31), financial aid status (0.18), attendance rate (0.15), family income (0.12).",
+    "Ensemble outperformed individual RF (92.1%) and XGBoost (91.8%) models.",
+    "Financial aid status had higher predictive power in the Philippine model compared to Western literature benchmarks.",
+    "Students from lowest income bracket have 3.2x higher attrition risk than highest bracket.",
+    "SHAP analysis showed tuition payment delays (>=2 months) as a key risk indicator."
+  ],
+  "key_figures_tables": [
+    "Table 5: Model performance comparison across algorithms",
+    "Figure 6: SHAP summary plot showing top-10 feature contributions",
+    "Figure 8: Feature importance bar chart for the ensemble model"
+  ],
+  "key_equations": [{"equation": "P(retention) = σ(RF(X) + XGB(X) + bias)", "explanation": "Ensemble stacking: logistic regression meta-model combining RF and XGBoost predictions."}],
+  "definitions": [
+    {"term": "Retention", "definition": "Binary outcome: student continuing enrollment from first to second academic year."},
+    {"term": "RFECV", "definition": "Recursive Feature Elimination with Cross-Validation — feature selection method using model importance rankings."}
+  ],
+  "citations": [
+    {"author": "Chen", "year": 2016, "page": 0, "paragraph": 0, "claim": "XGBoost uses gradient-boosted decision trees with regularization to prevent overfitting.", "role": "context"},
+    {"author": "Breiman", "year": 2001, "page": 0, "paragraph": 0, "claim": "Random Forest constructs multiple decision trees with bootstrap aggregation for improved accuracy.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "User Behavior Profiling for PF", "relevance": "medium", "justification": "Socioeconomic profiling features (income, financial aid) used for student behavior prediction."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Ensemble ML approach (RF+XGBoost stacking) with RFECV feature selection and SHAP explanation."}
+    ],
+    "contribution_to_field": "Demonstrates the application of ensemble ML with SHAP explainability in a Philippine educational context. The finding that financial aid has higher predictive power in the Philippines vs. Western contexts highlights the importance of localized ML models. The methodology (ensemble stacking, RFECV, SMOTE, SHAP) is directly transferable to PFMS prediction tasks.",
+    "directly_justifies": [
+      "Ensemble (RF+XGBoost stacking) outperforms individual models for prediction tasks.",
+      "SHAP analysis identifies key financial risk indicators (tuition payment delays).",
+      "Financial features have context-dependent predictive power needing localization."
+    ],
+    "limits": [
+      "Applied to student retention, not PFMS. [acknowledged]",
+      "Single university dataset limits generalizability. [unacknowledged]",
+      "No real-time deployment or prediction pipeline evaluation. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 14.A was flagged as high relevance for the ensemble ML approach, feature selection methodology, and SHAP explainability. Domain 5.A was flagged as medium relevance because socioeconomic features are used for profiling. Domains 1-4, 6-13, 14.B were rejected as the paper addresses student retention prediction, not personal finance or PFMS."
+  },
+  "limitations": [
+    "Single university dataset limits generalizability. [unacknowledged]",
+    "No real-time deployment evaluation. [unacknowledged]",
+    "Domain is education, not PFMS. [acknowledged]"
+  ],
+  "remember_this": [
+    "Ensemble (RF+XGBoost) achieved 94.2% accuracy for retention prediction.",
+    "Financial aid status is a stronger predictor in Philippine context vs. Western literature.",
+    "SHAP analysis: tuition payment delays >=2 months are key risk indicators.",
+    "Stacking ensemble outperforms individual RF and XGBoost."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:03:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Delena et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

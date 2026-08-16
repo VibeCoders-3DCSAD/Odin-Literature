@@ -1,0 +1,306 @@
+{
+  "paper_id": "10.32628/CSEIT25111239",
+  "designation": "international",
+  "title": "Understanding Data Drift and Concept Drift in Machine Learning Systems",
+  "authors": "Mannapur, S.",
+  "year": 2025,
+  "venue": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Comprehensive examination of data drift and concept drift challenges in production ML systems, with analysis of detection methodologies and mitigation strategies across healthcare, manufacturing, autonomous systems, and edge computing.",
+  "problem_and_motivation": "Production machine learning models experience significant performance degradation due to the continuous evolution of data patterns over time, a phenomenon known as drift. This drift affects approximately 92% of production ML systems within their first 18 months, leading to average performance degradation of 31.7%. The problem is particularly critical in healthcare, where undetected drift in risk assessment models led to a 34% increase in false negatives.",
+  "approach": [
+    "Comprehensive literature review of drift detection methodologies including statistical approaches (KS test, JSD, PSI) and concept drift detection methods (DDM, Page Hinkley, ADWIN).",
+    "Analysis of drift manifestations across multiple domains: healthcare medical imaging, manufacturing processes, autonomous driving systems, and maritime sensor networks.",
+    "Synthesis of findings from real-world implementations across 215 healthcare organizations, 78 manufacturing facilities, and 12 autonomous driving datasets.",
+    "Evaluation of mitigation strategies including model adaptation, advanced retraining methodologies, ensemble-based solutions, and infrastructure monitoring.",
+    "Examination of future developments in sustainable manufacturing drift detection with energy-aware systems.",
+    "Integration of findings across multiple papers to present a holistic view of drift management challenges and solutions."
+  ],
+  "findings": [
+    "num: Undetected drift leads to average performance degradation of 31.7% in model accuracy.",
+    "num: Healthcare applications experience degradation rates up to 52% within the first year of deployment.",
+    "num: Demographic shifts in patient populations resulted in a 23.4% decrease in diagnostic accuracy over eight months.",
+    "num: Early drift detection can reduce model degradation by up to 83.5%.",
+    "num: Models deployed in clinical settings require recalibration approximately every 3.5 months.",
+    "num: Sensor data distributions can shift up to 47.2% due to equipment wear and environmental variations.",
+    "num: KS-test-based monitoring systems identified 91.3% of significant distribution changes in autonomous driving data within 18 milliseconds.",
+    "num: ADWIN-based monitoring detected concept drift with 89.4% accuracy in edge computing environments.",
+    "num: Implementing energy-aware retraining systems reduced model degradation by 76.8% while decreasing carbon footprint by 52.4%.",
+    "num: Manufacturing facilities implementing structured impact evaluation protocols reported a 58.9% improvement in model stability over 18 months."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Manufacturing Process Drift Analysis showing percentage changes across different drift types → Covariate shift and prior probability shift impacts on manufacturing.",
+    "Table 1: Performance Degradation Analysis Across Different Concept Drift Patterns → Sudden, gradual, and recurring drift patterns with specific impact metrics.",
+    "Figure 2: Performance Metrics of Different Drift Detection Approaches in Autonomous Driving → Comparative effectiveness of KS, JSD, and PSI methods.",
+    "Table 2: Performance Comparison of Concept Drift Detection Methods in Edge Computing → Real-time monitoring, DDM, Page Hinkley, ADWIN, and hybrid systems comparison."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Data Drift",
+      "definition": "A fundamental shift in the statistical properties of input features over time."
+    },
+    {
+      "term": "Concept Drift",
+      "definition": "The evolution of relationships between input features and target variables over time."
+    },
+    {
+      "term": "Covariate Shift",
+      "definition": "A type of data drift where input feature distributions change while underlying relationships remain stable."
+    },
+    {
+      "term": "Prior Probability Shift",
+      "definition": "A type of data drift where target variable distributions change, often due to process improvements or material variations."
+    },
+    {
+      "term": "KS Test",
+      "definition": "Kolmogorov-Smirnov test, a non-parametric approach for detecting distribution shifts in data streams."
+    },
+    {
+      "term": "JSD",
+      "definition": "Jensen-Shannon Divergence, a method for comparing probability distributions in perception systems."
+    },
+    {
+      "term": "PSI",
+      "definition": "Population Stability Index, a metric for monitoring distribution stability across systems."
+    },
+    {
+      "term": "DDM",
+      "definition": "Drift Detection Method, an approach for identifying sudden concept shifts with minimal computational resources."
+    },
+    {
+      "term": "ADWIN",
+      "definition": "Adaptive Windowing, an approach for detecting concept drift with dynamic window sizing."
+    },
+    {
+      "term": "OEE",
+      "definition": "Overall Equipment Effectiveness, a manufacturing metric impacted by concept drift."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kore",
+      "year": 2024,
+      "page": 245,
+      "paragraph": 0,
+      "claim": "Undetected drift led to an average performance degradation of 31.7% in model accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Kore",
+      "year": 2024,
+      "page": 245,
+      "paragraph": 0,
+      "claim": "Drift affects approximately 92% of production ML systems within their first 18 months.",
+      "role": "finding"
+    },
+    {
+      "author": "Patchipala",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Early drift detection can reduce model degradation by up to 83.5%.",
+      "role": "finding"
+    },
+    {
+      "author": "Zhang",
+      "year": 2023,
+      "page": 45,
+      "paragraph": 0,
+      "claim": "Data drift impacts 83.5% of industrial machine-learning applications within their operational lifecycle.",
+      "role": "finding"
+    },
+    {
+      "author": "Benni",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Prior probability shifts resulted in false rejection rates increasing by 31.8% in automated inspection systems.",
+      "role": "finding"
+    },
+    {
+      "author": "Zenisek",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Concept drift affects approximately 82.4% of production quality prediction models.",
+      "role": "finding"
+    },
+    {
+      "author": "Agrahari",
+      "year": 2022,
+      "page": 9523,
+      "paragraph": 0,
+      "claim": "Gradual concept drift impacted 88.7% of process control systems over an eighteen-month period.",
+      "role": "finding"
+    },
+    {
+      "author": "Razak",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Combining multiple statistical approaches improves drift detection accuracy by up to 53.2% compared to single-metric methods.",
+      "role": "methodology"
+    },
+    {
+      "author": "Qiao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADWIN-based monitoring systems detected concept drift with 89.4% accuracy in edge computing environments.",
+      "role": "finding"
+    },
+    {
+      "author": "Casimiro",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adaptive retraining approaches can improve vessel detection accuracy by up to 42.8% in varying weather conditions.",
+      "role": "finding"
+    },
+    {
+      "author": "Surendran",
+      "year": 2021,
+      "page": 1305,
+      "paragraph": 0,
+      "claim": "Dynamic weight adjustment based on sea state detection signals enhanced overall system reliability by 22.8% during storm conditions.",
+      "role": "finding"
+    },
+    {
+      "author": "Rivera",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Continuous model updates using sensor data streams achieved 89.7% of full retraining performance while reducing power consumption by 64.2%.",
+      "role": "finding"
+    },
+    {
+      "author": "Zeydan",
+      "year": 2023,
+      "page": 15213,
+      "paragraph": 0,
+      "claim": "Implementing structured monitoring protocols reduces model degradation by 71.8% over extended deployment periods.",
+      "role": "finding"
+    },
+    {
+      "author": "Mariano-Hernández",
+      "year": 2022,
+      "page": 5857,
+      "paragraph": 0,
+      "claim": "Energy-aware retraining systems reduced model degradation by 76.8% while decreasing carbon footprint by 52.4%.",
+      "role": "finding"
+    },
+    {
+      "author": "Mariano-Hernández",
+      "year": 2022,
+      "page": 5857,
+      "paragraph": 0,
+      "claim": "Resource-aware impact prediction improved sustainability metrics by 68.4% with accuracy rates reaching 90.7% for 36-hour forecasts.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides foundational ML monitoring concepts applicable to any predictive system"
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Mentions forecasting in energy and manufacturing, not spending data"
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses defect detection and false positives in industrial contexts"
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Covers general anomaly detection in manufacturing, not personal spending"
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Includes healthcare data management in cloud context"
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Reliability and safety in healthcare settings as trust proxies"
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Presents comprehensive evaluation of drift detection methods with comparative metrics"
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Systematic evaluation of drift detection algorithms including DDM, Page Hinkley, ADWIN, and hybrid approaches"
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive synthesis of drift detection and mitigation challenges across multiple domains, offering quantitative evidence of performance degradation in production ML systems. It systematically evaluates various detection methodologies and presents comparative performance metrics across different application contexts. The paper bridges theoretical drift concepts with practical implementation considerations, particularly in resource-constrained environments like edge computing. The examination of sustainable manufacturing applications contributes to the growing literature on energy-aware ML systems. The work establishes baseline performance expectations and detection latencies that can inform future research on adaptive ML systems.",
+    "directly_justifies": [
+      "Drift affects approximately 92% of production ML systems within their first 18 months of deployment.",
+      "Early drift detection can reduce model degradation by up to 83.5%.",
+      "Combining multiple statistical approaches improves drift detection accuracy by up to 53.2%.",
+      "ADWIN-based monitoring detected concept drift with 89.4% accuracy in edge computing environments.",
+      "Hybrid detection systems achieved 90.7% accuracy for sudden drift and 86.3% for gradual drift."
+    ],
+    "limits": [
+      "The paper is a review/survey paper and does not present original experimental results.",
+      "Data from cited studies may not be directly comparable due to different domains and experimental setups.",
+      "The paper does not provide detailed implementation code or open-source resources for the methods discussed.",
+      "Focus is primarily on manufacturing and healthcare, with limited discussion of other domains like finance or retail."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains revealed that this paper primarily contributes to ML system monitoring and evaluation frameworks rather than personal finance-specific topics. The paper's content on drift detection evaluation methodologies maps directly to Topic 12.A (Evaluation Frameworks) and 12.B (Evaluation of Algorithmic Modules) with high relevance due to the comprehensive comparative analysis of detection methods. Topic 6.A (Predictive Modeling) and 8.A (Anomaly Detection) were assigned contextual relevance as the paper provides foundational concepts applicable to these areas but does not address personal finance applications. Topics related to Filipino young professionals, financial structures, spending patterns, and budgeting strategies were considered and rejected as the paper contains no content specific to personal finance systems or user financial behavior. Topics 10.A and 10.B were assigned contextual relevance due to the discussion of healthcare data privacy and system reliability. The overall topical coverage is focused on ML system drift management with strong relevance to evaluation and algorithmic assessment domains, and limited direct relevance to personal finance-specific topics."
+  },
+  "limitations": [
+    "Paper is a survey/review article with no original empirical contribution. [unacknowledged]",
+    "References span diverse domains and timeframes, making direct comparison of reported metrics potentially unreliable. [unacknowledged]",
+    "Limited discussion of the specific mechanisms by which drift manifests in different data types (structured vs. unstructured). [unacknowledged]",
+    "No consideration of cost-benefit tradeoffs in implementing sophisticated drift detection systems. [unacknowledged]",
+    "Some cited studies may not be peer-reviewed or may have been published in non-archival venues. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Drift affects 92% of production ML systems within 18 months of deployment.",
+    "Early drift detection can reduce model degradation by up to 83.5%.",
+    "Combined statistical approaches improve drift detection accuracy by 53.2% over single methods.",
+    "ADWIN-based monitoring achieves 89.4% detection accuracy in edge computing environments.",
+    "Hybrid detection systems reduce false positives by up to 62.3% in maritime monitoring applications."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mannapur_marked.md",
+      "converted_at": "2026-07-21T14:11:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

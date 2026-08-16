@@ -1,0 +1,84 @@
+{
+  "paper_id": "uuid-v5: 6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "designation": "international-algorithm-specific",
+  "title": "Towards Privacy-Preserving Federated Learning with Explainable AI: Applications in IoT Networks",
+  "authors": "Houria, K.; Hadjer, H.",
+  "year": 2025,
+  "venue": "Kasdi Merbah University - Ouargla, Master Thesis",
+  "odin_topics": ["10.A", "10.C", "14.A", "14.C"],
+  "tldr": "Explores an integrated federated learning and XAI framework for IoT networks using CNN, evaluating FedAvg, FedOpt, and FedAdam across different data distributions and synchronization modes.",
+  "problem_and_motivation": "Federated learning faces challenges applying traditional interpretability techniques due to decentralized data, and tension exists between privacy-preserving techniques and human-understandable explanations for AI decisions.",
+  "approach": [
+    "Deployed a CNN architecture within a federated learning environment for IoT network classification tasks.",
+    "Evaluated multiple FL strategies: FedAvg, FedOpt, FedAdam, and FedYogi under balanced, random, and skewed data distributions.",
+    "Integrated GradCAM and NormGrad visual interpretability tools to explain model predictions.",
+    "Compared synchronous and asynchronous communication modes with varying numbers of participating clients.",
+    "Analyzed the impact of differential privacy noise on model performance and interpretability."
+  ],
+  "findings": [
+    "Different FL strategies show varying performance depending on data distribution and synchronization mode.",
+    "FedOpt and FedAdam can outperform FedAvg on non-IID data distributions.",
+    "GradCAM and NormGrad provide interpretable heatmaps for CNN predictions in the FL context.",
+    "Differential privacy noise degrades model accuracy but is necessary for privacy guarantees.",
+    "Asynchronous training offers communication efficiency but may reduce model convergence quality."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "FL", "definition": "Federated Learning, decentralized ML training across clients"},
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence"},
+    {"term": "CNN", "definition": "Convolutional Neural Network"},
+    {"term": "FedAvg", "definition": "Federated Averaging algorithm"},
+    {"term": "FedOpt", "definition": "Federated Optimization algorithm"},
+    {"term": "GradCAM", "definition": "Gradient-weighted Class Activation Mapping for visual explanations"},
+    {"term": "IoMT", "definition": "Internet of Medical Things"}
+  ],
+  "citations": [
+    {"author": "Vela et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "AI ageing refers to the decline in ML performance over time.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Core focus on privacy-preserving FL with differential privacy for sensitive data."},
+      {"code": "10.C", "name": "Consent Management and Data Portability", "relevance": "medium", "justification": "FL's decentralized approach reduces data centralization concerns relevant to consent."},
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "low", "justification": "FL data distribution experiments relate to synthetic data scenarios."},
+      {"code": "14.C", "name": "On-Device vs. Server Inference", "relevance": "high", "justification": "Core contribution is decentralized (on-device) training with central aggregation."}
+    ],
+    "contribution_to_field": "This thesis provides a comprehensive evaluation of federated learning strategies combined with XAI techniques for IoT environments. It demonstrates the trade-offs between privacy preservation (via differential privacy), model performance, and interpretability. The comparison of FedAvg, FedOpt, and FedAdam across varying data distributions offers practical guidance for FL deployment in privacy-sensitive domains.",
+    "directly_justifies": [
+      "FedOpt and FedAdam can outperform FedAvg on non-IID data distributions.",
+      "GradCAM provides interpretable explanations in federated learning contexts.",
+      "Differential privacy noise trades off accuracy for privacy guarantees.",
+      "Asynchronous training improves communication efficiency at potential convergence cost."
+    ],
+    "limits": [
+      "Evaluation on IoT/medical image data rather than financial transaction data.",
+      "Master thesis scope limits experimental breadth and statistical rigor.",
+      "No comparison with state-of-the-art secure aggregation protocols."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 10 (Privacy and Security) was flagged as high relevance because privacy-preserving FL with differential privacy is the core contribution. Domain 14.C (On-Device vs. Server Inference) was flagged as high because FL is fundamentally decentralized. Domain 10.C (Consent Management) received medium relevance. All other domains (1-9, 11-13) were rejected."
+  },
+  "limitations": [
+    "Evaluated on image/IoT data rather than financial transaction sequences. [unacknowledged]",
+    "Master thesis scope may limit depth of statistical analysis.",
+    "GradCAM explanations limited to CNN-based models; not applicable to tabular data."
+  ],
+  "remember_this": [
+    "FedOpt and FedAdam outperform FedAvg on non-IID data distributions.",
+    "Differential privacy creates accuracy-interpretability trade-offs in FL.",
+    "GradCAM enables model interpretability in decentralized federated settings.",
+    "Asynchronous training offers efficiency gains but may reduce convergence quality."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Houria & Hadjer_marked.md",
+      "converted_at": "2026-07-22T13:35:35Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

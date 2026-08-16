@@ -1,0 +1,95 @@
+{
+  "paper_id": "990c7f0c-48ad-5fb1-8a59-ba2a2d414dfb",
+  "designation": "international-algorithm-specific",
+  "title": "Developing AI-Powered Credit Scoring Models Leveraging Alternative Data for Financially Underserved US Small Businesses",
+  "authors": "International Journal; Data Science Research",
+  "year": 2022,
+  "venue": "International Journal of Informatics and Data Science Research",
+  "odin_topics": [
+    "10.A",
+    "12.A",
+    "4.A",
+    "4.B"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Developing AI-Powered Credit Scoring Models Leveraging Alternative Data for Fina"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Developing AI-Powered Credit Scoring Models Leveraging Alternative Data for Fina",
+    "Year: 2022",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Mithun et al_marked.md",
+      "converted_at": "2026-07-21T07:34:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

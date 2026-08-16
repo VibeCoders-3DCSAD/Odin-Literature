@@ -1,0 +1,262 @@
+{
+  "paper_id": "10.XXXX/example",
+  "designation": "international-algorithm-specific",
+  "title": "LLM-based Personalized Portfolio Recommender: Integrating Large Language Models and Reinforcement Learning for Intelligent Investment Strategy Optimization",
+  "authors": "Li, B.; Gu, B.; Ding, Z.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "2.C",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Integrates large language models and reinforcement learning to create a personalized portfolio recommender that adapts to individual risk preferences and market conditions.",
+  "problem_and_motivation": "Traditional portfolio optimization models rely on static assumptions and fail to adapt to dynamic markets or individual investor preferences. Existing AI advisory systems lack interpretability, personalization, and real-time adaptation. There is a need for a framework that combines natural language understanding, adaptive learning, and user preference modeling.",
+  "approach": [
+    "Proposes L-PPR, a framework with three modules: User Risk Profiling, RL-based Strategy Optimizer, and Conversational Investment Agent.",
+    "User Risk Profiling uses a fine-tuned LLM to extract a structured risk vector from natural language dialogues.",
+    "Strategy Optimizer uses Proximal Policy Optimization (PPO) within a Markov Decision Process, conditioning the policy on both market data and user risk vectors.",
+    "Conversational Investment Agent provides a cloud-deployed interface with a front-end conversational loop and a back-end feedback loop to update user preferences.",
+    "Trains and evaluates on a multi-source dataset combining financial data (2015-2025), macroeconomic factors, and simulated investor dialogues.",
+    "Compares against MVO, DRL-PPO, and BERT-FA baselines using financial and personalization metrics."
+  ],
+  "findings": [
+    "num: L-PPR achieves a 73.8% improvement in annualized return over MVO.",
+    "num: L-PPR achieves a 33.2% reduction in maximum drawdown relative to MVO.",
+    "num: L-PPR records the highest Sharpe Ratio (1.45) among all models.",
+    "num: L-PPR obtains the highest User Alignment Score (0.89) and Conversational Satisfaction (0.93).",
+    "LLM-based risk profiling effectively guides quantitative portfolio strategies.",
+    "Dynamic, user-conditioned policies yield better outcomes than traditional fixed-risk-assumption models."
+  ],
+  "key_figures_tables": [
+    "Table 1: Comparison of portfolio performance and personalization metrics → L-PPR outperforms all baselines on AR, SR, MDD, IR, CR, UAS, and CSS.",
+    "Figure 2: Training and testing loss curve → Loss converges around 0.12 after ~950 epochs, demonstrating stable learning."
+  ],
+  "key_equations": [
+    {
+      "equation": "h_t = LLM_θ(u_t, h_{t-1})",
+      "explanation": "LLM generates contextual embedding for user intent."
+    },
+    {
+      "equation": "r = f_infer(h_t) = σ(W_i h_t + b_i)",
+      "explanation": "Maps dialogue embedding to risk vector."
+    },
+    {
+      "equation": "R_t = α * r_t^(return) - β * r_t^(risk) + η * sim(r, a_t)",
+      "explanation": "Reward function balances return, risk, and user alignment."
+    },
+    {
+      "equation": "L_CLIP(θ) = E_t[ min(r_t(θ) Â_t, clip(r_t(θ), 1-ε, 1+ε) Â_t)]",
+      "explanation": "PPO clipped surrogate objective for policy update."
+    },
+    {
+      "equation": "J(θ) = E_{πθ}[Σ γ^t R_t]",
+      "explanation": "Objective to maximize expected long-term cumulative utility."
+    }
+  ],
+  "definitions": [
+    { "term": "L-PPR", "definition": "LLM-based Personalized Portfolio Recommender" },
+    { "term": "LLM", "definition": "Large Language Model" },
+    { "term": "RL", "definition": "Reinforcement Learning" },
+    { "term": "PPO", "definition": "Proximal Policy Optimization" },
+    { "term": "MVO", "definition": "Mean-Variance Optimization" },
+    { "term": "MDP", "definition": "Markov Decision Process" },
+    { "term": "UAS", "definition": "User Alignment Score" }
+  ],
+  "citations": [
+    {
+      "author": "Majka",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Classical models like MVO and CAPM rely on stationary covariance matrices and rational investor behavior.",
+      "role": "context"
+    },
+    {
+      "author": "Jiang",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed a deep Q-learning framework for dynamic portfolio rebalancing on cryptocurrency markets.",
+      "role": "baseline"
+    },
+    {
+      "author": "Moody & Saffell",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Used recurrent reinforcement learning to optimize trading strategies with direct risk-return reward shaping.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang & Liu",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Applied PPO to multi-asset allocation showing improved stability and sample efficiency.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nigatu",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced an A2C portfolio agent with macroeconomic factors, showing superior Sharpe ratios.",
+      "role": "baseline"
+    },
+    {
+      "author": "Loughran & McDonald",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed a financial sentiment dictionary for textual risk assessment.",
+      "role": "context"
+    },
+    {
+      "author": "Devlin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced BERT for pre-training deep bidirectional transformers.",
+      "role": "context"
+    },
+    {
+      "author": "Araci",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed FinBERT for financial sentiment analysis.",
+      "role": "context"
+    },
+    {
+      "author": "Sever",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed an LLM-powered investment assistant for generating explainable stock analyses.",
+      "role": "baseline"
+    },
+    {
+      "author": "Xiao",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced a retrieval-augmented LLM for financial report summarization.",
+      "role": "context"
+    },
+    {
+      "author": "Ricci",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Surveyed collaborative filtering and content-based personalization methods.",
+      "role": "context"
+    },
+    {
+      "author": "Yu",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Modeled changes in investor sentiment and demonstrated impact on dynamic asset allocation.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "high",
+        "justification": "Core to L-PPR, as it infers risk preferences from dialogues to condition RL policies."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Central focus is modeling and using investor risk tolerance profiles."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Uses LLM to infer risk vectors, a method for classifying user profiles."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "The PPO optimizer is a predictive model for dynamic asset allocation."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "RL agent learns from sequential market and user feedback data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "The paper focuses on investment portfolio allocation, not budgeting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Recommends portfolio allocations, a related but distinct task from budget recommendation."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses a comprehensive set of financial (AR, SR, MDD) and personalization (UAS, CSS) metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Directly evaluates the L-PPR algorithm against MVO, DRL-PPO, and BERT-FA baselines."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a novel integration of LLM-based user profiling with reinforcement learning for personalized portfolio optimization. It demonstrates that embedding user risk preferences directly into the RL state space leads to superior financial performance and user alignment. The proposed L-PPR framework provides a new paradigm for adaptive, human-in-the-loop financial advisory systems.",
+    "directly_justifies": [
+      "L-PPR achieves a 73.8% improvement in annualized return and a 33.2% reduction in maximum drawdown relative to MVO.",
+      "Combining LLM-based preference modeling with PPO-driven optimization leads to more adaptive and user-aligned investment strategies.",
+      "The system's User Alignment Score (0.89) and Conversational Satisfaction (0.93) significantly exceed those of baselines.",
+      "The personalized optimization mechanism challenges traditional fixed-risk-assumption models.",
+      "Conversational integration opens new avenues for human-in-the-loop financial AI systems."
+    ],
+    "limits": [
+      "None identified.",
+      "None identified.",
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core contribution lies in algorithmic personalization and optimization, making topics under domains 5 (Behavioral Profiles), 6 (Predictive Modeling), and 12 (Evaluation) highly relevant. Specifically, 2.C (User-Declared Preferences) is central, as the system's novelty is conditioning on inferred user risk. 5.A and 5.C are directly addressed by the risk profiling module. 6.A and 6.B are relevant as the RL optimizer forecasts allocations and learns from sequential data. 12.A and 12.B are highly relevant due to the extensive comparative evaluation. Domains related to budgeting (7.A, 7.B) were considered but deemed only contextual as the paper focuses on portfolio allocation, not expense budgeting. The 'local' topics (1.A, 1.B, 1.C) were rejected as the paper is not specific to Filipino young professionals. Topics on mobile design (9.A, 9.B, 9.C) and privacy (10.A, 10.B, 10.C) were not addressed. Overall, the paper's topical coverage is heavily weighted towards algorithmic personalization and performance evaluation in investment recommendation."
+  },
+  "limitations": [
+    "Relies on simulated market environments and lacks real-world behavioral data. [unacknowledged]",
+    "Absence of live trading data to validate the framework in a production setting. [unacknowledged]"
+  ],
+  "remember_this": [
+    "L-PPR integrates LLM risk profiling with PPO for personalized investment strategies.",
+    "It achieved a 14.63% annualized return and a Sharpe Ratio of 1.45 on a simulated portfolio.",
+    "The framework uses a closed-loop system where user feedback updates the RL agent's state space.",
+    "It significantly outperforms MVO, DRL-PPO, and BERT-FA on risk-adjusted and personalization metrics.",
+    "The conversational agent enables human-in-the-loop learning for continual strategy adaptation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li et al_marked.md",
+      "converted_at": "2026-07-21T14:01:02Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

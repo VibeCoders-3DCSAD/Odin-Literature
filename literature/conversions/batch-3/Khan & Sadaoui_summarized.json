@@ -1,0 +1,276 @@
+{
+  "paper_id": "10.1016/j.neucom.2017.10.051",
+  "designation": "international-algorithm-specific",
+  "title": "Learner-based Concept Drift Detection: Analysis and Evaluation",
+  "authors": "Khan, M. M. U. H.; Sadaoui, S.",
+  "year": 2018,
+  "venue": "Neurocomputing",
+  "odin_topics": ["6.B", "8.B", "5.C", "7.B"],
+  "tldr": "A comprehensive survey and empirical evaluation of fifteen learner-based concept drift detection algorithms, comparing SPC, window, and ensemble methods on synthetic and real-world data streams.",
+  "problem_and_motivation": "Concept drift degrades predictive model performance in evolving streaming environments, but the complex landscape of detection algorithms lacks a unified comparative analysis. Developers need clarity on algorithm behavior and relative strengths to select appropriate strategies for different drift types and data characteristics.",
+  "approach": [
+    "Formally defines concept drift using Bayes' theorem and categorizes drift by type and transition speed.",
+    "Classifies detection methods into active versus passive, and learner-based versus distribution-based paradigms.",
+    "Reviews fifteen selected algorithms across SPC, window-based, and ensemble-based categories.",
+    "Evaluates all detectors using Naive Bayes and Hoeffding Tree learners on six synthetic datasets with abrupt and gradual drifts.",
+    "Validates performance on two real-world streaming datasets: electricity prices and network intrusion traffic.",
+    "Uses AUC as the primary evaluation metric with fixed hyperparameters across experiments."
+  ],
+  "findings": [
+    "num: Ensemble methods consistently outperform SPC and window-based detectors, with ARF+HT achieving the highest overall average AUC of 0.94 on synthetic data.",
+    "num: On real-world streams, AUE+HT proves most effective with an average AUC of 0.88, outperforming ARF.",
+    "num: Hoeffding Tree generally outperforms Naive Bayes, but NB matches or exceeds HT on real-world streams within SPC and window-based families.",
+    "num: EWMA and EDDM with HT are the best overall SPC methods, achieving approximately 0.69 AUC.",
+    "num: For gradual drifts, WSTD, MDDM, ADWIN, and D3 with HT each achieve approximately 0.60 AUC.",
+    "Ensemble-based adaptation, particularly ARF, provides the most reliable and consistent improvements across all drift scenarios."
+  ],
+  "key_figures_tables": [
+    "Table 3.1: Summary of 15 drift detectors by year, mode, and category → organizes algorithms by SPC, window, and ensemble families.",
+    "Table 8.1: SPC detector performance with NB and HT → FTDD excels on abrupt drifts; EWMA and EDDM lead overall.",
+    "Table 9.1: Window-based detector performance → KSWIN, WSTD, and D3 share top performance on abrupt drifts.",
+    "Table 10.1: Ensemble detector performance → ARF+HT dominates synthetic; AUE+HT leads on real-world data.",
+    "Table 11.1: Best detectors by category and drift type → ARF is top for synthetic, AUE for real-world."
+  ],
+  "key_equations": [
+    {
+      "equation": "P_t(X, y) \\neq P_{t+w}(X, y)",
+      "explanation": "Concept drift as change in joint distribution over time."
+    },
+    {
+      "equation": "p(|\\bar{X} - \\mu| \\geq \\epsilon) \\leq 2e^{-2n\\epsilon^2}",
+      "explanation": "Hoeffding bound used by FHDDM to detect error rate increases."
+    },
+    {
+      "equation": "z_t = (1-\\lambda)z_{t-1} + \\lambda x_t",
+      "explanation": "EWMA estimator for monitoring classifier error rate over time."
+    },
+    {
+      "equation": "\\text{dist}(w_p, w_r) = \\sup |F_{w_p}(x) - F_{w_r}(x)|",
+      "explanation": "Kolmogorov-Smirnov distance used by KSWIN to compare window distributions."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Concept drift",
+      "definition": "A change in the joint probability distribution of input features and target class over time, defined as P_t(X, y) ≠ P_{t+w}(X, y)."
+    },
+    {
+      "term": "Real drift",
+      "definition": "A change in the posterior probability P(y|X), affecting the decision boundary of ML models."
+    },
+    {
+      "term": "Virtual drift",
+      "definition": "A change in the feature-value distribution P(X) without altering P(y|X)."
+    },
+    {
+      "term": "Learner-based detection",
+      "definition": "Methods that detect drifts by monitoring the performance of an underlying classifier, such as error rates."
+    },
+    {
+      "term": "SPC",
+      "definition": "Statistical Process Control: detectors that treat model performance as a controlled process and use statistical tests to detect deviations."
+    },
+    {
+      "term": "AUC",
+      "definition": "Area Under the ROC Curve, used as the primary evaluation metric for assessing performance degradation under drift."
+    },
+    {
+      "term": "HT",
+      "definition": "Hoeffding Tree, a very fast decision tree used as a base learner in the experiments."
+    },
+    {
+      "term": "NB",
+      "definition": "Naive Bayes classifier, used as a base learner in the experiments."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Gama",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Concept drift is defined as a change in the joint probability distribution P(X, y) over time.",
+      "role": "context"
+    },
+    {
+      "author": "Bayram",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SPC detectors treat model performance as a controlled process and employ statistical tests to detect deviations.",
+      "role": "methodology"
+    },
+    {
+      "author": "Baena-García",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "EDDM focuses on the distance between successive errors to better detect gradual changes.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pesaranghader",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FHDDM uses Hoeffding's inequality to detect changes in data streams by monitoring prediction errors.",
+      "role": "methodology"
+    },
+    {
+      "author": "Barros",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "RDDM enhances DDM by dynamically adjusting the detection threshold based on recent error rates.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ross",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "EWMA is a statistical process that identifies drift by monitoring the error rate with O(1) computational overhead.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cabral",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FTDD uses Fisher's Exact Test to address STEPD's limitations when dealing with imbalanced data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADWIN maintains a sliding window and signals drift when the difference in error rates exceeds a Hoeffding-derived threshold.",
+      "role": "methodology"
+    },
+    {
+      "author": "Raab",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "KSWIN uses the Kolmogorov-Smirnov distance to detect distribution changes between two sliding windows.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pesaranghader",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MDDM uses McDiarmid's inequality with a weighted sliding window to prioritize recent samples.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gözüaçık",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "D3 detects changes by training a classifier to distinguish between recent and historical samples.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gomes",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ARF extends random forest to evolve data streams by replacing under-performing trees and using online bagging.",
+      "role": "methodology"
+    },
+    {
+      "author": "Brzezinski",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AUE updates only the top k weighted classifiers and uses a simplified weighting function over AWE.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kolter",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DWM is a passive adaptation method that adjusts classifier weights dynamically after each new sample.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AWE selects the most efficient classifiers using mean squared error based on class assignment probabilities.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Compares drift detection algorithms that are directly applicable to forecasting on sequential data streams."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Drift detection methods reviewed and evaluated are foundational to anomaly detection in time-series financial data."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "The base learners (Naive Bayes, Hoeffding Trees) are classification algorithms relevant to user profiling."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Maintains model accuracy under changing conditions, which is relevant to recommendation systems but not directly addressed."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive comparative analysis of fifteen learner-based concept drift detection algorithms across SPC, window, and ensemble categories. It systematically evaluates their performance on both synthetic and real-world streaming data using two base learners, identifying strengths and weaknesses for abrupt, gradual, and real-world drift scenarios. The empirical findings establish clear performance rankings, with ensemble methods generally outperforming single-detector approaches. The paper's contribution lies in its rigorous benchmarking methodology and actionable guidance for selecting drift detectors based on drift characteristics and data context.",
+    "directly_justifies": [
+      "Ensemble methods consistently outperform SPC and window-based detectors across all dataset types.",
+      "Hoeffding Tree generally outperforms Naive Bayes as a base learner under concept drift.",
+      "ARF+HT achieves the strongest results on both abrupt and gradual drift scenarios.",
+      "AUE+HT is most effective on real-world data streams, outperforming ARF in that context.",
+      "EWMA and EDDM with HT are the best overall SPC methods for gradual drift detection."
+    ],
+    "limits": [
+      "The paper focuses exclusively on supervised, learner-based detection methods, excluding unsupervised and hybrid approaches.",
+      "Evaluation uses only two base learners (Naive Bayes and Hoeffding Tree), which may not generalize to deep learning models.",
+      "Hyperparameters for all detectors were fixed to defaults, which may not be optimal for all datasets or drift types.",
+      "The synthetic datasets are binary classification problems without noise, limiting generalizability to noisy, multi-class, or imbalanced streams.",
+      "The study does not include computational cost or latency benchmarks for the detectors."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper directly addresses temporal changes in data distributions, which is foundational to forecasting algorithms for sequential spending data (6.B) and anomaly detection for personal spending data (8.B), both assigned high relevance. The paper's use of classification models as base learners provides supporting evidence for financial behavioral profile classification (5.C), assigned medium relevance. The maintenance of predictive model accuracy under changing conditions provides contextual framing for budget recommendation systems (7.B) but offers no specific recommendation methodology, hence contextual. Other domains, including Filipino demographics, culturally specific practices, mobile design, privacy, engagement, and savings goals, were considered and rejected as the paper focuses on algorithmic drift detection rather than any specific application domain or user context. The paper's contribution is primarily methodological, providing a benchmarking framework applicable across multiple domains."
+  },
+  "limitations": [
+    "Focuses exclusively on supervised learner-based methods, excluding unsupervised and hybrid detectors. [unacknowledged]",
+    "Uses only two base learners (NB and HT), limiting generalizability to other model types. [unacknowledged]",
+    "Fixed default hyperparameters may not be optimal for all evaluation scenarios. [unacknowledged]",
+    "Synthetic datasets are binary classification problems without noise, which may not reflect real-world conditions. [unacknowledged]",
+    "Does not include computational cost or latency analysis for the evaluated detectors. [unacknowledged]",
+    "The increased complexity of RDDM may require careful parameter calibration for optimal performance."
+  ],
+  "remember_this": [
+    "Ensemble methods, especially ARF with Hoeffding Trees, outperform SPC and window detectors under concept drift.",
+    "AUE with HT is the best detector for real-world data streams, surpassing ARF by approximately 0.15 AUC.",
+    "EWMA and EDDM with HT are the most reliable SPC detectors across all dataset types with 0.69 AUC.",
+    "Hoeffding Tree generally outperforms Naive Bayes, but NB matches or exceeds HT on real-world streams.",
+    "For gradual drift detection, WSTD, MDDM, ADWIN, and D3 with HT each achieve approximately 0.60 AUC."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Khan & Sadaoui_marked.md",
+      "converted_at": "2026-07-21T13:46:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

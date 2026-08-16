@@ -1,0 +1,166 @@
+{
+  "paper_id": "6c51070b-5c81-5c8a-967d-a1b3805fb6b5",
+  "designation": "local",
+  "title": "Financial Management Practices of Employees at Bureau Of Internal Revenue",
+  "authors": "Cabiles, S.L.",
+  "year": 2025,
+  "venue": "United International Journal for Research & Technology",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.B",
+    "7.A",
+    "7.B",
+    "9.B",
+    "11.A",
+    "11.B",
+    "12.A"
+  ],
+  "tldr": "A survey of permanent BIR RDO 068 employees in Sorsogon City found strong budgeting and saving practices but weaker spending and investing habits, with debt accumulation and low interest-rate literacy as top challenges.",
+  "problem_and_motivation": "Personal financial management practices among government employees in the Philippines remain underexplored, particularly regarding how financial literacy levels relate to actual budgeting, spending, saving, and investing behaviors.",
+  "approach": [
+    "Embedded mixed methods design combining quantitative and qualitative data collection via Likert-scale questionnaires.",
+    "Descriptive statistics including frequency count, percentage, ranking, and weighted mean used to analyze financial practices.",
+    "Financial literacy engagement levels measured across four domains.",
+    "A ranking methodology was used to identify top ten challenges.",
+    "A value-action gap (VAG) analysis was applied to investing practices."
+  ],
+  "findings": [
+    "num: 4.37 weighted mean for frequently setting aside savings, the strongest financial behavior domain.",
+    "num: 4.32 weighted mean for emergency fund creation, indicating strong preparedness.",
+    "num: 4.54 weighted mean for perceived improvement in financial decision-making through literacy programs.",
+    "num: 3.47 weighted mean for investing practices, indicating inconsistent engagement.",
+    "num: 2.66 weighted mean for openness to higher-risk investments, the lowest saving domain score.",
+    "num: 2.52 weighted mean for credit card usage for expenses, indicating rare adoption.",
+    "Debt accumulation without proper management was the top-ranked financial challenge (sum of ranks 241, rank 1).",
+    "Employees sometimes enhance financial literacy in budgeting (2.90 mean) and investing (3.17 mean) through self-directed learning."
+  ],
+  "citations": [
+    {
+      "author": "Rao",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Employees with emergency funds improved job performance by 7% and were 16% more likely to receive a promotion.",
+      "role": "finding"
+    },
+    {
+      "author": "Bandura",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Self-efficacy theory emphasizes belief in ability to succeed as a key driver of motivation and behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Thaler",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mental accounting describes how individuals categorize expenses and perform cost-benefit analysis.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education can be efficiently provided in workplaces through targeted workshops.",
+      "role": "methodology"
+    },
+    {
+      "author": "Clark",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Workplace financial education programs can improve employees financial wellness.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Core focus is on budgeting, spending, saving, and investing behaviors of BIR employees."
+      },
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "medium",
+        "justification": "Study focuses on permanent employees at a Philippine government agency."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Reports on income allocation patterns, emergency fund maintenance, and savings behaviors."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Discusses budgeting systems, expense tracking, and financial planning."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Profiles employee financial behaviors across four domains."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Examines how financial literacy activity engagement impacts financial practices."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "medium",
+        "justification": "Evaluates debt management practices and debt cycle behaviors."
+      }
+    ],
+    "contribution_to_field": "Provides an empirical assessment of personal financial management practices among Filipino government employees, providing quantitative evidence on budgeting, spending, saving, and investing behaviors. Documents a value-action gap in investing and identifies debt accumulation as the most pressing financial challenge.",
+    "directly_justifies": [
+      "Employees demonstrate strong budgeting and saving practices but weaker investing engagement.",
+      "Debt accumulation without proper management is the top-ranked financial challenge.",
+      "Financial literacy activities have a strong positive impact on financial practices overall.",
+      "A value-action gap exists in investing where employees have knowledge but do not apply it."
+    ],
+    "limits": [
+      "Study is limited to a single Revenue District Office in Sorsogon City.",
+      "Only permanent employees were surveyed.",
+      "Cross-sectional design provides no longitudinal evidence.",
+      "Does not control for demographic variables in the analysis."
+    ]
+  },
+  "limitations": [
+    "Study restricted to a single Revenue District Office in Sorsogon City.",
+    "Only permanent employees were surveyed, excluding contractual or casual staff.",
+    "Cross-sectional survey design prevents causal inference.",
+    "No demographic stratification by age, income, or household size was reported."
+  ],
+  "remember_this": [
+    "Employees show strongest behavior in saving and weakest in investing across four financial domains.",
+    "Debt accumulation is the top financial challenge, followed by low interest-rate literacy.",
+    "A value-action gap persists in investing: employees have knowledge but low risk-taking.",
+    "Financial literacy engagement has a strong positive impact on practices."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cabiles_marked.md",
+      "converted_at": "2026-07-22T12:32:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

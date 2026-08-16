@@ -1,0 +1,276 @@
+{
+  "paper_id": "10.48550/arXiv.2506.02282",
+  "designation": "international-algorithm-specific",
+  "title": "Learning Personalized Agents from Human Feedback",
+  "authors": "Liang, K.; Kruk, J.; Qian, S.; Yang, X.; Bi, S.; Yao, Y.; Nie, S.; Zhang, M.; Liu, L.; Fernández Fisac, J.; Zhou, S.; Hosseini, S.",
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "odin_topics": [
+    "5.A",
+    "5.B",
+    "5.C",
+    "7.A",
+    "7.B",
+    "7.E",
+    "11.A",
+    "11.B",
+    "12.A",
+    "12.C"
+  ],
+  "tldr": "A continual personalization framework using explicit per-user memory and dual feedback channels enables agents to learn online from live interaction and adapt to non-stationary user preferences.",
+  "problem_and_motivation": "Modern AI agents fail to align with individual, evolving user preferences because they rely on static datasets and cannot adapt to new users, correct mistakes from real-time feedback, or handle non-stationary preferences. Existing personalization approaches do not support learning online from live interaction, leading to a fundamental limitation in user-facing applications.",
+  "approach": [
+    "Introduces PAHF, a continual personalization framework with a three-step loop: pre-action clarification, action execution, and post-action feedback integration.",
+    "Uses explicit per-user memory (SQLite or FAISS backend) updated from pre-action and post-action feedback to refine agent behavior over time.",
+    "Develops a four-phase evaluation protocol to separately test initial preference learning and adaptation to persona shifts.",
+    "Constructs two benchmarks: embodied manipulation (40 users, 1,200 scenarios per phase) and online shopping (20 users, 900 scenarios per phase).",
+    "Implements agent with GPT-4o and ReAct framework; compares No Memory, Pre-action Only, Post-action Only, and PAHF baselines.",
+    "Provides theoretical analysis proving necessity of both feedback channels for handling partial observability and non-stationarity.",
+    "Uses dense-retrieval memory with DRAGON+ embeddings and an LLM-as-judge for salience detection and memory integration."
+  ],
+  "findings": [
+    "Pre-action clarification enables agents to achieve substantially higher success rates on the first interaction and lower cumulative personalization error in initial learning.",
+    "Pre-action feedback alone is brittle under preference drift; Pre-action Only agents stop asking questions and remain confidently wrong after preferences change.",
+    "Post-action feedback is essential for fast adaptation; Post-action Only agents recover to 67.9% success in embodied domain after preference drift.",
+    "num: PAHF achieves the highest success rates across all phases and domains: 70.5% in embodied Phase 4 and 70.3% in shopping Phase 4.",
+    "num: PAHF's dynamic regret bound is O(K + γT m^{-k}), with k = Θ(log_m T) yielding O(K + γ) expected mistakes.",
+    "Combining pre-action and post-action feedback with explicit memory is critical; PAHF consistently outperforms single-channel baselines."
+  ],
+  "key_figures_tables": [
+    "Figure 3: Embodied Phase 1 success rate curves → Pre-action agents show high initial success and lower ACPE.",
+    "Figure 4: Shopping Phase 1 success rate curves → PAHF and Pre-action Only outperform post-action and no-memory baselines.",
+    "Table 1: Phase 2 and 4 success rates → PAHF achieves highest success across all conditions in both domains.",
+    "Figure 3/4 bottom-left: Phase 3 success rate curves → Post-action Only and PAHF recover rapidly; Pre-action Only fails to improve."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\hat{M}'_t = F^{\\text{pre}}_{\\text{update}}(\\hat{M}_t, I_t, O_t, m_t, q_t, f^{\\text{pre}}_t)",
+      "explanation": "Memory update after pre-action clarification."
+    },
+    {
+      "equation": "a_t = \\pi_{\\text{act}}(I_t, O_t, m_t, q_t, f^{\\text{pre}}_t)",
+      "explanation": "Action policy conditioned on instruction, observation, and retrieved preferences."
+    },
+    {
+      "equation": "\\hat{M}_{t+1} = F^{\\text{post}}_{\\text{update}}(\\hat{M}'_t, I_t, m_t, q_t, f^{\\text{pre}}_t, a_t, f^{\\text{post}}_t)",
+      "explanation": "Memory update after post-action corrective feedback."
+    },
+    {
+      "equation": "E[R_T] = O(K + \\gamma T m^{-k})",
+      "explanation": "Dynamic regret bound for PAHF with pre- and post-action feedback."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "PAHF",
+      "definition": "Personalized Agents from Human Feedback, a framework for continual personalization using explicit memory and dual feedback channels."
+    },
+    {
+      "term": "ACPE",
+      "definition": "Average cumulative personalization error, a metric tracking error rate over learning iterations."
+    },
+    {
+      "term": "LLM",
+      "definition": "Large language model, the underlying model powering the agent's reasoning and action generation."
+    },
+    {
+      "term": "RAG",
+      "definition": "Retrieval-augmented generation, a technique for retrieving relevant information from memory before generating responses."
+    },
+    {
+      "term": "SR",
+      "definition": "Success rate, the fraction of tasks completed correctly."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Christiano",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep reinforcement learning from human preferences for aligning AI systems.",
+      "role": "context"
+    },
+    {
+      "author": "Ouyang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Training language models to follow instructions with human feedback (RLHF).",
+      "role": "context"
+    },
+    {
+      "author": "Rafailov",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Direct preference optimization recovers RLHF benefits without explicit RL.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personalized alignment of LLMs at decoding-time via multi-dimensional objectives.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chhikara",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mem0: building production-ready AI agents with scalable long-term memory.",
+      "role": "baseline"
+    },
+    {
+      "author": "Salemi",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Optimization methods for personalizing LLMs through retrieval augmentation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Qiu",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Bayesian teaching enables probabilistic reasoning for personalized recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Li",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "PREFDISCO benchmarks interactive preference discovery but is limited to static personas.",
+      "role": "critique"
+    },
+    {
+      "author": "Wu",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Tidybot: personalized robot assistance with LLMs for tidying preferences.",
+      "role": "context"
+    },
+    {
+      "author": "Yao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ReAct framework for synergizing reasoning and acting in language models.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lin",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DRAGON+ for diverse augmentation towards generalizable dense retrieval.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Directly models user preference profiles and behavioral adaptation."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "high",
+        "justification": "Tackles cold-start with empty memory and evolving preferences."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Uses retrieval-based classification of preferences; analogous to profile classification."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Provides a framework for learning and adapting constraints, applicable to budgeting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Recommending actions based on learned preferences aligns with budget recommendations."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "high",
+        "justification": "Explicitly addresses the cold-start problem in initial preference learning."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Mentions user friction and interaction budgets; not a primary focus."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "low",
+        "justification": "Discusses limited interaction budgets to reflect user friction, but does not study retention."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Proposes a four-phase evaluation protocol for continual personalization."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Metrics like success rate and ACPE are analogous to recommendation accuracy."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a continual personalization framework that learns online from live interaction, addressing the fundamental limitation of static personalization methods. It provides both theoretical and empirical evidence that explicit memory combined with dual feedback channels (pre-action clarification and post-action correction) is necessary for robust personalization under preference drift. The proposed four-phase evaluation protocol and two benchmarks establish a standardized way to measure an agent's ability to learn from scratch and adapt to persona shifts.",
+    "directly_justifies": [
+      "Pre-action feedback is essential for preventing initial personalization errors under partial observability.",
+      "Post-action feedback is necessary for correcting miscalibrated beliefs after preference drift.",
+      "Explicit memory with dual feedback channels yields lower cumulative personalization error than single-channel baselines.",
+      "Combining both feedback channels achieves the highest success rates across all evaluation phases."
+    ],
+    "limits": [
+      "The memory architecture is deliberately simple; more sophisticated memory systems could improve scalability and context retention.",
+      "The framework does not explicitly handle noisy or inconsistent human feedback, which is common in real-world settings.",
+      "Agents still struggle to achieve high success rates in the online shopping domain, indicating fine-grained preference reasoning remains challenging.",
+      "The agent is limited to at most one clarification question per task, which increases task difficulty and may not reflect real-world interaction strategies."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains flagged the following as relevant: 5.A (Financial Behavioral Profiles) because the paper directly models and updates user preference profiles; 5.B (Profile Dynamics) because it explicitly addresses cold-start and evolving preferences; 5.C (Classification Approaches) because retrieval-based memory can be viewed as a classification of preferences. For budgeting domains, 7.A (Budgeting Strategies) is relevant as the framework learns constraints, 7.B (Budget Recommendation) maps to action recommendation based on preferences, and 7.E (Onboarding) is directly addressed. Engagement topics (11.A, 11.B) were considered low relevance because the paper mentions user friction but does not study engagement or retention mechanisms. Evaluation topics (12.A, 12.C) are highly relevant due to the proposed protocol and metrics. Topics related to expense categorization, financial structure, culturally specific practices, predictive modeling, anomaly detection, mobile-first design, privacy, savings goals, synthetic data, and ML deployment were rejected as they are not covered by the paper's content. The paper's overall topical coverage centers on algorithmic personalization and evaluation, with strong overlap in behavioral profile modeling and budgeting strategy domains."
+  },
+  "limitations": [
+    "Memory architecture is deliberately simple and not a novel contribution. [unacknowledged]",
+    "Does not handle noisy or inconsistent human feedback, which is common in real-world deployments. [unacknowledged]",
+    "Agents still struggle to achieve high success rates in the online shopping domain, indicating fine-grained preference reasoning remains challenging. [acknowledged]",
+    "Limited to one clarification question per task, which increases difficulty and may not reflect optimal interaction strategies. [acknowledged]",
+    "Evaluation uses simulated human feedback, which may not fully capture the variability and noise of real human behavior. [unacknowledged]"
+  ],
+  "remember_this": [
+    "PAHF combines explicit memory with pre-action clarification and post-action corrective feedback.",
+    "Pre-action feedback prevents initial errors; post-action feedback is essential for adapting to preference drift.",
+    "PAHF achieves 70.5% Phase-4 success in embodied manipulation and 70.3% in online shopping.",
+    "The theoretical regret bound is O(K + γT m^{-k}), with optimal k yielding O(K + γ).",
+    "Single-channel baselines fail under preference drift, while PAHF consistently recovers and outperforms."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Liang et al_marked.md",
+      "converted_at": "2026-07-21T14:01:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

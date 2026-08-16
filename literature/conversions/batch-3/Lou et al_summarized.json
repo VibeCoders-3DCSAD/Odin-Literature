@@ -1,0 +1,312 @@
+{
+  "paper_id": "10.1186/s40537-026-01464-y",
+  "designation": "international-algorithm-specific",
+  "title": "Predicting customer buying habits using convolutional neural network",
+  "authors": "Lou, Z.; Wang, S.; Yu, X.; Song, W.",
+  "year": 2026,
+  "venue": "Journal of Big Data",
+  "odin_topics": ["6.A", "6.B", "7.A", "7.B"],
+  "tldr": "Predicts income levels and product recommendations using a CNN with hybrid pooling layers on a 980-person survey dataset, achieving 93.06% income prediction accuracy.",
+  "problem_and_motivation": "Traditional models struggle with high-dimensional demographic data and non-linear relationships between demographics and purchasing behavior. No prior work has applied CNNs specifically to predict customer attributes and purchasing behavior from tabular data. This gap limits the accuracy of personalized retail and income-based product recommendations.",
+  "approach": [
+    "Collected survey data from 980 individuals across demographic, shopping habit, and product preference variables.",
+    "Preprocessed data by converting nominal values to numeric, imputing missing values with mean/mode, and normalizing features to [0,1].",
+    "Mapped each normalized feature to a 100-bit one-hot interval, concatenated to a 1600-bit stream, then reshaped into a 20×10 grayscale image matrix.",
+    "Trained a CNN with two convolutional layers (6×6, 16 filters; 3×3, 24 filters), ReLU activations, and hybrid pooling layers (2×2) with stochastic switching between max and average pooling.",
+    "Used weighted cross-entropy loss to handle class imbalance across five income tiers (very low to very high).",
+    "Constructed a purchase probability matrix (N goods × K income groups) from training data to recommend the highest-probability product category for each predicted income class.",
+    "Evaluated with stratified 5-fold cross-validation and compared against CNN variants, RF, BiLSTM, and prior methods."
+  ],
+  "findings": [
+    "num: Proposed CNN achieved 93.06% accuracy in predicting income level across five tiers.",
+    "num: Precision of 0.9295, recall of 0.9321, and F-measure of 0.9306 for income classification.",
+    "num: Hybrid pooling outperformed max-pooling-only (91.53%) and average-pooling-only (90.10%) CNN variants.",
+    "num: Product recommendation mean accuracy reached 95% for category 1, with average accuracies of 92.89% and 94.81% for categories 4 and 6.",
+    "num: Statistically significant improvements over benchmarks (p < 0.05) confirmed via paired t-tests across 5-fold CV.",
+    "Feature importance analysis identified job category, education level, age, job history, place of residence, and marital status as top predictors."
+  ],
+  "key_figures_tables": [
+    "Figure 4: Bar charts show proposed CNN highest accuracy (93.06%) and classification rates across metrics → hybrid pooling best.",
+    "Figure 5: Confusion matrices with diagonal counts; proposed method has fewest off-diagonal errors → better class separation.",
+    "Figure 6: ROC curves with larger AUC for proposed method → superior TPR/FPR trade-off.",
+    "Figure 7: Accuracy per product category; proposed method highest in 5 of 6 categories → recommendation engine effective.",
+    "Figure 8: Normalized feature importance weights from attention layer → top six variables identify income drivers.",
+    "Table 5: Performance comparison table; proposed method leads in precision, recall, F-measure, accuracy over 8 models.",
+    "Table 6: Statistical significance table with 5-fold CV mean accuracy, std dev, p-values → all p < 0.05 confirming gains."
+  ],
+  "key_equations": [
+    {
+      "equation": "S = {S_avg with prob p, S_max with prob 1-p}",
+      "explanation": "Stochastic hybrid pooling selection during training."
+    },
+    {
+      "equation": "s^j_avg = (1/|R_j|) * sum_{i in R_j} a_i",
+      "explanation": "Average pooling output over pooling segment j."
+    },
+    {
+      "equation": "s^j_max = max_{i in R_j} a_i",
+      "explanation": "Max pooling output over pooling segment j."
+    },
+    {
+      "equation": "S_hybrid = p * S_avg + (1-p) * S_max",
+      "explanation": "Test-time hybrid pooling as weighted average."
+    },
+    {
+      "equation": "N_x = (x - x_min) / (x_max - x_min)",
+      "explanation": "Min-max normalization to [0,1] range."
+    },
+    {
+      "equation": "Loss = -Σ(w_i * y_i * log(p_i) + (1-y_i) * log(1-p_i))",
+      "explanation": "Weighted cross-entropy loss for class imbalance."
+    },
+    {
+      "equation": "P_{i,j} = M_{i,j} / Σ_{k=1}^N M_{k,j}",
+      "explanation": "Purchase probability matrix element computation."
+    }
+  ],
+  "definitions": [
+    {"term": "CNN", "definition": "Convolutional Neural Network"},
+    {"term": "DL", "definition": "Deep Learning"},
+    {"term": "RF", "definition": "Random Forest"},
+    {"term": "LSTM", "definition": "Long Short-Term Memory"},
+    {"term": "BiLSTM", "definition": "Bidirectional Long Short-Term Memory"},
+    {"term": "RNN", "definition": "Recurrent Neural Network"},
+    {"term": "WCE", "definition": "Weighted Cross-Entropy"},
+    {"term": "CV", "definition": "Cross-Validation"},
+    {"term": "TP", "definition": "True Positive"},
+    {"term": "FP", "definition": "False Positive"},
+    {"term": "FN", "definition": "False Negative"},
+    {"term": "TN", "definition": "True Negative"},
+    {"term": "RFM", "definition": "Recency, Frequency, Monetary"},
+    {"term": "BPR", "definition": "Bayesian Personalized Ranking"},
+    {"term": "DNN", "definition": "Deep Neural Network"},
+    {"term": "ROC", "definition": "Receiver Operating Characteristic"},
+    {"term": "AUC", "definition": "Area Under the Curve"},
+    {"term": "FPR", "definition": "False Positive Rate"},
+    {"term": "TPR", "definition": "True Positive Rate"}
+  ],
+  "citations": [
+    {
+      "author": "Yamnampet",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Used various classifiers for income determination and customer identification with analysis of false negatives and positives.",
+      "role": "baseline"
+    },
+    {
+      "author": "Thapa",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random Forest achieved 86% test accuracy on adult income dataset, outperforming other ML algorithms.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chen",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random Forest outperformed k-NN, naive Bayes, logistic regression, and decision trees for salary prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Viroonluecha",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep Learning achieved R-squared of 0.462 for salary prediction in Thailand on 1.7M user dataset.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kablaoui",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neural networks achieved 83.2% accuracy for salary prediction on a USA dataset.",
+      "role": "baseline"
+    },
+    {
+      "author": "Vemulapati",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BiLSTM was more accurate than LSTM, ConvLSTM, and Stacked LSTM for income prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chakrabarty",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Achieved 88.16% validation accuracy on adult census income using gradient boosting with grid search.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chaubey",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "KnnSgd hybrid ensemble achieved 92.42% accuracy for predicting customer purchasing behavior.",
+      "role": "baseline"
+    },
+    {
+      "author": "Nguyen",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Combined collaborative filtering, BPR, LightGBM, and DNN for personalized product recommendations.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost and RF with RFM achieved 77.82% sales prediction accuracy using association rules for recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Tong",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid pooling combines max and average pooling randomly during training to enhance CNN generalization.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hussain",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Basic neural networks are ineffective when processing complex, high-dimensional data.",
+      "role": "critique"
+    },
+    {
+      "author": "Islam",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random forests show limitations when dealing with very high-dimensional datasets.",
+      "role": "critique"
+    },
+    {
+      "author": "Yang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Converting 1D demographic data to 2D feature matrices enables CNNs to extract complex spatial correlations.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kostopoulos",
+      "year": 2026,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recent deep learning advances show promising results in e-commerce prediction, personalization, and decision intelligence.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Proposes CNN for predicting income levels from customer demographics and behavioral features."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "While not explicitly sequential, the feature-to-image mapping captures spatial patterns akin to sequential feature interactions."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Income prediction and product recommendation are foundational to budgeting, but paper does not directly address budget strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Product recommendation based on income is tangentially related but not framed as budget recommendation."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Six product categories (mobile phones, tablets, laptops, clothing, entertainment, food) are used but not as a systematic expense categorization framework."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "The paper models purchasing habits by income but does not construct comprehensive financial behavioral profiles."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Income classification via CNN is a classification approach applied to consumer behavior data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Stratified 5-fold CV with precision, recall, F-measure, accuracy, and statistical significance testing."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates CNN, hybrid pooling, and recommendation matrix as algorithmic modules with comparative benchmarks."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "contextual",
+        "justification": "Income prediction is relevant to savings capacity but savings goals are not discussed."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel CNN-based architecture for predicting income levels from tabular consumer data by converting feature vectors into grayscale image matrices. It demonstrates that hybrid pooling layers improve generalization over standard pooling strategies for income classification. The work also provides a practical pipeline combining income prediction with a purchase probability matrix for product recommendations. It establishes statistically significant performance gains over multiple baseline methods on a 980-person survey dataset.",
+    "directly_justifies": [
+      "num: Proposed CNN achieves 93.06% accuracy in income prediction.",
+      "num: Hybrid pooling outperforms max-pooling-only and average-pooling-only CNN variants.",
+      "num: Product recommendation mean accuracy reaches 95% for the highest-performing product category.",
+      "The six most important income predictors are job category, education level, age, job history, place of residence, and marital status.",
+      "Statistical significance tests confirm improvements over benchmarks with p-values below 0.05."
+    ],
+    "limits": [
+      "The dataset of 980 individuals may not be representative of the entire global population, creating predictive biases.",
+      "Geographic and cultural specificity limit generalizability to other cultural contexts with different shopping patterns.",
+      "The existing feature set may lack granular cultural or micro-economic indicators.",
+      "Internal cross-validation was used but external validation on independent datasets has not been conducted."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 14 topic domains was performed. Domains 6 (Predictive Modeling) and 12 (Evaluation Frameworks) were flagged as highly relevant, with codes 6.A and 12.A/B selected due to the paper's core focus on CNN-based income prediction and rigorous 5-fold CV evaluation. Domain 5 (Financial Behavioral Profiles) was considered medium relevance via code 5.C for its classification approach. Domain 7 (Budgeting) and 3 (Expense Categorization) were assessed as low or contextual because the paper does not directly address budgeting strategies or systematic expense categorization—product recommendations are income-based rather than budget-based. Domain 13 (Savings) was contextual only as income prediction is related to savings capacity but not directly addressed. Domains 1 (Filipino Young Professionals), 2 (Culturally Specific Practices), 4 (Existing Systems), 8 (Anomaly Detection), 9 (Mobile-First), 10 (Privacy), 11 (Engagement), and 14 (Synthetic Data/Deployment) were rejected as the paper covers none of these topics. The overall topical coverage centers on algorithmic prediction and evaluation, with secondary relevance to behavioral classification and contextual budgeting implications."
+  },
+  "limitations": [
+    "The 980-sample dataset may not be representative of the global population, creating predictive biases in different socio-economic settings.",
+    "Geographic and cultural specificity limits generalizability to other cultural contexts with different shopping patterns.",
+    "The existing feature set may lack necessary granular cultural or micro-economic indicators.",
+    "Only internal cross-validation was performed; external validation on independent datasets has not been conducted. [unacknowledged]",
+    "Self-reporting bias in questionnaire data, especially on sensitive variables like precise income or shopping frequency."
+  ],
+  "remember_this": [
+    "Achieved 93.06% accuracy in predicting income levels using CNN with hybrid pooling.",
+    "Hybrid pooling outperformed max-pooling-only and average-pooling-only CNN variants.",
+    "Product recommendation accuracy reached 95% for the highest-performing product category.",
+    "Top income predictors are job category, education, age, job history, residence, and marital status.",
+    "Statistical significance tests confirmed improvements over benchmarks with p < 0.05."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lou et al_marked.md",
+      "converted_at": "2026-07-21T14:05:20Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

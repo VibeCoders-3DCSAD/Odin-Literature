@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.1016/j.engappai.2024.109672",
+  "designation": "international-algorithm-specific",
+  "title": "AHO-InDNN: An Efficient Hybrid Optimization Algorithm for Fraud Detection in E-Commerce Using Improved Deep Neural Network",
+  "authors": "D. R., J.; Sheela, A.; Raj, A. J.; Priyadarshini, Y.; Basha, S. M.",
+  "year": 2025,
+  "venue": "Engineering Applications of Artificial Intelligence",
+  "odin_topics": ["8.A", "14.A", "14.B"],
+  "tldr": "Proposes AHO-InDNN, a hybrid optimization algorithm combining Artificial Hummingbird Optimization and Hunger Games Search with an improved deep neural network for binary fraud detection in e-commerce transactions.",
+  "problem_and_motivation": "E-commerce fraud causes massive financial losses and transaction volume makes manual detection impractical. Existing ML-based fraud detection suffers from class imbalance and suboptimal hyperparameter tuning.",
+  "approach": [
+    "Proposed cascaded hybrid optimization (AHO + HGS) with Lévy flight and Roulette wheel selection to balance exploration and exploitation.",
+    "Improved DNN with cross-entropy loss and L2 regularization for fraud classification.",
+    "Preprocessing: encoding categorical features, standard scaling, SMOTE for class imbalance handling.",
+    "Evaluation on two e-commerce transaction datasets with 16 features each, 44% fraud ratio.",
+    "Compared against 8 baseline algorithms: SVM, RF, DNN, PSO-DNN, GWO-DNN, BOA-DNN, WOA-DNN, AHA-DNN."
+  ],
+  "findings": [
+    "num: AHO-InDNN achieved 98.8% accuracy, 98.7% precision, 98.5% recall, 98.6% F1-score, 0.01 FPR.",
+    "num: AHO-InDNN outperformed the best baseline (AHA-DNN) by 1.8% in accuracy and 2.5% in F1-score.",
+    "Hybrid optimization (AHO+HGS) outperformed individual metaheuristics (AHA, PSO, GWO) for DNN tuning.",
+    "Cascaded design reduced computational cost compared to parallel hybrid approaches.",
+    "Lévy flight escape mechanism prevented premature convergence in local optima."
+  ],
+  "key_figures_tables": [
+    "Table 6: Performance comparison of AHO-InDNN vs. 8 baseline algorithms",
+    "Figure 8: ROC curves comparing AHO-InDNN with baseline models",
+    "Figure 9: Heatmap of correlation matrix for the e-commerce dataset"
+  ],
+  "key_equations": [
+    {"equation": "AHO-InDNN = AHA + HGS + Lévy flight + Roulette wheel + Improved DNN", "explanation": "Cascaded hybrid optimization combining AHA exploration and HGS exploitation with flight mechanisms."},
+    {"equation": "Cross-entropy loss: L = -Σ y log(ŷ) + λ/2 ||w||²", "explanation": "Loss function minimizing prediction error with L2 regularization to prevent overfitting."}
+  ],
+  "definitions": [
+    {"term": "AHO", "definition": "Artificial Hummingbird Optimization — metaheuristic inspired by hummingbird foraging behavior for global search."},
+    {"term": "HGS", "definition": "Hunger Games Search — metaheuristic inspired by hunger-driven animal behavior for local exploitation."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Oversampling Technique — generates synthetic samples for the minority class to address imbalance."}
+  ],
+  "citations": [
+    {"author": "Zhao", "year": 2022, "page": 0, "paragraph": 0, "claim": "AHA mimics hummingbird flight patterns including axial, diagonal, and omnidirectional flights.", "role": "context"},
+    {"author": "Yang", "year": 2021, "page": 0, "paragraph": 0, "claim": "HGS models hunger-driven behavior with weights for exploration-exploitation balance.", "role": "context"},
+    {"author": "Chawla", "year": 2002, "page": 0, "paragraph": 0, "claim": "SMOTE generates synthetic minority samples by interpolating between existing minority instances.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Fraud Detection in PFMS", "relevance": "high", "justification": "Core contribution: fraud detection in e-commerce transactions using hybrid ML."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Novel hybrid optimization algorithm combining AHA and HGS with improved DNN."},
+      {"code": "14.B", "name": "AI explainability (XAI) in PFMS", "relevance": "low", "justification": "No explanation mechanism provided for fraud detection decisions."}
+    ],
+    "contribution_to_field": "Provides a novel hybrid optimization algorithm (AHO-InDNN) that demonstrates state-of-the-art performance on e-commerce fraud detection. The cascaded hybrid approach (AHA exploration + HGS exploitation with Lévy flight escape) offers a computational efficiently alternative to parallel hybrids. The approach is directly applicable to fraud detection modules in PFMS.",
+    "directly_justifies": [
+      "Hybrid metaheuristic optimization improves DNN hyperparameter tuning for fraud detection.",
+      "Cascaded hybrid design balances computational cost with optimization quality.",
+      "SMOTE is effective for handling class imbalance in transaction fraud datasets."
+    ],
+    "limits": [
+      "Evaluated on only two datasets with fixed 44% fraud ratio — generalization uncertain. [acknowledged]",
+      "No explainability mechanism for fraud detection decisions. [unacknowledged]",
+      "Computational complexity comparison against baselines is limited. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 8.A (fraud detection) and 14.A (ML approaches) were flagged as highly relevant because the paper proposes a novel ML algorithm specifically for fraud detection. Domain 14.B was flagged as low relevance because no XAI mechanism is provided. Domains 1-7, 9-13 were rejected as the paper focuses purely on algorithmic fraud detection without addressing user profiling, budgeting, savings, or other PFMS aspects."
+  },
+  "limitations": [
+    "Tested on only two datasets; real-world generalization not established. [acknowledged]",
+    "No explanation mechanism for fraud decisions. [unacknowledged]"
+  ],
+  "remember_this": [
+    "AHO-InDNN: cascaded hybrid of AHA + HGS with Lévy flight for DNN optimization.",
+    "Achieves 98.8% accuracy, 98.6% F1-score on e-commerce fraud detection.",
+    "Outperforms PSO-DNN, GWO-DNN, WOA-DNN, BOA-DNN by significant margins.",
+    "SMOTE handles class imbalance in transaction datasets."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:01:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "D. R. et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

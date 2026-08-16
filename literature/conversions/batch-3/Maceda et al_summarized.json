@@ -1,0 +1,146 @@
+{
+  "paper_id": "10.1145/3639233.3639353",
+  "designation": "local-algorithm-specific",
+  "title": "Classifying Sentiments on Social Media Texts: A GPT-4 Preliminary Study",
+  "authors": "Maceda, L. L.; Llovido, J. L.; Artiaga, M. B.; Abisado, M. B.",
+  "year": 2023,
+  "venue": "2023 7th International Conference on Natural Language Processing and Information Retrieval (NLPIR 2023)",
+  "odin_topics": ["9.A", "9.B", "10.A"],
+  "tldr": "Evaluates GPT-4's zero- and one-shot sentiment classification performance on a code-mixed Filipino social media dataset, finding substantial agreement with human annotations.",
+  "problem_and_motivation": "Accurate sentiment classification in large, unstructured social media datasets typically requires costly and time-consuming human-annotated training data. The potential of advanced Large Language Models like GPT-4 to perform this task without explicit training data remains underexplored, especially for low-resource and code-mixed languages.",
+  "approach": [
+    "Used a dataset of 600 human-annotated social media posts related to the Philippine UAQTE program, sourced from Facebook, Twitter, and YouTube.",
+    "Employed GPT-4 via its API with zero-shot and one-shot learning prompts, where the one-shot prompt mimicked human annotation instructions.",
+    "Designed three prompt variations: zero-shot English, one-shot English with persona, and a code-mixed one-shot prompt translated by a native Bicolano speaker.",
+    "Processed data in batches to manage API costs and used a temperature of 0 for deterministic outputs.",
+    "Compared GPT-4's performance against a fine-tuned mBERT model on the same unprocessed dataset.",
+    "Used Cohen's Kappa, accuracy, precision, and recall for evaluation."
+  ],
+  "findings": [
+    "num: The one-shot English prompt achieved a Kappa value of 0.77 with human annotations.",
+    "num: The one-shot English prompt achieved an accuracy of 0.85.",
+    "num: The code-mixed one-shot prompt achieved a Kappa value of 0.73 and an accuracy of 0.8250.",
+    "num: The fine-tuned mBERT model achieved an accuracy of 0.8277, lower than the best GPT-4 result.",
+    "GPT-4 one-shot prompts exhibited sensitivity, sometimes returning words instead of the requested numerical labels, necessitating post-processing.",
+    "The model struggled with domain-specific slang and informal language, such as the word 'cutie'.",
+    "GPT-4 can effectively classify sentiments in diverse, unprocessed code-mixed data with adequate prompt instructions."
+  ],
+  "key_figures_tables": [
+    "Table 1: Interpretation of Cohen's Kappa values used to measure inter-rater reliability.",
+    "Table 2: Performance comparison of GPT-4 prompts and mBERT, showing GPT-4's one-shot English prompt achieved the highest scores.",
+    "Table 3: Examples of sentiment classifications, illustrating instances where GPT-4 and mBERT agreed or disagreed with human labels.",
+    "Figure 1: A flowchart of the sentiment annotation process using the GPT-4 API."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "GPT-4", "definition": "Generative Pre-trained Transformer 4, a large language model by OpenAI."},
+    {"term": "mBERT", "definition": "Multilingual Bidirectional Encoder Representations from Transformers."},
+    {"term": "UAQTE", "definition": "Philippine Universal Access to Quality and Tertiary Education Act."},
+    {"term": "Code-mixing", "definition": "The use of multiple languages within a single sentence."},
+    {"term": "LLM", "definition": "Large Language Model."}
+  ],
+  "citations": [
+    {
+      "author": "Maceda",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fine-tuned mBERT achieved 80.21% accuracy on code-mixed Filipino text.",
+      "role": "baseline"
+    },
+    {
+      "author": "OpenAI",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Acknowledged risk of data contamination in benchmark assessments.",
+      "role": "critique"
+    },
+    {
+      "author": "Wang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GPT-3 labeling can outperform human labeling in cost-effective scenarios.",
+      "role": "context"
+    },
+    {
+      "author": "Kheiri",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GPT-3.5 is effective in overcoming linguistic nuances like sarcasm detection.",
+      "role": "context"
+    },
+    {
+      "author": "Liyanage",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Few-shot approach with GPT-4 showed higher similarity to human experts.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "Paper mentions social media platforms as data sources but does not address mobile design."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "contextual",
+        "justification": "Data sourced from social media, with no discussion of personal finance UX."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Paper is about sentiment analysis of public social media data, not personal finance data."
+      }
+    ],
+    "contribution_to_field": "This paper provides the first known evaluation of GPT-4 for sentiment classification on a code-mixed, low-resource social media dataset. It demonstrates that with appropriate prompting, GPT-4 can achieve substantial agreement with human annotators without fine-tuning, outperforming a fine-tuned mBERT model. The study contributes foundational empirical evidence on the capabilities and limitations of state-of-the-art LLMs for multilingual and informal text analysis. It also highlights practical challenges such as prompt sensitivity and the model's struggle with domain-specific slang.",
+    "directly_justifies": [
+      "GPT-4 can classify sentiments in code-mixed social media data without explicit training.",
+      "One-shot prompts mimicking human instructions yield substantial agreement with human annotations.",
+      "Prompt design, including the use of persona and clear constraints, is critical for performance.",
+      "GPT-4's performance can be affected by pre-trained knowledge, leading to errors with slang."
+    ],
+    "limits": [
+      "The paper is a preliminary study with a limited dataset of 600 samples.",
+      "The study was run only once due to the high cost of the GPT-4 API.",
+      "GPT-4's performance is dependent on the quality and biases of its training data."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains in the taxonomy was performed. The paper's core contribution (sentiment analysis on social media texts) is unrelated to Filipino personal finance, spending behavior, or financial management systems. While the data was from the Philippines, it was about a tertiary education program, not financial practices. Domains related to mobile design (9.A, 9.B) were deemed contextual because the data source was social media, but the paper does not discuss design principles. Domain 10.A was also considered contextual as the study does not address privacy or security of personal financial data. All other domains were found to be irrelevant, as the paper does not cover financial behaviors, budgeting, or financial systems. The overall topical coverage is limited to natural language processing, with no substantive connection to the core personal finance domains of the taxonomy."
+  },
+  "limitations": [
+    "The study's findings are based on a single run of the GPT-4 experiment due to cost constraints. [unacknowledged]",
+    "The performance of GPT-4 may vary across different domains and is sensitive to prompt design.",
+    "The code-mixed prompt was translated by a single native speaker, which may not represent all linguistic variations.",
+    "GPT-4's outputs sometimes required post-processing due to formatting inconsistencies."
+  ],
+  "remember_this": [
+    "GPT-4 achieved substantial agreement (k=0.77) with human annotators using a one-shot prompt.",
+    "One-shot English prompt outperformed fine-tuned mBERT on a code-mixed dataset.",
+    "Prompt engineering, including persona and constraints, is crucial for GPT-4's performance.",
+    "GPT-4 can produce high-quality annotations without task-specific fine-tuning.",
+    "Challenges persist with domain-specific slang and inconsistent output formatting."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "gpt-4-turbo-2024-04-09",
+    "conversion_reference": {
+      "file": "Maceda et al_marked.md",
+      "converted_at": "2026-07-21T14:09:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

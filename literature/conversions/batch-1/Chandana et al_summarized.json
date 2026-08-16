@@ -1,0 +1,145 @@
+{
+  "paper_id": "fde02958-7269-5105-a69e-1b6327f14680",
+  "designation": "international-algorithm-specific",
+  "title": "Personal Finance Tracker with AI Based Expense Prediction",
+  "authors": "Chandana, M.; Manoj Vardhan Reddy, E.; Praveen Reddy, E.; Siri Vaishnavi, I.; Vaishnavi, K.",
+  "year": 2026,
+  "venue": "American Journal of Management and IoT Medical Computing",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "7.B",
+    "8.A",
+    "8.B",
+    "10.A",
+    "12.A"
+  ],
+  "tldr": "An AI-powered personal finance tracker combining Random Forest for expense classification and LSTM for time-series forecasting demonstrates improved financial awareness compared to traditional static trackers.",
+  "problem_and_motivation": "Traditional expense trackers record transactions but fail to provide analytical insights or budgeting guidance, limiting users to surface-level understanding of their finances.",
+  "approach": [
+    "Built using Python Flask framework with MySQL database for transaction storage and management.",
+    "Random Forest algorithm classifies transactions into categories such as food, travel, rent, and entertainment.",
+    "LSTM deep learning model forecasts future monthly expenses based on historical transaction data.",
+    "Anomaly detection component analyzes spending trends to identify unusual or excessive spending patterns.",
+    "Interactive dashboard provides graphical reports including bar charts, pie charts, and line graphs.",
+    "Data preprocessing module cleans transaction data, handles null values, and normalizes datasets."
+  ],
+  "findings": [
+    "num: LSTM model achieved around 85% accuracy in forecasting next-month expenses.",
+    "num: Random Forest classifier reached above 90% accuracy in transaction categorization.",
+    "Predicted values closely matched actual spending patterns for most categories.",
+    "Anomaly detection identified sudden spending spikes and irregular transactions with good accuracy.",
+    "Users found the dashboard interface easy to understand and useful for financial awareness."
+  ],
+  "citations": [
+    {
+      "author": "Zhang",
+      "year": 0,
+      "page": 1,
+      "paragraph": 16,
+      "claim": "Proposed integration of LSTM networks for time-series forecasting in personal financial applications.",
+      "role": "methodology"
+    },
+    {
+      "author": "Patel",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 8,
+      "claim": "Presented Predictive Analysis of User Expenditure Using Random Forest and LSTM.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rajasekar",
+      "year": 2022,
+      "page": 4,
+      "paragraph": 5,
+      "claim": "Developed a Personal Finance Management System Using Machine Learning.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Random Forest automatically classifies transactions into spending categories."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Surveys traditional expense trackers and their capabilities."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps: lack of automation, no behavioral analysis, no prediction."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution: ML-based expense prediction system using Random Forest and LSTM."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "LSTM for time-series forecasting of monthly expenses."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "System includes anomaly detection module for unusual spending patterns."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Describes anomaly detection for spending but provides limited algorithmic detail."
+      }
+    ],
+    "contribution_to_field": "Contributes an integrated AI-powered personal finance tracking system combining expense classification, forecasting, and anomaly detection within a single web-based platform. Demonstrates practical application of Random Forest and LSTM models to personal financial data.",
+    "directly_justifies": [
+      "Random Forest achieves above 90% accuracy in automated expense categorization.",
+      "LSTM model forecasts next-month expenses with approximately 85% accuracy.",
+      "Anomaly detection component identifies sudden spending spikes and irregular transactions.",
+      "System transforms passive expense tracking into an intelligent, predictive financial management assistant."
+    ],
+    "limits": [
+      "Dataset size and source details are not specified, limiting reproducibility.",
+      "No comparison against other ML algorithms beyond Random Forest and LSTM.",
+      "Anomaly detection approach described at high level without algorithmic specifics.",
+      "Evaluation metrics reported as percentages without precision, recall, or F1 scores."
+    ]
+  },
+  "limitations": [
+    "Dataset size and source details are not specified, limiting reproducibility.",
+    "No comparison against other ML algorithms beyond Random Forest and LSTM.",
+    "Anomaly detection approach described at high level without algorithmic specifics.",
+    "Evaluation metrics reported as percentages without precision, recall, or F1 scores."
+  ],
+  "remember_this": [
+    "Random Forest achieves above 90% accuracy in automated expense categorization.",
+    "LSTM model forecasts next-month expenses with approximately 85% accuracy.",
+    "System combines expense classification, prediction, anomaly detection, and visualization.",
+    "Anomaly detection identifies unusual spending patterns to alert users early.",
+    "Dashboard transforms complex financial data into clear actionable insights."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Chandana et al_marked.md",
+      "converted_at": "2026-07-22T12:44:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

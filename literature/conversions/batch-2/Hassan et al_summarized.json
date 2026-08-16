@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.1109/ACCESS.2024.3359053",
+  "designation": "international-algorithm-specific",
+  "title": "GCZRec: Generative Collaborative Zero-Shot Framework for Cold Start News Recommendation",
+  "authors": "Hassan, S. Z. U.; Rafi, M.; Frnda, J.",
+  "year": 2024,
+  "venue": "IEEE Access",
+  "odin_topics": ["5.B", "5.C", "7.E"],
+  "tldr": "Proposes GCZRec, a generative zero-shot framework using conditional Wasserstein GAN to make cold-start news recommendations by synthesizing user-item interactions from latent features.",
+  "problem_and_motivation": "Traditional collaborative filtering cannot recommend cold-start news items lacking historical interaction data. Existing techniques fail to incorporate collaborative information between users and items simultaneously, reducing serendipity and recommendation diversity.",
+  "approach": [
+    "Formulated cold-start news recommendation as a zero-shot learning problem using item and user features.",
+    "Designed a generative framework (GCZRec) with two separate conditional Wasserstein GAN (cWGAN) networks for cold-start items and cold-start users.",
+    "Trained generator networks to synthesize interaction vectors using latent collaborative information.",
+    "Evaluated on two public datasets: Microsoft News Dataset (MIND) and Addressa.",
+    "Formulated the recommendation as an extreme multi-label classification task for efficient ranking."
+  ],
+  "findings": [
+    "GCZRec framework enables both cold-start and warm-start news recommendations with collaborative signal integration.",
+    "Synthesized interactions from latent features eliminate the need for external click predictor models.",
+    "The framework can be used as preprocessing to improve existing recommender system performance.",
+    "Conditional WGAN generates diverse recommendations, improving serendipity over content-only approaches."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Illustration of the cold start news recommendation problem → Shows the cold-start item challenge in news recommendation."
+  ],
+  "key_equations": [
+    {"equation": "f: X -> Z", "explanation": "Zero-shot learning maps input to semantic space."},
+    {"equation": "g: Z -> Y", "explanation": "Semantic space mapped to label space for classification."}
+  ],
+  "definitions": [
+    {"term": "GCZRec", "definition": "Generative Collaborative Zero-Shot Recommender System"},
+    {"term": "cWGAN", "definition": "conditional Wasserstein Generative Adversarial Network"},
+    {"term": "MIND", "definition": "Microsoft News Dataset"},
+    {"term": "Zero-shot learning", "definition": "Classification on classes unseen during training"}
+  ],
+  "citations": [
+    {"author": "Reference 1", "year": 0, "page": 0, "paragraph": 0, "claim": "Information overload necessitates personalized news recommender systems.", "role": "context"},
+    {"author": "Reference 4", "year": 0, "page": 0, "paragraph": 0, "claim": "Collaborative filtering relies on historical interactions for pattern discovery.", "role": "methodology"},
+    {"author": "Reference 7", "year": 0, "page": 0, "paragraph": 0, "claim": "Content-based filtering suffers from cold-start user problems.", "role": "critique"},
+    {"author": "Reference 11", "year": 0, "page": 0, "paragraph": 0, "claim": "Zero-shot classification can be adapted for cold-start recommendation.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "high", "justification": "Core contribution addresses cold-start recommendation using zero-shot learning."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "Recommender classification approach maps to behavioral profile classification."},
+      {"code": "7.E", "name": "Onboarding and Cold-Start for Budget Recommendation", "relevance": "high", "justification": "Cold-start methodology is directly applicable to budget recommendation onboarding."}
+    ],
+    "contribution_to_field": "This paper introduces a generative framework that bridges collaborative filtering and zero-shot learning to solve cold-start recommendation. It demonstrates that synthesizing interactions from latent user and item features using conditional GANs can produce diverse, serendipitous recommendations. The framework establishes a new paradigm for cold-start handling that preserves collaborative signals without requiring historical interaction data.",
+    "directly_justifies": [
+      "Zero-shot learning effectively models cold-start recommendation problems.",
+      "Conditional WGAN synthesis preserves collaborative signals for diverse recommendations.",
+      "GCZRec generates both cold-start and warm-start recommendations in a unified framework."
+    ],
+    "limits": [
+      "Evaluated only on news recommendation datasets, not financial or budgeting domains.",
+      "Computational cost of GAN training for large-scale systems not addressed. [unacknowledged]",
+      "No comparison with graph-based cold-start methods."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 5.B (Cold-Start Problem) was flagged as high relevance because the paper's core contribution is cold-start recommendation methodology. Domain 7.E (Budget Recommendation Cold-Start) was flagged as high because the cold-start technique directly transfers to budget onboarding. Domain 5.C (Classification Approaches) received medium relevance for the classification methodology. All other domains were rejected."
+  },
+  "limitations": [
+    "Evaluated only on news recommendation; applicability to personal finance recommendation unverified. [unacknowledged]",
+    "No analysis of training stability or convergence of cWGAN for recommendation tasks.",
+    "MIND and Addressa datasets may not capture financial transaction interaction patterns."
+  ],
+  "remember_this": [
+    "GCZRec solves cold-start recommendation using zero-shot learning with cWGAN.",
+    "Framework generates diverse recommendations by synthesizing user-item interactions.",
+    "Cold-start recommendation can be modeled as extreme multi-label classification.",
+    "No external click predictor needed; interactions synthesized from latent features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hassan et al_marked.md",
+      "converted_at": "2026-07-22T13:32:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "paper_id": "10.63282/3050-922X.IJERET-V6I2P110",
+  "designation": "international-algorithm-specific",
+  "title": "A Study on Credit Default Prediction Using Hybrid AI Models Combining Neural Architectures and Econometric Features",
+  "authors": "Nagaraj",
+  "year": 2025,
+  "venue": "International Journal of Engineering Research and Emerging Technologies (IJERET), 6(2)",
+  "odin_topics": [
+    "12.A",
+    "5.C",
+    "13.B",
+    "6.A"
+  ],
+  "tldr": "Proposes a hybrid AI model combining LSTM neural networks with logistic regression on econometric features (credit history, DTI ratio, employment status, loan purpose) for credit default prediction, achieving superior ROC-AUC (0.92 vs. 0.85 baseline) and low Type II error rate (7.8%).",
+  "problem_and_motivation": "Conventional credit scoring models (logistic regression, decision trees) underperform on non-linear relationships, class imbalance (~5% defaults), and temporal dependencies in borrower histories. The credit industry is projected to grow to $2.1 trillion by 2025, yet default losses erode lender profitability. Prediction of credit defaults is a high-stakes problem where reducing False Negatives (approving a defaulting borrower) is critical for profitability.",
+  "approach": [
+    "Hybrid architecture: LSTM (2 layers, 64 units) for temporal sequence learning from 24-month payment histories + logistic regression on static econometric features.",
+    "Data sourced from a financial institution's loan portfolio (2018-2023): ~200,000 borrowers, 78% performing loans, 22% default cases.",
+    "SMOTE oversampling for class imbalance; data split 80/20 train-test.",
+    "Feature engineering: 45 raw features reduced to 20 via PCA + correlation analysis (VIF < 5 threshold).",
+    "Training: Adam optimizer (lr=0.001), MSE loss, early stopping (patience=10), batch size 32, 100 epochs.",
+    "Threshold optimization using Youden's J statistic (optimal threshold = 0.32)."
+  ],
+  "findings": [
+    "Hybrid model achieves ROC-AUC of 0.92, significantly outperforming standalone LSTM (0.88) and logistic regression (0.85).",
+    "num: Sensitivity (True Positive Rate for defaults): 0.91 (hybrid) vs. 0.84 (LSTM) vs. 0.71 (logistic regression).",
+    "num: Specificity (True Negative Rate for performing loans): 0.87 (hybrid) vs. 0.82 (LSTM) vs. 0.78 (logistic regression).",
+    "num: Type II error rate (False Negatives): 7.8% (hybrid) vs. 12.5% (LSTM) vs. 18.2% (logistic regression).",
+    "num: Type I error rate (False Positives): 10.2% (hybrid) vs. 13.1% (LSTM) vs. 16.4% (logistic regression).",
+    "num: Most influential features: credit history length (SHAP importance: 0.21), DTI ratio (0.18), payment-to-income ratio (0.15).",
+    "Ablation study confirms that removing temporal features reduces AUC by 0.06, while removing econometric features reduces AUC by 0.08, confirming hybrid synergy.",
+    "Calibration analysis: Brier score = 0.09 (hybrid) versus 0.15 (LSTM) and 0.18 (logistic regression).",
+    "Computational efficiency: training time 1.76× longer than logistic regression but inference latency < 5ms per sample."
+  ],
+  "key_figures_tables": [
+    "Table 1: Dataset Summary after Pre-processing",
+    "Table 2: Performance Metrics Comparison",
+    "Table 3: Feature Importance (SHAP)",
+    "Table 4: Ablation Study Results (AUC, Sensitivity, Specificity)",
+    "Figure 1: Block Diagram of Hybrid Model",
+    "Figure 2: Confusion Matrix for Hybrid Model",
+    "Figure 3: ROC Curves for All Models",
+    "Figure 4: SHAP Feature Importance Bar Plot"
+  ],
+  "key_equations": [
+    {
+      "equation": "f_t = σ(W_f · [h_{t-1}, x_t] + b_f)",
+      "explanation": "LSTM forget gate determining retention of prior cell state information."
+    },
+    {
+      "equation": "i_t = σ(W_i · [h_{t-1}, x_t] + b_i); C̃_t = tanh(W_C · [h_{t-1}, x_t] + b_C)",
+      "explanation": "Input gate and candidate cell state for new information integration."
+    },
+    {
+      "equation": "ŷ = 1/(1 + e^{-(β_0 + β_1X_1 + ... + β_kX_k + γ · h_{t,T})})",
+      "explanation": "Hybrid output: logistic regression on combined econometric features (X) and LSTM hidden state (h_{t,T})."
+    },
+    {
+      "equation": "J_Youden = Sensitivity + Specificity − 1",
+      "explanation": "Youden's J statistic used to optimize classification threshold (optimal J at threshold = 0.32)."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Hybrid AI Model",
+      "definition": "Combines LSTM neural network for temporal sequence modeling with logistic regression for static econometric features, producing a unified default probability score."
+    },
+    {
+      "term": "Type II Error (False Negative)",
+      "definition": "A borrower who defaults being classified as performing; the most costly error in lending, representing principal loss."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Srivastava et al.",
+      "year": 2014,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Dropout regularization reduces overfitting in neural networks by randomly dropping units during training.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chawla et al.",
+      "year": 2002,
+      "page": 321,
+      "paragraph": 1,
+      "claim": "SMOTE (Synthetic Minority Over-sampling Technique) creates synthetic samples for imbalanced classification problems.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hochreiter & Schmidhuber",
+      "year": 1997,
+      "page": 1735,
+      "paragraph": 1,
+      "claim": "LSTM architecture solves vanishing gradient problems in recurrent neural networks, enabling long-term dependency learning.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lundberg & Lee",
+      "year": 2017,
+      "page": 4765,
+      "paragraph": 1,
+      "claim": "SHAP unified framework for interpreting model predictions based on Shapley values from cooperative game theory.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kingma & Ba",
+      "year": 2015,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Adam optimization combines AdaGrad and RMSProp for efficient stochastic optimization with adaptive learning rates.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lessmann et al.",
+      "year": 2015,
+      "page": 126,
+      "paragraph": 1,
+      "claim": "Benchmarking study of credit scoring models showing that ensemble and deep learning methods outperform traditional classifiers.",
+      "role": "support"
+    },
+    {
+      "author": "Hand & Henley",
+      "year": 1997,
+      "page": 523,
+      "paragraph": 1,
+      "claim": "Statistical classification methods including logistic regression in consumer credit scoring.",
+      "role": "context"
+    },
+    {
+      "author": "Youden",
+      "year": 1950,
+      "page": 32,
+      "paragraph": 1,
+      "claim": "Index for rating diagnostic tests: J = Sensitivity + Specificity − 1 for optimal threshold selection.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "Credit Risk Management",
+        "relevance": "high",
+        "justification": "Credit default prediction is the core credit risk assessment function for lending institutions."
+      },
+      {
+        "code": "5.C",
+        "name": "Machine Learning / Deep Learning",
+        "relevance": "high",
+        "justification": "Uses LSTM neural networks and hybrid AI model architecture."
+      },
+      {
+        "code": "13.B",
+        "name": "Algorithmic Modeling / Optimization",
+        "relevance": "high",
+        "justification": "Proposes a novel hybrid model with threshold optimization and SHAP-based interpretability."
+      },
+      {
+        "code": "6.A",
+        "name": "Classification / Prediction",
+        "relevance": "high",
+        "justification": "Binary classification (default vs. performing) with comprehensive evaluation metrics."
+      }
+    ],
+    "contribution_to_field": "Demonstrates that hybridizing temporal (LSTM) and static (econometric) features yields superior default prediction accuracy and significantly lower False Negative rates than either component alone, with practical inference latency for real-time credit decisions.",
+    "directly_justifies": [
+      "Supports Odin's credit risk scoring module by providing a proven hybrid architecture combining sequential payment history with static borrower features.",
+      "The SHAP-based feature importance approach can be replicated in Odin for explainable credit decisions.",
+      "Threshold optimization via Youden's J can be implemented in Odin's decision engine to balance lender risk vs. borrower approval rates."
+    ],
+    "limits": [
+      "Single financial institution data source; may not generalize across different lending markets or regulatory environments.",
+      "No external validation on hold-out datasets from other institutions.",
+      "SMOTE may introduce synthetic samples that do not reflect real-world default patterns.",
+      "Fairness and bias analysis not addressed (e.g., protected attributes in lending decisions)."
+    ],
+    "topic_mapping_rationale": "Credit default prediction with hybrid AI model makes this international-algorithm-specific. Maps to credit risk (12.A), ML/DL (5.C), algorithmic modeling (13.B), and classification (6.A)."
+  },
+  "limitations": [
+    "Data from a single institution limits cross-institutional applicability",
+    "Model fairness across demographic groups (gender, ethnicity) not evaluated",
+    "LSTM interpretability remains limited despite SHAP application",
+    "No catastrophic forgetting analysis for continuous model updating",
+    "Computational requirements exceed traditional scoring by 1.76×, which may be prohibitive for smaller lenders"
+  ],
+  "remember_this": [
+    "Hybrid LSTM + logistic regression achieves AUC 0.92 for credit default.",
+    "Type II error rate reduced to 7.8% (vs. 18.2% for logistic regression).",
+    "Credit history length and DTI ratio are the most predictive features (SHAP).",
+    "LSTM captures temporal patterns; logistic regression handles static features.",
+    "Optimal threshold at 0.32 via Youden's J for profit-maximizing classification."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Nagaraj_marked.md",
+      "converted_at": "2026-07-21T07:43:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.14456/jads.2025.xx",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic Model for Budget Allocation via Multi-Criteria Optimization",
+  "authors": "Gulbakyt, S.; Almaz, A.; Saule, S.; Suhrab, Y.",
+  "year": 2025,
+  "venue": "Journal of Applied Data Sciences",
+  "odin_topics": ["7.A", "7.B", "7.C", "7.D"],
+  "tldr": "Proposes dynamic multi-criteria optimization framework for regional budget allocation using SQP and GA, allocating 42.7B tenge across 7 sectors with Gini coefficient of 0.223 indicating fair distribution.",
+  "problem_and_motivation": "Regional budget allocation in Kazakhstan suffers from opaque procedures and lack of public trust. Manual allocation fails to balance citizen satisfaction, strategic priorities, basic needs, and urbanization levels.",
+  "approach": [
+    "Developed multi-criteria optimization framework with four weighted criteria: citizen satisfaction (0.2), strategic development (0.2), basic needs fulfillment (0.3), and urbanization level (0.3).",
+    "Applied Sequential Quadratic Programming (SQP) in MATLAB converging in 100 iterations.",
+    "Applied Genetic Algorithm (GA) in Python (DEAP library) over 500 generations.",
+    "Allocated 42,656,543 thousand tenge across 7 activity areas (education, healthcare, transport, infrastructure, digitalization, culture, ecology) across 4 districts.",
+    "Simulated participatory budgeting using synthetic citizen voting data from demographic factors."
+  ],
+  "findings": [
+    "num: SQP achieved objective function value of 18,519,864.85 thousand tenge.",
+    "num: GA achieved 18,520,000.00 thousand tenge after 500 generations.",
+    "num: Minimal difference of 135.15 thousand tenge (0.0007% of budget) confirms method reliability.",
+    "num: Healthcare (22.05%) and transport (21.11%) received largest allocations; education (7.03%) smallest.",
+    "num: Gini coefficient of 0.223 indicates fair distribution across sectors.",
+    "All seven sectors received funding, unlike linear programming baseline which omitted some categories.",
+    "SQP converges faster but GA offers robustness against local optima."
+  ],
+  "key_figures_tables": [
+    "Figure 6: Distribution of budget by districts and regions using GA.",
+    "Table 5: Comparative analysis of level balance, linear programming, and multi-criteria models.",
+    "Table 6: Comparative characteristics of SQP and GA methods."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "SQP", "definition": "Sequential Quadratic Programming, gradient-based deterministic optimization."},
+    {"term": "GA", "definition": "Genetic Algorithm, stochastic population-based optimization."},
+    {"term": "Gini coefficient", "definition": "Measure of inequality where 0=perfect equality and 1=perfect inequality."},
+    {"term": "Maslikhat", "definition": "Kazakhstan district representative body governing budget allocation."}
+  ],
+  "citations": [
+    {"author": "Mirza et al.", "year": 2025, "page": 0, "paragraph": 0, "claim": "Deep RL for dynamic portfolio risk prediction.", "role": "context"},
+    {"author": "Lakshmanaprabu et al.", "year": 2019, "page": 0, "paragraph": 0, "claim": "Random forest with optimal features for IoT data.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Directly addresses regional budget allocation strategy."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "high", "justification": "Multi-criteria optimization framework for budget recommendation."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "high", "justification": "Uses SQP and GA for constrained budget optimization."},
+      {"code": "7.D", "name": "Infeasibility Handling and Reduction Hierarchies", "relevance": "medium", "justification": "Discusses constraint violations and trade-offs in optimization."}
+    ],
+    "contribution_to_field": "Proposes dynamic multi-criteria optimization framework for fair regional budget allocation. Compares deterministic (SQP) and stochastic (GA) optimization methods on real budget data. Demonstrates that both methods achieve near-identical results, validating framework reliability. Introduces synthetic citizen voting simulation for participatory budgeting.",
+    "directly_justifies": [
+      "Multi-criteria optimization allocates budget with Gini coefficient of 0.223.",
+      "SQP and GA achieve nearly identical results (0.0007% difference).",
+      "All seven sectors receive funding under proposed framework.",
+      "Participatory budgeting simulated via synthetic citizen voting data."
+    ],
+    "limits": ["Synthetic citizen voting data; real data needed for validation."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 7.A, 7.B, 7.C high for budgeting strategy, recommendation, and optimization. Assigned 7.D medium for infeasibility handling. Rejected most other topics as paper focuses on governmental budget allocation."
+  },
+  "limitations": [
+    "Synthetic citizen voting data may not reflect real preferences.",
+    "Pilot testing planned but not yet implemented.",
+    "Disaggregated budget data unavailable for full quantitative validation."
+  ],
+  "remember_this": [
+    "Multi-criteria optimization allocates budget with Gini coefficient of 0.223.",
+    "SQP and GA achieve near-identical results with 0.0007% difference.",
+    "Healthcare and transport receive largest budget allocations.",
+    "All seven sectors receive funding unlike baseline models.",
+    "Framework proposed for Kazakhstan e-government system pilot."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gulbakyt et al_marked.md",
+      "converted_at": "2026-07-22T13:28:46Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

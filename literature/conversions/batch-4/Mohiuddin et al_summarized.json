@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.63125/1hh4q770",
+  "designation": "local-algorithm-specific",
+  "title": "Credit Decision Automation in Commercial Banks: A Review of AI and Predictive Analytics in Loan Assessment",
+  "authors": "American Journal; Interdisciplinary Studies",
+  "year": 2015,
+  "venue": "Journal of Interdisciplinary Studies",
+  "odin_topics": [
+    "12.A",
+    "4.A",
+    "5.C",
+    "6.A"
+  ],
+  "tldr": "The increasing integration of artificial intelligence (AI) and predictive analytics in commercial banking has fundamentally transformed credit decision-making, enabling faster, more accurate, and more inclusive loan assessment processes. This systematic review aims to synthesize the current academic and empirical literature on AI-powered credit decision automation, with particular attention to met",
+  "problem_and_motivation": "The increasing integration of artificial intelligence (AI) and predictive analytics in commercial banking has fundamentally transformed credit decision-making, enabling faster, more accurate, and more inclusive loan assessment processes. This systematic review aims to synthesize the current academic and empirical literature on AI-powered credit decision automation, with particular attention to methodological advancements, operational efficiency, financial inclusion, ethical governance, and regul",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Credit Decision Automation in Commercial Banks: A Review of AI and Predictive An"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Credit Decision Automation in Commercial Banks: A Review of AI and Predictive An",
+    "Year: 2015",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Mohiuddin et al_marked.md",
+      "converted_at": "2026-07-21T07:35:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

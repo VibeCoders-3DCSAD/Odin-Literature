@@ -1,0 +1,79 @@
+{
+  "paper_id": "uuid:v5:Claros2026",
+  "designation": "local",
+  "title": "Determinants of Saving Behavior Among Filipino University Students: A Psychological and Social Perspective",
+  "authors": "Claros, J.; Gaza, J.; Villaverde, Z.; Angeles, I.",
+  "year": 2026,
+  "venue": "Journal of Interdisciplinary and Multidisciplinary Research (JIMRES)",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.C", "5.A", "13.A"],
+  "tldr": "Uses PLS-SEM to examine financial literacy, parental influence, peer impact, and self-control as determinants of saving behavior among Filipino university students.",
+  "problem_and_motivation": "Understanding the psychological and social determinants of saving behavior among young Filipino adults is important for developing effective financial education. The interplay between self-control, social influence, and literacy in the Philippine context is not well understood.",
+  "approach": [
+    "Surveyed Filipino university students using a structured questionnaire.",
+    "Applied Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyze relationships.",
+    "Examined financial literacy, parental influence, peer impact, and self-control as predictors of saving behavior.",
+    "Framed within Katona's Theory and the Life-Cycle Hypothesis.",
+    "Assessed mediation effects among psychological and social factors."
+  ],
+  "findings": [
+    "Financial literacy had the greatest positive impact on saving behavior.",
+    "Parental influence positively and significantly affects saving behavior.",
+    "Peer influence was found to be insignificant for saving decisions.",
+    "Self-control negatively affected saving behavior, challenging conventional assumptions.",
+    "Findings support Katona's Theory and Life-Cycle Hypothesis for psychological and social determinants."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "PLS-SEM", "definition": "Partial Least Squares Structural Equation Modeling for latent variable analysis"},
+    {"term": "Life-Cycle Hypothesis", "definition": "Theory that saving behavior varies across life stages based on income expectations"}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Studies Filipino university students as a young adult demographic"},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "medium", "justification": "Examines saving behavior and its determinants among Filipino students"},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Core focus on saving behavior, financial literacy, and self-control"},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "high", "justification": "Philippine-specific context of family socialization and parental influence on saving"},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "low", "justification": "Self-reported saving behavior and financial attitudes"},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Identifies psychological and social determinants of saving profiles"},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Directly addresses saving behavior determinants"}
+    ],
+    "contribution_to_field": "This study provides empirical evidence on the psychological and social determinants of saving behavior among Filipino university students. It finds that financial literacy is the strongest predictor, parental influence matters, peer influence does not, and self-control negatively predicts saving. These findings extend Katona's Theory and the Life-Cycle Hypothesis to the Philippine young adult context.",
+    "directly_justifies": [
+      "Financial literacy is the strongest predictor of saving behavior among Filipino students.",
+      "Parental influence significantly affects saving behavior; peer influence does not.",
+      "Self-control negatively predicts saving, challenging conventional assumptions."
+    ],
+    "limits": [
+      "Single-institution sample (UST) limits generalizability across Philippine universities.",
+      "Cross-sectional design cannot establish causal direction of determinants.",
+      "Self-reported saving behavior may not reflect actual saving practices."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 1.A (Young Professionals) and 1.C (Financial Behavior) and 2.A (Culturally Specific Practices) were rated high. Topics 1.B (Financial Structure), 5.A (Behavioral Profiles), and 13.A (Savings Goal Management) were rated medium. Topic 2.C (User Preferences) was rated low. Topics 3.x, 4.x, 6.x, 7.x, 8.x, 9.x, 10.x, 11.x, 12.x, 13.B, 13.C, 14.x were rejected as the paper is a behavioral study, not addressing algorithms, system design, or technical solutions."
+  },
+  "limitations": [
+    "Single university sample limits generalizability across Philippine higher education.",
+    "Cross-sectional design prevents causal inference about determinants.",
+    "Self-reported measures may not accurately reflect actual saving behavior.",
+    "PLS-SEM has limitations compared to covariance-based SEM for theory testing. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Financial literacy is the strongest predictor of student saving behavior.",
+    "Parental influence matters; peer influence does not affect saving.",
+    "Self-control negatively predicts saving, challenging assumptions.",
+    "Study conducted at University of Santo Tomas, Manila.",
+    "Supports Katona's Theory for Philippine young adult financial behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Claros et al_marked.md",
+      "converted_at": "2026-07-22T12:59:38Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

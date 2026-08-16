@@ -1,0 +1,338 @@
+{
+  "paper_id": "10.1038/s41598-025-23116-6",
+  "designation": "international-algorithm-specific",
+  "title": "An equity aware recommender system for university admissions balancing operational constraints and strategic objectives",
+  "authors": "Ibrahim, A.; Alarood, A.; Alsolami, E.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "7.B",
+    "7.C",
+    "7.D",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Introduces a recommender system that integrates constraint satisfaction, goal programming, and equity theory to optimize university student admissions under hard and soft constraints.",
+  "problem_and_motivation": "Universities struggle to balance student demand against strict resource limits and flexible policy goals. Static planning methods fail when constraints shift, and existing CSP or ML approaches often disregard equity. There is a need for a dynamic, fair, and practical admissions allocation tool.",
+  "approach": [
+    "Models the admissions problem as a Constraint Satisfaction Problem with hard constraints (faculty hours, classroom capacity) and soft constraints (graduation rates, government quotas).",
+    "Introduces penalty functions for soft constraint violations, weighted by institutional priorities, and aggregates them into a single compliance penalty per program.",
+    "Uses an iterative, warm-start adjustment function that scales a program's baseline enrollment based on its normalized penalty score relative to the maximum observed penalty.",
+    "Recommends enrollment changes that reward fully compliant programs with increases up to hard capacity and penalizes non-compliant programs with reductions.",
+    "Evaluates the method against Greedy and Simulated Annealing baselines on a simulated dataset of 14 programs and 29,100 students.",
+    "Measures performance via hard constraint utilization, penalty score, Gini coefficient for fairness, and multi-year convergence time to full compliance."
+  ],
+  "findings": [
+    "num: The proposed recommender maintains enrollment at 85-90% of total hard capacity across five cycles, versus 50-75% for Simulated Annealing and ~60% for Greedy.",
+    "num: Achieves a Gini coefficient of 0.067 for seat distribution, significantly lower than Simulated Annealing (0.293) and Greedy (0.387), with p < 0.01.",
+    "num: Reaches full compliance in an average of 4.2 years, faster than Simulated Annealing (6.2 years) and Greedy (7.6 years).",
+    "num: Exceeds baseline compliance performance by over 50% in reducing soft-constraint penalties.",
+    "Moderate annual enrollment reductions (10-20%) improve compliance without causing instability or severe underutilization.",
+    "The penalty-based adjustment framework implicitly accounts for natural student graduation and avoids drastic year-to-year cuts.",
+    "Sensitivity analysis shows that a 'Gradual Reduction' strategy provides a balanced trade-off between compliance speed and operational stability.",
+    "The method provides a practical, interpretable, and computationally light alternative to re-solving static optimization models each cycle.",
+    "Incorporating equity theory ensures that partially compliant programs receive controlled enrollments rather than being excluded outright."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison of student allocations across methods → Proposed method shows balanced adjustments; SA and Greedy produce uneven distributions.",
+    "Figure 2: Gini coefficients across methods → Proposed method has the lowest Gini (0.067), indicating fairest seat distribution.",
+    "Figure 3: Average utilization of hard constraints over five cycles → Proposed method sustains 85-90% utilization; others fall below 75%.",
+    "Table 1: Performance summary across 14 programs → Programs with zero penalty (Medicine, Sports Science) receive large increases; violators see small decreases.",
+    "Table 2: Average time to full compliance → Proposed method takes 4.2 years; SA and Greedy take 6.2 and 7.6 years, respectively.",
+    "Table 3: Sensitivity analysis of admission reductions → Moderate cuts (10-20%) yield substantial compliance improvements.",
+    "Table 4: Reduction strategy comparison → Gradual reduction achieves full compliance in ~4.2 years on average, balancing speed and stability."
+  ],
+  "key_equations": [
+    {
+      "equation": "C_p = \\sum_{i=1}^{n} \\min(R_i, S_i) \\times \\alpha(i,p)",
+      "explanation": "Computes infrastructure capacity for a program based on room and section limits."
+    },
+    {
+      "equation": "\\alpha(i,p) = \\begin{cases} \\frac{T_i}{\\tau_p} \\times \\gamma_p, & \\text{if } T_i \\geq \\tau_p \\\\ 0, & \\text{otherwise} \\end{cases}",
+      "explanation": "Adjusts room capacity based on available timeslots and course type."
+    },
+    {
+      "equation": "U = \\frac{\\text{Achieved Seat-Hours}}{\\text{Available Seat-Hours}} \\times 100",
+      "explanation": "Measures resource utilization as a percentage of available seat-hours."
+    },
+    {
+      "equation": "T_{\\text{faculty},d} = \\sum_{f \\in \\mathcal{F}_d} W_f",
+      "explanation": "Total teaching hours available in a department."
+    },
+    {
+      "equation": "\\sum_{\\substack{i \\in \\mathcal{C}_p \\\\ \\text{dept}(i)=d}} \\left( \\left\\lceil \\frac{X}{S_i} \\right\\rceil \\times H_i \\right) \\leq T_{\\text{faculty},d}",
+      "explanation": "Ensures department faculty loads do not exceed available hours for a given enrollment X."
+    },
+    {
+      "equation": "P_i(p) = \\omega_i \\times f(\\text{target}(p), \\text{actual}(p))",
+      "explanation": "General penalty function for a soft constraint based on deviation from target."
+    },
+    {
+      "equation": "x_p = \\frac{P_{\\text{soft}}(p)}{P_{\\text{max}}}",
+      "explanation": "Normalized penalty score for a program, ranging from 0 to 1."
+    },
+    {
+      "equation": "S^{\\text{rec}}_p = S^0_p \\left[ 1 + \\delta_p \\left( 1 - 2 \\frac{P_{\\text{soft}}(p)}{P_{\\text{max}}} \\right) \\right]",
+      "explanation": "Recommended admission number based on baseline, headroom, and normalized penalty."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CSP",
+      "definition": "Constraint Satisfaction Problem; a framework for solving problems with variables, domains, and constraints."
+    },
+    {
+      "term": "Equity Theory",
+      "definition": "A social psychology theory that individuals perceive fairness by comparing their input-to-outcome ratio relative to others."
+    },
+    {
+      "term": "Hard constraint",
+      "definition": "A non-negotiable limit that must be satisfied, such as faculty capacity or classroom space."
+    },
+    {
+      "term": "Soft constraint",
+      "definition": "A flexible goal or preference that can be violated at a cost, such as graduation rate targets."
+    },
+    {
+      "term": "Gini coefficient",
+      "definition": "A measure of statistical dispersion representing income or wealth distribution, here used for seat allocation fairness."
+    },
+    {
+      "term": "Penalty function",
+      "definition": "A mathematical function that assigns a cost to violations of soft constraints."
+    },
+    {
+      "term": "Warm-start",
+      "definition": "An optimization approach that begins from a previous solution to improve computational efficiency."
+    },
+    {
+      "term": "Simulated Annealing",
+      "definition": "A metaheuristic optimization algorithm that probabilistically explores solutions to escape local minima."
+    },
+    {
+      "term": "Goal programming",
+      "definition": "An optimization technique for balancing multiple, often conflicting objectives with a priority structure."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Altbach",
+      "year": 2009,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Universities face challenges in matching student numbers to teaching staff, classroom capacity, and budgets.",
+      "role": "context"
+    },
+    {
+      "author": "McKinsey",
+      "year": 2020,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Sudden events such as staff cuts or new government quotas can throw enrollment plans off course.",
+      "role": "context"
+    },
+    {
+      "author": "DiBiase",
+      "year": 2004,
+      "page": 1,
+      "paragraph": 3,
+      "claim": "High-demand programs operate beyond faculty capacity by 15-20%, leading to overworked staff.",
+      "role": "context"
+    },
+    {
+      "author": "Beyrouthy",
+      "year": 2009,
+      "page": 1,
+      "paragraph": 3,
+      "claim": "Other programs may remain under-enrolled, utilizing only 60-70% of available space.",
+      "role": "context"
+    },
+    {
+      "author": "Heller",
+      "year": 2001,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Universities institute strict limits on resources and more flexible policy-oriented goals.",
+      "role": "context"
+    },
+    {
+      "author": "Pal",
+      "year": 2012,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Goal programming effectively upholds boundaries but struggles with immediate adjustments.",
+      "role": "baseline"
+    },
+    {
+      "author": "Maulana",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Machine learning provides valuable insights into enrollment trends.",
+      "role": "context"
+    },
+    {
+      "author": "Shilbayeh",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Predictive analytics rarely incorporate mechanisms to dynamically reassign seats.",
+      "role": "critique"
+    },
+    {
+      "author": "Minton",
+      "year": 1992,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "CSP and heuristic algorithms adapt seat allocations flexibly but frequently disregard equity concerns.",
+      "role": "baseline"
+    },
+    {
+      "author": "Adams",
+      "year": 1963,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Equity theory posits that individuals gauge fairness by comparing their input-to-outcome ratio relative to others.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ricci",
+      "year": 2011,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Recommender systems are now used to optimize course selection, match students to programs, and allocate admissions.",
+      "role": "context"
+    },
+    {
+      "author": "Adomavicius",
+      "year": 2005,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Knowledge-driven models built on constraint-satisfaction frameworks enforce precise, domain-specific rules.",
+      "role": "context"
+    },
+    {
+      "author": "Kirkpatrick",
+      "year": 1983,
+      "page": 8,
+      "paragraph": 3,
+      "claim": "Simulated Annealing is a well-known metaheuristic for combinatorial optimization and CSPs.",
+      "role": "baseline"
+    },
+    {
+      "author": "Allison",
+      "year": 1978,
+      "page": 8,
+      "paragraph": 3,
+      "claim": "Gini coefficient is used as a fairness metric for seat distribution across programs.",
+      "role": "methodology"
+    },
+    {
+      "author": "Xiao",
+      "year": 2019,
+      "page": 13,
+      "paragraph": 3,
+      "claim": "Recent work in dynamic optimization established finite-time convergence for time-varying quadratic programs.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "The paper categorizes constraints into hard and soft types, analogous to expense categorization in PFMS."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "The design of penalty functions for soft constraints mirrors the design of category-specific rules."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "The paper reviews related work on enrollment planning, which is structurally different but methodologically relevant to PFMS."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gaps in static goal programming and ML approaches that lack dynamic constraint handling, analogous to PFMS gaps."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "The core contribution is a recommender system that recommends admission numbers, directly analogous to budget recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "high",
+        "justification": "Uses CSP and goal programming with hard/soft constraints, a core constrained optimization approach."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "high",
+        "justification": "Employs penalty functions and iterative adjustments to handle infeasibility and reduce violations over multiple cycles."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates the system using metrics like Gini coefficient, utilization, and compliance time, relevant to PFMS evaluation."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Benchmarks the algorithm against Greedy and Simulated Annealing, assessing fairness and constraint adherence."
+      }
+    ],
+    "contribution_to_field": "The paper contributes a novel recommender system for university admissions that integrates constraint satisfaction, goal programming, and equity theory into a unified, penalty-based framework. It provides a practical method for dynamically balancing hard operational limits with soft policy objectives, demonstrating improved fairness and resource utilization over heuristic baselines. The work advances the application of CSP and recommender systems in educational resource allocation, offering a computationally light and interpretable solution for dynamic enrollment management.",
+    "directly_justifies": [
+      "The recommender maintains enrollment at 85-90% of total capacity over five cycles.",
+      "An average Gini coefficient of 0.067 demonstrates a fairer distribution of seats.",
+      "Full compliance is achieved in an average of 4.2 years, outperforming Simulated Annealing and Greedy.",
+      "Moderate annual enrollment reductions of 10-20% improve compliance without causing instability."
+    ],
+    "limits": [
+      "The paper relies on simulated data, not real-world institutional data, limiting generalizability.",
+      "Penalty-based soft constraints assume stable policy objectives, but real mandates can shift rapidly.",
+      "Multi-campus or cross-institutional applications remain untested.",
+      "The sensitivity analysis is one-factor-at-a-time and does not explore interactions among parameters."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was performed. The paper's core contributions in constrained optimization and recommender systems map directly to topics 7.B, 7.C, and 7.D (Budget Recommendation, Constrained Optimization, and Infeasibility Handling) with high relevance because the entire method is built around recommending allocations under hard/soft constraints. Topics 12.A and 12.B (Evaluation Frameworks and Algorithmic Module Evaluation) are assigned medium relevance as the paper includes comprehensive benchmarking and fairness metrics. Topics 3.A and 3.B (Expense Categorization) are contextual, as the constraint categorization is structurally analogous to expense categorization but not directly about PFMS. Topic 4.A (Landscape of Existing Systems) is low because the review focuses on enrollment planning rather than PFMS. Topics related to Filipino demographics, spending patterns, behavioral profiles, anomaly detection, mobile design, privacy, engagement, savings goals, synthetic data, and deployment were considered and rejected as the paper does not address these areas. The overall topical coverage centers on algorithmic allocation under constraints, making it most relevant to budget recommendation and optimization."
+  },
+  "limitations": [
+    "Relies on simulated data rather than real-world institutional data. [unacknowledged]",
+    "Penalty-based soft constraints presume relatively stable policy objectives, yet external mandates can shift rapidly.",
+    "Multi-campus or cross-institutional applications remain largely untested.",
+    "The sensitivity analysis is one-factor-at-a-time and does not explore interactions among multiple parameters. [unacknowledged]",
+    "Does not incorporate machine learning for adaptive penalty weighting or predictive analytics. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Maintains enrollment at 85-90% of total capacity across five cycles.",
+    "Achieves a Gini coefficient of 0.067, indicating highly fair seat distribution.",
+    "Reaches full compliance in 4.2 years, faster than Simulated Annealing and Greedy.",
+    "Moderate annual enrollment reductions of 10-20% yield substantial compliance improvements.",
+    "Integrates CSP, goal programming, and equity theory into a unified recommender system."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Ibrahim et al_marked.md",
+      "converted_at": "2026-07-21T13:34:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

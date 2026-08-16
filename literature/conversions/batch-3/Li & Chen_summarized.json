@@ -1,0 +1,297 @@
+{
+  "paper_id": "10.1007/s10791-025-09549-7",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic quantification anti‑fraud machine learning model for real‑time transaction fraud detection in banking",
+  "authors": "Li, F.; Chen, Z.",
+  "year": 2025,
+  "venue": "Discover Computing",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "9.A",
+    "9.B",
+    "10.A",
+    "12.A",
+    "12.B",
+    "14.A",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Introduces a dynamic quantification anti-fraud model combining F-Beta features with a double machine learning framework for real-time transaction risk assessment and deployed in a banking production environment.",
+  "problem_and_motivation": "Traditional anti-fraud models relying on expert rules or machine learning suffer from poor real-time performance, high false positive rates, and computational intensity that hinders proactive fraud prevention. There is a need for a model that can perform instantaneous risk assessments on massive transaction volumes while maintaining accuracy and adapting to evolving fraud tactics.",
+  "approach": [
+    "Defines 20+ expert rules as binary features based on suspicious transaction behaviors from historical fraud patterns.",
+    "Computes F-Beta scores for each feature with beta=3 to prioritize recall over precision.",
+    "Applies a double machine learning (DML) framework with LightGBM and XGBoost to quantify causal feature weights and reduce collinearity.",
+    "Uses logarithmic transformation to normalize F-Beta value distributions and prevent high-frequency features from dominating.",
+    "Implements a regularization penalty function based on daily complaints and leads to reduce false positives.",
+    "Dynamically adjusts risk thresholds based on branch processing capacity and complaint rates for operational feasibility.",
+    "Deploys the model in a real-time streaming architecture with 5-10 second latency per transaction.",
+    "Evaluates using a test set of 633 implicated cards and production metrics including bank ranking and proportion of involved cards.",
+    "Compares performance against XGBoost and expert rule baselines using recall, FPR, F1-score, and cost metrics.",
+    "Conducts post-deployment monitoring over six months to measure long-term impact on fraud reduction."
+  ],
+  "findings": [
+    "num: Validation sample recall rate reached 0.506 on 633 test positive samples.",
+    "num: Post-deployment, the bank's proportion of implicated cards reduced by 30 percentage points (from 50% to 20%) within six months.",
+    "num: The bank's province-wide ranking for involved cards dropped from 1st to 4th place.",
+    "num: F1-score of the dynamic model ranges from 0.32 to 0.38, compared to 0.28-0.34 for XGBoost.",
+    "num: False positive rate for the dynamic model is 0.15-0.20, versus 0.25-0.35 for XGBoost.",
+    "num: Operational cost reduced by 30-40% compared to XGBoost due to fewer false positives.",
+    "num: The model generated 170,594 potentially involved card clues from September 2023 to March 2024.",
+    "num: Processing latency is 5-10 seconds per transaction versus minutes for traditional machine learning.",
+    "num: Customer complaint rate decreased by 40% post-deployment."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Prediction procedure showing real-time data collection, DML scoring, and account restriction workflow → emphasizes 5-10 second end-to-end processing.",
+    "Figure 2: Double machine learning causal inference workflow using two residual models → illustrates how feature weights are isolated from confounders.",
+    "Figure 3: Nominal distribution probability density versus F-beta value curve → justifies log transformation to normalize skewed feature distributions.",
+    "Table 1: F-beta values for 21 implicated card features in June 2023 → shows feature performance variation and supports weight quantification.",
+    "Table 2: Real-time performance comparison of expert rules, XGBoost, and dynamic model → demonstrates latency and throughput advantages.",
+    "Table 3: Core performance metrics comparing dynamic model, XGBoost, and expert rules → quantifies recall, FPR, F1, and cost improvements.",
+    "Table 4: Long-term impact metrics six months post-deployment → shows reduction in involved card proportion, rank, and complaints.",
+    "Table 5: Trade-offs between efficiency cost and accuracy benefit for DML framework → summarizes design choices and their implications."
+  ],
+  "key_equations": [
+    {
+      "equation": "F_{\\beta} = \\frac{(1 + \\beta^2) \\times \\text{Precision} \\times \\text{Recall}}{\\beta^2 \\times \\text{Precision} + \\text{Recall}}",
+      "explanation": "Weighted harmonic mean of precision and recall with beta=3 for recall emphasis."
+    },
+    {
+      "equation": "F(x) = \\sum_{i \\in \\mathbf{I}_x} w_i (F_{\\beta})_i",
+      "explanation": "Multi-feature weighted combination prediction model for risk assessment."
+    },
+    {
+      "equation": "\\theta(L_g(\\mathbf{Z})) = \\sum_{k=1}^{K} f_k(L_g(\\mathbf{Z})), f_k \\in F",
+      "explanation": "Causal relationship function estimated via XGBoost regression trees."
+    },
+    {
+      "equation": "W(t_x) = \\frac{\\theta_{t_x}(L_g(\\mathbf{Z})) - \\theta_{\\min}(L_g(\\mathbf{Z}))}{\\theta_{\\max}(L_g(\\mathbf{Z})) - \\theta_{\\min}(L_g(\\mathbf{Z}))}",
+      "explanation": "Normalized feature weight mapped to standard normal distribution."
+    },
+    {
+      "equation": "(F_{\\beta})_{i \\log} = \\frac{\\log_{10}(1000 \\cdot (F_{\\beta})_i)}{\\log_{10}(1000 \\cdot (F_{\\beta})_{\\max})}",
+      "explanation": "Log transformation to standardize F-beta values and prevent dominance."
+    },
+    {
+      "equation": "R(x) = \\sum_{j \\in \\mathbf{J}} \\frac{-n(F_{\\beta})_j}{m}",
+      "explanation": "Penalty function based on complaints and leads to reduce false positives."
+    },
+    {
+      "equation": "\\text{Threshold} = 0.5 \\times \\frac{r}{k}",
+      "explanation": "Dynamic threshold adjustment based on daily leads and branch capacity."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "DML",
+      "definition": "Double Machine Learning; a causal inference framework using two machine learning models to estimate treatment effects while controlling for confounders."
+    },
+    {
+      "term": "F-Beta Score",
+      "definition": "Weighted harmonic mean of precision and recall where beta controls the trade-off; beta>1 emphasizes recall."
+    },
+    {
+      "term": "Implicated Card",
+      "definition": "A debit card identified as potentially involved in fraudulent telecommunications network fraud activities."
+    },
+    {
+      "term": "FPR",
+      "definition": "False Positive Rate; proportion of non-fraud cases incorrectly classified as fraud."
+    },
+    {
+      "term": "Precision",
+      "definition": "Proportion of correctly predicted positive instances out of all predicted positive instances."
+    },
+    {
+      "term": "Recall",
+      "definition": "Proportion of correctly predicted positive instances out of all actual positive instances."
+    },
+    {
+      "term": "TPS",
+      "definition": "Transactions Per Second; a throughput metric for transaction processing systems."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Almhaithawi",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SMOTE and cost-sensitive learning techniques address class imbalance in fraud detection.",
+      "role": "context"
+    },
+    {
+      "author": "Zioviris",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DML framework is used for credit card fraud detection with deep learning.",
+      "role": "methodology"
+    },
+    {
+      "author": "Afriyie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random forest achieved 96% accuracy for credit card fraud detection.",
+      "role": "baseline"
+    },
+    {
+      "author": "Islam",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Rule-based model reached 0.99 accuracy and precision on benchmark datasets.",
+      "role": "baseline"
+    },
+    {
+      "author": "Yang",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble belief rule-based model effectively mitigates imbalanced dataset impact.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Defines 20+ expert rule features as binary classifiers for transaction risk."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "medium",
+        "justification": "Features are engineered from transaction amounts, frequency, time, and counterparty familiarity."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Proposes a predictive risk model for real-time fraud detection in banking transactions."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Uses transaction history and sequential patterns for risk assessment."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core application is detecting anomalous transactions indicative of fraud."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Employs DML, F-Beta scoring, and regularization for anomaly detection."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Mentions daily retraining but does not focus on cold-start strategies."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "No explicit mobile design focus; banking system is general."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "contextual",
+        "justification": "No discussion of user experience or interface design."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions data security in passing but is not a primary focus."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses industry-comparative evaluation with bank ranking and proportion metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates DML, F-Beta scoring, and regularization using recall, FPR, and F1."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "low",
+        "justification": "Mentions imbalance handling but no synthetic data generation."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Describes production deployment in a banking system with streaming architecture."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "medium",
+        "justification": "Uses server-side inference with real-time streaming and parallel computing."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel dynamic quantification anti-fraud model that combines F-Beta feature scoring, double machine learning for causal weight estimation, and real-time streaming architecture for transaction fraud detection. It demonstrates a practical deployment in a banking production environment, showing significant reduction in implicated card proportions and bank ranking among peers. The model addresses the gap between computationally intensive machine learning and the need for real-time transaction interception. It also provides an industry-relevant evaluation framework using macro-level bank performance indicators rather than isolated test-set metrics.",
+    "directly_justifies": [
+      "Traditional anti-fraud models have poor real-time performance and high false positive rates.",
+      "Machine learning algorithms struggle with vast transaction volumes due to computational intensity.",
+      "The dynamic model achieves 5-10 second latency for real-time transaction interception.",
+      "Post-deployment, the bank's involved card proportion dropped from 50% to 20%.",
+      "Dynamic weight adjustment via DML reduces bias from correlated features."
+    ],
+    "limits": [
+      "Potential dataset bias exists due to oversampling and selection criteria focusing on low-asset accounts.",
+      "Generalizability is constrained as the model relies predominantly on transaction data and neglects demographic, social media, and device data.",
+      "Balanced dataset design does not reflect real-world fraud rarity, risking overfitting to synthetic data.",
+      "Normal accounts selected using same thresholds as positive samples may contain borderline risk cases, contaminating the control group.",
+      "No external validation using datasets from other banks or regions is reported."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 14 topic domains revealed that this paper primarily addresses predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and evaluation frameworks (12.A, 12.B), with high relevance in each. The paper's core contribution is algorithmic, making 6.A and 8.A central. Topic 3.A and 3.B receive medium relevance because the expert-defined features constitute a category framework but are not the primary focus. Topics 9.A and 9.B were considered but rejected because the paper does not address mobile design; only infrastructure for real-time processing is described. Topic 10.A was considered and rejected because privacy and security are mentioned only in passing. Topic 14.B and 14.C were assigned medium relevance due to detailed deployment and inference architecture discussions. Topic 14.A was considered and rejected because no synthetic data generation is performed. The paper's topical coverage centers on algorithmic fraud detection with a practical deployment case study."
+  },
+  "limitations": [
+    "Dataset potentially biased due to oversampling and focus on low-asset accounts. [unacknowledged]",
+    "Model generalizability constrained by exclusive reliance on transaction data. [unacknowledged]",
+    "Balanced dataset design does not reflect real-world fraud rarity. [unacknowledged]",
+    "Normal account selection criteria may contaminate the control group. [unacknowledged]",
+    "No external validation using other bank or regional datasets. [unacknowledged]",
+    "Feature selection lacks statistical tests or automated methods like recursive feature elimination. [unacknowledged]",
+    "Model depends predominantly on transaction data, neglecting customer demographic and behavioral information.",
+    "Current model has constraints in generalizability across diverse banking scenarios and customer segments."
+  ],
+  "remember_this": [
+    "Validation recall was 0.506 on 633 test positive samples.",
+    "Post-deployment, implicated cards dropped by 30 percentage points to 20%.",
+    "Processing latency is 5-10 seconds per transaction, enabling real-time fraud interception.",
+    "DML framework reduces feature collinearity and provides precise causal weight estimation.",
+    "The model reduced customer complaint rate by 40% post-deployment."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li & Chen_marked.md",
+      "converted_at": "2026-07-21T13:57:26Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

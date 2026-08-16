@@ -1,0 +1,152 @@
+{
+  "paper_id": "10.1109/ACCESS.2026.3670857",
+  "designation": "international-algorithm-specific",
+  "title": "A Dynamic Framework for Causal User Profiling and Treatment Segmentation via Uplift Modeling in Internet Lending",
+  "authors": "Jiang, J.; Abdul Hamid, N. A. W.; Yap, N. K.; Chong, C. W.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "odin_topics": ["3.A", "3.B", "4.A", "4.B", "5.A", "5.B", "5.C", "6.A", "6.B", "7.A", "7.B", "7.C", "7.D", "8.A", "8.B", "9.A", "12.A", "12.B", "12.C", "14.A"],
+  "tldr": "Proposes an integrated Causal User Profiling pipeline combining feature selection, stratified clustering, and meta-learners to estimate heterogeneous treatment effects and classify users into four causal response types.",
+  "problem_and_motivation": "Conventional uplift models detect treatment responsiveness without accounting for user heterogeneity or temporal consistency, while traditional user profiling remains descriptive and correlation-based. A gap exists between predictive profiling and causal reasoning needed for personalized intervention design. An integrated framework is needed to combine causal estimation with actionable user segmentation.",
+  "approach": [
+    "Uses a multi-stage feature selection combining Information Value, Causal Forest importance, Population Stability Index, and Stepwise refinement.",
+    "Applies K-Means clustering with a C2 replacement strategy that falls back to global predictions for unstable clusters.",
+    "Estimates Conditional Average Treatment Effects using meta-learners including T-, S-, X-, and Doubly Robust Learners with Logistic Regression base learner.",
+    "Evaluates on a proprietary dataset of ~720,000 user-months from a Chinese internet lending platform over six months.",
+    "Employs a component-wise ablation design to isolate contributions of feature selection, clustering, and meta-learner configuration.",
+    "Uses Four-Type Response Segmentation (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb) to label users based on estimated treatment effects and observed behavioral evidence.",
+    "Evaluates performance using Area Under the Uplift Curve (AUUC) and Qini coefficient, with temporal stability assessed across monthly slices.",
+    "Compares six feature sets, three clustering strategies, and sixteen meta/base-learner combinations.",
+    "Implements a rolling monthly experimental protocol with shared random seeds and fixed preprocessing across all comparisons.",
+    "Validates the framework's ability to identify Persuadables for targeted intervention while avoiding Do-Not-Disturbs."
+  ],
+  "findings": [
+    "num: Feature selection alone increases AUUC by 25-30% over the all-features baseline.",
+    "num: C2 clustering strategy provides an additional 10-12% AUUC gain.",
+    "num: DR-Learner with Logistic Regression adds another 5-8% improvement.",
+    "num: The integrated CUP framework yields 45-50% higher AUUC than the standard baseline.",
+    "Causal feature sets produce more consistent clustering gains than IV-only or all-feature sets.",
+    "X-Learner shows the most robust improvement under clustering, while DR-Learner and T-Learner show performance drops.",
+    "C2 clustering performs best among Direct, C1, and C2 strategies, yielding mean AUUC ≈ 0.09 with lowest variance.",
+    "IV + Causal feature set achieves highest mean AUUC but higher volatility; Stepwise refinement improves temporal stability.",
+    "Persuadables and Lost Causes are more frequent in the user population than Sure Things and Do-Not-Disturbs.",
+    "Cluster-level AUUC values show both improvement and deterioration, indicating a variance-amplifying effect."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Traditional profiling vs. CUP roadmap → CUP adds clustering, bias adjustment, causal estimation, and response labeling.",
+    "Figure 4: Data preprocessing workflow → Sequential filtering via IV, PSI, and correlation analysis.",
+    "Figure 5a: Distribution of four response types → Persuadables and Lost Causes dominate the population.",
+    "Figure 5b: Joint distribution of potential outcomes → Visualizes ABCD regions in (y0, y1) space.",
+    "Figure 6a: AUUC boxplots across feature sets → ALL features yield lowest mean and highest variance.",
+    "Figure 7a: Silhouette elbow curve → Optimal clusters around K=6 for the dataset.",
+    "Figure 7b: Comparison of clustering strategies → C2 > C1 > Direct in AUUC performance.",
+    "Figure 7c: Meta-learner performance under clustering → X-Learner remains stable; DR-Learner shows fluctuations.",
+    "Figure 8: AUUC heatmap for meta/base configurations → DR-Learner + LR achieves highest mean AUUC.",
+    "Figure 9: Cumulative gain curves → CUP curve uniformly dominates the baseline."
+  ],
+  "key_equations": [
+    {
+      "equation": "u = \\hat{p}_1 - \\hat{p}_0",
+      "explanation": "Uplift score as difference in response probabilities under treatment and control."
+    },
+    {
+      "equation": "\\text{Weighted AUUC} = \\sum_{k=1}^K w_k \\cdot \\text{AUUC}_k",
+      "explanation": "Weighted average of cluster-level AUUC by sample proportion."
+    },
+    {
+      "equation": "\\text{label}_i = \\begin{cases} \\text{High}, & u_i \\ge \\delta \\\\ \\text{Medium}, & |u_i| < \\delta \\\\ \\text{Low}, & u_i \\le -\\delta \\end{cases}",
+      "explanation": "V1 triage rule based on uplift score threshold."
+    }
+  ],
+  "definitions": [
+    {"term": "AUUC", "definition": "Area Under the Uplift Curve, a metric for incremental ranking performance."},
+    {"term": "AAUC", "definition": "Average AUUC across multiple evaluation windows."},
+    {"term": "CATE", "definition": "Conditional Average Treatment Effect, the expected causal effect given covariates."},
+    {"term": "CUP", "definition": "Causal User Profiling, the proposed integrated framework."},
+    {"term": "DR-Learner", "definition": "Doubly Robust Learner, a meta-learner combining outcome and propensity models."},
+    {"term": "HTE", "definition": "Heterogeneous Treatment Effect, variation in treatment effects across individuals."},
+    {"term": "IPW", "definition": "Inverse Probability Weighting, a method for confounding adjustment."},
+    {"term": "ITE", "definition": "Individual Treatment Effect, the causal effect for a specific unit."},
+    {"term": "IV", "definition": "Information Value, a measure of predictive relevance for a binary outcome."},
+    {"term": "PSI", "definition": "Population Stability Index, a measure of temporal distributional shift."},
+    {"term": "C2", "definition": "A clustering replacement strategy that falls back to global predictions for unstable clusters."}
+  ],
+  "citations": [
+    {"author": "Athey", "year": 2016, "page": 2, "paragraph": 1, "claim": "Causal Trees reveal treatment heterogeneity using recursive partitioning.", "role": "methodology"},
+    {"author": "Wager", "year": 2018, "page": 2, "paragraph": 1, "claim": "Causal Forests provide consistent Conditional Average Treatment Effect estimates.", "role": "methodology"},
+    {"author": "Künzel", "year": 2019, "page": 3, "paragraph": 2, "claim": "Meta-learners reformulate causal estimation into modular supervised-learning tasks.", "role": "methodology"},
+    {"author": "Radcliffe", "year": 2011, "page": 3, "paragraph": 1, "claim": "Uplift modeling shifts analytics from descriptive prediction into the prescriptive space.", "role": "context"},
+    {"author": "Devriendt", "year": 2018, "page": 3, "paragraph": 2, "claim": "Uplift performance is strongly sensitive to upstream design choices like feature selection and clustering.", "role": "context"},
+    {"author": "Rubin", "year": 1974, "page": 2, "paragraph": 2, "claim": "Causal effect is the difference between outcomes when a unit receives treatment and when it does not.", "role": "methodology"},
+    {"author": "Wu", "year": 2024, "page": 2, "paragraph": 3, "claim": "Traditional profiling pipelines are descriptive and lack causal components for intervention design.", "role": "critique"},
+    {"author": "Purificato", "year": 2024, "page": 2, "paragraph": 3, "claim": "Existing profiling approaches focus on correlations rather than causal mechanisms.", "role": "critique"},
+    {"author": "Rzepakowski", "year": 2012, "page": 3, "paragraph": 1, "claim": "Four-type consumer classes (Persuadables, Sure Things, Lost Causes, Do-Not-Disturbs) align incremental-effect estimation with targeting.", "role": "methodology"},
+    {"author": "Gutiérrez", "year": 2017, "page": 3, "paragraph": 1, "claim": "AUUC and Qini coefficient are standard uplift-specific ranking measures.", "role": "methodology"},
+    {"author": "Eke", "year": 2019, "page": 2, "paragraph": 4, "claim": "User profiling requires appropriate choice of representative variables for behavior-based segmentation.", "role": "context"},
+    {"author": "Hernán", "year": 2020, "page": 11, "paragraph": 2, "claim": "Propensity Score Matching and Inverse Probability Weighting address treatment-control imbalances.", "role": "methodology"},
+    {"author": "Athey", "year": 2019, "page": 4, "paragraph": 2, "claim": "Generalized Random Forests unify forest-based estimators into a nonparametric framework.", "role": "methodology"},
+    {"author": "Inoue", "year": 2024, "page": 5, "paragraph": 1, "claim": "HTE estimation studies often under-report design decisions, limiting reproducibility.", "role": "critique"},
+    {"author": "Maraj", "year": 2024, "page": 5, "paragraph": 2, "claim": "Profiling systems emphasize data enrichment and governance rather than response-driven causal mechanisms.", "role": "critique"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "Mentions credit and repayment variables but does not focus on categorization."},
+      {"code": "3.B", "name": "Expense Category Design Considerations", "relevance": "low", "justification": "Uses behavioral features for treatment estimation, not category design."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "contextual", "justification": "Reviews traditional user profiling and causal inference systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies lack of causal integration in profiling and under-reporting in HTE studies."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Proposes Four-Type causal response taxonomy (Persuadable, Sure Thing, Lost Cause, Do-Not-Disturb)."},
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "medium", "justification": "Allows users to transition between response states across time windows."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Uplift-based classification via meta-learners and response-type labeling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Evaluates predictive models for treatment effects using LR, RF, GBDT, and XGBoost."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "low", "justification": "Uses monthly rolling evaluation but not forecasting of future spending."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "low", "justification": "Not directly about budgeting; focuses on lending interventions."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "low", "justification": "Not about budget recommendations."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "low", "justification": "Not about allocation constraints."},
+      {"code": "7.D", "name": "Infeasibility Handling and Reduction Hierarchies", "relevance": "low", "justification": "Not about infeasibility."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "low", "justification": "Not about anomaly detection; focuses on treatment effects."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "low", "justification": "Not about anomaly detection algorithms."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "contextual", "justification": "Data collected from a mobile app, but design is not a focus."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Uses AUUC, Qini, and component-wise ablation for systematic evaluation."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Separately evaluates feature selection, clustering, and meta-learner modules via ablation."},
+      {"code": "12.C", "name": "Evaluation Methodologies for Budget Recommendation Systems", "relevance": "low", "justification": "Not about budget recommendation."},
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "medium", "justification": "Plans to release synthetic data for reproducibility, but not a focus of the study."}
+    ],
+    "contribution_to_field": "This paper contributes a unified methodological framework that bridges causal inference, uplift modeling, and user profiling into a single reproducible pipeline. It provides empirical quantification of the marginal contribution of each pipeline component (feature selection, clustering, and causal estimation) through systematic ablation analysis. The work offers a behaviorally grounded Four-Type response segmentation mechanism that links model evaluation to actionable user interpretation. It also establishes a reproducible experimental design for evaluating uplift performance under repeated interventions, addressing reproducibility concerns in the HTE and uplift literature.",
+    "directly_justifies": [
+      "Feature selection increases AUUC by 25-30% over the baseline.",
+      "C2 clustering provides an additional 10-12% uplift gain.",
+      "The DR-Learner with Logistic Regression yields a further 5-8% improvement.",
+      "The integrated CUP framework achieves 45-50% higher AUUC than standard approaches.",
+      "Clustering is effective only when grounded in causal feature structures."
+    ],
+    "limits": [
+      "Analysis based on a single Chinese internet lending platform; cross-context generalizability is limited.",
+      "Treatment variable aggregates heterogeneous interventions (coupons, credit-line increases, calls), obscuring intervention-specific mechanisms.",
+      "Evaluation emphasizes temporal consistency over formal hypothesis testing, limiting inference in settings requiring significance tests.",
+      "Fairness, transparency, and ethical deployment issues are not addressed in the current framework."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 42 topic domains was performed. Domains 4.B, 5.A, 5.C, 6.A, and 12.A/B were flagged as high relevance because the paper directly addresses gaps in existing systems, proposes a causal behavioral taxonomy, uses classification for profiling, applies predictive modeling, and includes a detailed evaluation framework. Domains 3.A, 3.B, 6.B, 9.A, and 14.A were flagged as medium or contextual because they relate to features used (credit/repayment variables), monthly rolling windows (not forecasting), mobile app data collection (not design principles), and plans for synthetic data release (not a focus). Domains related to budgeting (7.A-7.D), anomaly detection (8.A-8.B), and budget recommendation evaluation (12.C) were rejected as the paper focuses on lending interventions rather than spending categorization or allocation constraints. Borderline cases like 5.B (profile dynamics) were assigned medium relevance due to the paper's allowance for user state transitions across time, though not a primary focus. Overall, the paper is centrally positioned in the causal inference and uplift modeling subdomains of personal finance systems, with secondary connections to data privacy and synthetic data generation."
+  },
+  "limitations": [
+    "Analysis based on a single Chinese internet lending platform; cross-context generalizability is limited. [unacknowledged]",
+    "Treatment variable aggregates heterogeneous interventions, obscuring intervention-specific mechanisms. [unacknowledged]",
+    "Evaluation emphasizes temporal consistency over formal hypothesis testing. [unacknowledged]",
+    "Fairness, transparency, and ethical deployment are not addressed. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Feature selection alone improves AUUC by 25-30% over the baseline.",
+    "C2 clustering adds 10-12% uplift gain by stabilizing weak clusters.",
+    "The DR-Learner with Logistic Regression contributes another 5-8% improvement.",
+    "The full CUP pipeline achieves 45-50% higher AUUC than standard uplift models.",
+    "Clustering is effective only when grounded in causal feature structures."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Jiang et al_marked.md",
+      "converted_at": "2026-07-21T13:38:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "paper_id": "10.1146/annurev-financial-110921-013217",
+  "designation": "international",
+  "title": "Robo-Advice: Transforming Households into Rational Economic Agents",
+  "authors": "D'Acunto, F.; Rossi, A. G.",
+  "year": 2023,
+  "venue": "Annual Review of Financial Economics",
+  "odin_topics": ["4.A", "4.B", "7.A", "7.B", "13.A", "13.B", "10.A", "10.B"],
+  "tldr": "Surveys how robo-advice uses big data to provide households with rational-expectation benchmarks across consumption, saving, investment, and debt management, transforming biased decision-makers into neoclassical agents.",
+  "problem_and_motivation": "Households worldwide make suboptimal financial decisions (household finance puzzles) due to cognitive biases, lack of financial literacy, and limited access to affordable advice. Traditional solutions (human advisors, nudges) are expensive, not scalable, or insufficiently personalized.",
+  "approach": [
+    "Reviews the literature on robo-advice across household finance domains: consumption-saving, investment, debt management, and insurance.",
+    "Identifies three unique features of robo-advice: big/open data for full information, belief management toward rational expectations, and reduced transaction costs.",
+    "Discusses distributional implications of robo-advice and its potential to widen or narrow wealth inequalities.",
+    "Covers open questions on provider incentives, regulatory design, and long-term effects on household financial behavior.",
+    "Proposes a research agenda for understanding whether, how, and why robo-advice achieves its effects."
+  ],
+  "findings": [
+    "Robo-advice improves portfolio performance on average, with gains concentrated among less sophisticated households.",
+    "Households that adopt robo-advice show reduced behavioral biases such as the disposition effect and trend-chasing.",
+    "num: Robo-advice increases stock market participation by reducing psychological and informational barriers.",
+    "num: Financially sophisticated households see no performance improvement and may perform worse after adoption.",
+    "Robo-advice can align household beliefs with rational expectations, improving economic decision-making.",
+    "The distributional effects of robo-advice are ambiguous: it could decrease or widen wealth inequalities."
+  ],
+  "key_figures_tables": ["None."],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Robo-advice", "definition": "Automated financial advice using big data to provide rational-expectation benchmarks for household financial decisions."},
+    {"term": "Household finance puzzles", "definition": "Systematic departures from optimal financial choices predicted by standard economic models."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "Most households lack basic financial literacy principles such as diversification and compounding.", "role": "context"},
+    {"author": "Madrian", "year": 2001, "page": 0, "paragraph": 0, "claim": "Avoiding to decide is itself a choice with relevant financial implications for households.", "role": "context"},
+    {"author": "Calvet", "year": 2007, "page": 0, "paragraph": 0, "claim": "Less sophisticated households make choices that depart most from optimality, widening wealth inequalities.", "role": "context"},
+    {"author": "Mullainathan", "year": 2012, "page": 0, "paragraph": 0, "claim": "Financial advisors often engage in the same departures from rational decision-making as households.", "role": "critique"},
+    {"author": "Thaler", "year": 2009, "page": 0, "paragraph": 0, "claim": "Nudges provide default choices but can barely be tailored to individual household characteristics.", "role": "context"},
+    {"author": "Philippon", "year": 2019, "page": 0, "paragraph": 0, "claim": "Robo-advice improves distributional consequences by aligning choices of vulnerable households with sophisticated ones.", "role": "finding"},
+    {"author": "D'Acunto", "year": 2021, "page": 0, "paragraph": 0, "claim": "Household finance puzzles dampen the effects of economic policies implemented by central banks.", "role": "context"},
+    {"author": "Zinman", "year": 2015, "page": 0, "paragraph": 0, "claim": "Household finance puzzles are systematic departures from standard models in households' financial choices.", "role": "context"},
+    {"author": "Sunstein", "year": 2017, "page": 0, "paragraph": 0, "claim": "Nudge effectiveness often depends on the details of their design.", "role": "critique"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Reviews robo-advice as a PFMS solution across consumption, saving, investment, and debt."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies limitations of human advisors and nudges as traditional solutions."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "medium", "justification": "Discusses intertemporal consumption-saving problems relevant to budgeting."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Robo-advice provides automated consumption-saving recommendations."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Covers retirement saving plans and decumulation phase decisions."},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "low", "justification": "Discusses credit card debt, mortgages, and personal loan management."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "low", "justification": "Notes robo-advice uses open data from transaction accounts."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Discusses trust, accountability, and regulatory compliance in robo-advice."}
+    ],
+    "contribution_to_field": "This annual review synthesizes the nascent literature on robo-advice across all domains of household finance. It establishes a conceptual framework distinguishing robo-advice from traditional advice and nudges through three unique features: full information provision, belief management, and transaction cost reduction. The paper identifies open research questions regarding distributional effects, provider incentives, and long-term behavioral impacts, providing a structured research agenda for the field.",
+    "directly_justifies": [
+      "Robo-advice uses big and open data to make households fully informed about their own characteristics and past behavior.",
+      "Robo-advice manages households' beliefs and pushes them closer to rational expectations.",
+      "The crucial feature of robo-advice is that it reduces households' differences from standard neoclassical rational decision-makers."
+    ],
+    "limits": [
+      "Review does not provide empirical results from a specific system implementation.",
+      "Does not address cold-start problems in robo-advice deployment.",
+      "Limited discussion of algorithmic bias and fairness in robo-advice recommendations."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 4.A and 4.B were flagged as highly relevant because the paper surveys the landscape of robo-advice as a personal finance system and identifies limitations of traditional solutions. Domains 7.A, 7.B, 13.A, 13.B, 10.A, and 10.B were flagged as medium or low relevance because the paper covers budgeting, savings, debt, and trust aspects of robo-advice, though not as primary contributions. Domains 1-3 (Filipino young professionals, cultural practices) were rejected as the paper focuses on general household finance without Philippines-specific analysis. Domains 5-6 (profiles, prediction) and 11-12 (engagement, evaluation) were rejected as the paper is a review, not an empirical system evaluation. Domain 14 (ML deployment) was rejected as robo-advice is discussed at the application level, not ML infrastructure. Overall, the paper provides broad background on automated financial advice relevant to PFMS design.",
+    "topic_mapping_rationale": "Systematic scan across all topic domains was performed. Domains 4.A and 4.B were flagged as highly relevant because the paper surveys the landscape of robo-advice as a personal finance system and identifies limitations of traditional solutions. Domains 7.A, 7.B, 13.A, 13.B, 10.A, and 10.B were flagged as medium or low relevance because the paper covers budgeting, savings, debt, and trust aspects of robo-advice, though not as primary contributions. Domains 1-3 (Filipino young professionals, cultural practices) were rejected as the paper focuses on general household finance without Philippines-specific analysis. Domains 5-6 (profiles, prediction) and 11-12 (engagement, evaluation) were rejected as the paper is a review, not an empirical system evaluation. Domain 14 (ML deployment) was rejected as robo-advice is discussed at the application level, not ML infrastructure. Overall, the paper provides broad background on automated financial advice relevant to PFMS design."
+  },
+  "limitations": [
+    "Review-based paper with no primary empirical evidence or system implementation. [unacknowledged]",
+    "Limited discussion of specific algorithmic approaches for PFMS modules. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Robo-advice provides rational-expectation benchmarks across all household finance domains.",
+    "Three key features: full information, belief management, reduced transaction costs.",
+    "Robo-advice can decrease or widen wealth inequalities across demographic dimensions.",
+    "Average portfolio performance improves under robo-advice, especially for less sophisticated households."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "D'Acunto & Rossi_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.62986/dp2026.03",
+  "designation": "local",
+  "title": "Digital Financial Platform Engagement and Financial Inclusion in the Philippines: Insights on AI Deployment and Policy Implications",
+  "authors": "Mary Grace",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "11.A",
+    "12.A",
+    "4.A",
+    "4.B",
+    "7.B",
+    "8.A"
+  ],
+  "tldr": "This paper examines how digital financial platform engagement influences financial inclusion in the Philippines and explores how financial institutions are deploying artificial intelligence (AI) in enhancing these platforms. It combines nationally representative data from the World Bank Global Findex (2021), institutional indicators from the International Monetary Fund (IMF) Financial Access Surve",
+  "problem_and_motivation": "This paper examines how digital financial platform engagement influences financial inclusion in the Philippines and explores how financial institutions are deploying artificial intelligence (AI) in enhancing these platforms. It combines nationally representative data from the World Bank Global Findex (2021), institutional indicators from the International Monetary Fund (IMF) Financial Access Survey (2016–2024), and qualitative insights from financial institutions and policy experts. From the dem",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Pesa, Nikka C Agner, Mary Grace R Lacaza, Rutcher M"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Pesa, Nikka C Agner, Mary Grace R Lacaza, Rutcher M",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pesa et al_marked.md",
+      "converted_at": "2026-07-21T08:08:11Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "paper_id": "10.XXXX/10.1016/j.ijobas.2024.06.001",
+  "designation": "international-algorithm-specific",
+  "title": "Early warning systems for financial distress: A machine learning approach to corporate risk mitigation",
+  "authors": "Judijanto, L.; Sihotang, J.; Simbolon, A.P.H.",
+  "year": 2024,
+  "venue": "International Journal of Basic and Applied Science",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.C",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Integrates cost-sensitive learning with ensemble methods to build an interpretable early warning system for corporate financial distress using both financial and non-financial data.",
+  "problem_and_motivation": "Traditional financial distress models rely on linear relationships and financial ratios, failing to capture non-linear patterns and non-financial factors. Machine learning offers promise but faces challenges in feature selection, class imbalance, and model interpretability. There is a need for a transparent, data-driven system that integrates diverse predictors and handles imbalanced datasets effectively.",
+  "approach": [
+    "Proposes a weighted ensemble learning model combining decision trees, random forests, gradient boosting, and logistic regression.",
+    "Uses cost-sensitive learning to assign higher penalties to misclassifying distressed firms, addressing class imbalance.",
+    "Employs feature importance scores from ensemble methods to filter relevant predictors against a threshold.",
+    "Includes a flexible decision threshold for alerts based on stakeholder risk tolerance.",
+    "Evaluates performance using accuracy, precision, recall, F1-score, and AUC-ROC.",
+    "Demonstrates the approach with a numerical logistic regression example on simulated data."
+  ],
+  "findings": [
+    "num: Basic logistic regression achieved 0% accuracy, precision, recall, and F1-score on the simulated dataset.",
+    "num: The model produced 3 false positives and 2 false negatives with a 0.5 decision threshold.",
+    "Traditional statistical models struggle with class imbalance and linear assumptions in distress prediction.",
+    "Ensemble learning with cost-sensitive algorithms offers superior predictive accuracy over traditional models.",
+    "Integrating financial and non-financial data improves the holistic assessment of corporate health.",
+    "Model interpretability is crucial for stakeholder trust and regulatory compliance.",
+    "Feature selection and flexible thresholds are key to balancing precision and recall."
+  ],
+  "key_figures_tables": [
+    "Table 1: Simulated dataset with liquidity, leverage, profitability, market sentiment, and distress labels for 5 companies.",
+    "Table 2: Predicted probabilities and classifications for each company using logistic regression at a 0.5 threshold.",
+    "Table 3: Confusion matrix showing 3 false positives and 2 false negatives."
+  ],
+  "key_equations": [
+    {
+      "equation": "$Z = 1.2(\\frac{WC}{TA}) + 1.4(\\frac{RE}{TA}) + 3.3(\\frac{EBIT}{TA}) + 0.6(\\frac{MVE}{TL}) + 1.0(\\frac{S}{TA})$",
+      "explanation": "Altman Z-score for bankruptcy prediction using five financial ratios."
+    },
+    {
+      "equation": "$\\log(\\frac{P}{1-P}) = \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_n X_n$",
+      "explanation": "Ohlson O-score logistic regression for default probability estimation."
+    },
+    {
+      "equation": "$DD = \\frac{\\log(\\frac{A}{L}) + (r - \\frac{1}{2}\\sigma_A^2)T}{\\sigma_A\\sqrt{T}}$",
+      "explanation": "Merton distance-to-default model based on option pricing theory."
+    },
+    {
+      "equation": "$\\hat{y} = f(X)$",
+      "explanation": "Predictive model mapping features to binary distress outcome."
+    },
+    {
+      "equation": "$f(X) = \\sum_{j=1}^M \\alpha_j f_j(X)$",
+      "explanation": "Weighted ensemble prediction combining multiple base learners."
+    },
+    {
+      "equation": "$L(\\hat{y}, y) = w_1 \\cdot 1(y=1) \\cdot \\ell(\\hat{y}, 1) + w_0 \\cdot 1(y=0) \\cdot \\ell(\\hat{y}, 0)$",
+      "explanation": "Cost-sensitive loss function penalizing distress misclassification more heavily."
+    },
+    {
+      "equation": "$P(y=1|X) = \\sigma(f(X))$",
+      "explanation": "Sigmoid function converting ensemble output to distress probability."
+    },
+    {
+      "equation": "$\\sigma(z) = \\frac{1}{1 + e^{-z}}$",
+      "explanation": "Sigmoid activation function for binary classification."
+    }
+  ],
+  "definitions": [
+    {"term": "ML", "definition": "Machine Learning."},
+    {"term": "EWS", "definition": "Early Warning System."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve."},
+    {"term": "GBM", "definition": "Gradient Boosting Machine."},
+    {"term": "MDA", "definition": "Multiple Discriminant Analysis."},
+    {"term": "TP", "definition": "True Positives."},
+    {"term": "TN", "definition": "True Negatives."},
+    {"term": "FP", "definition": "False Positives."},
+    {"term": "FN", "definition": "False Negatives."},
+    {"term": "TPR", "definition": "True Positive Rate (Sensitivity)."},
+    {"term": "FPR", "definition": "False Positive Rate (1-Specificity)."}
+  ],
+  "citations": [
+    {
+      "author": "Altman",
+      "year": 1968,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Altman's Z-score uses five financial ratios to predict bankruptcy risk via linear discriminant analysis.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ohlson",
+      "year": 1980,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ohlson's O-score applies logistic regression to estimate default probability using multiple financial indicators.",
+      "role": "methodology"
+    },
+    {
+      "author": "Tian",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble methods like random forests and gradient boosting outperform logistic regression and Z-scores in accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Geng",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neural networks are highly effective for bankruptcy prediction but trade off interpretability.",
+      "role": "finding"
+    },
+    {
+      "author": "Atiya",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning early warning systems can reduce false negatives and false positives for more reliable predictions.",
+      "role": "context"
+    },
+    {
+      "author": "Kim",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning methods like support vector machines and random forests improve prediction accuracy by capturing non-linear relationships.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sun",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Boosting methods combine multiple weak learners to outperform logistic regression in distress prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lawrence",
+      "year": 2005,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional models cannot handle large datasets with diverse variables and non-linear relationships.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses traditional corporate distress models but not personal finance systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Explicitly critiques traditional models for linear assumptions and missing non-financial factors."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution is predictive modeling for financial distress using ML."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Mentions forecasting but focuses on classification, not sequential spending."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Mentions risk management but not budgeting strategies."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "low",
+        "justification": "Not addressed; focus is on prediction, not allocation."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Anomaly detection is mentioned only in passing."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Not directly discussed; distress is a state, not a transaction anomaly."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides detailed evaluation metrics (accuracy, precision, recall, F1, AUC-ROC)."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates the performance of ML algorithms in a financial prediction context."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a machine learning-based early warning system for corporate financial distress, integrating financial and non-financial data to improve predictive accuracy. It addresses key limitations of traditional models by proposing cost-sensitive learning to handle class imbalance and ensemble methods to capture non-linear relationships. The work advances the field by emphasizing model interpretability and flexible decision thresholds, offering a framework for transparent and actionable risk prediction. It also provides a structured methodology for data integration, feature selection, and multi-metric evaluation, serving as a reference for future research in financial risk modeling.",
+    "directly_justifies": [
+      "Traditional statistical models like logistic regression struggle with imbalanced datasets and linear assumptions.",
+      "Machine learning methods, particularly ensemble learning with cost-sensitive algorithms, offer superior predictive accuracy.",
+      "Integrating financial and non-financial data is essential for a holistic view of corporate health.",
+      "Flexible decision thresholds allow systems to adapt to different stakeholder risk appetites.",
+      "Model interpretability is crucial for stakeholder trust and regulatory compliance."
+    ],
+    "limits": [
+      "The paper focuses on corporate distress, not personal finance, so direct applicability to PFMS is limited.",
+      "Financial distress prediction is a different domain from personal spending behavior and budgeting.",
+      "The topics on culturally specific financial practices, Filipino demographics, and seasonal spending are not covered by this paper.",
+      "Topics on mobile-first design, offline architecture, and user engagement are not applicable."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. This paper directly addresses algorithmic prediction of financial distress using machine learning, which maps to 6.A (Predictive Modeling) with high relevance. It critiques traditional models and their limitations, providing strong justification for 4.B (Limitations and Gaps) with high relevance. The evaluation framework using multiple metrics (12.A) and algorithmic evaluation (12.B) are covered with medium relevance. Several topics received low or contextual relevance: 6.B (Forecasting) is tangentially related but not sequential spending; 7.C (Constrained Optimization) and 8.B (Anomaly Detection Algorithms) are not directly addressed. Domains including 1.A (Filipino Young Professionals), 2.A (Culturally Specific Financial Practices), 3.A (Expense Categorization), 5.A (Financial Behavioral Profiles), 9.A (Mobile-First Design), 10.A (Data Privacy), 11.A (Engagement Dynamics), 13.A (Savings Goal Management), and 14.A (Synthetic Data Generation) were considered and rejected as they are not covered by the paper's content on corporate financial distress prediction. The paper's topical coverage centers on algorithmic financial risk modeling and evaluation, with no application to personal finance or consumer behavior contexts."
+  },
+  "limitations": [
+    "Use of logistic regression for illustration is simplistic and does not represent the full proposed ensemble model. [unacknowledged]",
+    "Numerical example uses simulated data with only 5 samples, not reflecting real-world complexity. [unacknowledged]",
+    "The study proposes but does not empirically validate the ensemble method with real-world data. [unacknowledged]",
+    "The research focuses on corporate distress, limiting direct applicability to personal finance systems.",
+    "Class imbalance is discussed but the proposed cost-sensitive approach is not implemented or tested."
+  ],
+  "remember_this": [
+    "Basic logistic regression achieved 0% accuracy on the simulated imbalanced dataset.",
+    "Ensemble methods with cost-sensitive learning are proposed to improve distress prediction.",
+    "Feature importance scores are used to select relevant predictors from financial and non-financial data.",
+    "A flexible decision threshold allows tuning precision versus recall based on risk tolerance.",
+    "Model interpretability is emphasized as critical for financial decision-making."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Judijanto et al_marked.md",
+      "converted_at": "2026-07-21T13:40:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

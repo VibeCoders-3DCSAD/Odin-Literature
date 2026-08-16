@@ -1,0 +1,126 @@
+{
+  "paper_id": "10.65339/ijsair.V2.I1.31",
+  "designation": "local",
+  "title": "The Relationship Between the Online Banking Usage and Financial Decision-Making Processes among Financial Management Students in Rural Areas",
+  "authors": "Espiritu, M. J. M.",
+  "year": 2026,
+  "venue": "International Journal of Sustainability and Advanced Integrated Research",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "2.A",
+    "7.A",
+    "13.A",
+    "10.A"
+  ],
+  "tldr": "Online banking trust and security show strong positive correlation with financial decision-making, while frequency of use shows moderate negative association among rural Filipino students.",
+  "problem_and_motivation": "Online banking is increasingly embedded in daily life, but its relationship with financial decision-making among rural students with developing financial competencies is unclear.",
+  "approach": [
+    "Descriptive-correlational quantitative design with 242 purposively selected Financial Management students in a rural area.",
+    "Guided by Technology Acceptance Model, Theory of Planned Behavior, and Financial Socialization Theory.",
+    "Measures online banking utilization: frequency, transaction type, and trust/security.",
+    "Assesses financial decision-making: budgeting, saving, and spending patterns.",
+    "Spearman's rank-order correlation analysis."
+  ],
+  "findings": [
+    "Low overall frequency of online banking use (overall mean=2.04, Rarely).",
+    "Transaction diversity (rs=.657 to .702, p=.000) showed strong positive association with financial decision-making.",
+    "Trust and security (rs=.753 to .823, p=.000) showed very strong positive associations.",
+    "Frequency of use showed significant moderate negative associations (rs=-.276 to -.282, p=.000)."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Decision-Making",
+      "definition": "Engagement in budgeting practices, saving behavior, and spending patterns."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Studies Filipino Financial Management students, future young professionals."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Directly measures budgeting, saving, and spending behaviors."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Philippines-specific study of rural students' online banking and financial behavior."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Measures budgeting practices as component of financial decision-making."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Measures saving behavior as component of financial decision-making."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Trust and security perceptions are central independent variables."
+      }
+    ],
+    "contribution_to_field": "This paper demonstrates that trust and security are the strongest correlates of sound financial decision-making among rural students using online banking. It reveals a nuanced relationship where transaction diversity and trust matter more than mere usage frequency.",
+    "directly_justifies": [
+      "Trust and security show very strong positive correlation with financial decision-making (rs=.753-.823).",
+      "Transaction diversity shows strong positive association (rs=.657-.702).",
+      "Frequency of online banking use shows moderate negative association with financial decision-making."
+    ],
+    "limits": [
+      "Sample limited to Financial Management students in one rural area.",
+      "Cross-sectional design limits causal inference."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 1.A, 1.C, 2.A, 7.A, 13.A, 10.A (high). Rejected algorithmic topics (4.B-6.B, 8.A-9.C, 11.A-14.C) as this is a survey-based behavioral study."
+  },
+  "limitations": [
+    "Sample limited to Financial Management students in one rural area.",
+    "Cross-sectional design cannot establish causality.",
+    "Self-reported data may introduce response bias."
+  ],
+  "remember_this": [
+    "Trust and security strongly correlate with financial decision-making (rs up to .823).",
+    "Transaction diversity matters more than usage frequency.",
+    "Frequency of use shows negative association with decision-making."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu M.-2026_marked.md",
+      "converted_at": "2026-07-22T13:17:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

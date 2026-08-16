@@ -1,0 +1,102 @@
+{
+  "paper_id": "33bcd28c-07a5-5402-97aa-1cc52b0af052",
+  "designation": "local-algorithm-specific",
+  "title": "Orient Journal of Emerging Paradigms in Artificial Intelligence and Autonomous Systems This article is published under an open-access license by Orient Academies All content is distributed under the Creative Commons Attribution (CC BY) License, which allows unrestricted use, distribution, and reproduction in any medium, provided that the original author and source are properly credited",
+  "authors": "Orient Journal; Emerging Paradigms; Artificial Intelligence; Autonomous Systems",
+  "year": 2014,
+  "venue": "Journal of Emerging Paradigms in Artificial Intelligence and Autonomous Systems",
+  "odin_topics": [
+    "10.A",
+    "11.A",
+    "12.A",
+    "6.A",
+    "7.B"
+  ],
+  "tldr": "The explosion of digital interactions between financial institutions and their customers has engendered a paradigm shift in the delivery of personalized services. AI-driven customer relationship management systems harness advanced machine learning algorithms and natural language processing techniques to interpret vast transactional and behavioral datasets, enabling dynamic segmentation, sentiment ",
+  "problem_and_motivation": "The explosion of digital interactions between financial institutions and their customers has engendered a paradigm shift in the delivery of personalized services. AI-driven customer relationship management systems harness advanced machine learning algorithms and natural language processing techniques to interpret vast transactional and behavioral datasets, enabling dynamic segmentation, sentiment analysis, and predictive recommendation. This paper presents a strategic framework for the integrati",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Orient Journal of Emerging Paradigms in Artificial Intelligence and Autonomous S"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Orient Journal of Emerging Paradigms in Artificial Intelligence and Autonomous S",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Quan_marked.md",
+      "converted_at": "2026-07-21T08:13:35Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

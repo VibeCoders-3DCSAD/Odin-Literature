@@ -1,0 +1,360 @@
+{
+  "paper_id": "10.13140/2.1.5206.2202",
+  "designation": "international-algorithm-specific",
+  "title": "Cost-Sensitive Evaluation for Binary Classifiers",
+  "authors": "Lombardo, P.; Casoli, A.; Cingolani, C.; Oshodi, S.; Zanatta, M.",
+  "year": 2026,
+  "venue": "Unknown",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "3.C",
+    "6.A",
+    "6.B",
+    "7.B",
+    "7.C",
+    "7.D",
+    "7.E",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.A"
+  ],
+  "tldr": "Introduces Weighted Accuracy (WA) as a cost-consistent metric for binary classifiers and a reweighting framework for evaluation, proving WA maximization equals Total Classification Cost minimization under example-independent costs with robust empirical correlation.",
+  "problem_and_motivation": "No broadly accepted evaluation metric is explicitly aligned with Total Classification Cost (TCC) minimization, and class imbalance is often treated as a problem to be corrected independently, potentially misaligning with TCC minimization. Existing cost-sensitive metrics like C-score, MSU, and H measure have limitations in interpretability, normalization, and cross-dataset comparability.",
+  "approach": [
+    "Defines Weighted Accuracy (WA) as a weighted version of accuracy with weights determined by the ratio of false negative to false positive costs.",
+    "Formalizes a general reweighting framework for any linear example-dependent metric to handle class imbalance and dataset shifts without resampling.",
+    "Derives conditions under which standard rebalancing techniques remain coherent with TCC minimization.",
+    "Proves that under example-independent costs, maximizing WA is equivalent to minimizing TCC.",
+    "Extends the framework to handle target dataset reweighting when class distributions differ from the development dataset.",
+    "Evaluates WA's correlation with TCC against 23 other metrics across a grid of cost ratios and positive class fractions.",
+    "Uses two realistic example-dependent cost scenarios: churn prediction and credit scoring.",
+    "Analyzes validity limits of the example-independent approximation using a long-tailed cost distribution.",
+    "Quantifies economic impact of metric choice through a validation simulation measuring ∆TCC.",
+    "Provides practical guidelines for applying the reweighting framework to model training, validation, and testing."
+  ],
+  "findings": [
+    "num: WA maintains robust correlation with TCC across nearly all examined cost and imbalance scenarios.",
+    "num: Accuracy, CBA, IAM, and H show strong TCC correlation only near the anti-diagonal r_C = r_+.",
+    "num: Rebalancing metrics like informedness and ROC-AUC are coherent with TCC only near r_C ≃ 1 - r_+.",
+    "num: ACD, H informed, WA, and EWA are globally robust, with WA, H informed, and EWA yielding the lowest ∆TCC values.",
+    "num: In churn prediction, WA shows increasing discrepancy with TCC when revenue is concentrated (fr ≥ 0.6 with fmc ≤ 0.02).",
+    "The example-independent approximation of TCC remains reliable except in highly skewed cost distributions with a small fraction of massive examples.",
+    "Maximizing accuracy on a rebalanced dataset is equivalent to minimizing TCC only when r_C ≃ 1 - r_+.",
+    "The proposed reweighting framework applies to any metric or loss function expressible as a linear combination of example-dependent quantities.",
+    "In validation scenarios, most metrics exhibit large ∆TCC in at least one scenario, indicating potential economic losses.",
+    "WA provides a straightforward interpretation, cross-dataset comparability, and natural extension to differing target and development datasets."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Standard Spearman correlation heatmaps for churn → globally robust metrics (WA, ACD) show strong correlation across all (r+, rC).",
+    "Figure 2: Standard Spearman correlation heatmaps for credit scoring → omitted values for rC ≥ 1/(1+r+) due to consistency constraints.",
+    "Figure 3: Weighted Spearman correlation heatmaps for churn → rebalancing metrics show weaker correlation away from the main diagonal.",
+    "Figure 4: Weighted Spearman correlation heatmaps for credit scoring → ACD performs slightly worse than WA under weighted correlation.",
+    "Figure 5: Correlation between WA and TCC with extreme cost skew → WA remains robust unless fr ≥ 0.6 and fmc ≤ 0.02.",
+    "Table 1: 2x2 confusion matrix for binary classification (TP, FN, FP, TN).",
+    "Table 2: Summary of 24 confusion-matrix-based metrics including standard, recently proposed, and cost-sensitive metrics.",
+    "Table 3: ∆TCC values for 24 metrics across 4 scenarios → WA, H informed, and EWA achieve the lowest ∆TCC.",
+    "Table 4: Emblematic models for inferring weight constraints (M+, M−, Mbad, Mbad−, Mbad+)."
+  ],
+  "key_equations": [
+    {
+      "equation": "WA = \\frac{w TP + (1-w) TN}{w P + (1-w) N}",
+      "explanation": "Weighted accuracy definition with class weights."
+    },
+    {
+      "equation": "r_C = \\frac{C_{FN}}{C_{FN} + C_{FP}}",
+      "explanation": "Unit classification cost ratio."
+    },
+    {
+      "equation": "WA = 1 - \\frac{TCC - TCC_{min}}{TCC_{max} - TCC_{min}}",
+      "explanation": "WA is linearly related to TCC."
+    },
+    {
+      "equation": "TCC = C_{FN} \\cdot FN + C_{FP} \\cdot FP + TCC_{min}",
+      "explanation": "TCC expressed in shifted costs for example-independent costs."
+    },
+    {
+      "equation": "r_C \\simeq \\frac{N}{N_{tot}}",
+      "explanation": "Condition under which rebalancing is coherent with TCC minimization."
+    }
+  ],
+  "definitions": [
+    { "term": "TCC", "definition": "Total Classification Cost." },
+    { "term": "WA", "definition": "Weighted Accuracy." },
+    { "term": "EWA", "definition": "Expected Weighted Accuracy." },
+    { "term": "UCC", "definition": "Unit Classification Cost." },
+    { "term": "CSML", "definition": "Cost-Sensitive Machine Learning." },
+    { "term": "RoI", "definition": "Return on Investment." },
+    { "term": "ROC-AUC", "definition": "Receiver Operating Characteristic-Area Under the Curve." },
+    { "term": "MCC", "definition": "Matthews Correlation Coefficient." },
+    { "term": "CBA", "definition": "Class Balance Accuracy." },
+    { "term": "IAM", "definition": "Imbalance Accuracy Metric." },
+    { "term": "ACD", "definition": "Accuracy-Cost-Distance." },
+    { "term": "WRA", "definition": "Weighted Relative Accuracy." },
+    { "term": "WCA", "definition": "Weighted Classification Accuracy." },
+    { "term": "MSU", "definition": "Mean Subjective Utility." },
+    { "term": "NPV", "definition": "Negative Predictive Value." },
+    { "term": "TPR", "definition": "True Positive Rate." },
+    { "term": "FPR", "definition": "False Positive Rate." }
+  ],
+  "citations": [
+    {
+      "author": "Hand",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ROC-AUC corresponds to variable cost distributions across classifiers.",
+      "role": "methodology"
+    },
+    {
+      "author": "Altman",
+      "year": 1977,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Bankruptcy prediction costs estimated with ρ ≃ 35.",
+      "role": "finding"
+    },
+    {
+      "author": "Elkan",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Economic coherence requires cTP < cFN and cTN < cFP.",
+      "role": "methodology"
+    },
+    {
+      "author": "Marwah",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "C-score is a rescaled dimensionless TCC, but lacks an upper bound.",
+      "role": "baseline"
+    },
+    {
+      "author": "McDonald",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MSU becomes proportional to TCC in this cost formalism.",
+      "role": "methodology"
+    },
+    {
+      "author": "Verbraken",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "H measure generalizes MSU for uncertain UCC ratios.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bahnsen",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Example-dependent costs for credit scoring.",
+      "role": "methodology"
+    },
+    {
+      "author": "Powers",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Defines ROC-AUC and B-ROC for parametric classifiers.",
+      "role": "context"
+    },
+    {
+      "author": "Spearman",
+      "year": 1904,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Standard rank correlation coefficient.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lombardo",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Weighted Spearman coefficient with additive weighting.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Empirical study on class imbalance influence.",
+      "role": "context"
+    },
+    {
+      "author": "Chawla",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SMOTE oversampling technique.",
+      "role": "baseline"
+    },
+    {
+      "author": "Drummond",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Undersampling beats oversampling for C4.5.",
+      "role": "baseline"
+    },
+    {
+      "author": "Mortaz",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CBA and IAM metrics for imbalanced data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Sitarz",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "P4 metric for imbalanced classification.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Provides foundational concepts of classification costs and metrics, but does not address expense categorization directly."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Discusses general cost matrix design, not specific expense categories."
+      },
+      {
+        "code": "3.C",
+        "name": "User-Defined Allocation Constraints",
+        "relevance": "contextual",
+        "justification": "The reweighting framework is general and could apply to user-defined constraints, but not specific to allocation."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Uses churn prediction and credit scoring as use cases, which are relevant to personal finance but not the primary focus."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "The paper focuses on evaluation, not forecasting algorithms for sequential data."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "The optimization and cost-sensitive framing could inform budget recommendation, but not directly addressed."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "The TCC minimization is a form of optimization, but not specific to budget allocation."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "contextual",
+        "justification": "Discusses validity limits of approximations, but not infeasibility handling."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "contextual",
+        "justification": "The reweighting framework could be relevant, but not discussed."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Anomaly detection is mentioned as a domain with imbalanced data, but not a core topic."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "No specific anomaly detection algorithms are discussed."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "The entire paper proposes a novel evaluation metric and framework for binary classifiers.",
+        "justification": "Directly proposes Weighted Accuracy and a reweighting framework for classifier evaluation."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Compares WA against 23 other metrics, including cost-sensitive and rebalancing approaches.",
+        "justification": "Empirically evaluates WA and 23 other metrics against TCC."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "The methodology is general and could be applied, but not specific to budget recommendation."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Uses synthetic sampling from real datasets to systematically explore the (r+, rC) grid.",
+        "justification": "Employs synthetic data generation from Kaggle datasets to explore cost scenarios."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel evaluation metric, Weighted Accuracy (WA), for binary classifiers that directly aligns with Total Classification Cost minimization, addressing a long-standing gap in cost-sensitive evaluation. It provides a formal reweighting framework that generalizes to any linear example-dependent metric, enabling principled handling of class imbalance, dataset shifts, and target-distribution differences without resampling. The paper empirically demonstrates WA's robustness across diverse cost and imbalance scenarios, establishing it as a superior alternative to existing metrics like accuracy, F1, and ROC-AUC for cost-sensitive applications. It also systematically identifies conditions under which common rebalancing techniques are misleading, offering practical guidelines for model selection and validation.",
+    "directly_justifies": [
+      "Maximizing WA is equivalent to minimizing TCC under example-independent costs.",
+      "Standard rebalancing techniques are coherent with TCC minimization only when r_C ≃ 1 - r_+.",
+      "WA maintains robust correlation with TCC across almost all examined cost and imbalance scenarios.",
+      "Using WA for model selection yields the highest RoI across the analyzed validation scenarios.",
+      "The example-independent approximation of TCC fails only when costs are highly skewed with a small fraction of massive examples."
+    ],
+    "limits": [
+      "The theoretical equivalence between WA and TCC is proven only for example-independent UCCs.",
+      "WA's correlation with TCC degrades in highly skewed cost distributions with a small fraction of massive examples (fr ≥ 0.6, fmc ≤ 0.02).",
+      "The empirical analysis assumes the target and development datasets have the same ratio of positives (r+ = rt+), unless explicitly reweighted.",
+      "The framework requires estimating the UCC ratio (rC), which may be challenging in practice."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's primary contribution is to evaluation frameworks for binary classifiers, making Topic 12.A (Evaluation Frameworks) and 12.B (Evaluation of Algorithmic Modules) highly relevant. The empirical comparison of 24 metrics directly supports 12.B. Topic 14.A (Synthetic Data Generation) is relevant because the experiments use synthetic sampling from real datasets to explore cost scenarios. Topics 3.A, 3.B, 3.C, 6.A, 6.B, 7.B, 7.C, 7.D, 7.E, 8.A, 8.B, and 12.C were considered but judged contextual or low relevance because the paper does not directly address expense categorization, forecasting algorithms, budget recommendation specificities, anomaly detection algorithms, or budget recommendation evaluation methodologies. Topic 8.A was considered low because anomaly detection is only mentioned as an imbalanced data domain. Topics 6.A and 6.B were considered low because the paper uses churn and credit scoring as example applications but does not focus on the predictive models themselves. The paper is primarily about evaluation methodology, not about the personal finance system components themselves, so most personal-finance-specific topics are contextual or low. Overall, the paper's coverage is most direct and significant for evaluation methodologies, with medium relevance to synthetic data generation due to the experimental design."
+  },
+  "limitations": [
+    "The theoretical equivalence between WA and TCC is proven only for example-independent UCCs.",
+    "WA's correlation with TCC degrades in highly skewed cost distributions with a small fraction of massive examples (fr ≥ 0.6, fmc ≤ 0.02).",
+    "The empirical analysis assumes the target and development datasets have the same ratio of positives (r+ = rt+), unless explicitly reweighted.",
+    "The framework requires estimating the UCC ratio (rC), which may be challenging in practice.",
+    "The study is limited to binary classification and does not extend to multi-class problems. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Weighted Accuracy (WA) is a cost-consistent metric for binary classifiers.",
+    "WA maximizes return on investment by minimizing Total Classification Cost.",
+    "Standard rebalancing is misleading unless rC ≃ 1 - r+.",
+    "num: WA, H informed, and EWA achieve the lowest ∆TCC (0 or 1) across all validation scenarios.",
+    "WA's example-independent approximation fails only with extreme cost skew (e.g., fr ≥ 0.6, fmc ≤ 0.02)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lombardo et al_marked.md",
+      "converted_at": "2026-07-21T14:05:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

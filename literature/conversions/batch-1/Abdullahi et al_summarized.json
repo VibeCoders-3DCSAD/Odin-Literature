@@ -1,0 +1,152 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3587231",
+  "designation": "international",
+  "title": "A Systematic Literature Review of Concept Drift Mitigation in Time-Series Applications",
+  "authors": "Abdullahi, M.; Alhussian, H.; Aziz, N.; Abdulkadir, S. J.; Baashar, Y.; Alashhab, A. A.; Afrin, A.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "12.A", "12.B", "14.A", "14.B"],
+  "tldr": "A systematic literature review of 60 studies identifies SVM as the most effective algorithm for detecting and adapting to concept drift in time-series data.",
+  "problem_and_motivation": "Concept drift continuously changes the statistical properties of time-series datasets, degrading the predictive performance of deployed machine learning models. Most existing research on drift detection and adaptation has focused on classification tasks, leaving regression learning significantly underexplored. A comprehensive review that addresses both learning paradigms is needed to identify optimal detection methods and guide future research.",
+  "approach": [
+    "A systematic search was conducted across six databases (SCOPUS, ScienceDirect, IEEE Xplore, Web of Science, MDPI, ACM) using predefined keywords related to concept drift and time-series.",
+    "PRISMA 2020 guidelines were followed for study screening, selection, eligibility assessment, and data extraction across four stages.",
+    "60 studies published between 2013 and 2024 were selected after excluding 123 articles based on inclusion and exclusion criteria.",
+    "The selected studies were categorized by learner algorithms (classification and regression), evaluation metrics, model performance, and drift handling techniques.",
+    "A taxonomy was developed to classify AI-based learners for detecting concept drift based on drift speed and severity.",
+    "A comparative analysis was conducted comparing AI-based methods against baseline drift detection techniques in terms of detection capability, adaptability, and scalability.",
+    "Four research questions were formulated to guide the review: ensemble methods, ML models, algorithms used, and general steps for addressing concept drift.",
+    "Performance metrics including accuracy, precision, recall, F1 score, AUC, RMSE, MSE, and MAE were used to evaluate detection methods."
+  ],
+  "findings": [
+    "num: SVM is the most effective learning algorithm for CD detection and adaptation in both regression and classification tasks using time-series data.",
+    "num: 60% of studies focused on classification tasks, followed by time-series (12%), supervised (7%), and regression (6%).",
+    "num: Most studies employed accuracy as the primary evaluation metric for CD detection model assessment.",
+    "Ensemble-based learning methods (ENSDS, SVR, ELM, OS-ELM, DEMSC, DES) showed significant effectiveness for CD detection in time-series environments.",
+    "ADWIN, HDDM, and DDM are the most commonly used techniques for handling concept drift problems.",
+    "Deep learning models including LSTM, RNN, and MLP effectively capture temporal dependencies for detecting gradual and recurring drifts.",
+    "Synthetic and real-world datasets are both essential for rigorous evaluation of CD detection methods."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Concept drift types classified by speed → Identifies four drift categories: incremental, gradual, sudden, and recurring.",
+    "Figure 2: SLR mapping process diagram → Shows four-stage screening process used in the systematic review.",
+    "Figure 4: PRISMA 2020 flow diagram → Illustrates study screening from 183 papers to 60 included studies.",
+    "Figure 5: Distribution of studies by publication year → Shows increasing CD research output peaking in 2022.",
+    "Figure 7: Distribution by ML problem scope → 60% of studies focus on classification tasks.",
+    "Figure 9: Distribution by learning algorithms → SVM and LSTM are most frequently employed algorithms.",
+    "Figure 10: Ensemble-based learners for CD detection → Summarizes ensemble techniques and their characteristics.",
+    "Figure 11: AI learners for CD detection roadmap → Classifies learners by drift speed: incremental, gradual, sudden, recurring.",
+    "Table 1: Comparison with other studies in the domain → Positions this SLR relative to existing reviews on CD.",
+    "Table 5: Classification algorithm overview → Summarizes 60 studies categorized by classification learning algorithms.",
+    "Table 6: Regression algorithm overview → Summarizes studies using regression learners for CD detection.",
+    "Table 9: Ensemble-based CD detection techniques → Details ensemble methods and their performance characteristics.",
+    "Table 10: ML techniques for CD detection → Compares supervised, unsupervised, and deep learning approaches.",
+    "Table 11: Algorithms used in the past decade → Catalogs ADWIN, DDM, EDDM, and other drift detection algorithms.",
+    "Table 13: State-of-the-art studies summary → Lists contributions, strengths, and weaknesses of key studies."
+  ],
+  "key_equations": [
+    {"equation": "\\text{Accuracy} = \\frac{TP + TN}{TP + TN + FP + FN}", "explanation": "Measures proportion of correctly classified instances."},
+    {"equation": "\\text{Precision} = \\frac{TP}{TP + FP}", "explanation": "Measures proportion of true positives among predicted positives."},
+    {"equation": "\\text{Recall} = \\frac{TP}{TP + FN}", "explanation": "Measures proportion of true positives among actual positives."},
+    {"equation": "F1 = 2 \\times \\frac{\\text{Precision} \\times \\text{Recall}}{\\text{Precision} + \\text{Recall}}", "explanation": "Harmonic mean balancing precision and recall."},
+    {"equation": "RMSE = \\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(\\hat{y}_i - y_i)^2}", "explanation": "Square root of average squared prediction errors."},
+    {"equation": "MSE = \\frac{1}{n}\\sum_{i=1}^{n}(\\hat{y}_i - y_i)^2", "explanation": "Average of squared differences between predicted and actual values."},
+    {"equation": "MAE = \\frac{1}{n}\\sum_{i=1}^{n}|\\hat{y}_i - y_i|", "explanation": "Average of absolute differences between predicted and actual values."}
+  ],
+  "definitions": [
+    {"term": "CD", "definition": "Concept Drift"},
+    {"term": "ML", "definition": "Machine Learning"},
+    {"term": "SVM", "definition": "Support Vector Machine"},
+    {"term": "LSTM", "definition": "Long Short-Term Memory"},
+    {"term": "SLR", "definition": "Systematic Literature Review"},
+    {"term": "PRISMA", "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses"},
+    {"term": "ADWIN", "definition": "Adaptive Windowing"},
+    {"term": "DDM", "definition": "Drift Detection Method"},
+    {"term": "EDDM", "definition": "Early Drift Detection Method"},
+    {"term": "AUC", "definition": "Area Under the Curve"},
+    {"term": "MSE", "definition": "Mean Squared Error"},
+    {"term": "RMSE", "definition": "Root Mean Square Error"},
+    {"term": "MAE", "definition": "Mean Absolute Error"},
+    {"term": "ROC", "definition": "Receiver Operating Characteristic"},
+    {"term": "k-NN", "definition": "k-Nearest Neighbors"},
+    {"term": "RF", "definition": "Random Forest"},
+    {"term": "RNN", "definition": "Recurrent Neural Network"},
+    {"term": "CNN", "definition": "Convolutional Neural Network"},
+    {"term": "DNN", "definition": "Deep Neural Network"},
+    {"term": "ANN", "definition": "Artificial Neural Network"},
+    {"term": "GRU", "definition": "Gated Recurrent Unit"},
+    {"term": "XGBoost", "definition": "eXtreme Gradient Boosting"},
+    {"term": "ELM", "definition": "Extreme Learning Machine"},
+    {"term": "IIoT", "definition": "Industrial Internet of Things"}
+  ],
+  "citations": [
+    {"author": "Bayram", "year": 2022, "page": 3, "paragraph": 3, "claim": "Categorized performance-based CD detection methods over the past decade using a hierarchical diagram.", "role": "context"},
+    {"author": "Shen", "year": 2023, "page": 3, "paragraph": 4, "claim": "Surveyed unsupervised CD detection methods but lacked empirical evaluation of proposed approaches.", "role": "context"},
+    {"author": "Gama", "year": 2014, "page": 4, "paragraph": 2, "claim": "Categorized adaptive learning methods including window-based and ensemble approaches with their strengths and limitations.", "role": "context"},
+    {"author": "Cavalcante", "year": 2015, "page": 14, "paragraph": 1, "claim": "Used ensemble ELM with explicit drift detection to improve financial time-series prediction accuracy.", "role": "methodology"},
+    {"author": "Wang", "year": 2024, "page": 19, "paragraph": 1, "claim": "Proposed QuadCDD framework using DNN to detect and predict start points of concept drift.", "role": "methodology"},
+    {"author": "Disabato", "year": 2024, "page": 19, "paragraph": 2, "claim": "Introduced Tiny Machine Learning solution integrating k-NN, SVM, and NN for gradual drift adaptation.", "role": "methodology"},
+    {"author": "Kaminskyi", "year": 2022, "page": 16, "paragraph": 4, "claim": "Proposed AECDD unsupervised drift detector based on autoencoder reconstruction for multivariate streaming data.", "role": "methodology"},
+    {"author": "Tang", "year": 2022, "page": 16, "paragraph": 1, "claim": "Used domain adaptation with incremental SVM to handle CD without retraining from scratch.", "role": "methodology"},
+    {"author": "Jain", "year": 2022, "page": 16, "paragraph": 2, "claim": "Employed SVM classifier with K-means for hybrid CD detection in network anomaly detection.", "role": "methodology"},
+    {"author": "Sun", "year": 2021, "page": 19, "paragraph": 4, "claim": "Used OAR-DLSTM to handle hybrid recurring concept drifts in process industry streaming data.", "role": "methodology"},
+    {"author": "Wang", "year": 2021, "page": 17, "paragraph": 2, "claim": "Proposed MDDT using archive to identify sudden changes requiring immediate adaptation.", "role": "methodology"},
+    {"author": "Thalor", "year": 2016, "page": 13, "paragraph": 2, "claim": "Proposed ENSDS ensemble classification algorithm for incremental learning of nonstationary data streams.", "role": "methodology"},
+    {"author": "Liu", "year": 2016, "page": 13, "paragraph": 3, "claim": "Used SVR ensemble with feature vector selection to reduce computational complexity for drifting patterns.", "role": "methodology"},
+    {"author": "Guo", "year": 2021, "page": 16, "paragraph": 6, "claim": "Proposed SEOA selective ensemble that adjusts neural network information flow to combat CD.", "role": "methodology"},
+    {"author": "Uchiteleva", "year": 2022, "page": 3, "paragraph": 5, "claim": "Introduced TriLS three-layered system for drift-aware time-series prediction in IIoT environments.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Reviews predictive modeling techniques for time-series forecasting applicable to financial applications."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Covers forecasting algorithms for sequential time-series data including SVM, LSTM, and ensemble methods."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "medium", "justification": "Concept drift detection is analogous to detecting distribution changes in financial data streams."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "medium", "justification": "Reviews drift detection algorithms including ADWIN, DDM, and EDDM applicable to financial anomaly detection."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Discusses evaluation metrics (ACC, F1, AUC, RMSE) and methodologies for model assessment."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Compares and evaluates ML algorithms for CD detection across classification and regression tasks."},
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "low", "justification": "Discusses use of synthetic datasets for controlled evaluation of drift detection methods."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "low", "justification": "Addresses deployment considerations including computational cost, model retraining, and system architecture."}
+    ],
+    "contribution_to_field": "This systematic literature review synthesizes 60 studies on concept drift detection and adaptation in time-series data, covering both classification and regression tasks. The study identifies SVM as the most effective algorithm for drift detection and presents a comprehensive taxonomy of AI-based learners categorized by drift speed and severity. It provides a roadmap for deploying AI-based drift detection methods, including baseline comparisons and evaluation guidelines. The review fills a gap in the literature by addressing regression learning alongside classification, which has received minimal attention in prior surveys.",
+    "directly_justifies": [
+      "SVM is the most effective learning algorithm for CD detection and adaptation in time-series data.",
+      "Most existing studies focus on classification tasks (60%), with minimal attention to regression learning (6%).",
+      "Ensemble-based methods including ENSDS, SVR, and ELM are effective for CD detection.",
+      "ADWIN, HDDM, and DDM are the most commonly used drift handling techniques.",
+      "Synthetic and real-world datasets are both essential for rigorous evaluation of CD detection."
+    ],
+    "limits": [
+      "Search limited to English-language journal papers from 2013 to 2024.",
+      "Reliance on simulation datasets may not fully capture real-world scenarios.",
+      "Several studies tested proposed methods using a single dataset, limiting generalizability.",
+      "Comparisons with active approaches from state-of-the-art studies are limited.",
+      "Unable to investigate similarity and dissimilarity-based CD detection methods.",
+      "The paper does not address real-time deployment constraints or production system requirements. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned for relevance. Domains 1 (Filipino Young Professionals), 2 (Culturally Specific Financial Practices), 3 (Expense Categorization), 5 (Financial Behavioral Profiles), 7 (Budgeting Strategies), 9 (Mobile-First Design), 10 (Data Privacy), 11 (Engagement Dynamics), and 13 (Savings/Debt Management) were reviewed and rejected as the paper does not address personal finance system design, user behavior, or financial management strategies. Domain 4 (Landscape of Existing Systems) was assigned contextual relevance as the paper reviews CD detection literature but not personal finance systems specifically. Domain 6 (Predictive Modeling) was assigned high relevance because the paper directly addresses forecasting algorithms for sequential time-series data. Domain 8 (Anomaly Detection) was assigned medium relevance because concept drift detection is analogous to detecting distribution changes in financial data streams. Domain 12 (Evaluation Frameworks) was assigned medium relevance because the paper discusses evaluation metrics and methodologies for ML model assessment. Domain 14 (ML Model Serving) was assigned low relevance because the paper touches on deployment and synthetic data but does not focus on financial ML serving. The paper's core contribution is a general-purpose SLR on concept drift in time-series, making its relevance to personal finance topics contextual and methodological rather than domain-specific."
+  },
+  "limitations": [
+    "Search criteria focused on English journal papers from 2013-2024, excluding some relevant studies.",
+    "Reliance on simulation datasets may not fully capture real-world scenarios.",
+    "Several studies tested proposed methods using a single dataset, limiting generalizability.",
+    "Comparisons with active approaches from state-of-the-art studies are limited.",
+    "Unable to investigate similarity and dissimilarity-based CD detection methods.",
+    "The paper does not address real-time deployment constraints or production system requirements. [unacknowledged]"
+  ],
+  "remember_this": [
+    "SVM and LSTM are the most frequently used algorithms for CD detection in time-series data.",
+    "The SLR analyzed 60 studies published between 2013 and 2024 from six major databases.",
+    "Most existing CD research focuses on classification tasks, with minimal attention to regression learning.",
+    "Ensemble-based methods provide robust frameworks for detecting CD in time-series data.",
+    "Future work should develop adaptive models that handle CD without explicit retraining."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abdullahi et al_marked.md",
+      "converted_at": "2026-07-22T11:44:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

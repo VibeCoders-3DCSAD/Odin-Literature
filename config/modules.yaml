@@ -1,0 +1,310 @@
+# Odin-Literature relevance module definitions.
+#
+# THIS FILE IS THE SINGLE SOURCE OF TRUTH for what "relevant" means.
+# When the thesis topical outline, architecture, or algorithm selection
+# changes, edit this file and re-run:
+#   python3 scripts/score.py        # fast: uses cached embeddings
+# No code changes needed.
+#
+# Each module has a `description` (used for semantic BERT matching) and a
+# list of `keywords` (used for lexical TF-IDF/BM25 matching). Keep the
+# description in plain prose — it is embedded as the module query.
+
+weights:
+  bert: 0.5
+  tfidf: 0.3
+  bm25: 0.2
+
+# Provisional tier thresholds (max combined relevance across modules).
+# Re-calibrate against scores/validation.md, not by instinct.
+tiers:
+  crucial_min: 0.45
+  supporting_min: 0.30
+
+# Semantic similarity threshold for redundancy clustering (0-1).
+# 0.98 = hard duplicates only (identical/near-identical text). Lower to
+# 0.92-0.95 to surface topically-similar review groups.
+redundancy_threshold: 0.98
+
+modules:
+  - id: financial_profile_classification
+    name: Financial Profile Classification
+    description: >-
+      Classifying personal financial profiles: financial stability,
+      obligation level, risk tolerance, income and expense structure,
+      active and passive income, fixed, flexible and irregular expenses,
+      financial goals, debt load, and financial knowledge. Segmentation of
+      Filipino working young adults by demographic, socioeconomic, and
+      psychographic characteristics to build financial behavioral profiles.
+    keywords:
+      - financial profile classification
+      - income classification
+      - household income
+      - financial stability
+      - financial behavior
+      - socioeconomic
+      - demographic segmentation
+      - psychographic
+
+  - id: financial_literacy
+    name: Financial Literacy and Capability
+    description: >-
+      Measuring financial literacy, financial education, financial
+      knowledge, and financial capability. Understanding how financial
+      literacy and numeracy influence saving, budgeting, and spending
+      behavior of Filipino young adults.
+    keywords:
+      - financial literacy
+      - financial education
+      - financial knowledge
+      - financial capability
+      - numeracy
+      - money management
+
+  - id: expense_categorization
+    name: Expense Categorization
+    description: >-
+      Categorizing user transactions into meaningful spending categories,
+      mapping expenses to classification standards such as PCOICOP, and
+      automatically tagging or classifying transactions from transaction
+      data.
+    keywords:
+      - expense categorization
+      - transaction classification
+      - expenditure categories
+      - PCOICOP
+      - spending categories
+      - categorization
+
+  - id: forecasting
+    name: Financial Forecasting
+    description: >-
+      Predicting future spending and income. Time-series forecasting of
+      expenses, income volatility, seasonal and cyclical spending patterns
+      using methods such as LSTM, ARIMA, and recurrent neural networks.
+    keywords:
+      - forecasting
+      - prediction
+      - time series
+      - LSTM
+      - ARIMA
+      - spend prediction
+      - income volatility
+      - seasonal spending
+
+  - id: anomaly_detection
+    name: Anomaly and Overspending Detection
+    description: >-
+      Detecting unusual transactions, overspending episodes, and financial
+      stress indicators. Outlier detection in spending using methods such as
+      isolation forests, clustering, and autoencoders.
+    keywords:
+      - anomaly detection
+      - outlier
+      - isolation forest
+      - unusual transaction
+      - overspending
+      - fraud detection
+      - financial stress
+
+  - id: budget_recommendation
+    name: Budget Recommendation and Planning
+    description: >-
+      Recommending budget allocations, protected spending categories,
+      spending limits, and allocation strategies. Budgeting methods such as
+      envelope budgeting, zero-based budgeting, payday budgeting, and budget
+      tracking.
+    keywords:
+      - budget recommendation
+      - budgeting
+      - budget allocation
+      - spending limit
+      - envelope budgeting
+      - zero-based budgeting
+      - budget planning
+      - allocation strategy
+
+  - id: savings
+    name: Savings and Goal Setting
+    description: >-
+      Saving behavior, savings goals, emergency funds, saving intentions and
+      saving rates. Goal setting and savings goal management in personal
+      finance applications.
+    keywords:
+      - savings
+      - saving behavior
+      - emergency fund
+      - goal setting
+      - saving intention
+      - saving rate
+
+  - id: debt_management
+    name: Debt Management
+    description: >-
+      Debt accumulation, repayment strategies, borrowing behavior, digital
+      lending, credit, loans, and payday lending. Managing debt in personal
+      finance.
+    keywords:
+      - debt
+      - loan
+      - borrowing
+      - credit
+      - repayment
+      - digital lending
+      - debt management
+      - payday
+
+  - id: behavioral_insights
+    name: Behavioral Finance Insights
+    description: >-
+      Behavioral finance and psychology of money: mental accounting, payday
+      salience, spending triggers, self-control, financial habits, and
+      behavioral biases in personal financial decisions.
+    keywords:
+      - mental accounting
+      - payday effect
+      - behavioral finance
+      - spending behavior
+      - impulse buying
+      - self-control
+      - financial habits
+      - behavioral bias
+
+  - id: pfms_systems
+    name: Personal Finance Management Systems
+    description: >-
+      Existing personal finance management applications, mobile banking apps,
+      fintech, digital wallets, and intelligent PFM systems. Features,
+      dashboards, transaction entry, and architecture of finance tracking
+      applications.
+    keywords:
+      - personal finance app
+      - PFM
+      - mobile application
+      - financial management system
+      - fintech
+      - digital wallet
+      - banking app
+      - finance tracker
+
+  - id: ml_algorithms
+    name: Machine Learning Algorithms for Personal Finance
+    description: >-
+      Machine learning algorithms applied to personal finance: classification,
+      regression, optimization, and anomaly detection algorithms, training
+      methods, and model evaluation. Random forest, naive Bayes, LSTM, neural
+      networks, and gradient boosting for spending, income, and financial
+      behavior data.
+    keywords:
+      - machine learning
+      - random forest
+      - naive bayes
+      - neural network
+      - gradient boosting
+      - classification
+      - regression
+      - model evaluation
+      - accuracy
+      - F1
+
+  - id: filipino_context
+    name: Filipino Financial Ecosystem and Culture
+    description: >-
+      The Philippine financial ecosystem and cultural context: financial
+      behavior of Filipinos, Filipino working young adults, OFW remittances,
+      local economic conditions, FIES and BSP survey data, and culturally
+      specific financial practices.
+    keywords:
+      - Filipino
+      - Philippines
+      - NCR
+      - BSP
+      - FIES
+      - PSA
+      - OFW
+      - remittance
+      - household
+      - young adults
+
+  - id: privacy_security
+    name: Privacy and Security in Finance Apps
+    description: >-
+      Financial data privacy, mobile application security, permission
+      concerns, data protection, and trust in financial applications.
+    keywords:
+      - privacy
+      - security
+      - data protection
+      - permission
+      - trust
+      - encryption
+
+  - id: user_engagement
+    name: User Engagement and Retention
+    description: >-
+      User engagement, retention, gamification, nudges, notifications, habit
+      formation, and adoption of personal finance applications.
+    keywords:
+      - engagement
+      - retention
+      - gamification
+      - nudge
+      - notification
+      - user experience
+      - habit
+      - adoption
+
+  - id: mobile_design
+    name: Mobile Application Design
+    description: >-
+      Mobile user interface and user experience design for finance
+      applications, mobile development platforms such as Android, iOS,
+      Flutter, and cross-platform development.
+    keywords:
+      - mobile app
+      - Android
+      - iOS
+      - Flutter
+      - user interface
+      - user experience
+      - mobile development
+
+  - id: system_evaluation
+    name: System Evaluation and Acceptance
+    description: >-
+      Evaluating personal finance systems: usability testing, system
+      acceptance, technology acceptance model, user acceptance testing, and
+      performance evaluation of finance applications.
+    keywords:
+      - usability
+      - technology acceptance model
+      - TAM
+      - system evaluation
+      - user acceptance
+      - evaluation
+
+  - id: synthetic_data_mlops
+    name: Synthetic Data and ML Serving
+    description: >-
+      Synthetic data generation for training machine learning models, and
+      serving or deploying machine learning models in production
+      applications.
+    keywords:
+      - synthetic data
+      - data generation
+      - model deployment
+      - model serving
+      - production
+
+  - id: financial_wellbeing
+    name: Financial Well-being and Security
+    description: >-
+      Financial well-being, financial wellness, financial stress, financial
+      resilience, and financial health of individuals and households.
+    keywords:
+      - financial well-being
+      - financial wellness
+      - financial stress
+      - financial resilience
+      - financial health
+      - financial security

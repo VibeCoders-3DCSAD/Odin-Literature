@@ -1,0 +1,221 @@
+{
+  "paper_id": "10.13140/IJRTTE.03.03.2024",
+  "designation": "international-algorithm-specific",
+  "title": "An AI-Powered Mobile Application for Intelligent Personal Finance Management and Decision Support",
+  "authors": "Manjushree Nayak, K. Jayakumar",
+  "year": 2024,
+  "venue": "International Journal of Recent Trends in Technology and Engineering (IJRTTE), 03(03)",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "7.B",
+    "10.A",
+    "12.A"
+  ],
+  "tldr": "Proposes an AI-enabled mobile app using Random Forest, XGBoost, LSTM, and Reinforcement Learning with NLP for personalized, secure personal finance management and decision support.",
+  "problem_and_motivation": "Existing personal finance management systems lack personalization, fail to adapt to changing data, lack predictive capabilities, and inadequately address security and privacy. They predominantly rely on rule-based or simplistic statistical methods that cannot cope with varied financial behavior and changing markets.",
+  "approach": [
+    "Designed a five-layer modular architecture: User Interface, Data Acquisition, Data Processing/Feature Engineering, AI/Decision Support, and Security/Compliance.",
+    "Used Random Forest for expense prediction, XGBoost for cashflow forecasting, LSTM for time-series modeling, and Reinforcement Learning for adaptive goal tracking.",
+    "Integrated NLP using BERT-based transformer models for conversational financial coaching and educational modules via chatbot.",
+    "Implemented federated learning with differential privacy for privacy-preserving collaborative model training across user devices.",
+    "Applied feature engineering to compute Income Stability Index, Expenditure Volatility Score, Debt-to-Income ratio, and Investment Diversification Index.",
+    "Built cross-platform mobile app using Flutter with TensorFlow Lite for on-device ML inference and secure API integrations.",
+    "Used AWS/GCP cloud services with PostgreSQL, MongoDB, and InfluxDB databases orchestrated via Docker and Kubernetes.",
+    "Evaluated on anonymized financial records from 500 users over 12 months with 150-participant user study."
+  ],
+  "findings": [
+    "num: Goal Alignment Accuracy of 92.5%, Expense Categorization Accuracy of 96.8%, User-specific Budget Optimization Accuracy of 91.2%.",
+    "num: Forecasting R\u00b2 scores of 0.93 (income), 0.91 (expenses), and 0.89 (savings) demonstrating strong predictive accuracy.",
+    "num: User satisfaction rated at 94% highly satisfied, with 92% finding the interface intuitive and 89% reporting improved financial control.",
+    "num: 91% of users expressed confidence in AI-generated financial recommendations.",
+    "Proposed system outperformed existing platforms across all criteria including real-time data integration, personalization, predictive analytics, and risk assessment.",
+    "Comparative analysis showed existing systems averaged 75-80% user satisfaction versus 94% for the proposed system.",
+    "AES-256 encryption, GDPR/PCI DSS compliance, and multi-factor authentication ensured robust data security.",
+    "Federated learning approach enabled privacy-preserving model training without centralized data pooling."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Proposed System Architecture for AI-Powered Personal Finance Management.",
+    "Figure 2: Data Flow and Module Interactions.",
+    "Table 1: Forecasting Performance Metrics (RMSE, MAE, R\u00b2) for Income, Expense, and Savings Forecasting.",
+    "Table 2: Comparative Evaluation of Existing Personal Finance Systems vs. Proposed System.",
+    "Figure 3: Forecasting Performance Metrics Visualization.",
+    "Figure 4: Comparative Evaluation of Existing vs Proposed Systems."
+  ],
+  "key_equations": [
+    {
+      "equation": "No specialized mathematical equations; standard ML evaluation metrics used.",
+      "explanation": "Performance assessed using RMSE, MAE, R\u00b2 for regression tasks and Precision, Recall, F1-Score for classification."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Income Stability Index",
+      "definition": "A computed feature measuring the regularity and predictability of a user's income over time."
+    },
+    {
+      "term": "Expenditure Volatility Score",
+      "definition": "A risk metric quantifying the variability in a user's spending patterns."
+    },
+    {
+      "term": "Federated Learning",
+      "definition": "A distributed ML approach where model training occurs across user devices without centralized data pooling, preserving privacy."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Ozbayoglu et al.",
+      "year": 2020,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Conducted an extensive review of deep learning in finance, emphasizing AI's potential in enhancing forecast accuracy and risk assessment.",
+      "role": "support"
+    },
+    {
+      "author": "Cao et al.",
+      "year": 2020,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Focused on AI in FinTech, offering data-driven models adaptable to complex financial markets.",
+      "role": "support"
+    },
+    {
+      "author": "Hambly et al.",
+      "year": 2021,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Investigated reinforcement learning-based methods for financial decision-making in volatile markets.",
+      "role": "support"
+    },
+    {
+      "author": "Zhang et al.",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Presented hybrid AI models for intelligent financial advisory systems to enhance personalization of financial advice.",
+      "role": "support"
+    },
+    {
+      "author": "Jain and Srihari",
+      "year": 2024,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Used AI-based models for personal finance management tools for budget planning and expenditure tracking.",
+      "role": "context"
+    },
+    {
+      "author": "Patel and Mehta",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Established ML-based decision-support system to analyze income-expenditure scenarios and suggest saving strategies.",
+      "role": "support"
+    },
+    {
+      "author": "Chen et al.",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Developed an intelligent financial assistant integrating NLU and AI for financial planning.",
+      "role": "support"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2021,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Introduced federated learning models for secure and privacy-preserving financial decision support from distributed data.",
+      "role": "support"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Budgeting and Expense Tracking",
+        "relevance": "high",
+        "justification": "Core system function is personalized budget optimization and expense categorization with 91.2% and 96.8% accuracy respectively."
+      },
+      {
+        "code": "4.B",
+        "name": "Financial Goal Setting and Monitoring",
+        "relevance": "high",
+        "justification": "System provides dynamic goal tracking, savings goal recalibration, and financial goal alignment with 92.5% accuracy."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Forecasting and Prediction",
+        "relevance": "high",
+        "justification": "Uses LSTM and hybrid ML models for income, expense, and savings forecasting achieving R\u00b2 above 0.89."
+      },
+      {
+        "code": "5.C",
+        "name": "Cash Flow Management",
+        "relevance": "high",
+        "justification": "System provides cash flow prediction, expense forecasting, and real-time financial health indicators."
+      },
+      {
+        "code": "6.A",
+        "name": "AI/ML Model Development and Evaluation",
+        "relevance": "high",
+        "justification": "Applies Random Forest, XGBoost, LSTM, and RL with comprehensive evaluation metrics including RMSE, MAE, R\u00b2."
+      },
+      {
+        "code": "7.B",
+        "name": "Data Security and Privacy",
+        "relevance": "high",
+        "justification": "Implements AES-256 encryption, GDPR/PCI DSS compliance, federated learning, and multi-factor authentication."
+      },
+      {
+        "code": "10.A",
+        "name": "Personal Finance Automation",
+        "relevance": "high",
+        "justification": "AI-powered mobile application automating budgeting, saving, investment recommendations, and financial literacy."
+      },
+      {
+        "code": "12.A",
+        "name": "User-Centric Design and Usability",
+        "relevance": "medium",
+        "justification": "Flutter cross-platform mobile app with intuitive dashboards; 92% of users found interface easy to use."
+      }
+    ],
+    "contribution_to_field": "Provides an integrated AI-powered mobile platform combining multiple ML algorithms, real-time data integration, NLP-based financial literacy, and privacy-preserving federated learning into a unified personal finance management system.",
+    "directly_justifies": [
+      "Odin's use of Random Forest and LSTM models for financial forecasting and budget optimization.",
+      "Integration of real-time data processing and secure financial data handling.",
+      "Mobile-based financial management interface with personalized recommendations."
+    ],
+    "limits": [
+      "Focuses on individual personal finance, not tested on business or SME financial management.",
+      "Model evaluated on only 500 anonymized users over 12 months; larger-scale deployment needed.",
+      "No implementation details for behavioral economics integration or social media sentiment analysis.",
+      "Relies on simulated/prototype environment rather than real-world longitudinal deployment."
+    ],
+    "topic_mapping_rationale": "Paper describes an algorithmic system for personal finance management using AI/ML, covering budgeting, forecasting, goal tracking, security, and user interface design."
+  },
+  "limitations": [
+    "System primarily targets individual personal finance; not extended to small or large business finance management.",
+    "Evaluation limited to 500 users from a single geographic region; lacks geographical, cultural, and socio-economic diversity.",
+    "No longitudinal large-scale real-world deployment to verify long-term stability and sustained user engagement.",
+    "Potential expert selection bias and limited data types in the Ploutos-like recommendation framework."
+  ],
+  "remember_this": [
+    "Hybrid ML (RF, XGBoost, LSTM, RL) for personal finance management with 94% user satisfaction.",
+    "Federated learning with differential privacy for privacy-preserving financial AI.",
+    "Goal alignment accuracy 92.5%, expense categorization accuracy 96.8%.",
+    "Cross-platform Flutter app with TensorFlow Lite on-device inference.",
+    "NLP-based financial literacy modules using BERT for conversational coaching."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Nayak & Jayakumar_marked.md",
+      "converted_at": "2026-07-21T07:45:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

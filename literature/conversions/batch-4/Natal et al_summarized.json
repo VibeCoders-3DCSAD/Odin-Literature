@@ -1,0 +1,102 @@
+{
+  "paper_id": "10.5281/zenodo.10892981",
+  "designation": "local",
+  "title": "Understanding Financial Behavior: An Analysis of Personal Financial Management Among Working Professionals Amidst the Global Inflation Surge",
+  "authors": "Tricia Maisie; Kristelle Kae; Reizel Jane; Del Rosario",
+  "year": 2018,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "12.A",
+    "13.B",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "Volume 2 Issue 1 (2024)",
+  "problem_and_motivation": "Volume 2 Issue 1 (2024)",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Guild of Educators in TESOL International"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Guild of Educators in TESOL International",
+    "Year: 2018",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Natal et al_marked.md",
+      "converted_at": "2026-07-21T07:45:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

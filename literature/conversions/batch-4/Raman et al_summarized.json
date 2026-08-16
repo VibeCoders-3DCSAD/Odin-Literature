@@ -1,0 +1,88 @@
+{
+  "paper_id": "317a71ce-66b2-562a-933d-1a168dd57073",
+  "designation": "local",
+  "title": "REMI: A Novel Causal Schema Memory Architecture for Personalized Lifestyle Recommendation Agents",
+  "authors": "Novel Causal Schema Memory Architecture",
+  "year": 2017,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "Personalized AI assistants often struggle to incorporate complex personal data and causal knowledge, leading to generic advice that lacks explanatory power. We propose REMI, a Causal Schema Memory (CSM) architecture for a multimodal lifestyle agent that integrates a personal causal knowledge graph, a causal reasoning engine, and a schema-based planning module. The idea is to de- liver explainable,",
+  "problem_and_motivation": "Personalized AI assistants often struggle to incorporate complex personal data and causal knowledge, leading to generic advice that lacks explanatory power. We propose REMI, a Causal Schema Memory (CSM) architecture for a multimodal lifestyle agent that integrates a personal causal knowledge graph, a causal reasoning engine, and a schema-based planning module. The idea is to de- liver explainable, personalized recommendations in domains like fashion, personal wellness, and lifestyle planning. Ou",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: REMI: A Novel Causal Schema Memory Architecture for Personalized Lifestyle Recom"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: REMI: A Novel Causal Schema Memory Architecture for Personalized Lifestyle Recom",
+    "Year: 2017",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Raman et al_marked.md",
+      "converted_at": "2026-07-21T08:16:06Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

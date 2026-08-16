@@ -1,0 +1,74 @@
+{
+  "paper_id": "10.4148/jft.v3i2.1807",
+  "designation": "local-algorithm-specific",
+  "title": "Mapping Financial Mindsets: A Two-Stage Unsupervised Framework for Behavioral",
+  "authors": "Mapping Financial Mindsets; Stage Unsupervised Framework",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "13.B"
+  ],
+  "tldr": "Financial well-being reﬂects a complex interplay of psychological traits, behaviors, and",
+  "problem_and_motivation": "Financial well-being reﬂects a complex interplay of psychological traits, behaviors, and",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Mapping Financial Mindsets: A Two-Stage Unsupervised Framework for Behavioral"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Mapping Financial Mindsets: A Two-Stage Unsupervised Framework for Behavioral",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rabinovich et al_marked.md",
+      "converted_at": "2026-07-21T08:13:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

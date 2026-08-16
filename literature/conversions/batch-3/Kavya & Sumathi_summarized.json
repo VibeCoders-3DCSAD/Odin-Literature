@@ -1,0 +1,309 @@
+{
+  "paper_id": "10.1007/s10462-024-11055-z",
+  "designation": "international",
+  "title": "Staying ahead of phishers: a review of recent advances and emerging methodologies in phishing detection",
+  "authors": "Kavya, S.; Sumathi, D.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "8.B",
+    "10.A",
+    "12.A"
+  ],
+  "tldr": "Reviews phishing detection methods from list-based techniques to deep learning, highlighting CNNs and GANs as top performers with 98.74% and 97.58% accuracy respectively.",
+  "problem_and_motivation": "Phishing attacks are increasingly sophisticated, and traditional detection methods like list-based approaches are inadequate for identifying new and evolving threats. There is a critical need for a comprehensive, structured overview of the current landscape to guide the development of more robust detection systems.",
+  "approach": [
+    "Conducts a comprehensive literature review of phishing detection methodologies published up to 2024.",
+    "Categorizes methods into list-based, similarity-based, and machine learning (including deep learning and GANs).",
+    "Synthesizes findings from over 50 research papers, focusing on detection accuracy, false positive rates, and adversarial robustness.",
+    "Analyzes performance metrics across traditional ML, DL, and GAN-based models.",
+    "Provides a comparative analysis to identify strengths, limitations, and future research directions."
+  ],
+  "findings": [
+    "Deep learning models, particularly CNNs, achieve a detection accuracy of 98.74% on phishing datasets.",
+    "GAN-based models like PDGAN achieve 97.58% accuracy and demonstrate superior robustness against adversarial attacks.",
+    "num: CNNs exhibit a false positive rate of 2.1% compared to PDGAN's 2.9%.",
+    "num: Ensemble learning models show significant performance improvements over baseline single models.",
+    "List-based and traditional ML models suffer from high false positive rates and are ineffective against zero-day attacks.",
+    "GANs effectively address data imbalance and scarcity by generating synthetic phishing samples.",
+    "Adversarial attacks remain a critical vulnerability, with PDGAN showing a lower adversarial success rate (22.3%) than CNN (30.5%).",
+    "The review identifies key gaps in dataset diversity, model interpretability, and cross-domain generalization.",
+    "Federated learning and Explainable AI (XAI) are highlighted as promising future research directions.",
+    "Computational cost and scalability are major challenges for deploying deep learning and GAN models in real-time."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Taxonomy of phishing detection methodologies → Visual overview of the categorized detection approaches.",
+    "Figure 2: Bar chart comparing the accuracy of different detection methods → CNNs have the highest accuracy at 98.74%.",
+    "Table 4: Result analysis of different methods → Summarizes accuracy and FPR for each method category.",
+    "Table 8: Quantitative evaluation of DL methods → Shows CNNs with the best accuracy (98.74%) and F1-score.",
+    "Table 9: Quantitative evaluation of GAN methods → PDGAN achieves 97.58% accuracy, slightly lower than CNN but with better adversarial robustness."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "GAN",
+      "definition": "Generative Adversarial Network; a framework where two neural networks (generator and discriminator) compete to generate realistic synthetic data."
+    },
+    {
+      "term": "XAI",
+      "definition": "Explainable Artificial Intelligence; techniques that make the decisions of AI models transparent and interpretable to humans."
+    },
+    {
+      "term": "NCD",
+      "definition": "Normalized Compression Distance; a feature-free method for measuring similarity between data objects used in phishing detection."
+    },
+    {
+      "term": "FPR",
+      "definition": "False Positive Rate; the proportion of legitimate instances incorrectly classified as malicious."
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "Area Under the Receiver Operating Characteristic Curve; a performance metric that measures the trade-off between true positive and false positive rates."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Zieni",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "List-based methods fail to detect new phishing attacks and require frequent, resource-intensive updates.",
+      "role": "context"
+    },
+    {
+      "author": "Luo",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Network embedding algorithms are effective for Ethereum phishing account detection but have limited generalizability.",
+      "role": "finding"
+    },
+    {
+      "author": "Wen",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Graph-based detection frameworks are vulnerable to adversarial perturbations.",
+      "role": "critique"
+    },
+    {
+      "author": "Sahingoz",
+      "year": 2024,
+      "page": 8,
+      "paragraph": 2,
+      "claim": "CNNs achieve the highest performance (98.74%) in phishing detection.",
+      "role": "finding"
+    },
+    {
+      "author": "Al-Ahmadi",
+      "year": 2022,
+      "page": 8,
+      "paragraph": 3,
+      "claim": "PDGAN achieves high detection accuracy (97.58%) using only URL information.",
+      "role": "finding"
+    },
+    {
+      "author": "Castaño",
+      "year": 2023,
+      "page": 6,
+      "paragraph": 1,
+      "claim": "Current datasets fail to cover all phishing attack vectors, such as mobile and multi-stage attacks.",
+      "role": "baseline"
+    },
+    {
+      "author": "Li",
+      "year": 2022,
+      "page": 10,
+      "paragraph": 1,
+      "claim": "LSTM-based models achieve 95% accuracy in detecting phishing emails by analyzing sequential word patterns.",
+      "role": "methodology"
+    },
+    {
+      "author": "Purwanto",
+      "year": 2022,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "PhishSim uses normalized compression distance for feature-free phishing website detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wei",
+      "year": 2022,
+      "page": 12,
+      "paragraph": 1,
+      "claim": "Ensemble ML algorithms are top performers in detection accuracy and computational efficiency.",
+      "role": "finding"
+    },
+    {
+      "author": "Tang",
+      "year": 2022,
+      "page": 12,
+      "paragraph": 2,
+      "claim": "A GRU-based deep learning framework achieves 98% accuracy for real-time phishing website detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Shirazi",
+      "year": 2023,
+      "page": 12,
+      "paragraph": 3,
+      "claim": "Adversarial autoencoders enhance ML-based phishing detection by synthesizing robust training data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Salloum",
+      "year": 2022,
+      "page": 6,
+      "paragraph": 2,
+      "claim": "Gain and loss persuasion cues improve phishing email detection.",
+      "role": "finding"
+    },
+    {
+      "author": "Kalabarige",
+      "year": 2022,
+      "page": 5,
+      "paragraph": 4,
+      "claim": "A multilayered stacked ensemble model improves phishing detection accuracy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pillai",
+      "year": 2024,
+      "page": 5,
+      "paragraph": 4,
+      "claim": "Defense mechanisms against evasion attacks are critical for ML-based phishing classifiers.",
+      "role": "context"
+    },
+    {
+      "author": "Kabla",
+      "year": 2022,
+      "page": 11,
+      "paragraph": 1,
+      "claim": "Eth-PSD effectively detects phishing scams on Ethereum.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Mentions feature engineering for URLs and content but does not address expense categorization."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "The paper reviews detection systems but not personal finance systems specifically."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "low",
+        "justification": "Discusses limitations of phishing detection systems, not personal finance systems."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Does not address financial behavioral profiles."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Focuses on detection, not financial prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "No focus on forecasting spending data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "No mention of budgeting strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Does not discuss budget recommendations."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "The paper's anomaly detection methods for file system accesses are contextually relevant to financial anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "contextual",
+        "justification": "Discusses anomaly detection algorithms generally, which could be applied to spending data."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Privacy concerns in phishing detection are contextually relevant to personal finance data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Proposes an evaluation framework for detection models, not personal finance systems."
+      }
+    ],
+    "contribution_to_field": "This review paper provides a comprehensive and structured synthesis of the rapidly evolving phishing detection landscape. It systematically categorizes and evaluates a broad spectrum of methods, from legacy list-based approaches to cutting-edge deep learning and GAN-based models. By providing a detailed comparative analysis of performance metrics, strengths, and vulnerabilities, the paper establishes a clear benchmark for the state-of-the-art. It critically identifies persistent research gaps, such as adversarial robustness, model interpretability, and dataset diversity, effectively charting a roadmap for future investigations in this critical cybersecurity domain.",
+    "directly_justifies": [
+      "Deep learning, especially CNNs, offers the highest detection accuracy for phishing attacks.",
+      "GAN-based models like PDGAN provide a strong defense against adversarial and zero-day phishing threats.",
+      "Scalability and computational cost are major bottlenecks for real-world deployment of advanced models.",
+      "Future research must focus on Explainable AI, federated learning, and cross-domain generalization."
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was performed against the paper's content. The review is a general cybersecurity paper with no specific focus on personal finance. Consequently, topics related directly to Filipino demographics, financial behavior, or personal finance system design (e.g., 1.A, 1.B, 1.C, 2.A, 2.B, 2.C, 2.D, 3.B, 3.C, 5.B, 5.C, 7.C, 7.D, 7.E, 8.C, 9.A, 9.B, 9.C, 10.B, 10.C, 11.A, 11.B, 12.B, 12.C, 13.A, 13.B, 13.C, 14.A, 14.B, 14.C) were deemed entirely irrelevant and rejected. Topics 3.A (Expense Categorization) and 4.A (Landscape of Personal Finance Systems) were considered for their general methodological overlap but assigned low relevance due to a lack of direct application. The only contextual relevance was identified for anomaly detection (8.A, 8.B) and data privacy (10.A), as the concepts of identifying unusual patterns and protecting sensitive data are transferable to the financial domain. The evaluation frameworks (12.A) topic was assigned low relevance as the paper's framework is for detection systems, not personal finance systems. The overall topical coverage is minimal, as the paper's core subject is outside the specified personal finance taxonomy."
+  },
+  "limitations": [
+    "The paper is a review and does not present a new, empirically validated detection model. [unacknowledged]",
+    "The scope is limited to the papers reviewed and may not capture the very latest or unpublished research. [unacknowledged]",
+    "While discussing real-world deployment, the paper lacks a detailed, practical implementation guide for industry practitioners. [unacknowledged]",
+    "The quantitative analysis, while comprehensive, is based on aggregated results from various studies with different datasets and experimental setups. [unacknowledged]"
+  ],
+  "remember_this": [
+    "CNNs achieve 98.74% accuracy in phishing detection.",
+    "GAN-based models like PDGAN offer superior adversarial robustness.",
+    "High false positives and computational cost are key deployment challenges.",
+    "Future research should focus on XAI, federated learning, and cross-domain detection.",
+    "Adversarial attacks remain a significant vulnerability for deep learning models."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kavya & Sumathi_marked.md",
+      "converted_at": "2026-07-21T13:42:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

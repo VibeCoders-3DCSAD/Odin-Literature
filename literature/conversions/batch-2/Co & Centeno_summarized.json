@@ -1,0 +1,83 @@
+{
+  "paper_id": "uuid:v5:CoCenteno2023",
+  "designation": "local",
+  "title": "Effects of Filipino Consumers' Financial Attitudes, Subjective Norms, and Perceived Behavioral Control on Intentions to Formal Banking: Towards Financial Inclusion",
+  "authors": "Co, M.; Centeno, D.",
+  "year": 2023,
+  "venue": "Philippine Management Review",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.C", "10.B", "11.A"],
+  "tldr": "Applies the Theory of Planned Behavior to analyze how attitudes, subjective norms, and perceived behavioral control affect Filipinos' intentions to save surplus money in banks using BSP Consumer Finance Survey data.",
+  "problem_and_motivation": "Financial exclusion in the Philippines persists despite BSP inclusion initiatives. Attitudinal barriers to formal banking among Filipinos are poorly understood, with scarce local research on psychological factors affecting banking intentions.",
+  "approach": [
+    "Anchors on the Theory of Planned Behavior with logistic regression modeling.",
+    "Uses Philippine Central Bank (BSP) Consumer Finance Survey data with stratified random sampling of households.",
+    "Extracts psychological variables: attitudes towards banking/investing, subjective norms, and perceived behavioral control.",
+    "Analyzes demographic differences in behavioral intentions.",
+    "Models behavioral intention to save surplus money in formal banks."
+  ],
+  "findings": [
+    "Subjective norms and perceived behavioral control significantly predict behavioral intention towards banking.",
+    "Demographic differences influence behavioral intentions for formal bank usage.",
+    "Attitudes alone are insufficient; social influence and perceived ability are key determinants.",
+    "Financial exclusion may be caused by attitudinal and social factors beyond cost and lack of funds."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "BSP", "definition": "Bangko Sentral ng Pilipinas, the Philippine central bank"},
+    {"term": "TPB", "definition": "Theory of Planned Behavior linking attitudes, norms, and control to intentions"},
+    {"term": "Subjective norms", "definition": "Perceived social pressure to perform or not perform a behavior"}
+  ],
+  "citations": [
+    {"author": "Fernandes", "year": 2014, "page": 1, "paragraph": 4, "claim": "Explanations for low financial market participation.", "role": "context"},
+    {"author": "Ferrer", "year": 2017, "page": 1, "paragraph": 4, "claim": "Low financial market participation in the Philippines.", "role": "context"},
+    {"author": "Lucas", "year": 2018, "page": 1, "paragraph": 5, "claim": "Scarce attitudinal research on financial exclusion in the local context.", "role": "context"},
+    {"author": "Razafimahasolo", "year": 2016, "page": 1, "paragraph": 4, "claim": "Mechanisms explaining low financial market participation.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Studies Filipino consumers' banking behavior and financial inclusion determinants"},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Analyzes income, spending, and insurance coverage from BSP survey data"},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Core focus on behavioral intentions towards formal banking"},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "high", "justification": "Philippine-specific analysis of subjective norms and family influence on banking"},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "medium", "justification": "Measures self-reported attitudes and intentions towards banking"},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Addresses behavioral control and perceived ability as trust-related banking barriers"},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "low", "justification": "Examines adoption intentions relevant to financial inclusion engagement"}
+    ],
+    "contribution_to_field": "This study applies the Theory of Planned Behavior to financial inclusion in the Philippines, demonstrating that subjective norms and perceived behavioral control significantly predict banking intentions. It reveals that financial exclusion may stem from psychological and social barriers beyond economic constraints. The findings provide evidence for behaviorally-informed financial inclusion marketing strategies tailored to the Filipino context.",
+    "directly_justifies": [
+      "Subjective norms and perceived behavioral control predict banking intention in the Philippines.",
+      "Attitudinal barriers to financial inclusion exist beyond cost and lack of funds.",
+      "BSP Consumer Finance Survey data reveals demographic differences in banking intentions."
+    ],
+    "limits": [
+      "Secondary data from BSP survey constrains variable selection.",
+      "Cross-sectional data cannot establish causal pathways.",
+      "Focus on saving surplus money may not capture full spectrum of banking intentions."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 1.A, 1.B, 1.C (Filipino Young Professionals) and 2.A (Culturally Specific Practices) were rated high for core contributions. Topic 2.C (User Preferences) and 10.B (User Trust) were rated medium for self-reported attitudes and trust considerations. Topic 11.A (Engagement Dynamics) was rated low. Topics 3.x-9.x, 11.B-14.x were rejected as the paper is a behavioral economics study not addressing algorithms, forecasting, budgeting systems, or mobile design."
+  },
+  "limitations": [
+    "Secondary analysis of BSP survey data limits control over variable measurement.",
+    "Cross-sectional design prevents causal inference about banking intentions.",
+    "Focus on surplus money saving may not generalize to other banking behaviors."
+  ],
+  "remember_this": [
+    "Subjective norms and perceived control predict Filipino banking intentions.",
+    "Psychological barriers to financial inclusion exist beyond economic constraints.",
+    "Theory of Planned Behavior applied to Philippine banking context.",
+    "BSP Consumer Finance Survey data used for analysis.",
+    "Study at UP Cesar E.A. Virata School of Business."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Co & Centeno_marked.md",
+      "converted_at": "2026-07-22T12:59:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

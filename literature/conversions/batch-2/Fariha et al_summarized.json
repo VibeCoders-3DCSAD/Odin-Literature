@@ -1,0 +1,108 @@
+{
+  "paper_id": "10.14419/c73kcb17",
+  "designation": "international-algorithm-specific",
+  "title": "Advanced Fraud Detection Using Machine Learning Models: Enhancing Financial Transaction Security",
+  "authors": "Fariha, N.; Khan, M. N. M.; Hossain, M. I.; Reza, S. A.; Bortty, J. C.; Sultana, K. S.; Jawad, M. S. I.; Safat, S.; Ahad, M. A.; Begum, M.",
+  "year": 2025,
+  "venue": "International Journal of Accounting and Economics Studies",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "10.A"
+  ],
+  "tldr": "Unsupervised ML framework combining Isolation Forest, One-Class SVM, and deep autoencoder detects approximately 1-2% of credit card transactions as anomalies for fraud surveillance.",
+  "problem_and_motivation": "The rise of digital payments has accelerated the need for intelligent and scalable systems to detect financial fraud, particularly credit card transaction anomalies.",
+  "approach": [
+    "End-to-end feature-rich ML framework for detecting credit card transaction anomalies using real-world data.",
+    "Merges transactional, cardholder, merchant, and merchant category datasets from relational database.",
+    "Feature engineering extracts behavioral signals: average spending, deviation patterns, timing irregularities.",
+    "Trains unsupervised models: Isolation Forest, One-Class SVM, and deep autoencoder.",
+    "Proposes composite risk score aggregating binary flags from all anomaly detectors.",
+    "Further segments using K-Means clustering and DBSCAN."
+  ],
+  "findings": [
+    "num: Framework detects approximately 1-2% of transactions as anomalies.",
+    "Deep autoencoder effectively flags top 1% of reconstruction errors as outliers.",
+    "PCA visualizations show effective anomaly separation in latent space.",
+    "Composite risk score effectively highlights riskiest cardholders and merchants."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Isolation Forest",
+      "definition": "Unsupervised anomaly detection algorithm isolating anomalies through random partitioning."
+    },
+    {
+      "term": "Composite Risk Score",
+      "definition": "Aggregated score from multiple anomaly detectors for prioritizing investigation."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on detecting fraudulent credit card transactions as anomalies."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Implements and compares Isolation Forest, One-Class SVM, and autoencoder algorithms."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly addresses financial transaction security and fraud prevention."
+      }
+    ],
+    "contribution_to_field": "Provides a comprehensive unsupervised ML framework for credit card fraud detection combining multiple anomaly detection algorithms. The composite risk score approach offers practical prioritization for fraud investigation.",
+    "directly_justifies": [
+      "Unsupervised models effectively detect 1-2% of transactions as anomalies.",
+      "Composite risk score from multiple detectors improves fraud identification."
+    ],
+    "limits": [
+      "Unsupervised approach may not detect all fraud types.",
+      "Real-world deployment considerations not fully addressed."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 8.A, 8.B, 10.A (high). Rejected Philippine-specific, budgeting, and engagement topics."
+  },
+  "limitations": [
+    "Unsupervised approach may miss known fraud patterns that supervised methods would catch.",
+    "Real-time deployment considerations not fully explored. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Isolation Forest, One-Class SVM, and autoencoder detect 1-2% anomalies.",
+    "Composite risk score prioritizes high-risk cardholders and merchants.",
+    "Unsupervised approach suitable for evolving fraud patterns."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Fariha et al_marked.md",
+      "converted_at": "2026-07-22T13:22:09Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

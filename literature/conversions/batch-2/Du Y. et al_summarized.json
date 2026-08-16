@@ -1,0 +1,118 @@
+{
+  "paper_id": "10.1145/3746252.3761080",
+  "designation": "international-algorithm-specific",
+  "title": "PAnDA: Combating Negative Augmentation via Large Language Models for User Cold-Start Recommendations",
+  "authors": "Du, Y.; Chen, R.; Zhao, X.; Han, Q.; Qin, A. K.",
+  "year": 2025,
+  "venue": "Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM '25)",
+  "odin_topics": [
+    "5.B",
+    "14.A",
+    "6.B",
+    "4.A"
+  ],
+  "tldr": "PAnDA framework uses LLMs for preference-aligned and downstream-model-aware data augmentation to address negative augmentation in cold-start recommendation.",
+  "problem_and_motivation": "Existing LLM-based cold-start augmentation methods suffer from negative augmentation: incomplete augmentation and inaccurate augmentation, stemming from inability to incorporate collaborative signals and lack of awareness of downstream model learning dynamics.",
+  "approach": [
+    "Proposes PAnDA with model-agnostic preference-aligned augmentation module using LLMs as Textual Information Augmentor (TIA).",
+    "User-user preference matching and user-item preference coherence generate diverse augmented interactions.",
+    "Meta Masked Autoencoder (MetaMAE) with bi-level meta-optimization for personalized collaborative signal augmentation.",
+    "Model-specific downstream-model-aware adaptation filters augmented samples using gradient similarity.",
+    "Evaluated on MovieLens-1M, Netflix, and Book-Crossing with all-ranking evaluation (Recall@K, NDCG@K, Precision@K)."
+  ],
+  "findings": [
+    "num: PAnDA consistently outperforms all baselines (BPR, LightGCN, DropoutNet, CL4SRec, L2Aug, KAR, LLMRec, TDAS, M2EU).",
+    "Preference-aligned and downstream-model-aware augmentation generates higher quality augmented data.",
+    "Adaptive gradient-based filtering outperforms loss-based filtering for augmented sample selection."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Illustration of data augmentation methods in cold-start recommendation → Shows negative augmentation problem.",
+    "Figure 2: PAnDA architecture → TIA, CSA, and downstream-model-aware filtering components.",
+    "Table 2: Experimental results → PAnDA achieves best results across all datasets."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Negative Augmentation",
+      "definition": "Degradation in recommendation performance from incomplete or inaccurate augmented interactions."
+    },
+    {
+      "term": "PAnDA",
+      "definition": "Preference-aligned and Downstream-model-aware Data Augmentation framework."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Omelianchuk",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GECToR iterative sequence tagging approach for grammatical error correction.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "high",
+        "justification": "Directly addresses user cold-start problem in recommender systems."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "LLM-based data augmentation generates synthetic user-item interactions."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "Recommender system prediction, not personal finance spending forecasting."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Reviews existing cold-start recommendation methods but not personal finance systems."
+      }
+    ],
+    "contribution_to_field": "This paper identifies and formalizes the concept of negative augmentation in cold-start recommendation. It introduces a decoupled framework that separates preference alignment from downstream-model-awareness, enabling flexible LLM and recommendation model combinations. The bi-level meta-optimization strategy for personalized data augmentation advances generative augmentation for recommender systems.",
+    "directly_justifies": [
+      "More augmented data does not necessarily lead to better recommendation performance.",
+      "Augmented data must be preference-aligned and downstream-model-aware.",
+      "Gradient similarity is more reliable than loss for filtering augmented samples."
+    ],
+    "limits": [
+      "Focuses on user cold-start, not item cold-start scenarios.",
+      "Not evaluated in personal finance or spending data domains."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains. Flagged 5.B (high) for cold-start focus, 14.A (high) for synthetic data generation, 6.B (contextual) for prediction modeling, 4.A (contextual) for landscape review. Rejected 1.A-2.D, 7.A-7.E, 8.A-8.C, 9.A-9.C, 10.A-10.C, 11.A-11.B, 12.A-12.C, 13.A-13.C, 14.C. Paper focuses on algorithmic cold-start recommendation, not personal finance."
+  },
+  "limitations": [
+    "Limited to user cold-start scenarios; item cold-start not addressed.",
+    "Bi-level optimization may face scalability challenges for large user bases.",
+    "Dependence on LLM quality and base recommender candidate set quality."
+  ],
+  "remember_this": [
+    "Identifies negative augmentation in cold-start recommendation.",
+    "LLMs generate preference-aligned augmented data guided by collaborative signals.",
+    "Gradient similarity filters model-mismatched augmented interactions.",
+    "PAnDA outperforms state-of-the-art baselines on three benchmark datasets."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Du Y. et al_marked.md",
+      "converted_at": "2026-07-22T13:13:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "paper_id": "10.56734/pjr.v12n1p67",
+  "designation": "local",
+  "title": "Utang na Loob and Financial Decision-Making: A Qualitative Study of Filipino Family Financial Obligations",
+  "authors": "Donato, M. L.; Santos, A. B.; Reyes, A. C.",
+  "year": 2023,
+  "venue": "Philippine Journal of Research",
+  "odin_topics": ["2.A", "2.C", "3.A", "13.B"],
+  "tldr": "Qualitative study of 30 Filipino families reveals that utang na loob (debt of gratitude) significantly influences financial decision-making, leading to prioritization of extended family obligations over personal financial goals and creating complex interpersonal financial dependencies.",
+  "problem_and_motivation": "Utang na loob is a core Filipino cultural value involving reciprocal obligations, but its impact on personal financial management and decision-making is poorly understood. Existing PFMS are designed for individualistic contexts and may not accommodate collectivist financial dynamics.",
+  "approach": [
+    "Qualitative study using in-depth interviews with 30 Filipino family financial decision-makers across Metro Manila and provincial areas.",
+    "Purposeful sampling: diverse socioeconomic backgrounds, family structures (nuclear, extended, multi-generational).",
+    "Interview protocol: semi-structured exploring financial obligations, decision-making processes, family expectations, and the role of utang na loob.",
+    "Data analysis: Interpretative Phenomenological Analysis (IPA) with independent coding by two researchers and consensus discussion.",
+    "Member checking and triangulation with family members where possible.",
+    "Cross-case analysis by income level, family structure, and geographic location."
+  ],
+  "findings": [
+    "Utang na loob creates binding financial obligations that often override personal budget priorities.",
+    "Three types of utang na loob financial obligations: immediate family support (education, medical), extended family support (siblings, cousins), and community obligations (fiestas, weddings, funerals).",
+    "Extended family support obligations are the most disruptive to personal budgets because they are unpredictable.",
+    "Refusing financial requests due to utang na loob leads to social consequences (hiya — shame, loss of face).",
+    "Families develop coping strategies: rotating savings (paluwagan), informal IOUs, and multi-party lending arrangements.",
+    "Collective budgeting (pooled family income) practice reported by 43% of participants.",
+    "PFMS usage is individual-focused; 67% of participants express need for family/shared financial management features.",
+    "Financial secrecy (hidden savings, undisclosed debt) exists alongside collective obligations as a coping mechanism."
+  ],
+  "key_figures_tables": [
+    "Table 2: Thematic structure of utang na loob financial obligations",
+    "Figure 1: Conceptual model of utang na loob influence on financial decision-making",
+    "Table 4: Coping strategies and their effectiveness ratings"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Utang na loob", "definition": "Filipino cultural concept of reciprocal obligation or debt of gratitude, creating binding moral and social obligations."},
+    {"term": "Hiya", "definition": "Filipino concept of shame, loss of social face, or embarrassment."}
+  ],
+  "citations": [
+    {"author": "Enriquez", "year": 1992, "page": 0, "paragraph": 0, "claim": "Utang na loob is a core Filipino value involving reciprocal obligations that cannot be quantified.", "role": "context"},
+    {"author": "De Castro", "year": 2015, "page": 0, "paragraph": 0, "claim": "Utang na loob influences Filipino economic behavior beyond rational economic models.", "role": "context"},
+    {"author": "Hofstede", "year": 2001, "page": 0, "paragraph": 0, "claim": "Collectivist cultures prioritize group obligations over individual financial goals.", "role": "comparison"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.A", "name": "Cultural Nuances in Financial Decision-Making", "relevance": "high", "justification": "Core contribution: utang na loob as a cultural mechanism affecting financial decisions."},
+      {"code": "2.C", "name": "Underbanked and Unbanked Users", "relevance": "medium", "justification": "Informal financial arrangements (IOUs, multi-party lending) as alternatives to formal systems."},
+      {"code": "3.A", "name": "Spending Patterns of Filipino Young Professionals", "relevance": "low", "justification": "Spending obligations to extended family discussed."},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "high", "justification": "Core focus on financial obligations and informal debt relationships."}
+    ],
+    "contribution_to_field": "Provides critical cultural contextualization for PFMS design in the Philippines. Demonstrates that utang na loob creates financial dynamics (unpredictable obligations, collective budgeting, financial secrecy) that existing PFMS do not accommodate. The finding that 67% of participants desire shared/family financial management features is a direct design implication for PFMS targeting Filipino users.",
+    "directly_justifies": [
+      "Utang na loob obligations override personal budget priorities.",
+      "Extended family obligations are unpredictable and most disruptive to budgets.",
+      "67% of participants express need for shared/family financial management features.",
+      "Collective budgeting (pooled income) is practiced by 43% of participants.",
+      "Financial secrecy coexists with collective obligations as a coping mechanism."
+    ],
+    "limits": [
+      "Qualitative study (n=30) — not statistically generalizable. [acknowledged]",
+      "Focus on one cultural mechanism; other cultural factors not explored. [unacknowledged]",
+      "Self-reported obligations may not match actual financial flows. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 2.A (cultural nuances) and 13.B (debt management) were flagged as highly relevant because utang na loob is a cultural mechanism creating informal financial obligations. Domain 2.C was flagged as medium relevance for informal financial arrangements. Domain 3.A was flagged as low relevance for spending obligations. Domains 1, 4-12, 14 were rejected as the study is a qualitative cultural analysis without connection to young professionals, ML, or system design."
+  },
+  "limitations": [
+    "Qualitative study (n=30) — not generalizable. [acknowledged]",
+    "Single cultural mechanism focus. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Utang na loob creates binding financial obligations overriding personal budgets.",
+    "Extended family obligations are unpredictable and most disruptive.",
+    "67% of participants want shared/family PFMS features.",
+    "43% practice collective budgeting (pooled income).",
+    "Financial secrecy (hidden savings) coexists with collective obligations.",
+    "Coping strategies: paluwagan, IOUs, multi-party lending."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:05:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Donato et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

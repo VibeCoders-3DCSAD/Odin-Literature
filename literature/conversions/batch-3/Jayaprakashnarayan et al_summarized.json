@@ -1,0 +1,190 @@
+{
+  "paper_id": "10.15662/IJEETR.2026.0802073",
+  "designation": "international-algorithm-specific",
+  "title": "AI-Enabled NLP Framework for Automated Expense Management and Financial Analysis",
+  "authors": "Jayaprakashnarayan, N.; Sakthivel, M.; Sachidhanandam, P.; Devi, N. Kanjana; Mughilan, T. S. Manivel",
+  "year": 2026,
+  "venue": "International Journal of Engineering & Extended Technologies Research (IJEETR)",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "6.A",
+    "8.A",
+    "8.B",
+    "9.A",
+    "10.A"
+  ],
+  "tldr": "Presents an AI-based NLP framework that parses financial SMS and notifications to automate expense tracking, categorization, and fraud detection for personal finance management.",
+  "problem_and_motivation": "The increasing volume of digital payment notifications has made personal financial management complex. Existing static rule-based and supervised systems struggle with evolving message formats, code-mixed languages, and fraud patterns, creating a need for adaptive, privacy-preserving automation.",
+  "approach": [
+    "The framework uses a MuRIL-based transformer encoder fine-tuned on 124,583 financial SMS messages from 250 participants.",
+    "It employs a multi-task learning architecture for simultaneous entity extraction and transaction classification.",
+    "An ensemble anomaly detection system combines rule-based screening, statistical outlier detection, and LSTM autoencoders for fraud identification.",
+    "An adaptive personalization layer enables on-device online learning from user corrections without compromising privacy.",
+    "Processing is performed entirely on-device with quantized and pruned models, and federated learning principles protect user data during model updates."
+  ],
+  "findings": [
+    "The proposed framework achieves 96.8% F1-score for transaction extraction.",
+    "num: The system demonstrates 94.3% precision in merchant identification.",
+    "num: The ensemble fraud detector achieves 91.7% sensitivity with a 3.8% false positive rate.",
+    "num: The system reduces manual effort by 85.6%.",
+    "The multi-task learning objective provides an additional 1.2% improvement over single-task fine-tuning.",
+    "The MuRIL-based model shows particular strength on code-mixed Hinglish messages, where it outperforms FinBERT."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Entity extraction performance comparison → Proposed model achieves highest F1-score across all baselines.",
+    "Figure 2: Entity-level performance by type → Merchant extraction is most challenging, while amount and date are near-perfect.",
+    "Figure 3: Transaction classification by category → Shopping is most difficult, while income is most accurate.",
+    "Figure 4: Fraud detection comparison → Ensemble outperforms individual detection components in sensitivity and precision.",
+    "Figure 5: ROC curve analysis → Ensemble demonstrates highest AUC across all detection strategies."
+  ],
+  "key_equations": [
+    {
+      "equation": "L = \\lambda_{entity} L_{entity} + \\lambda_{class} L_{class}",
+      "explanation": "Multi-task loss function combining entity extraction and classification objectives."
+    },
+    {
+      "equation": "H_{token} = -\\sum_{t \\in tags} p(t | x) \\log p(t | x)",
+      "explanation": "Token-level uncertainty calculated as entropy of predicted tag distribution."
+    }
+  ],
+  "definitions": [
+    { "term": "UPI", "definition": "Unified Payments Interface, an instant payment system developed in India." },
+    { "term": "MuRIL", "definition": "Multilingual Representations for Indian Languages, a BERT-based model for 17 Indian languages." },
+    { "term": "BiLSTM-CRF", "definition": "A deep learning model combining bidirectional LSTMs and Conditional Random Fields for sequence labeling." },
+    { "term": "Hinglish", "definition": "A code-mixed language combining Hindi and English commonly used in Indian digital communications." }
+  ],
+  "citations": [
+    {
+      "author": "Sharma",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Information overload from digital payments makes personal finance management complex.",
+      "role": "context"
+    },
+    {
+      "author": "Hochreiter",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTMs are powerful for sequence modeling, establishing a foundation for NLP advances.",
+      "role": "methodology"
+    },
+    {
+      "author": "Devlin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BERT pre-training of deep bidirectional transformers significantly improves language understanding.",
+      "role": "methodology"
+    },
+    {
+      "author": "Araci",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FinBERT, pre-trained on financial corpora, achieves state-of-the-art performance on financial NLP tasks.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kumar",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A rule-based system for bank SMS extraction achieved 89% accuracy but failed with format changes.",
+      "role": "baseline"
+    },
+    {
+      "author": "Sharma",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A BiLSTM-CRF model for transaction extraction achieved 92.3% F1-score but needed substantial labeled data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A hierarchical attention network achieved 91.2% accuracy on personal banking transaction classification.",
+      "role": "baseline"
+    },
+    {
+      "author": "Liu",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Isolation forests and one-class SVM are effective for identifying outliers in financial transaction data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ahmed",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "An LSTM-based autoencoder achieved 89.2% fraud detection sensitivity with a 4.7% false positive rate.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Graph-based fraud detection approaches improve precision by 15% over sequence-based methods.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      { "code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "high", "justification": "Proposes a 14-category taxonomy for expense classification and evaluates model performance." },
+      { "code": "3.B", "name": "Expense Category Design Considerations", "relevance": "medium", "justification": "Discusses challenges in defining categories, especially for ambiguous 'shopping' and 'others'." },
+      { "code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews existing rule-based, supervised, and deep learning methods and their limitations." },
+      { "code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "low", "justification": "Mentions prediction of spending patterns but does not present a dedicated predictive model." },
+      { "code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Core component of the framework, featuring an ensemble of fraud detection techniques." },
+      { "code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Implements and evaluates rule-based, isolation forest, and LSTM autoencoder methods." },
+      { "code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "medium", "justification": "Framework designed for on-device processing with performance and battery evaluations on mobile." },
+      { "code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Has a dedicated privacy architecture section focusing on on-device processing and encrypted storage." }
+    ],
+    "contribution_to_field": "This paper contributes a unified, production-ready framework that integrates transformer-based NLP, multi-task learning, and ensemble anomaly detection specifically for the personal finance domain. It provides a comprehensive empirical evaluation on a large, real-world dataset of Indian financial SMS messages, establishing performance benchmarks for entity extraction, transaction classification, and fraud detection. The work advances the field by demonstrating the feasibility of privacy-preserving, on-device deployment for sophisticated financial NLP models, and it introduces a systematic approach for handling code-mixed financial text that is common in developing economies.",
+    "directly_justifies": [
+      "The proposed framework achieves 96.8% F1-score for transaction extraction from SMS alerts.",
+      "Multi-task learning improves entity extraction performance by 1.2% over single-task fine-tuning.",
+      "The ensemble fraud detector achieves 91.7% sensitivity with a 3.8% false positive rate.",
+      "On-device processing with quantized models preserves 98.7% of original accuracy.",
+      "The system reduces manual effort by 85.6% compared to manual tracking."
+    ],
+    "limits": [
+      "The dataset is limited to Indian financial SMS messages, which may not generalize to other geographic regions or communication channels.",
+      "Performance on extremely rare merchants and generic descriptors (e.g., 'ONLINE TRANSACTION') remains challenging.",
+      "The framework's reliance on on-device processing imposes constraints on model size and inference speed.",
+      "Evaluation of the online learning component is limited, and long-term adaptation effectiveness requires further study."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains identified eight relevant codes. Domain 3 (Expense Categorization) was highly relevant as the paper proposes and evaluates a 14-category framework. Domain 4 (Landscape of Existing Systems) was medium-relevance as the related work section provides a thorough review of prior approaches. Domain 6 (Predictive Modeling) was considered but only low-relevance as the paper does not present a dedicated forecasting model. Domain 8 (Anomaly Detection) was highly relevant with two specific codes for the framework and algorithms. Domain 9 (Mobile-First Design) was medium-relevance due to the focus on on-device deployment and performance evaluation. Domain 10 (Data Privacy) was highly relevant with the framework's dedicated privacy architecture. Domains 1 (Filipino Young Professionals), 2 (Filipino Spending Patterns), 5 (Financial Behavioral Profiles), 7 (Budget Recommendation), 11 (Engagement), 12 (Evaluation Frameworks), 13 (Savings/Debt Management), and 14 (ML Deployment) were considered and rejected as the paper does not address these specific subtopics. Overall, the paper strongly aligns with technical topics related to NLP for expense management and fraud detection."
+  },
+  "limitations": [
+    "The dataset is limited to Indian financial SMS messages, potentially reducing generalizability to other regions. [unacknowledged]",
+    "Performance on rare merchants and generic descriptors remains a challenge. [unacknowledged]",
+    "On-device processing constraints limit model sophistication and may affect accuracy in edge cases.",
+    "The evaluation of the online learning component is preliminary and requires longitudinal validation. [unacknowledged]",
+    "The framework's effectiveness on languages beyond the 17 supported by MuRIL is untested. [unacknowledged]"
+  ],
+  "remember_this": [
+    "The framework achieves 96.8% extraction accuracy and 94.3% merchant identification precision.",
+    "An ensemble fraud detector achieves 91.7% sensitivity with a low 3.8% false positive rate.",
+    "Multi-task learning with entity extraction improves classification performance.",
+    "All processing occurs on-device, preserving user privacy and data security.",
+    "The system reduces manual financial tracking effort by 85.6%."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Jayaprakashnarayan et al_marked.md",
+      "converted_at": "2026-07-21T13:38:25Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

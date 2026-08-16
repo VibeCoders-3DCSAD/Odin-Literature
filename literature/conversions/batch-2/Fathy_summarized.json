@@ -1,0 +1,102 @@
+{
+  "paper_id": "918c0b9c-7c0b-586b-89af-24d78d28943d",
+  "designation": "international-algorithm-specific",
+  "title": "Artificial Intelligence and Predictive Data Analytics to Enhance Risk Assessment and Credit Scoring Mechanisms in Retail Banking",
+  "authors": "Fathy, T.",
+  "year": 2024,
+  "venue": "Helex-science",
+  "odin_topics": [
+    "6.A",
+    "8.A",
+    "10.A"
+  ],
+  "tldr": "AI-driven framework using variational Bayesian inference with spatio-temporal attention mechanisms for dynamic creditworthiness scoring in retail banking.",
+  "problem_and_motivation": "Traditional credit scoring systems rely on simplified heuristics and linear models that cannot capture complex nonlinear interactions among factors influencing borrower behavior.",
+  "approach": [
+    "Proposes unified theoretical framework integrating heterogeneous data sources from financial ratios to behavioral indicators.",
+    "Develops variational Bayesian inference combined with spatio-temporal attention mechanisms for dynamic credit scores.",
+    "Autoencoder networks for feature embedding and dimensionality reduction.",
+    "Calibrates loss functions to balance type I and type II error costs under regulatory constraints.",
+    "Addresses model validation including back-testing over stressed economic scenarios."
+  ],
+  "findings": [
+    "AI and ML methodologies significantly improve risk discrimination power over traditional linear models.",
+    "Variational Bayesian inference enables dynamic creditworthiness scores that evolve with borrower behavior.",
+    "Operational deployment considerations include scalable microservice architectures and continuous learning pipelines."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Variational Bayesian Inference",
+      "definition": "Probabilistic inference method for dynamic creditworthiness scoring."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on predictive credit risk modeling and scoring."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Credit scoring identifies anomalous/defaulting borrowers."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions regulatory constraints but not focus."
+      }
+    ],
+    "contribution_to_field": "Advances AI-driven credit risk modeling with variational Bayesian inference and attention mechanisms. Provides a technically rigorous roadmap for integrating heterogeneous data sources into dynamic credit scoring.",
+    "directly_justifies": [
+      "AI models significantly improve risk discrimination over linear models.",
+      "Dynamic credit scores can evolve with real-time borrower behavior."
+    ],
+    "limits": [
+      "Framework without empirical validation on real credit data.",
+      "Implementation and performance metrics not provided."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 6.A (high), 8.A (medium), 10.A (low). Rejected Philippine-specific and behavioral topics."
+  },
+  "limitations": [
+    "Theoretical framework without empirical validation on real credit data.",
+    "Implementation details and performance metrics not provided. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Variational Bayesian inference enables dynamic creditworthiness scores.",
+    "AI models improve credit risk discrimination over traditional linear models.",
+    "Spatio-temporal attention mechanisms capture evolving borrower behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Fathy_marked.md",
+      "converted_at": "2026-07-22T13:22:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

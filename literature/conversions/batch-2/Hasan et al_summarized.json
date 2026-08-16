@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.59324/ejsmt.2026.2(1).05",
+  "designation": "international",
+  "title": "Continuous Data Curation and Valuation for Long-Term Machine Learning Model Health: A Comprehensive Review",
+  "authors": "Hasan, M.; Shifa, S. I.; Niaz, K.; Shuvo, M. M. H.",
+  "year": 2025,
+  "venue": "European Journal of Science and Modern Technologies",
+  "odin_topics": ["14.A", "14.B"],
+  "tldr": "Reviews continuous data curation and valuation techniques for maintaining long-term ML model health, proposing DataSphere as a unified framework for automated data lifecycle management.",
+  "problem_and_motivation": "Machine learning models degrade over production time due to concept drift and data quality erosion, a phenomenon termed AI ageing. Current ML systems lack integrated, automated data curation pipelines, treating data work as an afterthought rather than a first-class lifecycle citizen.",
+  "approach": [
+    "Consolidated research across automated data cleaning, drift detection, data valuation, active learning, and MLOps into a unified review.",
+    "Formally defined model health as a time-dependent function of accuracy, robustness, fairness, and distributional drift.",
+    "Introduced a master taxonomy of methods for long-term model health across data quality curation, data importance valuation, environment change detection, and adaptation.",
+    "Proposed DataSphere as a unified framework for autonomous data lifecycle management.",
+    "Provided implementation roadmap for operationalizing continuous curation in production ML systems."
+  ],
+  "findings": [
+    "Concept drift (covariate, concept, and label drift) is the primary cause of ML performance decay in production.",
+    "Data valuation methods like Shapley values are theoretically rigorous but computationally expensive.",
+    "Automated drift detection (DDM, ADWIN, Page-Hinkley) enables timely model retraining.",
+    "Active learning strategies balance labeling cost against model performance improvement."
+  ],
+  "key_figures_tables": [
+    "Figure 1: High-Level ML Data Lifecycle Pipeline → Cyclical process from acquisition through monitoring and retraining.",
+    "Figure 2: Model Performance Degradation Over Time → Shows sawtooth pattern with continuous curation vs. decay without.",
+    "Table 1: Master Taxonomy of Methods for Long-Term Model Health → Categories with methods and key trade-offs."
+  ],
+  "key_equations": [
+    {"equation": "H(t) = f(A(t), R(t), F(t), D(t))", "explanation": "Model health as function of accuracy, robustness, fairness, drift."}
+  ],
+  "definitions": [
+    {"term": "AI ageing", "definition": "Decline in ML model performance over time due to data drift"},
+    {"term": "MLOps", "definition": "Machine Learning Operations, managing ML lifecycle in production"},
+    {"term": "DDM", "definition": "Drift Detection Method"},
+    {"term": "ADWIN", "definition": "Adaptive Windowing algorithm for drift detection"}
+  ],
+  "citations": [
+    {"author": "Vela et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Introduced AI ageing as ML model performance decay in production.", "role": "context"},
+    {"author": "Lu et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Concept drift includes covariate, concept, and label drift types.", "role": "context"},
+    {"author": "Guha et al.", "year": 2024, "page": 0, "paragraph": 0, "claim": "Noise and missing values cause great harm to model training and generalization.", "role": "context"},
+    {"author": "Bhardwaj et al.", "year": 2024, "page": 0, "paragraph": 0, "claim": "Data work is trivialized as janitorial rather than first-class ML lifecycle citizen.", "role": "critique"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "medium", "justification": "Covers data valuation and curation which relates to synthetic data quality assessment."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "high", "justification": "Directly addresses ML model health monitoring and lifecycle management in production."}
+    ],
+    "contribution_to_field": "This review consolidates disparate research threads on continuous data curation, drift detection, and data valuation into a unified taxonomy for long-term ML model health. It formalizes model health as a multi-dimensional time-dependent function and proposes DataSphere as an architectural blueprint for automated data lifecycle management. The paper provides practical guidance for operationalizing data-centric ML practices in production environments.",
+    "directly_justifies": [
+      "ML models experience accuracy decay in production due to concept drift.",
+      "Continuous data curation maintains model health near peak levels.",
+      "Data valuation methods enable selective data acquisition for retraining.",
+      "Model health is a time-dependent function of accuracy, robustness, fairness, and drift."
+    ],
+    "limits": [
+      "Review provides no empirical evaluation of the proposed DataSphere framework.",
+      "Coverage of data valuation methods is theoretical without implementation guidance. [unacknowledged]",
+      "Does not address domain-specific challenges for financial time series data."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 14 (ML Serving and Deployment) was flagged as high relevance because the paper directly addresses ML model health in production. Domain 14.A received medium relevance due to coverage of data valuation. All other domains (1-13) were rejected as the paper is a general ML infrastructure review, not specific to personal finance, budgeting, or financial behavior."
+  },
+  "limitations": [
+    "Proposed DataSphere framework is conceptual without implementation or validation.",
+    "Does not provide comparative evaluation of data curation tools. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Model health is a time-dependent function of accuracy, robustness, fairness, and drift.",
+    "Concept drift is the primary cause of ML performance decay in production.",
+    "Continuous curation creates a sawtooth pattern maintaining near-peak model performance.",
+    "Data valuation enables cost-effective selective data acquisition for retraining."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hasan et al_marked.md",
+      "converted_at": "2026-07-22T13:31:35Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

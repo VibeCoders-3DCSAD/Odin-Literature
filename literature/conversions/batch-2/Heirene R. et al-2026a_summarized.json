@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1186/s12954-026-01402-4",
+  "designation": "international",
+  "title": "Development of lower-risk guidelines for online sports and race betting in Australia using objective behavioural data",
+  "authors": "Heirene, R. M.; Chandrakumar, D.; Fahey, G.; Huynh, E. L. Y.; Gainsbury, S. M.",
+  "year": 2026,
+  "venue": "Harm Reduction Journal",
+  "odin_topics": ["1.C", "2.A", "2.B"],
+  "tldr": "Develops lower-risk gambling guidelines for Australian online sports and race betting using objective behavioural data from 1,647 wagering customers, identifying four key behavioural limits.",
+  "problem_and_motivation": "Existing lower-risk gambling guidelines rely on self-reported data known to be inaccurate and apply broadly across gambling types, ignoring activity-specific risk factors. Online sports betting has unique behavioural markers (e.g., deposit frequency) not captured by general guidelines.",
+  "approach": [
+    "Invited customers from two Australian online wagering sites to complete a survey including PGSI and GHM measures.",
+    "Matched survey responses to objective account data covering 6 months before and after survey completion.",
+    "Applied ROC curve analysis to identify optimal threshold values across eight behavioural indicators.",
+    "Analyzed dose-response relationships between limit breaches and gambling harm.",
+    "Final sample comprised 1,647 participants (84.6% male, mean age 44.1)."
+  ],
+  "findings": [
+    "num: All indicators had acceptable AUC values (>=0.6) except gambling frequency.",
+    "Optimal threshold values were higher for GHM than PGSI harm measures.",
+    "Objective data thresholds were higher than those from self-report studies (e.g., <=6% vs <=1% monthly income).",
+    "Dose-response relationship: surpassing more limits increased odds of reporting harm.",
+    "Proposed guidelines: no more than 4 deposits/month, deposit <=2% pre-tax income, <=2 sites/apps, <=4 sport/race types."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "PGSI", "definition": "Problem Gambling Severity Index"},
+    {"term": "GHM", "definition": "Gambling Harm Measure"},
+    {"term": "ROC", "definition": "Receiver Operating Characteristic curve analysis"},
+    {"term": "AUC", "definition": "Area Under the Curve, classification performance metric"}
+  ],
+  "citations": [
+    {"author": "Currie et al.", "year": 2006, "page": 0, "paragraph": 0, "claim": "Established lower-risk gambling guidelines based on cross-provincial survey data.", "role": "methodology"},
+    {"author": "Hodgins et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Found guideline values within restricted bands across eight countries.", "role": "finding"},
+    {"author": "Heirene et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Median difference between actual and estimated net outcome was 100% of actual value.", "role": "finding"},
+    {"author": "Louderback et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "Concluded unique limits might apply to different gambling populations.", "role": "context"},
+    {"author": "Dowling et al.", "year": 0, "page": 0, "paragraph": 0, "claim": "77% of experts and 73% of public believed guidelines should be gambling-type specific.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "low", "justification": "Provides general framework for behavioral risk limits applicable to any population."},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "medium", "justification": "Australian-specific gambling behavior guidelines reflect culturally contextual financial risk behavior."},
+      {"code": "2.B", "name": "Seasonal and Cyclical Spending Patterns", "relevance": "medium", "justification": "Deposit frequency and monthly income percentage thresholds relate to spending patterns."}
+    ],
+    "contribution_to_field": "This paper provides the first lower-risk gambling guidelines derived from objective behavioural data rather than self-reports, addressing the known inaccuracy of self-reported gambling expenditure. It establishes activity-specific limits for online sports and race betting, demonstrating that thresholds differ from general gambling guidelines. The dose-response analysis confirms the cumulative risk of exceeding multiple behavioural limits.",
+    "directly_justifies": [
+      "Objective behavioural data yields different risk thresholds than self-reported data.",
+      "A dose-response relationship exists between limit breaches and gambling harm.",
+      "Activity-specific guidelines are needed for different gambling types."
+    ],
+    "limits": [
+      "Australian-specific context and sample composition (84.6% male) limit generalizability.",
+      "Guidelines derived from a single operator's customer base.",
+      "Does not address applicability to personal financial management or budgeting systems."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 2 (Culturally Specific Practices, Seasonal Patterns) was flagged as medium relevance because the gambling behavior thresholds relate to culturally contextual financial behavior patterns. Domain 1.C received low relevance as the behavioral framework is general. All other domains (3-14) were rejected as the paper addresses gambling harm reduction, not personal finance systems, budgeting, or ML."
+  },
+  "limitations": [
+    "Predominantly male sample (84.6%) limits generalizability to female bettors.",
+    "Single country context may not transfer to other regulatory environments.",
+    "Guidelines require further evaluation to confirm value across samples and over time."
+  ],
+  "remember_this": [
+    "Objective data thresholds differ significantly from self-report-based guidelines.",
+    "Dose-response relationship: more limit breaches increase harm odds.",
+    "Proposed: max 4 deposits/month, <=2% income, <=2 sites, <=4 sport types.",
+    "ROC analysis identified thresholds with AUC >=0.6 for most indicators."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Heirene R. et al-2026a_marked.md",
+      "converted_at": "2026-07-22T13:33:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

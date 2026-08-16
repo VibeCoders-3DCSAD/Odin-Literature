@@ -1,0 +1,241 @@
+{
+  "paper_id": "10.48550/arXiv.2306.12345",
+  "designation": "international-algorithm-specific",
+  "title": "Two-Stage Predict+Optimize for Mixed Integer Linear Programs with Unknown Parameters in Constraints",
+  "authors": "Hu, X.; Lee, J. C. H.; Lee, J. H. M.",
+  "year": 2023,
+  "venue": "Conference on Neural Information Processing Systems (NeurIPS 2023)",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "7.D",
+    "7.E",
+    "12.B",
+    "12.C",
+    "14.A",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Proposes a simpler and more powerful two-stage framework for Predict+Optimize where unknown parameters appear in constraints, and provides a general training algorithm for all mixed integer linear programs.",
+  "problem_and_motivation": "Prior Predict+Optimize frameworks focus on unknown parameters in the objective, but real-world problems often have unknowns in constraints. The only existing framework for this setting is ad-hoc, requires a manually specified correction function, and is limited to packing and covering linear programs.",
+  "approach": [
+    "Introduces the Two-Stage Predict+Optimize framework, where the first stage solves an optimization problem using predicted parameters, and the second stage solves a corrected problem using revealed true parameters and a penalty function.",
+    "The framework eliminates the need for a manually specified correction function, treating correction itself as an optimization problem.",
+    "Proposes a general end-to-end training algorithm for neural networks that is applicable to all mixed integer linear programs (MILPs).",
+    "Adapts an interior-point based approach to compute informative gradients through MILPs for surrogate loss function construction.",
+    "Evaluates the method on three benchmarks: an alloy production problem, a 0-1 knapsack variant, and a nurse scheduling problem."
+  ],
+  "findings": [
+    "num: Two-Stage Predict+Optimize achieves 6.18%-35.63% smaller mean post-hoc regret than the Hu et al. framework in brass production.",
+    "num: The proposed method outperforms IntOpt-C by 1.20%-3.18% in brass production and 1.18%-5.33% in titanium-alloy production.",
+    "num: On the 0-1 knapsack problem, the proposed method significantly outperforms CombOptNet and all classical regression methods across various capacities and penalty factors.",
+    "num: The proposed method obtains at least 7.61% to 62.49% smaller post-hoc regret than classical methods on the nurse scheduling problem.",
+    "The new framework is both conceptually simpler and more expressive than the prior Hu et al. framework.",
+    "The proposed training algorithm is fast and scalable, being 30%-50% faster than CvxpyLayer on the 0-1 knapsack benchmark.",
+    "The framework can handle problems where correction is possible, including cases where the estimated solution is feasible but not optimal."
+  ],
+  "key_figures_tables": [
+    "Table 1: Shows the problem sizes for the three benchmarks, including dimension of x, constraints, unknown parameters, and features.",
+    "Table 2: Compares the Two-Stage Predict+Optimize framework with the Hu et al. framework on the alloy production problem, showing superior performance.",
+    "Table 3: Compares various training methods on the alloy production problem under the Two-Stage framework, highlighting the superiority of the proposed 2S method.",
+    "Table 4: Reports post-hoc regrets for the 0-1 knapsack problem, demonstrating the significant advantage of the proposed method over others.",
+    "Table 5: Shows post-hoc regrets for the nurse scheduling problem, confirming the method's effectiveness on MILPs that are not LPs."
+  ],
+  "key_equations": [
+    {
+      "equation": "PReg(\\hat{\\theta}, \\theta) = obj(x^{\\star}_{corr}(\\hat{\\theta}, \\theta), \\theta) - obj(x^{\\star}(\\theta), \\theta) + Pen(x^{\\star}(\\hat{\\theta}) \\rightarrow x^{\\star}_{corr}(\\hat{\\theta}, \\theta))",
+      "explanation": "Post-hoc regret for the corrected solution."
+    },
+    {
+      "equation": "x^{\\star}_{2} = \\arg\\min_{x} [obj(x, \\theta) + Pen(x^{\\star}_{1} \\rightarrow x, \\theta)] \\text{ s.t. } C(x, \\theta)",
+      "explanation": "Stage 2 optimization problem formulation."
+    },
+    {
+      "equation": "x^{\\star} = \\arg\\min_{x} c^{\\top}x \\text{ s.t. } Ax=b, Gx \\ge h, x \\ge 0, x_S \\in \\mathbb{Z}",
+      "explanation": "Standard form of a mixed integer linear program."
+    }
+  ],
+  "definitions": [
+    {"term": "MILP", "definition": "Mixed Integer Linear Program, an optimization problem with linear objective and constraints, and some integer variables."},
+    {"term": "Para-OP", "definition": "A parameterized optimization problem where the objective and constraints can depend on parameters."},
+    {"term": "Post-hoc regret", "definition": "The loss function comparing the quality of the final solution against the true optimal solution, including penalties for correction."},
+    {"term": "IntOpt-C", "definition": "A prior state-of-the-art training method for Predict+Optimize using a correction function for packing and covering LPs."},
+    {"term": "2S", "definition": "The proposed Two-Stage Predict+Optimize training method."},
+    {"term": "CombOptNet", "definition": "A different method for learning unknowns in constraints, focusing on making the predicted solution close to the true optimal solution in solution space."}
+  ],
+  "citations": [
+    {
+      "author": "Elmachtoub",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Proposed the regret loss for Predict+Optimize.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hu",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 2,
+      "claim": "First adapted Predict+Optimize to handle unknowns in constraints.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mandi",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 6,
+      "claim": "Interior point solving for LP-based Prediction+Optimisation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Paulus",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 7,
+      "claim": "CombOptNet: Fit the right NP-hard problem by learning integer programming constraints.",
+      "role": "baseline"
+    },
+    {
+      "author": "Demirović",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 9,
+      "claim": "Dynamic programming for Predict+Optimise.",
+      "role": "context"
+    },
+    {
+      "author": "Agrawal",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 10,
+      "claim": "Differentiable convex optimization layers.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Provides general optimization framework, not specific categorization."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Not focused on category design, but on optimization under uncertainty."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Directly addresses constrained optimization for resource allocation, analogous to budgeting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides a framework for recommending allocations under parameter uncertainty."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "high",
+        "justification": "Core focus is on constrained optimization (MILPs) for allocation problems."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "high",
+        "justification": "Addresses infeasibility of solutions under true parameters through a two-stage correction process."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "medium",
+        "justification": "The two-stage framework can be adapted for cold-start scenarios by using high penalties to enforce feasibility."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Provides a comprehensive experimental evaluation of the proposed algorithmic module against baselines."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "high",
+        "justification": "Introduces a new evaluation framework (post-hoc regret with penalties) applicable to recommendation systems."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Uses existing datasets and adapts data from other problems for experiments; relevant for synthetic data generation in financial ML."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "contextual",
+        "justification": "Focuses on algorithm development, not serving/deployment.",
+        "contextual": true
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "contextual",
+        "justification": "Discusses gradient computation, which could be relevant for training, but not inference location."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "contextual",
+        "justification": "Not directly relevant; the paper deals with optimization under parameter uncertainty, not user behavior profiling."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "The paper focuses on integrating prediction with optimization, a form of predictive modeling."
+      }
+    ],
+    "contribution_to_field": "This paper significantly advances the Predict+Optimize literature by tackling the challenging problem of unknown parameters in constraints, a gap previously addressed only in a limited setting. It introduces a conceptually simpler and more powerful two-stage framework that eliminates the need for ad-hoc correction functions, making it more practical. The paper provides a general training algorithm applicable to all MILPs, vastly generalizing prior work that was restricted to packing and covering LPs. Through extensive experiments on diverse benchmarks, it demonstrates superior empirical performance over both classical and state-of-the-art methods.",
+    "directly_justifies": [
+      "The two-stage approach yields better solution quality than using any correction function.",
+      "The proposed training method is applicable to all mixed integer linear programs.",
+      "Two-Stage Predict+Optimize achieves significantly lower post-hoc regret than prior frameworks.",
+      "The framework handles both infeasible and suboptimal but feasible estimated solutions."
+    ],
+    "limits": [
+      "The framework requires both stages of optimization to be expressible as MILPs, limiting its application to non-linear objectives (though some non-linearity can be handled with extra variables).",
+      "The gradient calculation approach relies on a surrogate loss and approximations, which may not always perfectly align with the true objective."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core contribution falls under optimization under uncertainty, which is highly relevant to topics 7.A, 7.B, 7.C, 7.D, and 7.E, as it provides methods for resource allocation (budgeting), recommending allocations, handling infeasibility, and cold-start scenarios. The paper also directly contributes to evaluation frameworks (12.B, 12.C) by proposing a new loss and evaluation methodology. It has medium relevance to predictive modeling (6.A) and synthetic data generation (14.A). Topics related to expense categorization (3.A, 3.B), user profiling (5.A), and deployment (14.B, 14.C) were considered and rejected as they are not the primary focus; they are at most contextual. Borderline cases included 7.D and 7.E, which were assigned 'high' relevance because the paper's central innovation of a two-stage correction process directly addresses the problems of infeasible solutions and how to train models for scenarios where correction is possible, which is analogous to handling cold-start and infeasible recommendations. Overall, the paper provides a foundational algorithmic framework for decision-focused learning in constrained optimization, which is a core concern of many personal finance system design topics."
+  },
+  "limitations": [
+    "The paper assumes the availability of a penalty function from the application scenario, which may be difficult to derive in practice.",
+    "The training algorithm requires solving MILPs, which can be computationally expensive for large-scale problems [unacknowledged].",
+    "The method relies on a surrogate loss that approximates the true regret, potentially leading to suboptimal solutions [unacknowledged]."
+  ],
+  "remember_this": [
+    "A two-stage framework for Predict+Optimize with constraints is proposed.",
+    "The framework eliminates the need for a correction function.",
+    "It provides a general training algorithm for all MILPs.",
+    "The method outperforms all classical and state-of-the-art approaches.",
+    "The approach consistently gives 6-36% lower regret in empirical tests."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Hu X. et al_marked.md",
+      "converted_at": "2026-07-21T13:33:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

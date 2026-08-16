@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.1177/09500170241247121Work",
+  "designation": "local",
+  "title": "Extreme Lockdowns and the Gendered Informalization of Employment: Evidence from the Philippines",
+  "authors": "Extreme Lockdowns",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B"
+  ],
+  "tldr": "The adverse effects of COVID-19 on labour market outcomes are amplified by and partly attributable to the imposition of extreme mobility restrictions. While gendered disparities in job losses and reduction in working hours are demonstrated in the literature, is an informalization of employment observed, and is this phenomenon likewise gendered? This article analyses the Philippines, a country that",
+  "problem_and_motivation": "The adverse effects of COVID-19 on labour market outcomes are amplified by and partly attributable to the imposition of extreme mobility restrictions. While gendered disparities in job losses and reduction in working hours are demonstrated in the literature, is an informalization of employment observed, and is this phenomenon likewise gendered? This article analyses the Philippines, a country that imposed one of the world’s longest and strictest lockdowns, and specifically how its imposition aff",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Extreme Lockdowns and the Gendered Informalization of Employment: Evidence from "
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Extreme Lockdowns and the Gendered Informalization of Employment: Evidence from ",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ramos-2024a_marked.md",
+      "converted_at": "2026-07-21T08:16:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

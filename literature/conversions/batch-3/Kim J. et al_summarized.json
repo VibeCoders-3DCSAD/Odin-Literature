@@ -1,0 +1,387 @@
+{
+  "paper_id": "10.1007/s10462-025-11223-9",
+  "designation": "international-algorithm-specific",
+  "title": "A comprehensive survey of deep learning for time series forecasting: architectural diversity and open challenges",
+  "authors": "Kim, J.; Kim, H.; Kim, H.; Lee, D.; Yoon, S.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "5.A",
+    "5.B",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "7.D",
+    "7.E",
+    "8.A",
+    "8.B",
+    "8.C",
+    "9.A",
+    "9.B",
+    "10.A",
+    "11.A",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.A",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Surveys deep learning architectures for time series forecasting, analyzing the transition from Transformers to diverse models including MLPs, CNNs, RNNs, GNNs, diffusion models, Mamba, and foundation models, while addressing open challenges like channel dependency, distribution shift, causality, and feature extraction.",
+  "problem_and_motivation": "Time series forecasting faces challenges from data diversity and complexity, requiring diverse architectures and approaches due to limited model generalizability. Existing survey papers lack a comprehensive comparison across diversified architectures and open challenges.",
+  "approach": [
+    "Systematically reviews and compares deep learning models for time series forecasting, including MLPs, CNNs, RNNs, GNNs, Transformers, diffusion models, Mamba, and foundation models.",
+    "Categorizes models chronologically and by architecture, analyzing their strengths, weaknesses, and contributions.",
+    "Employs an issue-driven approach to examine seven key open challenges: channel dependency, distribution shift, causality, feature extraction, model combination, interpretability, and spatio-temporal forecasting.",
+    "Synthesizes findings from major AI/ML conferences and arXiv, incorporating over 250 references.",
+    "Provides a taxonomy of models and techniques, summarizing key methodologies in structured tables."
+  ],
+  "findings": [
+    "num: Transformer-based models have O(L^2) time and memory complexity, which limits their application to long sequences.",
+    "num: Simple linear models like LTSF-Linear can outperform some Transformer-based models on long-term forecasting tasks.",
+    "num: Patching techniques reduce Transformer parameters by over 95% while improving performance (e.g., PETformer vs. PatchTST).",
+    "num: Mamba-based models can achieve SOTA performance with approximately one-seventh the parameters of standard Mamba models (e.g., Time-SSM).",
+    "num: Channel-independent (CI) strategies often outperform channel-dependent (CD) strategies on datasets with distribution shifts.",
+    "The field of time series forecasting is experiencing a \"renaissance\" with active competition among diverse architectures.",
+    "Foundation models for time series face challenges due to domain-specific characteristics and lack of large-scale benchmark datasets.",
+    "Diffusion models provide advantages in uncertainty modeling for probabilistic forecasting.",
+    "Mamba's selective state space model offers efficient sequence processing and competitive performance.",
+    "Normalization-denormalization frameworks (e.g., RevIN, Dish-TS) are effective for mitigating distribution shifts."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Overview of survey structure → Survey covers historical models, new explorations, and open challenges.",
+    "Figure 2: Number of TSF papers at top conferences → Explosive growth demonstrates increasing research importance.",
+    "Figure 3: Evolution of TSF models → Field progressed from statistical methods to diverse deep learning architectures.",
+    "Figure 4: Latest open challenges → Seven key challenges require ongoing research attention.",
+    "Table 5: Taxonomy of transformer models → Methods include patching, cross-dimension, and exogenous variable integration.",
+    "Table 6: Comparison of architectures → Each architecture has distinct strengths and weaknesses.",
+    "Table 7: Taxonomy of fundamental models → MLP, CNN, RNN, and GNN architectures are being reassessed.",
+    "Table 8: Foundation model taxonomy → Approaches include LLM-based and pre-training from scratch.",
+    "Table 9: Diffusion model taxonomy → Models categorized by conditional embedding, feature extraction, and diffusion type.",
+    "Table 10: Mamba model taxonomy → Models focus on embedding, channel correlation, and sequence learning."
+  ],
+  "key_equations": [
+    {
+      "equation": "$\\hat{x}_{t+1:t+h} = f(x_{t-p:t})$",
+      "explanation": "Univariate time series forecasting formulation."
+    },
+    {
+      "equation": "$\\hat{X}_{t+1:t+h} = f(X_{t-p:t})$",
+      "explanation": "Multivariate time series forecasting formulation."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "TSF",
+      "definition": "Time Series Forecasting"
+    },
+    {
+      "term": "LTSF",
+      "definition": "Long-Term Time Series Forecasting"
+    },
+    {
+      "term": "MTS",
+      "definition": "Multi-variate Time Series"
+    },
+    {
+      "term": "CI",
+      "definition": "Channel Independent strategy"
+    },
+    {
+      "term": "CD",
+      "definition": "Channel Dependent strategy"
+    },
+    {
+      "term": "LLM",
+      "definition": "Large Language Model"
+    },
+    {
+      "term": "SSM",
+      "definition": "State Space Model"
+    },
+    {
+      "term": "DDPM",
+      "definition": "Denoising Diffusion Probabilistic Model"
+    },
+    {
+      "term": "SDE",
+      "definition": "Stochastic Differential Equation"
+    },
+    {
+      "term": "MAE",
+      "definition": "Mean Absolute Error"
+    },
+    {
+      "term": "MSE",
+      "definition": "Mean Squared Error"
+    }
+  ],
+  "citations": [
+    {
+      "author": "Vaswani",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transformer model with self-attention mechanism for sequence-to-sequence tasks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zeng",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Simple linear models can outperform transformer-based models for long-term time series forecasting.",
+      "role": "finding"
+    },
+    {
+      "author": "Nie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Patching time series into 64 patches with channel independence achieves better performance.",
+      "role": "finding"
+    },
+    {
+      "author": "Gu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mamba introduces selective state space models for efficient sequence modeling.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Autoformer integrates decomposition into transformer blocks with auto-correlation mechanism.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "iTransformer reverses time and variable dimensions to learn inter-variable correlations.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kim",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "RevIN provides reversible instance normalization for distribution shift mitigation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rasul",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TimeGrad uses autoregressive DDPM with RNN encoding for probabilistic forecasting.",
+      "role": "methodology"
+    },
+    {
+      "author": "Oreshkin",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "N-BEATS uses block-based architecture with basis expansion for interpretable forecasting.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Discusses multivariate analysis and channel relationships relevant to categorization."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Feature extraction and decomposition relate to category design."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "contextual",
+        "justification": "Discusses channel dependency and patterns in multivariate data relevant to behavioral profiling."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "contextual",
+        "justification": "Distribution shift discussion applies to dynamic profile changes."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "contextual",
+        "justification": "Covers classification and pattern recognition in time series."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Core focus on time series forecasting models applicable to financial prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Comprehensive review of forecasting algorithms for sequential data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Mentions decision-making applications but not budget strategies specifically."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Forecasting models could support budget recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "Briefly references constrained learning and optimization."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "contextual",
+        "justification": "Discusses model robustness and handling anomalies."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "contextual",
+        "justification": "Foundation models and zero-shot capabilities related to cold-start."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "RobustTSF and anomaly handling mentioned briefly."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Anomaly detection not a primary focus."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Not explicitly addressed."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "MLP-based models' lightweight nature suitable for mobile."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "Not directly addressed."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses challenges in data collection and pre-training due to privacy."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Not a primary focus."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Detailed discussion of evaluation metrics for forecasting."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Comprehensive coverage of model evaluation, metrics, and benchmarks."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Evaluation frameworks discussed could apply to budget systems."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "contextual",
+        "justification": "Mentions synthetic data generation for foundation models."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "contextual",
+        "justification": "Discusses lightweight models suitable for deployment."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "contextual",
+        "justification": "MLP-based models' efficiency relates to on-device inference."
+      }
+    ],
+    "contribution_to_field": "This survey provides a comprehensive and timely analysis of the movement toward architectural diversification in deep learning for time series forecasting. It systematically compares models across multiple architectures, including emerging ones like diffusion models, Mamba, and foundation models. The paper uniquely addresses seven open challenges with an issue-driven approach, organizing new solutions. It lowers entry barriers for newcomers while offering seasoned researchers broader perspectives.",
+    "directly_justifies": [
+      "Time series forecasting has entered a renaissance of modeling with various methodologies actively competing.",
+      "Simple linear models can outperform transformer-based models on long-term forecasting tasks.",
+      "Patching techniques significantly improve transformer performance for time series.",
+      "Channel independence can outperform channel dependence due to robustness to distribution shifts.",
+      "Distribution shift alleviation is crucial for improving model generalization."
+    ],
+    "limits": [
+      "This survey is not specific to financial personal finance systems and covers a broad range of time series domains.",
+      "Spatial-temporal forecasting is discussed but not in depth.",
+      "The paper does not provide implementation details or empirical comparisons of all models."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper was flagged as highly relevant to Predictive Modeling (6.A, 6.B) and Algorithmic Evaluation (12.A, 12.B), as it comprehensively reviews forecasting algorithms and evaluation methodologies. Medium relevance was assigned to Evaluation Frameworks (12.A) due to the detailed metrics discussion. Contextual relevance was assigned to expense categorization (3.A, 3.B), behavioral profiles (5.A, 5.B, 5.C), budgeting (7.A, 7.B, 7.C, 7.D, 7.E), anomaly detection (8.A, 8.B, 8.C), mobile design (9.A), data privacy (10.A), synthetic data (14.A), and deployment (14.B, 14.C) because the paper discusses general time series concepts applicable to personal finance but does not focus on these specific domains. Low relevance was assigned to Mobile UX (9.B) and Engagement Dynamics (11.A) as they are not addressed. The paper is international-algorithm-specific because it covers global algorithmic research without focusing on any single country or institution."
+  },
+  "limitations": [
+    "The paper skips detailed theoretical backgrounds of the models, potentially limiting depth for some readers. [unacknowledged]",
+    "Specific differences in characteristics across various time series datasets are left for future work. [unacknowledged]",
+    "The aspect of expanding Artificial General Intelligence (AGI) and Adaptive Modeling could be further explored. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Time series forecasting models have diversified beyond Transformers.",
+    "Simple linear models can outperform Transformers in some scenarios.",
+    "num: Patching reduces Transformer parameters by over 95%.",
+    "Channel strategies depend on dataset distribution shift.",
+    "Foundation models for time series face unique data challenges."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kim J. et al_marked.md",
+      "converted_at": "2026-07-21T13:47:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

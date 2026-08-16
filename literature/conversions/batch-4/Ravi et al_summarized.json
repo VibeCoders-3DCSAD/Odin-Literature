@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.1145/3779211.3793172",
+  "designation": "local-algorithm-specific",
+  "title": "TRuST-M: Evaluating User Trust and Explainability in LLM-Based Web Moderation Systems",
+  "authors": "Evaluating User Trust",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "12.A",
+    "2.A",
+    "4.B",
+    "5.C",
+    "7.B"
+  ],
+  "tldr": "As online social platforms face increasing challenges in moderating nuanced threats across web communities, trust in automated mod- eration systems is critical. TRuST-M examines this problem in web and social-network environments, where moderation occurs under time pressure and public scrutiny. Large language models (LLMs) achieve strong classification performance but remain difficult to interpret",
+  "problem_and_motivation": "As online social platforms face increasing challenges in moderating nuanced threats across web communities, trust in automated mod- eration systems is critical. TRuST-M examines this problem in web and social-network environments, where moderation occurs under time pressure and public scrutiny. Large language models (LLMs) achieve strong classification performance but remain difficult to interpret, reducing user confidence and accountability in real-world workflows. This work introduces TRuST-M,",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: TRuST-M: Evaluating User Trust and Explainability in LLM-Based Web Moderation Sy"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: TRuST-M: Evaluating User Trust and Explainability in LLM-Based Web Moderation Sy",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ravi et al_marked.md",
+      "converted_at": "2026-07-21T08:18:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

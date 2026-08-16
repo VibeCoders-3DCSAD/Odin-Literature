@@ -1,0 +1,280 @@
+{
+  "paper_id": "10.1234/placeholder",
+  "designation": "international-algorithm-specific",
+  "title": "Benchmarking Machine Learning Models for Real-Time Fraud Detection in Digital Banking Transactions",
+  "authors": "Islam, A.; Miah, M.; Akhir, A.; Munni, A.; Jahan, I.; Nashid, S.",
+  "year": 2026,
+  "venue": "Unknown",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.B",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "8.A",
+    "8.B",
+    "10.A",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Benchmarks six machine learning models for real-time fraud detection, finding that deep learning models offer the highest accuracy but gradient-boosted trees provide superior scalability and cost-effectiveness.",
+  "problem_and_motivation": "Existing fraud detection systems either lack scalability and adaptability or neglect real-time constraints and cost implications. There is a need for a comprehensive evaluation that jointly considers predictive performance, latency, throughput, and financial costs.",
+  "approach": [
+    "Benchmarked Random Forest, XGBoost, LightGBM, LSTM, TCN, and Transformer on ULB and PaySim datasets.",
+    "Evaluated predictive performance using precision, recall, F1-score, ROC-AUC, and PR-AUC.",
+    "Measured real-time system performance via average latency, 95th percentile latency, and throughput.",
+    "Conducted a cost-benefit analysis quantifying the financial impact of false positives and false negatives.",
+    "Proposed a hybrid layered pipeline combining lightweight models for initial screening and deep models for secondary verification."
+  ],
+  "findings": [
+    "num: XGBoost achieved a ROC-AUC of 0.9998 and PR-AUC of 0.966 on the PaySim dataset.",
+    "num: Deep learning models achieved throughput exceeding 15,000 transactions per second.",
+    "num: Random Forest exhibited a mean latency of 7.6 ms on the ULB dataset.",
+    "Deep learning models, particularly LSTM and Transformer, achieved the highest detection accuracy.",
+    "Gradient-boosted tree ensembles offered superior real-time responsiveness and cost efficiency.",
+    "Adaptive retraining mechanisms significantly mitigated the effects of concept drift.",
+    "Cost-benefit analysis showed that minimizing false positives offered significant operational savings.",
+    "There is no universal best model; optimal deployment is context-dependent."
+  ],
+  "key_figures_tables": [
+    "Table 2: Model predictive performance on ULB Dataset → XGBoost achieves best F1 (0.859) and ROC-AUC (0.968).",
+    "Table 3: Model predictive performance on PaySim Dataset → XGBoost achieves near-perfect ROC-AUC (0.9998).",
+    "Table 4: Real-time performance on ULB Dataset → LSTM shows highest throughput (18,315 tx/sec).",
+    "Table 5: Real-time performance on PaySim Dataset → Deep learning models achieve sub-millisecond latency.",
+    "Figure 16: Predictive performance metrics on ULB → Ensemble and deep models deliver high F1 and AUC."
+  ],
+  "key_equations": [
+    {
+      "equation": "f(x) = w^T x + b, p(y=1|x) = σ(f(x))",
+      "explanation": "Logistic regression model."
+    },
+    {
+      "equation": "p(y=(1|x)) = 1/M ∑_{m=1}^M p_m(x)",
+      "explanation": "Random forest prediction."
+    },
+    {
+      "equation": "F_t(x) = F_{t-1}(x) + η f_t(x)",
+      "explanation": "Gradient boosting additive model."
+    },
+    {
+      "equation": "i_t = σ(W_{ix}x_t + U_{ih}h_{t-1} + b_i)",
+      "explanation": "LSTM input gate."
+    },
+    {
+      "equation": "y_t = ∑_{k=0}^{K-1} W_k x_{t-d⋅k} + b_i",
+      "explanation": "TCN dilated causal convolution."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ATO",
+      "definition": "Account takeover, a type of fraud where attackers gain unauthorized access to a user's account."
+    },
+    {
+      "term": "CNP",
+      "definition": "Card-not-present fraud, a type of fraud where the physical card is not used for a transaction."
+    },
+    {
+      "term": "ML",
+      "definition": "Machine learning."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long short-term memory, a recurrent neural network architecture."
+    },
+    {
+      "term": "TCN",
+      "definition": "Temporal convolutional network, a convolutional neural network architecture for sequence modeling."
+    },
+    {
+      "term": "XAI",
+      "definition": "Explainable artificial intelligence."
+    },
+    {
+      "term": "SMOTE",
+      "definition": "Synthetic minority oversampling technique."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Carcillo",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional rule-based models lack scalability and lead to high false-positive rates.",
+      "role": "context"
+    },
+    {
+      "author": "Dal Pozzolo",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adversarial adaptation enables concept drift and gradual performance degradation in static models.",
+      "role": "context"
+    },
+    {
+      "author": "Jurgovsky",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep models like LSTMs require substantial inference time, making them less suited for millisecond-level decisions.",
+      "role": "baseline"
+    },
+    {
+      "author": "Mao",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Incremental retraining strategies mitigate performance degradation from concept drift.",
+      "role": "methodology"
+    },
+    {
+      "author": "Whitrow",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Sudden shifts in geolocation or device fingerprint are significant predictors of fraud risk.",
+      "role": "finding"
+    },
+    {
+      "author": "Fiore",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "False alarms increase operational expenses and disrupt customer experience.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides background on shortcomings of existing fraud detection systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Directly identifies gaps in current fraud detection systems (latency, cost, concept drift)."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses behavioral patterns (transaction velocity, geolocation) used in fraud detection."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "low",
+        "justification": "Mentions concept drift and the need for adaptive retraining, which is related to profile dynamics."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Classifies models as supervised, unsupervised, and hybrid, which are classification approaches."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus: benchmarking predictive models for fraud detection."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Evaluates LSTM, TCN, and Transformer, which are forecasting algorithms for sequential data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Tangentially related through the concept of cost-benefit analysis."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "The paper does not directly address budget recommendation."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "The hybrid pipeline optimization problem is analogous to resource allocation."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Fraud detection is the primary application, which is a form of anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Directly evaluates multiple anomaly detection algorithms."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Mentions privacy-preserving approaches like federated learning."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Presents a comprehensive evaluation framework including latency, throughput, and cost metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Benchmarks the performance of individual algorithmic modules (models)."
+      }
+    ],
+    "contribution_to_field": "This paper provides the most comprehensive real-time benchmarking to date of classical, ensemble-based, and deep learning models for fraud detection, analyzing trade-offs between accuracy and latency. It introduces a novel hybrid deployment pipeline that balances throughput and precision, and presents a rigorous cost-benefit framework that translates model errors into quantifiable financial implications. The reproducible experimental framework based on ULB and PaySim datasets enables researchers to validate and extend findings under realistic settings.",
+    "directly_justifies": [
+      "Gradient-boosted tree ensembles, while slightly less accurate than deep learning models, offer superior scalability and real-time responsiveness.",
+      "Deep learning models such as LSTM and Transformer achieved the highest detection accuracy but incurred higher computational overhead and inference latency.",
+      "Minimizing false positives and latency offered significant operational savings and improved customer experience.",
+      "A hybrid layered pipeline employing lightweight models for initial screening and deep models for secondary verification balances detection accuracy, latency, and cost.",
+      "Adaptive retraining mechanisms are essential for maintaining robustness against concept drift in real-world settings."
+    ],
+    "limits": [
+      "The reliance on synthetic or anonymized datasets introduces constraints on external validity when generalizing to real-world financial environments."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and evaluation frameworks (12.A, 12.B) were flagged as 'high' relevance, as these are the paper's central focus. The domains covering limitations of existing systems (4.B), classification approaches (5.C), and data privacy (10.A) were assigned 'medium' or 'contextual' relevance because they are discussed but not the primary contribution. Domains such as budget recommendation (7.B) and mobile-first design (9.A) were considered and rejected as they are not addressed in the paper. The paper's overall topical coverage is centered on algorithmic benchmarking for real-time fraud detection, with secondary considerations for system evaluation and cost analysis."
+  },
+  "limitations": [
+    "Datasets used did not fully capture the wide spectrum of fraud typologies observed across global banking ecosystems. [unacknowledged]",
+    "Reliance on synthetic or anonymized datasets introduces constraints on external validity. [acknowledged]",
+    "The study did not evaluate the impact of data privacy regulations on model deployment. [unacknowledged]"
+  ],
+  "remember_this": [
+    "XGBoost achieved near-perfect fraud detection accuracy (ROC-AUC 0.9998) on the PaySim dataset.",
+    "Deep learning models like LSTM offered the highest throughput (18,315 tx/sec).",
+    "No single model excels in all dimensions; optimal choice depends on latency, cost, and accuracy priorities.",
+    "A hybrid pipeline with light screening models and deep verification models balances performance and efficiency.",
+    "Adaptive retraining is critical to maintaining fraud detection accuracy as fraud patterns evolve."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Islam A. et al_marked.md",
+      "converted_at": "2026-07-21T13:35:55Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

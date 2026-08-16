@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.1186/s13673-017-0100-",
+  "designation": "local",
+  "title": "Optimizing Banking Application Interfaces",
+  "authors": "Optimizing Banking Application",
+  "year": 2016,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "11.A",
+    "12.A",
+    "4.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "This study examined the implementation of a consent management tool for digital banking users that is more transparent, accessible, and controllable than existing solutions. This goal was achieved by designing and testing a consent management tool and by examining the effects of different consent flows on users’ understanding and trust in decision-making. The study used a mixed-methods approach, i",
+  "problem_and_motivation": "This study examined the implementation of a consent management tool for digital banking users that is more transparent, accessible, and controllable than existing solutions. This goal was achieved by designing and testing a consent management tool and by examining the effects of different consent flows on users’ understanding and trust in decision-making. The study used a mixed-methods approach, including an initial quick exploratory survey, two rounds of usability testing, and semi-structured i",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Optimizing Banking Application Interfaces"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Optimizing Banking Application Interfaces",
+    "Year: 2016",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pakarinen_marked.md",
+      "converted_at": "2026-07-21T08:04:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

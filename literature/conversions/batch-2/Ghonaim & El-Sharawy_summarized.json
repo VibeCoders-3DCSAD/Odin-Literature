@@ -1,0 +1,71 @@
+{
+  "paper_id": "10.21608/IJTAR.2025.427658.1148",
+  "designation": "international-algorithm-specific",
+  "title": "An Intelligent Budget Management Mobile Application Based on a Recurrent Neural Network",
+  "authors": "Ghonaim, W. A.; El-Sharawy, E. E.",
+  "year": 2025,
+  "venue": "International Journal of Theoretical and Applied Research",
+  "odin_topics": ["3.A", "4.A", "6.B", "9.A", "9.B"],
+  "tldr": "Proposes an intelligent mobile budget management app using RNN for financial transaction risk classification, achieving 97.45% accuracy with Arabic and English language support.",
+  "problem_and_motivation": "Existing budgeting apps lack AI-based forecasting and Arabic language support. Users need intelligent tools that classify transaction risk levels and provide personalized financial guidance.",
+  "approach": [
+    "Developed an Android mobile application with RNN-based financial transaction classifier.",
+    "Trained on real-world financial dataset with preprocessing including normalization and transformation.",
+    "Classifies transactions into low, medium, and high-risk categories.",
+    "Supports both English and Arabic language interfaces.",
+    "Evaluated using accuracy, precision, recall, and F1-score metrics."
+  ],
+  "findings": [
+    "num: Overall accuracy of 97.45% on new test data.",
+    "num: Precision, recall, and F1 measures all above 0.97 for all risk categories.",
+    "System reliably detects both low-risk and high-risk financial behaviors.",
+    "Arabic language support fills a gap in existing budgeting applications."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "RNN", "definition": "Recurrent Neural Network for sequential financial data processing."},
+    {"term": "Budget management", "definition": "Process of planning and controlling income and expenses."}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "high", "justification": "RNN classifies transactions into risk-based categories."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Reviews existing budgeting apps and their limitations."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Uses RNN for sequential financial transaction classification."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "high", "justification": "Implements Android mobile budgeting application."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "medium", "justification": "Bilingual (Arabic/English) mobile interface for finance."}
+    ],
+    "contribution_to_field": "Demonstrates an RNN-based approach for real-time financial transaction risk classification. Achieves high accuracy (97.45%) across three risk levels on real financial data. Addresses the language gap in budgeting applications by supporting Arabic alongside English.",
+    "directly_justifies": [
+      "RNN achieves 97.45% accuracy on financial transaction risk classification.",
+      "Precision, recall, and F1 exceed 0.97 for all risk categories.",
+      "Arabic-English bilingual support addresses a gap in budget apps."
+    ],
+    "limits": [
+      "Dataset details and size not specified in the summary.",
+      "Mobile implementation details limited."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 3.A, 4.A, 6.B, 9.A high relevance for expense categorization, system landscape, RNN forecasting, and mobile design. Assigned 9.B medium for UX. Rejected demographic topics (1.A-2.D) as the paper focuses on system development."
+  },
+  "limitations": [
+    "Dataset specifics (size, source) not fully disclosed.",
+    "Limited to Android platform; no iOS evaluation.",
+    "Risk classification categories may not align with all user contexts. [unacknowledged]"
+  ],
+  "remember_this": [
+    "RNN achieves 97.45% accuracy on transaction risk classification.",
+    "All precision, recall, and F1 scores exceed 0.97.",
+    "Bilingual Arabic-English support fills language gap.",
+    "Real-time classification enables intelligent budget management."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Ghonaim & El-Sharawy_marked.md",
+      "converted_at": "2026-07-22T13:26:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3550339",
+  "designation": "international-algorithm-specific",
+  "title": "Enhancing Segmentation: A Comparative Study of Clustering Methods",
+  "authors": "Lew, L. S.; Tang Weiling, C.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "A comparative study of clustering methods for customer segmentation in e-marketing, using RFM analysis and evaluating performance with Silhouette Score and Davies-Bouldin Index.",
+  "problem_and_motivation": "E-marketing lacks a structured consumer segmentation plan. Traditional segmentation methods fail to capture dynamic online consumer behavior. More advanced, automated methods are needed to improve segmentation accuracy and efficiency.",
+  "approach": [
+    "Used two Kaggle retail datasets with RFM (Recency, Frequency, Monetary) analysis after preprocessing.",
+    "Compared K-Means, K-Means++, K-Medoids, Agglomerative, DBSCAN, Fuzzy C-Means, Mini Batch K-Means, Mean Shift, and GMM.",
+    "Evaluated clustering quality using Silhouette Score and Davies-Bouldin Index.",
+    "Applied elbow method to determine optimal number of clusters.",
+    "Predicted Customer Lifetime Value (CLV) using Random Forests and Gradient Boosting with hyperparameter tuning.",
+    "Benchmarked proposed method (K-Means++, K-Medoids) against a reference method using K-Means and K-Medoids."
+  ],
+  "findings": [
+    "num: K-Means++ achieved the highest Silhouette Score of 0.5012 at K=4.",
+    "num: K-Means++ also had the lowest Davies-Bouldin Index of 0.7481 at K=4.",
+    "num: Gradient Boosting after tuning yielded an R-squared of 0.9999 for Dataset 1 with K-Means++.",
+    "num: Gradient Boosting after tuning yielded an R-squared of 0.9999 for Dataset 2 with K-Means++.",
+    "K-Means++ demonstrated superior segmentation accuracy and outperformed other methods.",
+    "Method 2 (proposed) using K-Medoids outperformed Method 1 with higher Silhouette Scores and lower Davies-Bouldin Index.",
+    "GMM performed poorly with a Silhouette Score of 0.0452 and a high Davies-Bouldin Index of 2.6394.",
+    "Mean Shift performed reasonably with a Silhouette Score of 0.4027 and a Davies-Bouldin Index of 1.3553.",
+    "K-Medoids performed reasonably with a Silhouette Score of 0.3894 and a Davies-Bouldin Index of 0.9561.",
+    "Hyperparameter tuning significantly improved Gradient Boosting performance for CLV prediction."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Missing values check for dataset 1 → Dataset 1 had missing values to remove.",
+    "Figure 4: RFM results for dataset 1 → Initial RFM distribution before preprocessing.",
+    "Figure 6: Boxplot after outlier removal for dataset 1 → Outliers removed, data more compact.",
+    "Figure 10: Elbow method for K-Means in dataset 1 → K=4 is optimal for K-Means.",
+    "Figure 14: Conceptual framework → Overall study methodology pipeline.",
+    "Table 4: Silhouette and Davies-Bouldin for K-Means++ → K=4 gives best performance.",
+    "Table 24: Comparison of clustering methods → K-Means++ is the best performer."
+  ],
+  "key_equations": [
+    {
+      "equation": "S = (b - a) / \\max(a, b)",
+      "explanation": "Silhouette Score formula for a single data point."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "RFM",
+      "definition": "Recency, Frequency, Monetary analysis; a method to evaluate customer value."
+    },
+    {
+      "term": "CLV",
+      "definition": "Customer Lifetime Value; the predicted net profit attributed to a customer relationship."
+    },
+    {
+      "term": "GMM",
+      "definition": "Gaussian Mixture Model; a probabilistic clustering method assuming data from multiple Gaussian distributions."
+    },
+    {
+      "term": "MAE",
+      "definition": "Mean Absolute Error; a measure of prediction accuracy."
+    },
+    {
+      "term": "MSE",
+      "definition": "Mean Squared Error; a measure of prediction error variance."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Mufarroha",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means and K-Medoids identified different patterns, optimal K being 4 and 6 respectively.",
+      "role": "baseline"
+    },
+    {
+      "author": "Pramono",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hierarchical clustering combined with K-Means can identify high-potential customers.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dedi",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means clustering can identify best clusters for targeting promotional activities.",
+      "role": "finding"
+    },
+    {
+      "author": "Bachtiar",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means clustering is effective in identifying profit-driving customers.",
+      "role": "finding"
+    },
+    {
+      "author": "Zhao",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means++ outperformed other clustering methods in customer analysis.",
+      "role": "finding"
+    },
+    {
+      "author": "Chang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mini Batch K-Means can effectively divide e-marketing customers into meaningful segments.",
+      "role": "finding"
+    },
+    {
+      "author": "Narayana",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mini Batch K-Means produced lesser errors compared to K-Means, Agglomerative, and Mean-Shift.",
+      "role": "finding"
+    },
+    {
+      "author": "Maulina",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means was the most effective algorithm for cluster analysis in B2B settings.",
+      "role": "finding"
+    },
+    {
+      "author": "Mathesh",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DBSCAN and Mean-Shift performed better than K-Means and Agglomerative in identifying meaningful clusters.",
+      "role": "finding"
+    },
+    {
+      "author": "Kansal",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means and Agglomerative performed better than Mean-Shift in clustering data.",
+      "role": "finding"
+    },
+    {
+      "author": "Regmi",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "K-Means clustering was the most suitable approach for the given dataset.",
+      "role": "finding"
+    },
+    {
+      "author": "Mehta",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Higher Silhouette Scores and lower Davies-Bouldin Indices indicate better clustering.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Uses RFM to categorize customers based on spending behavior, a form of behavioral categorization."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "low",
+        "justification": "Implicitly considers category design through RFM selection, but not a primary focus."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides a literature review of clustering methods used in customer segmentation, which is a core component of PF systems."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly performs CLV prediction using Gradient Boosting and Random Forests."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "RFM analysis and CLV prediction are applied to retail transaction data, which can be considered sequential."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "CLV predictions can inform budget allocation strategies, but the paper does not explicitly address budgeting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Segmentation and CLV prediction are foundational for budget recommendation, but this paper does not produce recommendations."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Outlier removal using IQR is a form of anomaly detection preprocessing."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Uses IQR for outlier detection, a basic method for anomaly identification."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Evaluates clustering methods using Silhouette Score and Davies-Bouldin Index."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Directly compares and evaluates multiple clustering algorithms and prediction models."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Evaluation of CLV prediction models (MAE, MSE, R-squared) is applicable to recommendation systems."
+      }
+    ],
+    "contribution_to_field": "This paper contributes to the field of customer segmentation by providing a systematic comparison of nine clustering methods, including K-Means++, and assessing their performance using multiple metrics. It demonstrates that K-Means++ yields superior segmentation accuracy and cluster quality compared to traditional methods. The study also contributes a methodological framework that integrates RFM analysis, outlier removal, normalization, and CLV prediction, offering a structured approach for customer analytics. The comparison with a benchmark paper highlights the value of incorporating additional clustering techniques and evaluation metrics for more comprehensive analysis.",
+    "directly_justifies": [
+      "K-Means++ achieved a higher Silhouette Score (0.5012) and lower Davies-Bouldin Index (0.7481) compared to other methods.",
+      "Gradient Boosting with hyperparameter tuning outperformed Random Forests for CLV prediction.",
+      "Method 2 using K-Medoids outperformed Method 1 with higher Silhouette Scores and lower Davies-Bouldin Index.",
+      "GMM performed poorly with a Silhouette Score of 0.0452, indicating weak clustering performance.",
+      "The proposed framework combines data preparation, RFM analysis, and CLV prediction for robust customer analytics."
+    ],
+    "limits": [
+      "The study focuses solely on K-Means, K-Means++, K-Medoids, GMM, and Mean Shift, limiting exploration of other techniques.",
+      "Scalability issues may arise when applying GMM and Mean Shift to large, high-dimensional datasets.",
+      "Clustering quality for K-Means and K-Means++ can be sensitive to initial cluster centroid selection.",
+      "Data preprocessing quality is critical; inaccurate handling can lead to suboptimal results."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted to identify relevant topics. The domains of predictive modeling (6.A, 6.B) and algorithmic evaluation (12.A, 12.B) were flagged as high relevance due to the paper's direct focus on CLV prediction and clustering method comparison. The expense categorization domain (3.A) was marked medium for its use of RFM analysis. Topics related to budget recommendation (7.A, 7.B) were considered contextual or low because while the paper's findings could inform budgeting, it does not explicitly address budget allocation. Anomaly detection topics (8.A, 8.B) were marked low due to the limited use of IQR for outlier removal. The overall topical coverage is centered on algorithmic evaluation and predictive modeling for customer segmentation and CLV prediction."
+  },
+  "limitations": [
+    "Focus was solely on K-Means, K-Means++, K-Medoids, GMM, and Mean Shift clustering methods. [unacknowledged]",
+    "GMM and Mean Shift may face challenges processing high-dimensional or large-scale data efficiently. [unacknowledged]",
+    "K-Means and K-Means++ cluster quality can vary depending on initial cluster centroids. [unacknowledged]",
+    "Analysis is based on data collected within a limited two-year period for some cited studies. [unacknowledged]",
+    "The study did not include necessary pre-processing steps for data preparation in some compared work."
+  ],
+  "remember_this": [
+    "K-Means++ with 4 clusters achieved the best Silhouette Score of 0.5012.",
+    "Gradient Boosting after tuning achieved near-perfect R-squared (0.9999) for CLV prediction.",
+    "K-Means++ demonstrated greater stability and performance compared to standard K-Means.",
+    "The study provides a comprehensive framework for customer segmentation and CLV prediction.",
+    "No single clustering method universally outperforms all others, and evaluation metrics guide selection."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T06:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Ling & Weiling_marked.md",
+      "converted_at": "2026-07-21T14:02:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

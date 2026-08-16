@@ -1,0 +1,292 @@
+{
+  "paper_id": "10.1145/3707693",
+  "designation": "international-algorithm-specific",
+  "title": "Modelling Concept Drift in Dynamic Data Streams for Recommender Systems",
+  "authors": "Caroprese, L.; Pisani, F.S.; Veloso, B.M.; Konig, M.; Manco, G.; Hoos, H.; Gama, J.",
+  "year": 2025,
+  "venue": "ACM Transactions on Recommender Systems",
+  "odin_topics": ["6.A", "14.A", "12.B", "5.B"],
+  "tldr": "A stream-based synthetic data generator for recommender systems models concept drift through dynamic tripartite graph embeddings, producing realistic preference data streams with controllable drift dynamics.",
+  "problem_and_motivation": "The limited availability of large-scale public datasets with realistic temporal properties hampers the development and evaluation of streaming recommendation algorithms. Existing synthetic data generators fail to account for the dynamic nature of user preferences, ignoring concept drift in streaming scenarios. This gap prevents controlled benchmarking of recommendation systems under realistic distributional shifts.",
+  "approach": [
+    "Adopt a matrix factorization framework with Bayesian Personalized Ranking to learn user and item latent embeddings from real data streams.",
+    "Represent user-item preferences as a weighted tripartite graph connecting users, latent features, and items.",
+    "Use the HDDMW drift detection algorithm to monitor BPR loss and identify regime transitions in the data stream.",
+    "Train a sequence of factorization models, one per detected regime, to capture evolving data distributions.",
+    "Generate synthetic preference samples from each regime's learned embedding model using Zipf-distributed item frequencies.",
+    "Extend the latent space dimensionality by delta K columns when drift is detected, penalizing divergence from the previous model.",
+    "Evaluate on three real datasets: Microsoft News (MIND), Amazon Video Games, and Yoochoose.",
+    "Compare the adaptive BPR approach against a variational autoencoder baseline across all datasets.",
+    "Conduct ablation studies: train on first regime only and train on random sample ignoring stream structure."
+  ],
+  "findings": [
+    "The generator produces frequency distributions closely matching the original stream on the MIND dataset, confirmed by positive Kolmogorov-Smirnov tests.",
+    "On MIND, the model detected multiple drifts with HR@5 values around 0.6 near drift points but maintained good overall HR@10 performance.",
+    "On the original Amazon Video Games dataset, the generator produced significantly worse distributions due to insufficient item preferences.",
+    "After inverting users and items in Amazon Video Games (more users than items), synthetic distributions closely matched the original.",
+    "num: 7 regimes detected in the Amazon Video Games dataset, indicating 6 drifts.",
+    "The VAE baseline outperformed BPR on MIND in stable periods but degraded with new items; BPR adapted faster to distribution shifts.",
+    "Ablation study confirmed that training only on the first regime yields good performance only within that regime and fails on subsequent drifts.",
+    "A model trained on a random 30% sample across all regimes performed comparably to the streaming approach but is unrealistic for real-world use.",
+    "The framework identifies six drift directions: user taste changes, new trends, new users, new items, user churn, and item obsolescence.",
+    "num: Three benchmark datasets used: MIND (750K users, 19K items, 3.96M preferences), Amazon Video Games (26K users, 568K items, 825K preferences), Yoochoose (143K users, 10K items, 642K interactions)."
+  ],
+  "key_figures_tables": [
+    "Figure 1: User/Feature/Item tripartite graph structure → Shows how users and items connect through latent feature nodes.",
+    "Figure 2: Regimes in a data stream → Illustrates multiple distribution regimes with different factorization matrices over time.",
+    "Figure 3: MIND test loss with drift warnings and drifts → Loss remains stable; frequent warnings reflect news topic turnover.",
+    "Figure 5: MIND real vs synthetic frequency distributions → Synthetic distributions closely match real data per regime.",
+    "Figure 8: Amazon Video Games real vs synthetic distributions → Distributions diverge significantly due to item preference sparsity.",
+    "Figure 15: BPR vs VAE on MIND (HR@5) → VAE is more stable in low-variability periods; BPR fluctuates around drifts.",
+    "Figure 16: BPR vs VAE on Inverted Amazon Video Games (HR@5) → BPR outperforms VAE when new items appear frequently.",
+    "Figure 18: First-regime-only model on entire stream → Performance collapses after the first detected drift.",
+    "Figure 21: Summary statistics on regime changes → Shows user/item appearance, disappearance, and feature vector evolution."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\mathcal{L}_{bpr}(M|V) = \\sum_{u} \\sum_{i \\prec_u j} \\log \\sigma(p_u^T(q_i - q_j))",
+      "explanation": "BPR loss function optimizing pairwise item rankings from implicit feedback."
+    },
+    {
+      "equation": "L_c(M; R) = \\mathcal{L}_{bpr}(M|R) + \\lambda(\\|P\\|_\\infty + \\|Q\\|_\\infty)",
+      "explanation": "Regularized BPR loss enforcing bounded embedding weights during training."
+    },
+    {
+      "equation": "L_d(\\tilde{M}; M, R^{(t)}) = L_c(\\tilde{M}; R^{(t)}) + \\delta \\sum_{u,k} |\\tilde{p}_{u,k} - p_{u,k}| + \\dots",
+      "explanation": "Drift loss penalizing divergence from previous model when adapting to new regime."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Matrix Factorization (MF)",
+      "definition": "A technique decomposing a user-item rating matrix into low-dimensional latent embedding matrices for users and items."
+    },
+    {
+      "term": "Bayesian Personalized Ranking (BPR)",
+      "definition": "A pairwise ranking method for implicit feedback that models preferences as a Bernoulli process over latent embeddings."
+    },
+    {
+      "term": "Concept Drift",
+      "definition": "A change in the underlying data distribution over time that degrades model performance."
+    },
+    {
+      "term": "Data Stream Mining",
+      "definition": "Techniques for analyzing continuous, high-volume, potentially infinite data streams with evolving distributions."
+    },
+    {
+      "term": "HDDMW",
+      "definition": "Hoeffding Drift Detection Method using a moving weighted average test based on Hoeffding's inequality."
+    },
+    {
+      "term": "Tripartite Graph",
+      "definition": "A graph with three node types (users, latent features, items) where edges connect users to features and items to features."
+    },
+    {
+      "term": "Regime",
+      "definition": "A period in a data stream characterized by a stable underlying data distribution and corresponding factorization model."
+    },
+    {
+      "term": "HitRate (HR@k)",
+      "definition": "A ranking metric measuring whether a positive item appears in the top-k recommended items for a user."
+    },
+    {
+      "term": "BPR Loss",
+      "definition": "The negative log-likelihood of the BPR model, optimized to rank positive items above negative items."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Rendle",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BPR is a popular matrix factorization implementation trainable on implicit feedback with scalable pairwise ranking optimization.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gama",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DDM observes learner error rate and triggers alarms when the error increases above a threshold based on error rate and standard deviation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Frías-Blanco",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "HDDM uses Hoeffding's inequality and a moving average test to detect concept drifts in data streams.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADWIN uses a dynamic-sized window that splits and compares sub-windows to detect distribution changes.",
+      "role": "methodology"
+    },
+    {
+      "author": "Al-Ghossein",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A survey establishing that the dynamic nature of user preferences in streaming recommendation is a significant open research problem.",
+      "role": "context"
+    },
+    {
+      "author": "Koren",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Temporal dynamics of user preferences can be modeled using linear and spline modeling of user biases for gradual and sudden drifts.",
+      "role": "baseline"
+    },
+    {
+      "author": "Veloso",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "User preferences can be modeled using incrementally updated embeddings with a drift detector to initiate real-time hyperparameter optimization.",
+      "role": "baseline"
+    },
+    {
+      "author": "Jakomin",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A method to generate inter-dependent data streams simulating concept drift via arithmetic operations on ratings, but without latent feature space changes.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lex",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Base-Level Learning equations from ACT-R with recency-based modeling capture temporal drift in music genre preferences across all user groups.",
+      "role": "context"
+    },
+    {
+      "author": "Han",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hypergraph wavelet learning with adaptive wavelet filtering captures subtle drifts in job preferences by eliminating noisy interactions.",
+      "role": "context"
+    },
+    {
+      "author": "Slok",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Partially synthetic data for recommender systems preserves statistical properties but cannot generate new ratings for unseen items.",
+      "role": "baseline"
+    },
+    {
+      "author": "Belletti",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A data generator scales MovieLens by orders of magnitude through fractal expansions but does not address dynamic changes in user preferences.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gama",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data stream mining requires handling high data volumes, concept drifting, and high volatility with online analysis methods.",
+      "role": "context"
+    },
+    {
+      "author": "Gomes",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adaptive random forests handle evolving data stream classification through ensemble methods with drift adaptation mechanisms.",
+      "role": "context"
+    },
+    {
+      "author": "Klimashevskaia",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Popularity bias in recommender systems overlooks cold-start users and low-popularity items, complicating preference distribution comparisons.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "Core contribution is a stream-based synthetic data generator producing preference data with controllable concept drift dynamics."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Proposes a matrix factorization predictive model (BPR) that learns latent embeddings to forecast user preferences over time."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Comprehensive evaluation using HitRate@5, HitRate@10, BPR loss, and Kolmogorov-Smirnov tests across three datasets."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "medium",
+        "justification": "Addresses how user and item profiles evolve over time; discusses cold-start strategies for new users and items in conclusions."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Uses drift detection algorithms (HDDMW, DDM, ADWIN) to identify distributional shifts, tangentially related to anomaly detection."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a novel stream-based synthetic data generator that models concept drift in recommender systems through dynamic tripartite graph embeddings. It provides the first systematic categorization of six drift directions in preference data: user taste changes, emerging trends, new users, new items, user churn, and item obsolescence. The approach learns a sequence of matrix factorization models from real data streams, where each model captures a specific regime's distribution, and transitions between regimes are triggered by drift detection. The work demonstrates that latent embedding modifications can realistically simulate evolving preference streams, enabling controlled benchmarking of streaming recommendation algorithms. A general stream generator framework (Algorithm 2) is provided that maps parameterized drift operations to changes in the underlying graph structure.",
+    "directly_justifies": [
+      "Concept drifts can be modeled as modifications of latent embeddings represented as rewiring changes in the underlying tripartite graph.",
+      "The proposed model captures actual preference distributions and generates synthetic streams with similar yet controllable drift dynamics.",
+      "The stream-based data generator is the first systematic approach to producing preference data with configurable concept drift in recommender systems.",
+      "Adequate item preference counts are essential for the generator to accurately replicate real data distributions.",
+      "The adaptive BPR model outperforms a VAE baseline when new items frequently appear in the stream."
+    ],
+    "limits": [
+      "The generator's fidelity degrades when the number of preferences per item is insufficient, as shown on the original Amazon Video Games dataset.",
+      "The framework relies on the BPR matrix factorization assumption of geometric closeness in latent space for modeling preferences.",
+      "The approach cannot generate regimes that deviate from models extracted from the original data stream.",
+      "Experiments were limited to three benchmark datasets from different domains; broader validation is needed."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned for citeable claims. Domain 14 (Synthetic Data Generation for Financial ML) was flagged as high relevance since the paper's core contribution is a synthetic data stream generator with concept drift, directly mapping to 14.A. Domain 6 (Predictive Modeling) was flagged as high relevance because the paper proposes a matrix factorization predictive model with BPR optimization, directly addressing 6.A. Domain 12 (Evaluation Frameworks) was flagged as medium relevance for its comprehensive experimental evaluation with HitRate metrics, mapping to 12.B. Domain 5 (Financial Behavioral Profiles) was flagged as medium relevance because the paper discusses profile dynamics and cold-start handling for new users/items, mapping to 5.B. Domain 8 (Anomaly Detection) was flagged as low relevance since drift detection algorithms are used but the paper does not focus on anomaly detection in the personal finance sense, mapping to 8.A. Borderline cases included Domain 14.B (ML Model Serving), which was rejected as the paper does not address deployment or serving infrastructure, and Domain 14.C (On-Device vs. Server Inference), which was rejected as no inference architecture discussion is present. Domains 1-4 (Filipino demographics, culturally specific practices, expense categorization, existing PF systems), Domain 7 (Budgeting strategies), Domains 9-11 (Mobile design, data privacy, engagement), and Domain 13 (Savings/debt management) were all rejected as the paper addresses recommender systems generally, not personal finance system design. The overall topical coverage centers on synthetic data generation for streaming recommendation with predictive modeling and evaluation."
+  },
+  "limitations": [
+    "Generator fidelity degrades significantly when the number of preferences per item is insufficient to train an effective model.",
+    "The approach relies on the BPR matrix factorization assumption of geometric closeness in latent space, which may not generalize to all preference modeling strategies.",
+    "The framework cannot generate regimes that deviate from models extracted from the original data stream, limiting fully independent synthetic generation.",
+    "Experiments were limited to three benchmark datasets from different domains; broader validation across more domains is needed.",
+    "The VAE baseline comparison could not be executed for the original Amazon Video Games dataset due to excessive memory requirements.",
+    "The drift detection performance depends on the choice of loss signal, which may vary across application domains."
+  ],
+  "remember_this": [
+    "Synthetic data generator models concept drift through dynamic tripartite graph embeddings in recommender systems.",
+    "Generator achieves close distribution matching on MIND dataset but degrades with sparse item preferences.",
+    "Adaptive BPR model outperforms VAE when new items frequently appear in the stream.",
+    "Six drift directions identified: user taste changes, new trends, new users, new items, user churn, item obsolescence.",
+    "Ablation study confirms regime identification is essential for capturing concept drift in streaming data."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Caroprese et al_marked.md",
+      "converted_at": "2026-07-22T12:38:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

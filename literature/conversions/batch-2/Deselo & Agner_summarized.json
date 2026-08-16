@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.56734/eurasianjr.v3n4p22",
+  "designation": "local",
+  "title": "Financial Inclusion Among Low-Income Households in the Philippines: Barriers and Opportunities",
+  "authors": "Deselo, J.; Agner, L. P.",
+  "year": 2023,
+  "venue": "Eurasian Journal of Research and Development",
+  "odin_topics": ["2.A", "2.C", "3.A", "3.B"],
+  "tldr": "Qualitative and quantitative study of 300 low-income Filipino households reveals that trust in formal institutions, documentation requirements, and minimum balance requirements are the top three barriers to financial inclusion.",
+  "problem_and_motivation": "Despite national financial inclusion initiatives, a significant portion of low-income Filipino households remain unbanked or underbanked. Understanding specific barriers is critical for designing inclusive PFMS.",
+  "approach": [
+    "Mixed-methods: survey (n=300) + focus group discussions (8 groups, 64 participants) across urban poor communities in Metro Manila and rural areas in Visayas and Mindanao.",
+    "Stratified purposive sampling by income bracket (below poverty line, low-income but above poverty).",
+    "Survey measured: bank account ownership, usage frequency, barriers to formal financial services, use of informal mechanisms.",
+    "Focus groups explored: attitudes toward banks, trust issues, experiences with financial products, desired features.",
+    "Qualitative data analyzed using thematic analysis with member checking for validity.",
+    "Quantitative data analyzed with logistic regression to identify significant barrier predictors."
+  ],
+  "findings": [
+    "num: 64% of respondents are unbanked; 28% have savings accounts; 8% have insurance.",
+    "num: Top barriers: trust in formal institutions (cited by 72%), documentation requirements (65%), minimum balance requirements (58%), distance to bank branches (41%).",
+    "num: 81% use informal financial mechanisms: paluwagan (47%), savings groups (28%), informal lenders (24%).",
+    "num: 76% own smartphones; 44% express willingness to use digital PFMS if trust barriers addressed.",
+    "Trust is built through community-based intermediaries (sari-sari store owners, community leaders).",
+    "Rural households face additional barriers: limited internet connectivity (62%) and lower digital literacy (58%).",
+    "Urban poor prefer mobile-based solutions; rural prefer agent-assisted digital services."
+  ],
+  "key_figures_tables": [
+    "Table 3: Barriers to financial inclusion ranked by frequency",
+    "Figure 4: Financial inclusion status (unbanked, underbanked, fully banked)",
+    "Table 6: Logistic regression results for significant barrier predictors",
+    "Table 7: Thematic analysis results from focus group discussions"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Financial inclusion", "definition": "Access to and usage of formal financial services including savings, credit, insurance, and payments."},
+    {"term": "Paluwagan", "definition": "Informal rotating savings and credit association (ROSCA) common in Filipino communities."}
+  ],
+  "citations": [
+    {"author": "BSP", "year": 2021, "page": 0, "paragraph": 0, "claim": "53% of Filipino adults have formal bank accounts, but only 23% use them actively.", "role": "context"},
+    {"author": "Demirgüç-Kunt", "year": 2022, "page": 0, "paragraph": 0, "claim": "Globally, 1.4 billion adults remain unbanked; trust and documentation are leading barriers.", "role": "comparison"},
+    {"author": "Karlan", "year": 2014, "page": 0, "paragraph": 0, "claim": "Commitment savings products increase savings for poor households in developing countries.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.A", "name": "Cultural Nuances in Financial Decision-Making", "relevance": "high", "justification": "Deep analysis of trust, informal mechanisms (paluwagan), and community-based financial practices."},
+      {"code": "2.C", "name": "Underbanked and Unbanked Users", "relevance": "high", "justification": "Core contribution: barriers to formal financial services for low-income households."},
+      {"code": "3.A", "name": "Spending Patterns of Filipino Young Professionals", "relevance": "low", "justification": "Spending patterns of low-income households broadly discussed."},
+      {"code": "3.B", "name": "Income Sources and Stability", "relevance": "medium", "justification": "Irregular income patterns and their impact on financial inclusion discussed."}
+    ],
+    "contribution_to_field": "Provides critical understanding of barriers to financial inclusion for low-income Filipino households that must be addressed in PFMS design. The finding that trust is the #1 barrier and that community-based intermediaries are key trust-builders has direct implications for PFMS adoption strategies. The 44% willingness to use digital PFMS if trust is addressed represents a significant opportunity.",
+    "directly_justifies": [
+      "Trust is the #1 barrier to formal financial inclusion for low-income Filipinos.",
+      "64% of low-income households are unbanked.",
+      "81% use informal financial mechanisms.",
+      "Community-based intermediaries are essential for building trust in financial services."
+    ],
+    "limits": [
+      "Sample size modest (n=300) for quantitative analysis. [acknowledged]",
+      "Self-reported barriers may not capture actual usage patterns. [unacknowledged]",
+      "Limited to low-income households; middle-income barriers may differ. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 2.A (cultural nuances) and 2.C (underbanked/unbanked) were flagged as highly relevant because the paper focuses on cultural barriers and the unbanked population. Domain 3.B (income sources) was flagged as medium relevance for irregular income impacts. Domain 3.A was flagged as low relevance for spending patterns. Domains 1, 4-14 were rejected as the paper is a financial inclusion study focused on barriers, not involving young professionals, PFMS design, ML, or specific financial domains."
+  },
+  "limitations": [
+    "Sample size n=300 for quantitative survey. [acknowledged]",
+    "Self-reported barriers. [unacknowledged]",
+    "Limited to low-income households. [unacknowledged]"
+  ],
+  "remember_this": [
+    "64% unbanked; top barriers: trust (72%), documentation (65%), minimum balance (58%).",
+    "81% use informal mechanisms: paluwagan (47%), savings groups (28%), informal lenders (24%).",
+    "76% own smartphones; 44% open to digital PFMS if trust addressed.",
+    "Rural barriers: limited internet (62%), lower digital literacy (58%).",
+    "Community intermediaries (sari-sari store owners) are key trust-builders."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:03:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Deselo & Agner_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

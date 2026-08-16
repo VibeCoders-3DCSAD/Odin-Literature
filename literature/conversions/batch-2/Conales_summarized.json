@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.64753/jcasc.v10i2.1862",
+  "designation": "local",
+  "title": "Examining Debt and Financial Literacy Through a Cultural Lens: Educators' Sustainable Household Practices in Marawi",
+  "authors": "Conales, M.",
+  "year": 2025,
+  "venue": "Journal of Cultural Analysis and Social Change",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.C", "3.A", "13.A", "13.B"],
+  "tldr": "Examines financial literacy, debt literacy, and financial management practices of educators in Marawi, Philippines, finding limited financial product engagement, low debt literacy (9% correct), and Muslim respondent disadvantages.",
+  "problem_and_motivation": "Philippine teachers face rising indebtedness and chronic financial stress, yet their financial literacy in culturally unique contexts like Marawi is understudied. Socio-cultural and religious factors affecting financial practices are not well understood.",
+  "approach": [
+    "Descriptive and correlational research design with survey administered to HEI educators in Marawi City.",
+    "Measures financial knowledge, financial behavior, financial attitude, debt literacy, financial management practices, and demographic factors.",
+    "Analyzes associations between demographic variables (marital status, business education, household head status, religion) and financial outcomes.",
+    "Focuses on culturally unique Marawi context with majority Muslim population."
+  ],
+  "findings": [
+    "Educators showed solid grasp of financial concepts but weaknesses in compound interest and inflation.",
+    "Only 9% of respondents answered the debt literacy item correctly.",
+    "Muslim respondents scored lower in both financial and debt literacy.",
+    "Marital status, business education, and non-household head status associated with higher financial knowledge.",
+    "Engagement with financial products and investment was limited overall.",
+    "Financial behaviors were generally practiced but product engagement was low."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Debt literacy", "definition": "Understanding of debt terms, interest, and credit management"},
+    {"term": "HEI", "definition": "Higher Education Institution"}
+  ],
+  "citations": [
+    {"author": "Casingal", "year": 2021, "page": 1, "paragraph": 5, "claim": "Rising indebtedness and chronic financial stress among Philippine teachers.", "role": "context"},
+    {"author": "Ferrer", "year": 2017, "page": 1, "paragraph": 5, "claim": "Teachers caught in debt trap due to informal borrowing and weak debt understanding.", "role": "context"},
+    {"author": "Ubina", "year": 2025, "page": 1, "paragraph": 5, "claim": "Financial vulnerability among teachers in the Philippines.", "role": "context"},
+    {"author": "Temonio", "year": 2025, "page": 1, "paragraph": 6, "claim": "Low financial literacy negatively affects teachers' professional engagement.", "role": "context"},
+    {"author": "Louis", "year": 2024, "page": 1, "paragraph": 6, "claim": "Teachers' financial knowledge shapes pedagogical practices and student outcomes.", "role": "context"},
+    {"author": "Lusardi", "year": 2022, "page": 1, "paragraph": 5, "claim": "Financial literacy enables informed decisions and reduces inequality.", "role": "context"},
+    {"author": "OECD", "year": 2023, "page": 1, "paragraph": 5, "claim": "Financial literacy as a global priority for inclusion.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Studies Filipino HEI educators as working professionals in Marawi"},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Examines financial knowledge, behavior, attitudes, and debt literacy of educators"},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Core focus on financial management practices and debt literacy"},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "high", "justification": "Examines Muslim respondents' financial literacy through a cultural and religious lens"},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "medium", "justification": "Self-reported financial attitudes and management practices"},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "Measures financial management practices including budgeting"},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Examines savings and investment engagement"},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "high", "justification": "Dedicated focus on debt literacy and debt trap issues among educators"}
+    ],
+    "contribution_to_field": "This study provides culturally-specific evidence on financial and debt literacy among educators in Marawi, Philippines. It reveals that only 9% of respondents correctly answered a debt literacy item, Muslim respondents scored lower, and engagement with formal financial products is limited. The findings highlight the need for culturally sensitive financial education programs in higher education institutions.",
+    "directly_justifies": [
+      "Only 9% of educator respondents answered the debt literacy item correctly.",
+      "Muslim respondents scored lower in both financial and debt literacy.",
+      "Engagement with financial products and investment was limited among educators."
+    ],
+    "limits": [
+      "Single-city study (Marawi) limits generalizability across the Philippines.",
+      "Descriptive and correlational design cannot establish causal relationships.",
+      "Single debt literacy item limits measurement reliability."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 1.A, 1.B, 1.C (Filipino Young Professionals), 2.A (Culturally Specific Practices), and 13.B (Debt Management) were rated high for core contributions. Topics 2.C (User Preferences), 3.A (Expense Categorization), and 13.A (Savings Goal Management) were rated low-medium. Topics 4.x-12.x and 14.x were rejected as the paper is a descriptive survey on financial literacy, not addressing algorithms, system design, or technical solutions."
+  },
+  "limitations": [
+    "Single-site study in Marawi limits generalizability.",
+    "Correlational design cannot establish causal pathways.",
+    "Single-item debt literacy measure may not capture full construct.",
+    "Self-reported financial behaviors may not align with actual practices. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Only 9% of educators answered the debt literacy item correctly.",
+    "Muslim respondents scored lower on financial and debt literacy.",
+    "Compound interest and inflation were common knowledge gaps.",
+    "Marital status and business education predicted higher financial knowledge.",
+    "Limited engagement with formal financial products and investments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Conales_marked.md",
+      "converted_at": "2026-07-22T13:01:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

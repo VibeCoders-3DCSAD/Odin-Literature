@@ -1,0 +1,318 @@
+{
+  "paper_id": "10.1109/ACCESS.2026.3695458",
+  "designation": "international-algorithm-specific",
+  "title": "Provably Adaptive Trust Dynamics in Context-Aware Zero-Trust Systems: A Formal Framework for Continuous Verification",
+  "authors": "Krishnan, V.; Sreeja, C. S.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.C",
+    "7.D",
+    "7.E",
+    "8.A",
+    "8.B",
+    "8.C",
+    "9.A",
+    "9.B",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B",
+    "14.A",
+    "14.B"
+  ],
+  "tldr": "Introduces ZeTHAA, a formal framework for continuous authentication and authorization that integrates contextual attributes, authentication strength, behavioral evidence, and retry dynamics into a probabilistic risk model with dual-policy thresholds to improve security-usability trade-offs.",
+  "problem_and_motivation": "Existing risk-based and adaptive authentication systems often rely on heuristic scoring, lack formal continuous trust models, and fail to distinguish hard violations from probabilistic soft violations. Furthermore, they typically do not model post-login authorization, retry dynamics, or composite attack surfaces in a unified way, creating a gap between Zero-Trust principles and practical implementation.",
+  "approach": [
+    "Formalizes trust as a continuous, time-evolving state variable derived from authentication strength, contextual attributes, and behavioral evidence.",
+    "Introduces a global admissibility predicate to separate non-compensable hard violations (e.g., impossible travel) from probabilistic soft violations.",
+    "Models authentication and authorization decisions using a dual-threshold policy that partitions outcomes into allow, step-up, and block regions.",
+    "Derives attribute importance dynamically from entropy and Beta-posterior distribution, enabling cold-start initialization and online recalibration.",
+    "Presents a unified composite attack surface covering credential compromise, attribute forgery, and post-grant hijacking with exponential risk escalation for retries.",
+    "Evaluates ZeTHAA on a large-scale synthetic dataset against heuristic, logistic regression, random forest, XGBoost, and isolation forest baselines.",
+    "Benchmarks performance against the heuristic framework of Dasu et al. and the ML-based framework of Matiushin et al."
+  ],
+  "findings": [
+    "num: ZeTHAA achieved Recall and AUC exceeding 79% and 15.1% over baselines, respectively.",
+    "num: F1-Score increased by 48% to 147% compared to baseline models.",
+    "num: Efficiency improved by 20% to 65%, while reducing the cost per attack detected by up to 39.6%.",
+    "num: Against Dasu et al. and Matiushin et al., ZeTHAA showed a 57.5% lead in F1-Score and blocked 70.78% more attacks.",
+    "num: The system achieved an Equal Error Rate (EER) of 0.1981, a 33% reduction compared to the heuristic approach.",
+    "ZeTHAA produces a more expressive risk distribution, enabling effective utilization of allow, step-up, and block decision regions.",
+    "The framework blocks a significant proportion of attack events (73%) while maintaining moderate user friction.",
+    "Ablation studies confirm that attack campaign features and geographic anomalies are the most critical contextual signals.",
+    "The system exhibits robust performance under varying attack intensities (10%-40%), maintaining stable AUC and recall.",
+    "The proposed trust model demonstrates asymmetric evolution, accumulating gradually but degrading rapidly with penalties."
+  ],
+  "key_figures_tables": [
+    "Figure 1: System architecture showing integration of attribute collection, risk modeling, and policy enforcement → ZeTHAA unifies diverse signals into a coherent continuous verification pipeline.",
+    "Figure 2: Feature importance derived from Bayesian calibration → Attack campaigns and geographic anomalies contribute most to risk assessment.",
+    "Figure 3: Risk score distribution by class → Clear separation between benign and attack sessions enables logical threshold placement.",
+    "Table 11: Decision rates across risk regions → 73% of attacks blocked, 75% of benign events allowed, demonstrating balanced security-usability.",
+    "Figure 6: Risk-trust correlation → Trust score acts as primary differentiator, with attack events clustering in low-trust regions."
+  ],
+  "key_equations": [
+    {
+      "equation": "T(t) = (1-\\lambda^+) T(t^-) + \\lambda^+ \\cdot C(t) - \\gamma R(t)",
+      "explanation": "Trust evolves from prior trust, context, and risk."
+    },
+    {
+      "equation": "A(t) = \\begin{cases} allow, & R(t) \\leq \\delta_1(R_i) \\\\ step\\_up, & \\delta_1(R_i) < R(t) \\leq \\delta_2(R_i) \\\\ deny, & R(t) > \\delta_2(R_i) \\end{cases}",
+      "explanation": "Dual-threshold policy maps risk to decision regions."
+    },
+    {
+      "equation": "Pr[Attack Success | C(t)] = 1-(1 - Pr[Attack_{auth} | C(t)])(1 - Pr[Attack_{authz} | C(t)])",
+      "explanation": "Unified attack probability combining authentication and authorization phase threats."
+    },
+    {
+      "equation": "w_i = \\frac{e^{\\beta \\theta_i}}{\\sum_{j=1}^{n} e^{\\beta \\theta_j}}",
+      "explanation": "Attribute weights derived via softmax normalization of utility scores."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ZeTHAA",
+      "definition": "Zero-Trust Hybrid Adaptive Authentication, the proposed framework for continuous authentication and authorization."
+    },
+    {
+      "term": "Zero-Trust (ZT)",
+      "definition": "Security paradigm based on 'never trust, always verify', requiring continuous evaluation of authentication and authorization."
+    },
+    {
+      "term": "AAL",
+      "definition": "Authenticator Assurance Level, a NIST standard metric characterizing authentication method strength (levels 1-3)."
+    },
+    {
+      "term": "Hard Violation",
+      "definition": "A non-compensable failure (e.g., impossible travel, cryptographic failure) that immediately terminates a session."
+    },
+    {
+      "term": "Soft Violation",
+      "definition": "A probabilistic deviation from established behavioral patterns that reduces trust but does not immediately terminate the session."
+    },
+    {
+      "term": "EWMA",
+      "definition": "Exponentially Weighted Moving Average, used for gradual profile updates in behavioral learning."
+    },
+    {
+      "term": "NIST SP 800-207",
+      "definition": "National Institute of Standards and Technology Special Publication defining Zero Trust Architecture principles."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Dasu",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed an Adaptive Authentication framework using heuristic weight assignment, but weights are static and variance is computed from only the last 10 login records.",
+      "role": "baseline"
+    },
+    {
+      "author": "Matiushin",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed MLE-RBA, a LightGBM-based RBA framework that uses a dynamically computed binary threshold but focuses on mathematical optimality without accounting for user friction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Acar",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Presented a wearables-assisted CA framework verifying user identity based on keystroke dynamics detected by sensors.",
+      "role": "context"
+    },
+    {
+      "author": "Picard",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Presented an RBA system using deep reinforcement learning to select authentication modalities based on user context.",
+      "role": "context"
+    },
+    {
+      "author": "Rose",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Formalized Zero Trust Architecture principles in NIST SP 800-207, mandating continuous authentication and verification.",
+      "role": "methodology"
+    },
+    {
+      "author": "Temoshok",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Defined Digital Identity Guidelines (NIST SP 800-63) including Identity, Authenticator, and Federation Assurance Levels.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses existing authentication and security systems, which are analogous to systems in personal finance."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Provides a detailed literature review and research gap analysis of current adaptive and risk-based authentication systems."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Introduces behavioral profiling and anomaly detection for user behavior, a core component of financial behavioral profiles."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Evaluates machine learning classification approaches (e.g., Random Forest, XGBoost) to distinguish between benign and attack behaviors."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses predictive modeling to estimate risk and attack success probability based on contextual and behavioral signals."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "While focused on authentication events, the sequential modeling of context and trust has parallels to forecasting sequential spending patterns."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "The paper uses thresholds and policy constraints to optimize decision regions, similar in concept to constrained optimization for resource allocation."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "medium",
+        "justification": "Introduces a global admissibility predicate to handle hard violations (infeasible states), representing a form of infeasibility handling."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "high",
+        "justification": "Explicitly addresses the cold-start problem for attribute weight and penalty initialization using expert knowledge or uniform priors."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core function of the proposed framework is detecting anomalous behavior (attacks) using a combination of hard and soft violation signals."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Evaluates and compares anomaly detection capabilities against models like Isolation Forest and logistic regression."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "high",
+        "justification": "Provides explicit strategies for initializing anomaly detection parameters under maximal uncertainty (cold-start)."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Design includes mobile-specific attributes and leverages device APIs for contextual signals, aligning with mobile-first design."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "Discusses user friction in the context of step-up challenges and blocking, which has UX implications for mobile applications."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "The entire framework is designed to enhance security and protect against unauthorized access, a primary concern for data privacy."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "The model uses 'trust' as a formal variable, which relates conceptually to user trust, but is framed as a security metric."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses a comprehensive evaluation framework with metrics like ROC, AUC, precision, recall, and F1-score for system assessment."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Rigorous performance comparison of ZeTHAA against multiple baseline algorithms (heuristic, RF, XGBoost, etc.) and existing frameworks."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "The framework is evaluated on a large-scale synthetic dataset created to model realistic authentication flows and adversarial patterns."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "contextual",
+        "justification": "The paper discusses the practical implementation and deployment of the ZeTHAA framework as a proof-of-concept."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a formally grounded, mathematically precise framework for continuous verification in Zero-Trust architectures, moving beyond heuristic approaches. It provides a unified model integrating authentication, authorization, and continuous monitoring with explicit handling of hard and soft violations. The work establishes a rigorous methodology for attribute weighting and penalty assignment using entropy and Bayesian learning, addressing the cold-start problem. It introduces a composite threat model that captures a broader range of attack surfaces than previous work. The comprehensive experimental evaluation against baselines and existing frameworks provides a clear benchmark for future research in adaptive authentication systems.",
+    "directly_justifies": [
+      "ZeTHAA produces a more expressive risk distribution and significantly higher attack detection and efficiency while minimizing user friction.",
+      "The proposed framework demonstrates a 57.5% lead in F1-Score compared to heuristic and ML-based frameworks.",
+      "ZeTHAA provides a mathematically grounded foundation for Zero-Trust systems aligned with NIST standards.",
+      "The introduction of a global admissibility predicate enables clear separation of non-compensable hard violations from probabilistic soft violations.",
+      "Attribute importance is dynamically derived from entropy and Beta-posterior distribution, enabling robust cold-start initialization."
+    ],
+    "limits": [
+      "Evaluation is conducted on a synthetic dataset, not real-world user data, which may not capture all nuances of actual user behavior.",
+      "The framework's guarantees depend on accurate attribute measurements and correct initialization of authentication strengths.",
+      "While aligned with NIST standards, the paper does not provide formal certification or real-world deployment validation."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains flagged as relevant included Landscape of Existing Systems (4.A), Limitations and Gaps (4.B), Behavioral Profiles (5.A), Classification Approaches (5.C), Predictive Modeling (6.A), Forecasting (6.B), Constrained Optimization (7.C), Infeasibility Handling (7.D), Cold-Start (7.E), Anomaly Detection (8.A, 8.B, 8.C), Mobile Design (9.A, 9.B), Privacy and Security (10.A, 10.B), and Evaluation Frameworks (12.A, 12.B). The paper's core focus on adaptive authentication, anomaly detection, and risk modeling directly supports these. Topics like Budgeting Strategies (7.A, 7.B) were considered but rejected as the paper does not explicitly address budget allocation; however, its policy-driven thresholds have conceptual overlap. Culturally specific financial practices (2.A, 2.B, 2.C, 2.D) were not covered as the study is general and algorithm-specific. Engagement dynamics (11.A, 11.B) and specific financial management topics (13.A, 13.B, 13.C) were not addressed. The overall topical coverage is strong in system evaluation, algorithmic modules, and foundational security modeling."
+  },
+  "limitations": [
+    "Relies on a synthetic dataset, which may not fully generalize to real-world user behavior and attack patterns.",
+    "Assumes accurate attribute observability and bounded noise, which may not hold in all real-world environments.",
+    "The learning rates and thresholds are policy-configurable and require careful tuning, which may be non-trivial.",
+    "Guarantees are contingent on correct initialization of authentication strengths and structural attribute properties."
+  ],
+  "remember_this": [
+    "ZeTHAA introduces a formal, mathematically grounded framework for continuous Zero-Trust authentication and authorization.",
+    "A global admissibility predicate distinguishes hard violations from probabilistic soft violations, enabling clear enforcement.",
+    "Attribute weights and penalties are dynamically derived using entropy and Bayesian learning, addressing cold-start.",
+    "The dual-threshold policy partitions outcomes into allow, step-up, and block regions, improving security-usability trade-offs.",
+    "ZeTHAA achieved a 57.5% lead in F1-Score and blocked 70.78% more attacks than existing heuristic and ML-based frameworks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Krishnan & Sreeja_marked.md",
+      "converted_at": "2026-07-21T13:51:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "paper_id": "34b09b40-e8c2-5176-af3a-dccf1120f4b9",
+  "designation": "local-algorithm-specific",
+  "title": "Balarila: Deep Learning for Semantic Grammar Error Correction in Low-Resource Settings",
+  "authors": "Espiritu, P.; Jadie, J.; Ponce, A.; Cheng, C.",
+  "year": 2023,
+  "venue": "Proceedings of the First Workshop in SouthEast Asian Language Processing",
+  "odin_topics": [
+    "None"
+  ],
+  "tldr": "Balarila achieves F0.5 of 70.75 for Filipino grammar error correction using GECToR-inspired deep learning with synthetic data, addressing semantic errors beyond lexical ones.",
+  "problem_and_motivation": "Existing Filipino grammar checkers can only correct lexical errors. There is no publicly available Filipino grammar checker that addresses semantic errors, which are more complex.",
+  "approach": [
+    "Builds Balarila, a deep learning-based Filipino GEC model inspired by GECToR approach.",
+    "Devises automated error generation pipeline creating synthetic datasets from online news sources.",
+    "Fine-tunes Tagalog BERT and RoBERTa models in two stages using generated corpus.",
+    "Evaluates using precision, recall, and F0.5 scores for GEC and multi-class confusion matrix for GED.",
+    "Three models: BERT Tagalog Base, RoBERTa Tagalog Base, and RoBERTa Tagalog Large."
+  ],
+  "findings": [
+    "num: RoBERTa Tagalog Large achieved highest F0.5 score of 70.75.",
+    "num: RoBERTa Tagalog Base achieved F0.5 of 69.00, demonstrating cost-effectiveness.",
+    "RoBERTa-Large generally performed better than BERT-Base and RoBERTa-Base in GEC scores.",
+    "RoBERTa-Base had only 1.75% F0.5 score difference from RoBERTa-Large while using fewer resources."
+  ],
+  "key_figures_tables": [
+    "Table 1: Iterative sequence tagging example → Shows sentence correction across iterations.",
+    "Figure 1: Fine-tuning pipeline → Transformer encoder with error detection and correction linear layers."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "GEC",
+      "definition": "Grammatical Error Correction using sequence tagging approach."
+    },
+    {
+      "term": "GED",
+      "definition": "Grammatical Error Detection using multi-class confusion matrix."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "Paper focuses on NLP for Filipino language, not personal finance systems."
+      }
+    ],
+    "contribution_to_field": "Provides the first deep learning-based Filipino grammar checker addressing semantic errors. Demonstrates synthetic data generation for low-resource language NLP and provides benchmark datasets for Filipino GEC research.",
+    "directly_justifies": [],
+    "limits": [
+      "Not related to personal finance domain.",
+      "Limited error coverage (specific grammatical error types only)."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. No topic codes matched. Paper is about NLP for Filipino language grammar correction, not personal finance."
+  },
+  "limitations": [
+    "Limited coverage of Filipino grammatical errors.",
+    "Rule-based error automation has limitations for duplicate and missing word errors.",
+    "Trained on synthetic data; real-world data recommended for future work."
+  ],
+  "remember_this": [
+    "RoBERTa Tagalog Large achieves F0.5 of 70.75 for Filipino GEC.",
+    "RoBERTa Base offers cost-effective alternative with 1.75% performance gap.",
+    "Synthetic data pipeline created for low-resource Filipino GEC."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu P. et al_marked.md",
+      "converted_at": "2026-07-22T13:17:32Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

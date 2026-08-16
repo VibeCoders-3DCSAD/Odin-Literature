@@ -1,0 +1,152 @@
+{
+  "paper_id": "10.3390/ai6090215",
+  "designation": "international",
+  "title": "Long Short-Term Memory Networks: A Comprehensive Survey",
+  "authors": "Krichen, M.; Mihoub, A.",
+  "year": 2025,
+  "venue": "AI",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "8.C",
+    "12.A",
+    "12.B",
+    "14.A",
+    "14.C"
+  ],
+  "tldr": "A comprehensive narrative review of LSTM architectures, their gating mechanisms, diverse applications across NLP, time series, and speech, key variants like Bidirectional and Stacked LSTMs, integration with Attention Mechanisms, and persistent challenges including computational cost, data requirements, and training difficulties.",
+  "problem_and_motivation": "Traditional RNNs struggle with the vanishing gradient problem, limiting their ability to capture long-range dependencies in sequential data. This gap motivated the development of LSTM networks, which incorporate memory cells and gating mechanisms to retain information over extended periods. A comprehensive survey synthesizing the broad landscape of LSTM architectures, applications, and limitations was needed to serve as a foundational resource.",
+  "approach": [
+    "Narrative review approach synthesizing and thematically organizing recent research on LSTM architectures, variants, and applications.",
+    "Adopts a broad perspective across multiple domains (NLP, time series, speech, healthcare, robotics, video analysis) rather than focusing on a single use-case.",
+    "Reviews fundamentals of LSTM architecture including cell state, hidden state, and the three gating mechanisms (input, forget, output).",
+    "Examines three major LSTM variants: Bidirectional LSTMs for dual-context learning, Stacked LSTMs for hierarchical feature extraction, and Attention Mechanisms for dynamic input focus.",
+    "Analyzes challenges including computational complexity, large data requirements, and training difficulties such as long training times and hyperparameter tuning.",
+    "Discusses recent advances such as peephole connections, Grid LSTMs, and performance comparisons with Transformer-based models.",
+    "Highlights emerging research areas: transfer learning, reinforcement learning, multimodal learning, and explainable AI for LSTMs."
+  ],
+  "findings": [
+    "num: Bidirectional LSTM achieved over 90% accuracy in speed predictions for up to 60 minutes in short-term traffic forecasting.",
+    "num: Stacked LSTM achieved over 99% accuracy in hierarchical fault diagnosis for rolling bearings.",
+    "LSTMs effectively capture long-range dependencies, outperforming traditional RNNs on tasks requiring contextual retention.",
+    "LSTMs demonstrate robust performance in financial forecasting, weather prediction, speech recognition, and anomaly detection.",
+    "Attention Mechanisms significantly enhance LSTM performance on long sequences by enabling dynamic focus on relevant input tokens.",
+    "LSTMs often show better convergence and generalization in data-scarce or resource-limited settings compared to Transformers due to sequential inductive biasing.",
+    "LSTM-based models offer competitive performance and lower computational overhead on wearable sensor tasks in real-time or embedded applications.",
+    "Synthetic data (e.g., GAN-generated time series) can effectively compensate for limited real-world datasets in LSTM training scenarios.",
+    "Integrating Attention Mechanisms with LSTMs yields hybrid models that leverage temporal strengths and contextual awareness.",
+    "Emerging research explores LSTMs in transfer learning, reinforcement learning, and multimodal learning across various domains."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Structure of the paper → visual overview of survey organization.",
+    "Figure 2: Architecture of the LSTM cell → illustrates gate connectivity with cell and hidden states.",
+    "Figure 3: Three successive LSTM cells across time steps → shows propagation of x, h, and c through sequence.",
+    "Table 1: Comparison of RNNs and LSTMs → highlights memory retention, gradient mitigation, and complexity.",
+    "Table 2: LSTM applications across domains → NLP, time series, speech, healthcare, robotics, video analysis.",
+    "Table 3: LSTM variants and improvements → Bidirectional, Stacked, and Attention-enhanced LSTMs.",
+    "Table 4: Challenges and limitations → computational complexity, data requirements, training difficulties."
+  ],
+  "key_equations": [
+    {
+      "equation": "it = σ(Wi · [ht−1, xt] + bi)",
+      "explanation": "Input gate activation determines new information to add to cell state."
+    },
+    {
+      "equation": "ft = σ(Wf · [ht−1, xt] + bf)",
+      "explanation": "Forget gate activation decides which cell state information to discard."
+    },
+    {
+      "equation": "ot = σ(Wo · [ht−1, xt] + bo)",
+      "explanation": "Output gate activation controls what part of cell state becomes hidden state."
+    },
+    {
+      "equation": "Ct = ft ⊗ Ct−1 + it ⊗ C̃t",
+      "explanation": "Cell state update combines forgotten prior state and new candidate values."
+    },
+    {
+      "equation": "ht = ot ⊗ tanh(Ct)",
+      "explanation": "Hidden state update filters cell state through output gate and tanh."
+    }
+  ],
+  "definitions": [
+    { "term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture designed to capture long-range dependencies in sequential data." },
+    { "term": "RNN", "definition": "Recurrent Neural Network, a class of neural networks for processing sequences." },
+    { "term": "NLP", "definition": "Natural Language Processing, a field of AI focusing on interaction between computers and human language." },
+    { "term": "BiLSTM", "definition": "Bidirectional LSTM, processes sequences in both forward and backward directions for richer context." },
+    { "term": "HPO", "definition": "Hyperparameter Optimization, systematic tuning of model hyperparameters for optimal performance." },
+    { "term": "FS", "definition": "Feature Selection, process of selecting relevant features to reduce noise and improve model performance." },
+    { "term": "ASR", "definition": "Automatic Speech Recognition, technology converting spoken language to text." }
+  ],
+  "citations": [
+    { "author": "Hochreiter", "year": 1997, "page": 2, "paragraph": 0, "claim": "Introduced LSTMs as specialized RNNs designed to remember information for long periods to address vanishing gradients.", "role": "context" },
+    { "author": "Van Houdt", "year": 2020, "page": 2, "paragraph": 0, "claim": "LSTMs incorporate memory cells and gating mechanisms to regulate information flow and learn which data to keep or discard.", "role": "context" },
+    { "author": "Behera", "year": 2021, "page": 2, "paragraph": 0, "claim": "LSTMs improve generated text quality and conversational agent understanding by maintaining contextual information across sentences.", "role": "finding" },
+    { "author": "Imrana", "year": 2021, "page": 10, "paragraph": 0, "claim": "BiDLSTM-based intrusion detection enhances accuracy and reduces false alarm rates for U2R and R2L threats.", "role": "finding" },
+    { "author": "Abduljabbar", "year": 2021, "page": 10, "paragraph": 0, "claim": "Bidirectional LSTM achieves over 90% accuracy in speed predictions for up to 60 minutes in traffic forecasting.", "role": "finding" },
+    { "author": "Ma", "year": 2022, "page": 11, "paragraph": 0, "claim": "Stacked LSTM neural network predicts daily quality control records for radiotherapy machines, outperforming ARIMA model.", "role": "finding" },
+    { "author": "Yu", "year": 2019, "page": 11, "paragraph": 0, "claim": "Stacked LSTM achieves over 99% accuracy in hierarchical fault diagnosis for rolling bearings.", "role": "finding" },
+    { "author": "Sang", "year": 2024, "page": 12, "paragraph": 0, "claim": "AMV-LSTM with coupled gates and attention mechanism improves stock price prediction accuracy and addresses stability and overfitting.", "role": "methodology" },
+    { "author": "Lin", "year": 2022, "page": 12, "paragraph": 0, "claim": "Dual-stage attention-based LSTM improves accuracy and generalization for short-term zonal electricity load probabilistic forecasting on GEFCom2014.", "role": "finding" },
+    { "author": "Liu", "year": 2019, "page": 12, "paragraph": 0, "claim": "AC-BiLSTM with convolutional layer and attention mechanism excels at text classification across sentiment and question classification datasets.", "role": "methodology" },
+    { "author": "Bischl", "year": 2023, "page": 6, "paragraph": 0, "claim": "Modern HPO encompasses Bayesian and evolutionary methods with documented consistent gains over manual tuning.", "role": "methodology" },
+    { "author": "Casola", "year": 2022, "page": 15, "paragraph": 0, "claim": "Transformers often achieve better performance than LSTMs in machine translation tasks in terms of accuracy and training efficiency.", "role": "baseline" },
+    { "author": "da Silva", "year": 2022, "page": 15, "paragraph": 0, "claim": "LSTMs demonstrate better convergence and generalization properties in data-scarce or resource-limited settings due to sequential inductive biasing.", "role": "finding" },
+    { "author": "Zhang", "year": 2024, "page": 16, "paragraph": 0, "claim": "LSTM-based models offer competitive performance and lower computational overhead on wearable sensor tasks for real-time monitoring applications.", "role": "finding" },
+    { "author": "Lin", "year": 2025, "page": 16, "paragraph": 0, "claim": "LSTM networks incorporated into TD3 reinforcement learning framework improve robotic path planning in dynamic environments.", "role": "methodology" }
+  ],
+  "topic_relevance": {
+    "topics": [
+      { "code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "contextual", "justification": "Provides general forecasting methodologies applicable to financial time series." },
+      { "code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "contextual", "justification": "Reviews LSTM as a forecasting algorithm applicable to sequential data like spending." },
+      { "code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "contextual", "justification": "Discusses LSTM-based anomaly detection methods applicable to transactions." },
+      { "code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "contextual", "justification": "LSTM anomaly detection methods could be applied to spending data." },
+      { "code": "8.C", "name": "Cold-Start Baseline Strategies for Anomaly Detection", "relevance": "low", "justification": "Mentions training difficulties but does not address cold-start anomaly detection specifically." },
+      { "code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "contextual", "justification": "Discusses evaluation protocols like blocked/rolling validation for time series models." },
+      { "code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "contextual", "justification": "Reviews performance comparisons of LSTM variants and baselines." },
+      { "code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "low", "justification": "Mentions synthetic data for LSTM training but not specifically financial ML." },
+      { "code": "14.C", "name": "On-Device vs. Server Inference", "relevance": "low", "justification": "Discusses computational overhead but does not address deployment inference strategies." }
+    ],
+    "contribution_to_field": "This survey provides a comprehensive and organized synthesis of LSTM architectures, mechanisms, and gating equations as a foundational reference for researchers. It systematically reviews LSTM applications across NLP, time series, speech, healthcare, robotics, and video analysis, highlighting effectiveness and domain-specific benefits. The paper catalogs major LSTM variants including Bidirectional LSTMs, Stacked LSTMs, and Attention-enhanced LSTMs, comparing their architectural features and application contexts. It critically analyzes persistent challenges including computational complexity, data requirements, and training difficulties, with discussion of mitigation strategies such as synthetic data and improved hyperparameter optimization. The survey also identifies emerging research directions including transfer learning, reinforcement learning, multimodal integration, and explainable AI, providing guidance for future work in the field.",
+    "directly_justifies": [
+      "Bidirectional LSTM achieves over 90% accuracy in speed predictions for up to 60 minutes in traffic forecasting.",
+      "Stacked LSTM achieves over 99% accuracy in hierarchical fault diagnosis for rolling bearings.",
+      "LSTMs demonstrate robust performance in financial forecasting, weather prediction, and anomaly detection.",
+      "Attention Mechanisms significantly enhance LSTM performance on long sequences by enabling dynamic focus.",
+      "LSTMs show better convergence and generalization in data-scarce settings compared to Transformers."
+    ],
+    "limits": [
+      "The paper is a narrative review; it does not provide a protocol-based systematic review with predefined search and inclusion criteria.",
+      "No empirical experiments or original comparative benchmarks are conducted; all findings are synthesized from existing literature.",
+      "The review does not focus on a specific domain, limiting actionable depth for specialized applications like personal finance.",
+      "Performance metrics and quantitative findings are cited from external studies without independent verification.",
+      "The paper does not provide concrete implementation guidelines or code-level best practices for LSTM deployment."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper was found to be relevant to domains 6 (Predictive Modeling) and 8 (Anomaly Detection) in a contextual capacity, as it reviews LSTM as a general-purpose sequence modeling technique that can be applied to financial time series and spending data. Domain 12 (Evaluation Frameworks) was selected as contextual due to the paper's discussion of evaluation protocols like blocked/rolling validation for time series, and algorithmic benchmarking approaches. Domain 14 (ML Deployment and Serving) was selected with low relevance, as the paper mentions computational overhead but does not address specific deployment architectures or synthetic data generation for financial ML specifically. Domains 1 through 5 (Filipino Young Professionals demographics, financial structure, behavior, culturally specific practices, spending patterns, and expense categorization) were rejected because the paper contains no Philippines-specific content. Domain 7 (Budgeting Strategies) was rejected because budget allocation and optimization are not discussed. Domain 9 (Mobile-First Design) was rejected because mobile UX is not addressed. Domain 10 (Privacy and Security) was rejected because data privacy and consent are not covered. Domain 11 (Engagement Dynamics) was rejected because user engagement and retention are not discussed. Domain 13 (Savings and Debt Management) was rejected because savings goals and debt management are not addressed. The selected topics reflect the paper's core contributions to general sequence modeling, forecasting, anomaly detection, and evaluation methodologies, which are transferable to personal finance systems even though the paper does not specifically focus on that domain."
+  },
+  "limitations": [
+    "Narrative review design lacks a protocol-based systematic approach with predefined search and inclusion criteria [unacknowledged].",
+    "Does not conduct original empirical experiments or independent benchmarking, relying entirely on synthesized existing literature [unacknowledged].",
+    "Broad domain coverage limits actionable depth for specialized applications like personal finance [unacknowledged].",
+    "Quantitative findings cited from external studies without independent verification or error analysis [unacknowledged].",
+    "Does not provide concrete implementation guidelines, code-level best practices, or practical deployment strategies [unacknowledged].",
+    "No systematic comparison of LSTM performance across all claimed application domains with consistent metrics [unacknowledged]."
+  ],
+  "remember_this": [
+    "LSTMs capture long-range dependencies via cell state and three gating mechanisms: input, forget, and output gates.",
+    "Bidirectional LSTMs process sequences in both directions for improved context understanding and disambiguation.",
+    "Stacked LSTMs use multiple layers to learn hierarchical features and complex patterns in data.",
+    "Attention Mechanisms enable dynamic focus on relevant input tokens, significantly improving performance on long sequences.",
+    "LSTMs face persistent challenges including computational complexity, high data requirements, and training difficulties."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Krichen & Mihoub_marked.md",
+      "converted_at": "2026-07-21T13:50:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

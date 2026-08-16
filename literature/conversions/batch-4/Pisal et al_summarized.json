@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.1038/s41598-025-17604-y",
+  "designation": "local-algorithm-specific",
+  "title": "An Integrated TOPSIS and ARAS Method Multi-Criteria Decision-Making Approach for Optimizing Investment Portfolios Using Goal Programming and Genetic Algorithm Model",
+  "authors": "Prajwal Pisal; Kiran Kumar Reddy; Jaydeep Kishore; Ram Reddy Jonnalagadda",
+  "year": 2018,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B"
+  ],
+  "tldr": "No abstract extracted.",
+  "problem_and_motivation": "Auto-extraction pending.",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Prajwal Pisal1, Kiran Kumar Reddy2, Jaydeep Kishore3, Ram Reddy Jonnalagadda4, M"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Prajwal Pisal1, Kiran Kumar Reddy2, Jaydeep Kishore3, Ram Reddy Jonnalagadda4, M",
+    "Year: 2018",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pisal et al_marked.md",
+      "converted_at": "2026-07-21T08:09:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

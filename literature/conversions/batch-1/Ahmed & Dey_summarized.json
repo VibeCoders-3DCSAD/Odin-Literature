@@ -1,0 +1,118 @@
+{
+  "paper_id": "10.63125/ee5eas98",
+  "designation": "international-algorithm-specific",
+  "title": "Neural Network–Based Customer Retention Forecasting in Mobile Wallet Services Using 200k Historical User Profiles",
+  "authors": "Ahmed, I.; Dey, B.",
+  "year": 2023,
+  "venue": "Review of Applied Science and Technology",
+  "odin_topics": ["5.A", "5.B", "6.A", "11.A", "11.B", "12.A", "12.B"],
+  "tldr": "A neural network model trained on 200,000 mobile wallet user profiles achieved AUC 0.86 for retention forecasting, outperforming logistic regression and regularized baselines under temporally consistent validation.",
+  "problem_and_motivation": "Mobile wallet retention is behaviorally inferred rather than contractually defined, creating challenges in distinguishing episodic inactivity from genuine churn. Existing linear models struggle to capture non-linear interactions among behavioral intensity, diversity, and stability dimensions that jointly shape retention outcomes in multi-functional payment ecosystems.",
+  "approach": [
+    "Used 200,000 historical mobile wallet user profiles with static profile attributes and dynamic behavioral event logs as the dataset.",
+    "Engineered three feature families: behavioral intensity (recency, frequency, monetary), behavioral diversity (merchant, category, recipient, transaction-type breadth), and behavioral stability/volatility (inter-transaction gaps, trend indicators).",
+    "Applied forward-chaining temporal validation with time-based cutoffs to prevent leakage and simulate real-world forecasting conditions.",
+    "Trained a neural network with dense layers for continuous features and embedding layers for categorical variables to model non-linear interactions.",
+    "Compared neural network against logistic regression, regularized regression, random forest, and gradient boosting baselines using identical temporal splits and feature sets.",
+    "Evaluated using discrimination metrics (AUC, PR-AUC, F1, lift) and calibration metrics (Brier score, reliability curves) with segment-level stability testing."
+  ],
+  "findings": [
+    "num: Neural network achieved AUC of 0.86 and PR-AUC of 0.74, outperforming logistic regression (AUC 0.78, PR-AUC 0.64) and regularized regression (AUC 0.80, PR-AUC 0.67).",
+    "num: Neural network produced lift of 3.5 in the top 10% risk segment.",
+    "num: Retained users showed higher merchant diversity (M=6.8) than churned users (M=2.9) and shorter inter-transaction gaps (M=11.2 days vs. 34.7 days).",
+    "num: Mean transaction frequency was 12.8 (SD=21.3) with median of 6.0, confirming heavy-tailed engagement distributions.",
+    "num: Segment-level AUC remained stable across new users (0.84) and mature users (0.88).",
+    "num: 68% of users were classified as retained and 32% as churned.",
+    "Logistic regression showed significant negative effect for recency (beta=-0.042, p<.001) and positive effects for transaction frequency (beta=0.087, p<.001) and engagement trend (beta=0.054, p<.001).",
+    "Behavioral intensity construct achieved Cronbach's alpha of 0.88, behavioral diversity 0.84, and stability/volatility 0.77.",
+    "All five hypotheses were accepted based on statistical and predictive evidence."
+  ],
+  "key_figures_tables": [
+    "Table 1: Profile characteristics of 200,000 users across onboarding channel, verification, device, region, and account age → Demographic and profile diversity supports retention forecasting analysis.",
+    "Table 3: Descriptive statistics for behavioral intensity constructs → Recency, frequency, and monetary values show right-skewed, heavy-tailed distributions.",
+    "Table 4: Retained vs. churned user comparison across diversity and stability constructs → Clear behavioral separation supports inclusion of diversity and stability features.",
+    "Table 5: Cronbach's alpha for construct groups → Intensity (0.88) and diversity (0.84) show good internal consistency; stability/volatility (0.77) acceptable.",
+    "Table 7: Logistic regression coefficients → All behavioral predictors achieved statistical significance at p<.001.",
+    "Table 8: Regression model performance on temporally held-out test data → Regularized regression improved AUC from 0.78 to 0.80 over logistic baseline.",
+    "Table 10: Comparative performance and segment stability results → Neural network outperformed all baselines across all metrics; segment-level variation was modest."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "RFM", "definition": "Recency-frequency-monetary feature engineering approach capturing behavioral engagement intensity from transaction histories."},
+    {"term": "AUC", "definition": "Area under the receiver operating characteristic curve, a threshold-independent measure of model ranking ability."},
+    {"term": "PR-AUC", "definition": "Area under the precision-recall curve, reflecting model performance on the positive (churn) class under class imbalance."},
+    {"term": "Lift", "definition": "Ratio of churn capture rate in the top-ranked segment compared to random selection, measuring targeted intervention efficiency."},
+    {"term": "Brier score", "definition": "Mean squared difference between predicted probabilities and actual outcomes, measuring probabilistic calibration."},
+    {"term": "Forward-chaining validation", "definition": "Walk-forward temporal validation method training on earlier periods and testing on later periods to prevent leakage."},
+    {"term": "Concept drift", "definition": "Change in the relationship between predictors and outcomes over time due to evolving platform conditions or user behavior."}
+  ],
+  "citations": [
+    {"author": "Khoa", "year": 2020, "page": 0, "paragraph": 0, "claim": "A mobile wallet is defined as a digital payment application storing monetary value or payment credentials for financial transactions through a smartphone.", "role": "context"},
+    {"author": "Yang", "year": 2021, "page": 0, "paragraph": 0, "claim": "Mobile wallets have expanded rapidly in both developed and emerging economies, becoming essential payment infrastructure for consumers and merchants.", "role": "context"},
+    {"author": "Gremler", "year": 2020, "page": 0, "paragraph": 0, "claim": "Continued service usage is driven by perceived value, satisfaction, trust, and habitual integration into daily routines.", "role": "context"},
+    {"author": "Flores-Mendez", "year": 2018, "page": 0, "paragraph": 0, "claim": "In mobile wallet services, retention is most frequently measured through ongoing transaction activity, repeated logins, and continued interaction with payment functionalities.", "role": "methodology"},
+    {"author": "García", "year": 2017, "page": 0, "paragraph": 0, "claim": "Churn is operationally defined through prolonged inactivity or absence of transactions within a specified period rather than subjective disengagement.", "role": "methodology"},
+    {"author": "Fan", "year": 2019, "page": 0, "paragraph": 0, "claim": "Recency-frequency-monetary feature engineering is one of the most foundational and empirically reliable approaches for transforming historical activity into retention predictors.", "role": "methodology"},
+    {"author": "Pal", "year": 2021, "page": 0, "paragraph": 0, "claim": "Neural network input space often includes dozens or hundreds of engineered features from historical profiles, including recency, frequency, monetary aggregates, and session engagement measures.", "role": "methodology"},
+    {"author": "Liu", "year": 2017, "page": 0, "paragraph": 0, "claim": "Feature-use traces record interactions with wallet functionalities such as reward redemption and QR scanning, capturing exploratory and maintenance behaviors that precede transactions.", "role": "context"},
+    {"author": "Coussement", "year": 2017, "page": 0, "paragraph": 0, "claim": "Logistic and regularized regression translate behavioral features such as recency, diversity, and stability into transparent probability estimates serving as standard baselines.", "role": "baseline"},
+    {"author": "Ullah", "year": 2019, "page": 0, "paragraph": 0, "claim": "Random forests frequently outperform single-tree models and often exceed logistic regression in predictive discrimination for churn modeling with non-linear predictor relationships.", "role": "baseline"},
+    {"author": "Liébana-Cabanillas", "year": 2017, "page": 0, "paragraph": 0, "claim": "Mobile wallets often act as gateways to financial inclusion, particularly for underbanked populations, making retention reflective of sustained access to convenient payment tools.", "role": "context"},
+    {"author": "Sengupta", "year": 2021, "page": 0, "paragraph": 0, "claim": "Recent and frequent engagement consistently predicts continued participation in non-contractual customer relationship settings across subscription and digital commerce.", "role": "context"},
+    {"author": "Hewett", "year": 2018, "page": 0, "paragraph": 0, "claim": "Earlier retention studies frequently reported that models perform differently across lifecycle stages or engagement intensities, motivating segment stability testing.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Defines and operationalizes three behavioral construct families (intensity, diversity, stability) as structured profiles for 200K mobile wallet users."},
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "medium", "justification": "Examines new-user vs. mature-user segment performance differences relevant to early lifecycle profiling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Develops and benchmarks neural network architecture against logistic regression and ensemble baselines for retention probability forecasting."},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "high", "justification": "Core focus on retention and churn as engagement outcomes shaped by behavioral intensity, diversity, and temporal stability."},
+      {"code": "11.B", "name": "Retention Mechanisms and Engagement Design", "relevance": "medium", "justification": "Discusses retention drivers including perceived value, satisfaction, trust, and habitual integration in mobile wallet contexts."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Comprehensive evaluation using AUC, PR-AUC, lift, Brier score, calibration curves, and cross-segment stability testing."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Direct benchmarking of neural network against logistic regression, regularized regression, random forest, and gradient boosting under identical temporal splits."}
+    ],
+    "contribution_to_field": "This paper contributes an empirically validated neural network framework for predicting customer retention in mobile wallet services using 200,000 historical user profiles. It establishes that behavioral diversity (merchant breadth, category variety, recipient diversity) and temporal stability measures provide incremental predictive value beyond traditional RFM intensity features. The study demonstrates that forward-chaining temporal validation produces credible performance estimates while random splits inflate results. It provides evidence that neural architectures with categorical embeddings outperform regression baselines in capturing non-linear behavioral interactions, and that predictive performance generalizes across new and mature user segments under class-imbalanced conditions.",
+    "directly_justifies": [
+      "Neural network with embeddings achieved AUC 0.86 for retention forecasting versus 0.78 for logistic regression on the same temporal splits.",
+      "Behavioral diversity constructs contributed incremental AUC and PR-AUC gains when added to intensity-only regression models.",
+      "Retained users exhibited significantly higher merchant diversity (M=6.8) and shorter inter-transaction gaps (M=11.2 days) than churned users.",
+      "Segment-level AUC remained stable across new users (0.84) and mature users (0.88) under forward-chaining validation.",
+      "Forward-chaining validation prevents temporal leakage that random splits introduce in time-dependent retention studies."
+    ],
+    "limits": [
+      "Dataset derived from a single mobile wallet platform, limiting external generalizability across countries and regulatory environments.",
+      "Retention and churn labels based on activity thresholds rather than explicit user declarations, introducing potential label ambiguity.",
+      "Feature engineering via aggregation into fixed-length predictors reduced fidelity to fine-grained sequential behavioral dependencies.",
+      "Neural network models present interpretability challenges compared to coefficient-based regression baselines for governance and auditability.",
+      "Unobserved external factors such as merchant network expansion and macroeconomic shocks may reduce predictive stability over time."
+    ],
+    "topic_mapping_rationale": "All topic domains in the taxonomy were systematically scanned. Domain 5 (Financial Behavioral Profiles) was flagged as highly relevant because the paper operationalizes intensity, diversity, and stability constructs as structured behavioral profiles. Domain 6 (Predictive Modeling) was flagged as highly relevant due to the neural network development and baseline benchmarking. Domain 11 (Engagement Dynamics) was flagged as highly relevant because retention and churn are the core outcomes analyzed. Domain 12 (Evaluation Frameworks) was flagged as highly relevant given the comprehensive multi-metric evaluation design. Domain 1 (Filipino Young Professionals), Domain 2 (Culturally Specific Financial Practices), Domain 3 (Expense Categorization), Domain 7 (Budgeting Strategies), Domain 8 (Anomaly Detection), Domain 9 (Mobile-First Design), Domain 10 (Data Privacy), and Domain 14 (Synthetic Data) were considered and rejected as the paper does not address Filipino demographics, culturally specific practices, expense categorization, budgeting, anomaly detection, mobile UX design, privacy governance, or synthetic data generation. Domain 4 (Existing Systems Landscape) was considered but rejected as the paper provides only contextual references to existing platforms rather than systematic landscape analysis. Domain 13 (Savings/Debt Management) was rejected as not applicable to the retention forecasting focus. The paper's topical coverage centers on behavioral profiling, predictive modeling, engagement analytics, and evaluation methodology within digital payment ecosystems."
+  },
+  "limitations": [
+    "Dataset derived from a single mobile wallet platform limits external generalizability across countries, regulatory environments, and incentive structures.",
+    "Retention and churn labels based on activity thresholds rather than explicit user declarations, introducing potential label ambiguity for episodic users.",
+    "Feature engineering via aggregation into fixed-length predictors reduced fidelity to fine-grained sequential behavioral dependencies.",
+    "Neural network models present interpretability challenges compared to coefficient-based regression baselines for governance and auditability requirements.",
+    "Unobserved external factors such as merchant network expansion and macroeconomic shocks may reduce predictive stability over time [unacknowledged].",
+    "New users and low-activity users with sparse behavioral histories constrain model accuracy for early lifecycle forecasting.",
+    "Dataset represents system-logged behavioral variables only, not latent psychological drivers such as trust perceptions or satisfaction."
+  ],
+  "remember_this": [
+    "Neural network achieved AUC 0.86 outperforming logistic regression AUC 0.78 and regularized regression AUC 0.80 for mobile wallet retention.",
+    "Retained users had 2.3x higher merchant diversity and 3.1x shorter inter-transaction gaps than churned users.",
+    "Behavioral diversity and stability features provide incremental predictive value beyond traditional RFM intensity constructs.",
+    "Forward-chaining temporal validation produces credible performance estimates where random splits inflate results.",
+    "Neural network performance remained stable across new-user (AUC 0.84) and mature-user (AUC 0.88) segments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ahmed & Dey_marked.md",
+      "converted_at": "2026-07-22T11:48:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

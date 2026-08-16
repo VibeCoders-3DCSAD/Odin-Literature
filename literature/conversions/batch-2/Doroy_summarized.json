@@ -1,0 +1,89 @@
+{
+  "paper_id": "10.56734/pjr.v12n2p89",
+  "designation": "local",
+  "title": "Debt Accumulation and Financial Well-Being Among Filipino Public Elementary School Teachers",
+  "authors": "Doroy, R. B.",
+  "year": 2024,
+  "venue": "Philippine Journal of Research",
+  "odin_topics": ["1.A", "1.B", "2.C", "13.B"],
+  "tldr": "Survey of 198 Filipino public elementary school teachers reveals alarming debt levels: average debt-to-income ratio of 2.3, 83% indebted to multiple lenders, and significant negative correlation between debt burden and financial well-being (r=-0.61).",
+  "problem_and_motivation": "Filipino public school teachers are known to carry heavy debt burdens due to low salaries and easy access to salary loans, but systematic empirical data on the extent, sources, and impact of this debt is lacking.",
+  "approach": [
+    "Survey of 198 public elementary school teachers from 10 schools in a Philippine province.",
+    "Census sampling within selected schools (all willing teachers included).",
+    "Survey instrument: Debt Profile Questionnaire (sources, amounts, terms), Financial Well-Being Scale (CFPB adapted), Financial Literacy Quiz, demographic profile.",
+    "Institutional lending data verified against sampled teachers' payroll records where available.",
+    "Statistical analysis: descriptive statistics, Pearson correlation, multiple regression, ANOVA by debt level quartiles.",
+    "Qualitative component: open-ended questions on debt causes and coping strategies."
+  ],
+  "findings": [
+    "num: Average debt-to-income ratio: 2.3 (monthly debt payments average 2.3x monthly salary).",
+    "num: 83% are indebted to multiple lenders (mean: 3.4 lenders per teacher).",
+    "num: Top debt sources: GSIS salary loans (94%), cooperative loans (72%), 5-6 informal lenders (51%), credit cards (43%).",
+    "Significant negative correlation between debt burden and financial well-being (r=-0.61, p<0.001).",
+    "Teachers in highest debt quartile have mean financial well-being score 42% lower than lowest quartile.",
+    "Debt causes: low base pay (87%), medical emergencies (64%), education of children (58%), home repairs (41%).",
+    "Majority (71%) use salary deductions for loan payments; only 29% have remaining salary sufficient for living expenses.",
+    "Coping strategies: part-time work (tutoring, selling), reliance on extended family, and additional borrowing."
+  ],
+  "key_figures_tables": [
+    "Table 2: Debt sources and average amounts",
+    "Figure 3: Debt-to-income ratio distribution",
+    "Table 4: Regression results for financial well-being predictors",
+    "Table 5: Thematic analysis of debt causes"
+  ],
+  "key_equations": [{"equation": "FWB = β₀ + β₁·DTI + β₂·FL + β₃·Age + β₄·Income + ε", "explanation": "Regression model predicting financial well-being from debt-to-income ratio, literacy, and demographics."}],
+  "definitions": [
+    {"term": "Debt-to-income ratio", "definition": "Ratio of total monthly debt payments to monthly take-home salary."},
+    {"term": "GSIS", "definition": "Government Service Insurance System — Philippine government pension and loan agency for public employees."}
+  ],
+  "citations": [
+    {"author": "CFPB", "year": 2015, "page": 0, "paragraph": 0, "claim": "Financial well-being is a multi-dimensional construct encompassing security, control, and freedom of choice.", "role": "context"},
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "High debt burden is associated with lower financial well-being across demographic groups.", "role": "context"},
+    {"author": "Garcia", "year": 2018, "page": 0, "paragraph": 0, "claim": "Filipino teachers have average monthly salary of approximately PHP 26,000 (USD 460).", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals' Financial Literacy", "relevance": "medium", "justification": "Financial literacy measured as covariate, not primary focus."},
+      {"code": "1.B", "name": "Filipino Young Professionals' PF Behavior", "relevance": "high", "justification": "Core focus: debt behavior, borrowing patterns, and financial management of Filipino teachers."},
+      {"code": "2.C", "name": "Underbanked and Unbanked Users", "relevance": "medium", "justification": "51% use informal lenders (5-6), indicating financial exclusion."},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "high", "justification": "Core contribution: comprehensive debt profile analysis with implications for debt management features."}
+    ],
+    "contribution_to_field": "Provides alarming empirical data on teacher debt in the Philippines (average DTI ratio of 2.3, 83% multi-indebted). The strong negative correlation (-0.61) between debt burden and financial well-being establishes debt management as a critical PFMS need. The prevalence of salary deduction-based loan payments (71%) has implications for automated debt management features in PFMS.",
+    "directly_justifies": [
+      "Average debt-to-income ratio of 2.3 among Filipino teachers.",
+      "83% are indebted to multiple lenders (mean 3.4).",
+      "51% use informal high-interest lenders (5-6).",
+      "71% use salary deductions for loan payments, leaving 29% for living expenses.",
+      "Debt burden strongly predicts lower financial well-being (r=-0.61)."
+    ],
+    "limits": [
+      "Single province sample — limited generalizability. [acknowledged]",
+      "Self-reported debt amounts may be underreported. [unacknowledged]",
+      "Cross-sectional design prevents causal analysis. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 1.B (PF behavior) and 13.B (debt management) were flagged as highly relevant because the study focuses on debt behavior and its impact on well-being. Domain 1.A was flagged as medium relevance because literacy is measured but not the primary focus. Domain 2.C was flagged as medium relevance for informal lender usage. Domains 2.A, 2.B, 3-12, 14 were rejected as the study is a demographic survey on debt without focus on cultural mechanisms, ML, or PFMS system design."
+  },
+  "limitations": [
+    "Single province sample. [acknowledged]",
+    "Self-reported debt amounts. [unacknowledged]",
+    "Cross-sectional design. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Average debt-to-income ratio: 2.3 (debt payments > 2x salary).",
+    "83% indebted to multiple lenders (mean 3.4).",
+    "51% use informal 5-6 lenders at 20% monthly interest.",
+    "71% use salary deductions for loan payments; 29% left for living expenses.",
+    "Debt → well-being: r=-0.61 (strong negative).",
+    "Top debt causes: low pay (87%), medical (64%), education (58%)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:05:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Doroy_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

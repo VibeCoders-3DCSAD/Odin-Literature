@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.62986/dp2025.60",
+  "designation": "local",
+  "title": "Election-Year Stimuli and Economic Performance: Evidence from a Macroeconometric Model of the Philippines",
+  "authors": "Mark Gerald; Ramona Maria; John Paolo",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B",
+    "5.C",
+    "7.B"
+  ],
+  "tldr": "We evaluated the transmission of election shocks in the Philippine economy using an augmented macroeconometric model that integrates political business cycle (PBC) dynamics into the country’s macroeconomic framework. Building upon the model developed by Debuque-Gonzales and Corpus (2023, 2024), quarterly data from 2002 to 2023 were utilized to simulate the effects of election-induced fiscal and pr",
+  "problem_and_motivation": "We evaluated the transmission of election shocks in the Philippine economy using an augmented macroeconometric model that integrates political business cycle (PBC) dynamics into the country’s macroeconomic framework. Building upon the model developed by Debuque-Gonzales and Corpus (2023, 2024), quarterly data from 2002 to 2023 were utilized to simulate the effects of election-induced fiscal and private sector behavior on key macroeconomic variables, namely private consumption, employment, invest",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Ruiz, Mark Gerald C Miral, Ramona Maria L Rivera, John Paolo R"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Ruiz, Mark Gerald C Miral, Ramona Maria L Rivera, John Paolo R",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ruiz et al_marked.md",
+      "converted_at": "2026-07-21T08:23:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

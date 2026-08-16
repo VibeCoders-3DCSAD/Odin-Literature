@@ -1,0 +1,84 @@
+{
+  "paper_id": "10.3390/info15060357",
+  "designation": "international",
+  "title": "A Systematic Review of Explainable Artificial Intelligence in Decision-Making",
+  "authors": "Danach, K.; Harik, R.; Al Kork, S.; El Hassan, M.",
+  "year": 2024,
+  "venue": "Information (MDPI)",
+  "odin_topics": ["4.A", "14.B", "10.A", "10.B"],
+  "tldr": "A systematic review of explainable AI (XAI) in decision-making applications, analyzing 108 papers to categorize XAI methods, evaluation frameworks, and domain-specific implementations.",
+  "problem_and_motivation": "AI-driven decision-making systems are increasingly deployed across critical domains but operate as black boxes, reducing user trust and accountability. There is no unified framework for implementing and evaluating XAI across diverse decision-making contexts.",
+  "approach": [
+    "Conducted a systematic review following PRISMA guidelines across Scopus, IEEE, ACM, and Web of Science databases.",
+    "Screened 2000+ records (published 2018-2024) resulting in 108 eligible papers.",
+    "Taxonomized papers by: domain (finance, healthcare, law, etc.), XAI method family (feature attribution, counterfactual, surrogate, etc.), and evaluation approach.",
+    "Developed a multi-dimensional classification framework for XAI methods in decision-making.",
+    "Analyzed trends in XAI adoption across sectors and identified evaluation gaps.",
+    "Proposed a comprehensive XAI evaluation framework integrating user-centered and technical metrics."
+  ],
+  "findings": [
+    "Feature attribution methods (SHAP, LIME) dominate XAI research (45%), followed by counterfactuals (20%).",
+    "num: Finance (28%) and healthcare (35%) are the largest application domains for XAI in decision-making.",
+    "User-centered evaluation of XAI (usefulness, satisfaction, trust) is significantly underrepresented compared to technical evaluation (fidelity, completeness).",
+    "Only 15% of papers evaluate XAI methods with human subjects.",
+    "Regulatory compliance (GDPR, EU AI Act) is a key driver for XAI adoption in financial decision-making.",
+    "Post-hoc explanation methods are more prevalent than inherently interpretable models."
+  ],
+  "key_figures_tables": [
+    "Table 2: Taxonomy of XAI methods in decision-making",
+    "Figure 3: Distribution of XAI methods by application domain",
+    "Table 5: Evaluation frameworks for XAI in decision-making"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence — AI methods that produce human-understandable explanations for their outputs."},
+    {"term": "Feature attribution", "definition": "XAI methods (e.g., SHAP, LIME) that assign importance scores to input features for a given prediction."}
+  ],
+  "citations": [
+    {"author": "Lundberg", "year": 2017, "page": 0, "paragraph": 0, "claim": "SHAP unifies six attribution methods using Shapley values from cooperative game theory.", "role": "context"},
+    {"author": "Ribeiro", "year": 2017, "page": 0, "paragraph": 0, "claim": "LIME explains individual predictions by fitting local surrogate models.", "role": "context"},
+    {"author": "Arrieta", "year": 2020, "page": 0, "paragraph": 0, "claim": "XAI taxonomy includes intrinsic vs. post-hoc methods and model-specific vs. model-agnostic approaches.", "role": "context"},
+    {"author": "Doshi-Velez", "year": 2017, "page": 0, "paragraph": 0, "claim": "Evaluation of XAI should include application-grounded, human-grounded, and functionally-grounded approaches.", "role": "context"},
+    {"author": "EU Commission", "year": 2021, "page": 0, "paragraph": 0, "claim": "The EU AI Act mandates explainability for high-risk AI systems in finance and other sectors.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Reviews XAI across domains including finance, providing context for explainable PFMS."},
+      {"code": "14.B", "name": "AI explainability (XAI) in PFMS", "relevance": "high", "justification": "Core contribution: systematic review of XAI methods applicable to decision-making systems."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "low", "justification": "Regulatory compliance (GDPR) discussed as driver for XAI."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "XAI improves user trust; paper reviews trust-related evaluation approaches."}
+    ],
+    "contribution_to_field": "Provides a comprehensive taxonomy of XAI methods for decision-making systems, with application-specific analysis for finance. Identifies the gap between technical and user-centered XAI evaluation, which is critical for PFMS where user trust and understanding are essential. The proposed evaluation framework can guide PFMS developers in selecting and evaluating explanation methods.",
+    "directly_justifies": [
+      "Feature attribution methods (SHAP, LIME) are the dominant XAI approach for financial decision-making.",
+      "User-centered XAI evaluation is underrepresented but critical for PFMS adoption.",
+      "Post-hoc explanations are more commonly used than intrinsically interpretable models."
+    ],
+    "limits": [
+      "Review scope limited to 2018-2024 publications. [acknowledged]",
+      "No empirical comparison of XAI methods across domains. [unacknowledged]",
+      "Coverage of financial XAI applications is high-level without PFMS-specific depth. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 14.B was flagged as highly relevant because XAI in decision-making is the core contribution. Domain 4.A was flagged as medium relevance because the paper surveys systems across domains including finance. Domain 10.B was flagged as medium relevance because user trust and explanation evaluation are discussed. Domain 10.A was flagged as low relevance for regulatory compliance context. Domains 1-9, 11-13, 14.A were rejected as the paper is a domain-independent XAI review without focus on specific PFMS modules or ML approaches."
+  },
+  "limitations": [
+    "Limited to 2018-2024 publications. [acknowledged]",
+    "No empirical comparison of XAI methods. [unacknowledged]",
+    "Financial domain coverage lacks PFMS-specific depth. [unacknowledged]"
+  ],
+  "remember_this": [
+    "SHAP and LIME dominate XAI research in decision-making (45%).",
+    "Only 15% of XAI papers include human-subject evaluation.",
+    "Finance (28%) is the second-largest XAI application domain after healthcare.",
+    "Post-hoc explanations are used more than inherently interpretable models."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:01:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Danach et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

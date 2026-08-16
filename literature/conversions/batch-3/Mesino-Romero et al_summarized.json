@@ -1,0 +1,159 @@
+{
+  "paper_id": "10.XXXX/2026-status-digital-payments-philippines",
+  "designation": "local",
+  "title": "From Surge to Stability: Digital Payments Driving a Steady Transition — 2024 Status of Digital Payments in the Philippines",
+  "authors": "Mesina-Romero, B. R.; Masangkay, M. C.; Franco, M.; Yambao, M. A. V.; Delgado, K.; Bueno, P. N.; Lingat, P. J.; Natividad, G. M.; Lapus, A. R.; Manuel, R. M.; Yñigo, K. T.",
+  "year": 2024,
+  "venue": "Bangko Sentral ng Pilipinas (BSP) Report",
+  "odin_topics": ["4.A", "4.B", "10.A", "10.B", "11.A"],
+  "tldr": "Digital retail payments reached 57.4% of volume and 59.0% of value in 2024, exceeding the Philippine Development Plan target, driven by merchant payments, P2P transfers, and B2B supplier payments.",
+  "problem_and_motivation": "The BSP needs to track the progress of digital payment adoption in the Philippines to monitor policy effectiveness, identify barriers to e-payments, and guide interventions. Regular measurement provides a baseline for understanding the shift from cash to digital channels.",
+  "approach": [
+    "Applies a measurement model (previously the BTCA model) to estimate the volume and value of digital retail payments across government, business, and person categories.",
+    "Identifies and quantifies 24 payment use-cases across the payer-payee matrix, using disaggregated quantitative data from multiple government and private sources.",
+    "Uses critical assumptions to fill data gaps, supplemented by stakeholder interviews and surveys.",
+    "Provides year-on-year comparisons of digital payment shares by volume and value, with breakdowns per use-case (G2X, B2X, P2X).",
+    "Highlights specific drivers, such as QR Ph, InstaPay, and PESONet, and identifies priority use-cases for further digitalization.",
+    "Discusses regulatory initiatives (Circulars 1195 and 1198) and upcoming projects (Project Nexus, Project Agila, Direct Debit, R2P).",
+    "Assesses digitalization gaps, notably in B2B and P2G transactions.",
+    "Lays out a payment grid to identify high-impact use-cases for policy intervention.",
+    "Uses data from sources like DBM, BIR, PSA, BSP reports, and industry surveys.",
+    "Presents findings as aggregated monthly volumes and values in millions and percentages."
+  ],
+  "findings": [
+    "num: Digital payments account for 57.4% of total monthly retail payment volume and 59.0% of value in 2024.",
+    "num: The share of digital payments increased by 4.6 percentage points in volume year-on-year.",
+    "num: Merchant payments grew by 29.1% and represent 66.4% of total digital transaction volume.",
+    "num: P2P transfers grew by 34.7% year-on-year, accounting for 20.6% of digital volume.",
+    "num: B2B supplier payments grew by 28.1%, making up 6.2% of digital volume.",
+    "num: Government disbursements (G2X) are 97.2% digital by volume and value.",
+    "num: P2X payments are 72.2% digital by volume and 80.4% by value.",
+    "num: B2X payments are only 19.8% digital by volume and 38.6% by value.",
+    "num: P2G digital collections are just 24.6%, indicating a major opportunity for digitalization.",
+    "num: InstaPay transaction volume rose 67.8% and value rose 46.3% from 2023 to 2024."
+  ],
+  "key_figures_tables": [
+    "Figure 4: Digital payment share by volume (57.4%) and value (59.0%) → Digital payments now majority of retail transactions.",
+    "Figure 5: Volume distribution by payer type → P2X dominates at 70.5%, followed by B2X at 28.5%.",
+    "Table 1: Monthly volume per use-case → Merchant payments (3,226.3M) and P2P (753.5M) are top digital contributors.",
+    "Table 2: Monthly value per use-case → P2P ($58.9B) and merchant payments ($36.2B) lead in digital value.",
+    "Figure 7: Payment grid with percentages → P2B (57.3%) and B2B (26.1%) are the largest use-cases by volume."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "BSP", "definition": "Bangko Sentral ng Pilipinas, the central bank of the Philippines."},
+    {"term": "P2X", "definition": "Payments made by persons to government, businesses, or other persons."},
+    {"term": "B2X", "definition": "Payments made by businesses to government, other businesses, or persons."},
+    {"term": "G2X", "definition": "Payments made by government to businesses or persons."},
+    {"term": "InstaPay", "definition": "A real-time, low-value electronic fund transfer system in the Philippines."},
+    {"term": "PESONet", "definition": "A batch-based electronic fund transfer system for high-value payments in the Philippines."},
+    {"term": "QR Ph", "definition": "The national QR code standard for interoperable payments in the Philippines."},
+    {"term": "PPMI", "definition": "Philippine Payments Management, Inc., the industry body for payment system development."}
+  ],
+  "citations": [
+    {
+      "author": "Better Than Cash Alliance",
+      "year": 2019,
+      "page": 11,
+      "paragraph": 1,
+      "claim": "The BSP measurement model was previously known as the BTCA model and was developed with assistance from BTCA.",
+      "role": "methodology"
+    },
+    {
+      "author": "BSP Circular 1195",
+      "year": 2024,
+      "page": 6,
+      "paragraph": 2,
+      "claim": "Requires PSPs to provide timely notifications on EFT status and specifies turnaround times for fund returns.",
+      "role": "context"
+    },
+    {
+      "author": "BSP Circular 1198",
+      "year": 2024,
+      "page": 6,
+      "paragraph": 3,
+      "claim": "Introduces a regulatory framework for merchant payment acceptance activities, requiring OPS to implement risk management practices.",
+      "role": "context"
+    },
+    {
+      "author": "Philippine Development Plan",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "The 2024 target for digital payments was set at 52–54%, which was exceeded at 57.4%.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides comprehensive macro-level data on digital payment adoption in the Philippines."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps in B2X and P2G digitalization and barriers like high fees."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions consumer protection and regulatory safeguards but does not address privacy mechanisms."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses consumer redress (Circular 1195) and trust-building as factors in digital adoption."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Provides adoption metrics but does not analyze user engagement dynamics or retention."
+      }
+    ],
+    "contribution_to_field": "This report provides an authoritative, data-driven baseline for digital payment adoption in the Philippines, tracking progress against national targets. It offers a detailed, granular breakdown of digitalization across 24 payment use-cases, highlighting the dominance of P2B and B2B transactions. The report also identifies policy gaps and opportunities, such as low P2G digitalization, and introduces new regulatory frameworks for consumer protection and merchant payment acceptance. It serves as a critical reference for policymakers, researchers, and industry stakeholders monitoring the country's digital financial inclusion trajectory.",
+    "directly_justifies": [
+      "Digital payments now account for 57.4% of total retail payment volume.",
+      "Merchant payments are the largest digital use-case at 66.4% of digital volume.",
+      "Only 24.6% of person-to-government payments are digital.",
+      "InstaPay transaction volume grew 67.8% from 2023 to 2024.",
+      "High fees remain a significant barrier to digital payment adoption."
+    ],
+    "limits": [
+      "The report is a national-level measurement and does not provide individual-level behavioral or preference data.",
+      "Estimates rely on assumptions and disaggregated data sources; not all use-cases are directly measured.",
+      "Focuses on macro trends and policy, with no evaluation of specific personal finance applications or user-facing systems."
+    ],
+    "topic_mapping_rationale": "The systematic scan across all topic domains flagged three domains as relevant: (4) Landscape of Existing Systems, (10) Data Privacy and Security, and (11) Engagement Dynamics. Within domain 4, codes 4.A and 4.B were selected as high relevance because the report directly maps the current digital payments landscape and highlights gaps (e.g., B2X, P2G). Code 10.B was assigned medium relevance due to explicit mentions of trust and consumer redress, though data privacy (10.A) is only contextual. Code 11.A was assigned low relevance as the report gives adoption metrics but no behavioral engagement analysis. Domains 1–3 (Filipino demographics, financial behavior, and categorization) and 5–9 (profiling, modeling, budgeting, anomaly detection, mobile design) were rejected as the report does not address individual financial behavior, algorithmic methods, or design considerations. This report is primarily a policy-oriented measurement and regulatory update, not a behavioral or technical finance study."
+  },
+  "limitations": [
+    "No individual-level data; aggregates only at national and sectoral levels.",
+    "Relies on assumptions and estimated data for some use-cases.",
+    "Does not evaluate user experience, app design, or behavioral drivers. [unacknowledged]",
+    "Does not address algorithmic or modeling approaches for personal finance. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Digital payments reached 57.4% volume share in 2024, up from 52.8% in 2023.",
+    "Merchant payments, P2P transfers, and B2B payments comprise 93.2% of digital volume.",
+    "Only 24.6% of person-to-government payments are digital, a key gap.",
+    "Government disbursements are 97.2% digital, while B2X remains low at 19.8%.",
+    "InstaPay volume grew 67.8% year-on-year, reflecting rapid adoption of fast payments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mesino-Romero et al_marked.md",
+      "converted_at": "2026-07-21T14:14:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

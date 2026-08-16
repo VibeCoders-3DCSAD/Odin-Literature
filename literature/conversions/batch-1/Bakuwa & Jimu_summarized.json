@@ -1,0 +1,245 @@
+{
+  "paper_id": "10.5281/zenodo.17795962",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic Credit Scoring with Machine Learning: Enhancing Financial Inclusion and Risk Management",
+  "authors": "Bakuwa, D.; Jimu, P.",
+  "year": 2026,
+  "venue": "Afriresearch.com",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "10.A",
+    "10.B"
+  ],
+  "tldr": "Dynamic credit scoring using machine learning and alternative data expands financial inclusion while reducing default rates compared to traditional static methods.",
+  "problem_and_motivation": "Traditional credit scoring relies on static datasets such as credit history and income records, excluding large segments of the population in developing economies who lack formal financial footprints. Millions of potentially creditworthy individuals remain underserved or entirely excluded from formal financial systems. There is a need for adaptive, real-time credit assessment methods that leverage alternative data sources to bridge this gap.",
+  "approach": [
+    "Stakeholder requirements were gathered from financial institutions, microfinance organizations, and potential borrowers for a three-tier system architecture.",
+    "A relational PostgreSQL database was designed to store borrower profiles, transaction histories, alternative financial indicators, and risk assessment results.",
+    "Data sources included traditional financial records, alternative data such as mobile money transactions and utility payments, and real-time transaction streams.",
+    "Data preprocessing used pandas and numpy with mean/median imputation for missing values and IQR-based outlier capping.",
+    "Features were engineered from raw data including transaction consistency, debt-to-income ratio, temporal trends, and network-based social indicators.",
+    "The dataset was split 80/20 into training and testing subsets using stratified sampling to balance creditworthy and high-risk borrowers.",
+    "Four model types were evaluated: logistic regression as baseline, random forests, XGBoost, and LSTM networks for temporal pattern capture.",
+    "Hyperparameters were optimized using grid search with 5-fold cross-validation across all model types.",
+    "Models were evaluated using ROC-AUC, precision, recall, F1-score, KS statistic, and Gini coefficient with fairness monitoring across demographic groups.",
+    "Borrowers were classified into risk tiers based on predicted probability of default for lending decisions."
+  ],
+  "findings": [
+    "num: 62% of borrowers were classified as low-risk, 25% moderate-risk, and 13% high-risk.",
+    "num: 58% of borrowers without formal credit histories were correctly identified as low or moderate risk using alternative data.",
+    "num: Risk-adjusted lending informed by dynamic scoring could reduce expected default rates by 15–20% compared to traditional methods.",
+    "Models incorporating mobile transactions, utility payments, and social behavior data outperformed those relying solely on traditional financial records.",
+    "LSTM models effectively tracked evolving borrower behavior on time-series data, providing adaptive credit scores and early default detection.",
+    "Ensemble and neural network models captured complex nonlinear relationships, significantly improving predictive performance over logistic regression.",
+    "Transaction consistency and timely bill payments emerged as strong predictors of low default probability.",
+    "Borrowers with improving financial behaviors over time had lower default probabilities.",
+    "Network influence such as cooperative savings group participation positively correlated with repayment reliability.",
+    "Explainable AI tools such as SHAP provide transparency into model predictions for regulatory compliance."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "PD",
+      "definition": "Probability of default, used to classify borrowers into risk tiers."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory neural network for capturing temporal patterns."
+    },
+    {
+      "term": "XGBoost",
+      "definition": "Extreme Gradient Boosting, an ensemble method for classification."
+    },
+    {
+      "term": "ROC-AUC",
+      "definition": "Area under the Receiver Operating Characteristic curve, a model evaluation metric."
+    },
+    {
+      "term": "KS",
+      "definition": "Kolmogorov-Smirnov statistic, measures separation between classes."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, an explainable AI technique."
+    },
+    {
+      "term": "IQR",
+      "definition": "Interquartile range method for outlier detection."
+    },
+    {
+      "term": "Fintech",
+      "definition": "Financial technology companies applying technology to financial services."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Abdou",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit scoring statistical techniques and evaluation criteria reviewed across the literature.",
+      "role": "context"
+    },
+    {
+      "author": "Bellotti",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Support vector machines discover significant features for credit scoring.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost is a scalable tree boosting system for classification tasks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Crook",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recent developments in consumer credit risk assessment documented.",
+      "role": "context"
+    },
+    {
+      "author": "Galindo",
+      "year": 2000,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Basic methodology for credit risk assessment using statistical and machine learning approaches.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hand",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Statistical classification methods in consumer credit scoring reviewed.",
+      "role": "baseline"
+    },
+    {
+      "author": "Khandani",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumer credit-risk models via machine learning algorithms demonstrated improved performance.",
+      "role": "finding"
+    },
+    {
+      "author": "Lessmann",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Benchmarking state-of-the-art classification algorithms for credit scoring showed ensemble methods outperform single models.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews the full history of credit scoring systems from 1950s to present."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies static data reliance and exclusion of unbanked populations as core limitations."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Uses behavioral features such as transaction consistency and temporal trends to profile borrowers."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Compares logistic regression, random forests, XGBoost, and LSTM for creditworthiness classification."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution is ML-based predictive credit scoring models evaluated with standard metrics."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "LSTM captures temporal patterns in borrower behavior over time-series data."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses privacy and consent concerns raised by alternative data usage."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Examines trust-building through transparent, data-driven credit decisions."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive review of credit scoring evolution from statistical methods to machine learning approaches, establishing a historical baseline for the field. It demonstrates that incorporating alternative data sources such as mobile money transactions and utility payments significantly improves credit assessment accuracy compared to traditional financial records alone.",
+    "directly_justifies": [
+      "num: Models incorporating alternative data outperform those relying solely on traditional financial records.",
+      "num: Dynamic scoring could reduce expected default rates by 15–20% compared to traditional methods.",
+      "num: 58% of borrowers without formal credit histories were correctly identified as low or moderate risk.",
+      "num: 62% of borrowers classified as low-risk using the dynamic scoring system.",
+      "LSTM models effectively tracked evolving borrower behavior providing real-time adaptive credit scores.",
+      "Ensemble and neural network models captured complex nonlinear relationships improving performance over logistic regression."
+    ],
+    "limits": [
+      "No specific dataset size or source institution is reported, limiting reproducibility.",
+      "The study does not provide concrete ROC-AUC or F1-score values for individual models.",
+      "Model bias persists despite fairness monitoring due to uneven data representation.",
+      "Real-time scoring infrastructure requirements may not be feasible in low-resource rural regions.",
+      "The study does not compare against other recent alternative-data credit scoring benchmarks."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 4 was flagged as high relevance for credit scoring history review. Domain 5 was flagged as high relevance for behavioral profiling. Domain 6 was flagged as high relevance as core contribution. Domain 10 was flagged as medium relevance for privacy discussions."
+  },
+  "limitations": [
+    "No specific dataset size, source institution, or geographic sample is reported.",
+    "Quantitative model performance metrics such as exact ROC-AUC values are not provided for individual models.",
+    "Model bias from uneven data representation acknowledged by authors.",
+    "Infrastructure requirements for real-time scoring in rural regions acknowledged by authors.",
+    "No comparison against recent alternative-data credit scoring benchmarks."
+  ],
+  "remember_this": [
+    "Dynamic credit scoring using ML and alternative data outperforms traditional static methods for credit assessment.",
+    "Ensemble and LSTM models capture nonlinear and temporal borrower behavior patterns effectively.",
+    "Alternative data such as mobile money and utility payments enables scoring of previously unscored populations.",
+    "num: Expected default rates can be reduced by 15–20% through risk-adjusted dynamic scoring strategies.",
+    "Explainable AI tools such as SHAP are essential for regulatory compliance and borrower trust."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T15:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bakuwa & Jimu_marked.md",
+      "converted_at": "2026-07-22T12:07:32Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

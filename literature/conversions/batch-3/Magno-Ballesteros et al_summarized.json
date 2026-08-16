@@ -1,0 +1,309 @@
+{
+  "paper_id": "10.62986/dp2024.26",
+  "designation": "local",
+  "title": "Demographic Trends and Housing Patterns in the Philippines",
+  "authors": "Magno-Ballesteros, M.; Ancheta, J. A.; Ramos, T. P.",
+  "year": 2024,
+  "venue": "PIDS Discussion Paper Series, Philippine Institute for Development Studies",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.C",
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "7.A",
+    "9.A",
+    "10.A",
+    "11.A"
+  ],
+  "tldr": "Examines how demographic changes lead to different household structures and housing choices among different age groups, arguing that demography, housing market, and wealth have cointegrated to shape Philippine housing demand.",
+  "problem_and_motivation": "The Philippine housing backlog is rising, and demand projections often treat household formation as exogenous, ignoring how demographic shifts affect household structure and housing needs. A contextual analysis connecting demographic trends to housing demand is needed to inform policy that balances the needs of the productive sector and a growing elderly population.",
+  "approach": [
+    "Analyzes Census of Population and Housing data from 1980 to 2020 for private households.",
+    "Uses descriptive statistics to examine changes in population age, household formation, size, and structure.",
+    "Assesses housing tenure, habitability, and space sufficiency across household types and headship age.",
+    "Employs a Mankiw-Weil style model to estimate aggregate housing demand based on age composition.",
+    "Uses logistic regression to estimate effects of demographic attributes on habitability.",
+    "Draws on international literature to contextualize Philippine demographic and housing trends."
+  ],
+  "findings": [
+    "Household formation has decelerated, with only 59% of population aged 24-34 being heads or spouses in 2020, down from 73% in 1980.",
+    "Average household size declined from 5.9 to 4.1 persons per household between 1970 and 2020, but remains relatively high.",
+    "Extended and multiple-family households increased from 25% to 29% of households between 1990 and 2020.",
+    "Proportion of people living alone more than doubled from 2.9% in 1990 to 9.1% in 2020.",
+    "Homeownership increases with headship age, with 50-70% of households headed by ages 45-65 owning or amortizing.",
+    "num: Space sufficiency improved from 53.63% in 2010 to 66.28% in 2020.",
+    "Elderly-headed households have the highest proportion with sufficient space (81.35% in urban areas).",
+    "College education, lower dependency ratio, and presence of seniors positively impact habitability.",
+    "Demand for homeownership rises sharply between ages 30 and 53, then slows after 55.",
+    "Demand for rental housing shows a relatively flat slope across all age groups."
+  ],
+  "key_figures_tables": [
+    "Figure 35: Estimated demand by age for homeownership → Sharp rise between ages 30-53.",
+    "Table 8: Logistic regression of demographic attributes on habitability → Education and lower dependency improve habitability.",
+    "Figure 24: Distribution of housing tenure by population → Ownership increased until 2010 then slowed in 2020.",
+    "Table 5: Households in sufficient space by headship age → Elderly headship has highest sufficiency.",
+    "Figure 13: Distribution by household types → Nuclear households declined from 71% in 1990 to 61% in 2020."
+  ],
+  "key_equations": [
+    {
+      "equation": "D = \\sum_{j=1}^{N} D_j",
+      "explanation": "Total housing demand is sum of individual demands."
+    },
+    {
+      "equation": "D_j = \\alpha_0 Dummy_{0j} + \\alpha_1 Dummy_{1j} + \\cdots + \\alpha_{99} Dummy_{99j}",
+      "explanation": "Individual demand is function of age dummies."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Headship rate",
+      "definition": "Proportion of a given age group who are household heads or spouses."
+    },
+    {
+      "term": "Adult-kid ratio",
+      "definition": "Number of adults (15+) per 100 children (0-14)."
+    },
+    {
+      "term": "Dependency ratio",
+      "definition": "Number of dependents (0-14 and 65+) per 100 working-age members (15-64)."
+    },
+    {
+      "term": "Habitability",
+      "definition": "Housing unit fitness based on roof/wall materials and repair state."
+    },
+    {
+      "term": "Space sufficiency",
+      "definition": "Dwelling space of at least 6 sqm per person based on Philippine National Building Code."
+    },
+    {
+      "term": "NCR",
+      "definition": "National Capital Region of the Philippines."
+    },
+    {
+      "term": "OFW",
+      "definition": "Overseas Filipino Worker."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Mankiw",
+      "year": 1989,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Age is a 'best predictor' of housing quantity demanded.",
+      "role": "methodology"
+    },
+    {
+      "author": "Monkkonen",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Demographic trends affect household formation rate and structure, shaping housing markets.",
+      "role": "context"
+    },
+    {
+      "author": "Borsch-Supan",
+      "year": 1986,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "New household formation and dissolution determine aggregate housing demand.",
+      "role": "context"
+    },
+    {
+      "author": "Ballesteros",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Demand for own housing has income elasticity greater than 1 in the Philippines.",
+      "role": "finding"
+    },
+    {
+      "author": "Bondad",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Increase in household head's age is associated with higher likelihood of homeownership in the Philippines.",
+      "role": "finding"
+    },
+    {
+      "author": "Caldwell",
+      "year": 1976,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Change in wealth flows impacts household formation and dwelling choices.",
+      "role": "context"
+    },
+    {
+      "author": "Ismail",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Baby boomers and Gen-X in Malaysia value neighborhood; Gen-Y and Gen-Z value house.",
+      "role": "finding"
+    },
+    {
+      "author": "Graham",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Homeownership decline among younger cohorts due to economic uncertainty and high house prices.",
+      "role": "finding"
+    },
+    {
+      "author": "Wood",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Homeownership rates are declining in OECD countries, especially among older populations in Australia.",
+      "role": "finding"
+    },
+    {
+      "author": "Pew Research Center",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Shared households in US increased to 20% in 2019 due to societal changes and economic pressures.",
+      "role": "finding"
+    },
+    {
+      "author": "Guilmoto",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "One-person households in Vietnam doubled from 4% in 1999 to 8% in 2014.",
+      "role": "finding"
+    },
+    {
+      "author": "Stinner",
+      "year": 1977,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Average household size was significantly higher in urban areas than rural areas in the Philippines in the 1960-70s.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Analyzes delayed household formation and staying home among 24-34 age group."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Discusses income constraints and housing affordability affecting young adults."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Describes postponement of marriage and home purchasing decisions."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "low",
+        "justification": "Mentions housing choice preferences such as location and tenure but not central."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Housing expenditure context, but no categorization framework presented."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses housing finance and mortgages but not personal finance systems per se."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies mismatch between housing affordability and prices, and need for flexible housing tenure."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Profiles household types by tenure and space sufficiency."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Classifies households by type, headship age, tenure, and space adequacy."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Discusses economies of scale and housing expenditure share, but no budgeting strategies."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "low",
+        "justification": "Not a focus; paper is macroeconomic and policy-oriented."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Not addressed."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Not addressed."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive empirical analysis of how demographic trends in the Philippines, particularly the fertility decline and aging population, are reshaping household structures and housing patterns. It demonstrates that household formation is endogenous to housing market conditions and that simple population-based demand projections are misleading. The paper also highlights the cointegration of demography, wealth, and housing markets, and identifies critical policy implications for addressing housing needs that vary by age and household type.",
+    "directly_justifies": [
+      "Population growth does not equal demand for homeownership.",
+      "Age is an important predictor of quantity of housing demand.",
+      "Housing need projections must contextualize household formation.",
+      "Differences in age structure imply wide variation in housing needs across cities.",
+      "Low dependency ratio creates an opportunity to meet housing needs of working-age population."
+    ],
+    "limits": [
+      "Analysis is descriptive and relies on simple regression, not causal inference.",
+      "Focuses on national and regional trends, not localized housing market dynamics.",
+      "Housing demand estimation is based on age only, omitting other relevant household attributes (acknowledged by authors).",
+      "Data limitations for some tenure categories and urban/rural classifications are noted."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to Filipino young professionals (1.A, 1.B, 1.C) were flagged as highly relevant because the paper extensively analyzes delayed household formation and housing choices among 24-34 year olds. Culturally specific practices (2.A, 2.B, 2.D) were not directly addressed, but user-declared preferences (2.C) received low relevance due to mentions of housing choice factors. Expense categorization (3.A) was contextual, as housing is treated as an expenditure category but no framework is proposed. The landscape of existing systems (4.A) and their limitations (4.B) were assigned medium relevance, as the paper critiques housing finance and affordability gaps. Behavioral profiles (5.A) and classification approaches (5.C) were relevant because the paper classifies households by type, age, and tenure. Budgeting strategies (7.A) were only contextual. Domains concerning mobile-first design (9.A), data privacy (10.A), engagement dynamics (11.A), and most other algorithmic or ML-specific topics were considered and rejected due to the paper's macroeconomic and policy-oriented focus. The overall topical coverage centers on demographic shifts and their implications for housing demand and policy in the Philippines."
+  },
+  "limitations": [
+    "Analysis is descriptive and relies on simple regression, not causal inference.",
+    "Focuses on national and regional trends, not localized housing market dynamics.",
+    "Housing demand estimation is based on age only, omitting other relevant household attributes [unacknowledged].",
+    "Data limitations for some tenure categories and urban/rural classifications are noted."
+  ],
+  "remember_this": [
+    "Household formation among 24-34 year olds dropped from 73% to 59% between 1980 and 2020.",
+    "Extended and multiple-family households rose from 25% to 29% of households from 1990 to 2020.",
+    "Proportion of people living alone more than doubled to 9.1% in 2020.",
+    "Homeownership demand rises sharply between ages 30 and 53, then slows after 55.",
+    "College education and lower dependency ratio positively impact housing habitability."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Magno-Ballesteros et al_marked.md",
+      "converted_at": "2026-07-21T14:09:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

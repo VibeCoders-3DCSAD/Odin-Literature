@@ -1,0 +1,307 @@
+{
+  "paper_id": "10.1186/s40537-023-00784-7",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive neuro-fuzzy inference system for customizing investment type based on the potential investors' demographics and feedback",
+  "authors": "Asemi, A.; Asemi, A.; Ko, A.",
+  "year": 2023,
+  "venue": "Journal of Big Data",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "9.B",
+    "10.A",
+    "10.B",
+    "12.A"
+  ],
+  "tldr": "An ANFIS-based recommender system uses investor demographic data and feedback to suggest investment types via K-Means clustering and fuzzy inference with 1296 generated rules.",
+  "problem_and_motivation": "Existing investment recommender systems focus on stock portfolios, hedge funds, or resource allocation but lack models that recommend investment types based on potential investors' demographics using ANFIS. No prior study has developed a demographic-driven ANFIS investment recommender system that combines expert knowledge with investor feedback.",
+  "approach": [
+    "Collected 1542 responses from a Hungarian online investment questionnaire capturing six demographic variables and investment type preferences.",
+    "Applied K-Means clustering in JMP to group investment types into three clusters based on stock, pension, bond, and other product preferences.",
+    "Implemented a Sugeno-type ANFIS model in MATLAB R2022b using six demographic inputs and three investment type clusters as output.",
+    "Trained the ANFIS network with a hybrid optimization method over 3 epochs using 1542 training data pairs.",
+    "Supplemented system-generated fuzzy rules with expert knowledge rules and investor feedback for iterative improvement."
+  ],
+  "findings": [
+    "num: Three investment clusters identified: 592, 406, and 340 respondents respectively.",
+    "num: DemographicANFIS network comprises 2647 nodes and 1365 parameters (1296 linear, 69 nonlinear).",
+    "num: System generated 1296 fuzzy IF-THEN rules for investment recommendations.",
+    "num: Average testing error of 0.86683 after training convergence at epoch 3.",
+    "num: 1542 training data pairs used with Gaussian membership functions across 6 demographic inputs.",
+    "Cluster 1 (592 respondents) favors government securities and mutual funds with no recent stock market activity.",
+    "Cluster 2 (406 respondents) includes active stock investors who regularly monitor performance and hold government bonds.",
+    "Cluster 3 (340 respondents) comprises active stock investors without government bond holdings."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Recommender system architecture with six layers from data acquisition to application.",
+    "Figure 4: K-Means clustering into three investment type clusters in JMP.",
+    "Figure 10: Gaussian membership functions for DemographicANFIS inputs.",
+    "Figure 13: DemographicANFIS training process converging at epoch 3.",
+    "Figure 14: DemographicANFIS testing results with average error of 0.86683.",
+    "Figure 15: Rule viewer for the DemographicANFIS system.",
+    "Figure 17a-f: 3D surface plots of demographic pairs affecting investment type.",
+    "Figure 18: Complete DemographicANFIS structure with six-layer architecture.",
+    "Table 2: Investment type questionnaire items P24-P27.",
+    "Table 3: Membership functions for six ANFIS demographic inputs."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": "No explicit mathematical equations presented in standard notation."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ANFIS",
+      "definition": "Adaptive Neuro-Fuzzy Inference System, a hybrid model combining neural networks with fuzzy logic for inference."
+    },
+    {
+      "term": "FIS",
+      "definition": "Fuzzy Inference System, a framework using fuzzy rules, membership functions, and reasoning to produce outputs."
+    },
+    {
+      "term": "MF",
+      "definition": "Membership Function, defines the degree to which an input belongs to a fuzzy set."
+    },
+    {
+      "term": "Sugeno",
+      "definition": "A type of fuzzy inference system using polynomial consequents in IF-THEN rules."
+    },
+    {
+      "term": "K-Means",
+      "definition": "An unsupervised clustering algorithm that partitions data into k groups based on distance to centroids."
+    },
+    {
+      "term": "SSE",
+      "definition": "Sum of Squared Errors, a metric used to evaluate cluster quality in K-Means."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Jang",
+      "year": 1993,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ANFIS was first presented by Jang in 1993, operating on Sugeno fuzzy inference with IF-THEN logic.",
+      "role": "methodology"
+    },
+    {
+      "author": "Burke",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recommender systems are software tools that employ various methods to offer advice to users based on their interests.",
+      "role": "context"
+    },
+    {
+      "author": "Kanaujia",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recommender systems should be tailored to meet the specific needs of clients for financial data analysis.",
+      "role": "context"
+    },
+    {
+      "author": "Patro",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Knowledge-based preference learning model for recommender system using ANFIS with customer preferences and past purchases.",
+      "role": "methodology"
+    },
+    {
+      "author": "Paranjape-Voditel",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Stock market portfolio recommender system based on association rule mining for portfolio recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Tejeda-Lorente",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recommender system considering yields, historical performance, and industry diversity for hedge funds.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kovacs",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Two-stage cluster analysis using Kohonen SOMs and hierarchical clustering identified investment patterns of retail banking customers.",
+      "role": "methodology"
+    },
+    {
+      "author": "Asemi",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Novel combined business recommender system model using customer investment service feedback with fuzzy neural inference.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hernandez",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Investment recommender multi-agent system in financial technology using social computing platform.",
+      "role": "baseline"
+    },
+    {
+      "author": "Yassine",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Intelligent recommender system based on unsupervised machine learning and demographic attributes as input data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Sharma",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Demographic profile building tool for cold start in recommender systems using social media fusion approach.",
+      "role": "context"
+    },
+    {
+      "author": "Sulistiyo",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Demographic analysis for investment type selection demonstrating impact of demographics on investment choices.",
+      "role": "finding"
+    },
+    {
+      "author": "Casuat",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fuzzy logic expert-based recommender system using fuzzy membership degree for qualitative and quantitative recommendations.",
+      "role": "baseline"
+    },
+    {
+      "author": "Han",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Clustering divides data into groups maximizing within-group similarity and minimizing between-group similarity.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liang",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Recommender systems play the role of decision support, making recommendations based on examining user behavior.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "low",
+        "justification": "Paper uses demographic profiling of investors as system input, relevant conceptually."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "low",
+        "justification": "Paper examines investment behavior patterns linked to demographics."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews investment recommender systems and fuzzy logic systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gap: no prior system recommends investment types based on demographics using ANFIS."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Core contribution: ANFIS system profiles investors into clusters based on demographics."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Uses K-Means clustering and ANFIS fuzzy inference to classify investors."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "Mentions application layer for delivering recommendations but not a focus."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Collects personal demographic data; storage and protection mentioned but not analyzed."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Expert knowledge and feedback mechanisms aim to build trust but trust not directly measured."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates system via training/testing error, cluster quality, and rule interpretability."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a novel ANFIS-based investment recommender system that combines K-Means clustering with fuzzy inference to classify investors into behavioral profiles based on six demographic variables.",
+    "directly_justifies": [
+      "None of these studies have specifically focused on developing a recommender system for the type or product of investment based on demographics using ANFIS.",
+      "The proposed system categorizes customers based on six demographic traits using six input factors with three investment type clusters as output.",
+      "1542 training data pairs were used to train the ANFIS system with a hybrid optimization method over 3 epochs.",
+      "The system generated 1296 fuzzy IF-THEN rules supplemented by expert knowledge rules.",
+      "The ANFIS system categorizes investors into three clusters with 592, 406, and 340 respondents respectively."
+    ],
+    "limits": [
+      "Paper focuses on investment type recommendation, not personal budgeting, expense categorization, or savings management.",
+      "Demographic data limited to Hungarian respondents, restricting direct relevance to Filipino financial demographics.",
+      "No discussion of mobile-first design, offline-first architecture, or on-device inference.",
+      "No evaluation of user trust, consent management, or data portability beyond basic data collection."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 5 was flagged as high relevance since the paper profiles investors into clusters using ANFIS and K-Means. Domain 4 received medium relevance for literature review. Domain 12 received medium relevance for system evaluation."
+  },
+  "limitations": [
+    "Limited to six demographic variables as system inputs, excluding personality traits and financial attitudes.",
+    "Only three investment type clusters used as output, restricting recommendation granularity.",
+    "No comparative evaluation against alternative algorithms.",
+    "Dataset from a single Hungarian survey may limit generalizability.",
+    "Training error of 0.8668 is reported without baseline comparisons."
+  ],
+  "remember_this": [
+    "ANFIS system profiles investors into three clusters based on six demographic variables using fuzzy inference.",
+    "num: 1296 fuzzy IF-THEN rules generated from 1542 training pairs with average testing error of 0.8668.",
+    "K-Means clustering groups investment types into clusters of 592, 406, and 340 respondents.",
+    "Expert knowledge and investor feedback supplement system-generated rules for iterative improvement.",
+    "No prior study has used ANFIS for demographic-driven investment type recommendation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Asemi et al-2023_marked.md",
+      "converted_at": "2026-07-22T12:01:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

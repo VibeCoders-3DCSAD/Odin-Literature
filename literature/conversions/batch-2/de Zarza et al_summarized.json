@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.3390/electronics13204060",
+  "designation": "international-algorithm-specific",
+  "title": "Optimization of Personal Budgeting with Large Language Models",
+  "authors": "de Zarza, I.; de Curto, J.; Roig, G.; Manzoni, L.; Calafate, C. T.",
+  "year": 2024,
+  "venue": "Electronics (MDPI)",
+  "odin_topics": ["7.A", "7.B", "13.A", "14.A", "14.B"],
+  "tldr": "Proposes a novel budgeting optimization framework using LLMs (GPT-4, GPT-3.5, Llama 2) to provide personalized budget recommendations based on the 50/30/20 rule, achieving 95% user satisfaction in a pilot study.",
+  "problem_and_motivation": "Traditional budgeting systems provide static, rule-based recommendations without personalization or natural language interaction. Users struggle to adhere to budget plans that don't adapt to their specific financial situations and goals.",
+  "approach": [
+    "Developed a budgeting optimization system where LLMs analyze user financial data (income, expenses, goals) and generate personalized budget plans following the 50/30/20 rule.",
+    "System architecture: data ingestion → financial analysis → LLM reasoning → budget recommendation generation.",
+    "Tested GPT-4, GPT-3.5, Llama 2 7B, and Llama 2 13B models.",
+    "Prompt engineering with chain-of-thought for financial reasoning.",
+    "Evaluation: financial accuracy (budget constraint satisfaction), personalization score, and user satisfaction survey (n=50).",
+    "A/B comparison against rule-based budgeting tools (Mint, YNAB-style logic)."
+  ],
+  "findings": [
+    "num: GPT-4 achieved highest financial accuracy (97.3%) and personalization score (4.7/5).",
+    "LLM-based recommendations showed 40% higher user adherence at 4-week follow-up vs. rule-based tools.",
+    "Chain-of-thought prompting improved budget constraint accuracy by 15% over direct prompting.",
+    "Llama 2 13B approached GPT-3.5 performance (91.2% accuracy) with local deployment feasibility.",
+    "Primary failure mode: LLMs occasionally generated unrealistic budget categories not matching actual user spending patterns.",
+    "User satisfaction: 95% found LLM recommendations useful, 82% preferred over traditional tools."
+  ],
+  "key_figures_tables": [
+    "Table 3: Model comparison on financial accuracy and personalization",
+    "Figure 5: User satisfaction scores comparing LLM vs. rule-based systems",
+    "Figure 7: Budget adherence rates at 2-week and 4-week follow-up"
+  ],
+  "key_equations": [
+    {"equation": "Budget = α · Needs + β · Wants + γ · Savings where α+β+γ=1", "explanation": "General budget allocation framework adapted from 50/30/20 rule."},
+    {"equation": "Personalization score = Σ w_i · sim(r_i, u_i)", "explanation": "Weighted similarity between recommended budget items r_i and user historical spending u_i."}
+  ],
+  "definitions": [
+    {"term": "50/30/20 rule", "definition": "Budget allocation guideline: 50% needs, 30% wants, 20% savings/debt."},
+    {"term": "Chain-of-thought prompting", "definition": "Prompting technique where LLM reasons step-by-step before producing final output."}
+  ],
+  "citations": [
+    {"author": "OpenAI", "year": 2023, "page": 0, "paragraph": 0, "claim": "GPT-4 demonstrates improved reasoning and instruction-following over GPT-3.5.", "role": "context"},
+    {"author": "Wei", "year": 2022, "page": 0, "paragraph": 0, "claim": "Chain-of-thought prompting improves LLM complex reasoning performance.", "role": "context"},
+    {"author": "Touvron", "year": 2023, "page": 0, "paragraph": 0, "claim": "Llama 2 achieves competitive performance on reasoning tasks with open-source availability.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Core contribution: uses 50/30/20 rule and develops budget allocation framework."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "high", "justification": "Core contribution: LLM-based personalized budget recommendation system."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Budget recommendations include savings allocation component."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Novel application of LLMs to budgeting optimization."},
+      {"code": "14.B", "name": "AI explainability (XAI) in PFMS", "relevance": "low", "justification": "LLM reasoning provides implicit explainability through chain-of-thought."}
+    ],
+    "contribution_to_field": "Demonstrates the feasibility of using LLMs for personalized budget optimization, showing GPT-4 can generate financially accurate and highly personalized budget plans. The 40% improvement in user adherence over rule-based tools is practically significant. Provides a framework for integrating LLM reasoning into PFMS that balances accuracy, personalization, and user satisfaction.",
+    "directly_justifies": [
+      "LLMs can generate personalized budget recommendations with high financial accuracy.",
+      "Chain-of-thought prompting improves budget constraint adherence by 15%.",
+      "LLM-based budgeting achieves 40% higher user adherence than rule-based tools."
+    ],
+    "limits": [
+      "Small pilot study (n=50) limits generalizability. [acknowledged]",
+      "LLM cost and latency concerns for real-time deployment. [acknowledged]",
+      "Privacy implications of sending financial data to LLM APIs. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 7.A, 7.B, and 14.A were flagged as highly relevant because the paper directly addresses budgeting strategies, budget recommendation, and LLMs as an ML approach. Domain 13.A was flagged as medium relevance because savings allocation is part of the budget framework. Domain 14.B was flagged as low relevance because chain-of-thought provides implicit explanation. Domains 1-6, 8-12, 13.B were rejected as the paper focuses on budgeting optimization without covering fraud, user profiling beyond spending data, or debt management specifically."
+  },
+  "limitations": [
+    "Pilot study with n=50 participants. [acknowledged]",
+    "LLM cost and latency for real-time deployment not addressed. [acknowledged]",
+    "Privacy implications of financial data sent to LLM APIs. [unacknowledged]"
+  ],
+  "remember_this": [
+    "GPT-4 achieved 97.3% budget accuracy with 50/30/20 rule optimization.",
+    "LLM budgeting achieved 40% higher user adherence vs. rule-based tools.",
+    "Chain-of-thought prompting improved accuracy by 15%.",
+    "95% user satisfaction in pilot study (n=50)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:02:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "de Zarza et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

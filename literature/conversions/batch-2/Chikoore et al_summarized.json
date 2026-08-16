@@ -1,0 +1,84 @@
+{
+  "paper_id": "10.1109/ACCESS.2026.3703181",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Credit Scoring Model With Concept Drift Detection and Adaptation Technique for a Dynamic Environment",
+  "authors": "Chikoore, R.; Ojo, S.; Kogeda, O.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "odin_topics": ["6.A", "6.B", "8.A", "8.B", "7.D"],
+  "tldr": "Proposes an Adaptive Fusion credit scoring framework integrating drift detection, retraining, windowing, ensemble learning, and adaptive weighting to maintain accuracy in dynamic financial environments.",
+  "problem_and_motivation": "Static credit scoring models degrade over time due to concept drift from evolving borrower behavior and economic conditions. Existing adaptive approaches are developed for advanced economies and not suited to developing contexts with resource constraints.",
+  "approach": [
+    "Integrates baseline ML models (Random Forest, XGBoost, Gradient Boosted Trees) with dynamic adaptation strategies: retraining, windowing, ensemble learning, and Adaptive Fusion.",
+    "Adaptive Fusion dynamically weights and integrates model outputs in real time based on recent performance.",
+    "Compares with state-of-the-art DGHNL (Deep Genetic Hierarchical Network of Learners).",
+    "Evaluates using accuracy, precision, recall, F1-score, and ROC-AUC on credit scoring data.",
+    "Designed for developing economy environments with dynamic socioeconomic conditions."
+  ],
+  "findings": [
+    "num: Retrained Random Forest, Ensemble, and Adaptive Fusion each achieved 95.0% accuracy, precision 0.9275, recall 0.9645, F1-score 0.9426, and ROC-AUC exceeding 0.96.",
+    "num: Adaptive Fusion outperformed DGHNL (94.60% accuracy, AUC 0.9360).",
+    "Adaptive Fusion emerged as the most robust solution for continuous adaptation to evolving data patterns.",
+    "Window-based approaches effectively handled concept drift in credit data streams.",
+    "Instance-based drift adaptation via importance weighting showed AUC improvements."
+  ],
+  "key_figures_tables": [
+    "Figure 5: Model evaluation on adaptive strategies → Adaptive Fusion matches retrained model performance.",
+    "Figure 6: ROC-AUC for adaptive windowing → Window-based methods effectively handle drift.",
+    "Figure 7: ROC-AUC for ensemble adaptation and adaptive fusion → Fusion enables robust predictions."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Adaptive Fusion", "definition": "Dynamic weighting and integration of model outputs in real time"},
+    {"term": "DGHNL", "definition": "Deep Genetic Hierarchical Network of Learners (state-of-the-art baseline)"},
+    {"term": "Concept drift", "definition": "Change in data distribution over time affecting model performance"},
+    {"term": "DiwE", "definition": "Diverse Instance-Weighting Ensemble for drift adaptation"}
+  ],
+  "citations": [
+    {"author": "Museba", "year": 2021, "page": 5, "paragraph": 2, "claim": "Adaptive credit scoring with dynamic model integration.", "role": "methodology"},
+    {"author": "Wang", "year": 2022, "page": 3, "paragraph": 3, "claim": "Instance-based transfer learning with 24% AUC improvement.", "role": "methodology"},
+    {"author": "Wei", "year": 2020, "page": 3, "paragraph": 4, "claim": "SPY-Transfer and SPY-TrAdaBoost for cold-start credit scoring.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Proposes adaptive credit scoring framework for dynamic financial environments"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justification": "Uses drift detection and adaptation for evolving data streams"},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "medium", "justification": "Addresses performance degradation from concept drift as an anomaly in model behavior"},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "medium", "justification": "Evaluates drift detection techniques for identifying distributional shifts"},
+      {"code": "7.D", "name": "Infeasibility Handling and Reduction Hierarchies", "relevance": "low", "justification": "Adaptive retraining handles model degradation, analogous to infeasibility handling"}
+    ],
+    "contribution_to_field": "This paper presents an adaptive credit scoring framework specifically designed for developing economy environments with dynamic socioeconomic conditions. The Adaptive Fusion algorithm dynamically weights model outputs in real time, outperforming state-of-the-art DGHNL. The framework addresses the gap between static credit scoring and the need for continuous adaptation in resource-constrained settings.",
+    "directly_justifies": [
+      "Adaptive Fusion achieved 95.0% accuracy and 0.9645 recall.",
+      "Framework outperformed DGHNL (94.60% accuracy, AUC 0.9360).",
+      "Instance-based drift adaptation via importance weighting improved AUC."
+    ],
+    "limits": [
+      "Evaluated on a single dataset without explicit dataset description.",
+      "Developing country focus may not generalize to other economic contexts.",
+      "Computational overhead of real-time model weighting not quantified."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 6.A (Predictive Modeling) was rated high for the core credit scoring contribution. Topics 6.B (Forecasting Algorithms), 8.A (Anomaly Detection), and 8.B (Anomaly Detection Algorithms) were rated medium for drift detection and adaptation techniques. Topic 7.D (Infeasibility Handling) was rated low as retraining relates only tangentially to budgeting constraints. Topics 1.x-5.x, 7.A-7.C, 7.E, 9.x-14.x were rejected as not relevant to algorithmic credit scoring."
+  },
+  "limitations": [
+    "Single-dataset evaluation without clear dataset description.",
+    "Computational overhead of real-time adaptive weighting not reported. [unacknowledged]",
+    "Comparison limited to a single SOTA baseline (DGHNL). [unacknowledged]"
+  ],
+  "remember_this": [
+    "Adaptive Fusion achieved 95.0% accuracy with ROC-AUC exceeding 0.96.",
+    "Outperformed state-of-the-art DGHNL model (94.60% accuracy).",
+    "Designed specifically for developing economy credit scoring environments.",
+    "Adaptive Fusion dynamically weights model outputs in real time.",
+    "Instance-weighting ensemble (DiwE) effectively handles concept drift."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chikoore et al_marked.md",
+      "converted_at": "2026-07-22T12:56:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

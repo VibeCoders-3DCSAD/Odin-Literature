@@ -1,0 +1,77 @@
+{
+  "paper_id": "uuid:v5:Compagnino2024",
+  "designation": "international",
+  "title": "An Introduction to Machine Learning Methods for Fraud Detection",
+  "authors": "Compagnino, A.; Tutone, A.; Maruccia, Y.; Cavuoti, S.; Crupi, R.; Riccio, G.; Pagliaro, A.",
+  "year": 2024,
+  "venue": "Unknown (Review article)",
+  "odin_topics": ["8.A", "8.B", "4.A", "4.B", "10.A"],
+  "tldr": "Comprehensive review of ML methods for financial fraud detection covering credit card fraud, financial statement fraud, insurance fraud, and money laundering with supervised, unsupervised, and hybrid approaches.",
+  "problem_and_motivation": "Financial fraud poses substantial economic and social challenges globally. Detecting diverse fraud types requires sophisticated ML approaches, but deploying them faces challenges including data imbalance, concept drift, and privacy concerns.",
+  "approach": [
+    "Synthesizes current knowledge on ML approaches for financial fraud detection across diverse fraud scenarios.",
+    "Reviews supervised, unsupervised, and hybrid learning approaches for credit card fraud, financial statement fraud, insurance fraud, and money laundering.",
+    "Examines commonly used datasets and performance metrics for fraud detection systems.",
+    "Presents two case studies applying supervised models to real-world banking data.",
+    "Identifies persistent challenges and emerging trends in deep learning and ensemble methods."
+  ],
+  "findings": [
+    "num: 56% of companies worldwide reported experiencing fraud (from reviewed surveys).",
+    "Data imbalance and concept drift are persistent challenges in fraud detection.",
+    "Deep learning and ensemble methods are emerging as effective approaches.",
+    "Privacy concerns and interpretability requirements constrain deployment of complex models.",
+    "Supervised learning approaches validated on real-world banking data demonstrate practical challenges."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Concept drift", "definition": "Change in data distribution over time affecting model performance"},
+    {"term": "Supervised learning", "definition": "ML using labeled training data for prediction"},
+    {"term": "Unsupervised learning", "definition": "ML finding patterns in unlabeled data"}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Comprehensive review of fraud detection, the primary anomaly detection application in finance"},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Reviews supervised, unsupervised, and hybrid ML approaches for transaction anomaly detection"},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Surveys existing fraud detection systems across financial domains"},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies data imbalance, concept drift, and privacy as critical gaps"},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "medium", "justification": "Discusses privacy concerns in fraud detection system deployment"}
+    ],
+    "contribution_to_field": "This review provides a structured overview of machine learning approaches across multiple fraud types including credit card, financial statement, insurance, and money laundering. It catalogs the major algorithmic families (supervised, unsupervised, hybrid) and identifies persistent challenges of data imbalance, concept drift, and privacy. Two real-world banking case studies ground the review in practical implementation challenges.",
+    "directly_justifies": [
+      "Data imbalance and concept drift are persistent challenges in fraud detection.",
+      "Deep learning and ensemble methods are emerging as effective fraud detection approaches.",
+      "Privacy concerns constrain deployment of complex fraud detection models."
+    ],
+    "limits": [
+      "Review nature provides no novel experimental contributions.",
+      "Case studies are presented without detailed quantitative results.",
+      "Emerging techniques like graph neural networks not covered in depth."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 8.A (Anomaly Detection) and 8.B (Anomaly Detection Algorithms) and 4.B (Limitations/Gaps) were rated high. Topic 4.A (Landscape of Existing Systems) and 10.A (Data Privacy/Security) were rated medium. Topics 1.x-3.x, 5.x-7.x, 9.x, 10.B-14.x were rejected as the review focuses on fraud detection algorithms, not personal finance behavior, budgeting, or mobile design."
+  },
+  "limitations": [
+    "Review provides no novel empirical results.",
+    "Lacks quantitative comparison of fraud detection methods. [unacknowledged]",
+    "Recent deep learning advances (e.g., GNNs, transformers) not covered in depth."
+  ],
+  "remember_this": [
+    "56% of companies worldwide reported experiencing fraud.",
+    "Data imbalance and concept drift are key fraud detection challenges.",
+    "Deep learning and ensemble methods emerging as effective approaches.",
+    "Covers credit card, financial statement, insurance, and money laundering fraud.",
+    "Privacy concerns limit deployment of complex fraud detection models."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Compagnino et al_marked.md",
+      "converted_at": "2026-07-22T13:00:20Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

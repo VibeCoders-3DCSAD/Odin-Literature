@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.1111/eufm.12408",
+  "designation": "international-algorithm-specific",
+  "title": "Machine learning methods in finance: Recent applications and prospects",
+  "authors": "Hoang, D.; Wiegratz, K.",
+  "year": 2023,
+  "venue": "European Financial Management",
+  "odin_topics": ["4.A", "5.C", "6.A", "6.B"],
+  "tldr": "Reviews and taxonomizes machine learning applications in finance into three archetypes: constructing superior measures, reducing prediction error, and extending the econometric toolset.",
+  "problem_and_motivation": "Despite the rapid growth of ML publications in finance, it remains unclear where and how to apply ML methods to solve research problems in finance, requiring a taxonomy that captures recent applications beyond earlier classifications.",
+  "approach": [
+    "Conducted a comprehensive literature review of ML applications in finance from 2010-2021 across top journals.",
+    "Developed a three-archetype taxonomy: (1) superior/novel measure construction, (2) prediction error reduction, (3) econometric toolset extension.",
+    "Applied ML methods (including boosted regression trees) to a real estate asset pricing problem as a demonstration.",
+    "Performed bibliometric analysis of publication success across finance subfields (asset pricing, corporate finance, financial intermediation, household finance).",
+    "Compared ML prediction accuracy against traditional OLS hedonic pricing on German residential housing data."
+  ],
+  "findings": [
+    "num: ML publications in top finance journals grew from near-zero to 3-4% of all publications by 2021.",
+    "num: ML-based real estate price predictions were significantly closer to actual prices than OLS estimates.",
+    "Asset pricing literature predominantly applies ML to prediction problems.",
+    "Banking and corporate finance literature uses ML primarily to construct novel measures.",
+    "Highest-ranked journals use ML disproportionately for constructing superior and novel measures."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Comparison of OLS vs ML in predicting real estate asset prices → ML predictions much closer to actual prices, especially at upper end."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "ML", "definition": "Machine Learning"},
+    {"term": "OLS", "definition": "Ordinary Least Squares regression"},
+    {"term": "GBDT", "definition": "Gradient-Boosted Decision Trees"}
+  ],
+  "citations": [
+    {"author": "Varian", "year": 2014, "page": 0, "paragraph": 0, "claim": "Described ML as appropriate tool for economic analysis of big data.", "role": "context"},
+    {"author": "Mullainathan & Spiess", "year": 2017, "page": 0, "paragraph": 0, "claim": "Identified prediction as main use case for ML in economics.", "role": "context"},
+    {"author": "Athey & Imbens", "year": 2019, "page": 0, "paragraph": 0, "claim": "Illustrated ML methods from an econometric perspective with potential beyond prediction.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Comprehensive survey of ML in finance provides landscape of analytical approaches."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "Reviews ML classification methods applicable to behavioral profiling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core archetype of prediction error reduction is directly about predictive modeling."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Covers forecasting algorithms including tree-based and deep learning for financial time series."}
+    ],
+    "contribution_to_field": "This paper provides a structured taxonomy of ML applications in finance that captures the rapid recent growth in the field. It distinguishes three fundamentally different ways ML contributes to finance research: measuring unobservable constructs, improving prediction accuracy, and enhancing econometric methodology. The bibliometric analysis reveals differential adoption patterns across finance subfields, guiding future research directions.",
+    "directly_justifies": [
+      "ML provides significant prediction accuracy improvements over OLS for asset pricing.",
+      "ML publications in top finance journals reached 3-4% of all publications by 2021.",
+      "Asset pricing research applies ML primarily for prediction; corporate finance uses it for measurement."
+    ],
+    "limits": [
+      "Review covers finance research, not personal finance systems or budgeting applications.",
+      "Literature search ends in 2021; more recent advances (transformers, foundation models) not covered.",
+      "Archetype taxonomy is high-level and may not capture hybrid approaches."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 6 (Predictive Modeling and Forecasting) was flagged as high relevance because the paper's core taxonomy addresses ML for prediction in finance. Domain 4.A (Landscape of Existing Systems) and 5.C (Classification Approaches) received medium relevance as the survey covers ML methods applicable to these domains. All other domains were rejected as the paper surveys finance research broadly, not personal finance systems specifically."
+  },
+  "limitations": [
+    "Literature search ends in 2021, missing recent transformer and foundation model advances.",
+    "Focus on academic finance research rather than applied personal finance systems. [unacknowledged]",
+    "Bibliometric analysis limited to top-3 finance journals may miss relevant applied ML work."
+  ],
+  "remember_this": [
+    "ML in finance grows from near-zero to 3-4% of top journal publications by 2021.",
+    "Three archetypes: measure construction, prediction reduction, econometric extension.",
+    "ML significantly outperforms OLS in real estate asset pricing prediction.",
+    "Asset pricing uses ML for prediction; corporate finance uses it for novel measures."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hoang & Wiegratz_marked.md",
+      "converted_at": "2026-07-22T13:34:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

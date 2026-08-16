@@ -1,0 +1,123 @@
+{
+  "paper_id": "10.3390/fi15080255",
+  "designation": "international",
+  "title": "A Review of ARIMA vs. Machine Learning Approaches for Time Series Forecasting in Data Driven Networks",
+  "authors": "Kontopoulou, V.I.; Panagopoulos, A.D.; Kakkos, I.; Matsopoulos, G.K.",
+  "year": 2023,
+  "venue": "Future Internet",
+  "odin_topics": ["2.D", "3.A", "4.A", "4.B", "6.A", "6.B", "7.A", "7.B", "8.A", "12.A", "12.B", "12.C"],
+  "tldr": "Reviews comparative studies of ARIMA and machine learning models for time series forecasting across finance, health, weather, utilities, and network traffic, finding AI approaches generally superior but with notable exceptions where ARIMA excels.",
+  "problem_and_motivation": "The scientific literature lacks a comprehensive summary comparing ARIMA and machine learning time series forecasting methods. A systematic review is needed to establish relative performance and identify conditions favoring each approach. This gap impedes informed model selection for practitioners.",
+  "approach": [
+    "Conducted a selective literature review of studies explicitly comparing ARIMA with machine learning, deep learning, and hybrid models.",
+    "Organized reviewed studies by model category (SVM, tree-based, deep learning) and application domain.",
+    "Focused on comparative studies published primarily after 2018 to ensure contemporary relevance.",
+    "Extracted performance metrics (RMSE, MAPE, MAE, MSE, R²) from each study for cross-comparison.",
+    "Identified and analyzed exceptions where ARIMA outperformed machine learning models.",
+    "Synthesized findings to characterize dataset and problem conditions favoring each approach."
+  ],
+  "findings": [
+    "AI algorithms display better prediction performance than ARIMA in most reviewed applications.",
+    "Hybrid statistical-AI models consistently outperform their individual components.",
+    "ARIMA outperforms SVM and deep learning models in cases of linear data relationships or limited data ranges.",
+    "num: ARIMA had RMSE = 36.18 vs. SVM RMSE = 0.028 for gold price prediction, favoring SVM.",
+    "num: Hybrid ARIMA-NARNN achieved RMSE values 35.3% better than ARIMA alone for COVID-19 forecasting.",
+    "SARIMA outperformed LSTM and GRU for offshore wind speed forecasting due to seasonal handling.",
+    "ARIMA outperforms machine learning for small datasets, short-term forecasts, and linear time dependencies.",
+    "Machine learning methods improve relative performance as sample size grows.",
+    "Deep learning models (LSTM) require large datasets to train effectively.",
+    "LSTM and GRU outperformed ARIMA in non-linear COVID-19 data for most countries, with RMSE values 40 times smaller."
+  ],
+  "key_figures_tables": [
+    "Table 2: Summary of ARIMA vs. SVM comparison studies → SVM generally outperforms ARIMA across domains.",
+    "Table 3: ARIMA vs. tree-based model comparisons → XGBoost frequently outperforms ARIMA.",
+    "Table 4: ARIMA vs. deep learning studies → LSTM typically outperforms ARIMA for large datasets.",
+    "Table 5: ARIMA vs. hybrid models → Hybrid approaches consistently beat ARIMA alone.",
+    "Table 6: ARIMA vs. AI advantages/disadvantages → ARIMA: explainable, low complexity; AI: better for non-linearity.",
+    "Figure 6: Flowchart of hybrid ARIMA-ML model → ARIMA linear component + ML residual modeling.",
+    "Figure 7: Hybrid ARIMA-ML based on fluctuation interval → Different models for different volatility regimes."
+  ],
+  "key_equations": [
+    {"equation": "MSE = \\frac{1}{N} \\sum_{t=1}^{N} (y_t - \\hat{y}_t)^2", "explanation": "Mean squared error for forecast accuracy."},
+    {"equation": "MAPE = \\frac{1}{N} \\sum_{t=1}^{N} |\\frac{y_t - \\hat{y}_t}{y_t}|", "explanation": "Mean absolute percentage error."},
+    {"equation": "ARIMA(p,d,q): \\nabla^d x_t = c + \\sum_{i=1}^{p} \\phi_i \\nabla^d x_{t-i} + \\sum_{i=0}^{q} \\theta_i \\epsilon_{t-i}", "explanation": "General ARIMA model with differencing."},
+    {"equation": "w_t = \\begin{cases} \\log(y_t) & \\text{if } \\lambda = 0 \\\\ \\frac{y_t^\\lambda - 1}{\\lambda} & \\text{otherwise} \\end{cases}", "explanation": "Box-Cox transformation for non-linear ARIMA."},
+    {"equation": "NSE = 1 - \\frac{\\sum_{t=1}^{N} (Y_t^o - Y_t^m)^2}{\\sum_{t=1}^{N} (Y_t^o - \\bar{Y}^o)^2}", "explanation": "Nash-Sutcliffe efficiency for hydrological models."}
+  ],
+  "definitions": [
+    {"term": "ARIMA", "definition": "Autoregressive Integrated Moving Average, a classical time series model."},
+    {"term": "SARIMA", "definition": "Seasonal ARIMA with additional seasonal parameters."},
+    {"term": "SVM", "definition": "Support Vector Machine, a supervised learning method for classification and regression."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network with memory gates."},
+    {"term": "GBDT", "definition": "Gradient Boosting Decision Tree, an ensemble learning method."},
+    {"term": "XGBoost", "definition": "eXtreme Gradient Boosting, an optimized GBDT implementation."},
+    {"term": "AIC", "definition": "Akaike Information Criterion for model selection, balances fit and complexity."},
+    {"term": "BIC", "definition": "Bayesian Information Criterion, similar to AIC with higher complexity penalty."}
+  ],
+  "citations": [
+    {"author": "Makridakis", "year": 2018, "page": 0, "paragraph": 0, "claim": "Majority of ML forecasting publications lack proper comparison with simple statistical methods.", "role": "context"},
+    {"author": "Box", "year": 2015, "page": 0, "paragraph": 0, "claim": "ARIMA models are fundamental classical tools for time series analysis.", "role": "methodology"},
+    {"author": "Zhang", "year": 2003, "page": 0, "paragraph": 0, "claim": "Hybrid ARIMA-neural network models improve accuracy by modeling linear and non-linear patterns separately.", "role": "methodology"},
+    {"author": "Nie", "year": 2012, "page": 0, "paragraph": 0, "claim": "ARIMA-SVM hybrid outperforms individual models for short-term load forecasting.", "role": "finding"},
+    {"author": "Cheng", "year": 2015, "page": 0, "paragraph": 0, "claim": "ARIMA cannot adequately capture complex system evolution due to non-linearity and non-stationarity.", "role": "critique"},
+    {"author": "Wolpert", "year": 1997, "page": 0, "paragraph": 0, "claim": "No single forecasting method is optimal for all possible time series (No-Free-Lunch theorem).", "role": "context"},
+    {"author": "Cerqueira", "year": 2019, "page": 0, "paragraph": 0, "claim": "Machine learning methods improve relative performance over classical models as sample size grows.", "role": "finding"},
+    {"author": "Januschowski", "year": 2022, "page": 0, "paragraph": 0, "claim": "Tree-based models dominated the M5 forecasting competition over deep learning and statistical approaches.", "role": "baseline"},
+    {"author": "Makridakis", "year": 2022, "page": 0, "paragraph": 0, "claim": "M5 competition featured GBDT-based models in top ranks for accuracy and uncertainty tasks.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.D", "name": "Filipino Spending Cycles and 'Occasions'", "relevance": "contextual", "justification": "Review covers seasonal patterns in spending but not specific Filipino cycles."},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "contextual", "justification": "Mentions categorization in decision tree features but not explicit frameworks."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "contextual", "justification": "Reviews financial forecasting systems broadly."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "contextual", "justification": "Identifies lack of comprehensive ARIMA-ML comparisons as a gap."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Extensive review of predictive models for financial time series including bitcoin."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Systematically compares ARIMA vs ML algorithms for sequential data."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "contextual", "justification": "Budget prediction mentioned in utility and government spending contexts."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "contextual", "justification": "Budget forecasting by Rhanoui et al. for government organizations."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "contextual", "justification": "Priyadarshini et al. on anomaly detection in smart home IoT; not finance-focused."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Compares evaluation metrics across studies (RMSE, MAPE, MAE, etc.)."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Directly compares ARIMA vs ML algorithms using multiple metrics."},
+      {"code": "12.C", "name": "Evaluation Methodologies for Budget Recommendation Systems", "relevance": "medium", "justification": "Discusses evaluation of forecasting models applicable to budget systems."}
+    ],
+    "contribution_to_field": "This review provides a comprehensive, multi-domain comparison of ARIMA and machine learning time series forecasting methods. It synthesizes results across finance, health, weather, utilities, and network traffic, identifying conditions favoring each approach. The work establishes that hybrid models consistently outperform individual methods, and identifies data linearity, size, and seasonality as key drivers of model selection. It also highlights the importance of proper benchmarking against classical methods for ML forecasting research.",
+    "directly_justifies": [
+      "Machine learning models outperform ARIMA in most forecasting applications.",
+      "Hybrid statistical-AI models steadily outperform their individual parts.",
+      "ARIMA is more suitable for small datasets and linear time dependencies.",
+      "LSTM and GRU require large datasets to outperform ARIMA effectively.",
+      "ARIMA outperforms ML for seasonal univariate data like offshore wind speed."
+    ],
+    "limits": [
+      "Primarily reviews comparative studies without performing original empirical analysis.",
+      "Focuses on aggregated findings without controlling for study-specific methodological variations.",
+      "Does not provide a quantitative meta-analysis of effect sizes across studies.",
+      "Limited coverage of tree-based models compared to deep learning and SVM approaches.",
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 14 topic domains identified three high-relevance areas: predictive modeling algorithms (6.A, 6.B), evaluation frameworks (12.A, 12.B), and forecasting algorithm comparisons (6.A, 6.B, 12.B). Medium relevance was assigned to budget recommendation evaluation (12.C) due to the discussion of forecasting evaluation methodologies. Contextual relevance was assigned to topics related to spending cycles (2.D), expense categorization (3.A), finance system landscapes (4.A, 4.B), and anomaly detection (8.A), as these appear in reviewed applications but are not central to the paper's core contribution. Topics with no relevance include Filipino-specific demographics (1.A-C), culturally specific practices (2.A-C), cold-start problems (5.B-C, 7.E), offline-first design (9.C), privacy (10.A-C), engagement (11.A-B), savings and debt management (13.A-C), and ML deployment (14.A-C), as these are not addressed by the review. The paper's topical coverage centers on comparative algorithm evaluation rather than domain-specific finance system design."
+  },
+  "limitations": [
+    "Selective literature review; may not be exhaustive for all domains. [unacknowledged]",
+    "Does not control for parameter optimization differences across compared studies. [unacknowledged]",
+    "Limited representation of tree-based models relative to deep learning and SVM. [unacknowledged]",
+    "No quantitative meta-analysis; findings are qualitative synthesis. [unacknowledged]",
+    "Focus on explicit comparisons may exclude important individual model developments. [unacknowledged]"
+  ],
+  "remember_this": [
+    "AI models outperform ARIMA in most time series forecasting applications.",
+    "ARIMA excels with small datasets, linear data, and short-term univariate forecasts.",
+    "Hybrid ARIMA-ML models consistently beat individual approaches.",
+    "num: LSTM/GRU achieved RMSE values 40 times smaller than ARIMA for COVID-19 in several countries.",
+    "No single forecasting method is optimal for all problems."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kontopoulou et al_marked.md",
+      "converted_at": "2026-07-21T13:49:39Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "paper_id": "10.0000/0000000000",
+  "designation": "international",
+  "title": "The Psychology of Colors in UI/UX Design",
+  "authors": "Khandelwal, P.; Chaudhary, N.",
+  "year": 2023,
+  "venue": "Pratibodh – A Journal for Engineering",
+  "odin_topics": ["3.A", "3.B", "9.A", "9.B", "10.A", "10.B", "12.A"],
+  "tldr": "A systematic review of 10 case studies finds that color psychology significantly influences user behavior, emotion, and satisfaction in UI/UX design, but its application requires careful consideration of context, culture, and individual differences.",
+  "problem_and_motivation": "UI/UX design increasingly integrates color psychology to influence user behavior and emotion, yet there is no unified framework to guide color choices. Research on color psychology in design is fragmented across case studies with varying domains, methods, and findings. A systematic synthesis is needed to identify consistent patterns and common challenges in applying color psychology to digital interfaces.",
+  "approach": [
+    "Conducted a systematic review and analysis of 10 case studies selected from academic journals, blogs, and websites.",
+    "Selected case studies based on relevance, validity, and reliability to the intersection of color psychology and UI/UX design.",
+    "Covered a diverse range of domains: e-commerce, social media, banking, health, education, travel, gaming, news, dating, and fitness.",
+    "Examined multiple color psychology concepts including color associations, meanings, emotions, preferences, personalities, and cultural influences.",
+    "Analyzed the case studies' stated objectives, challenges, solutions, and reported outcomes to synthesize common patterns.",
+    "Evaluated the limitations and ethical considerations surrounding color manipulation and persuasion in design.",
+    "Focused on identifying how color choices impact user behavior, satisfaction, and emotional response across different contexts.",
+    "Explicitly considered the role of color in visual hierarchy, attention guidance, emotional design, and brand identity.",
+    "Included analysis of accessibility and inclusivity considerations in color selection.",
+    "Highlighted the lack of universal color standards and the difficulty of quantifying color psychology effects."
+  ],
+  "findings": [
+    "num: 10 case studies were analyzed, with the most common objective being to improve user satisfaction.",
+    "num: User satisfaction scores increased most frequently, followed by conversion rates, engagement rates, and achievement scores.",
+    "Color psychology plays a significant role in UI/UX design, with different color choices producing different impacts on user behavior, emotion, and satisfaction.",
+    "Red is consistently used for excitement and urgency, blue for calmness and trust, green for growth and harmony, and yellow for happiness and optimism.",
+    "Color psychology is not one-size-fits-all; context, culture, and individual differences are critical factors.",
+    "The most common solution across case studies was using color psychology to evoke emotions and influence users, followed by color personalization, accessibility, and gamification.",
+    "Providing relevant and personalized user experiences was the most common challenge, followed by ensuring inclusivity and boosting motivation.",
+    "Challenges include difficulty measuring color psychology effects, lack of universal standards, and ethical concerns about manipulation.",
+    "Color placement is culturally sensitive, with color associations differing significantly across cultures.",
+    "Color contributes to visual hierarchy, attention guidance, and brand coherence, beyond mere aesthetic decoration."
+  ],
+  "key_figures_tables": ["None."],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "UI/UX design",
+      "definition": "The process of designing user-friendly, functional, and aesthetically pleasing products and services, encompassing user interface (visual/interactive elements) and user experience (overall impression and satisfaction)."
+    },
+    {
+      "term": "Color psychology",
+      "definition": "The study of how colors affect human behavior and emotion, influenced by factors such as culture, context, and personal preference."
+    },
+    {
+      "term": "Emotional design",
+      "definition": "The process of designing products that elicit specific emotions in users, such as joy, excitement, or calm."
+    },
+    {
+      "term": "von Restorff effect",
+      "definition": "A principle suggesting that distinctiveness makes items more likely to be remembered."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kumar",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color is a powerful information medium for human cognitive ability and the most specific element to notice and remember when encountering new things.",
+      "role": "context"
+    },
+    {
+      "author": "Lopez",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Research shows colors significantly impact mood, perception, and physical reactions; warm colors associate with excitement, cool with calm.",
+      "role": "finding"
+    },
+    {
+      "author": "Lopez",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Practical tips include using bright contrasting colors for call-to-action buttons and muted colors for non-critical elements.",
+      "role": "methodology"
+    },
+    {
+      "author": "UX Studio Team",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color in emotional design can create emotional connections with users, with red evoking passion, yellow happiness, and blue trust.",
+      "role": "finding"
+    },
+    {
+      "author": "Hassini",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color psychology has an essential role in the visual experience of UI/UX design.",
+      "role": "context"
+    },
+    {
+      "author": "Dam",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color plays a crucial role in establishing visual hierarchy in user interface design.",
+      "role": "methodology"
+    },
+    {
+      "author": "Babich",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color psychology is key to choosing the best color scheme for applications.",
+      "role": "context"
+    },
+    {
+      "author": "Cousins",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color psychology influences user perception and behavior in web design.",
+      "role": "context"
+    },
+    {
+      "author": "Garreta-Domingo",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color and emotion are central to user interface design.",
+      "role": "context"
+    },
+    {
+      "author": "Marushevska",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color psychology is important in mobile app design for choosing appropriate colors.",
+      "role": "context"
+    },
+    {
+      "author": "Anthony",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Design for color blindness and low vision is an accessibility consideration.",
+      "role": "context"
+    },
+    {
+      "author": "Kolenda",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Cultural differences affect color preferences and meanings.",
+      "role": "context"
+    },
+    {
+      "author": "Patel",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Color psychology in e-commerce can increase conversion rates.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Mentions categorization only via case study domains (banking, e-commerce), no framework details."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "relevance": "contextual",
+        "justification": "Indirect relevance through color's role in visual hierarchy and attention guidance for categories."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "References mobile interfaces and dark/light mode, but no mobile-first framework."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "Case study domain includes banking but focuses on color psychology generally."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Data privacy mentioned as a UI/UX challenge, but no specific privacy focus."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Blue associated with trust—contextual link but no trust framework."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Describes a systematic review methodology with relevance/validity/reliability criteria for evaluating case studies."
+      }
+    ],
+    "contribution_to_field": "This paper provides a systematic synthesis of 10 case studies on color psychology in UI/UX design, identifying consistent patterns in color associations and their effects on user behavior. It contributes a structured overview of common objectives, challenges, and solutions across diverse application domains. The paper highlights the importance of contextual factors such as culture and individual differences in color perception, adding nuance to the field's understanding. It also surfaces ethical and measurement challenges that remain unresolved in the literature.",
+    "directly_justifies": [
+      "Color psychology has a significant effect on user behavior, emotion, and satisfaction.",
+      "Red is associated with excitement and urgency across multiple case studies.",
+      "Blue is consistently associated with calmness and trust.",
+      "No universal color standards exist; cultural and individual differences must be considered.",
+      "Measuring and quantifying color psychology effects remains a significant challenge."
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "The systematic scan of all topic domains identified that this paper falls primarily within general UX/design research, with only tangential relevance to personal finance systems. Domains 3.A and 3.B (expense categorization) were flagged as low/contextual due to the paper's general treatment of visual hierarchy and its use of 'banking' as one case study domain without any categorization framework detail. Domains 9.A and 9.B (mobile design) were considered contextual because while mobile apps and dark/light mode are mentioned, no mobile-first principles are articulated. Domain 10.A (privacy) was flagged as low because it is mentioned only as a general challenge, not addressed. Domain 10.B (trust) was contextual due to the blue-trust association. Domain 12.A (evaluation frameworks) received medium relevance because the paper explicitly describes a systematic review methodology with defined selection criteria (relevance, validity, reliability) and analyzes objectives, challenges, and solutions—a structured evaluation approach. Domains 1.A through 8.C (Filipino demographics, financial behavior, algorithms, etc.) were considered and rejected as the paper contains no financial, algorithmic, or Filipino-specific content. The paper is a literature review/synthesis, not an empirical study, and its relevance is primarily to general interface design rather than any personal finance system."
+  },
+  "limitations": [
+    "The paper is a review of 10 case studies rather than a primary empirical investigation. [unacknowledged]",
+    "Case study selection criteria are described qualitatively, not through a formal systematic review protocol. [unacknowledged]",
+    "The review does not quantify the magnitude of effects across case studies, relying instead on narrative synthesis.",
+    "The paper acknowledges the difficulty of measuring and quantifying color psychology effects as a limitation.",
+    "The paper acknowledges the lack of universal color standards and guidelines as a limitation.",
+    "The paper acknowledges ethical and social implications of color manipulation and persuasion as a limitation."
+  ],
+  "remember_this": [
+    "Color psychology significantly influences user behavior, emotion, and satisfaction in UI/UX design.",
+    "Red drives excitement, blue builds trust, green signals growth, and yellow conveys optimism.",
+    "Context, culture, and individual differences critically moderate the effects of color.",
+    "The paper reviewed 10 case studies; user satisfaction was the most common positive outcome.",
+    "No universal color standards exist, and quantifying color psychology effects remains difficult."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Khandelwal & Chaudhary_marked.md",
+      "converted_at": "2026-07-21T13:47:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

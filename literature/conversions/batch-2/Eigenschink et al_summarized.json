@@ -1,0 +1,106 @@
+{
+  "paper_id": "10.1109/ACCESS.2023.3275134",
+  "designation": "international",
+  "title": "Deep Generative Models for Synthetic Data: A Survey",
+  "authors": "Eigenschink, P.; Reutterer, T.; Vamosi, S.; Vamosi, R.; Sun, C.; Kalcher, K.",
+  "year": 2023,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "14.A",
+    "10.A",
+    "6.B"
+  ],
+  "tldr": "Proposes data-driven evaluation framework for synthetic sequential data with five criteria: representativeness, novelty, realism, diversity, and coherence across NLP, healthcare, mobility, and audio domains.",
+  "problem_and_motivation": "Deep generative models for synthetic data have become specialized and disconnected across domains. No unified evaluation framework exists for comparing synthetic data quality across different architectures and applications.",
+  "approach": [
+    "Proposes five-criteria evaluation framework: representativeness, novelty, realism, diversity, and coherence.",
+    "Reviews generative models for sequential data across NLP, speech, audio, healthcare, and mobility domains.",
+    "Examines GANs, VAEs, autoregressive models, and flow-based models.",
+    "Analyzes evaluation metrics used for each criterion across domains."
+  ],
+  "findings": [
+    "Realism and coherence more important for NLP, speech, and audio synthetic data.",
+    "Novelty and representativeness more important for healthcare and mobility synthetic data.",
+    "Representativeness measured using statistical metrics, realism by human judgment, novelty by privacy tests.",
+    "GANs receive most attention among generative architectures for sequential data."
+  ],
+  "key_figures_tables": [
+    "Table 6: Assessment results across reviewed domains → Domain-specific criteria priorities mapped."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Representativeness",
+      "definition": "Statistical similarity between synthetic and original data distributions."
+    },
+    {
+      "term": "Novelty",
+      "definition": "Degree to which synthetic data provides new information not in original data."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey paper; comprehensive reference list.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "Comprehensive survey of deep generative models for synthetic data generation."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Privacy-preserving synthetic data is a core motivation throughout the survey."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Reviews generative models for sequential data including financial time series."
+      }
+    ],
+    "contribution_to_field": "Provides a unified evaluation framework for synthetic sequential data independent of model architecture. Identifies which quality criteria matter most in different application domains.",
+    "directly_justifies": [
+      "Synthetic data quality must be evaluated on multiple criteria beyond statistical similarity.",
+      "Privacy concerns drive synthetic data adoption in healthcare and finance."
+    ],
+    "limits": [
+      "Focuses on sequential data; does not comprehensively cover image or tabular data.",
+      "Framework descriptive without empirical validation. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains. Flagged 14.A (high), 10.A (high), 6.B (medium). Rejected 1.A-5.C, 7.A-13.C as outside scope."
+  },
+  "limitations": [
+    "Survey limited to sequential data types.",
+    "Evaluation framework proposed but not empirically validated. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Five-criteria framework: representativeness, novelty, realism, diversity, coherence.",
+    "Domain-specific criteria priorities differ significantly.",
+    "Privacy protection is a key driver for synthetic data adoption."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Eigenschink et al_marked.md",
+      "converted_at": "2026-07-22T13:14:02Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

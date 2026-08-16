@@ -1,0 +1,155 @@
+{
+  "paper_id": "10.1007/s11257-025-09438-0",
+  "designation": "international",
+  "title": "Exploring the impact of explainable AI and cognitive capabilities on users decisions",
+  "authors": "Cau, F.M.; Spano, L.D.",
+  "year": 2026,
+  "venue": "User Modeling and User-Adapted Interaction",
+  "odin_topics": [
+    "4.A",
+    "5.A",
+    "10.B",
+    "11.A",
+    "12.B"
+  ],
+  "tldr": "A user study with 288 participants found that high AI confidence increases reliance and reduces cognitive load, counterfactual explanations improve accuracy despite lower understandability, and Need for Cognition shows no significant effect on decision outcomes.",
+  "problem_and_motivation": "Most XAI research focuses on feature-based explanations with inconclusive evidence on their effectiveness. The benefits of alternative explanation styles such as rule-based and counterfactual explanations remain largely underexplored in high-stakes financial decision scenarios.",
+  "approach": [
+    "Conducted an online user study with 288 participants via Prolific, each completing 16 loan approval tasks across six AI assistance conditions.",
+    "Trained a Random Forest Classifier on the Loan Prediction Problem Dataset achieving 83% test accuracy, with confidence estimated via Shannon entropy.",
+    "Evaluated four explanation styles: example-based, feature-based (SHAP), rule-based (Anchors), and counterfactual (DiCE).",
+    "Used a mixed-factorial design with AI assistance as between-subjects factor and AI confidence and correctness as within-subjects covariates.",
+    "Applied mixed-effects logistic regression and Generalized Estimation Equations.",
+    "Used Friedman tests with Nemenyi post hoc analysis for ranked interface component importance."
+  ],
+  "findings": [
+    "num: High AI confidence significantly increased reliance on AI (Log-Odds = 1.22, p < .01) while reducing cognitive load (Log-Odds = -0.41, p < .01).",
+    "Feature-based explanations did not improve accuracy compared to other AI assistance conditions.",
+    "num: Counterfactual explanations increased overall accuracy (Log-Odds = 0.87, p = .0015) despite being rated as less understandable.",
+    "num: Counterfactual explanations interacting with correct AI predictions increased reliance and reduced cognitive load.",
+    "Both low and high NFC participants prioritized loan attributes first, explanations second, and AI information third.",
+    "num: No significant differences between low and high NFC participants in accuracy or cognitive load.",
+    "num: 288 participants showed low familiarity with loan approval tasks (mean 1.83 on 5-point scale)."
+  ],
+  "citations": [
+    {
+      "author": "Zhang",
+      "year": 2020,
+      "page": 5,
+      "paragraph": 2,
+      "claim": "People were more likely to follow AI predictions when confidence was higher.",
+      "role": "finding"
+    },
+    {
+      "author": "Buccinca",
+      "year": 2020,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Participants with AI predictions provided more accurate answers than those without AI assistance.",
+      "role": "finding"
+    },
+    {
+      "author": "Buccinca",
+      "year": 2021,
+      "page": 8,
+      "paragraph": 4,
+      "claim": "High NFC participants performed better but trusted cognitive forcing functions less than simple XAI approaches.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2023,
+      "page": 7,
+      "paragraph": 2,
+      "claim": "Example-based explanations improved accuracy when AI predictions were correct; feature-based increased overreliance when wrong.",
+      "role": "finding"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 13,
+      "paragraph": 3,
+      "claim": "SHAP explains predictions by computing Shapley contribution of each feature.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mothilal",
+      "year": 2020,
+      "page": 15,
+      "paragraph": 1,
+      "claim": "DiCE generates counterfactual explanations emphasizing diversity and actionable changes.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Studies reliance and trust on AI predictions in high-stakes financial decisions."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Evaluates Random Forest classifier and systematically compares four XAI methods."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Uses loan approval scenario as financial AI decision task."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Examines NFC personality trait affecting financial decision behavior with AI assistance."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Analyzes user engagement with XAI interface elements and information prioritization."
+      }
+    ],
+    "contribution_to_field": "Contributes to the Explainable AI field by conducting a comprehensive user study comparing four explanation styles in a high-stakes financial decision scenario. Demonstrates that counterfactual explanations, despite lower perceived understandability, can improve user accuracy and reduce cognitive load.",
+    "directly_justifies": [
+      "High AI confidence significantly increases user reliance on AI predictions while reducing cognitive load.",
+      "Counterfactual explanations improve overall user accuracy despite being rated as less understandable.",
+      "Feature-based explanations do not enhance accuracy compared to other AI assistance conditions.",
+      "No significant differences exist between low and high NFC individuals in accuracy or cognitive load.",
+      "Both low and high NFC participants prioritize explanations after loan attributes, with AI information as least important."
+    ],
+    "limits": [
+      "AI model used uncalibrated confidence estimates.",
+      "One-stage detection paradigm may restrict ability to disentangle independent reasoning from AI reliance.",
+      "Findings limited to a single financial domain with low participant familiarity.",
+      "Generalizability concerns regarding specific dataset, classification model, confidence thresholds, and explanation methods."
+    ]
+  },
+  "limitations": [
+    "AI model used uncalibrated confidence estimates, which may have affected confidence-based explanations and user decisions.",
+    "One-stage detection paradigm may restrict the ability to disentangle users independent reasoning from AI reliance.",
+    "Findings limited to a single financial domain with low participant familiarity and may not generalize to expert users.",
+    "Generalizability concerns regarding specific dataset, classification model, confidence thresholds, and explanation generation methods.",
+    "Only Need for Cognition personality trait was examined, while other traits like AI literacy may better capture individual differences."
+  ],
+  "remember_this": [
+    "High AI confidence increases reliance on AI and reduces cognitive load in financial decisions.",
+    "Counterfactual explanations improve accuracy despite being perceived as less understandable.",
+    "Feature-based explanations do not outperform other explanation styles for user accuracy.",
+    "NFC personality trait shows no significant effect on decision outcomes in complex tasks.",
+    "XAI interface design should consider confidence calibration and hybrid explanation approaches."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cau & Spano_marked.md",
+      "converted_at": "2026-07-22T12:42:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

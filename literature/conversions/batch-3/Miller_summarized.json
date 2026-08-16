@@ -1,0 +1,153 @@
+{
+  "paper_id": "10.1145/3593013.3594001",
+  "designation": "international",
+  "title": "Explainable AI is Dead, Long Live Explainable AI!: Hypothesis-driven Decision Support using Evaluative AI",
+  "authors": "Miller, T.",
+  "year": 2023,
+  "venue": "2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT '23)",
+  "odin_topics": [
+    "5.C.VIII",
+    "7.B",
+    "10.B",
+    "10.B.II",
+    "8.B.VI",
+    "4.A.III"
+  ],
+  "tldr": "Proposes shifting from recommendation-driven to hypothesis-driven Evaluative AI, where decision support tools provide evidence for and against human decisions rather than recommendations, aligning with cognitive processes.",
+  "problem_and_motivation": "Current recommendation-driven XAI leads to over-reliance (blind follow) and under-reliance (dismissal), as people fail to calibrate trust correctly. Recommendations reduce human agency and do not align with the abductive reasoning process people naturally use when making decisions. Empirical studies show that explainability tools do not mitigate these issues and can even worsen over-reliance.",
+  "approach": [
+    "Conceptual framework paper arguing for paradigm shift from recommendation-driven to hypothesis-driven decision support called Evaluative AI.",
+    "Grounded in abductive reasoning (Peirce) and Data/Frame theory of sensemaking (Klein et al.), which describe how people generate and test hypotheses using evidence.",
+    "Evaluates four existing paradigms against six criteria for good decision support: options, possibilities, judgement, value, trade-offs, understandability.",
+    "Proposes machine-in-the-loop design where humans maintain control over which hypotheses to explore and machines provide evidence for/against each.",
+    "DA filters unlikely options, presents likely hypotheses, and delivers supportive and refuting evidence for any hypothesis the user chooses to explore.",
+    "Includes design agenda covering: observing events, generating options, judging plausibility, and resolution/re-evaluation.",
+    "Applicable to medium- and high-stakes decisions where the decision maker is ultimately accountable and has time to explore options."
+  ],
+  "findings": [
+    "Recommendation-driven XAI does little to mitigate over-reliance or under-reliance in decision making.",
+    "Cognitive forcing strategies slightly mitigate over-reliance but were least preferred by participants.",
+    "Expert decision makers perform best when they jump to an initial conclusion and test it with negative evidence (Rudolph 2003).",
+    "Intuition (System 1) can outperform structured reasoning in clinical diagnoses; overriding it risks losing expertise benefits.",
+    "num: Informal survey: 3 of 100+ people preferred recommendation-driven (Bluster) over evaluative (Prudence) approach.",
+    "Explainability tools increased over-reliance in some studies (Buçinca et al. 2021; Gajos and Mamykina 2022).",
+    "Option awareness via visual analytics improves decision accuracy and speed (Pfaff et al. 2013).",
+    "Abductive reasoning is engaged immediately upon interaction with a system, regardless of explainability tools."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Contrastive explanation vs. Evaluative AI — recommend-and-defend versus evidence-for/against.",
+    "Table 1: 10 cardinal decision issues by Yates and Potworowski (2012), with italics for XAI-relevant ones.",
+    "Table 2: Six criteria for good decision support (options, possibilities, judgement, value, trade-offs, understandable).",
+    "Figure 2: Model of abductive reasoning — observe, generate hypotheses, judge plausibility, resolve, extend.",
+    "Table 3: How XAI and Evaluative AI align against human abductive reasoning process.",
+    "Figure 6: Model of Evaluative AI — decision maker controls hypotheses, DA provides evidence for/against.",
+    "Figure 7: Simple prototype interface for skin cancer diagnosis using evaluative AI.",
+    "Table 4: Summary of decision support provided by five paradigms (recommendation, XAI, interpretability, cognitive forcing, evaluative AI)."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Evaluative AI", "definition": "A machine-in-the-loop paradigm where decision support tools provide evidence for and against human propositions/decisions, rather than providing recommendations to accept or reject."},
+    {"term": "Recommendation-driven decision support", "definition": "The 'recommend and defend' model where AI determines the best option and justifies why that option is correct."},
+    {"term": "Hypothesis-driven decision support", "definition": "A paradigm where the decision maker proposes hypotheses and the DA provides supporting and refuting evidence, keeping control with the human."},
+    {"term": "Abductive reasoning", "definition": "The cognitive process of forming hypotheses and judging their likelihood to explain observations or facts (Peirce)."},
+    {"term": "Data/Frame theory", "definition": "A theory of sensemaking where frames (mental models) are adjusted by data (observations/inferences), and frames determine what new data to seek."},
+    {"term": "Fixation", "definition": "Searching for evidence that supports one hypothesis without considering alternatives; a primary cause of poor decisions."},
+    {"term": "Option awareness", "definition": "The analysis and understanding of various decision options and their relative trade-offs."},
+    {"term": "Cognitive forcing", "definition": "Withholding recommendations temporarily to force decision makers to cognitively engage with explanatory information before seeing the AI's choice."}
+  ],
+  "citations": [
+    {"author": "Buçinca, Z., Malaya, M.B., and Gajos, K.Z.", "year": 2021, "page": 4, "paragraph": 1, "claim": "Explainability did not mitigate over-reliance; cognitive forcing strategies partially helped but were least preferred by participants.", "role": "finding"},
+    {"author": "Gajos, K.Z. and Mamykina, L.", "year": 2022, "page": 4, "paragraph": 1, "claim": "Explainability increased over-reliance in some conditions; participants did not pay attention to explanatory information.", "role": "finding"},
+    {"author": "Hoffman, R.R., Miller, T., and Clancey, W.J.", "year": 2022, "page": 3, "paragraph": 3, "claim": "Abductive reasoning is a suitable foundational model for conceptualizing explainable AI.", "role": "methodology"},
+    {"author": "Klein, G., Phillips, J.K., Rall, E.L., and Peluso, D.A.", "year": 2007, "page": 3, "paragraph": 4, "claim": "People make decisions by using intuition to narrow options, then search for supporting and refuting evidence one-by-one.", "role": "methodology"},
+    {"author": "Yates, F.J. and Potworowski, G.A.", "year": 2012, "page": 3, "paragraph": 1, "claim": "Ten cardinal decision issues define the concerns in effective decision making.", "role": "methodology"},
+    {"author": "Jacovi, A., Marasović, A., Miller, T., and Goldberg, Y.", "year": 2021, "page": 4, "paragraph": 1, "claim": "Trust in AI can be warranted/unwarranted trust and warranted/unwarranted distrust.", "role": "methodology"},
+    {"author": "Rudolph, J.W.", "year": 2003, "page": 7, "paragraph": 2, "claim": "Decision makers who jump to an initial conclusion and test it with negative evidence make the best decisions.", "role": "finding"},
+    {"author": "Pfaff, M.S., Klein, G.L., Drury, J.L., Moon, S.P., Liu, Y., and Entezari, S.O.", "year": 2013, "page": 7, "paragraph": 3, "claim": "Visual analytics that allow exploration of options increase option awareness, leading to more accurate and faster decisions.", "role": "finding"},
+    {"author": "Miller, T.", "year": 2019, "page": 8, "paragraph": 2, "claim": "Good explanations are contrastive, selected, interactive, and causal.", "role": "methodology"},
+    {"author": "Kahneman, D.", "year": 2011, "page": 4, "paragraph": 2, "claim": "Dual process theory: System 1 (fast, heuristic) and System 2 (slow, accurate) thinking.", "role": "context"},
+    {"author": "Klein, G.", "year": 2015, "page": 4, "paragraph": 3, "claim": "Naturalistic Decision Making shows intuition (System 1) is a powerful source of problem solving that often outperforms System 2.", "role": "critique"},
+    {"author": "Coderre, S., Mandin, H., Harasym, P.H., and Fick, G.H.", "year": 2003, "page": 4, "paragraph": 3, "claim": "Intuition significantly outperformed hypothetico-deductive reasoning in gastroenterology clinical diagnoses.", "role": "finding"},
+    {"author": "Shneiderman, B. et al.", "year": 2016, "page": 2, "paragraph": 2, "claim": "Recommendations reduce locus of control because users cannot control which options they receive feedback for.", "role": "context"},
+    {"author": "Kool, W. and Botvinick, M.", "year": 2018, "page": 4, "paragraph": 2, "claim": "People prefer not to exert mental energy, explaining why cognitive forcing was least preferred.", "role": "context"},
+    {"author": "Green, B. and Chen, Y.", "year": 2019, "page": 8, "paragraph": 1, "claim": "Algorithm-in-the-loop paradigm positions machine as providing feedback rather than judgement.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.C.VIII",
+        "name": "Explainability for profile classification: feature-contribution explanations and their effect on user acceptance",
+        "relevance": "high",
+        "justification": "Provides the foundational argument that explanation systems should present evidence for/against rather than justifying a single recommendation, directly informing how profile classification explanations should be designed."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly challenges the recommendation-driven paradigm that most budget recommendation systems use, proposing an evidence-for/against approach that preserves user agency and aligns with cognitive processes."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core theme of the paper is trust calibration — over-reliance (unwarranted trust) and under-reliance (unwarranted distrust) — providing the theoretical framing for why recommendation-driven approaches fail."
+      },
+      {
+        "code": "10.B.II",
+        "name": "Explainability of allocation reductions and anomaly flags as a trust-building mechanism",
+        "relevance": "high",
+        "justification": "Argues that explanations should provide balanced evidence (supporting and refuting) rather than persuasive justification of a recommendation, directly relevant to how budget reductions and anomaly flags should be explained."
+      },
+      {
+        "code": "8.B.VI",
+        "name": "Explainability for anomaly alerts: feature-deviation explanations and baseline comparisons",
+        "relevance": "medium",
+        "justification": "Evaluative AI framework suggests anomaly detection should present evidence for and against a flagged transaction being anomalous, rather than simply alerting with a recommendation to investigate."
+      },
+      {
+        "code": "4.A.III",
+        "name": "Intelligent and adaptive features: forecasting, anomaly detection, and recommendation in existing systems",
+        "relevance": "medium",
+        "justification": "Evaluates existing recommendation-driven approaches (including forecasting and XAI) and identifies their limitations, providing criteria for redesigning intelligent features."
+      }
+    ],
+    "contribution_to_field": "Miller's paper provides a theoretical and cognitive-science-grounded argument for fundamentally rethinking how AI-based decision support systems interact with human decision makers. Rather than treating AI as an oracle that provides recommendations, the framework positions AI as a critical partner that helps humans evaluate their own hypotheses. This directly supports Odin's design philosophy of allowing users to explore their financial options with AI providing balanced evidence, rather than dictating budget allocations. The paper's emphasis on preserving user agency and aligning with natural cognitive processes provides the intellectual justification for Odin's choice to use an evidence-presentation model for budget recommendations and anomaly alerts.",
+    "directly_justifies": [
+      "Designing budget recommendations as evidence for/against user-set allocation options rather than system-determined optimal allocations.",
+      "Explaining anomaly flags with supporting and refuting evidence rather than prescriptive alerts.",
+      "Maintaining user control over which budget scenarios and financial hypotheses to explore.",
+      "Rejecting purely recommendation-driven approaches in favor of hypothesis-driven decision support."
+    ],
+    "limits": [
+      "The paper is a conceptual position paper with no empirical evaluation of the proposed Evaluative AI framework.",
+      "Evaluative AI may increase cognitive load, which users may resist even if it improves outcomes.",
+      "The framework assumes users care about machine-provided evidence, which may not hold for all user segments.",
+      "Scenarios requiring rapid, low-stakes decisions at scale may still benefit from recommendation-driven approaches."
+    ],
+    "topic_mapping_rationale": "Systematically scanned the 14-topic Odin taxonomy for matches by identifying the paper's core contributions: (a) critique of recommendation-driven AI, (b) proposal of evidence-for/against paradigm, (c) cognitive science grounding (abductive reasoning, Data/Frame theory), (d) trust calibration, and (e) explainability design principles. Topic 5.C.VIII (explainability for profile classification) was selected because the paper directly addresses how explanations affect user cognition and acceptance. Topics 7.B and 10.B/10.B.II were selected because budget recommendation and user trust are the domains where Odin most directly implements the paper's paradigm shift — moving from system-driven allocation to user-controlled hypothesis testing with balanced evidence. Topic 8.B.VI received medium relevance because the principle applies to anomaly alerts but the paper does not specifically address anomaly detection systems. Topic 4.A.III received medium relevance as the paper evaluates intelligent feature approaches at a general level."
+  },
+  "limitations": [
+    "Conceptual position paper with no empirical validation of the proposed framework.",
+    "Evaluative AI likely increases cognitive load compared to recommendation-driven approaches.",
+    "Users may prefer less cognitively demanding approaches even when they produce worse outcomes.",
+    "Not suitable for low-stakes or high-frequency decisions where speed matters over exploration.",
+    "Assumes decision makers care about machine-provided evidence, which existing studies question.",
+    "Difficult to design interfaces that balance information sufficiency with cognitive load."
+  ],
+  "remember_this": [
+    "Recommendation-driven XAI is 'dead' for decision support; evidence-driven Evaluative AI replaces it.",
+    "Human decision making is abductive: hypothesize, test with evidence, resolve.",
+    "Good decision makers seek both supporting AND refuting evidence.",
+    "Overriding intuition risks losing expertise; DAs should leverage, not replace, System 1 thinking.",
+    "Evaluative AI is machine-in-the-loop: humans control hypotheses, machines provide feedback."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Miller_marked.md",
+      "converted_at": "2026-07-21T14:17:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

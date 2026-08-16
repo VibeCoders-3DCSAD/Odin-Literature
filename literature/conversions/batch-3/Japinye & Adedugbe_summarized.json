@@ -1,0 +1,326 @@
+{
+  "paper_id": "10.5281/zenodo.17155174",
+  "designation": "international-algorithm-specific",
+  "title": "Explainable AI for Credit Scoring with SHAP-Calibrated Ensembles: A Multi-Market Evaluation on Public Lending Data",
+  "authors": "Japinye, A. O.; Adedugbe, A. A.",
+  "year": 2025,
+  "venue": "SSR Journal of Artificial Intelligence",
+  "odin_topics": ["3.A", "4.A", "4.B", "5.A", "5.C", "6.A", "6.B", "7.A", "7.B", "8.A", "10.A", "12.A", "12.B", "14.A"],
+  "tldr": "An explainability-first credit scoring framework integrating gradient-boosting models with SHAP explanations, isotonic calibration, and fairness-constrained thresholding demonstrates superior performance and bias reduction across three public lending datasets.",
+  "problem_and_motivation": "Machine learning systems in consumer lending improve predictive accuracy but create opacity and regulatory compliance concerns. Existing post-hoc explanation methods lack rigorous stability assessment and fairness integration. A unified framework combining explanation, calibration, and fairness constraints is needed for responsible AI deployment in credit scoring.",
+  "approach": [
+    "Six model classes from interpretable (logistic regression, decision trees, random forests) to complex (XGBoost, LightGBM, neural networks) evaluated across three public lending datasets.",
+    "Data-rich (Home Credit, N=307,511), mixed-signal (Credit Card, N=30,000), and limited-bureau (LendingClub, N=887,379) environments enable systematic assessment across data contexts.",
+    "Isotonic regression calibrates probability outputs; TreeSHAP and LIME provide local and global explanations with stability assessed via 1,000 bootstrap resamples.",
+    "Fairness-constrained threshold optimisation minimizes expected cost subject to demographic parity and equalised odds constraints across available protected attributes.",
+    "Intersectional analysis examines fairness across gender-age combinations; ablation studies quantify feature family importance across data environments.",
+    "Out-of-time validation on chronologically held-out data (20% of temporal period) assesses model stability over 24-96 month horizons.",
+    "Benjamini-Hochberg FDR correction (α=0.05) controls for multiple comparisons across performance metrics and model comparisons.",
+    "Complete reproducibility artefact includes code repository, model cards, adverse-action templates, and monitoring frameworks.",
+    "Cost-parity frontier construction maps fairness tolerances to operating points with 95% bootstrap confidence intervals.",
+    "Compliance readiness assessment uses structured rubric covering adverse action, documentation, bias monitoring, calibration, audit, and privacy."
+  ],
+  "findings": [
+    "num: XGBoost achieves AUC of 0.892±0.009 to 0.923±0.008 across datasets, with mean AUC advantage of +0.163 over logistic regression.",
+    "num: SHAP explanations maintain high stability with mean Kendall τ = 0.930±0.033 across bootstrap resamples (p<0.001, Cohen's d=2.31).",
+    "num: Fairness-constrained thresholding reduces demographic-parity gaps by 61.9% on average (95% CI: 52-74%) with 3.9%±1.0% cost increase.",
+    "num: Alternative data features provide 5.3× greater predictive value in limited-bureau vs data-rich environments (ΔAUC=0.048 vs 0.009, p<0.001).",
+    "num: XGBoost achieves superior calibration with Brier score 0.119±0.003 to 0.154±0.004 after isotonic regression, significantly outperforming logistic regression (p<0.001).",
+    "num: Cross-run Kendall τ exceeds 0.90 in 94.4% of bootstrap runs, with global-local coherence correlation r=0.836±0.074.",
+    "num: XAI-enhanced models score 9.1/10 vs 3.8/10 on adverse action compliance, and 8.9/10 vs 5.1/10 on bias monitoring readiness.",
+    "Out-of-time performance degradation remains modest (≤3% over 24-96 months), with complex models showing slightly higher temporal decay than interpretable baselines.",
+    "Intersectional fairness analysis shows consistent 58-61% bias reduction across demographic combinations with no systematic fairness-accuracy trade-offs.",
+    "Cost-parity sensitivity analysis demonstrates robustness across cost ratios (3K:300 to 10K:1K) and tolerance levels (τ 0.01-0.05), with feasibility rates >89%."
+  ],
+  "key_figures_tables": [
+    "Table 1: Dataset characteristics → Three datasets represent data-rich, mixed-signal, and limited-bureau environments with varying default rates (5.63-22.12%).",
+    "Table 2: Model performance → XGBoost achieves superior AUC (0.892-0.923) across all data environments with large effect sizes vs baselines.",
+    "Table 3: Calibration performance → XGBoost with isotonic regression achieves better Brier scores than logistic regression across all datasets.",
+    "Table 4: Explanation stability → SHAP maintains Kendall τ>0.90 in >91% of bootstrap runs, significantly outperforming LIME.",
+    "Table 5: Fairness optimisation → Fairness constraints reduce demographic gaps by 58-65% with 2.8-5.8% cost increases.",
+    "Table 7: Feature ablation → Alternative data provides 5.3× more value in limited-bureau vs data-rich environments.",
+    "Figure X: Cost-parity frontiers → Pareto frontiers enable transparent stakeholder discussion of fairness-accuracy trade-offs.",
+    "Table 10: Compliance readiness → XAI-enhanced models substantially outperform traditional approaches on regulatory metrics."
+  ],
+  "key_equations": [
+    {
+      "equation": "BS = (1/n) \\sum (p_i - y_i)^2",
+      "explanation": "Brier score measures probability calibration quality."
+    },
+    {
+      "equation": "ECE = \\sum_j |acc_j - conf_j| \\times (n_j/n)",
+      "explanation": "Expected calibration error across probability bins."
+    },
+    {
+      "equation": "Minimize: E[Cost] = \\lambda_1 \\times P(default|approve) \\times Loss + \\lambda_2 \\times P(repay|reject) \\times Opportunity\\_Cost",
+      "explanation": "Fairness-constrained optimisation objective minimises expected cost."
+    },
+    {
+      "equation": "Subject to: Demographic\\_Parity\\_Gap \\leq \\tau_{dp}, Equalized\\_Odds\\_Gap \\leq \\tau_{eo}",
+      "explanation": "Fairness constraints imposed at threshold-selection stage."
+    }
+  ],
+  "definitions": [
+    {"term": "AUC", "definition": "Area under receiver operating characteristic curve."},
+    {"term": "Brier score", "definition": "Mean squared error of predicted probabilities."},
+    {"term": "ECE", "definition": "Expected calibration error across probability bins."},
+    {"term": "Demographic parity", "definition": "Equal acceptance rates across protected groups."},
+    {"term": "Equalized odds", "definition": "Equal true and false positive rates across groups."},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations for model prediction decomposition."},
+    {"term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations."},
+    {"term": "TreeSHAP", "definition": "SHAP implementation optimised for tree-based models."},
+    {"term": "Isotonic regression", "definition": "Non-parametric calibration method for probability outputs."},
+    {"term": "FDR", "definition": "False discovery rate; Benjamini-Hochberg correction controls for multiple comparisons."},
+    {"term": "ECOA", "definition": "Equal Credit Opportunity Act requiring adverse action justifications."},
+    {"term": "GAM", "definition": "Generalised additive models for interpretable shape functions."}
+  ],
+  "citations": [
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP provides stable local contribution scores paired with globally coherent summaries under relaxed parametric assumptions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TreeSHAP optimises gradient-boosting tree evaluation with polynomial computational complexity.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bussmann",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP integrates seamlessly in production scoring pipelines while delivering actionable rationale.",
+      "role": "context"
+    },
+    {
+      "author": "Ribeiro",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LIME constructs local empirical approximations via sparse linear fit in perturbed instance neighbourhoods.",
+      "role": "methodology"
+    },
+    {
+      "author": "Niculescu-Mizil",
+      "year": 2005,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Isotonic regression reliably aligns certainty exhibited by ensemble trees known for overconfidence.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hardt",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fairness-constrained optimisation imposes parity constraints at threshold-selection rather than training stage.",
+      "role": "methodology"
+    },
+    {
+      "author": "Barocas",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Algorithmic fairness definitions include demographic parity, equalised odds, and calibration within subgroups.",
+      "role": "context"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost provides scalable tree boosting with superior performance on tabular data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lessmann",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AUC improvements of 0.05-0.15 over logistic regression on lending datasets.",
+      "role": "finding"
+    },
+    {
+      "author": "Alvarez-Melis",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explanation variability under small input perturbations quantified via Lipschitz-bound metrics.",
+      "role": "critique"
+    },
+    {
+      "author": "Krishna",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Stability metrics vary across model types and statistical properties of training data.",
+      "role": "context"
+    },
+    {
+      "author": "Bravo",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Expected cost from miscalibrated score surpasses well-calibrated benchmark by 15-25 percent.",
+      "role": "finding"
+    },
+    {
+      "author": "Kusner",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Variables appearing neutral disproportionately correlate with safeguarded attributes, creating proxy discrimination.",
+      "role": "critique"
+    },
+    {
+      "author": "Dwork",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Threshold adjustments outperform training-time constraints on demographic parity in credit adjudication.",
+      "role": "finding"
+    },
+    {
+      "author": "Milionis",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Monotonic constraints improve interpretability in gradient boosting while preserving performance.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Feature family classification (traditional credit, income, alternative signals, loan characteristics) provides categorisation framework for ablation analysis."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Literature review situates credit scoring within broader financial technology and personal finance ecosystem."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies opacity, fairness concerns, and lack of rigorous explanation stability assessment as gaps in current systems."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Discussion of alternative data signals (transaction patterns, utility payments) relates to behavioural profiling."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Credit scoring classification extends to behavioural profile classification using alternative data."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops and evaluates predictive models (XGBoost, LightGBM, neural networks) for credit default prediction across data environments."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "Temporal out-of-time validation assesses forecasting stability over time periods, though data is not explicitly sequential spending."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Calibration and threshold optimisation principles parallel budgeting decision-making under uncertainty."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Cost-aware threshold selection for credit decisions shares methodology with budget recommendation constraint optimisation."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Monitoring framework (AUC tracking, calibration assessment) parallels anomaly detection triggering."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Ethics statement confirms de-identified secondary data use; compliance statement addresses data governance policies."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Comprehensive evaluation methodology includes AUC, Brier score, calibration metrics, stability assessment, and fairness metrics with multiple comparison corrections."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Rigorous evaluation of XGBoost module includes cross-validation, out-of-time validation, hyperparameter tuning, and bootstrap confidence intervals."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "contextual",
+        "justification": "Bootstrapping for confidence intervals and stability assessment resembles data resampling for synthetic validation."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a comprehensive framework integrating explainability, calibration, and fairness for credit scoring systems. It provides rigorous methodology for explanation stability assessment across bootstrap resamples, addressing a key gap in XAI evaluation practices. The multi-environment evaluation design enables systematic comparison of XAI effectiveness across different data contexts, moving beyond single-dataset studies. The fairness-constrained threshold optimisation framework offers practical tools for policy-driven equity implementation rather than purely algorithmic approaches. The complete reproducibility package including model cards and adverse-action templates supports broader adoption and comparative evaluation across financial institutions.",
+    "directly_justifies": [
+      "XGBoost with isotonic calibration yields superior discrimination and calibration across all data environments.",
+      "SHAP explanations maintain high stability (τ = 0.930) enabling reliable adverse action reasoning.",
+      "Fairness constraints reduce demographic disparities by 62% with modest cost increases of 4%.",
+      "Alternative data provides greatest value in limited-bureau environments where traditional scoring struggles."
+    ],
+    "limits": [
+      "Public datasets may not reflect operational lending complexity (real-time data, adversarial behaviour, regulatory constraints).",
+      "Cross-sectional design cannot assess explanation stability under model retraining cycles or economic regime changes.",
+      "Protected attribute availability varies significantly across datasets, limiting comprehensive fairness analysis.",
+      "Alternative data features may encode protected characteristics as proxies despite explicit fairness constraints.",
+      "LendingClub dataset lacks direct demographic variables, requiring income-based proxy with apparent limitations."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all topic domains identified the paper's strongest relevance to predictive modelling (6.A) and evaluation frameworks (12.A, 12.B). The core contribution centres on XGBoost, SHAP, calibration, and fairness-constrained optimisation, placing it centrally in algorithmic modules for financial systems. Domains related to expense categorisation (3.A) and anomaly detection (8.A) received low relevance due to tangential feature classification and monitoring parallels. Budgeting domains (7.A, 7.B) were marked contextual as credit threshold optimisation shares methodology but does not address household budgeting. Culturally specific practices (2.A-2.D) and Filipino demographics (1.A-1.C) were rejected as the paper explicitly refrains from cross-country claims and uses multi-market public data without country identifiers. Financial behavioural profiles (5.A, 5.C) received low relevance due to alternative data signal discussion, though the paper does not develop behavioural typologies. Data privacy (10.A) was medium due to ethics and compliance statements. The overall topical coverage centres on algorithmic credit scoring with XAI and fairness, with secondary relevance to system evaluation and limitation identification."
+  },
+  "limitations": [
+    "Public datasets may not reflect operational lending complexity including real-time data streams, adversarial behaviour, and regulatory constraints specific to institutions. [unacknowledged]",
+    "Cross-sectional design cannot assess explanation stability under model retraining cycles or economic regime changes. [unacknowledged]",
+    "Protected attribute availability varies significantly across datasets, limiting comprehensive fairness analysis. [acknowledged]",
+    "LendingClub contains no direct demographic attributes, requiring income as socioeconomic proxy with apparent limitations. [acknowledged]",
+    "Alternative data features may encode protected characteristics as proxies, requiring ongoing monitoring for disparate impact. [acknowledged]",
+    "Current fairness metrics may not capture all relevant equity dimensions, particularly for intersectional identities with small sample sizes. [acknowledged]"
+  ],
+  "remember_this": [
+    "XGBoost with SHAP achieves AUC 0.892-0.923 across three lending datasets.",
+    "SHAP explanations maintain high stability with Kendall τ=0.930 across 1,000 bootstrap resamples.",
+    "Fairness constraints reduce demographic-parity gaps by 61.9% with 3.9% average cost increase.",
+    "Alternative data provides 5.3× more predictive value in limited-bureau vs data-rich environments.",
+    "XAI-enhanced models score 9.1/10 on adverse action compliance vs 3.8/10 for traditional approaches."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-3.5-sonnet-20241022",
+    "conversion_reference": {
+      "file": "Japinye & Adedugbe_marked.md",
+      "converted_at": "2026-07-21T13:38:05Z",
+      "converter_tool": "markitdown 0.1.6"
+    }
+  }
+}

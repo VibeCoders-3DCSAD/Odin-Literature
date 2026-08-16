@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.30574/ijsra.2025.15.1.1244",
+  "designation": "local-algorithm-specific",
+  "title": "How reinforcement learning can drive personalized financial wellness",
+  "authors": "Varun Pandey; Varun Awasthi",
+  "year": 2015,
+  "venue": "International Journal of Science and Research Archive",
+  "odin_topics": [
+    "1.C",
+    "11.A",
+    "13.B",
+    "14.A",
+    "4.B",
+    "5.A",
+    "7.B"
+  ],
+  "tldr": "Financial wellness is a pervasive challenge: many individuals struggle with saving, investing, and budgeting effectively. Traditional budgeting tools and Robo-advisors often provide generic advice, failing to account for an individual’s unique behavior and needs. This paper proposes a novel approach that integrates reinforcement learning (RL), behavioral analytics, and natural language processing ",
+  "problem_and_motivation": "Financial wellness is a pervasive challenge: many individuals struggle with saving, investing, and budgeting effectively. Traditional budgeting tools and Robo-advisors often provide generic advice, failing to account for an individual’s unique behavior and needs. This paper proposes a novel approach that integrates reinforcement learning (RL), behavioral analytics, and natural language processing to deliver real-time, personalized financial recommendations. We formulate personal finance manageme",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "14.A",
+        "name": "14.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.A",
+        "name": "5.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: How reinforcement learning can drive personalized financial wellness"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: How reinforcement learning can drive personalized financial wellness",
+    "Year: 2015",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pandey & Awasthi_marked.md",
+      "converted_at": "2026-07-21T08:04:51Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

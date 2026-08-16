@@ -1,0 +1,144 @@
+{
+  "paper_id": "10.3390/info14110598",
+  "designation": "international",
+  "title": "Deep Learning for Time Series Forecasting: Advances and Open Problems",
+  "authors": "Casolaro, A.; Capone, V.; Iannuzzo, G.; Camastra, F.",
+  "year": 2023,
+  "venue": "Information",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "12.A"
+  ],
+  "tldr": "Comprehensive survey of deep learning architectures for time series forecasting covering short-term models (CNN, RNN, LSTM, GRU, GNN, GANs, Diffusion Models) and long-term models (Transformer variants) with benchmarking comparisons.",
+  "problem_and_motivation": "Existing reviews on deep learning for time series forecasting lack coverage of Transformer variants, do not distinguish between short-term and long-term forecasting models, omit recent architectures like GNNs and Diffusion Models.",
+  "approach": [
+    "Review categorizes architectures into short-term (CNN, TCN, RNN, LSTM, GRU, GNN, DGP, GANs, Diffusion Models) and long-term (Transformer and variants).",
+    "Survey scope restricted to works from 2016 onward for tractability.",
+    "Benchmarking section provides comparative results on standardized short-term (M4) and long-term (ETT, Electricity, Traffic, Weather, Exchange, ILI) data sets.",
+    "Architecture descriptions include formal mathematical definitions and application tables.",
+    "Transformer variants (Informer, Autoformer, FEDFormer, PatchTST, Crossformer, Pyraformer, Scaleformer, Triformer, Non-stationary Transformer) are reviewed."
+  ],
+  "findings": [
+    "Vanilla RNNs suffer from vanishing/exploding gradients, limiting long-term dependency learning.",
+    "LSTM and GRU gated cells mitigate gradient instability but still struggle with very distant sequence dependencies.",
+    "Graph Neural Networks enable multivariate forecasting by modeling inter-variable relationships.",
+    "Deep Gaussian Processes provide confidence intervals for predictions, unlike most other deep learning architectures.",
+    "GANs serve two roles: data augmentation for small datasets and end-to-end generative forecasting models.",
+    "Diffusion models represent a new generative paradigm for probabilistic time series forecasting.",
+    "PatchTST achieves strong long-term forecasting by treating each variate as independent univariate series.",
+    "Non-stationary Transformer addresses the over-stationarization problem via Series Stationarization and De-stationary Attention.",
+    "Most deep learning forecasting architectures cannot estimate prediction confidence intervals.",
+    "Stationarity assumption violations cause concept drift, dramatically decreasing prediction accuracy."
+  ],
+  "citations": [
+    {
+      "author": "Goodfellow",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning is currently the leading field of machine learning with successful applications across multiple domains.",
+      "role": "context"
+    },
+    {
+      "author": "Hochreiter",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTM networks use gating mechanisms to learn long-term dependencies and mitigate the vanishing gradient problem.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cho",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GRUs use update and reset gates as a simpler gated alternative to LSTMs.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vaswani",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Transformers rely entirely on attention mechanisms, eschewing recurrence to draw global dependencies.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nie",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "PatchTST segments input sequences into local patches processed by a naive Transformer encoder.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Non-stationary Transformer proposes De-stationary Attention to discover temporal dependencies from non-stationary data.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Covers deep learning architectures directly applicable to sequential financial data prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Surveys LSTM, GRU, Transformer, and other forecasting algorithms designed for sequential data."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides benchmark datasets and comparative evaluation methodology for forecasting models."
+      }
+    ],
+    "contribution_to_field": "Comprehensive survey of deep learning architectures for time series forecasting, categorizing models by short-term and long-term horizons. Fills gaps by including Transformer-based models and presenting dedicated benchmarking comparisons. Four open problems identified: lack of confidence interval estimation, overfitting, data augmentation inadequacies, and non-stationarity handling.",
+    "directly_justifies": [
+      "Deep learning applied to time series forecasting can cope with complex high-dimensional series.",
+      "Most deep learning methods except DGPs cannot estimate confidence intervals.",
+      "Vanilla RNNs suffer from vanishing or exploding gradients preventing long-term dependency learning.",
+      "PatchTST achieves competitive long-term forecasting by treating each dimension as independent univariate series.",
+      "Stationarity assumption violations lead to concept drift and dramatic accuracy decreases."
+    ],
+    "limits": [
+      "Survey scope restricted to post-2016 works.",
+      "Spatio-temporal time series forecasting with GNNs explicitly excluded.",
+      "Benchmark comparisons rely on results reported in original papers rather than standardized re-evaluation.",
+      "No systematic hyperparameter sensitivity analysis.",
+      "Does not cover edge deployment or computational cost comparisons."
+    ]
+  },
+  "limitations": [
+    "Survey restricted to works from 2016 onward.",
+    "Spatio-temporal forecasting with GNNs explicitly excluded despite relevance to multivariate financial data.",
+    "Benchmark comparisons rely on results reported in original papers, introducing potential evaluation inconsistencies.",
+    "No computational cost or latency analysis for comparing architectures.",
+    "Does not address concept drift mitigation strategies beyond identifying non-stationarity as an open problem."
+  ],
+  "remember_this": [
+    "Most deep learning forecasting methods cannot provide prediction confidence intervals, except Deep Gaussian Processes.",
+    "Vanilla RNNs fail on long-term dependencies due to vanishing gradients; LSTM and GRU gated cells partially mitigate this.",
+    "PatchTST segments input into local patches processed independently, achieving competitive long-term forecasting performance.",
+    "Stationarity assumption violations cause concept drift leading to dramatic prediction accuracy decreases.",
+    "GANs and Diffusion Models represent new generative paradigms for probabilistic time series forecasting."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Casolaro et al_marked.md",
+      "converted_at": "2026-07-22T12:41:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "paper_id": "10.3390/ijfs13040222",
+  "designation": "local",
+  "title": "Exploring the Interplay of Life Attitude and Cognitive Ability in Shaping the Intention to Stock Market Participation Among Young Professionals in the Philippines",
+  "authors": "Eugene Burgos Mutuc",
+  "year": 2025,
+  "venue": "International Journal of Financial Studies, 13(4), 222",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "4.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "Examines how life attitude (purpose, meaning, goal orientation) and cognitive ability (financial literacy) jointly shape stock market participation intentions among 195 young Filipino professionals using PLS-SEM mediation analysis.",
+  "problem_and_motivation": "The stock market participation puzzle persists despite extensive research on economic, demographic, and cognitive determinants. Broader psychological orientations like life attitude remain underexplored in investment contexts, especially regarding how they interact with cognitive ability. Young professionals in the Philippines, a rapidly growing investor segment, have been neglected despite their unique digital-enabled financial ecosystem.",
+  "approach": [
+    "Quantitative cross-sectional design with 195 young Filipino professionals (aged 20-39) from Bulacan province via simple random sampling.",
+    "Survey using Life Attitude Profile-Revised (LAP-R, 7 dimensions) and Financial Literacy Inventory (van Rooij et al., 2011) as cognitive ability proxy.",
+    "PLS-SEM in SmartPLS 4.0 with bootstrapping (5000 resamples) to test direct and mediating effects.",
+    "Multi-group analysis across sex (male/female) and education (bachelor's/postgraduate) for cross-group stability.",
+    "Harman's single-factor test and full collinearity VIF assessment to rule out common method variance.",
+    "Robustness checks with demographic controls (sex, age, education, employment status) and sensitivity analyses."
+  ],
+  "findings": [
+    "LAP positively predicts SMP (β = 0.154, p = 0.025); Cognitive Ability mediates LAP→SMP (β = 0.051, p = 0.032).",
+    "num: Death Acceptance (DA) strongly predicts SMP (β = 0.312, p < 0.001); Goal Seeking (GS) also significant (β = 0.396, p = 0.009).",
+    "num: Life Purpose (LP) shows a negative relationship with SMP (β = −0.243, p = 0.036), suggesting purpose-driven conservatism.",
+    "num: Cognitive Ability (C) robustly predicts SMP (β = 0.329, p < 0.001); LAP predicts C (β = 0.158, p = 0.023).",
+    "num: Model explains 47.1% of SMP variance (R² = 0.471); with controls, R² increases to 0.496.",
+    "num: Sex moderates: males rely more on cognitive ability (β = 0.42); females on life attitude (β = 0.38).",
+    "num: Postgraduates show stronger path coefficients than bachelor's holders (C→SMP: β = 0.45 vs. 0.37).",
+    "Harman's single-factor test shows first factor explains only 29.32% (< 50% threshold), no CMV concern.",
+    "All HTMT values below 0.85 threshold, confirming discriminant validity among LAP constructs.",
+    "Fit indices: χ²/df = 1.97, CFI = 0.962, TLI = 0.954, RMSEA = 0.042, SRMR = 0.038."
+  ],
+  "key_figures_tables": [
+    "Table 1: Descriptive Statistics of Variables",
+    "Table 2: Internal Consistency and Convergent Validity of Reflective Constructs",
+    "Table 4: Discriminant Validity (Fornell-Larcker Criterion)",
+    "Table 5: Summary of Hypothesis Testing with β, t, p-values",
+    "Figure 1: Conceptual Framework",
+    "Figure 3: Lower-Order Construct",
+    "Figure 4: Higher-Order Structural Model"
+  ],
+  "key_equations": [
+    {
+      "equation": "SMPi = β0 + β1(LAPi) + εi",
+      "explanation": "Direct effect of composite Life Attitude Profile on Intention to Stock Market Participation."
+    },
+    {
+      "equation": "SMPi = β0 + β1(LPi) + β2(EVi) + β3(LCi) + β4(DAi) + β5(WToMi) + β6(GSi) + β7(FMi) + εi",
+      "explanation": "Multiple regression of seven LAP dimensions on SMP."
+    },
+    {
+      "equation": "Ci = β0 + β1(LAPi) + εi",
+      "explanation": "LAP effect on Cognitive Ability (mediator)."
+    },
+    {
+      "equation": "SMPi = β0 + β1(LAPi) + β2(CAi) + εi",
+      "explanation": "Mediation model: LAP and Cognitive Ability jointly predicting SMP."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Life Attitude Profile (LAP)",
+      "definition": "Seven-dimension framework measuring life purpose, existential vacuum, life control, death acceptance, will to meaning, goal seeking, and future meaning to fulfill (Reker et al., 1987)."
+    },
+    {
+      "term": "Cognitive Ability (proxied by financial literacy)",
+      "definition": "Measured via the Financial Literacy Inventory (van Rooij et al., 2011) covering basic numeracy, inflation comprehension, risk diversification, and investment principles."
+    }
+  ],
+  "citations": [
+    {
+      "author": "van Rooij et al.",
+      "year": 2011,
+      "page": 449,
+      "paragraph": 1,
+      "claim": "Financial literacy retains predictive validity for stock market participation even after controlling for wealth and income.",
+      "role": "support"
+    },
+    {
+      "author": "Lusardi & Mitchell",
+      "year": 2014,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Cognitive ability and financial literacy influence participation most strongly when coupled with positive attitudes and confidence.",
+      "role": "support"
+    },
+    {
+      "author": "Haliassos & Bertaut",
+      "year": 1995,
+      "page": 1110,
+      "paragraph": 1,
+      "claim": "Stock market participation puzzle: many households do not hold equities despite expected benefits.",
+      "role": "context"
+    },
+    {
+      "author": "Grinblatt et al.",
+      "year": 2011,
+      "page": 2121,
+      "paragraph": 1,
+      "claim": "Higher IQ levels are significantly correlated with both stock market participation and superior investment performance.",
+      "role": "support"
+    },
+    {
+      "author": "Barber & Odean",
+      "year": 2001,
+      "page": 261,
+      "paragraph": 1,
+      "claim": "Males exhibit higher overconfidence and risk tolerance in financial decisions, affecting investment behavior.",
+      "role": "support"
+    },
+    {
+      "author": "Tang & Baker",
+      "year": 2016,
+      "page": 164,
+      "paragraph": 1,
+      "claim": "Self-esteem and financial knowledge jointly influence financial behavior; psychosocial traits improve financial outcomes through learning.",
+      "role": "support"
+    },
+    {
+      "author": "Kahneman",
+      "year": 2011,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Dual-process model: System 1 (intuitive/affective) and System 2 (analytical) jointly drive decision-making.",
+      "role": "context"
+    },
+    {
+      "author": "Hair et al.",
+      "year": 2021,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "PLS-SEM best practices for variance-based structural modeling with bootstrapping and mediation testing.",
+      "role": "methodology"
+    },
+    {
+      "author": "Steger et al.",
+      "year": 2006,
+      "page": 80,
+      "paragraph": 1,
+      "claim": "Meaning in life questionnaire measuring presence of and search for meaning; meaning-making frameworks.",
+      "role": "context"
+    },
+    {
+      "author": "Deci & Ryan",
+      "year": 2000,
+      "page": 227,
+      "paragraph": 1,
+      "claim": "Self-determination theory: intrinsic motivation and goal pursuit drive proactive behaviors including financial engagement.",
+      "role": "context"
+    },
+    {
+      "author": "Podsakoff et al.",
+      "year": 2003,
+      "page": 879,
+      "paragraph": 1,
+      "claim": "Common method bias remedies including Harman's single-factor test and marker variable approach.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Behavioral Finance",
+        "relevance": "high",
+        "justification": "Core study bridging existential psychology and behavioral finance to explain stock market participation intentions."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Literacy",
+        "relevance": "high",
+        "justification": "Cognitive ability measured via financial literacy inventory serves as the mediating variable."
+      },
+      {
+        "code": "4.A",
+        "name": "Investment Behavior",
+        "relevance": "high",
+        "justification": "Directly examines intention to participate in stock market investments."
+      },
+      {
+        "code": "4.B",
+        "name": "Personal Finance Management",
+        "relevance": "medium",
+        "justification": "Stock market participation is a component of personal financial planning and wealth accumulation."
+      },
+      {
+        "code": "7.B",
+        "name": "Financial Decision-Making",
+        "relevance": "high",
+        "justification": "Focuses on the psychological and cognitive determinants of financial decision-making among young professionals."
+      }
+    ],
+    "contribution_to_field": "Integrates existential psychology (life attitude) with behavioral finance to demonstrate that investment intentions are shaped by sense of meaning, purpose, and cognitive preparedness, not purely rational calculation.",
+    "directly_justifies": [
+      "Odin's user profiling feature can incorporate psychological orientation (life attitude) alongside financial literacy to personalize budgeting recommendations.",
+      "Supports the need for financial education modules in Odin that go beyond numeracy to include purpose-driven goal setting."
+    ],
+    "limits": [
+      "Limited to Filipino young professionals in Bulacan; may not generalize to other Philippine regions or countries.",
+      "Cross-sectional design restricts causal interpretation; longitudinal studies needed.",
+      "Self-reported data may introduce social desirability bias.",
+      "LAP-R used without local cultural adaptation or pilot testing for the Philippine population."
+    ],
+    "topic_mapping_rationale": "Study is non-algorithmic and Philippine-origin (local). Focus on behavioral finance, financial literacy, investment behavior, and financial decision-making maps to topics 1.A, 1.C, 4.A, 4.B, 7.B."
+  },
+  "limitations": [
+    "Self-reported survey data may contain response biases and social desirability effects.",
+    "Cross-sectional design captures relationships at a single point; causal direction cannot be established.",
+    "Sample limited to young professionals in Bulacan province, restricting geographic and demographic generalizability.",
+    "No cultural adaptation or pilot testing of LAP-R instrument for the Filipino population.",
+    "Financial literacy as proxy may not capture the full breadth of cognitive ability (e.g., abstract reasoning).",
+    "Absence of a marker variable for formal CMV testing, though procedural remedies were applied."
+  ],
+  "remember_this": [
+    "Life attitude shapes investment intent, mediated by cognitive ability.",
+    "Death acceptance and goal seeking increase stock market participation.",
+    "Life purpose negatively predicts investment — purpose-driven conservatism.",
+    "Men rely on cognition; women on life attitude for investing.",
+    "Model explains 47% of SMP variance — strong for behavioral research."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Mutuc_marked.md",
+      "converted_at": "2026-07-21T07:43:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "paper_id": "10.2139/ssrn.4123456",
+  "designation": "international-algorithm-specific",
+  "title": "Personal Financial Information Presentation and Consumer Spending",
+  "authors": "Levi, Y.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": ["1.C", "2.A", "2.B", "3.B", "4.A", "4.B", "5.A", "6.A", "7.A", "7.B", "8.A", "9.A", "9.B", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C", "13.A"],
+  "tldr": "Information design influences consumer spending in a randomized field experiment, with a consumption-oriented frame and salient index-spending comparison reducing discretionary spending by 15%.",
+  "problem_and_motivation": "Consumers' spending habits are resistant to change, and traditional saving interventions are costly or limited to retirement accounts. It was unknown whether subtle changes in how personal financial information is presented could effectively influence actual spending behavior.",
+  "approach": [
+    "Randomized field experiment with 3,138 users of an online account aggregation app.",
+    "Participants received a personalized index representing net worth as lifetime monthly cash flow.",
+    "Treatments varied the index's framing (Financial Sustainability Index vs. Life Annuity Index) and the salience of its comparison to historical spending via a context plot.",
+    "Data on transactions and login activity were collected for 25 months surrounding the intervention.",
+    "Difference-in-differences and event-study regressions with individual and time fixed effects were used for analysis.",
+    "Discretionary spending was defined using GICS categories and analyzed alongside specific sub-categories.",
+    "Additional analyses examined effects on large transactions, cash withdrawals, and non-discretionary spending.",
+    "The study includes robustness checks using an inflated index and tests for persistence of effects post-treatment.",
+    "Analysis of login activity was conducted to control for attention and engagement.",
+    "A third variation tested current- vs. future-self framing but found no significant impact."
+  ],
+  "findings": [
+    "num: Consumers exposed to the consumption frame and context plot reduced discretionary spending by 15% relative to controls.",
+    "num: The decrease in discretionary spending equated to approximately $553 per month, or 4.5% of overall monthly spending.",
+    "The reduction was most pronounced in tempting categories: restaurants (14%), clothing (20%), entertainment (14%), and travel (24%).",
+    "num: Affected users also reduced cash withdrawals by 25%, indicating additional spending reduction.",
+    "The spending decrease began immediately with the experiment and persisted for several months after the intervention was removed.",
+    "No significant change was found in non-discretionary spending categories like gas, groceries, or utilities.",
+    "num: A 6% decline in overall spending was observed for treated groups, though significant only at the 10% level.",
+    "Login frequency increased by about 1.3 logins per month for all treated groups, indicating heightened attention.",
+    "The effect was robust to the exact annuity quote used, as an inflated index produced similar results.",
+    "The combined consumption frame and salient context were necessary; either element alone did not produce a significant behavioral response."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Dashboard page for FSI-Plot treatment showing index and spending plot → Frame and context combined.",
+    "Figure 2: Net worth and index levels over life cycle → Illustrates the dynamics of the personalized index.",
+    "Figure 3: Monthly logins by treatment group → All treatments increased login activity similarly.",
+    "Figure 4: Monthly discretionary spending by treatment group → FSI-Plot groups show immediate and sustained decrease.",
+    "Table 1: Summary of treatment groups → Outlines the experimental design and group conditions.",
+    "Table 5: Treatment effects on discretionary spending → Statistically significant reduction for FSI-Plot groups.",
+    "Table 7: Effects on spending categories → Shows broad-based reduction across discretionary categories.",
+    "Table 6: Effects over four-month intervals → Demonstrates persistence of the spending reduction."
+  ],
+  "key_equations": [
+    {
+      "equation": "y_{i,t} = \\sum_{j=2}^{5} \\beta_j TG_{j,i} Intra_t + \\sum_{j=2}^{5} \\gamma_j TG_{j,i} Post_t + \\delta_i + \\theta_j + \\epsilon_{i,t}",
+      "explanation": "Main difference-in-differences specification with individual and time fixed effects."
+    },
+    {
+      "equation": "y_{i,t} = \\sum_{t=-4}^{19} \\beta_t I(t) + \\delta_i + \\epsilon_{i,t}",
+      "explanation": "Event-study specification for each treatment group separately."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "FSI",
+      "definition": "Financial Sustainability Index: consumption-framed name for the personalized index designed to induce fear appeal."
+    },
+    {
+      "term": "LAI",
+      "definition": "Life Annuity Index: neutrally framed name for the personalized index."
+    },
+    {
+      "term": "Context plot",
+      "definition": "Time series plot directly comparing the index level with the user's historical monthly spending."
+    },
+    {
+      "term": "Discretionary spending",
+      "definition": "Spending on items consumers can adjust over a short period, defined using Consumer Discretionary GICS categories."
+    },
+    {
+      "term": "GIC code 25",
+      "definition": "Global Industry Classification Standard code for the Consumer Discretionary sector."
+    },
+    {
+      "term": "Income Solutions®",
+      "definition": "Hueler's annuity quoting platform used to obtain life annuity price quotes."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Goldstein",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "When net worth is sufficiently high, people tend to perceive it as having a higher value than the equivalent monthly cash flow.",
+      "role": "context"
+    },
+    {
+      "author": "Goda",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Individuals respond to information about changes in their cash flow stream.",
+      "role": "context"
+    },
+    {
+      "author": "Kahneman",
+      "year": 1992,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Anchor effects are especially pronounced when no other competing reference points or information is available.",
+      "role": "context"
+    },
+    {
+      "author": "Sussman",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumers systematically underestimate future expenditures on exceptional items.",
+      "role": "context"
+    },
+    {
+      "author": "Karlan",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Salient reminders promote consumers to stay within their means.",
+      "role": "context"
+    },
+    {
+      "author": "Raghubir",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Individuals assign a higher subjective value to cash transactions compared to non-cash transactions.",
+      "role": "context"
+    },
+    {
+      "author": "Yogo",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Negative shock elicits a larger response than a positive economic shock in models with habit formation and loss aversion.",
+      "role": "context"
+    },
+    {
+      "author": "Chetty",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Increase in retirement contributions does not crowd out savings in other accounts.",
+      "role": "context"
+    },
+    {
+      "author": "Campbell",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education programs have negligible effects on saving behavior.",
+      "role": "critique"
+    },
+    {
+      "author": "Madrian",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Default effects are powerful in influencing savings and retirement account contributions.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Focuses on general consumer financial behavior, not Filipino-specific."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "Study population is U.S.-based; cultural specificity is not addressed."
+      },
+      {
+        "code": "2.B",
+        "name": "Seasonal and Cyclical Spending Patterns",
+        "relevance": "low",
+        "justification": "Acknowledges seasonal effects (December/January) but not the primary focus."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "high",
+        "justification": "Defines and empirically tests discretionary vs. non-discretionary categories."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Account aggregation app serves as the experimental platform, a key PFS example."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Discusses limitations of current tools and the potential of information design."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "low",
+        "justification": "Implies heterogeneity in spending response but does not profile users systematically."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "The index provides a benchmark, but the paper is not about predictive modeling."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "The intervention provides a spending benchmark, akin to a budgeting strategy."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Does not provide specific budget recommendations, only a spending benchmark."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Not focused on anomaly detection."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Sample restricted to mobile app users to ensure consistent exposure."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "medium",
+        "justification": "Examines how dashboard design (information presentation) influences behavior."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Data privacy is acknowledged (no PII used) but not a focus."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Not directly measured or discussed."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Measures and analyzes user login activity as a proxy for engagement and attention."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "medium",
+        "justification": "Examines persistence of effect post-treatment, related to retention."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses a rigorous difference-in-differences and event-study framework."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Methodology applicable to evaluating budget-recommendation effects."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Decrease in spending directly corresponds to an increase in saving."
+      }
+    ],
+    "contribution_to_field": "This paper provides causal evidence that subtle information design manipulations within personal finance management systems can significantly alter consumer spending behavior. It demonstrates that a combination of consumption framing and a salient spending benchmark is necessary to overcome strong spending habits and behavioral inertia. The study extends the literature on nudging and choice architecture from retirement savings to broader discretionary spending, showing the potential for low-cost interventions. The persistent effect of the treatment, even after removal, suggests an asymmetrical adjustment of spending habits consistent with habit formation and loss aversion models. The paper contributes a robust empirical methodology and a rich dataset for studying the real-world impact of information presentation on financial behavior.",
+    "directly_justifies": [
+      "Minor variations in information presentation can significantly affect financial behavior.",
+      "A consumption-oriented frame and a salient comparison with past spending reduced discretionary spending.",
+      "The decrease in spending was most pronounced in tempting categories like entertainment and restaurants.",
+      "The effect started immediately and persisted for months after the intervention was removed.",
+      "Information design tools can be implemented at low cost to a broad range of consumers."
+    ],
+    "limits": [
+      "The study uses transaction-level data which may be incomplete, as users may not have linked all accounts.",
+      "Inaccurate estimation of users' net worth and personalized index is possible due to omitted accounts or real assets.",
+      "The sample consists of relatively wealthy, active users, limiting generalizability to other populations.",
+      "The experiment was conducted in 2014 and may not reflect current financial technology and user behavior."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was conducted. High relevance was assigned to topics directly supported by the paper's core claims, such as expense category design (3.B), engagement dynamics (11.A), evaluation frameworks (12.A), and savings goal management (13.A). Medium relevance was given to topics like the landscape of PFS (4.A, 4.B), mobile-first design (9.A, 9.B), and retention mechanisms (11.B), as these are contextually relevant but not the primary focus. Low relevance was assigned to culturally specific practices (2.A) and seasonal patterns (2.B), as the paper's findings are not culturally situated and seasonal effects are only mentioned. Contextual relevance was assigned to topics like predictive modeling (6.A) and anomaly detection (8.A), as these are not addressed but relate to the broader domain of PFS. The topics related to Filipino demographics (1.A, 1.B, 1.C) were deemed contextual or low relevance as the study is U.S.-based and not specifically about Filipino young professionals. The overall topical coverage centers on the intersection of information design, consumer financial behavior, and the evaluation of behavioral interventions within PFS."
+  },
+  "limitations": [
+    "Potential incompleteness of transaction-level data if users did not link all accounts. [unacknowledged]",
+    "Inaccurate estimation of users' net worth and personalized index due to omitted accounts or real assets. [unacknowledged]",
+    "Sample restricted to relatively wealthy, active users, limiting generalizability. [unacknowledged]",
+    "The experiment was conducted in 2014 and may not reflect current financial technology and user behavior. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Consumption frame plus salient context reduced discretionary spending by 15%.",
+    "The spending reduction was immediate and persisted for months post-intervention.",
+    "Effects were strongest on tempting categories like restaurants, clothing, and entertainment.",
+    "Information design tools offer a low-cost alternative to traditional saving interventions.",
+    "The framing effect required both a fear appeal and a salient spending comparison to work."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Levi_marked.md",
+      "converted_at": "2026-07-21T13:56:57Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

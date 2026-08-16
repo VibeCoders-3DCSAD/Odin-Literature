@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.56734/eurasianjr.v3n2p1",
+  "designation": "local",
+  "title": "Financial Well-Being of Young Professionals in the Philippines: A Survey-Based Analysis",
+  "authors": "Dela Cruz, R.; Santos, M.; Reyes, T.",
+  "year": 2023,
+  "venue": "Eurasian Journal of Research and Development",
+  "odin_topics": ["1.A", "1.B", "2.A", "2.B", "3.A"],
+  "tldr": "Survey of 384 young Filipino professionals (age 22-35) reveals low financial well-being with only 23% having emergency funds, financial literacy scores below 50%, and high reliance on informal financial instruments.",
+  "problem_and_motivation": "Young professionals in the Philippines face rising costs of living, stagnant wages, and limited financial literacy, but there is insufficient empirical data on their financial well-being and specific challenges to inform policy and PFMS design.",
+  "approach": [
+    "Cross-sectional survey of 384 young Filipino professionals aged 22-35 across Metro Manila, Cebu, and Davao.",
+    "Multi-stage stratified random sampling by industry sector, income bracket, and location.",
+    "Survey instrument measured: financial literacy (20-item quiz), financial behavior (saving, budgeting, debt), financial stress (Likert scale), and financial satisfaction.",
+    "Administered via online questionnaire and in-person interviews (mixed mode).",
+    "Statistical analysis: descriptive statistics, ANOVA for group comparisons, linear regression for predictors of financial well-being.",
+    "Financial well-being measured using CFPB Financial Well-Being Scale adapted for Philippine context."
+  ],
+  "findings": [
+    "num: Only 23% of respondents have emergency funds covering 3+ months of expenses.",
+    "num: 68% report high financial stress, with healthcare costs and housing as top stressors.",
+    "num: Average financial literacy score: 48.7% (significantly below 60% benchmark for developed economies).",
+    "num: 72% use budgeting tools of some kind, 81% of those use simple notebook/excel vs. 19% digital PFMS.",
+    "Income level explains 34% of variance in financial well-being; financial literacy explains 28%.",
+    "Bank account ownership near-universal (91%), but only 12% have investment accounts.",
+    "Informal savings mechanisms (paluwagan, coin banks) used by 57% of respondents."
+  ],
+  "key_figures_tables": [
+    "Table 4: Financial well-being scores by demographic segments",
+    "Figure 3: Financial stress sources ranked by frequency (healthcare, housing, education)",
+    "Table 7: Regression results for predictors of financial well-being"
+  ],
+  "key_equations": [{"equation": "FWB = β₀ + β₁·FL + β₂·Income + β₃·Age + β₄·Education + ε", "explanation": "Linear regression model for financial well-being predictors."}],
+  "definitions": [
+    {"term": "Financial well-being", "definition": "Ability to meet current and ongoing financial obligations, feel secure about financial future, and make choices that allow enjoyment of life. (CFPB)"},
+    {"term": "Paluwagan", "definition": "Informal rotating savings and credit association common in the Philippines."}
+  ],
+  "citations": [
+    {"author": "CFPB", "year": 2015, "page": 0, "paragraph": 0, "claim": "Financial well-being encompasses security, freedom of choice, and control over finances.", "role": "context"},
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "Financial literacy around the world averages 58% on basic concepts.", "role": "comparison"},
+    {"author": "BSP", "year": 2021, "page": 0, "paragraph": 0, "claim": "Philippine financial inclusion survey shows 53% of adults have formal bank accounts.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals' Financial Literacy", "relevance": "high", "justification": "Core contribution: measures financial literacy of Filipino young professionals."},
+      {"code": "1.B", "name": "Filipino Young Professionals' PF Behavior", "relevance": "high", "justification": "Core contribution: survey of saving, budgeting, and debt behavior of Filipino young professionals."},
+      {"code": "2.A", "name": "Cultural Nuances in Financial Decision-Making", "relevance": "medium", "justification": "Discusses paluwagan and informal financial practices."},
+      {"code": "2.B", "name": "Gender-specific Financial Issues", "relevance": "low", "justification": "Gender demographic analysis with some group comparisons."},
+      {"code": "3.A", "name": "Spending Patterns of Filipino Young Professionals", "relevance": "medium", "justification": "Documents spending patterns including healthcare and housing costs."}
+    ],
+    "contribution_to_field": "Provides comprehensive empirical data on financial well-being of Filipino young professionals, a key target demographic for PFMS. Identifies that 72% already use budgeting tools (but mostly manual), and only 19% use digital PFMS — indicating a significant opportunity for digital PFMS adoption. Establishes baseline financial literacy (48.7%) and well-being metrics for future PFMS evaluation.",
+    "directly_justifies": [
+      "Filipino young professionals have low financial well-being and high financial stress.",
+      "Only 23% have adequate emergency funds.",
+      "19% use digital PFMS despite 72% using some form of budgeting tool.",
+      "Financial literacy score of 48.7% indicates strong need for educational PFMS features."
+    ],
+    "limits": [
+      "Cross-sectional design limits causal inference. [acknowledged]",
+      "Sample limited to three major urban areas; rural young professionals not represented. [acknowledged]",
+      "Self-reported data subject to social desirability and recall bias. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 1.A and 1.B were flagged as highly relevant because the paper directly surveys Filipino young professionals' financial literacy and behavior. Domain 2.A was flagged as medium relevance for coverage of informal financial mechanisms. Domain 2.B was flagged as low relevance for gender comparisons. Domain 3.A was flagged as medium relevance for spending patterns data. Domains 4-14 were rejected as the paper is a survey-based empirical study, not involving system design, ML, or PFMS development."
+  },
+  "limitations": [
+    "Cross-sectional design limits causal inference. [acknowledged]",
+    "Urban-only sample; rural young professionals not represented. [acknowledged]",
+    "Self-reported data subject to bias. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Only 23% of Filipino young professionals have adequate emergency funds.",
+    "68% report high financial stress.",
+    "72% use budgeting tools but only 19% use digital PFMS.",
+    "Average financial literacy score: 48.7%.",
+    "57% still use informal savings mechanisms like paluwagan."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:02:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dela Cruz et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

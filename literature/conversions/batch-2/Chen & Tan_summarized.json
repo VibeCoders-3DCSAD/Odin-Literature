@@ -1,0 +1,91 @@
+{
+  "paper_id": "10.1145/3785706.3785906",
+  "designation": "international-algorithm-specific",
+  "title": "LSTM-Based Consumer Behavior Prediction Model Research",
+  "authors": "Chen, S.; Tan, W.",
+  "year": 2025,
+  "venue": "2025 2nd International Conference on Digital Economy and Computer Science (DECS 2025)",
+  "odin_topics": ["6.A", "6.B", "3.A"],
+  "tldr": "Proposes a bidirectional LSTM with self-attention for consumer purchase prediction, achieving 94.2% accuracy on 80M interaction records from 500K users.",
+  "problem_and_motivation": "Traditional consumer behavior models (linear regression, decision trees, SVM) cannot capture temporal dependencies in large-scale e-commerce data. Existing deep learning methods lack optimized architectures for multi-class purchase intention prediction.",
+  "approach": [
+    "Constructs a 128-dimensional feature dataset from 500K users and 80M interaction records across clothing, electronics, and home goods.",
+    "Uses Apache Spark distributed computing for preprocessing with 30-day sliding windows and 50% overlap.",
+    "Implements a bidirectional LSTM with 512 hidden units, self-attention mechanism (8 heads, 64-dim key-value pairs), and adaptive dropout (0.5 to 0.3).",
+    "Optimizes via Adam with cosine annealing learning rate scheduling, weighted cross-entropy loss, and L2 regularization.",
+    "Evaluates with accuracy, precision, recall, F1-score, and 10-fold cross-validation with statistical significance testing."
+  ],
+  "findings": [
+    "num: Model achieved 94.2% accuracy, 93.8% precision, 94.7% recall, and 94.2% F1-score.",
+    "num: 3.0 percentage point improvement over standard LSTM, 10.7 points over traditional ML methods.",
+    "num: High-frequency users achieved 96.1% accuracy; new users achieved 91.8% accuracy (23.6% improvement over traditional methods).",
+    "num: High-value customers reached 96.7% accuracy.",
+    "Behavioral features dominated (cumulative score 0.521), with purchase frequency the top predictor (0.187).",
+    "Removing any Top-5 feature caused a 3.2 percentage point performance decrease."
+  ],
+  "key_figures_tables": [
+    "Table 2: Model Performance Comparison → Proposed LSTM at 94.2% vs logistic regression at 78.2%.",
+    "Table 3: Performance Analysis by User Groups → Consistent gains across all user segments.",
+    "Table 4: Feature Importance Ranking → Purchase frequency (0.187) is the top predictor.",
+    "Figure 4: Attention Weight Visualization → Recency bias ratio of 1.847 for recent 7-day behaviors."
+  ],
+  "key_equations": [
+    {"equation": "\\alpha_t = \\text{softmax}(e_t)", "explanation": "Self-attention weight for temporal step t."}
+  ],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory network for sequential data modeling"},
+    {"term": "BiLSTM", "definition": "Bidirectional LSTM with forward and backward hidden layers"},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations for feature importance attribution"}
+  ],
+  "citations": [
+    {"author": "Yuan", "year": 2025, "page": 2, "paragraph": 1, "claim": "Bio-inspired hybrid path planning for robotic navigation.", "role": "context"},
+    {"author": "Liu", "year": 2025, "page": 1, "paragraph": 1, "claim": "Hybrid YOLO-UNet3D for protein particle annotation.", "role": "methodology"},
+    {"author": "Xu", "year": 2025, "page": 1, "paragraph": 1, "claim": "Multi-strategy enhanced bird optimization algorithm.", "role": "methodology"},
+    {"author": "Cui", "year": 2025, "page": 2, "paragraph": 1, "claim": "Multi-scale feature aggregation for visual retrieval.", "role": "methodology"},
+    {"author": "Wang", "year": 2025, "page": 1, "paragraph": 1, "claim": "Efficient supply chain logistics scheduling via network flow.", "role": "context"},
+    {"author": "Liu", "year": 2024, "page": 1, "paragraph": 1, "claim": "Optimized pH sensing for IoT precision farming.", "role": "context"},
+    {"author": "Wang", "year": 2022, "page": 1, "paragraph": 1, "claim": "Energy efficient routing for WSN using firefly algorithm.", "role": "context"},
+    {"author": "Yang", "year": 2025, "page": 1, "paragraph": 1, "claim": "Generative adversarial text summarization with reinforcement learning.", "role": "context"},
+    {"author": "Yang", "year": 2025, "page": 1, "paragraph": 1, "claim": "Web attack detection using LLM with autoencoder and MLP.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Proposes LSTM-based model for predicting consumer purchase behavior"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Uses bidirectional LSTM with self-attention for temporal purchase sequence forecasting"},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "Product category prediction is a minor component of the five-class intention output"}
+    ],
+    "contribution_to_field": "This paper presents a bidirectional LSTM architecture with self-attention mechanisms for multi-class consumer purchase intention prediction. It demonstrates that behavioral features (purchase frequency, browsing duration) are substantially more predictive than demographic features for e-commerce behavior forecasting. The architecture achieves 94.2% accuracy on a large-scale dataset and shows strong generalization across user segments including new users and high-value customers.",
+    "directly_justifies": [
+      "Behavioral features dominate demographic features (cumulative 0.521 vs 0.078).",
+      "BiLSTM with self-attention achieves 94.2% accuracy on 500K user dataset.",
+      "High-value customers reach 96.7% prediction accuracy."
+    ],
+    "limits": [
+      "Dataset from a single e-commerce platform limits generalizability.",
+      "Does not address cold-start for users with no history.",
+      "Model has 2.1M parameters requiring GPU for training."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 6.A and 6.B were flagged as high relevance because the paper's core contribution is predictive modeling of consumer purchase behavior using a time-series forecasting algorithm (LSTM). Topic 3.A was rated low because while the model predicts purchase categories, it does not propose an expense categorization framework. All Philippine-specific topics (1.x, 2.x) were rejected as the paper uses Chinese e-commerce data. Topics 4.x, 5.x, 7.x-14.x were rejected as they address personal finance system design, budgeting, and user experience, which this paper does not cover."
+  },
+  "limitations": [
+    "Model needs improvement for impulsive purchasing and external event-driven consumption.",
+    "Single e-commerce platform data may limit generalizability.",
+    "No comparison with transformer-based alternatives. [unacknowledged]"
+  ],
+  "remember_this": [
+    "BiLSTM with attention achieved 94.2% accuracy on 80M interaction records.",
+    "Behavioral features are 6.7x more predictive than demographic features.",
+    "High-value customers reached 96.7% prediction accuracy.",
+    "Self-attention mechanism improved key feature identification by 12.5%.",
+    "New users achieved 91.8% accuracy using short-term behavioral features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chen & Tan_marked.md",
+      "converted_at": "2026-07-22T12:53:53Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

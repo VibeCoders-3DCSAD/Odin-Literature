@@ -1,0 +1,247 @@
+{
+  "paper_id": "10.3390/s23167167",
+  "designation": "international",
+  "title": "Continual Deep Learning for Time Series Modeling",
+  "authors": "Ao, S.-I.; Fayek, H.",
+  "year": 2023,
+  "venue": "Sensors",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Systematic review of deep learning, advanced preprocessing, and continual learning methods for real-world sensor time series classification and forecasting under non-stationary distributions.",
+  "problem_and_motivation": "Real-world sensor time series data are often non-stationary, causing deep learning models to suffer catastrophic forgetting when distributions shift after deployment. Existing surveys on continual learning focus primarily on image classification, NLP, or reinforcement learning, leaving sensor time series applications under-addressed.",
+  "approach": [
+    "Surveyed recent deep learning applications across real-world sensor time series domains including traffic, energy, healthcare, and environmental monitoring.",
+    "Reviewed advanced preprocessing techniques such as empirical mode decomposition, wavelet transforms, and data augmentation for non-stationary sensor data.",
+    "Taxonomized continual learning methods into regularization-based, replay, and parameter isolation families for time series tasks.",
+    "Synthesized comparative results from 30+ case studies across deep learning, preprocessing, and continual learning approaches.",
+    "Identified scenarios where deep learning alone suffices versus when continual learning is necessary due to distribution shift.",
+    "Evaluated trade-offs between computational cost, storage requirements, and forgetting mitigation across continual learning approaches."
+  ],
+  "findings": [
+    "CNN with direct multi-step procedure outperformed seasonal ARIMAX by num: 22.6% in day-ahead building load prediction.",
+    "Bi-LSTM achieved num: 98.7% overall accuracy for land use classification from Sentinel-2 time series.",
+    "LSTM traffic flow forecasting achieved num: 4.82% MAPE versus 20.97% for ARIMA and 9.06% for BPNN.",
+    "MC-SGD reduced forgetting by num: 29% compared to other continual learning approaches for wearable activity recognition.",
+    "ECG preprocessing with signal squeezing and stretching achieved num: over 99% accuracy for arrhythmia classification.",
+    "EMD-based preprocessing improved sEMG gesture classification validation accuracy from num: 94.22% to 99.73%.",
+    "No single deep learning method universally fits all time series anomaly detection tasks.",
+    "Replay with exemplars performs best among continual learning approaches for mobile and embedded sensing after considering all resource trade-offs.",
+    "Random Connectivity LSTM reduced computing complexity by num: 30% while maintaining similar forecasting performance to standard LSTM.",
+    "All CL models can mitigate forgetting, but only replay models accumulate knowledge over time."
+  ],
+  "key_figures_tables": [
+    "Table 1: Summary of DL techniques for sensor time series applications -> Surveys MLP, RNN, LSTM, CNN, GNN, and hybrid models across 17 application cases.",
+    "Table 2: Summary of advanced preprocessing techniques for sensor time series DL -> Preprocessing such as EMD, wavelet, and data augmentation improves classification and forecasting accuracy.",
+    "Table 3: Summary of continual learning techniques for time series applications -> CL approaches address catastrophic forgetting across 12 sensor time series case studies.",
+    "Figure 1: Tree diagram grouping popular DL methods for sensor time series -> Organizes MLP, RNN, LSTM, CNN, GNN, and hybrid methods by application domain.",
+    "Figure 2: Tree diagram grouping preprocessing methods -> Categorizes feature engineering, decomposition, filtering, and augmentation techniques.",
+    "Figure 3: Taxonomy of continual learning methods for sensor time series -> Separates regularization, replay, parameter isolation, and combined CL approaches."
+  ],
+  "key_equations": [
+    {
+      "equation": "L_i = q/N sum L(y,r) + (1-q) sum 1/N sum L(y,j) ",
+      "explanation": "CL objective balancing new task loss with replayed past task loss, weighted by importance q."
+    },
+    {
+      "equation": "Stationarity: E(y_t) = mu, Var(y_t) = sigma squared, Cov(y_t,y_t-k) = gamma(k)",
+      "explanation": "Mathematical conditions for weak stationarity of a time series."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Catastrophic Forgetting",
+      "definition": "Abrupt loss of previously learned knowledge when neural networks are trained on new data with shifted distributions."
+    },
+    {
+      "term": "Continual Learning",
+      "definition": "A machine learning paradigm that enables models to learn sequentially from non-stationary data streams while retaining prior knowledge."
+    },
+    {
+      "term": "Elastic Weight Consolidation",
+      "definition": "A regularization-based continual learning method that slows forgetting by constraining updates to important previously learned weights."
+    },
+    {
+      "term": "Empirical Mode Decomposition",
+      "definition": "An adaptive signal decomposition method that breaks non-stationary time series into intrinsic mode functions."
+    },
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory, an RNN variant with gating mechanisms that enables learning long-term dependencies."
+    },
+    {
+      "term": "CNN",
+      "definition": "Convolutional Neural Network, a feedforward neural network using convolutional and pooling layers to extract features."
+    },
+    {
+      "term": "GNN",
+      "definition": "Graph Neural Network, a neural network that processes data represented in graph domains."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lange",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey on CL covering stability-plasticity trade-off and the three-family taxonomy of regularization, replay, and parameter isolation methods.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comprehensive CL survey highlighting that recent surveys partially covered CL applications but none focused on time series analysis tasks.",
+      "role": "context"
+    },
+    {
+      "author": "Kirkpatrick",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced Elastic Weight Consolidation to overcome catastrophic forgetting in neural networks by constraining important weights.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kiyasseh",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed CLOPS continual learning model using uncertainty-based acquisition replay that outperformed GEM and MIR across three clinical scenarios.",
+      "role": "finding"
+    },
+    {
+      "author": "Zheng",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTM traffic flow forecasting achieved 4.82% MAPE, outperforming ARIMA at 20.97% and BPNN at 9.06%.",
+      "role": "finding"
+    },
+    {
+      "author": "Campos-Taberner",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Two-layer Bi-LSTM achieved 98.7% overall accuracy for Sentinel-2 land use classification in Valencia, Spain.",
+      "role": "finding"
+    },
+    {
+      "author": "Kwon",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Replay with exemplars performs best for mobile and embedded sensing CL when balancing performance, storage, computation, and memory trade-offs.",
+      "role": "finding"
+    },
+    {
+      "author": "Hochreiter",
+      "year": 1997,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Designed LSTM with internal memory unit and three gates to address vanishing and exploding gradient problems in RNNs.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mahmoud",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Surveyed DL models including CNN, RNN, LSTM, GRU, and DBNs for time series forecasting showing DL outperforms classical methods.",
+      "role": "baseline"
+    },
+    {
+      "author": "Cossu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Evaluated continual learning in RNNs showing forgetting issues become more serious for longer sequences.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews deep learning predictive models for time series forecasting across multiple domains including financial applications."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Directly reviews LSTM, GRU, CNN-LSTM, and hybrid forecasting algorithms for sequential time series data."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Covers time series anomaly detection methods using RNN, CNN, graph networks, and variational autoencoders for sensor data."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Reviews anomaly detection algorithms including GDN, multi-scale convolutional variational autoencoder, and CL-based approaches."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "medium",
+        "justification": "Identifies gaps in existing DL and CL systems for time series, applicable to financial forecasting gaps."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "medium",
+        "justification": "Evaluates CL approaches for mobile and embedded sensing devices considering storage, computation, and memory constraints."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive systematic review of how deep learning, advanced preprocessing, and continual learning methods can be jointly deployed for real-world time series classification and forecasting. It introduces a three-tier framework distinguishing scenarios where standard DL suffices, where preprocessing is needed, and where continual learning is required due to non-stationary data distributions.",
+    "directly_justifies": [
+      "LSTM and CNN are identified as the best-performing DL models for time series forecasting across energy, finance, and traffic domains.",
+      "Preprocessing such as EMD and wavelet transforms can improve classification accuracy by over 5 percentage points for non-stationary sensor data.",
+      "Continual learning addresses catastrophic forgetting when DL models encounter non-stationary time series distributions post-deployment.",
+      "Replay with exemplars achieves the best trade-off between performance and resource requirements for mobile embedded sensing CL.",
+      "No single deep learning method universally fits all time series anomaly detection tasks."
+    ],
+    "limits": [
+      "The survey focuses exclusively on sensor time series applications and does not cover financial transaction time series specifically.",
+      "Most CL case studies use relatively small-scale benchmarks, limiting generalizability to large-scale financial systems.",
+      "The survey does not provide quantitative meta-analysis or benchmarking across the reviewed methods.",
+      "Limited coverage of real-time or online deployment scenarios for CL in production financial systems."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned. Domain 6 received high relevance for its direct review of forecasting algorithms. Domain 8 received medium relevance through its coverage of time series anomaly detection. Domain 4 received low-to-medium relevance via discussion of DL system limitations. Domain 14 received medium relevance from CL evaluation for mobile and embedded devices. All other domains were rejected."
+  },
+  "limitations": [
+    "Survey focuses only on sensor time series applications, not financial transaction time series specifically. [unacknowledged]",
+    "Most continual learning case studies use small-scale benchmarks that may not generalize to production systems.",
+    "No quantitative meta-analysis or unified benchmarking across the reviewed methods was conducted. [unacknowledged]",
+    "The survey does not address real-time or online deployment challenges for CL in financial applications. [unacknowledged]"
+  ],
+  "remember_this": [
+    "LSTM and CNN are the best-performing models for time series forecasting across energy, finance, and traffic domains.",
+    "Continual learning addresses catastrophic forgetting when DL models encounter non-stationary time series distributions.",
+    "Replay with exemplars achieves the best trade-off between performance and resource requirements for embedded sensing CL.",
+    "Preprocessing such as EMD and wavelet transforms can improve classification accuracy by over 5 percentage points.",
+    "No single deep learning method universally fits all time series anomaly detection tasks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:30:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Ao & Fayek_marked.md",
+      "converted_at": "2026-07-22T11:58:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

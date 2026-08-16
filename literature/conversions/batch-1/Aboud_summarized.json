@@ -1,0 +1,98 @@
+{
+  "paper_id": "10.21070/acopen.10.2025.12858",
+  "designation": "international-algorithm-specific",
+  "title": "Goal Programming Model in Financial Planning of the International Development Bank",
+  "authors": "Aboud, M.M.S.F.",
+  "year": 2025,
+  "venue": "Academia Open",
+  "odin_topics": ["7.C", "4.B"],
+  "tldr": "A weighted-preemptive hybrid Goal Programming model optimized seven competing financial objectives for an Iraqi bank from 2016 to 2024, achieving near-optimal solutions with minimal deviations using WINQSB.",
+  "problem_and_motivation": "Financial institutions face complex decision-making challenges from multiple conflicting objectives such as profitability, cost control, and liquidity. Traditional financial planning models struggle to accommodate these competing goals, especially in developing economies with resource constraints. Goal Programming application in the financial sector of emerging markets like Iraq remains underexplored.",
+  "approach": [
+    "Financial data from IDB annual reports spanning 2016-2024 were collected and scaled to billion Iraqi dinars.",
+    "Seven competing financial objectives were formulated as constraints: revenue, expenses, net profit, fixed assets, loans, common stock, and financial management ratio.",
+    "A weighted-preemptive hybrid Goal Programming model was developed combining priority ranking with assigned deviation weights.",
+    "The model was solved using WINQSB optimization software to find near-optimal solutions.",
+    "Positive and negative deviations from target values were analyzed to evaluate goal achievement across all seven objectives."
+  ],
+  "findings": [
+    "num: Z value of 2.1553 indicates minor cumulative deviations from all seven targets.",
+    "num: Revenue goal achieved with negative deviation of 0.1884 billion, slightly below the target.",
+    "num: Expenses goal achieved with negative deviation of 0.1873 billion below the target.",
+    "num: Net profit goal achieved with negative deviation of 0.3006 billion below the allowable target.",
+    "num: Fixed assets can be increased by 1.069823 billion annually with positive deviation of 0.7833.",
+    "Loans reduction goal fully achieved with both deviation variables equal to zero.",
+    "num: Common stock equity goal achieved with negative deviation of 0.2956, slightly below the 0.337092 billion target.",
+    "num: Financial management ratio can be increased by 1.608461 billion annually with positive deviation of 1.1655."
+  ],
+  "key_figures_tables": [
+    "Table 1: Financial data of IDB from 2016 to 2024 in raw values → Shows revenue growth trajectory over nine years.",
+    "Table 2: Scaled financial values in billion IQD → Enables GP model computation with normalized inputs."
+  ],
+  "key_equations": [
+    {"equation": "Min Z = \\sum_{i=1}^{m} w_i^- d_i^- + w_i^+ d_i^+", "explanation": "Weighted GP objective function minimizing weighted total deviations across all goals."},
+    {"equation": "Min Z = \\sum_{i=1}^{n} \\rho_i (d_i^- + d_i^+)", "explanation": "Preemptive GP objective function ranking goals by priority levels."},
+    {"equation": "Min Z = 2d_1^- + d_2^+ + d_3^- + 2d_4^- + 2d_5^+ + 5d_6^- + d_7^-", "explanation": "Combined model objective function with bank-imposed weights for seven financial goals."}
+  ],
+  "definitions": [
+    {"term": "Goal Programming", "definition": "A mathematical model comprising linear or nonlinear functions in which all functions are transformed into goals."},
+    {"term": "Negative Deviation", "definition": "The amount by which an actual value is below the aspiration level."},
+    {"term": "Positive Deviation", "definition": "The amount by which an actual value exceeds the aspiration level."},
+    {"term": "Weighted Method", "definition": "Assigns each goal a numeric weight denoting relative importance, aggregating into a single objective function."},
+    {"term": "Preemptive Method", "definition": "Solves multi-criteria GP by ranking goals by importance, fully satisfying higher-priority goals first."}
+  ],
+  "citations": [
+    {"author": "Alam", "year": 2022, "page": 7, "paragraph": 1, "claim": "Developed and applied a Goal Programming model for financial planning based on SABIC annual reports, aiding budget optimization.", "role": "baseline"},
+    {"author": "Hasbiyati", "year": 2023, "page": 7, "paragraph": 6, "claim": "Proposed a preemptive GP model for production planning demonstrating effective multi-objective optimization using LINGO software.", "role": "methodology"},
+    {"author": "Nyor", "year": 2022, "page": 7, "paragraph": 7, "claim": "Applied GP to financial management in a Nigerian firm, achieving two out of five objectives with minimum 10.61 billion Naira annually.", "role": "baseline"},
+    {"author": "Lakshmi", "year": 2021, "page": 7, "paragraph": 8, "claim": "Addressed conflicting objectives in financial planning using GP in an Indian distribution company, validated via LINGO.", "role": "baseline"},
+    {"author": "Wijayanti", "year": 2023, "page": 7, "paragraph": 9, "claim": "Applied GP to optimize asset-liability management in textile companies, analyzing financial statements for goal achievement.", "role": "baseline"},
+    {"author": "Gaspars-Wieloch", "year": 2020, "page": 7, "paragraph": 10, "claim": "Introduced a GP-based method for solving uncertainty problems through hybrid multi-criteria decision-making models.", "role": "context"},
+    {"author": "Mohseny-Tonekabony", "year": 2024, "page": 7, "paragraph": 11, "claim": "Proposed a two-phase DEA and GP approach for portfolio selection showing superior performance under uncertainty.", "role": "context"},
+    {"author": "Ignizio", "year": 1985, "page": 7, "paragraph": 13, "claim": "Defined Goal Programming as a mathematical model where all functions are transformed into goals with deviation variables.", "role": "methodology"},
+    {"author": "Brigham", "year": 2016, "page": 7, "paragraph": 3, "claim": "Financial management requires balancing budgeting, investment management, and debt management under finite resources and organizational priorities.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "medium", "justification": "Demonstrates Goal Programming as a constrained optimization technique for financial resource allocation under competing objectives."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "low", "justification": "Discusses limitations of traditional single-objective financial planning models in handling competing goals."}
+    ],
+    "contribution_to_field": "The paper introduces a weighted-preemptive hybrid Goal Programming framework that combines priority ranking with deviation weights for multi-objective financial optimization. It demonstrates the application of this technique in the banking sector of an emerging market, providing a case study with nine years of financial data. The study validates that near-optimal solutions can be achieved across seven competing financial objectives simultaneously. The framework offers a decision-support methodology for institutions balancing profitability, cost control, liquidity, and capital structure under resource constraints.",
+    "directly_justifies": [
+      "A weighted-preemptive hybrid GP model combines priority ranking with assigned weights for financial optimization.",
+      "The GP model solved using WINQSB achieved near-optimal solutions across seven competing financial goals.",
+      "Revenue goal achieved with negative deviation of 0.1884 billion below the target.",
+      "num: Fixed assets can be increased by 1.069823 billion annually with positive deviation of 0.7833.",
+      "Loans reduction goal fully achieved with both deviation variables equal to zero.",
+      "The overall objective function value Z equals 2.1553, indicating minor cumulative deviations."
+    ],
+    "limits": [
+      "Study is limited to a single Iraqi bank, restricting generalizability to other institutions or markets.",
+      "Model assumes linear relationships among financial variables without validation.",
+      "No comparison with alternative optimization techniques such as linear programming or metaheuristics."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains in the taxonomy were systematically scanned. The paper was flagged as relevant to Domain 7 (Budgeting Strategies and Recommendation) because it applies Goal Programming, a constrained optimization technique, to financial resource allocation. Topic 7.C (Constrained Optimization Approaches for Budget Allocation) was assigned medium relevance as the GP framework directly demonstrates constrained optimization for financial objectives. Topic 4.B (Limitations and Gaps in Existing Systems) was assigned low relevance because the paper contextualizes traditional financial planning limitations as background motivation. Domains 1-3 (Filipino demographics, cultural finance, expense categorization) were rejected as the paper addresses institutional banking, not personal finance. Domains 5-6 (behavioral profiles, predictive modeling) were rejected as the paper uses deterministic optimization, not ML or behavioral analysis. Domain 8 (anomaly detection), Domain 9 (mobile design), Domain 10 (privacy), Domain 11 (engagement), Domain 13 (savings/debt), and Domain 14 (ML/synthetic data) were rejected as wholly unrelated. Domain 12.B was considered but deemed too tangential for inclusion. The paper's topical coverage centers on constrained optimization methodology applied to institutional financial planning."
+  },
+  "limitations": [
+    "Study is limited to a single Iraqi bank, restricting generalizability to other institutions or markets. [unacknowledged]",
+    "The model assumes linear relationships among financial variables without validation. [unacknowledged]",
+    "No comparison with alternative optimization techniques such as linear programming or metaheuristics. [unacknowledged]",
+    "Equity goals were not fully achieved, suggesting potential refinements needed in model formulation."
+  ],
+  "remember_this": [
+    "Weighted-preemptive hybrid Goal Programming combines priority ranking with deviation weights for optimization.",
+    "The model achieved near-optimal solutions across seven competing financial objectives for IDB.",
+    "num: The objective function value Z equals 2.1553, indicating minor cumulative deviations.",
+    "Loans reduction goal was fully achieved with zero deviation in both directions.",
+    "The framework is transferable to other financial institutions in emerging markets."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T15:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Aboud_marked.md",
+      "converted_at": "2026-07-22T11:47:20Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

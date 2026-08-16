@@ -1,0 +1,106 @@
+{
+  "paper_id": "10.62986/dp2025.35",
+  "designation": "local",
+  "title": "Gender equality, disability, and social inclusion in the Philippines: Progress, challenges, and opportunities in SDG 5 and SDG 10",
+  "authors": "Jose Ramon G. Albert, Connie B. Dacuycuy, Agnes R. Quisumbing, Lovelaine B. Basillote, Deanne Lorraine D. Cabalfin, Anna Rita P. Vargas, Paola Ellaine D. Luzon, and Mohammad A. Mahmoud",
+  "year": 2025,
+  "venue": "PIDS Discussion Paper Series, No. 2025-35",
+  "odin_topics": ["1.A", "2.A.IV", "8.A.I", "10.A.III"],
+  "tldr": "Examines Philippines progress on SDG 5 and SDG 10 using intersectional and Shapley decomposition analysis, finding substantial policy achievements alongside critical implementation gaps that perpetuate compound marginalization for women, persons with disabilities, and indigenous peoples.",
+  "problem_and_motivation": "Despite progressive legal frameworks (Magna Carta of Women, Magna Carta for Disabled Persons, IPRA), women, persons with disabilities, and indigenous peoples in the Philippines continue to face intersecting forms of marginalization that single-identity policies fail to address. The COVID-19 pandemic further exacerbated inequalities, pushing 2.8 million more Filipinos into poverty and disproportionately affecting already vulnerable groups. Evidence-based policy requires comprehensive intersectional analysis of how gender, disability, ethnicity, and geography interact to shape development outcomes.",
+  "approach": [
+    "Mixed-methods design combining quantitative SDG indicator analysis with qualitative key informant interviews and focus group discussions conducted May–August 2025",
+    "Shapley decomposition analysis using merged FIES-LFS data (2018, 2021, 2023) to quantify relative contributions of gender, education, geography, and income factors to overall inequality",
+    "Intersectional analytical framework examining how gender, disability status, indigenous identity, and socioeconomic position interact to create unique disadvantage patterns",
+    "Descriptive data analytics across multiple national surveys including NDHS, LFS, APIS, FIES, NDPS, and the World Bank IP Household Survey",
+    "Longitudinal analysis tracking SDG indicator trends from 2015 baseline through 2025 across SDG5 and SDG10 targets"
+  ],
+  "findings": [
+    "num: 12% of population aged 15+ have disability (15% female vs 9% male), with severe disability prevalence reaching 39% among those with no formal education (55% women vs 23% men) versus 6% among college graduates",
+    "num: Women's labor force participation at ~50% vs men at ~74%, with 42% of employed women in vulnerable employment compared to 36.1% of men; 90% of household employees are female",
+    "num: Women spend 10–13 more hours per week on housework and care work than men; unpaid care work contributes an estimated 37% of GDP",
+    "num: Child marriage before age 18 declined from 16.5% (2017) to 9.4% (2022); only 34% of women experiencing violence sought help",
+    "num: BARMM female LFPR increased dramatically from 26.6% (2019) to 54.2% (2023); wealthiest 10% capture 32% of national income",
+    "num: Indigenous Peoples comprise 9.46M (8.7% of population); only 22% of 257 approved CADTs were fully registered as of early 2023",
+    "num: Women's cabinet representation fluctuated from 36% (2010) to 10% (2019) to 21.1% (2024); WEF rank dropped from 5th (2013) to 20th (2025)",
+    "num: Waray speakers show highest disability prevalence (21% overall, 31% women vs 11% men); IP poverty rate at 32.4% in 2023",
+    "GAD budget (5% mandatory allocation) has become compliance-oriented rather than transformational, with widespread fund misuse and weak accountability",
+    "Statistical invisibility of IPs constitutes the first layer of social, economic, and political exclusion, undermining evidence-based policy development"
+  ],
+  "key_figures_tables": [
+    "Figure 1: Poverty incidence across basic sectors (2018, 2021, 2023)",
+    "Figure 2: Philippines position in Global Gender Distortions Index vs comparable developing countries",
+    "Figure 3: Enablers for advancing SDG 5 from KIIs/FGDs (word cloud)",
+    "Table 1: WEF Global Gender Gap Index rankings (2006–2025)",
+    "Table 3: National trends in government response to violence cases (2015–2023)",
+    "Table 12: Income growth rates and inequality measures",
+    "Table 20: Shapley decomposition — contributions of various factors to inequality",
+    "Table 21–22: Time allocated to market and non-market work by sex and attributes",
+    "Table 25: Labor force participation rate by region and sex (2019–2023)",
+    "Table 28: GSIS and SSS membership by sex",
+    "Table 36–37: Disability prevalence by educational attainment and by ethnicity",
+    "Table 40: Summary of population distribution by ethnic category",
+    "Table 41: Between-groups inequality across key development indicators"
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "GEDSI", "definition": "Gender Equality, Disability, and Social Inclusion — the condition where all persons have equal rights, equitable opportunities, and fair treatment to contribute to and benefit from development regardless of sex, gender identity, disability, age, ethnicity, religion, or socioeconomic status"},
+    {"term": "Intersectionality", "definition": "Analytical framework recognizing that discrimination and exclusion operate through multiple interconnected systems rather than single characteristics, creating unique patterns of marginalization that cannot be understood through additive approaches"},
+    {"term": "Statistical invisibility", "definition": "The systematic exclusion of marginalized groups (particularly IPs) from national statistics, constituting the first layer of social, economic, and political exclusion that undermines evidence-based policy"},
+    {"term": "Shapley decomposition", "definition": "Methodology quantifying the relative contributions of various factors (gender, education, geography, income) to overall inequality patterns using cooperative game theory principles"},
+    {"term": "Compound marginalization", "definition": "The phenomenon where multiple forms of disadvantage (e.g., gender + disability + ethnicity + geography) interact to create experiences of exclusion more severe than the sum of individual disadvantages"}
+  ],
+  "citations": [
+    {"author": "Crenshaw", "year": 1989, "page": 0, "paragraph": 0, "claim": "Intersectionality framework recognizing that intersecting inequalities compound to create distinctive experiences of marginalization", "role": "methodology"},
+    {"author": "Goldberg et al.", "year": 2025, "page": 0, "paragraph": 0, "claim": "Global Gender Distortions Index measuring productivity losses from gender-based misallocation in labor markets", "role": "finding"},
+    {"author": "Pérez-Brito et al.", "year": 2024, "page": 0, "paragraph": 0, "claim": "World Bank household survey on Indigenous Peoples documenting statistical invisibility and intersectional disadvantage patterns", "role": "finding"},
+    {"author": "David et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Philippine SDG 5 assessment identifying systemic gaps in addressing needs of marginalized groups", "role": "baseline"},
+    {"author": "Albert and Raymundo", "year": 2016, "page": 0, "paragraph": 0, "claim": "Trends in out-of-school children and basic education statistics in the Philippines", "role": "context"},
+    {"author": "World Economic Forum", "year": 2025, "page": 0, "paragraph": 0, "claim": "Global Gender Gap Report 2025 — Philippines ranked 20th globally with 78.1% gender gap closure score", "role": "finding"},
+    {"author": "PSA", "year": 2025, "page": 0, "paragraph": 0, "claim": "Philippine SDG Watch database and fact sheets on gender-related SDGs", "role": "finding"},
+    {"author": "World Bank", "year": 2012, "page": 0, "paragraph": 0, "claim": "Women have less access than men to productive assets and services including land, financial capital, and agricultural extension", "role": "context"},
+    {"author": "Bayudan-Dacuycuy and Baje", "year": 2021, "page": 0, "paragraph": 0, "claim": "Decent work in crowdwork and gendered takeaways from online survey in the Philippines", "role": "methodology"},
+    {"author": "UN Women", "year": 2024, "page": 0, "paragraph": 0, "claim": "SDG Gender Index — Philippines scored 67.52/100, ranking 70th of 139 countries", "role": "finding"},
+    {"author": "Abrigo and Francisco-Abrigo", "year": 2019, "page": 0, "paragraph": 0, "claim": "Counting women's work in the Philippines — women in mid-thirties spend 24 hrs/week on housework vs 8 hrs for men", "role": "finding"},
+    {"author": "Hirway", "year": 2016, "page": 0, "paragraph": 0, "claim": "Unpaid work and the economy — linkages and implications for policy in Asia-Pacific", "role": "context"},
+    {"author": "Dianito et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Lived experiences and challenges of PWD students towards online learning in the Philippines during COVID-19", "role": "context"},
+    {"author": "ILO", "year": 2024, "page": 0, "paragraph": 0, "claim": "ILOSTAT database on labor force participation rates by sex and age for Philippines and ASEAN", "role": "context"},
+    {"author": "OECD", "year": 2019, "page": 0, "paragraph": 0, "claim": "PISA 2018 Results — Filipino students consistently underperform global averages in reading, math, and science", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "contextual", "justification": "Provides macroeconomic and labor market context for the financial environment in which Filipino young professionals operate, including income inequality, vulnerable employment rates, and regional disparities"},
+      {"code": "2.A.IV", "name": "Government-mandated financial obligations: SSS, PhilHealth, and Pag-IBIG contributions", "relevance": "high", "justification": "Contains detailed analysis of GSIS and SSS membership by sex (Table 28), coverage trends (2016–2022), and gender-differentiated social protection access patterns"},
+      {"code": "8.A.I", "name": "Definition and taxonomy of financial anomalies in personal spending data", "relevance": "contextual", "justification": "Documents poverty incidence trends and income inequality patterns that contextualize why Filipino households experience financial stress and unexpected spending shocks"},
+      {"code": "10.A.III", "name": "Philippine regulatory framework: RA 10173 and NPC issuances applicable to a PFMS", "relevance": "contextual", "justification": "Discusses data gaps and monitoring system limitations affecting marginalized groups; the paper's treatment of statistical invisibility and data privacy for IPs/PWDs provides context for regulatory compliance considerations"}
+    ],
+    "contribution_to_field": "This paper provides the most comprehensive recent assessment of gender equality, disability, and social inclusion in the Philippines using truly intersectional methodology. It demonstrates that single-identity approaches to inclusion are inadequate and that compound marginalization requires integrated policy responses. For the Odin thesis, it establishes the broader socioeconomic context of inequality, labor market precarity, and social protection gaps that shape Filipino young professionals' financial realities. The detailed analysis of social insurance coverage (GSIS/SSS) directly informs understanding of mandated financial obligations as a distinct expense category. The paper's critique of implementation gaps between policy and practice parallels the gap Odin addresses between financial literacy and actual financial behavior.",
+    "directly_justifies": ["The documented gender gap in labor force participation and vulnerable employment justifies attention to income stability as a key behavioral profiling dimension in Odin", "GSIS/SSS coverage analysis directly grounds the treatment of government-mandated contributions as obligatory expenses in the budget recommendation module"],
+    "limits": ["Does not specifically examine young professionals (20–40 age range), focusing instead on general working-age population", "Does not provide individual-level transaction data or spending patterns required for direct ML training", "Poverty data is household-level (per capita income) rather than individual-level, limiting intra-household analysis"],
+    "topic_mapping_rationale": "Systematically scanned the 14 topic codes (1.A–14.C) in the Odin topic outline against the paper's content. The paper's primary focus on gender equality, disability, and social inclusion has no exact topic match within the Odin taxonomy, as the thesis centers on personal finance management rather than social development. However, the paper provides essential contextual evidence for: (1) socioeconomic conditions affecting Filipino workers (Topic 1.A), (2) government-mandated financial obligations through GSIS/SSS analysis (Topic 2.A.IV), (3) income inequality as backdrop for financial vulnerability (Topic 8.A.I), and (4) data privacy and regulatory context (Topic 10.A.III). No other topic codes were applicable."
+  },
+  "limitations": [
+    "Official statistics under-represent marginalized populations due to geographic isolation, documentation barriers, and mistrust of government data collection",
+    "Small population subgroups (particularly women with disabilities from IP communities) limit robust statistical analysis for intersectional categories",
+    "Rapid policy changes during research period make it challenging to isolate effects of specific interventions from broader contextual factors",
+    "Study lacked formal IRB approval, though adhered to ethical research principles including informed consent and cultural sensitivity guidelines",
+    "Only 4 of 15 national SDG5 indicators have sufficient data; 10 have insufficient data and 1 has no data",
+    "Qualitative saturation may have left some highly marginalized subgroups underrepresented"
+  ],
+  "remember_this": [
+    "Intersectionality: compound > additive disadvantage for women with disabilities/IPs",
+    "GAD budget: 5% mandate is compliance-driven, not transformational",
+    "Statistical invisibility of IPs undermines all evidence-based policy",
+    "Gender paradox: women outnumber men 2:1 in professions but face higher vulnerability",
+    "BARMM: female LFPR surged from 26.6% to 54.2% (2019–2023)"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Albert et al-2025_marked.md",
+      "converted_at": "2026-07-22T11:52:34Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

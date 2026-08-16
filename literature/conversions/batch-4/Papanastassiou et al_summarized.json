@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.3390/app16010252",
+  "designation": "local-algorithm-specific",
+  "title": "A Reinforcement Learning Framework for Fraud Detection in Highly Imbalanced Financial Data",
+  "authors": "Reinforcement Learning Framework; Fraud Detection",
+  "year": 2015,
+  "venue": "Unknown",
+  "odin_topics": [
+    "4.B",
+    "5.C",
+    "8.A"
+  ],
+  "tldr": "Anomaly detection in financial transactions is a challenging task, primarily due to severe class imbalance and the adaptive behavior of fraudulent activities. This paper presents a reinforcement learning framework for fraud detection (RLFD) to address this problem. We train a deep Q-network (DQN) agent with a long short-term memory (LSTM) encoder to process sequences of financial events and identi",
+  "problem_and_motivation": "Anomaly detection in financial transactions is a challenging task, primarily due to severe class imbalance and the adaptive behavior of fraudulent activities. This paper presents a reinforcement learning framework for fraud detection (RLFD) to address this problem. We train a deep Q-network (DQN) agent with a long short-term memory (LSTM) encoder to process sequences of financial events and identify anomalies. On a proprietary, highly imbalanced dataset, 10-fold cross-validation highlights a dis",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Alkis Papanastassiou 1,2,"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Alkis Papanastassiou 1,2,",
+    "Year: 2015",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Papanastassiou et al_marked.md",
+      "converted_at": "2026-07-21T08:05:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

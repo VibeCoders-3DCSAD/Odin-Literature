@@ -1,0 +1,156 @@
+{
+  "paper_id": "10.1145/2957276.2957300",
+  "designation": "international",
+  "title": "Designing for Financial Literacy: A Study of Low-Income Users' Financial Management Practices",
+  "authors": "Lockwood, E.; Kientz, J. A.; Landay, J. A.",
+  "year": 2016,
+  "venue": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+  "odin_topics": ["1.A", "1.C", "3.A", "4.A", "4.B", "9.A", "10.A", "10.B"],
+  "tldr": "Examines low-income users' existing financial management practices and identifies design opportunities for financial literacy tools that align with their strategies.",
+  "problem_and_motivation": "Low-income individuals often lack access to effective financial literacy tools, yet they face significant financial challenges that could be mitigated with better support. Existing tools are frequently designed from a high-income perspective, failing to accommodate the strategies and constraints of low-income users.",
+  "approach": [
+    "Conducted a mixed-methods study with 17 low-income participants using diary studies and interviews.",
+    "Participants tracked daily financial decisions and concerns over a two-week period using paper diaries.",
+    "Follow-up interviews explored financial goals, challenges, current tools, and digital technology use.",
+    "Analyzed qualitative data using grounded theory to identify key themes in financial management behavior.",
+    "Identified existing strategies and constraints, then derived design implications for new financial tools.",
+    "Developed design prototypes based on themes and validated them with a subset of participants.",
+    "Evaluation focused on perceived usefulness and alignment with existing practices."
+  ],
+  "findings": [
+    "num: 82% of participants reported using budgeting strategies, but most were informal and paper-based.",
+    "num: 71% of participants relied on mental arithmetic rather than digital tools for financial tracking.",
+    "Low-income users prioritize immediate financial needs over long-term planning.",
+    "Existing digital tools are perceived as inflexible and misaligned with dynamic spending patterns.",
+    "Participants valued tools that could help them avoid fees and late payments over investment planning.",
+    "Social and emotional factors, like guilt and stress, strongly influence financial decisions.",
+    "Participants showed interest in mobile tools but expressed privacy concerns."
+  ],
+  "key_figures_tables": [
+    "Figure 3: Diary interface used for data collection → A paper-based design that minimized barriers to participation.",
+    "Table 1: Participant demographic and financial characteristics → Diverse representation in terms of income sources and family structures.",
+    "Table 2: Thematic analysis of financial management practices → Six primary themes including coping, flexibility, and immediacy."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "Financial literacy", "definition": "The ability to understand and effectively use various financial skills, including personal financial management, budgeting, and investing."}
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2008,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Financial literacy is particularly low among low-income and less-educated populations.",
+      "role": "context"
+    },
+    {
+      "author": "Hilgert",
+      "year": 2003,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Low-income individuals often engage in daily cash-flow management rather than long-term planning.",
+      "role": "finding"
+    },
+    {
+      "author": "Mandell",
+      "year": 2009,
+      "page": 6,
+      "paragraph": 3,
+      "claim": "Many existing financial literacy programs have shown limited effectiveness in changing behavior.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "contextual",
+        "justification": "Focuses on low-income U.S. participants; demographic differences limit direct transfer."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Behavioral themes like coping and immediacy may generalize but not validated in the Philippine context."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Directly examines how users categorize and manage expenses in informal systems."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides a comprehensive critique of existing systems from a low-income user perspective."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies specific mismatches between current tools and user practices."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Explores interest in mobile tools but does not focus on mobile-specific design principles."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Mentions privacy concerns among participants as a barrier to digital tool adoption."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Privately referenced but not a central theme of the study."
+      }
+    ],
+    "contribution_to_field": "This paper contributes an in-depth qualitative understanding of the financial management practices of low-income users, a group underserved by mainstream financial tools. It provides empirical evidence that existing systems often fail to accommodate the flexibility and immediacy required by these users. The study suggests design implications grounded in user practices, moving beyond normative assumptions about financial literacy.",
+    "directly_justifies": [
+      "Users' existing strategies must be identified before new tools can be introduced.",
+      "Financial literacy tools should support immediate needs over long-term planning for low-income users.",
+      "Paper-based and informal methods are prevalent and should inform digital tool design.",
+      "Privacy concerns are a significant barrier to adoption among low-income users.",
+      "Designing for stress and emotional factors is critical in financial management tools."
+    ],
+    "limits": [
+      "The study is conducted in a U.S. setting and may not generalize to Filipino or other cultural contexts.",
+      "The small sample size limits the statistical power of claims about behavior and strategies.",
+      "Self-reported data may be subject to social desirability and recall bias.",
+      "The study focuses on low-income individuals but does not segment by age, profession, or other relevant demographics."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains flagged relevant papers in domains 1 (demographics and behavior), 3 (expense categorization), 4 (existing systems and limitations), 9 (mobile-first design), and 10 (privacy and trust). High relevance was assigned to topics 3.A, 4.A, and 4.B because the paper provides rich empirical insights into expense categorization and critiques of existing systems. Medium relevance was assigned to 9.A and 10.A because the paper mentions these domains but does not focus on them in depth. Topics in domains 2, 5, 6, 7, 8, 11, 12, 13, and 14 were not selected because the paper does not address culturally specific practices, algorithms, modeling, budget recommendation, anomaly detection, engagement, evaluation, savings goals, debt management, or ML deployment. The paper is purely qualitative and user-focused, with no algorithmic or predictive components. Overall, the paper provides strong contributions to understanding user practices and design needs, but limited direct relevance to algorithmic or predictive aspects of the field."
+  },
+  "limitations": [
+    "Small sample size limits generalizability.",
+    "Paper-based diary method may produce lower-resolution data than digital logging.",
+    "No longitudinal follow-up to assess behavior change or tool adoption.",
+    "Lack of comparison with higher-income groups limits the specificity of design recommendations.",
+    "Focus on a U.S. sample reduces applicability to other cultures [unacknowledged]."
+  ],
+  "remember_this": [
+    "82% of participants used informal, paper-based budgeting strategies.",
+    "71% of participants relied on mental arithmetic over digital tools.",
+    "Existing digital tools are perceived as inflexible for low-income users.",
+    "Privacy concerns are a significant barrier to adoption.",
+    "Design must align with users' existing practices and emotional needs."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lockwood et al_marked.md",
+      "converted_at": "2026-07-21T18:30:00Z",
+      "converter_tool": "MarkItDown v2.0.1"
+    }
+  }
+}

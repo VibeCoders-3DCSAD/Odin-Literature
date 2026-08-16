@@ -1,0 +1,69 @@
+{
+  "paper_id": "10.66104/xkad2306",
+  "designation": "international-algorithm-specific",
+  "title": "Neural Networks for Real-Time Financial Fraud Detection",
+  "authors": "Oliveira, D. N. O.",
+  "year": 2026,
+  "venue": "Faculdade Presidente Antônio Carlos, Brazil",
+  "odin_topics": ["8.A", "8.B", "14.B", "14.C"],
+  "tldr": "Neural network architectures—MLPs, LSTMs, CNNs, Autoencoders, GNNs, and Transformers—are redefining real-time fraud detection under sub-100-millisecond latency budgets, with hybrid and ensemble frameworks consistently outperforming single-model approaches.",
+  "problem_and_motivation": "Digital financial fraud caused $485.6 billion in global losses in 2023, and conventional rule-based and statistical detection methods are structurally incapable of containing the scale and sophistication of modern fraud. Real-time fraud detection must operate under sub-100-millisecond latency constraints while handling concept drift, class imbalance, adversarial evasion, and regulatory compliance requirements.",
+  "approach": [
+    "Narrative conceptual literature review covering neural network architectures deployed for real-time financial fraud detection.",
+    "Covers MLPs, LSTMs, CNNs, Autoencoders, GNNs, and Transformer-based models as candidate architectures.",
+    "Analyzes deployment within payment authorization pipelines under sub-100-millisecond latency budgets.",
+    "Examines operational challenges: concept drift, adversarial evasion attacks, and extreme class imbalance.",
+    "Reviews algorithmic explainability under GDPR and LGPD regulatory frameworks.",
+    "Discusses data privacy constraints motivating Federated Learning and Differential Privacy approaches.",
+    "Documents real-world implementations across credit card networks, instant payment systems, anti-money laundering, and insurance fraud.",
+    "Maps research frontier including online learning, LLMs as fraud detection orchestrators, and Quantum Machine Learning."
+  ],
+  "findings": [
+    "num: Global fraud losses estimated at $485.6 billion in 2023 alone.",
+    "num: No single neural architecture dominates across all fraud typologies.",
+    "num: Hybrid and ensemble frameworks combining temporal, relational, and anomaly-detection capabilities consistently achieve superior performance.",
+    "num: Real-time fraud detection must operate under sub-100-millisecond latency requirements.",
+    "num: Concept drift remains a critical operational challenge for production fraud detection systems.",
+    "num: Federated Learning and Differential Privacy address data privacy constraints in multi-institution fraud detection.",
+    "num: Brazilian PIX instant payment system documented as a case study for real-time fraud detection deployment.",
+    "num: Explainability requirements under GDPR/LGPD create tension between model complexity and regulatory compliance.",
+    "num: Generative AI represents an emerging threat vector as fraudsters weaponize LLMs.",
+    "num: Online learning and adaptive retraining are necessary to maintain detection performance over time."
+  ],
+  "key_figures_tables": ["None."],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Concept drift", "definition": "The phenomenon where the statistical properties of fraud data change over time, degrading model performance."},
+    {"term": "Federated Learning", "definition": "A distributed ML paradigm where models are trained across decentralized devices without sharing raw data."},
+    {"term": "Differential Privacy", "definition": "A framework that bounds the information leakage about individual training examples through formal privacy guarantees."}
+  ],
+  "citations": [
+    {"author": "Oliveira", "year": 2026, "page": 0, "paragraph": 0, "claim": "Global fraud losses estimated at $485.6 billion in 2023.", "role": "finding"},
+    {"author": "Goodfellow et al.", "year": 2014, "page": 0, "paragraph": 0, "claim": "Introduced Generative Adversarial Networks for synthetic data generation.", "role": "methodology"},
+    {"author": "McMahan et al.", "year": 2017, "page": 0, "paragraph": 0, "claim": "Introduced Federated Learning for privacy-preserving distributed model training.", "role": "methodology"},
+    {"author": "Dwork", "year": 2006, "page": 0, "paragraph": 0, "claim": "Introduced Differential Privacy framework for bounded information leakage.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Directly surveys neural architectures for real-time fraud detection in financial systems."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Reviews MLPs, LSTMs, CNNs, Autoencoders, GNNs, and Transformers as anomaly detection methods."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "high", "justification": "Covers deployment within sub-100ms latency pipelines, online learning, and production infrastructure."},
+      {"code": "14.C", "name": "On-Device vs. Server Inference", "relevance": "medium", "justification": "Discusses latency constraints and Federated Learning that relate to on-device inference decisions."}
+    ],
+    "contribution_to_field": "This review provides a comprehensive survey of neural network architectures for real-time financial fraud detection, spanning theoretical foundations through production deployment. It documents operational requirements—sub-100-millisecond latency, concept drift management, class imbalance handling—that any practical fraud detection system must address. The review covers emerging frontiers including LLM-based orchestration, generative AI threats, and Quantum Machine Learning.",
+    "directly_justifies": ["Neural network ensembles combining temporal, relational, and anomaly-detection capabilities are necessary for effective fraud detection."],
+    "limits": ["Narrative review methodology limits reproducibility compared to systematic reviews.", "Focus on fraud detection specifically, not general personal finance anomaly detection.", "Primarily covers Brazilian financial systems; geographic generalizability may be limited."],
+    "topic_mapping_rationale": "Systematic scan across all 14 Odin topic domains flagged 8.A and 8.B (anomaly detection) as high relevance due to the paper's direct focus on fraud detection with neural networks. 14.B and 14.C (ML deployment) received high/medium for coverage of production constraints including latency budgets and Federated Learning. Topics related to forecasting, budgeting, profiling, and cultural practices were considered but rejected as outside the paper's scope."
+  },
+  "limitations": ["Narrative review methodology without systematic search protocol may introduce selection bias.", "Primary focus on Brazilian PIX ecosystem limits geographic generalizability.", "No empirical benchmarks or comparative experiments conducted.", "Rapidly evolving field means some findings may become outdated quickly."],
+  "remember_this": ["Global fraud losses exceeded $485.6 billion in 2023.", "No single neural architecture dominates all fraud typologies.", "Hybrid and ensemble frameworks consistently outperform single models.", "Real-time detection requires sub-100ms latency with concept drift handling.", "Explainability and privacy regulations shape deployment architecture choices."],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Oliveira_marked.md",
+      "converted_at": "2026-07-21T07:54:49Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

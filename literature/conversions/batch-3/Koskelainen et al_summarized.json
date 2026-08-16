@@ -1,0 +1,298 @@
+{
+  "paper_id": "10.1111/joca.12510",
+  "designation": "international",
+  "title": "Financial literacy in the digital age—A research agenda",
+  "authors": "Koskelainen, T.; Kalmi, P.; Scornavacca, E.; Vartiainen, T.",
+  "year": 2023,
+  "venue": "Journal of Consumer Affairs",
+  "odin_topics": ["1.C", "2.A", "3.A", "5.A", "5.C", "7.A", "9.A", "10.A", "10.B", "10.C"],
+  "tldr": "Digitalization transforms financial services and consumer behavior, necessitating an updated conceptualization of financial literacy that integrates digital literacy components.",
+  "problem_and_motivation": "Traditional financial literacy frameworks developed for an analog world may be inadequate in the current digital financial landscape. Despite the pervasiveness of digital financial services and technologies, little is known about how digitalization specifically influences individuals' financial literacy and financial capability.",
+  "approach": [
+    "Conducted an integrative literature review using databases including ProQuest, EBSCO, ACM Digital Library, and Google Scholar.",
+    "Applied a two-stage selection process, screening 603 papers to identify 29 peer-reviewed studies relevant to digital financial literacy.",
+    "Focused on papers at the intersection of finance and digital technologies, excluding those focused solely on financial education or general digitalization.",
+    "Adopted a concept-centric review framework to organize and synthesize findings.",
+    "Classified selected papers into four core disciplines: finance, economics, finance and economics, and information systems.",
+    "Used the search string ('financial behavior' OR 'money management' OR 'personal finance') AND (digital OR 'digital literacy' OR digitalization) AND 'financial literacy'."
+  ],
+  "findings": [
+    "num: 80% of millennial smartphone owners use their device for transactional financial purposes, and 90% for informational purposes.",
+    "Identified three main themes in the intersection of finance and digitalization: Fintech, Financial behavior in digital environments, and Behavioral interventions.",
+    "The literature comprises 17 papers in finance, 6 in economics, 2 in finance and economics, and 4 in information systems.",
+    "Digital financial literacy measurement has focused heavily on behaviors, which may be problematic due to consumer heterogeneity.",
+    "Fintech presents both opportunities (enhanced access, tailored products) and risks (misuse, fraud, data confidentiality, digital profiling).",
+    "Loss of cash payments and pervasive digital financial services make consumers less aware of their spending.",
+    "Smartphone app use increases salience of credit card transactions and results in reduced spending.",
+    "Nudging and digital nudging are increasingly used to influence consumer financial behavior, with ethical concerns about transparency and freedom of choice.",
+    "Existing digital financial literacy assessment items include conducting online shopping, using online/mobile banking, and initiating digital financial transactions.",
+    "Four key areas for future research identified: updating financial literacy curriculum, developing digital teaching tools, measuring digital financial literacy, and public-private collaboration."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual description of financial literacy and financial capability → Shows financial literacy as component of broader financial capability.",
+    "Figure 2: Conceptual description of digital financial literacy and financial capability → Illustrates how Fintech, digital behavior, and interventions affect knowledge, skills, and tools.",
+    "Table 1: Research on digital financial literacy → Categorizes 29 papers into Fintech, Financial behavior, and Behavioral interventions themes."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "DFS",
+      "definition": "Digital Financial Services, including digital money and online/mobile financial services."
+    },
+    {
+      "term": "Fintech",
+      "definition": "Technologically enabled financial innovation that could result in new business models, applications, processes, or products with an associated material effect on financial markets and institutions and the provision of financial services."
+    },
+    {
+      "term": "Digital nudging",
+      "definition": "Influencing people's choices through algorithms and user-interface design in digital environments."
+    },
+    {
+      "term": "Digital profiling",
+      "definition": "Use of digital footprints to form a profile for each individual customer to offer tailored products and boost revenues."
+    },
+    {
+      "term": "Financial capability",
+      "definition": "Broader concept than financial literacy, including not only the ability to act, but also the opportunity to act."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Basic financial knowledge, skills, and understanding are gained at home and through formal education at school.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "More financially literate people have better economic outcomes.",
+      "role": "finding"
+    },
+    {
+      "author": "Fernandes",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Effects of financial education interventions decay over time.",
+      "role": "finding"
+    },
+    {
+      "author": "Gomber",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial technology describes the convergence of modern digital technologies with business activities in the financial services industry.",
+      "role": "methodology"
+    },
+    {
+      "author": "Elsinger",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional financial literacy needs to be complemented by elements of digital literacy.",
+      "role": "finding"
+    },
+    {
+      "author": "Thaler",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A nudge is any aspect of choice architecture that alters behavior predictably without forbidding options or significantly changing incentives.",
+      "role": "methodology"
+    },
+    {
+      "author": "Yakoboski",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "80% of millennial smartphone owners use their device for transactional financial purposes, 90% for informational purposes.",
+      "role": "finding"
+    },
+    {
+      "author": "Lyons",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Assessment of digital financial literacy consists of items such as conducting online shopping, using online and mobile banking, and initiating digital financial services transactions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Huebner",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Smartphone app use increases individuals' salience of credit card transactions and results reduced spending.",
+      "role": "finding"
+    },
+    {
+      "author": "French",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Participants who used smartphone finance apps were more likely to keep track of income and expenditure than the control group.",
+      "role": "finding"
+    },
+    {
+      "author": "White",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The use of nudging to help people make better choices in borrowing includes epistemic, ethical, and practical problems.",
+      "role": "critique"
+    },
+    {
+      "author": "Lewis",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Loss of cash payments and pervasive digital financial management services make consumers less aware of their spending.",
+      "role": "finding"
+    },
+    {
+      "author": "Hoehle",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Perceived usefulness, convenience, and service quality have positive influence on e-banking use.",
+      "role": "finding"
+    },
+    {
+      "author": "Li",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Older, lower income, and disabled consumers are less likely to use mobile payment apps.",
+      "role": "finding"
+    },
+    {
+      "author": "Gabor",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial service providers use digital profiling to offer tailored products to consumers and boost revenues.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Discusses millennial financial behavior and digital service use, but not specifically Filipino."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "Does not address culturally specific practices; focuses on general digital financial behavior."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Mentions tracking spending and budgeting but does not propose specific categorization frameworks."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses how digitalization shapes financial behaviors and the need to adapt financial literacy to digital contexts."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Mentions behavioral economics and nudging but does not focus on classification approaches."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Discusses spending, budgeting, and money management in digital contexts."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Reviews research on mobile banking and payment app design, including accessibility and user behavior."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly addresses risks including data confidentiality, digital profiling, fraud, and information security concerns."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses perceived insecurity, fraud risks, and transparency issues that affect user trust."
+      },
+      {
+        "code": "10.C",
+        "name": "Consent Management and Data Portability",
+        "relevance": "low",
+        "justification": "Mentions data protection issues and regulation-driven risks but does not focus on consent management specifically."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive integrative review that synthesizes prior literature on financial literacy within the context of digital transformation. It identifies three major thematic areas—Fintech, financial behavior in digital environments, and behavioral interventions—that collectively shape the emerging domain of digital financial literacy. The paper proposes a conceptual framework for digital financial literacy and financial capability and outlines a research agenda with four key priorities. It highlights the insufficiency of traditional financial literacy measures in the digital age and calls for the integration of digital literacy components. The paper also underscores the need for public-private collaboration to create more inclusive financial landscapes.",
+    "directly_justifies": [
+      "Traditional financial literacy needs to be complemented by elements of digital literacy.",
+      "Digital financial literacy assessment has focused heavily on behaviors, which may be problematic due to consumer heterogeneity.",
+      "Loss of cash payments and pervasive digital financial services make consumers less aware of their spending.",
+      "Fintech presents both opportunities and risks for financial literacy and financial capability.",
+      "Digital nudging can be used to improve financial literacy and influence financial behavior."
+    ],
+    "limits": [
+      "Focuses only on papers published in finance, economics, and information systems journals, excluding conference proceedings.",
+      "Limited to 29 papers due to strict inclusion criteria, potentially missing emerging technologies addressed in conferences.",
+      "The measurement of digital financial literacy remains underdeveloped compared to financial literacy or digital literacy."
+    ],
+    "topic_mapping_rationale": "The paper was systematically scanned against all topic domains in the taxonomy. The topics most directly covered include data privacy and security (10.A), as the paper extensively discusses digital profiling, fraud, and information security risks. Financial behavior themes (1.C, 5.A) were flagged as medium relevance since the paper reviews how digital environments affect consumer behavior and spending. Budgeting strategies (7.A) and mobile design (9.A) were also medium relevance due to discussions of spending awareness and app usability. User trust (10.B) was medium relevance based on perceived insecurity concerns. Topics related to culturally specific practices (2.A), expense categorization (3.A), and classification approaches (5.C) were considered low or contextual because the paper does not address these in detail. Other domains such as predictive modeling (6.A, 6.B), anomaly detection (8.A, 8.B), and evaluation frameworks (12.A, 12.B) were rejected as the paper does not discuss algorithmic or computational methods. The overall topical coverage centers on the conceptual and behavioral implications of digitalization for financial literacy rather than system design or algorithmic implementation.",
+    "contribution_to_field": "This paper provides a comprehensive integrative review that synthesizes prior literature on financial literacy within the context of digital transformation. It identifies three major thematic areas—Fintech, financial behavior in digital environments, and behavioral interventions—that collectively shape the emerging domain of digital financial literacy. The paper proposes a conceptual framework for digital financial literacy and financial capability and outlines a research agenda with four key priorities. It highlights the insufficiency of traditional financial literacy measures in the digital age and calls for the integration of digital literacy components. The paper also underscores the need for public-private collaboration to create more inclusive financial landscapes.",
+    "directly_justifies": [
+      "Traditional financial literacy needs to be complemented by elements of digital literacy.",
+      "Digital financial literacy assessment has focused heavily on behaviors, which may be problematic due to consumer heterogeneity.",
+      "Loss of cash payments and pervasive digital financial services make consumers less aware of their spending.",
+      "Fintech presents both opportunities and risks for financial literacy and financial capability.",
+      "Digital nudging can be used to improve financial literacy and influence financial behavior."
+    ],
+    "limits": [
+      "Focuses only on papers published in finance, economics, and information systems journals, excluding conference proceedings.",
+      "Limited to 29 papers due to strict inclusion criteria, potentially missing emerging technologies addressed in conferences.",
+      "The measurement of digital financial literacy remains underdeveloped compared to financial literacy or digital literacy."
+    ]
+  },
+  "limitations": [
+    "Focused only on papers published in finance, economics, and information systems journals, excluding conference proceedings. [unacknowledged]",
+    "Limited to 29 papers due to strict inclusion criteria, potentially missing emerging technologies addressed in conferences.",
+    "The measurement of digital financial literacy remains underdeveloped compared to financial literacy or digital literacy."
+  ],
+  "remember_this": [
+    "80% of millennial smartphone owners use devices for transactional financial purposes.",
+    "Traditional financial literacy must be complemented by digital literacy elements.",
+    "Loss of cash payments reduces consumer awareness of spending.",
+    "Digital nudging raises ethical concerns about transparency and freedom of choice.",
+    "Fintech presents both opportunities and risks for financial well-being."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Koskelainen et al_marked.md",
+      "converted_at": "2026-07-21T13:49:55Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

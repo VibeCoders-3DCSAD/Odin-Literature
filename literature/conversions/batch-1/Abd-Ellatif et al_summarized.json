@@ -1,0 +1,124 @@
+{
+  "paper_id": "38ce8148-eb45-5ae9-80a2-dc2044234824",
+  "designation": "international-algorithm-specific",
+  "title": "ATAD-Net: An Adaptive Deep Learning Framework for Real-Time Financial Fraud Detection",
+  "authors": "Abd-Ellatif, L.; Abrar, M.; Ismaeel, A. A. K.",
+  "year": 2025,
+  "venue": "Advances in Artificial Intelligence and Machine Learning",
+  "odin_topics": ["8.A", "8.B", "6.A", "14.A", "5.C", "12.B"],
+  "tldr": "A hybrid CNN-LSTM deep learning framework with dynamic pattern adjustment achieves 98.65% accuracy and 8.2ms latency for real-time financial fraud detection on the IEEE-CIS benchmark dataset.",
+  "problem_and_motivation": "Existing financial fraud detection methods, including rule-based systems, traditional ML, and standard DL models, suffer from inability to adapt to evolving fraud tactics, high false-positive rates, poor handling of imbalanced datasets, and lack of interpretability. These shortcomings leave financial institutions vulnerable to new fraud patterns and erode stakeholder trust. A more adaptive, efficient, and interpretable DL framework is needed to meet real-time detection requirements.",
+  "approach": [
+    "Evaluated on the IEEE-CIS Credit Card Fraud Detection dataset comprising approximately 590,540 transactions with 3.5% fraud rate, split 70/15/15 for training, validation, and testing.",
+    "Applied SMOTE to the training data after splitting to address severe class imbalance by generating synthetic minority-class samples via feature-space interpolation.",
+    "Designed a hybrid CNN-LSTM architecture where CNN layers extract localized spatial features from transaction data and LSTM layers model sequential temporal dependencies.",
+    "Introduced a Dynamic Pattern Adjustment Module (DPAM) that performs incremental parameter updates via sliding-window strategy without full model retraining.",
+    "Integrated an Interpretability Module to highlight key factors contributing to fraud predictions for regulatory compliance and stakeholder transparency.",
+    "Used Min-Max and Z-score normalization for numerical features, one-hot encoding for categorical attributes, and median/mode imputation for missing values.",
+    "Trained with Adam optimizer at batch size 128, optimized hyperparameters via grid search with 5-fold cross-validation, and applied weighted loss functions for class imbalance.",
+    "Benchmarked against standalone CNN, RNN, and recent state-of-the-art deep learning models including GNN-based approaches using accuracy, precision, recall, F1-score, and latency."
+  ],
+  "findings": [
+    "num: ATAD-Net achieved 98.65% accuracy, 97.12% precision, 96.74% recall, and 96.93% F1-score on the IEEE-CIS benchmark.",
+    "num: ATAD-Net achieved average detection latency of 8.2ms per transaction, compared to 10.6ms for CNN and 12.5ms for RNN.",
+    "num: Real-time detection accuracy under live transaction simulation ranged from 96.50% to 97.72% across five 15-minute windows.",
+    "num: ATAD-Net outperformed state-of-the-art models including Roy et al. (96.21% accuracy), Rahmati (97.42%), and LeCun et al. (98.11%).",
+    "num: Training and validation loss curves showed convergence with minimal overfitting, confirming effective adaptive learning.",
+    "SMOTE increased representation of the minority fraud class from 3.5% to balanced distribution, significantly enhancing model recall and accuracy.",
+    "ATAD-Net maintained stable and minimal latency even under peak transaction loads during continuous real-time simulation."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual Framework of ATAD-Net → Illustrates the full pipeline from input through preprocessing, feature extraction, adaptive learning, anomaly detection, and interpretability.",
+    "Figure 2: Confusion Matrix of ATAD-Net → Shows fewer false positives and false negatives than baseline models.",
+    "Figure 3: Precision-Recall Curve of ATAD-Net → Confirms effective handling of the imbalanced dataset distribution.",
+    "Figure 4: Real-time Performance Latency per Transaction → ATAD-Net achieves lowest latency among compared models at 8.2ms.",
+    "Figure 5: Training and Validation Loss Curves → Demonstrates convergence and minimal overfitting of the adaptive learning strategy.",
+    "Figure 6: Class Distribution Before and After SMOTE → SMOTE balanced fraudulent samples from 3.5% to 50%.",
+    "Figure 7: Real-Time Latency under Peak Transaction Load → ATAD-Net maintains stable minimal latency under high throughput.",
+    "Figure 8: Transactions per Second Performance Comparison → ATAD-Net achieves highest throughput at 290 TPS.",
+    "Table 1: Performance comparison of ATAD-Net vs CNN and RNN → ATAD-Net outperforms both on all four metrics.",
+    "Table 2: Average latency per transaction → ATAD-Net at 8.2ms vs CNN 10.6ms and RNN 12.5ms.",
+    "Table 3: Real-time detection accuracy under live simulation → Consistent 96.50-97.72% accuracy across time windows.",
+    "Table 4: Comparison with state-of-the-art DL models → ATAD-Net achieves highest accuracy, precision, recall, and lowest latency."
+  ],
+  "key_equations": [
+    {"equation": "f_t = \\sigma(W_f \\cdot [h_{t-1}, x_t] + b_f)", "explanation": "LSTM forget gate determines what information to discard from the cell state."},
+    {"equation": "C_t = f_t \\cdot C_{t-1} + i_t \\cdot \\tilde{C}_t", "explanation": "LSTM cell state update combining retained and new information."},
+    {"equation": "h_t = o_t \\cdot \\tanh(C_t)", "explanation": "LSTM output gate produces the hidden state for temporal pattern encoding."},
+    {"equation": "F_j = f(\\sum_{i \\in M_j} X_i \\cdot W_{ij} + b_j)", "explanation": "CNN convolution operation extracting localized features from transaction data."},
+    {"equation": "f(x) = \\max(0, x)", "explanation": "ReLU activation function used in CNN layers for non-linear feature extraction."},
+    {"equation": "W_{new} = W_{old} - \\eta \\cdot \\frac{\\partial L(X, Y)}{\\partial W}", "explanation": "DPAM incremental weight update for real-time adaptation to new fraud patterns."}
+  ],
+  "definitions": [
+    {"term": "ATAD-Net", "definition": "Adaptive Transactional Anomaly Detection Network, the proposed hybrid CNN-LSTM deep learning framework for real-time fraud detection."},
+    {"term": "DPAM", "definition": "Dynamic Pattern Adjustment Module, performs incremental parameter updates using sliding-window strategy for real-time adaptation."},
+    {"term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique, generates synthetic minority-class samples by interpolating between existing instances in feature space."},
+    {"term": "CNN", "definition": "Convolutional Neural Network, extracts localized spatial features from structured transaction data representations."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture that models sequential dependencies and temporal patterns in transaction histories."},
+    {"term": "ReLU", "definition": "Rectified Linear Unit, an activation function defined as max(0, x) used in the CNN feature extraction layers."},
+    {"term": "IEEE-CIS", "definition": "IEEE Computational Intelligence Society, provider of the Credit Card Fraud Detection benchmark dataset used for evaluation."}
+  ],
+  "citations": [
+    {"author": "Roy", "year": 2018, "page": 4, "paragraph": 3, "claim": "Demonstrated robustness of CNN and LSTM architectures in detecting credit card fraud with improved accuracy and reduced false positives over classical ML methods.", "role": "methodology"},
+    {"author": "Lavin", "year": 2015, "page": 2, "paragraph": 5, "claim": "Identified that existing DL models lack adaptability and sometimes have unclear reasoning for fraud detection decisions.", "role": "context"},
+    {"author": "Bhattacharyya", "year": 2011, "page": 4, "paragraph": 1, "claim": "Compared various ML methods and highlighted that Random Forest and SVM models significantly improve fraud detection accuracy.", "role": "baseline"},
+    {"author": "Dal Pozzolo", "year": 2017, "page": 2, "paragraph": 6, "claim": "Demonstrated that ML approaches cannot effectively handle imbalanced datasets where fraudulent transactions are a small portion of all transactions.", "role": "methodology"},
+    {"author": "Almazroi", "year": 2023, "page": 5, "paragraph": 3, "claim": "Applied LSTM-based RNNs to fraud detection in mobile payment systems, significantly outperforming traditional ML models with temporal dependencies.", "role": "methodology"},
+    {"author": "Chawla", "year": 2002, "page": 7, "paragraph": 1, "claim": "Proposed SMOTE technique for generating synthetic minority-class instances by interpolating between existing samples in feature space.", "role": "methodology"},
+    {"author": "Bolton", "year": 2002, "page": 3, "paragraph": 2, "claim": "Reviewed statistical fraud detection methods showing rule-based systems apply logical conditions to transaction features such as amounts and frequency.", "role": "context"},
+    {"author": "Rahmati", "year": 2025, "page": 5, "paragraph": 2, "claim": "Validated that deep neural networks outperform traditional ML algorithms in fraud detection accuracy and false-positive rates.", "role": "baseline"},
+    {"author": "LeCun", "year": 2015, "page": 5, "paragraph": 1, "claim": "Established foundational principles of deep learning for automatic pattern extraction from complex datasets without manual feature engineering.", "role": "methodology"},
+    {"author": "Goodfellow", "year": 2016, "page": 5, "paragraph": 4, "claim": "Noted that CNN and RNN architectures typically require large amounts of labeled training data for effective model performance.", "role": "context"},
+    {"author": "Thennakoon", "year": 2019, "page": 3, "paragraph": 4, "claim": "Highlighted that DL methods demand large computational resources and may not guarantee real-time detection performance in financial applications.", "role": "context"},
+    {"author": "Ahmed", "year": 2016, "page": 5, "paragraph": 5, "claim": "Surveyed anomaly detection techniques showing current DL methods are inflexible and do not adapt to changing fraud tactics without costly retraining.", "role": "context"},
+    {"author": "Bello", "year": 2024, "page": 5, "paragraph": 6, "claim": "Proposed adaptive ML models that respond flexibly to transaction changes, reducing dependency on outdated historical data.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Proposes a complete anomaly detection framework (ATAD-Net) for identifying fraudulent financial transactions in real time."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Introduces a novel CNN-LSTM hybrid algorithm with dynamic pattern adjustment specifically designed for financial transaction anomaly detection."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Presents a predictive deep learning model that classifies transactions as fraudulent or legitimate using sequential and spatial features."},
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "medium", "justification": "Applies SMOTE to generate synthetic fraud samples for training data augmentation in a financial ML pipeline."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "low", "justification": "Demonstrates classification approaches for financial behavioral patterns, though focused on fraud rather than user profiling."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Provides systematic evaluation of algorithmic modules using accuracy, precision, recall, F1-score, and latency metrics."}
+    ],
+    "contribution_to_field": "This paper contributes a hybrid deep learning architecture (ATAD-Net) that combines CNN spatial feature extraction with LSTM sequential modeling for financial anomaly detection. The Dynamic Pattern Adjustment Module introduces an incremental learning mechanism that enables real-time adaptation to evolving fraud patterns without full model retraining. The application of SMOTE for addressing class imbalance in financial transaction data provides a practical methodology for handling real-world skewed distributions. The paper benchmarks against multiple state-of-the-art approaches, establishing comparative baselines for detection accuracy and processing latency. The interpretability module, though nascent, addresses the important gap in making DL fraud detection decisions transparent to stakeholders.",
+    "directly_justifies": [
+      "ATAD-Net achieves 98.65% accuracy with 8.2ms latency on the IEEE-CIS credit card fraud benchmark.",
+      "DPAM enables incremental parameter updates via sliding-window strategy without full retraining.",
+      "SMOTE applied after train-test split generates synthetic minority samples to address 3.5% fraud class imbalance.",
+      "CNN-LSTM hybrid architecture captures both localized spatial anomalies and sequential temporal fraud patterns.",
+      "Real-time detection accuracy remains between 96.50% and 97.72% under live transaction simulation."
+    ],
+    "limits": [
+      "The paper focuses exclusively on credit card fraud detection rather than broader personal finance anomaly detection such as unusual spending patterns.",
+      "SHAP and LIME interpretability methods are planned but not implemented, leaving the interpretability module largely conceptual.",
+      "Evaluation is limited to a single benchmark dataset without validation on other financial transaction domains such as cryptocurrency or mobile payments.",
+      "The 5-fold cross-validation and grid search details are not fully reported, limiting reproducibility of hyperparameter optimization."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains were systematically scanned for relevance to this paper. Domains 1 (Filipino Young Professionals), 2 (Filipino Financial Practices), 3 (Expense Categorization), 7 (Budgeting Strategies), 9 (Mobile-First Design), 11 (Engagement Dynamics), and 13 (Savings/Debt Management) were considered and rejected as the paper addresses fraud detection rather than personal finance management or budgeting. Domains 8.A and 8.B were flagged as high relevance because ATAD-Net is a financial anomaly detection algorithm. Domain 6.A received medium relevance for its predictive modeling contribution. Domain 14.A received medium relevance due to SMOTE application. Domain 12.B received medium relevance for its systematic algorithmic evaluation. Domains 5.C and 4.A received low and contextual relevance respectively as the paper's classification and survey of existing systems provide background context. Domains 10 (Privacy/Trust) received contextual relevance through mentions of interpretability for regulatory compliance. The borderline case was domain 4.A, which was assigned low relevance because the related work survey discusses anomaly detection systems but not personal finance platforms specifically. Overall, the paper's topical coverage centers on anomaly detection algorithms and predictive modeling in financial systems, with peripheral relevance to synthetic data generation and evaluation methodologies."
+  },
+  "limitations": [
+    "Evaluation limited to single IEEE-CIS credit card fraud dataset without cross-domain validation. [unacknowledged]",
+    "SHAP and LIME interpretability methods are planned but not implemented or evaluated in the current work.",
+    "No comparison with unsupervised or semi-supervised anomaly detection methods such as Isolation Forest or autoencoders.",
+    "The DPAM incremental learning mechanism lacks theoretical convergence guarantees and ablation study evidence.",
+    "Hyperparameter optimization via grid search and 5-fold cross-validation is mentioned but details of search ranges and results are not reported. [unacknowledged]"
+  ],
+  "remember_this": [
+    "ATAD-Net combines CNN spatial feature extraction with LSTM sequential modeling for financial anomaly detection.",
+    "Dynamic Pattern Adjustment Module enables real-time adaptation without full model retraining.",
+    "num: Achieves 98.65% accuracy and 8.2ms detection latency on the IEEE-CIS benchmark.",
+    "SMOTE addresses class imbalance by generating synthetic fraud samples from 3.5% minority class.",
+    "Interpretability module is conceptual with SHAP and LIME planned for future work."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T16:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Abd-Ellatif et al_marked.md",
+      "converted_at": "2026-07-22T11:44:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "paper_id": "10.1257/jep.37.4.137",
+  "designation": "international",
+  "title": "The Importance of Financial Literacy: Opening a New Field",
+  "authors": "Lusardi, A.; Mitchell, O.",
+  "year": 2023,
+  "venue": "Journal of Economic Perspectives",
+  "odin_topics": ["1.C", "2.A", "2.C", "3.A", "5.A", "5.C", "7.A", "7.B", "8.A", "10.A", "10.B", "11.A", "12.A", "13.A", "13.C"],
+  "tldr": "Financial literacy is low globally, varies by demographics, and is a strong predictor of financial behavior, wealth accumulation, and wealth inequality.",
+  "problem_and_motivation": "People face complex financial decisions with long-lasting consequences, yet lack the necessary financial knowledge. This limited understanding restricts individual resource utilization and contributes to macroeconomic problems, including wealth inequality.",
+  "approach": [
+    "Designed and fielded an experimental financial literacy module for the Health and Retirement Study in 2004.",
+    "Developed the 'Big Three' questions based on principles of simplicity, relevance, brevity, and capacity to differentiate.",
+    "Analyzed data from the 2019 Survey of Consumer Finances to measure financial literacy and its demographic correlates.",
+    "Developed more comprehensive measures like the 'Big Five' and the 28-question P-Fin Index.",
+    "Used median regressions to estimate the association between financial literacy and various wealth measures.",
+    "Constructed a life-cycle theoretical model with endogenous financial literacy to examine its impact on wealth and wealth inequality.",
+    "Reviewed a meta-analysis of 76 randomized control trials on the effectiveness of financial education programs.",
+    "Synthesized research to identify implications for research, teaching, and policy.",
+    "Drew on international data from the FLAT World project and S&P Global Financial Literacy Survey.",
+    "Evaluated evidence on demographic differences, including gender, age, education, and race/ethnicity."
+  ],
+  "findings": [
+    "num: Only 43% of Americans can answer all three Big Three financial literacy questions correctly.",
+    "num: 61% of the U.S. population understands that a single stock is riskier than a stock mutual fund.",
+    "num: 29% of women versus 48% of men answer all three Big Three questions correctly.",
+    "num: One additional correct answer on the FinLit index is associated with 13% higher median net wealth.",
+    "num: 30-40% of wealth inequality near retirement can be accounted for by financial literacy.",
+    "Financial literacy follows a hump-shaped pattern with age, peaking in the 50-59 age group.",
+    "The more financially literate are more likely to invest in the stock market and earn higher risk-adjusted returns.",
+    "Financial education positively affects both financial knowledge and behavior.",
+    "The impact of financial education is three to five times larger than found by older studies.",
+    "Financial literacy has not changed much overall from 2017-2023, but has grown more unequal."
+  ],
+  "key_figures_tables": [
+    "Table 1: The 'Big Three' financial literacy questions and correct answers → Tests for understanding of interest, inflation, and risk diversification.",
+    "Table 2: U.S. financial literacy levels showing low knowledge, especially on risk (60.7% correct) → Demonstrates widespread financial illiteracy.",
+    "Figure 1: Large gender gaps in financial literacy across all Big Three questions → Women are less likely to answer correctly and more likely to say 'do not know'.",
+    "Figure 2: Hump-shaped financial literacy by age, peaking at 50-59 → Young and old adults lack knowledge, with inflation knowledge lower for the young.",
+    "Figure 3: Financial literacy increases with education, but even college graduates do not all answer correctly → Education alone is insufficient.",
+    "Figure 4: Sharp racial/ethnic gaps, with only 26% of Blacks and 22% of Hispanics answering all correctly → Low literacy may explain wealth inequality.",
+    "Figure 5: Cross-country comparisons show low financial literacy worldwide → The world is 'flat' in terms of financial knowledge.",
+    "Table 3: Median regressions show a strong positive association between financial literacy and wealth measures → Financial literacy is a powerful predictor of wealth."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "Knowledge of and ability to use fundamental financial concepts in economic decision-making."
+    },
+    {
+      "term": "Big Three",
+      "definition": "A short set of three questions testing knowledge of interest rates, inflation, and risk diversification."
+    },
+    {
+      "term": "P-Fin Index",
+      "definition": "The Personal Finance Index, a 28-question survey covering eight broad financial topics."
+    },
+    {
+      "term": "FLAT World",
+      "definition": "The 'Financial Literacy around the World' project comparing financial literacy across countries."
+    },
+    {
+      "term": "HRS",
+      "definition": "Health and Retirement Study, a longitudinal survey of older Americans."
+    },
+    {
+      "term": "SCF",
+      "definition": "Survey of Consumer Finances, a triennial survey of U.S. household wealth and finances."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Big Three questions originated with Lusardi and Mitchell (2011a).",
+      "role": "methodology"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Big Three have been included in over 40 surveys across Europe, Latin America, and Asia.",
+      "role": "finding"
+    },
+    {
+      "author": "Klapper",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy questions akin to the Big Three were included in the S&P Global Financial Literacy Survey covering over 140 countries.",
+      "role": "baseline"
+    },
+    {
+      "author": "Yakoboski",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The gender difference in financial literacy is remarkably stable across topics.",
+      "role": "finding"
+    },
+    {
+      "author": "Bucher-Koenen",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Gender differences in financial literacy are likely the result of lack of self-confidence, in addition to lack of knowledge.",
+      "role": "finding"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "30-40 percent of wealth inequality near retirement can be accounted for by financial literacy.",
+      "role": "finding"
+    },
+    {
+      "author": "Kaiser",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial education positively affects both financial knowledge and behavior.",
+      "role": "finding"
+    },
+    {
+      "author": "Fernandes",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The impact of financial education is three to five times larger than found by older studies.",
+      "role": "critique"
+    },
+    {
+      "author": "Clark",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The COVID-19 pandemic highlighted the need for precautionary savings and proper money management.",
+      "role": "context"
+    },
+    {
+      "author": "van Rooij",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The more financially literate are more likely to invest in the stock market.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Provides general framework for how financial literacy shapes behavior."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "Documents demographic differences but not culturally specific practices."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "low",
+        "justification": "Mentions financial choices and decision-making preferences."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Broadly discusses budgeting but not expense categorization."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Links literacy to planning and investment behavior."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Discusses demographic differences in literacy but no formal classification."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Mentions budgeting as a financial decision but not as a strategy."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "No system-specific budget recommendations."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "No mention of anomaly detection."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "No direct discussion of data privacy."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "No discussion of trust in systems."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "No discussion of engagement with applications."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses RCTs and meta-analyses as evaluation methods."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "contextual",
+        "justification": "Discusses saving but not goal management."
+      },
+      {
+        "code": "13.C",
+        "name": "End-of-Period Surplus as a Savings Input",
+        "relevance": "contextual",
+        "justification": "No specific mention of surplus management."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive review of financial literacy research over the past two decades. It establishes the widespread prevalence of financial illiteracy across demographic groups and countries. It demonstrates the strong predictive power of financial literacy for important economic outcomes like wealth accumulation. The paper develops a theoretical framework that models financial literacy as an endogenous investment, offering an explanation for observed patterns. It also synthesizes evidence from randomized controlled trials on the effectiveness of financial education, providing guidance for policy and teaching.",
+    "directly_justifies": [
+      "Financial literacy is a strong predictor of retirement planning and wealth.",
+      "30-40 percent of wealth inequality near retirement can be accounted for by financial literacy.",
+      "Financial education positively affects both financial knowledge and behavior.",
+      "The impact of financial education is three to five times larger than found by older studies."
+    ],
+    "limits": [
+      "The paper does not provide new empirical analysis beyond using the 2019 SCF data.",
+      "The analysis of demographic differences is based on cross-sectional data, which cannot disentangle age from cohort effects.",
+      "The paper does not evaluate a specific financial literacy intervention.",
+      "The findings are primarily based on U.S. data and may not generalize to all contexts."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 14 topic domains was conducted. The paper's focus on measuring financial literacy and linking it to financial behavior and outcomes made it directly relevant to domain 5.A (Financial Behavioral Profiles). Its discussion of demographic differences (gender, education, race) provided medium relevance to 5.C (Classification Approaches). The paper's description of its survey methodology and meta-analysis of RCTs provided medium relevance to 12.A (Evaluation Frameworks). Many other domains, including 1.C (Financial Behavior), 2.A (Culturally Specific Practices), and 7.A (Budgeting Strategies), received contextual or low relevance because the paper discusses these concepts at a general level without specific application to personal finance systems or Filipino contexts. Domains related to financial system design, such as 9.A (Mobile-First Design), 10.A (Data Privacy), and 14.A (Synthetic Data Generation), were rejected as the paper does not address these technical topics. The overall topical coverage is centered on financial literacy as an economic and educational concept rather than as a component of personal finance management systems."
+  },
+  "limitations": [
+    "The study's findings are based on cross-sectional data, limiting causal inferences. [unacknowledged]",
+    "The analysis relies on a single data source (SCF) for demographic breakdowns. [unacknowledged]",
+    "The paper does not explore the potential for financial literacy to be endogenous in its descriptive regressions, though it is discussed in the theoretical section.",
+    "The 'Big Three' questions, while widely used, may not capture all dimensions of financial literacy. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Only 43% of Americans understand basic interest, inflation, and risk concepts.",
+    "One additional correct literacy answer is linked to 13% higher median net wealth.",
+    "Financial literacy explains 30-40% of wealth inequality near retirement.",
+    "Financial education has a three-to-five times larger impact than older studies showed.",
+    "Women are much more likely than men to say 'do not know' to financial literacy questions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lusardi & Mitchell_marked.md",
+      "converted_at": "2026-07-21T14:07:55Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

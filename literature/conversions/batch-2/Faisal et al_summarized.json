@@ -1,0 +1,101 @@
+{
+  "paper_id": "9b4d26dc-9a6f-5558-a5c2-e1ecd8dc506a",
+  "designation": "international",
+  "title": "The Role of Digital Banking Features in Bank Selection: An Analysis of Customer Preferences for Online and Mobile Banking",
+  "authors": "Faisal, N. A.; Nahar, J.; Waliullah, M.; Borna, R. S.",
+  "year": 2024,
+  "venue": "Frontiers in Applied Engineering and Technology",
+  "odin_topics": [
+    "4.A",
+    "9.A",
+    "11.A"
+  ],
+  "tldr": "Digital banking features including convenience, security, personalization, and 24/7 availability are key factors in customer bank selection preferences.",
+  "problem_and_motivation": "Understanding which digital banking features influence customer bank selection is essential for financial institutions competing in an increasingly digital marketplace accelerated by COVID-19.",
+  "approach": [
+    "Systematic literature review of 112 peer-reviewed articles on digital banking adoption and effectiveness.",
+    "Examines key themes: convenience, security, personalization, competitive innovation, and crisis resilience.",
+    "Analyzes customer preferences for online and mobile banking features."
+  ],
+  "findings": [
+    "User-friendly interfaces, 24/7 availability, and seamless transactions are critical digital banking features.",
+    "Security concerns remain a significant factor in customer bank selection.",
+    "Personalization features increasingly influence customer preferences.",
+    "COVID-19 accelerated digital banking adoption and changed customer expectations."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Digital Banking",
+      "definition": "Online and mobile banking services enabling remote financial transactions and account management."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Systematic literature review; citations too numerous.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews digital banking features and customer preferences landscape."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "high",
+        "justification": "Examines mobile banking features and user interface preferences."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Discusses features driving customer engagement and bank selection."
+      }
+    ],
+    "contribution_to_field": "Provides a synthesized view of digital banking features that influence customer bank selection. Identifies convenience, security, and personalization as key differentiators in the competitive banking landscape.",
+    "directly_justifies": [
+      "User-friendly interfaces and 24/7 availability are critical digital banking features.",
+      "Security concerns significantly influence customer bank selection."
+    ],
+    "limits": [
+      "Literature review without primary empirical data.",
+      "Focus on feature preferences, not behavioral outcomes. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 4.A, 9.A (high), 11.A (medium). Rejected Philippine-specific topics (1.A-2.D) as this is international."
+  },
+  "limitations": [
+    "Literature review without primary empirical validation.",
+    "Does not address post-adoption behavioral outcomes. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Convenience, security, and personalization drive bank selection.",
+    "COVID-19 accelerated digital banking adoption.",
+    "User-friendly interfaces and 24/7 availability are critical features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Faisal et al_marked.md",
+      "converted_at": "2026-07-22T13:21:51Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

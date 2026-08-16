@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.63282/3117-5481/AIJCST-V6I5P105",
+  "designation": "international-algorithm-specific",
+  "title": "Breaking or Reinforcing the Cycle? Longitudinal Impacts of Bias-Correction Techniques on Feedback Loops and Sustained Financial Inclusion in Machine Learning Credit Scoring",
+  "authors": "Gentyala, R.",
+  "year": 2024,
+  "venue": "American International Journal of Computer Science and Technology",
+  "odin_topics": ["5.B", "5.C", "6.A", "8.B", "14.B"],
+  "tldr": "Simulates multi-cycle credit scoring to show static fairness interventions backfire over time, while feedback-aware dynamic resampling sustains 18% equity uplift with under 3% default rate increase.",
+  "problem_and_motivation": "Fairness interventions in ML credit scoring produce unintended long-term effects because models reshape borrower behavior and data iteratively. One-shot fairness evaluations miss feedback loop dynamics that compound disparities.",
+  "approach": [
+    "Simulated 8-12 lending cycles (5-7 years) using 1.2M US loan applications (2018-2024) plus synthetic emerging-market extensions.",
+    "Implemented performative prediction framework where decisions reshape future borrower data distributions.",
+    "Evaluated adversarial debiasing, pre-processing reweighting, causal proxy mitigation, and threshold adjustments.",
+    "Introduced feedback-aware dynamic resampling simulating counterfactual approvals for rejected cases.",
+    "Measured demographic parity, AUC-ROC, Brier scores, credit score progression, and inclusion indices."
+  ],
+  "findings": [
+    "num: Simple threshold adjustments increased initial Black/Hispanic approvals by 12-15% but widened disparities by 22% in later cycles.",
+    "num: Dynamic resampling with feedback-aware modeling sustained 18% equity uplift with less than 3% rise in default rates.",
+    "Static fairness fixes trigger reinforcing loops that exacerbate inequalities over time.",
+    "Feedback-aware strategies show greater resilience maintaining equitable access without risk escalation.",
+    "Performative prediction framework explains why naive debiasing fails under multi-cycle conditions."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Closed-loop block diagram of feedback mechanisms in credit scoring pipeline.",
+    "Figure 2: Iterative loan decision-making and debiasing framework with feedback loops."
+  ],
+  "key_equations": [
+    {"equation": "PR(\\theta) = E_{Z \\sim D(\\theta)}[\\ell(Z;\\theta)]", "explanation": "Performative risk accounting for distribution induced by model."},
+    {"equation": "D_{t+1} = D_t + \\epsilon \\cdot f(\\theta_t, decision)", "explanation": "Distribution update after each lending decision cycle."}
+  ],
+  "definitions": [
+    {"term": "Performative prediction", "definition": "Framework where model deployment causally affects target distribution."},
+    {"term": "Feedback loops", "definition": "Cycles where decisions reshape future data through sampling, feature, outcome, and model effects."},
+    {"term": "Performative stability", "definition": "Model that minimizes risk on distribution it induces."},
+    {"term": "Sampling loop", "definition": "Decisions alter which individuals enter observable population."}
+  ],
+  "citations": [
+    {"author": "Perdomo et al.", "year": 2020, "page": 0, "paragraph": 0, "claim": "Formalized performative prediction where predictions alter target distribution.", "role": "methodology"},
+    {"author": "Pagan et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Classified feedback loops into sampling, feature, outcome, and model loops.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "high", "justification": "Directly addresses dynamic borrower profiles evolving with feedback."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Evaluates ML classifiers for credit risk with debiasing."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Simulates multi-cycle predictive credit scoring models."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "low", "justification": "Feedback dynamics relevant to anomaly detection drift."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Discusses iterative retraining and deployment feedback effects."}
+    ],
+    "contribution_to_field": "Operationalizes performative prediction and feedback loop theory in unified credit scoring simulation. Demonstrates that static fairness interventions inevitably backfire under dynamic lending conditions. Provides empirical evidence that feedback-aware strategies (dynamic resampling) sustain equity gains longer.",
+    "directly_justifies": [
+      "Static debiasing interventions backfire under multi-cycle feedback dynamics.",
+      "Dynamic resampling sustains 18% equity uplift vs threshold adjustments.",
+      "Feedback loops compound disparities via sampling, feature, and outcome effects.",
+      "Performative prediction explains why naive fairness fails in lending."
+    ],
+    "limits": ["Simulation-based; real-world validation needed."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.B, 5.C, 6.A high for profiling, classification, and prediction. Assigned 14.B medium for deployment. Assigned 8.B low. Rejected non-algorithmic topics as paper is ML-focused."
+  },
+  "limitations": [
+    "Simulation-based findings require real-world validation.",
+    "Synthetic emerging-market data may not capture all local dynamics.",
+    "Limited to XGBoost base classifier; other models may behave differently."
+  ],
+  "remember_this": [
+    "Static fairness interventions backfire under multi-cycle feedback dynamics.",
+    "Dynamic resampling sustains 18% equity uplift with under 3% default risk.",
+    "Threshold adjustments widen disparities by 22% in later cycles.",
+    "Performative prediction explains why naive debiasing fails in lending."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gentyala_marked.md",
+      "converted_at": "2026-07-22T13:25:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

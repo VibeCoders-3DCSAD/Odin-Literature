@@ -1,0 +1,285 @@
+{
+  "paper_id": "10.1177/13678779251348945",
+  "designation": "local",
+  "title": "Abot kamay: Embedding digital transactions in the Philippines",
+  "authors": "Athique, A.; Lorenzana, J. A.",
+  "year": 2026,
+  "venue": "International Journal of Cultural Studies",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "2.A",
+    "2.D",
+    "4.A"
+  ],
+  "tldr": "An ethnographic study of three Metro Manila communities shows Filipino digital transaction adoption is driven by cultural norms of reciprocal obligation and kinship support rather than by consumer convenience.",
+  "problem_and_motivation": "Industry literature on digital finance in the Global South has focused on quantifying adoption while neglecting how local users give meaning to transaction platforms within established cultural and social norms. The paper investigates how everyday dynamics of exchange in the Philippines are being remediated via digital transactions, using Polanyi's concept of embeddedness to ground analysis.",
+  "approach": [
+    "Ethnographic multi-sited study conducted across three Metro Manila districts with differing socio-economic profiles from 2019 to 2022.",
+    "Three cohorts were studied: middle-aged employed householders in Santa Mesa, precarious informal workers in Payatas, and college-educated digital-economy freelancers in Quezon City.",
+    "Data collection involved semi-structured focus groups of eight to ten participants conducted in Tagalog at communal meeting spaces.",
+    "Individual video-link interviews replaced focus groups for the Quezon City cohort after COVID-19 separation of the research team in March 2020.",
+    "The analysis applies Polanyi's framework of reciprocity, redistribution, and remuneration alongside Braudel's multi-layered economy concept."
+  ],
+  "findings": [
+    "num: 72% mobile digital penetration with 44% of adults remaining unbanked in the Philippines.",
+    "num: Digital transactions reached 42.1% of retail payments by 2022 with P2P transfers growing at 91.2% per annum.",
+    "num: GCash had 76 million users by 2023, emerging as the clear market leader.",
+    "All three cohorts articulated adoption of digital transactions in terms of social relationships and reciprocal obligations rather than convenience.",
+    "Santa Mesa participants preferred cash on delivery and used digital platforms mainly for online shopping and managing social obligations.",
+    "Payatas participants used GCash principally for money transfers to provincial relatives and receiving funds, reflecting redistribution priorities.",
+    "Quezon City freelancers employed GCash as a security intermediary between bank accounts and other transaction platforms.",
+    "Digital transactions were remediating existing informal lending practices such as the 5/6 money lending system with lower-cost alternatives like Home Credit."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Abot kamay",
+      "definition": "Filipino idiom meaning within reach or a helping hand, connoting functional assistance and ontological proximity to others."
+    },
+    {
+      "term": "Abono",
+      "definition": "Paying for someone else's expense when they are unable to pay due to distance or lack of cash."
+    },
+    {
+      "term": "Pantawid",
+      "definition": "Money borrowed to get through a cash shortage until regular income resumes."
+    },
+    {
+      "term": "Suki",
+      "definition": "Filipino term for a loyal customer who receives privileges such as discounts and credit from a vendor."
+    },
+    {
+      "term": "Barangay",
+      "definition": "Smallest unit of local government in the Philippines."
+    },
+    {
+      "term": "Kakayahan",
+      "definition": "Filipino concept denoting the capacity of the giver to give and offer help, which defines the limits of abot kamay."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Polanyi",
+      "year": 1944,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Economic exchanges always take place within, and as, networks of social relationships.",
+      "role": "methodology"
+    },
+    {
+      "author": "Granovetter",
+      "year": 1985,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Economic action is embedded in networks of social relations that cannot be reduced to individual utility-maximizing behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Braudel",
+      "year": 1977,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The historical accretion of reciprocity, redistribution, and remuneration constitutes multi-layered economies.",
+      "role": "methodology"
+    },
+    {
+      "author": "Block",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Market transformation occurs precisely where market mechanisms are able to insert themselves within established networks of exchange.",
+      "role": "context"
+    },
+    {
+      "author": "Hollnsteiner",
+      "year": 1961,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reciprocity is a foundational organizing principle in lowland Philippine social relations.",
+      "role": "context"
+    },
+    {
+      "author": "Graeber",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Different forms of social currencies remain fundamentally important in the digital era.",
+      "role": "context"
+    },
+    {
+      "author": "Bangko Sentral ng Pilipinas",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "num: 72% mobile penetration and 44% unbanked adult population in the Philippines.",
+      "role": "finding"
+    },
+    {
+      "author": "Acopiado",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "num: GCash emerged as the clear market leader by 2023 with 76 million users at the expense of Maya.",
+      "role": "finding"
+    },
+    {
+      "author": "Ordinario",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "num: Digital transactions reached 42.1% of retail payments by 2022 with P2P transfers growing at 91.2% per annum.",
+      "role": "finding"
+    },
+    {
+      "author": "Heyer",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SMS-based airtime gained wider popularity than online banking because it was more accessible for users with intermittent connectivity.",
+      "role": "context"
+    },
+    {
+      "author": "Zelizer",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Relational economic sociology examines how social ties shape the meaning and practice of monetary transactions.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Quezon City cohort consists of college-educated freelance professionals interfacing with the global digital economy."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Study documents transaction behaviors, platform preferences, and spending patterns across three socio-economic cohorts."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Core focus on abot kamay and its digital remediation as a culturally specific exchange practice."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and Occasions",
+        "relevance": "medium",
+        "justification": "Discusses gifting during baptismal rituals, holiday fundraising, and pandemic emergency transfers."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides detailed landscape of GCash, PayMaya, GrabPay, Home Credit, and Smart Padala in the Philippine market."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Identifies distinct behavioral profiles across the three cohorts differentiated by socio-economic class and platform use."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a culturally grounded qualitative account of digital transaction adoption in the Philippines, demonstrating that everyday fintech usage is driven by social obligations and reciprocal norms rather than convenience alone. It extends Polanyi's framework of embeddedness to show how digital platforms simultaneously transform and are shaped by pre-existing cultural logics of reciprocity, redistribution, and remuneration. The three-cohort ethnographic design reveals how socio-economic position mediates the relationship between digital affordances and cultural practice, offering evidence that transaction platforms are becoming embedded as financial infrastructure for social reproduction in the Global South.",
+    "directly_justifies": [
+      "Filipino digital transaction adoption is driven by reciprocal social obligations rather than by convenience.",
+      "Digital platforms are remediating existing practices of abot kamay across time and space for all cohorts studied.",
+      "num: P2P transfers via transaction platforms grew at 91.2% per annum by mid-2023.",
+      "Young Payatas participants created novel transaction chains involving content monetization and gaming wagers via GCash.",
+      "GCash serves as a security intermediary between conventional bank accounts and third-party platforms for some users."
+    ],
+    "limits": [
+      "The study is confined to three Metro Manila districts and cannot be generalized to rural or provincial populations.",
+      "Sample sizes for each cohort are modest, with eight to ten participants per focus group.",
+      "The COVID-19 pandemic disrupted the original multi-site research design, forcing a methodological shift for one cohort. [unacknowledged]",
+      "No systematic quantitative measurement of transaction volumes or behavioral frequency was conducted."
+    ],
+    "topic_relevance": {
+      "topics": [
+        {
+          "code": "1.A",
+          "name": "Filipino Young Professionals as a Demographic",
+          "relevance": "high",
+          "justification": "Quezon City cohort consists of Filipino young professionals and the paper documents their financial behaviors across all three cohorts."
+        },
+        {
+          "code": "1.C",
+          "name": "Financial Behavior of Filipino Young Professionals",
+          "relevance": "high",
+          "justification": "Study documents transaction behaviors, platform preferences, and spending patterns across three socio-economic cohorts."
+        },
+        {
+          "code": "2.A",
+          "name": "Culturally Specific Financial Practices",
+          "relevance": "high",
+          "justification": "Core focus on abot kamay and its digital remediation as a culturally specific exchange practice."
+        },
+        {
+          "code": "2.D",
+          "name": "Filipino Spending Cycles and Occasions",
+          "relevance": "medium",
+          "justification": "Discusses gifting during baptismal rituals, holiday fundraising, and pandemic emergency transfers."
+        },
+        {
+          "code": "4.A",
+          "name": "Landscape of Existing Personal Finance Systems",
+          "relevance": "medium",
+          "justification": "Provides detailed landscape of GCash, PayMaya, GrabPay, Home Credit, and Smart Padala in the Philippine market."
+        },
+        {
+          "code": "5.A",
+          "name": "Financial Behavioral Profiles in Personal Finance Systems",
+          "relevance": "medium",
+          "justification": "Identifies distinct behavioral profiles across the three cohorts differentiated by socio-economic class and platform use."
+        }
+      ],
+      "contribution_to_field": "This paper contributes a culturally grounded qualitative account of digital transaction adoption in the Philippines, demonstrating that everyday fintech usage is driven by social obligations and reciprocal norms rather than convenience alone.",
+      "directly_justifies": [
+        "Filipino digital transaction adoption is driven by reciprocal social obligations rather than by convenience.",
+        "Digital platforms are remediating existing practices of abot kamay across time and space for all cohorts studied.",
+        "num: P2P transfers via transaction platforms grew at 91.2% per annum by mid-2023."
+      ],
+      "limits": [
+        "The study is limited to three Metro Manila districts and does not represent rural or provincial Filipino populations.",
+        "No quantitative metrics of transaction frequency or volume were collected alongside qualitative data.",
+        "The COVID-19 pandemic forced a methodological shift from co-present focus groups to video interviews for the Quezon City cohort."
+      ]
+    },
+    "limitations": [
+      "The study is limited to three Metro Manila districts and does not represent rural or provincial Filipino populations.",
+      "No quantitative metrics of transaction frequency or volume were collected alongside qualitative data.",
+      "The COVID-19 pandemic forced a methodological shift from co-present focus groups to video interviews for the Quezon City cohort."
+    ],
+    "remember_this": [
+      "Filipino digital transaction adoption is driven by cultural norms of reciprocal obligation rather than by convenience alone.",
+      "Digital platforms are remediating existing abot kamay practices of abono, pantawid, and emergency transfers across time and space.",
+      "num: The Philippines had 72% mobile penetration with 44% of adults remaining unbanked.",
+      "GCash reached 76 million users by 2023, becoming the dominant transaction platform in the Philippines.",
+      "Young Payatas users created novel transaction chains converting content-viewing points and gaming wagers into GCash credit."
+    ]
+  },
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Athique & Lorenzana_marked.md",
+      "converted_at": "2026-07-22T12:05:11Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

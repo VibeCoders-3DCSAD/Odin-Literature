@@ -1,0 +1,95 @@
+{
+  "paper_id": "c8b3e84e-8512-55f0-aaea-b91e46f4f89a",
+  "designation": "local",
+  "title": "Financial Literacy and Financial Inclusion in the Philippines: A Review of Literature",
+  "authors": "Oikonomia Review",
+  "year": 2020,
+  "venue": "Journal of Economics",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "11.A",
+    "13.B"
+  ],
+  "tldr": "Buy-Now-Pay-Later (BNPL) services have expanded rapidly across Southeast Asia, blending digital checkout convenience with short-term consumer credit. While BNPL is often marketed as a frictionless payment innovation, concerns about impulsive spending and debt stress have grown, particularly among Gen Z consumers whose digital shopping frequency is high and financial buffers are limited. This study",
+  "problem_and_motivation": "Buy-Now-Pay-Later (BNPL) services have expanded rapidly across Southeast Asia, blending digital checkout convenience with short-term consumer credit. While BNPL is often marketed as a frictionless payment innovation, concerns about impulsive spending and debt stress have grown, particularly among Gen Z consumers whose digital shopping frequency is high and financial buffers are limited. This study examines the determinants and consequences of BNPL adoption among Filipinos Gen Z consumers, focusi",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "1.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Financial Literacy and Financial Inclusion in the Philippines: A Review of Liter"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Financial Literacy and Financial Inclusion in the Philippines: A Review of Liter",
+    "Year: 2020",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Romero_marked.md",
+      "converted_at": "2026-07-21T08:20:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

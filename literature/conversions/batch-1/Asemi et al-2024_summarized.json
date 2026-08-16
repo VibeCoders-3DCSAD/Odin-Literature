@@ -1,0 +1,240 @@
+{
+  "paper_id": "10.1186/s40537-024-00965-y",
+  "designation": "international-algorithm-specific",
+  "title": "A model for investment type recommender system based on the potential investors based on investors and experts feedback using ANFIS and MNN",
+  "authors": "Asemi, A.; Asemi, A.; Ko, A.",
+  "year": 2024,
+  "venue": "Journal of Big Data",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "6.A",
+    "12.A",
+    "14.B"
+  ],
+  "tldr": "An ANFIS-based investment recommender system using multimodal neural network pretraining and expert feedback predicts suitable investment types from clustered investor profiles with moderate accuracy.",
+  "problem_and_motivation": "Individual investors struggle to make informed decisions in complex financial markets due to market volatility, changing economic conditions, and data overload. There is a gap in systems that predict investment types based on a combination of demographic, personality, financial, and managerial traits simultaneously.",
+  "approach": [
+    "Collected data from 1542 respondents via a web-based questionnaire covering demographics, financial status, experiences, personality, managerial traits, key decision factors, and investment preferences.",
+    "Preprocessed and clustered data using ETL tools, JMP, MATLAB, and Python, applying K-Means clustering with Elbow Curve and Silhouette score validation to reduce to 188 investor groups.",
+    "Designed a Sugeno-type ANFIS model with three clustered inputs and one output representing investment type preference, using trimf membership functions and constant output MFs.",
+    "Trained the ANFIS model using a hybrid approach over three epochs with 188 data pairs and 18 fuzzy rules, achieving a training RMSE of 0.721054.",
+    "Applied multimodal neural network pretraining using Keras to initialize ANFIS weights, achieving a test MSE of 0.001199 on preprocessed data.",
+    "Evaluated system performance using RMSE, accuracy, precision, recall, and F1-score metrics.",
+    "Incorporated expert feedback and investor opinions to refine fuzzy rules and customize investment recommendations.",
+    "Compared results against traditional methods including decision trees and logistic regression to demonstrate ANFIS superiority."
+  ],
+  "findings": [
+    "num: F1-score of 0.6667 achieved by the ANFIS model across 18 fuzzy rules.",
+    "num: Minimal training RMSE of 0.721054 obtained using a hybrid training approach over three epochs with 188 data pairs.",
+    "num: Test MSE of 0.001199 achieved after multimodal neural network pretraining.",
+    "num: 188 potential investor groups derived from 1542 original respondents after K-Means clustering and frequency filtering.",
+    "The system outperformed traditional methods including decision trees and logistic regression for investment type prediction.",
+    "num: Three ANFIS inputs (financial information, investment experiences, personality-managerial traits) were sufficient to predict investment type output."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Data and fuzzy function for ANFIS model showing three input clusters and output cluster in MATLAB.",
+    "Figure 2: Trained and tested grid of the ANFIS system for investment type prediction with hybrid approach.",
+    "Figure 3: Proposed ANFIS structure including fuzzification, implication rules, normalization, defuzzification, and integration.",
+    "Figure 4: Comprehensive Framework for the Proposed Investment Recommender System across seven phases."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "ANFIS",
+      "definition": "Adaptive Neuro-Fuzzy Inference System, a hybrid artificial neural network combining fuzzy logic and neural networks."
+    },
+    {
+      "term": "MNN",
+      "definition": "Multimodal Neural Network, a deep learning technique that improves performance by allowing simultaneous learning from multiple sources."
+    },
+    {
+      "term": "RMSE",
+      "definition": "Root Mean Square Error, a metric measuring prediction error between predicted and actual values."
+    },
+    {
+      "term": "F1-Score",
+      "definition": "Harmonic mean of precision and recall providing a balanced measure of a model's predictive accuracy."
+    },
+    {
+      "term": "K-Means",
+      "definition": "A clustering algorithm that partitions data into k clusters based on feature similarity."
+    },
+    {
+      "term": "Sugeno-type",
+      "definition": "A type of fuzzy inference system where output membership functions are constants or linear functions of inputs."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Jang",
+      "year": 1993,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ANFIS is an adaptive-network-based fuzzy inference system that combines fuzzy logic with neural networks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Asemi",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A semi and Ko proposed a novel combined business recommender system model using customer investment service feedback.",
+      "role": "baseline"
+    },
+    {
+      "author": "Abraham",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Abraham et al. explored genetic algorithm and random forest for forecasting stock trends.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chen",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Chen et al. proposed cluster-based mutual fund classification and price prediction using machine learning for Robo-advisors.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chatterjee",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Chatterjee et al. proposed an NLP and LSTM-based stock prediction and recommender system for KOSDAQ and KOSPI markets.",
+      "role": "baseline"
+    },
+    {
+      "author": "Asemi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Asemi et al. proposed an investment recommender system model based on potential investors' key decision factors using ANFIS.",
+      "role": "methodology"
+    },
+    {
+      "author": "Asemi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Asemi et al. investigated the impact of managerial traits on investor decision prediction using ANFIS.",
+      "role": "methodology"
+    },
+    {
+      "author": "Asemi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Asemi et al. presented an adaptive neuro-fuzzy inference system for customizing investment type based on demographics and feedback.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kovacs",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Kovacs et al. explored investment patterns of potential retail banking customers using two-stage cluster analysis.",
+      "role": "context"
+    },
+    {
+      "author": "Birim",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Birim et al. estimated return rate of blockchain financial products using the ANFIS-PSO method.",
+      "role": "context"
+    },
+    {
+      "author": "Faridniya",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Faridniya and Faridnia provided a model for allocating resources and choosing investment type using Data Envelopment Analysis.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Surveys existing investment recommender systems including ANFIS, LSTM, GA-based, and NLP-based approaches."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies limitations of traditional IRSs including reliance on limited user attributes."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Clusters investors by demographics, financial status, personality traits, and managerial characteristics."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution proposes an ANFIS+MNN predictive model for investment type recommendation."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates the proposed system using RMSE, accuracy, precision, recall, and F1-score across training epochs."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Details the complete ML pipeline including data preprocessing, K-Means clustering, ANFIS training, MNN pretraining, and expert feedback integration."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a hybrid investment recommender system architecture combining ANFIS fuzzy inference with multimodal neural network pretraining for personalized investment type prediction.",
+    "directly_justifies": [
+      "ANFIS-based recommender system using multimodal neural network pretraining achieves moderate accuracy for investment type prediction.",
+      "Hybrid training over three epochs with 188 data pairs yields an F1-score of 0.6667 and training RMSE of 0.721054.",
+      "Multimodal pretraining with Keras initializes ANFIS weights effectively, reducing test MSE to 0.001199.",
+      "Expert feedback integration enables continuous refinement of fuzzy rules and recommendation customization."
+    ],
+    "limits": [
+      "Dataset reduced to 188 investor groups from 1542 respondents, limiting generalizability.",
+      "Training converged quickly at approximately 0.72 RMSE per epoch without further optimization.",
+      "System designed for retail investors only, explicitly acknowledged as unsuitable for institutional investors.",
+      "Potential biases from historical data usage not examined."
+    ],
+    "topic_mapping_rationale": "All fourteen topic domains were systematically scanned. Domains 4.A, 4.B, 6.A, and 14.B were flagged as high or medium relevance. Domain 5.A was included at medium relevance for investor clustering by demographic and personality traits. Domain 12.A was included at medium relevance due to evaluation using RMSE, F1-score, and comparison with baseline methods."
+  },
+  "limitations": [
+    "Dataset reduced to 188 investor groups from 1542 respondents, limiting generalizability.",
+    "Training converged quickly at approximately 0.72 RMSE per epoch without further optimization.",
+    "System designed for retail investors only, explicitly acknowledged as unsuitable for institutional investors.",
+    "Potential biases from historical data usage not examined."
+  ],
+  "remember_this": [
+    "ANFIS-based investment recommender system combines fuzzy logic with neural network pretraining for personalized recommendations.",
+    "The model achieved an F1-score of 0.6667 and training RMSE of 0.721054 using 188 data pairs and 18 fuzzy rules.",
+    "Multimodal neural network pretraining reduced test MSE to 0.001199, improving model convergence.",
+    "Expert feedback integration enables continuous rule refinement, enhancing recommendation accuracy.",
+    "System outperformed traditional methods including decision trees and logistic regression for investment type prediction."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Asemi et al-2024_marked.md",
+      "converted_at": "2026-07-22T12:02:06Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

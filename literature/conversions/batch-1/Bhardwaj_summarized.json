@@ -1,0 +1,153 @@
+{
+  "paper_id": "bhardwaj2026abc",
+  "designation": "international-algorithm-specific",
+  "title": "Agent Behavioral Contracts: Formal Specification and Runtime Enforcement for Reliable Autonomous AI Agents",
+  "authors": "Varun Pratap Bhardwaj",
+  "year": 2026,
+  "venue": "arXiv preprint (arXiv:2603.xxxxx)",
+  "odin_topics": ["5.B.I", "14.B", "14.C"],
+  "tldr": "Introduces Agent Behavioral Contracts (ABC), a formal Design-by-Contract framework for autonomous AI agents that defines preconditions, invariants, governance policies, and recovery mechanisms with probabilistic (p,δ,k)-satisfaction guarantees and a proven drift bounds theorem.",
+  "problem_and_motivation": "AI agents operate on prompts with no formal behavioral specification, causing drift, governance failures, and project failures that traditional software contracts solve. Runtime enforcement is a theoretical necessity: the self-evolution trilemma proves passive safety is provably insufficient for agents that evolve behavior over extended interactions.",
+  "approach": [
+    "Defines ABC contract tuple C = (P, Ihard, Isoft, Ghard, Gsoft, R) with hard/soft constraint separation and recovery mechanisms",
+    "Introduces (p, δ, k)-satisfaction: probabilistic compliance where contracts hold with probability p, deviations within δ, and recovery within k steps",
+    "Models behavioral drift as an Ornstein–Uhlenbeck process with Lyapunov stability analysis, proving drift converges to D* = α/γ in expectation",
+    "Establishes Compositionality Theorem with four sufficient conditions (interface, assumption, governance, recovery) for safe multi-agent chains",
+    "Derives probabilistic composition bounds showing reliability degrades multiplicatively and drift accumulates additively across N-agent chains",
+    "Implements ContractSpec, a YAML-based DSL for declarative contract specification supporting hard/soft constraints and file-reference composition",
+    "Builds AgentAssert runtime enforcement library with sub-10ms per-action overhead and recovery re-prompting for soft violations",
+    "Creates AgentContract-Bench benchmark of 200 scenarios across 7 domains with 6 adversarial stress profiles and composition testing",
+    "Evaluates across 1,980 sessions on 7 models from 6 vendors measuring soft violations, drift trajectories, and reliability under stress",
+    "Applies SPRT-based certification to reduce required sample size from ~18,445 to 150–300 sessions for contract compliance verification"
+  ],
+  "findings": [
+    "num: Contracted agents detect 5.2–6.8 soft violations per session that uncontracted baselines miss entirely (p < 0.0001, Cohen's d = 6.7–33.8)",
+    "num: Hard constraint compliance reaches 88–100% across all models under contract enforcement",
+    "num: Behavioral drift bounded to D* < 0.27 across extended 12-turn sessions with OU mean-reversion fit (R² = 0.49–0.75)",
+    "num: 100% recovery success for frontier models (GPT-5.2, Claude Opus 4.6), 17–100% across all models",
+    "num: Runtime overhead < 10ms per action, scaling linearly at 0.218k + 2.8ms (R² = 0.99) for k constraints",
+    "num: Ablation study shows ~0.20 reliability index drop when recovery or soft constraints are removed, consistent across 4 models (σ < 0.01)",
+    "num: Platform guardrails (Azure DefaultV2) block 40–60% of legitimate multi-turn sessions when layered with behavioral contracts",
+    "num: Stress resilience: hard compliance never drops below 0.911 under adversarial prompt injection across 4 models and 3 attack types",
+    "The transparency effect: lower soft compliance scores under contracts indicate measurement, not regression — contracts make invisible violations visible",
+    "Recovery transforms exponential compliance decay (q^T) into linear decay (1 − T(1−q)(1−r)), a qualitative shift from unreliable to deployable"
+  ],
+  "key_figures_tables": [
+    "Table 1: Comparison of agent safety frameworks (ABC vs AgentSpec, Pro2Guard, Agent-C, VeriGuard, AIR, Ye '26)",
+    "Table 3: AgentContract-Bench domain breakdown — 200 scenarios across 7 domains",
+    "Table 9: E1 results — contracted vs. uncontracted across 7 models (60 sessions each)",
+    "Table 10: Soft violation statistical significance — all p < 0.0001, Cohen's d range 6.70–33.82",
+    "Table 11: E2 drift prevention — bounded Dmax across 4 models, recovery rates 17–100%",
+    "Table 12: E3 governance stress — hard compliance under adversarial conditions across 12 model-stress combinations",
+    "Table 13: E4 ablation study — Full ABC vs Hard Only vs Soft Only vs Drift Only vs No Recovery across 4 models",
+    "Table 14: Component contribution — ~0.20 mean Θ degradation when recovery or soft constraints removed",
+    "Figure 3: OU drift model fit across 4 models (R² = 0.49–0.75)",
+    "Figure 4: Ablation heatmap showing Θ across 4 models and 5 conditions"
+  ],
+  "key_equations": [
+    {
+      "equation": "C = (P, Ihard, Isoft, Ghard, Gsoft, R)",
+      "explanation": "ABC contract tuple: Preconditions, hard and soft Invariants, hard and soft Governance policies, and Recovery mechanisms"
+    },
+    {
+      "equation": "dD(t) = (α − γ D(t)) dt + σ dW(t)",
+      "explanation": "Ornstein-Uhlenbeck drift dynamics: natural drift α pushes away from specification, contract recovery γ restores, noise σ captures LLM non-determinism"
+    },
+    {
+      "equation": "Eπ[D(t)] = α/γ",
+      "explanation": "Stationary mean drift: expected drift under contract enforcement equals natural drift rate divided by recovery rate"
+    },
+    {
+      "equation": "P[D(t) > α/γ + η] ≤ exp(−γ η² / σ²)",
+      "explanation": "Gaussian concentration bound on stationary drift: probability of exceeding mean-plus-η decays exponentially in γ and quadratically in η"
+    },
+    {
+      "equation": "pA⊕B ≥ pA · pB · ph",
+      "explanation": "Probabilistic composition: end-to-end reliability of two-agent chain is at least the product of individual agent and handoff probabilities"
+    },
+    {
+      "equation": "pchain ≥ ∏ᵢ pᵢ · ∏ⱼ phⱼ, δchain ≤ ∑ᵢ δᵢ + ∑ⱼ δhⱼ",
+      "explanation": "N-agent composition: reliability degrades multiplicatively, drift accumulates additively (the 'broken telephone' effect)"
+    }
+  ],
+  "definitions": [
+    {"term": "ABC Contract", "definition": "Tuple C = (P, Ihard, Isoft, Ghard, Gsoft, R) specifying preconditions, hard and soft invariants, hard and soft governance constraints, and recovery mechanisms for an autonomous AI agent"},
+    {"term": "(p, δ, k)-Satisfaction", "definition": "Probabilistic contract compliance: hard constraints hold with probability ≥ p, soft compliance stays within δ tolerance k steps after any violation"},
+    {"term": "Behavioral Drift Score D(t)", "definition": "Composite metric wc·D_compliance(t) + wd·D_distributional(t) combining a lagging compliance-gap indicator with a leading JSD-based distributional shift indicator"},
+    {"term": "Transparency Effect", "definition": "Empirical finding that contracted agents show lower apparent soft compliance because contracts make previously invisible violations measurable"},
+    {"term": "Agent Reliability Index Θ", "definition": "Weighted composite α1·C̄ + α2·(1−D̄) + α3·1/(1+Ē) + α4·S summarizing an agent's overall contractual fitness across compliance, drift, recovery, and stress resilience"},
+    {"term": "Drift Bounds Theorem", "definition": "Proof that ABC contracts with recovery rate γ > α bound expected stationary drift to D* = α/γ with Gaussian concentration and a closed-form design criterion"},
+    {"term": "Compositionality Theorem", "definition": "Under interface compatibility, assumption discharge, governance consistency, and recovery independence, individual contract guarantees compose into end-to-end multi-agent guarantees"},
+    {"term": "Recovery Linearization", "definition": "Lemma showing recovery transforms exponential compliance decay (q^T) into linear decay (1 − T(1−q)(1−r))"}
+  ],
+  "citations": [
+    {"author": "Meyer", "year": 1992, "page": 2, "paragraph": 1, "claim": "Design-by-Contract paradigm formalizes software component obligations as preconditions, postconditions, and class invariants", "role": "methodology"},
+    {"author": "Bai et al.", "year": 2022, "page": 2, "paragraph": 3, "claim": "Constitutional AI embeds behavioral principles during training to produce more aligned models at generation time", "role": "baseline"},
+    {"author": "Rath", "year": 2026, "page": 6, "paragraph": 1, "claim": "Provides first systematic study of behavioral drift in multi-agent LLM systems, introducing Agent Stability Index (ASI)", "role": "context"},
+    {"author": "Wang et al.", "year": 2026, "page": 6, "paragraph": 2, "claim": "AgentSpec introduces customizable runtime enforcement with rule-based DSL for LLM agent safety properties", "role": "baseline"},
+    {"author": "Wang et al.", "year": 2025, "page": 6, "paragraph": 3, "claim": "Pro2Guard extends runtime enforcement with probabilistic model checking via DTMCs learned from execution traces", "role": "baseline"},
+    {"author": "Cartagena and Teixeira", "year": 2026, "page": 2, "paragraph": 3, "claim": "Demonstrates that text-level safety alignment does not transfer to tool-call safety for LLM agents", "role": "finding"},
+    {"author": "Wang et al.", "year": 2026, "page": 2, "paragraph": 4, "claim": "Proves self-evolution trilemma: continuous self-evolution, isolation from correction, and safety invariance cannot coexist", "role": "finding"},
+    {"author": "Ye and Tan", "year": 2026, "page": 4, "paragraph": 3, "claim": "Introduces Agent Contracts for resource-bounded AI systems governing token consumption, execution time, and cost budgets", "role": "baseline"},
+    {"author": "Dong et al.", "year": 2025, "page": 6, "paragraph": 4, "claim": "Agent-C defines DSL for temporal safety constraints using SMT solving to enforce compliance during generation", "role": "baseline"},
+    {"author": "Rebedea et al.", "year": 2023, "page": 5, "paragraph": 2, "claim": "NeMo Guardrails provides programmable framework for constraining LLM behavior through topical and safety rails", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.B.I",
+        "name": "Concept Drift as the Framework for Progressive Profile Updates",
+        "relevance": "medium",
+        "justification": "Paper models behavioral drift via Ornstein-Uhlenbeck process with composite drift score D(t) combining compliance gap and JSD distributional shift. The drift detection methodology is transferable to progressive user profile updates in personal finance systems, though the paper's focus is AI agent behavioral drift, not financial user profile drift."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "contextual",
+        "justification": "Paper provides runtime enforcement framework for deployed AI agents with formal guarantees. AgentAssert runtime achieves sub-10ms overhead with O(k + |A|) complexity. Establishes principles for monitoring and enforcing constraints on deployed ML systems that inform deployment reliability practices."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "contextual",
+        "justification": "Paper measures and optimizes runtime enforcement overhead (<10ms per action at <1% of LLM inference latency). The complexity analysis and linear scaling results inform tradeoffs for where enforcement logic should execute in a deployment architecture."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a formal framework for behavioral governance of autonomous AI agents, but its primary relevance to the Odin personal finance system is methodological. The drift bounds theorem (Ornstein-Uhlenbeck modeling with Lyapunov stability analysis) provides a mathematical foundation for detecting and bounding behavioral drift that could transfer to financial user profile drift monitoring. The hard/soft constraint separation in the ABC contract tuple mirrors Odin's constraint encoding for budget recommendations (protected, locked, open categories). The runtime enforcement architecture demonstrates how to achieve sub-10ms overhead for constraint checking in production systems. The paper's empirical methodology — controlled experiments with statistical rigor across multiple models — provides a template for evaluating ML system reliability.",
+    "directly_justifies": [
+      "Profile drift monitoring using composite detection metrics combining compliance and distributional signals"
+    ],
+    "limits": [
+      "Focuses on AI agent behavioral drift, not financial user profile drift — no direct transfer of experimental results",
+      "State dictionary assumption requires pre-computed features from raw data, a separate challenge in personal finance context",
+      "Reference distribution calibration requires dedicated calibration runs with no automated staleness detection",
+      "Financial domain evaluation limited to 10 tasks over 6-turn sessions — broader validation needed for personal finance applicability",
+      "Results are contract-relative: compliance metrics depend on constraint specificity, not absolute agent quality"
+    ],
+    "topic_mapping_rationale": "Systematically scanned the 14-topic Odin taxonomy for cross-cutting themes. 5.B.I (concept drift for adaptive user modeling) was selected for the drift detection methodology using JSD divergence and Ornstein-Uhlenbeck modeling, which is the most direct methodological transfer. 14.B (ML serving/deployment) was selected for the runtime enforcement architecture and overhead analysis. 14.C (on-device vs. server inference) was selected for the complexity-driven deployment tradeoff analysis. Topics 3.C.I (hard/soft constraint encoding) was considered but excluded because the paper's constraint types (invariants, governance) address AI agent behavior rather than financial allocations, though the hard/soft distinction is conceptually parallel."
+  },
+  "limitations": [
+    "State dictionary assumption: ABC evaluator requires pre-computed structured features (tone_score, pii_detected) — feature extraction from raw outputs is outside framework scope",
+    "Reference distribution calibration requires dedicated calibration runs; no automated staleness detection for non-stationary deployment environments",
+    "Recovery is monitoring by default: AgentAssert emits events but deployers must implement domain-specific recovery logic for each constraint",
+    "k-window stationarity assumption: drift bounds theorem assumes proximity to stationary distribution; transient phase may be non-negligible for short sessions",
+    "Compositionality under correlated failures: probability bounds become optimistic when agents share the same underlying LLM due to correlated failure modes",
+    "Benchmark circularity: AgentContract-Bench tests engine consistency against synthetic traces, not behavioral detection in live agent behavior"
+  ],
+  "remember_this": [
+    "ABC brings Design-by-Contract to AI agents with (p, δ, k)-satisfaction",
+    "Transparency effect: contracts reveal violations, not create them",
+    "Drift bound D* = α/γ with Gaussian concentration proven via OU model",
+    "Recovery transforms exponential decay to linear decay (Lemma 3.10)",
+    "7 models, 6 vendors, 1,980 sessions — all p < 0.0001, d = 6.7–33.8"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Bhardwaj_marked.md",
+      "converted_at": "2026-07-22T12:21:38Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

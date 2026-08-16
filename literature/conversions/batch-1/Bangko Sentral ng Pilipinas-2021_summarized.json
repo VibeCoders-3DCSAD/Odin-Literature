@@ -1,0 +1,126 @@
+{
+  "paper_id": "BSP-2021-CFS",
+  "designation": "local",
+  "title": "Consumer Finance Survey Report 2021",
+  "authors": "Bangko Sentral ng Pilipinas, Department of Economic Statistics",
+  "year": 2021,
+  "venue": "Bangko Sentral ng Pilipinas",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.B", "2.D", "3.A", "4.A", "4.B", "5.A", "7.A", "10.A", "12.A", "13.A", "13.B"],
+  "tldr": "Comprehensive nationwide survey of Filipino household finances showing average income of ₱190K, food taking 55.4% of spending, 50.4% owning financial assets, and only 29.3% carrying debt amid the COVID-19 pandemic.",
+  "problem_and_motivation": "The Philippines lacked comprehensive data on household wealth, indebtedness, and financial behavior to inform evidence-based monetary and socio-economic policy. Existing PSA surveys (FIES, APIS) covered income and expenditure but had limited asset and liability data. The BSP developed the Consumer Finance Survey, patterned after the US Survey of Consumer Finances, to fill this gap and support policy formulation on financial inclusion, consumer protection, and economic resilience.",
+  "approach": [
+    "Patterned after the US Federal Reserve Board's Survey of Consumer Finances, adapted to the Philippine context with 18,000 sample households drawn from the PSA 2013 Master Sample.",
+    "Two-stage cluster sampling design: random selection of primary sampling units (barangays) followed by random selection of housing units within each PSU.",
+    "Face-to-face computer-assisted personal interviewing (CAPI) using structured questionnaires translated into six major Philippine languages.",
+    "Primary economic unit (PEU) as unit of analysis: the economically dominant member, spouse/partner, and financially interdependent household members.",
+    "Data validation through a two-stage approach: consistency checks with callback resolution, followed by focus group discussions with select respondents.",
+    "Weighted estimates with coefficients of variation ≤20% as precision benchmark (PSA standard); multiple correspondence analysis and nonparametric tests for statistical inference.",
+    "Reference periods: income/expenditure for calendar year 2021; demographics, assets, and liabilities as of interview date (March-December 2022)."
+  ],
+  "findings": [
+    "num: Average household income was ₱189,842 (₱15,820/month); median ₱144,000; Gini coefficient 0.422 indicating substantial inequality.",
+    "num: Highest-earning 10% earned 11x the lowest-earning 10%; top decile average monthly income ₱41,535 vs. bottom ₱3,870 per capita.",
+    "num: Wage income reached 91.5% of households (up from 73.7% in 2018) due to government employment programs; 55.6% relied on government pandemic assistance.",
+    "num: Food at home consumed 55.4% of total expenditure; housing/utilities 10.6%; transportation 7.2%; non-essential items 8.6%.",
+    "num: Only 29.3% of households carried any debt, down sharply from 40.4% in 2018; 15.2% had outstanding loans; 16.4% had past due bills.",
+    "num: Financial asset ownership surged to 50.4% of PEUs (from 22.6% in 2018), driven by deposit accounts (35.3%) and e-money accounts (24.3%, up from 0.3%).",
+    "num: Only 1.1% of households owned a credit card (average 1 card); 0.7% had outstanding credit card debt; 98.9% had no credit card.",
+    "num: Home appliances were the most common non-financial asset (96.6%), followed by residential property (69.9%), vehicles (35.3%), and mobile phones (92.8%).",
+    "num: Total average assets ₱443,226 vs. liabilities ₱15,647; net worth ₱435,346; non-financial assets comprised 90.2% of total asset value.",
+    "num: Insurance/pension ownership was 11.2% (down from 16.3% in 2018); SSS remained the dominant provider at over 84% of plans."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Distribution of PEUs by Major Income Sources (2021)",
+    "Figure 2: Average Share to Total Expenditure by Expenditure Item (2021)",
+    "Figure 3: Distribution of PEUs by Ownership of Major Asset Categories",
+    "Figure 4: Distribution of PEUs with Outstanding Debt",
+    "Figure 5: Distribution of PEUs by Ownership of Each Type of Debt",
+    "Figure III.A-1: Distribution of PEUs and Average/Median Monthly Income by Decile and Island Group",
+    "Figure IV.B-2: Average Share to Total Expenditure by Expenditure Type (2021)",
+    "Figure VI-1: Distribution of PEUs by Financial Asset Ownership Status",
+    "Figure VII-1: Distribution of PEUs with Outstanding Debt by Type of Debt",
+    "Table VII.D-3: Average Value of Asset and Liability Components by Per Capita Major Net Worth Decile Group"
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Primary Economic Unit (PEU)", "definition": "The financial unit of the household composed of the economically dominant member (EDM), his/her spouse/partner, and financially interdependent members."},
+    {"term": "Balance-to-Principal Ratio", "definition": "Remaining loan balance divided by the loan principal, multiplied by 100 percent, showing the progress of debt repayment."},
+    {"term": "Basic Deposit Account (BDA)", "definition": "An affordable and easy-to-open account with a low opening amount of ₱100 or less, no maintaining balance, no dormancy charges, and simple identification requirements."},
+    {"term": "Other Income Sources (OIS)", "definition": "Income from government assistance, help from family and friends, OFW remittances, pension and retirement benefits, and other non-employment, non-entrepreneurial sources."},
+    {"term": "Gini Coefficient", "definition": "A measure of income inequality ranging from 0 (perfect equality) to 1 (perfect inequality); the 2021 CFS estimated a Gini of 0.422."},
+    {"term": "Areas Outside the National Capital Region (AONCR)", "definition": "Geographical area comprising all regions in the Philippines outside the NCR, further classified into urban and rural barangays."},
+    {"term": "Economically Dominant Member (EDM)", "definition": "The household member who contributes the largest share to the household's income or makes major financial decisions for the household."}
+  ],
+  "citations": [
+    {"author": "Layaoen & Takahashi", "year": 2021, "page": 1, "paragraph": 0, "claim": "CFS data was used as input in research studies published in the Journal of International Development.", "role": "context"},
+    {"author": "Baltar", "year": 2018, "page": 22, "paragraph": 0, "claim": "Higher-paying jobs most often require completion of tertiary and graduate level studies.", "role": "context"},
+    {"author": "World Bank", "year": 2024, "page": 23, "paragraph": 0, "claim": "Philippines Gini coefficient improved from 0.446 in 2015 to 0.407, but remains among the highest in ASEAN.", "role": "finding"},
+    {"author": "PSA", "year": 2022, "page": 23, "paragraph": 0, "claim": "Larger families mostly reported lower income than their counterparts of smaller sizes (2021 FIES).", "role": "context"},
+    {"author": "Orbeta", "year": 2005, "page": 22, "paragraph": 0, "claim": "An increase in the number of dependents, particularly children, reduces work participation and wage income of mothers.", "role": "context"},
+    {"author": "Banerjee & Newman", "year": 1993, "page": 30, "paragraph": 0, "claim": "Higher income groups engage in 'opportunity entrepreneurship' while lower groups engage in 'necessity entrepreneurship'.", "role": "context"},
+    {"author": "Heshmati et al.", "year": 2019, "page": 34, "paragraph": 0, "claim": "Household size and number of dependents are negatively related to per capita expenditure.", "role": "context"},
+    {"author": "Debuque-Gonzales et al.", "year": 2023, "page": 27, "paragraph": 0, "claim": "Men had a relatively higher employment probability than women a year into the pandemic (2020-2021).", "role": "context"},
+    {"author": "FISC", "year": 2022, "page": 66, "paragraph": 0, "claim": "Urban-rural disparity in financial access can be explained by the positive relationship between presence of financial institutions and economic activity.", "role": "context"},
+    {"author": "Cabegin & Gaddi", "year": 2019, "page": 22, "paragraph": 0, "claim": "Marriage is related to decline in labor force participation rate among women.", "role": "context"},
+    {"author": "Llanto & Rosellon", "year": 2017, "page": 66, "paragraph": 0, "claim": "Urban areas had higher financial asset ownership rates due to better access to financial services.", "role": "context"},
+    {"author": "Pinilla & Lopez-Valcarel", "year": 2020, "page": 22, "paragraph": 0, "claim": "Income is among the determinants of availment of private health insurance.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Demographic and Socioeconomic Structure of Filipino Households", "relevance": "high", "justification": "Entire Section I thoroughly profiles Filipino household demographics: composition, size, age distribution, sex ratio, education, and health status with national and subnational breakdowns."},
+      {"code": "1.B", "name": "Income Distribution and Socioeconomic Stratification", "relevance": "high", "justification": "Section III provides detailed income distribution by decile, island group, and urbanity with Gini coefficient (0.422), Theil index, and P90/P10 interdecile ratio analysis."},
+      {"code": "1.C", "name": "Income Inequality and Vulnerability", "relevance": "high", "justification": "Box 1 explicitly examines income inequality among PEU subsets using Gini, Theil, and interdecile ratios, finding higher disparity among elderly EDMs, college graduates, and NCR households."},
+      {"code": "2.A", "name": "Household Spending and Consumption Patterns", "relevance": "high", "justification": "Section IV provides exhaustive expenditure categorization by PCOICOP: food at home (55.4%), housing/utilities (10.6%), transportation (7.2%), education, health, and non-essential items."},
+      {"code": "2.B", "name": "Seasonal and Cyclical Spending", "relevance": "medium", "justification": "Report captures pandemic-driven shifts: food-at-home share rising from 49.9% to 55.4%, decline in transportation, education, and recreation spending due to lockdowns."},
+      {"code": "2.D", "name": "Spending Patterns Across Income and Calendar Cycles", "relevance": "medium", "justification": "Spending patterns analyzed across per capita income deciles and geographic areas with Engel's Law observations; food share inversely related to income."},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "high", "justification": "Expenditure systematically classified using the 2020 Philippine Classification of Individual Consumption According to Purpose (PCOICOP) into food/non-food and essential/non-essential."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems and Surveys", "relevance": "high", "justification": "The CFS is itself a landmark household financial survey; directly compared with FIES, APIS, and the US SCF as its prototype model."},
+      {"code": "4.B", "name": "Policy Frameworks for Personal Finance", "relevance": "high", "justification": "Policy Implications chapter (5 recommendations) covers financial inclusion expansion, digital infrastructure, AI-driven education, interest rate transparency, and targeted government assistance."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles", "relevance": "high", "justification": "Profiles high-income vs. low-income PEUs by EDM demographics (sex, marital status, education, health insurance); distinguishes opportunity vs. necessity entrepreneurs."},
+      {"code": "7.A", "name": "Spending Patterns and Budgeting", "relevance": "medium", "justification": "Expenditure decomposition provides empirical baseline for Filipino household budget allocation across essential and non-essential categories."},
+      {"code": "10.A", "name": "Data Privacy, Security, and Trust in Financial Systems", "relevance": "medium", "justification": "Reasons for not owning financial assets include lack of trust/dealing with banks (0.9%); e-money adoption hindered by technical/security issues like phishing threats."},
+      {"code": "12.A", "name": "Evaluation Methodologies for Personal Finance Systems", "relevance": "medium", "justification": "Detailed survey methodology: two-stage cluster sampling, CAPI, two-stage validation, focus group discussions, coefficient of variation standards, and multiple correspondence analysis."},
+      {"code": "13.A", "name": "Debt and Liability Management", "relevance": "high", "justification": "Section VII comprehensively covers debt: only 29.3% carry debt (down from 40.4%); housing, vehicle, business, other loans; credit card debt (0.7%); past due bills; loan characteristics by provider type, interest rates, and payment status."},
+      {"code": "13.B", "name": "Savings Goal Management", "relevance": "high", "justification": "Deposit accounts (35.3%), e-money wallets (24.3%), cash savings at home (28.7%), and insurance/pension plans (11.2%) analyzed with balances, interest rates, and ownership characteristics."}
+    ],
+    "contribution_to_field": "The BSP Consumer Finance Survey 2021 provides the most comprehensive empirical portrait of Filipino household financial conditions to date, covering income, expenditure, assets, liabilities, and financial inclusion within a single integrated framework. Its rigorous two-stage cluster design, national coverage including BARMM for the first time, and 90.1% response rate establish it as the authoritative reference for household finance in the Philippines. The report's longitudinal comparability with 2009, 2014, and 2018 rounds enables trend analysis of pandemic-era financial behavior, including the sharp decline in debt uptake, surge in digital financial services adoption, and persistent income inequality. For the Odin project, this report supplies critical baseline parameters on Filipino household income distributions, spending propensities, asset ownership patterns, and debt characteristics that directly inform system requirements for budgeting, savings, and debt management features.",
+    "directly_justifies": [
+      "Odin's income tracking and categorization features must accommodate the Philippine income profile where median monthly income is ₱12,000 and the bottom 30% earn below ₱100,000/year.",
+      "Odin's expenditure categories should follow PCOICOP-based essential/non-essential classification reflecting Filipino spending reality where food at home dominates at 55.4% of budget.",
+      "Odin's savings module should support multiple savings vehicles: deposit accounts, e-money wallets, and cash-at-home given 28.7% of households still store cash at home.",
+      "Odin's debt management features should track informal loans from family/friends and individual money lenders, as informal sources dominate housing and other loan categories.",
+      "Odin's budgeting feature must account for pandemic-era spending volatility where government assistance became a primary income source for 55.6% of households."
+    ],
+    "limits": [
+      "Survey data reflects pandemic-era conditions (2021 income/expenditure, 2022 asset snapshot) which may not represent normal economic baselines.",
+      "The CFS provides descriptive statistics and associative analysis but does not implement machine learning models for prediction or anomaly detection.",
+      "High CV estimates (marked in yellow) for certain categories require cautious interpretation, particularly for loan subcategories with small sample sizes.",
+      "The report does not include synthetic data generation or model training data suitable for ML systems development."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains from the Odin taxonomy were systematically scanned for alignment with this report's content. Domain 1 (Demographic/Financial Structure) was flagged high because Sections I and III provide the most authoritative demographic and income stratification data for Filipino households available. Domain 2 (Culturally Specific Financial Practices) was flagged high due to the detailed spending pattern analysis revealing Filipino consumption priorities. Domain 3 (Expense Categorization) is directly addressed by the PCOICOP-based expenditure classification system used throughout Section IV. Domain 4 (Existing Systems) was flagged high as the CFS itself is the reference survey for household finance in the Philippines. Domain 5 (Behavioral Profiles) was flagged high for the income-driven behavioral analysis and entrepreneurial profiling. Domain 7 (Budgeting) was assigned medium relevance as the expenditure data provides budgeting baselines. Domain 10 (Privacy/Trust) received medium relevance through the analysis of reasons for financial exclusion. Domain 12 (Evaluation) received medium relevance for the detailed survey methodology documentation. Domain 13 (Savings/Debt) was flagged high as Sections VI and VII comprehensively cover both savings instruments and debt structures. Domains 6 (Predictive Modeling), 8 (Anomaly Detection), 9 (Mobile-First Design), 11 (Engagement Dynamics), and 14 (ML Deployment) were considered and rejected as the report is a descriptive statistical survey with no algorithmic, predictive, or system-design content."
+  },
+  "limitations": [
+    "Income and expenditure data are self-reported and subject to recall bias and intentional misreporting despite post-survey validation.",
+    "The survey captures a single time period (2021 income, 2022 asset snapshot) during the COVID-19 pandemic, limiting generalizability to normal economic conditions.",
+    "Some subnational and loan-type estimates have coefficients of variation exceeding 20% and must be interpreted with caution.",
+    "The report does not implement any machine learning or predictive modeling approaches for financial behavior analysis.",
+    "Causality cannot be inferred from the descriptive and associative statistics (MCA, chi-square, Kruskal-Wallis) used throughout.",
+    "The PEU-based unit of analysis excludes financially independent household members (boarders, domestic helpers), potentially understating household-level financial positions."
+  ],
+  "remember_this": [
+    "Median Filipino household income: ₱144,000/year (₱12,000/month) in 2021.",
+    "Food at home = 55.4% of total expenditure (Engel's Law).",
+    "Only 29.3% carry debt; 98.9% have no credit card.",
+    "Digital financial services surged: e-money accounts from 0.3% to 24.3%.",
+    "Top 10% earn 11x more than bottom 10% (Gini = 0.422)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Bangko Sentral ng Pilipinas-2021_marked.md",
+      "converted_at": "2026-07-22T12:08:35Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

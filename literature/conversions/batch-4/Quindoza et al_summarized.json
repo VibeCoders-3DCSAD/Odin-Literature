@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.1108/SEAMJ-09-2024-0063",
+  "designation": "local",
+  "title": "Ang Tagapagtaguyod na Anak for Filipino Adults: An Exploratory Research",
+  "authors": "Emerald Insight",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "2.A",
+    "4.B"
+  ],
+  "tldr": "Purpose – In Filipino culture, children often take on the role of family “breadwinner,” providing financial support and sharing family responsibilities. However, this role is typically viewed narrowly as that of a financial provider. To address this, this study explores the “Tagapagtaguyod na Anak,” aiming to offer a more nuanced and culturally relevant understanding of the broader responsibilitie",
+  "problem_and_motivation": "Purpose – In Filipino culture, children often take on the role of family “breadwinner,” providing financial support and sharing family responsibilities. However, this role is typically viewed narrowly as that of a financial provider. To address this, this study explores the “Tagapagtaguyod na Anak,” aiming to offer a more nuanced and culturally relevant understanding of the broader responsibilities and dynamics involved in this role within Filipino families. Design/methodology/approach – This ex",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Revised 18 November 2024"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Revised 18 November 2024",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Quindoza et al_marked.md",
+      "converted_at": "2026-07-21T08:13:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

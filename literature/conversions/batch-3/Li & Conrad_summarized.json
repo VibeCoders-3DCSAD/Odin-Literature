@@ -1,0 +1,161 @@
+{
+  "paper_id": "10.xxxx/unknown",
+  "designation": "international-algorithm-specific",
+  "title": "Persona-Based Simulation of Human Opinion at Population Scale",
+  "authors": "Li, M.; Conrad, F. G.",
+  "year": 2026,
+  "venue": "Unknown",
+  "odin_topics": [
+    "9.A",
+    "9.B",
+    "10.A",
+    "11.A",
+    "12.A",
+    "12.B",
+    "14.A",
+    "14.B"
+  ],
+  "tldr": "A framework infers psychologically grounded personas from social media posts to simulate individual survey responses and aggregate them into population-level opinion estimates.",
+  "problem_and_motivation": "Demographic personas used in LLM-based simulations lack sufficient nuance to capture individual-level variation and support population inference. Existing approaches do not address the sampling problem inherent in non-probability data, limiting their utility for social science.",
+  "approach": [
+    "Recruited participants from a probability-based U.S. panel who also had social media accounts.",
+    "Collected their public Reddit and Twitter/X posts and linked them to their survey responses.",
+    "Used a Painter module to infer a multi-dimensional persona profile from each user's post history.",
+    "Used a Reasoner module to prompt an LLM with the persona to answer held-out survey questions.",
+    "Applied raking weights to the persona-bank respondents to align with U.S. population benchmarks.",
+    "Evaluated user-level inference accuracy and distributional properties of simulated responses.",
+    "Validated weighted persona-bank estimates against contemporaneous polling benchmarks."
+  ],
+  "findings": [
+    "num: SPIRIT personas achieved 8–9% absolute improvement in inference accuracy over demographic personas.",
+    "SPIRIT personas produced broader, more human-like response distributions than the concentrated distributions from demographic personas.",
+    "num: For GPT-5.2 and GPT-5-mini with SPIRIT, 83% of inferred responses were exact matches or off by one category.",
+    "SPIRIT performed better on stable attitudes (e.g., health, vaccines) than on transient behaviors (e.g., weekly alcohol consumption).",
+    "Weighted Twitter-based persona-bank estimates closely tracked polling benchmarks in both magnitude and direction.",
+    "Reddit-based persona-bank estimates preserved directional patterns but showed larger shifts in absolute levels.",
+    "Simulated agents exhibited a deliberation bias, avoiding satisficing options and over-analyzing causal questions."
+  ],
+  "key_figures_tables": [
+    "Figure 1A: Distributions of user-level mean responses → SPIRIT preserves individual-level variation like humans, demographic personas collapse it.",
+    "Figure 1B: User-level accuracy across models → SPIRIT outperforms demographic personas, with gains saturating for larger models.",
+    "Figure 2: Persona-bank vs. polling benchmarks → Weighted SPIRIT estimates track question-to-question trends in polls.",
+    "Figure D1A: Confidence distributions → SPIRIT yields higher confidence responses than demographic personas.",
+    "Figure D1B: Response entropy → SPIRIT produces more diverse (higher entropy) answer distributions.",
+    "Figure F2: Accuracy vs. social media trace quality → More text and fewer low-confidence attributes predict higher accuracy."
+  ],
+  "key_equations": [
+    {
+      "equation": "w_i \\leftarrow w_i \\times \\frac{T_{v,c}}{\\hat{P}_{v,c}}",
+      "explanation": "Raking update for calibration weights."
+    },
+    {
+      "equation": "H = -\\sum_v p(v) \\log_2 p(v)",
+      "explanation": "Shannon entropy for response diversity."
+    }
+  ],
+  "definitions": [
+    { "term": "LLM", "definition": "Large Language Model." },
+    { "term": "SPIRIT", "definition": "Semi-structured Persona Inference and Reasoning for Individualized Trajectories." },
+    { "term": "Persona Bank", "definition": "A collection of inferred personas treated as a virtual respondent panel." },
+    { "term": "Painter", "definition": "The SPIRIT module that infers a persona profile from text." },
+    { "term": "Reasoner", "definition": "The SPIRIT module that uses a persona to answer downstream tasks." },
+    { "term": "Raking", "definition": "Iterative proportional fitting to calibrate sample margins to population benchmarks." }
+  ],
+  "citations": [
+    {
+      "author": "Argyle",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLMs with demographic personas can simulate human samples.",
+      "role": "context"
+    },
+    {
+      "author": "Park",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Generative agent simulations of 1,000 people using detailed personas.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLM-based personas can harmfully misportray identity groups.",
+      "role": "critique"
+    },
+    {
+      "author": "Kosinski",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Digital records like Facebook Likes predict personal attributes.",
+      "role": "context"
+    },
+    {
+      "author": "Wright",
+      "year": 2026,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Generative AI can estimate Big Five traits from brief narratives.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lohr",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Probability samples support design-based estimation, non-probability samples need calibration.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      { "code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "contextual", "justification": "The framework is for web-based surveys, not mobile apps." },
+      { "code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "contextual", "justification": "Not directly applicable, but relevant to user behavior modeling." },
+      { "code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "contextual", "justification": "Discusses privacy and data minimization for persona artifacts." },
+      { "code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "contextual", "justification": "The framework simulates user responses, not engagement." },
+      { "code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Presents a novel evaluation framework for simulation accuracy and distributional properties." },
+      { "code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Evaluates the Painter and Reasoner modules across multiple LLMs." },
+      { "code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "medium", "justification": "The persona bank functions as a source of synthetic survey data." },
+      { "code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "contextual", "justification": "Discusses inference costs and model capacity requirements." }
+    ],
+    "contribution_to_field": "This paper introduces a framework for inferring psychologically rich personas from social media data for LLM-based simulation. It demonstrates that these personas outperform demographic-only personas in recovering individual survey responses and preserving population-level heterogeneity. It also addresses the selection bias inherent in non-probability social media samples by applying calibration weights, establishing a path toward population-level inference from such data. The work provides a systematic evaluation methodology for persona-based simulation, including accuracy and distributional diagnostics.",
+    "directly_justifies": [
+      "Demographic personas yield compressed and homogenized response distributions.",
+      "SPIRIT personas improve inference accuracy by 8-9% over demographic personas.",
+      "Persona-bank responses track polling benchmarks in direction, if not always magnitude.",
+      "Simulated agents show a deliberation bias compared to satisficing human respondents."
+    ],
+    "limits": [
+      "The framework requires users to have a social media account and post content, introducing selection bias.",
+      "Performance is highly dependent on the quality and quantity of the user's social media text.",
+      "LLMs may override personas in situations involving strong moral or factual judgments."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was performed. The paper is primarily about LLM-based simulation and evaluation, making '12.B' (Evaluation of Algorithmic Modules) highly relevant. The persona bank concept functions as synthetic data generation, giving '14.A' medium relevance. The discussion of calibration and sampling touches on evaluation frameworks '12.A'. Topics related to personal finance (e.g., 3.A, 7.A) were considered but rejected because the paper's application is general public opinion, not specifically financial behavior. The paper's emphasis on privacy and ethics provides contextual relevance to '10.A', and the discussion of inference costs is contextually relevant to '14.B'. Borderline cases like '11.A' were rejected because the paper simulates responses, not engagement dynamics. Overall, the paper's contribution is methodological and evaluative for simulation systems, not domain-specific to personal finance."
+  },
+  "limitations": [
+    "The sample is limited to social media users who consent to data linkage, which may not represent the full U.S. population. [unacknowledged]",
+    "The framework's reliance on public text may underrepresent individuals who do not express opinions online.",
+    "LLM-generated responses exhibit a deliberation bias, over-analyzing causal questions compared to human satisficing.",
+    "The framework did not include demographic attributes in the SPIRIT personas to isolate the effect of text, but this is not a recommended practice for deployment."
+  ],
+  "remember_this": [
+    "SPIRIT personas improve inference accuracy by 8–9% over demographic personas.",
+    "SPIRIT preserves individual-level response heterogeneity, unlike demographic personas.",
+    "A persona bank can be calibrated with weights to produce population-level estimates.",
+    "Simulated agents show a systematic deliberation bias compared to human respondents.",
+    "Performance scales with social media trace quantity and persona inference confidence."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li & Conrad_marked.md",
+      "converted_at": "2026-07-21T13:57:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

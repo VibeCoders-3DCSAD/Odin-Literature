@@ -1,0 +1,92 @@
+{
+  "paper_id": "caea4ec0-1e43-5843-8b12-6451c3c6635e",
+  "designation": "local",
+  "title": "Cash Management Practices and the Financial Performance of Micro-Enterprises",
+  "authors": "Aguilar, T.; Chavez, M.; Rayos, C.; Remoquin, K.; Melo, M.",
+  "year": 2024,
+  "venue": "American International Journal of Business Management",
+  "odin_topics": ["7.A"],
+  "tldr": "Cash management practices have a strong positive correlation with financial performance indicators in micro-enterprises in Baco, Oriental Mindoro.",
+  "problem_and_motivation": "Micro-enterprises face challenges in managing financial resources while striving for growth and sustainability. Many struggle with cash flow management, financial illiteracy, and lack of formal training in cash management. These issues frequently lead to operational disruptions and business closures.",
+  "approach": [
+    "Survey of 163 micro-enterprise owners in Baco, Oriental Mindoro using random sampling.",
+    "Descriptive-correlational research design with quantitative methods.",
+    "Questionnaire measuring budgeting, cash flow management, sales growth, profitability, and liquidity.",
+    "Cronbach's Alpha for reliability testing of survey instruments.",
+    "Spearman correlation analysis to test relationships between variables."
+  ],
+  "findings": [
+    "num: 163 micro-enterprises surveyed with 5% margin of error at 90% confidence.",
+    "num: Cash management practices show moderate application level overall.",
+    "num: Strong positive correlation between budgeting and sales growth (rho = .506, p < .001).",
+    "num: Cash flow management shows stronger correlation with sales growth (rho = .648, p < .001).",
+    "num: All correlations significant at 0.05 level, rejecting null hypothesis."
+  ],
+  "key_figures_tables": [
+    "Table 3: Budgeting practices extent → Overall moderate extent (mean 3.04).",
+    "Table 4: Cash flow management from operating activities → Moderate extent (mean 2.97).",
+    "Table 10: Correlation analysis → Strong positive correlations between all variables."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "Micro-enterprises", "definition": "Enterprises with Php 3,000,000 or less in assets and one to nine employees."},
+    {"term": "Cash management", "definition": "Planning, controlling, and accounting for cash transactions and balances."},
+    {"term": "Spearman correlation", "definition": "Statistical test used to measure strength and direction of association between variables."}
+  ],
+  "citations": [
+    {"author": "Otieno", "year": 2021, "page": 0, "paragraph": 0, "claim": "Highlights importance of proper cash management in supporting financial performance.", "role": "context"},
+    {"author": "Pandey", "year": 2020, "page": 0, "paragraph": 0, "claim": "Impact of cash management on profitability in small manufacturing organizations.", "role": "context"},
+    {"author": "Onyango", "year": 2023, "page": 0, "paragraph": 0, "claim": "Budgeting practices and cash flow management significantly influence financial performance of microenterprises.", "role": "finding"},
+    {"author": "Williams", "year": 2015, "page": 0, "paragraph": 0, "claim": "Cash management is planning, controlling, and accounting for cash transactions and balances.", "role": "methodology"},
+    {"author": "Smirat", "year": 2016, "page": 0, "paragraph": 0, "claim": "Failure to generate cash statements can lead to insufficient funds and business failure.", "role": "context"},
+    {"author": "Kasim", "year": 2015, "page": 0, "paragraph": 0, "claim": "Non-budgeting results in cash shortages and enterprise failure due to poor financial planning.", "role": "context"},
+    {"author": "Lyon", "year": 2024, "page": 0, "paragraph": 0, "claim": "Continuous monitoring of cash inflows and outflows is essential for financial sustainability.", "role": "context"},
+    {"author": "Paul", "year": 2015, "page": 0, "paragraph": 0, "claim": "Cash management ensures minimization in absence of correlation between cash inflow and outflow.", "role": "context"},
+    {"author": "Baumol", "year": 1952, "page": 0, "paragraph": 0, "claim": "Model determines optimal cash balances by minimizing opportunity and transaction costs.", "role": "methodology"},
+    {"author": "Miller", "year": 1966, "page": 0, "paragraph": 0, "claim": "Model allows upper and lower limits of cash balance for uncertain cash flows.", "role": "methodology"},
+    {"author": "Atieh", "year": 2020, "page": 0, "paragraph": 0, "claim": "Routine management of cash inflows and outflows is essential for maintaining liquidity.", "role": "context"},
+    {"author": "Ouma", "year": 2021, "page": 0, "paragraph": 0, "claim": "Proficient operating cash flow management ensures growth with low risk of interruption.", "role": "context"},
+    {"author": "Mendoza", "year": 2015, "page": 0, "paragraph": 0, "claim": "Profitability risks confirm need for better tools and techniques to manage finances.", "role": "context"},
+    {"author": "Wild", "year": 2017, "page": 0, "paragraph": 0, "claim": "Inability to quickly convert assets to cash decreases efficiency of productive assets.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "medium", "justification": "Discusses budgeting practices and their importance for micro-enterprises."}
+    ],
+    "contribution_to_field": "The study examines the relationship between cash management practices and financial performance in micro-enterprises. It provides empirical evidence from Philippine micro-enterprises showing strong positive correlations between budgeting, cash flow management, and financial indicators. The findings contribute to understanding how basic financial management practices impact small business sustainability.",
+    "directly_justifies": [
+      "Cash management practices have a strong positive correlation with improved financial performance.",
+      "Budgeting is strongly correlated with sales growth, profitability, and liquidity.",
+      "Cash flow management shows even stronger associations with financial performance indicators."
+    ],
+    "limits": [
+      "Study limited to micro-enterprises in Baco, Oriental Mindoro only.",
+      "Uses self-reported survey data which may have response bias.",
+      "Does not establish causal relationships, only correlations."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all topic domains was conducted. Domain 7 (Budgeting Strategies) was flagged as relevant with medium relevance since the paper discusses budgeting practices in micro-enterprises. Other domains related to personal finance systems (domains 1-6, 8-14) were considered but deemed not directly applicable as this paper focuses on micro-enterprise finance rather than individual personal finance. The paper provides contextual information about financial management practices but does not address system design or algorithmic approaches."
+  },
+  "limitations": [
+    "Study limited to micro-enterprises in Baco, Oriental Mindoro only.",
+    "Uses self-reported survey data which may have response bias.",
+    "Does not establish causal relationships, only correlations."
+  ],
+  "remember_this": [
+    "Cash management practices show strong positive correlation with financial performance.",
+    "Budgeting practices are moderately applied among micro-enterprises.",
+    "Cash flow management has stronger correlations than budgeting with financial indicators.",
+    "Financial literacy programs recommended to enhance cash management skills.",
+    "Study surveyed 163 micro-enterprises in Baco, Oriental Mindoro."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T15:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Aguilar et al_marked.md",
+      "converted_at": "2026-07-22T11:48:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

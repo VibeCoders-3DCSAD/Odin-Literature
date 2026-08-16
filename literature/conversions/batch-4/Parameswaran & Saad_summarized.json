@@ -1,0 +1,130 @@
+{
+  "paper_id": "10.32890/jdsd2025.3.2.9",
+  "designation": "local-algorithm-specific",
+  "title": "Development of a Mobile Personal Finance Management Application for Malaysian Young Adults",
+  "authors": "Digital System Development",
+  "year": 2016,
+  "venue": "Journal of Digital System Development: Vol. 3. No. 2 (October) 2025: 123-141",
+  "odin_topics": [
+    "1.C",
+    "11.A",
+    "12.A",
+    "13.B",
+    "2.A",
+    "4.A",
+    "4.B",
+    "5.C",
+    "7.B"
+  ],
+  "tldr": "Personal finance management has become increasingly critical in today's digital economy, yet existing mobile applications often lack the intelligence to provide personalised financial guidance. This article presents the development of \"My Money Manager Mobile App,\" an Android-based personal finance management system that addresses current limitations through intelligent expense categorisation and ",
+  "problem_and_motivation": "Personal finance management has become increasingly critical in today's digital economy, yet existing mobile applications often lack the intelligence to provide personalised financial guidance. This article presents the development of \"My Money Manager Mobile App,\" an Android-based personal finance management system that addresses current limitations through intelligent expense categorisation and personalised financial insights. The application distinguishes between fixed and variable expenses u",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Development of a Mobile Personal Finance Management Application for Malaysian Yo"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Development of a Mobile Personal Finance Management Application for Malaysian Yo",
+    "Year: 2016",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Parameswaran & Saad_marked.md",
+      "converted_at": "2026-07-21T08:05:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

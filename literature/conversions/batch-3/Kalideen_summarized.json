@@ -1,0 +1,308 @@
+{
+  "paper_id": "10.26671/ijirg.2023.2.12.103",
+  "designation": "international",
+  "title": "Detection of Fraudulent Transaction Issues in the Payment Card Industry using Machine Learning: A Comprehensive Survey",
+  "authors": "Kalideen, M. R.",
+  "year": 2025,
+  "venue": "Journal of Information and Communication Technology (JICT)",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "6.A",
+    "6.B",
+    "12.A",
+    "12.B",
+    "3.A",
+    "10.A",
+    "10.B"
+  ],
+  "tldr": "A comprehensive survey of machine learning techniques for payment card fraud detection, examining supervised, unsupervised, semi-supervised, and deep learning approaches, along with challenges like imbalanced data and interpretability.",
+  "problem_and_motivation": "The exponential growth of digital payment card transactions has led to a parallel surge in fraudulent activities, with traditional rule-based systems proving inadequate against evolving fraud tactics. The immense scale of transaction volumes, the continuously shifting nature of fraud schemes, and the need for real-time detection create significant challenges. There is a pressing need for a comprehensive understanding of machine learning techniques and their applicability to this dynamic domain.",
+  "approach": [
+    "A systematic literature review was conducted using prominent academic databases including IEEE Xplore, Scopus, and PubMed.",
+    "Keywords included credit card fraud detection, machine learning algorithms, payment card fraud, and anomaly detection.",
+    "The search was limited to English-language studies published between 2010 and 2024.",
+    "Initial screening based on title/abstract review was followed by full-text assessment.",
+    "Studies outside finance or lacking empirical findings were excluded.",
+    "Of the initial 500 studies, 49 met the final inclusion criteria.",
+    "The survey examines supervised, unsupervised, semi-supervised, and hybrid machine learning methodologies.",
+    "Deep learning architectures including DNNs, RNNs, Autoencoders, and GANs are reviewed.",
+    "The review analyzes challenges such as imbalanced datasets, model interpretability, scalability, and security.",
+    "Emerging trends like explainable AI, privacy-preserving ML, and blockchain are discussed."
+  ],
+  "findings": [
+    "num: 49 studies met the final inclusion criteria from an initial set of 500.",
+    "num: Less than 1% of all transactions are fraudulent, creating severe class imbalance.",
+    "Deep learning models have exhibited exceptional performance in fraud detection, outperforming conventional methods.",
+    "Ensemble methods like Random Forest and XGBoost are inherently better suited for handling imbalanced datasets.",
+    "Deep learning models lack interpretability, often being referred to as 'black boxes'.",
+    "XAI enhances transparency and trust in fraud detection models.",
+    "Privacy-preserving machine learning, including federated learning, is becoming critical for future fraud detection systems.",
+    "Fraud detection systems must operate in real-time to prevent fraudulent transactions from being authorized."
+  ],
+  "key_figures_tables": [
+    "Table I: Traditional Fraud Detection vs. Machine Learning in Fraud Detection → ML offers adaptability, higher accuracy, scalability, and real-time detection.",
+    "Table II: Widely Used Supervised Learning Algorithms for Fraud Detection → Logistic Regression, SVM, Decision Trees, Random Forest, Neural Networks.",
+    "Table III: Deep Learning Techniques Used in Fraud Detection → DNN, RNN, Autoencoders, GANs with application examples.",
+    "Table IV: Ensemble Methods Used in Fraud Detection → Bagging, Boosting, Random Forests, Stacking.",
+    "Table V: Comparison of Machine Learning Techniques Used in Fraud Detection → Supervised, Unsupervised, Hybrid, Deep Learning, Ensemble Methods.",
+    "Table VI: Comparison of Different Evaluation Metrics Used in Machine Learning → Accuracy, Precision, Recall, F1-Score, AUC-ROC, Average Precision."
+  ],
+  "key_equations": [
+    {
+      "equation": "Precision = True Positive / (True Positive + False Positive)",
+      "explanation": "Proportion of predicted frauds that are actual frauds."
+    },
+    {
+      "equation": "Recall = True Positive / (True Positive + False Negative)",
+      "explanation": "Proportion of actual frauds that are correctly identified."
+    },
+    {
+      "equation": "F1-Score = 2 * (Precision * Recall) / (Precision + Recall)",
+      "explanation": "Harmonic mean of precision and recall."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "Explainable AI, techniques for making AI model predictions transparent and interpretable."
+    },
+    {
+      "term": "PPML",
+      "definition": "Privacy-Preserving Machine Learning, methods to train models while protecting sensitive data."
+    },
+    {
+      "term": "GAN",
+      "definition": "Generative Adversarial Network, a deep learning architecture with a generator and discriminator trained adversarially."
+    },
+    {
+      "term": "DNN",
+      "definition": "Deep Neural Network, a neural network with multiple hidden layers."
+    },
+    {
+      "term": "RNN",
+      "definition": "Recurrent Neural Network, a neural network designed to manage sequential data."
+    },
+    {
+      "term": "AUC-ROC",
+      "definition": "Area Under the Receiver Operating Characteristic Curve, a metric for model performance."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Sowmya",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI and ML are revolutionizing fraud detection in the digital age.",
+      "role": "context"
+    },
+    {
+      "author": "Yundong",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Logistic Regression and Random Forest are used for credit card fraud identification.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kumar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Rule-based systems struggle to keep up with evolving fraud patterns.",
+      "role": "critique"
+    },
+    {
+      "author": "Jagadeesha",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning and data mining are applied to credit card fraud detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Talukder",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A hybrid ensemble machine learning model secures transactions.",
+      "role": "finding"
+    },
+    {
+      "author": "Kumar",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning enables more accurate and proactive fraud identification.",
+      "role": "finding"
+    },
+    {
+      "author": "Dornadula",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning algorithms detect credit card fraud.",
+      "role": "context"
+    },
+    {
+      "author": "Rawat",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A comprehensive review on credit card fraud detection using ML techniques.",
+      "role": "context"
+    },
+    {
+      "author": "Ali",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GANs improve credit card fraud detection by generating synthetic data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lucas",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A survey of machine learning for credit card fraud detection.",
+      "role": "context"
+    },
+    {
+      "author": "Li",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A GRU-centered sandwich-structured model detects transaction fraud.",
+      "role": "methodology"
+    },
+    {
+      "author": "Grover",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A fraud dataset benchmark and applications are introduced.",
+      "role": "baseline"
+    },
+    {
+      "author": "Rudin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Interpretable models are recommended over explaining black box ML models.",
+      "role": "critique"
+    },
+    {
+      "author": "Awosika",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XAI and federated learning enhance transparency and privacy in fraud detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Truong",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Privacy preservation in federated learning is surveyed from the GDPR perspective.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus is detecting fraudulent transactions as anomalies."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Reviews algorithms including autoencoders and statistical methods for anomaly detection."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Machine learning models predict fraudulent transactions."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "RNNs and GRU models analyze transaction sequences."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Detailed discussion of metrics like precision, recall, F1-score, and AUC-ROC."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Compares evaluation metrics for fraud detection algorithms."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Tangentially related through transaction data analysis, but not a primary focus."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Discusses privacy-preserving ML, federated learning, and security challenges."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "XAI discussed as a means to build trust in fraud detection models."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive, up-to-date literature review of machine learning techniques for payment card fraud detection, consolidating findings from 49 studies. It systematically classifies approaches into supervised, unsupervised, semi-supervised, and deep learning categories, and provides a comparative analysis of their strengths and limitations. The survey identifies key challenges such as imbalanced datasets, model interpretability, and scalability, and highlights emerging trends including explainable AI and privacy-preserving machine learning. By synthesizing current knowledge and identifying research gaps, the paper serves as a foundational resource for researchers and practitioners in the field.",
+    "directly_justifies": [
+      "Machine learning enables more accurate and proactive identification of suspicious transactions.",
+      "Deep learning models have exhibited exceptional performance in fraud detection, outperforming conventional methods.",
+      "Deep learning models lack interpretability, being frequently referred to as 'black boxes'.",
+      "XAI enhances transparency and trust in fraud detection models.",
+      "Privacy-preserving machine learning, including federated learning, is becoming critical for future fraud detection systems."
+    ],
+    "limits": [
+      "Paper is a survey and does not present original empirical results or a novel algorithm.",
+      "The review is limited to English-language studies and may exclude relevant non-English research.",
+      "The dataset analysis is limited to publicly available resources, which may not fully represent real-world fraud patterns."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core focus on detecting fraudulent transactions aligns directly with Anomaly Detection (8.A) and its algorithms (8.B). Predictive Modeling (6.A) is central as ML models predict fraud. Evaluation Frameworks (12.A, 12.B) are directly addressed through detailed discussion of performance metrics. Data Privacy (10.A) and User Trust (10.B) are covered through sections on PPML and XAI. Forecast Algorithms for Sequential Data (6.B) are relevant through discussion of RNNs. Expense Categorization (3.A) was considered but rejected due to only tangential relevance. Topics related to Filipino demographics, financial practices, or PFMS-specific domains (1.A-2.D, 7.A-7.E, 9.A-9.C, 11.A-14.C) were not covered by the paper and were rejected."
+  },
+  "limitations": [
+    "The survey does not present novel empirical results or a new algorithm, limiting its direct contribution to practice. [unacknowledged]",
+    "The search was limited to English-language studies published between 2010 and 2024, potentially missing relevant non-English or older foundational work. [unacknowledged]",
+    "The review acknowledges the difficulty in evaluating unsupervised learning models without ground truth labels.",
+    "The paper notes that publicly available datasets often undergo anonymization, limiting representativeness of real-world fraud patterns.",
+    "The paper identifies the trade-off between interpretability and accuracy as a constant challenge. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Machine learning enables adaptive and scalable fraud detection.",
+    "Imbalanced datasets remain a core challenge in fraud detection.",
+    "Deep learning models offer high accuracy but lack interpretability.",
+    "Explainable AI builds trust in fraud detection systems.",
+    "Privacy-preserving ML is critical for future fraud detection systems."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kalideen_marked.md",
+      "converted_at": "2026-07-21T13:40:42Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

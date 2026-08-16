@@ -1,0 +1,328 @@
+{
+  "paper_id": "10.63125/cv50rf30",
+  "designation": "international",
+  "title": "Digitization in Retail Banking: A Review of Customer Engagement and Financial Product Adoption in South Asia",
+  "authors": "Kowsar, M. M.; Islam, S.; Mohiuddin, M.; Siddiqui, N. A.",
+  "year": 2025,
+  "venue": "ASRC Procedia: Global Perspectives in Science and Scholarship",
+  "odin_topics": ["2.D", "3.A", "4.A", "4.B", "7.A", "9.A", "10.A", "10.B", "11.A", "11.B", "12.A", "12.C"],
+  "tldr": "Digitization in South Asian retail banking enhances customer engagement and financial product adoption through mobile infrastructure, AI-driven personalization, and fintech innovation, though inclusion remains uneven.",
+  "problem_and_motivation": "Comprehensive, empirically grounded reviews focused on South Asia's digital banking landscape remain scarce despite rapid digitization. Existing global studies lack region-specific analysis of how digital technologies influence customer engagement and financial product adoption in diverse socio-economic and cultural settings.",
+  "approach": [
+    "Systematic review following PRISMA 2020 methodology across Scopus, Web of Science, JSTOR, EBSCOhost, and Google Scholar.",
+    "Synthesized 84 peer-reviewed studies, institutional reports, and conference proceedings published from 2010 to 2024.",
+    "Supplemented database searches with snowballing techniques and institutional repositories from World Bank, IFC, and GSMA.",
+    "Applied inclusion criteria requiring English-language sources directly addressing digital banking, engagement, or product adoption in South Asia.",
+    "Excluded non-academic formats and studies outside the geographical or thematic scope.",
+    "Identified 1,263 records, removed 247 duplicates, screened 1,016 abstracts, and retained 227 full texts for eligibility review.",
+    "Final analysis included 96 studies meeting all criteria, with 84 contributing core findings.",
+    "Focused on key drivers, challenges, regulatory contexts, and behavioral determinants of digital engagement.",
+    "Integrated multidisciplinary perspectives from technology adoption theories, behavioral finance, development economics, and public policy.",
+    "Organized findings around infrastructure, product adoption, engagement metrics, inclusion outcomes, and AI/Big Data applications."
+  ],
+  "findings": [
+    "num: 29 of 84 reviewed articles addressed infrastructure expansion, collectively cited over 3,400 times.",
+    "num: Mobile phone penetration exceeds 85% and mobile internet access reaches over 70% in key urban centers.",
+    "num: 34 studies examined digitization's effect on financial product adoption, cited over 4,200 times collectively.",
+    "num: Digitally engaged customers in India were 2.3 times more likely to open secondary financial products.",
+    "num: 26 studies on user engagement metrics received more than 3,100 citations, linking interface quality with continued platform use.",
+    "num: 23 studies addressed inclusion outcomes and digital divides, cited over 2,900 times, showing uneven participation.",
+    "Interface simplicity and automated onboarding can substitute for financial literacy in enabling access.",
+    "AI-driven prompts, dashboard analytics, and behavioral nudges increase user satisfaction and loyalty.",
+    "Dormant accounts remain prevalent, especially those opened through government mandates or subsidy-linked programs.",
+    "Collaboration between fintech innovation and regulatory frameworks is essential for inclusive digitization."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual Framework of Digitization in Retail Banking → Links technology to engagement and product adoption.",
+    "Figure 2: From Digitization to Financial Services Delivery in South Asia → Shows fintech and policy interplay.",
+    "Figure 3: Framework of Digitization in Financial Services → Illustrates operational and customer-facing changes.",
+    "Figure 4: Building an Inclusive Digital Banking Ecosystem → Highlights infrastructure, literacy, and trust.",
+    "Figure 5: Drivers of Customer Engagement → Lists personalization, UX, and behavioral factors.",
+    "Figure 6: Key Dimensions of Digital Financial Product Adoption → Covers accessibility, affordability, and trust.",
+    "Figure 7: Pathways from Exclusion to Inclusion → Maps digital banking as a bridge for unbanked populations.",
+    "Figure 8: Key Findings → Summarizes infrastructure, product uptake, engagement, and inclusion gaps."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Digitization",
+      "definition": "The conversion of analog information and manual processes into digital formats, enabling streamlined operations and improved service delivery."
+    },
+    {
+      "term": "Customer engagement",
+      "definition": "Emotional and behavioral involvement of customers with digital banking services, leading to enhanced loyalty and higher product uptake."
+    },
+    {
+      "term": "Financial inclusion",
+      "definition": "Access to useful and affordable financial products and services delivered in a responsible and sustainable manner."
+    },
+    {
+      "term": "Digital literacy",
+      "definition": "The capacity to effectively use digital tools such as smartphones and internet services."
+    },
+    {
+      "term": "Financial literacy",
+      "definition": "Understanding basic financial concepts like interest, budgeting, and risk."
+    },
+    {
+      "term": "PRISMA",
+      "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a framework for structured and transparent systematic reviews."
+    },
+    {
+      "term": "JAM trinity",
+      "definition": "Jan Dhan–Aadhaar–Mobile, India's digital infrastructure backbone linking bank accounts, digital identity, and mobile access."
+    },
+    {
+      "term": "Fintech",
+      "definition": "Technology-enabled financial services, including peer-to-peer lending, robo-advisory, digital insurance, and AI-driven credit scoring."
+    },
+    {
+      "term": "G2P payments",
+      "definition": "Government-to-person payments, often used for subsidies and social welfare transfers."
+    },
+    {
+      "term": "MFS",
+      "definition": "Mobile Financial Services, platforms enabling banking transactions via mobile phones."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Vrana",
+      "year": 2025,
+      "page": 48,
+      "paragraph": 1,
+      "claim": "Digitization enables organizations to streamline operations and improve service delivery.",
+      "role": "context"
+    },
+    {
+      "author": "Lang",
+      "year": 2021,
+      "page": 48,
+      "paragraph": 2,
+      "claim": "Retail banking has changed profoundly due to digitization in engagement, personalization, and innovation.",
+      "role": "context"
+    },
+    {
+      "author": "Neugebauer",
+      "year": 2019,
+      "page": 48,
+      "paragraph": 2,
+      "claim": "Customer engagement encompasses emotional and behavioral involvement leading to loyalty and product uptake.",
+      "role": "context"
+    },
+    {
+      "author": "Matt",
+      "year": 2023,
+      "page": 48,
+      "paragraph": 2,
+      "claim": "Digitization enhances adoption of savings, investment, insurance, and credit products by simplifying access.",
+      "role": "context"
+    },
+    {
+      "author": "Vrana",
+      "year": 2025,
+      "page": 49,
+      "paragraph": 1,
+      "claim": "bKash and Easypaisa revolutionized mobile banking by reaching underserved populations.",
+      "role": "finding"
+    },
+    {
+      "author": "Veldhoven",
+      "year": 2022,
+      "page": 49,
+      "paragraph": 2,
+      "claim": "Interaction between fintech, regulation, and consumer behavior is essential for evaluating digitization's implications.",
+      "role": "context"
+    },
+    {
+      "author": "Pietrasik",
+      "year": 2024,
+      "page": 50,
+      "paragraph": 2,
+      "claim": "Digitization enables automation, real-time processing, and customer self-service through advanced technology platforms.",
+      "role": "context"
+    },
+    {
+      "author": "Marion",
+      "year": 2021,
+      "page": 50,
+      "paragraph": 2,
+      "claim": "Digitization in retail banking includes mobile apps, digital wallets, and robo-advisory services that reduce branch reliance.",
+      "role": "context"
+    },
+    {
+      "author": "Moro-Visconti",
+      "year": 2024,
+      "page": 51,
+      "paragraph": 1,
+      "claim": "Digitization offers underserved populations access to savings, credit, and insurance through digital channels.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vasishta",
+      "year": 2025,
+      "page": 51,
+      "paragraph": 4,
+      "claim": "Mobile broadband coverage exceeds 95% of the population in countries like India and Sri Lanka.",
+      "role": "finding"
+    },
+    {
+      "author": "Haleem",
+      "year": 2022,
+      "page": 51,
+      "paragraph": 5,
+      "claim": "Mobile internet access significantly influences digital account ownership and use of savings and credit tools.",
+      "role": "finding"
+    },
+    {
+      "author": "Das",
+      "year": 2025,
+      "page": 52,
+      "paragraph": 1,
+      "claim": "Customer engagement has evolved from transactions to dynamic relationships driven by personalization and feedback.",
+      "role": "context"
+    },
+    {
+      "author": "Verma",
+      "year": 2018,
+      "page": 52,
+      "paragraph": 2,
+      "claim": "Digitally engaged customers in India were 2.3 times more likely to open secondary financial products.",
+      "role": "finding"
+    },
+    {
+      "author": "Koskelainen",
+      "year": 2023,
+      "page": 52,
+      "paragraph": 5,
+      "claim": "Low literacy correlates with mistrust of digital systems and reduced use of advanced banking features.",
+      "role": "finding"
+    },
+    {
+      "author": "Kumar",
+      "year": 2019,
+      "page": 57,
+      "paragraph": 3,
+      "claim": "Engagement is a multi-dimensional interaction beyond mere transactions.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and \"Occasions\"",
+        "relevance": "contextual",
+        "justification": "Discusses seasonal spending and cultural norms in South Asia but not specifically Filipino cycles."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Mentions spending summaries and categorization via dashboards but does not propose a framework."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews Paytm, bKash, Easypaisa, and PhonePe as digital banking platforms in South Asia."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies persistent gaps in infrastructure quality, digital literacy, gender inequality, and regional disparities."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Mentions budgeting as part of financial literacy but does not focus on budgeting strategies."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "high",
+        "justification": "Highlights mobile-first ecosystems and single-channel engagement models in South Asia."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses cybersecurity, consumer protection, and biometric verification as trust enablers."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Identifies trust as critical for adoption, influenced by regulation and AI-based fraud detection."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Core focus on customer engagement dynamics, personalization, and behavioral involvement."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "high",
+        "justification": "Reviews gamification, real-time alerts, dashboards, and loyalty rewards as retention strategies."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses inclusion metrics and engagement measurement but does not propose a formal evaluation framework."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "low",
+        "justification": "Not directly relevant to budget recommendation evaluation."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides a comprehensive, region-specific synthesis of how digitization influences customer engagement and financial product adoption in South Asian retail banking. It affirms and extends prior theoretical frameworks such as TAM and UTAUT by incorporating evidence on infrastructure quality, cultural norms, and regulatory contexts. The review integrates fragmented insights across customer experience, behavioral engagement, literacy, and inclusion into a cohesive analytical framework. It also highlights the critical interplay between fintech innovation and regulatory support for achieving inclusive digital finance.",
+    "directly_justifies": [
+      "Digitization significantly increases customer uptake of savings accounts, microloans, and insurance.",
+      "Interface simplicity and automated onboarding can substitute for financial literacy in enabling access.",
+      "Customer engagement strategies grounded in behavioral insights redefine competitive advantage in retail banking.",
+      "Digitization alone does not guarantee equity; inclusive growth requires deliberate policy and design interventions.",
+      "Regulatory support and fintech innovation must operate synergistically to sustain trust and long-term adoption."
+    ],
+    "limits": [
+      "The review focuses on South Asia and does not include comparative analysis with other regions.",
+      "Findings are synthesized from secondary sources rather than primary empirical data collection.",
+      "Does not evaluate the specific effectiveness of individual algorithms or models for personal finance."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains identified the paper's primary relevance to domains 2.D, 3.A, 4.A, 4.B, 7.A, 9.A, 10.A, 10.B, 11.A, 11.B, 12.A, and 12.C. The paper's core focus on customer engagement and product adoption in South Asian digital banking directly maps to engagement dynamics (11.A), retention mechanisms (11.B), and the landscape of existing systems (4.A). Infrastructure discussions and mobile-first design (9.A) are strongly represented. Limitations and gaps (4.B) and trust/privacy concerns (10.A, 10.B) are discussed in the context of inclusion challenges. Topics related to Filipino-specific demographics (1.A, 1.B, 1.C, 2.A, 2.B, 2.C) were rejected as the paper focuses on South Asia, not the Philippines. Algorithmic topics (5.B, 5.C, 6.A, 6.B, 7.B, 7.C, 7.D, 7.E, 8.A, 8.B, 8.C, 9.C, 12.B, 14.A, 14.B, 14.C) were not addressed as the paper is a review rather than a presentation of novel computational methods. The paper's overall topical coverage centers on the behavioral, infrastructural, and regulatory dimensions of digital banking adoption in a developing region context."
+  },
+  "limitations": [
+    "Systematic review design relies on secondary data synthesis rather than primary empirical collection. [unacknowledged]",
+    "Excludes non-English studies, which may omit relevant regional research. [unacknowledged]",
+    "Focus on South Asia limits generalizability to other developing regions. [unacknowledged]",
+    "Does not evaluate the specific effectiveness of individual fintech algorithms or models. [unacknowledged]",
+    "The review's findings are based on studies up to 2024 and may not capture very recent developments."
+  ],
+  "remember_this": [
+    "Digitization significantly increases uptake of savings, microloans, and insurance products.",
+    "Mobile-first engagement models can achieve high impact with personalized design and behavioral nudges.",
+    "Digitally engaged customers are 2.3 times more likely to adopt secondary financial products.",
+    "Regulatory support and fintech innovation must co-evolve for inclusive digital banking.",
+    "Access alone is insufficient; actual usage, satisfaction, and retention are critical inclusion metrics."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kowsar M. et al-2025_marked.md",
+      "converted_at": "2026-07-21T13:50:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

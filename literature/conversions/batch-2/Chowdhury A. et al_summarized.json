@@ -1,0 +1,85 @@
+{
+  "paper_id": "10.63125/mbbfw637",
+  "designation": "international",
+  "title": "A Systematic Review of Demand Forecasting Models for Retail E-Commerce Enhancing Accuracy in Inventory and Delivery Planning",
+  "authors": "Chowdhury, A.; Paul, R.; Rozony, F.",
+  "year": 2025,
+  "venue": "International Journal of Scientific Interdisciplinary Research",
+  "odin_topics": ["6.A", "6.B", "14.B"],
+  "tldr": "Systematic review of 72 peer-reviewed studies on demand forecasting models for retail e-commerce, covering statistical, ML, hybrid, and deep learning approaches.",
+  "problem_and_motivation": "E-commerce demand forecasting faces challenges from volatile consumer behavior, diverse product assortments, and fluctuating market conditions. A consolidated knowledge base comparing forecasting methodologies across statistical, ML, and deep learning approaches is needed.",
+  "approach": [
+    "Synthesizes 72 peer-reviewed articles, industry reports, and empirical case studies from 2010-2024.",
+    "Examines four model categories: traditional statistical (ARIMA, SARIMA), ML (decision trees, random forests, SVR), hybrid, and deep learning (LSTM, GRU, CNN, Transformer).",
+    "Evaluates model performance across SKU-level forecasting, high-frequency scenarios, and promotional periods.",
+    "Considers feature engineering, deployment feasibility, and interpretability trade-offs."
+  ],
+  "findings": [
+    "Traditional statistical models remain relevant for stable demand patterns and short horizons but falter during high-variance events.",
+    "Machine learning models (XGBoost, LightGBM, random forest) offer enhanced accuracy for high-dimensional, nonlinear data.",
+    "Deep learning models (LSTM, GRU, Transformer) excel at capturing complex temporal dynamics and long-range dependencies.",
+    "Hybrid frameworks combining statistical and ML components yield the most robust SKU-level forecasts.",
+    "Feature engineering quality often matters more than algorithmic complexity for forecast accuracy."
+  ],
+  "key_figures_tables": [
+    "Figure 2: Classical Time Series Methods for Retail Demand Forecasting.",
+    "Figure 5: Machine Learning Models for Nonlinear Demand Forecasting.",
+    "Figure 6: Deep Learning Networks in Retail Forecasting."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "ARIMA", "definition": "AutoRegressive Integrated Moving Average for time series forecasting"},
+    {"term": "SARIMA", "definition": "Seasonal ARIMA with seasonal differencing components"},
+    {"term": "SKU", "definition": "Stock Keeping Unit, a distinct product identifier for inventory"},
+    {"term": "GBM", "definition": "Gradient Boosting Machine for ensemble learning"},
+    {"term": "TFT", "definition": "Temporal Fusion Transformer for interpretable time series forecasting"}
+  ],
+  "citations": [
+    {"author": "Frei", "year": 2022, "page": 11, "paragraph": 2, "claim": "LSTM outperforms SVR and random forest in daily sales forecasting.", "role": "finding"},
+    {"author": "Li", "year": 2024, "page": 8, "paragraph": 1, "claim": "Classical methods outperformed by ML in capturing complex consumer behavior.", "role": "baseline"},
+    {"author": "Alfarisi", "year": 2024, "page": 8, "paragraph": 1, "claim": "SARIMA stable for seasonal e-grocery but fails during promotions.", "role": "finding"},
+    {"author": "Yin", "year": 2021, "page": 11, "paragraph": 2, "claim": "Temporal CNN outperformed RNNs in demand forecasting.", "role": "finding"},
+    {"author": "Rezaei", "year": 2018, "page": 8, "paragraph": 1, "claim": "ARIMA and exponential smoothing adequate for non-promotional periods.", "role": "baseline"},
+    {"author": "Zahn", "year": 2022, "page": 10, "paragraph": 2, "claim": "Gradient boosting and deep learning outperform ARIMA in MAPE.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Reviews demand forecasting models applicable to financial prediction systems"},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Comprehensive survey of forecasting algorithms for time series with complex temporal dynamics"},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Discusses deployment feasibility, scalability, and model compression for production systems"}
+    ],
+    "contribution_to_field": "This systematic review consolidates 72 studies on demand forecasting for e-commerce, categorizing methods into statistical, ML, hybrid, and deep learning approaches. It identifies performance advantages across model categories: statistical for stable patterns, ML for high-dimensional data, and deep learning for complex temporal dynamics. The review highlights feature engineering as a critical success factor and discusses deployment challenges including scalability, interpretability, and model retraining.",
+    "directly_justifies": [
+      "Deep learning models (LSTM, GRU, Transformer) excel at SKU-level forecasting.",
+      "Feature engineering quality often matters more than algorithm choice.",
+      "Hybrid frameworks combining statistical and ML components yield most robust results."
+    ],
+    "limits": [
+      "Review scope limited to retail e-commerce, not personal finance.",
+      "Literature search only covers 2010-2024, missing earlier foundational work.",
+      "No quantitative meta-analysis comparing model performance across studies."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topic 6.B (Forecasting Algorithms) was rated high as the core subject is demand forecasting algorithms. Topics 6.A (Predictive Modeling) and 14.B (ML Model Serving) were rated medium for applicability and deployment considerations. Topics 1.x-5.x, 7.x, 8.x, 9.x-14.A, 14.C were rejected as the review focuses on retail inventory forecasting, not personal finance or system design."
+  },
+  "limitations": [
+    "Limited to retail e-commerce; personal finance forecasting not covered.",
+    "No quantitative meta-analysis or pooled performance comparison.",
+    "Non-systematic selection criteria for the 72 studies may introduce bias."
+  ],
+  "remember_this": [
+    "Deep learning models excel at SKU-level forecasting with complex temporal dynamics.",
+    "Feature engineering quality matters more than algorithmic complexity.",
+    "Hybrid models combining statistical and ML approaches yield most robust results.",
+    "Traditional ARIMA remains useful for stable demand with short horizons.",
+    "XGBoost and LightGBM dominate ML-based e-commerce demand forecasting."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chowdhury A. et al_marked.md",
+      "converted_at": "2026-07-22T12:57:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "paper_id": "10.XXXX/2304-1013.2023.12.2.235",
+  "designation": "local-algorithm-specific",
+  "title": "Big Five Personality Traits and Financial Literacy: Effect on Risk Tolerance of Filipino Investors from Higher Education Institutions in Metro Manila",
+  "authors": "Mendoza, D. M.; Padernal, A. M. G.; Pante, E. M. S.; Magbata, E. V. S.; Mandigma, M. B. S.",
+  "year": 2023,
+  "venue": "Review of Integrative Business and Economics Research",
+  "odin_topics": [
+    "1.A",
+    "1.C",
+    "3.A",
+    "5.A",
+    "5.C",
+    "6.A",
+    "7.A",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Extraversion, openness, neuroticism, and financial literacy positively influence risk tolerance among Filipino investors from Metro Manila universities, while agreeableness and conscientiousness do not.",
+  "problem_and_motivation": "Risk tolerance is a critical factor in investment decisions, but its determinants in the Philippine context remain underexplored. Prior studies show inconsistent findings on the role of personality and financial literacy. This study addresses the gap by testing their influence on Filipino investors.",
+  "approach": [
+    "Surveyed 320 students and faculty from Metro Manila higher education institutions with at least PHP 1,000 invested in stocks, bonds, or cryptocurrency.",
+    "Used adapted and modified questionnaires for Big Five Personality Traits (23 items), financial literacy (20 items), and risk tolerance (11 items).",
+    "Employed a 4-point Likert scale and established reliability via Cronbach's Alpha (0.881–0.918).",
+    "Applied multiple regression analysis to test the influence of personality traits and financial literacy on risk tolerance.",
+    "Included age and monthly family income as control variables in a secondary regression model."
+  ],
+  "findings": [
+    "num: 43.6% of the variation in risk tolerance is explained by personality traits and financial literacy (R² = 0.436).",
+    "num: 45.1% of variation is explained when age and income are added as controls (R² = 0.451).",
+    "Extraversion, openness, and neuroticism significantly and positively influence risk tolerance (p < 0.05).",
+    "Financial literacy has the strongest positive influence on risk tolerance (β = 0.504, p = 0.000).",
+    "Agreeableness and conscientiousness do not significantly influence risk tolerance.",
+    "Monthly family income negatively influences risk tolerance when included as a control variable.",
+    "Age was not a significant predictor of risk tolerance."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Hypothesized model showing personality traits and financial literacy as independent variables → Predicts risk tolerance as dependent variable.",
+    "Table 1: Cronbach's Alpha values for Big Five (0.913), financial literacy (0.918), risk tolerance (0.881) → All constructs show high internal consistency.",
+    "Table 2: Demographic profile of 320 respondents → 92.81% aged 18-25, 68.75% female, 89.06% students.",
+    "Table 3: Descriptive statistics with means and standard deviations → Openness has highest mean (3.18), neuroticism lowest (2.67).",
+    "Table 4: Multiple regression results without controls → Extraversion, openness, neuroticism, and financial literacy are significant.",
+    "Table 5: Multiple regression with age and income controls → Financial literacy (β=0.513) and neuroticism (β=0.140) remain significant."
+  ],
+  "key_equations": [
+    {
+      "equation": "RT = 0.882 + 0.091E + 0.086O + 0.089N + 0.474FL",
+      "explanation": "Predicted risk tolerance from personality traits and financial literacy."
+    },
+    {
+      "equation": "RT = 0.118E + 0.103O + 0.140N + 0.513FL - 0.107M",
+      "explanation": "Risk tolerance equation with income (M) as control."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Risk Tolerance",
+      "definition": "The maximum uncertainty or return an investor is willing to accept in making a financial decision."
+    },
+    {
+      "term": "Financial Literacy",
+      "definition": "Knowledge of financial concepts and the ability to manage personal finances effectively."
+    },
+    {
+      "term": "Big Five Personality Traits",
+      "definition": "Five broad domains of personality: openness, conscientiousness, extraversion, agreeableness, and neuroticism."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Bayar",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Risk tolerance is the maximum uncertainty an investor is prepared to take before a financial decision.",
+      "role": "context"
+    },
+    {
+      "author": "Hermansson",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Risk tolerance is the maximum return an individual is prepared to receive in making a financial decision.",
+      "role": "context"
+    },
+    {
+      "author": "Ainia",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Risk tolerance describes how a person acts and responds when faced with investment risks.",
+      "role": "context"
+    },
+    {
+      "author": "Zakaria",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy positively correlates with risk tolerance in Malaysia.",
+      "role": "finding"
+    },
+    {
+      "author": "Sabri",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financially literate millennials are more likely to take risks in their investing decisions.",
+      "role": "finding"
+    },
+    {
+      "author": "Awais",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is high among people aged 50-60 who are professionals or graduates.",
+      "role": "context"
+    },
+    {
+      "author": "Pak",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Neurotic individuals are generally risk averse with weak analytical abilities.",
+      "role": "methodology"
+    },
+    {
+      "author": "Sadiq",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Extraverts are active, optimistic, and seek excitement; they tend to socialize in large crowds.",
+      "role": "context"
+    },
+    {
+      "author": "Mathur",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Extraverts have high-risk tolerance while introverts are low-risk takers.",
+      "role": "context"
+    },
+    {
+      "author": "Nandan",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Individuals with openness tend to take higher risk and are willing to invest in stock.",
+      "role": "finding"
+    },
+    {
+      "author": "Hamza",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy positively and significantly influences agreeableness, extraversion, and openness.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rabbani",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Big Five Personality Traits predict risk tolerance of pre-retiree baby boomers.",
+      "role": "baseline"
+    },
+    {
+      "author": "Aren",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Personality trait is not an important variable; financial literacy and risk perception are significant.",
+      "role": "critique"
+    },
+    {
+      "author": "Kahneman",
+      "year": 1979,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Decision makers exhibit risk aversion with probable gains and risk seeking with probable losses.",
+      "role": "methodology"
+    },
+    {
+      "author": "Digman",
+      "year": 1990,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Five Factor Personality Model classifies personality into five broad domains.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Sample comprises Filipino students and faculty from Metro Manila universities."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Investigates risk tolerance and financial literacy as behavioral financial constructs."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Financial literacy includes personal finance management ability, which implies categorization."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Links Big Five personality traits directly to risk tolerance as a behavioral profile."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "low",
+        "justification": "Uses regression to classify influence, but not a classification-focused study."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Multiple regression predicts risk tolerance but is not framed as a predictive system."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Financial literacy includes money management, which relates to budgeting knowledge."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions adherence to Data Privacy Act (RA 10173) for survey data."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Informed consent and anonymity are mentioned, implying trust considerations."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Uses multiple regression but does not evaluate a personal finance system per se."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "low",
+        "justification": "Regression analysis is algorithmic but not for a PFMS module evaluation."
+      }
+    ],
+    "contribution_to_field": "This paper contributes empirical evidence on the determinants of risk tolerance in the Philippine context, which has been underexplored. It validates the predictive utility of the Big Five Personality Model for financial behavior in a non-Western setting. The study also reinforces the role of financial literacy as a key driver of investment risk tolerance. It highlights which personality traits are relevant and which are not, offering direction for future research. The findings add to the behavioral finance literature by confirming cross-cultural applicability of some established relationships.",
+    "directly_justifies": [
+      "Extraversion, openness, and neuroticism positively influence risk tolerance.",
+      "Financial literacy has the strongest positive effect on risk tolerance.",
+      "Agreeableness and conscientiousness do not significantly influence risk tolerance.",
+      "Monthly family income negatively influences risk tolerance.",
+      "Age does not significantly influence risk tolerance in this sample."
+    ],
+    "limits": [
+      "Limited to online survey dissemination, which may introduce selection bias.",
+      "Sample restricted to students and faculty, not representative of all investor groups.",
+      "Only questionnaires were used; other methods could validate findings.",
+      "Results may not generalize to other economic or political contexts."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains 1.A and 1.C were flagged as high relevance because the paper directly studies Filipino young adults' financial behavior. Domain 3.A was marked contextual because financial literacy includes management ability but not explicit categorization. Domains 5.A and 5.C were flagged high and low respectively: 5.A fits directly as the paper examines personality-based behavioral profiles, while 5.C is low because it uses regression rather than classification. Domain 6.A was considered low because the predictive aspect is ancillary. Domain 7.A was contextual due to the budgeting implication of financial literacy. Domains 10.A and 10.B were contextual due to privacy mention. Domain 12.A was low because evaluation focuses on statistical model fit, not a system. Other domains (2.A, 2.B, 2.C, 2.D, 3.B, 3.C, 4.A, 4.B, 5.B, 6.B, 7.B, 7.C, 7.D, 7.E, 8.A, 8.B, 8.C, 9.A, 9.B, 9.C, 10.C, 11.A, 11.B, 12.C, 13.A, 13.B, 13.C, 14.A, 14.B, 14.C) were rejected as they were not addressed by the paper. The overall topical coverage centers on behavioral finance and investor psychology."
+  },
+  "limitations": [
+    "Online-only survey distribution may introduce selection bias. [unacknowledged]",
+    "Sample limited to university students and faculty, not representative of all Filipino investors. [unacknowledged]",
+    "Reliance solely on questionnaires; other research tools could validate findings. [acknowledged]",
+    "Results may not generalize to other economic and political contexts. [acknowledged]"
+  ],
+  "remember_this": [
+    "Financial literacy shows the strongest positive influence on risk tolerance.",
+    "Extraversion, openness, and neuroticism significantly increase risk tolerance.",
+    "Agreeableness and conscientiousness do not affect risk tolerance.",
+    "Higher monthly family income is associated with lower risk tolerance.",
+    "R² values of 0.436 and 0.451 indicate moderate explanatory power."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mendoza et al_marked.md",
+      "converted_at": "2026-07-21T14:14:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

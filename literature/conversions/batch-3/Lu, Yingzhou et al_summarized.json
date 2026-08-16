@@ -1,0 +1,117 @@
+{
+  "paper_id": "10.1109/TKDE.2018.2878390",
+  "designation": "international",
+  "title": "Machine Learning for Synthetic Data Generation: A Review",
+  "authors": "Lu, Y.; Chen, L.; Zhang, Y.; Shen, M.; Wang, H.; Wang, X.; van Rechem, C.; Fu, T.; Wei, W.",
+  "year": 2021,
+  "venue": "Journal of LaTeX Class Files",
+  "odin_topics": ["14.A"],
+  "tldr": "A systematic review of machine learning models for synthetic data generation, covering applications, generative methods, privacy, fairness, and evaluation strategies.",
+  "problem_and_motivation": "Real-world machine learning applications face data quality issues, scarcity, and privacy constraints that limit data sharing and utilization. Synthetic data offers a promising alternative to overcome these obstacles by generating artificial data that preserves statistical properties while mitigating privacy risks. A comprehensive review of generative techniques and their evaluation is needed to guide research and application.",
+  "approach": [
+    "Surveyed applications across computer vision, speech, NLP, healthcare, business, education, location, AIGC, and finance.",
+    "Reviewed generative AI methods including language models, VAEs, GANs, diffusion models, RL, and multimodal learning.",
+    "Analyzed privacy risks such as membership inference and reconstruction attacks, and prevention strategies including differential privacy and PATE.",
+    "Examined fairness issues and mitigation techniques at preprocessing, in-processing, and post-processing stages.",
+    "Identified evaluation strategies including human evaluation, statistical difference, discriminator-based, TSTR, and application-specific metrics."
+  ],
+  "findings": [
+    "num: GANs and VAEs are the most widely applied generative models for synthetic data across diverse domains.",
+    "num: Differential privacy mechanisms can be integrated into GAN training, but often reduce utility and amplify fairness disparities.",
+    "num: Foundation models like ChatGPT and diffusion models pose new privacy risks, including data memorization and extraction.",
+    "Synthetic data effectively bridges gaps in data-scarce domains like healthcare and finance, enabling sharing and algorithm testing.",
+    "Evaluation of synthetic data quality requires domain-specific metrics and a combination of statistical and application-oriented strategies."
+  ],
+  "key_figures_tables": [
+    "Table I: Summarization of representative works in synthetic data generation → Wide range of applications and generative models.",
+    "Figure 1: Synthetic data generation overview → Illustrates the core concept of generating synthetic data from real data.",
+    "Figure 2: Synthetic data applications → Depicts the diversity of application domains for synthetic data.",
+    "Table II: Comparison of generative AI methods → Compares methods across supervision, architecture, and training objectives.",
+    "Table III: Summarization of privacy prevention strategies → Links privacy techniques to generative models and data formats."
+  ],
+  "key_equations": [
+    {
+      "equation": "p(X) = \\prod_{i=1}^{N} p(x_i | x_1, \\ldots, x_{i-1})",
+      "explanation": "Language model sequence probability via conditional decomposition."
+    },
+    {
+      "equation": "\\min_G \\max_D \\mathcal{L}(D, G) = \\mathbb{E}_{x \\sim \\text{training set}}[\\log D(x)] + \\mathbb{E}_{z \\sim p(z)}[\\log(1 - D(G(z)))]",
+      "explanation": "GAN minimax objective for generator and discriminator."
+    },
+    {
+      "equation": "L_t = \\mathbb{E}_{x_0, \\epsilon} [ \\| \\epsilon_t - \\epsilon_\\theta(\\sqrt{\\bar{\\alpha}_t} x_0 + \\sqrt{1 - \\bar{\\alpha}_t} \\epsilon_t, t) \\|^2 ]",
+      "explanation": "Diffusion model training objective for denoising."
+    }
+  ],
+  "definitions": [
+    {"term": "Synthetic data", "definition": "Artificially generated information that mimics real data distributions."},
+    {"term": "GAN", "definition": "Generative adversarial network; two neural networks (generator and discriminator) trained adversarially."},
+    {"term": "VAE", "definition": "Variational autoencoder; uses an encoder-decoder structure with latent variables for generation."},
+    {"term": "Differential privacy", "definition": "Formal privacy guarantee limiting information leakage from any individual data point."},
+    {"term": "AIGC", "definition": "AI-generated content; content created by AI systems like ChatGPT."},
+    {"term": "TSTR", "definition": "Training on synthetic, testing on real; evaluation strategy where models are trained on synthetic data and tested on real data."}
+  ],
+  "citations": [
+    {"author": "Choi", "year": 2017, "page": 4, "paragraph": 4, "claim": "MedGAN generates realistic synthetic patient records using autoencoders and GANs.", "role": "methodology"},
+    {"author": "Sankaranarayanan", "year": 2018, "page": 2, "paragraph": 2, "claim": "A GAN projects features onto image space for visual domain adaptation in segmentation.", "role": "methodology"},
+    {"author": "Wood", "year": 2021, "page": 2, "paragraph": 3, "claim": "Synthetic face data achieves comparable accuracy to real data for landmark localization and face parsing.", "role": "finding"},
+    {"author": "Sellam", "year": 2020, "page": 3, "paragraph": 6, "claim": "BLEURT uses synthetic examples for pre-training to model human judgments in NLP.", "role": "methodology"},
+    {"author": "Nie", "year": 2018, "page": 4, "paragraph": 1, "claim": "RelGAN demonstrates superior performance in text generation quality and diversity.", "role": "finding"},
+    {"author": "Chen", "year": 2021, "page": 6, "paragraph": 4, "claim": "Synthetic data generation addresses challenges in healthcare by enabling research while preserving privacy.", "role": "context"},
+    {"author": "Abay", "year": 2019, "page": 9, "paragraph": 2, "claim": "Auto-encoder-based differential privacy improves the effectiveness of synthetic data release.", "role": "methodology"},
+    {"author": "Jordon", "year": 2018, "page": 9, "paragraph": 4, "claim": "PATE-GAN provides tight differential privacy guarantees for synthetic data generation.", "role": "methodology"},
+    {"author": "Cheng", "year": 2021, "page": 11, "paragraph": 4, "claim": "Differential privacy does not introduce unfairness but amplifies the influence of majority subgroups.", "role": "finding"},
+    {"author": "Bindschaedler", "year": 2016, "page": 5, "paragraph": 7, "claim": "Plausible deniability preserves privacy by ensuring multiple real traces can map to a fake trace.", "role": "methodology"},
+    {"author": "Xie", "year": 2018, "page": 9, "paragraph": 3, "claim": "DPGAN adds noise to the gradient of the Wasserstein distance for differential privacy.", "role": "methodology"},
+    {"author": "Zhang", "year": 2017, "page": 10, "paragraph": 6, "claim": "PrivBayes uses Bayesian networks and injected noise for differentially private high-dimensional data synthesis.", "role": "methodology"},
+    {"author": "Carlini", "year": 2021, "page": 11, "paragraph": 1, "claim": "Training data can be extracted from large language models, posing a privacy risk.", "role": "critique"},
+    {"author": "Somepalli", "year": 2022, "page": 8, "paragraph": 8, "claim": "Diffusion models can replicate training data, leading to potential privacy violations.", "role": "critique"},
+    {"author": "Van Breugel", "year": 2021, "page": 11, "paragraph": 3, "claim": "Causally-aware generative networks can produce fair synthetic data by conditioning on causal parents.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "Review covers synthetic data generation techniques applicable to finance."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive, structured survey of machine learning methods for synthetic data generation across multiple domains. It systematically organizes the landscape of generative models including GANs, VAEs, diffusion models, and RL, while also providing a detailed analysis of privacy-preserving techniques and fairness considerations. The paper identifies current challenges such as evaluation metrics, bias propagation, and the emerging impact of foundation models, thereby offering a clear roadmap for future research.",
+    "directly_justifies": [
+      "Synthetic data generation addresses data scarcity and privacy constraints in machine learning.",
+      "GANs and VAEs are the most commonly used models for generating synthetic data.",
+      "Differential privacy reduces synthetic data utility and amplifies fairness disparities.",
+      "Foundation models introduce new privacy risks through data memorization.",
+      "Evaluation of synthetic data requires a combination of statistical and application-specific metrics."
+    ],
+    "limits": [
+      "No specific evaluation metrics for financial synthetic data are discussed.",
+      "Limited coverage of domain-specific constraints like Filipino spending cycles or budget allocation frameworks.",
+      "Does not address the cold-start problem or user-declared financial preferences."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. The paper covers general synthetic data generation methods but does not specifically address Filipino young professionals, financial structure, spending cycles, expense categorization, or budgeting strategies. The only relevant domain identified is synthetic data generation for machine learning, which maps to topic 14.A. Topics related to personal finance systems (e.g., 1.A, 2.D, 7.A) were considered and rejected because the paper does not discuss financial behavior, budgeting, or expense management. The review's focus on generative AI techniques and privacy aligns with 14.A as a high-relevance topic. Other domains like algorithmic evaluation (12.A) were considered but are not a primary focus of the review."
+  },
+  "limitations": [
+    "The survey is high-level and does not provide in-depth technical details for each generative model. [unacknowledged]",
+    "Evaluation metrics for synthetic data quality are discussed broadly but lack standardized benchmarks. [unacknowledged]",
+    "The paper acknowledges that current methods may not account for all outliers and corner cases. [acknowledged]",
+    "The rise of foundation models presents new challenges not fully addressed by existing privacy measures. [acknowledged]"
+  ],
+  "remember_this": [
+    "Synthetic data generation addresses data scarcity and privacy constraints.",
+    "GANs, VAEs, and diffusion models are key generative approaches for synthetic data.",
+    "Differential privacy reduces utility and amplifies fairness disparities in synthetic data.",
+    "Foundation models like ChatGPT pose new privacy risks through data memorization.",
+    "Evaluation of synthetic data requires domain-specific and application-oriented strategies."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20260514",
+    "conversion_reference": {
+      "file": "Lu, Yingzhou et al_marked.md",
+      "converted_at": "2026-07-21T14:06:46Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-16T12:25:26.163942+00:00",
+  "threshold": 0.98,
+  "clusters": [
+    {
+      "papers": [
+        "Chowdhury T. et al-2026",
+        "Chowdhury T. et al"
+      ],
+      "max_similarity": 1.0000001192092896,
+      "keep": "Chowdhury T. et al-2026",
+      "cull": [
+        "Chowdhury T. et al"
+      ]
+    },
+    {
+      "papers": [
+        "Kowsar M. et al-2023",
+        "Mohiuddin et al"
+      ],
+      "max_similarity": 0.9999998807907104,
+      "keep": "Kowsar M. et al-2023",
+      "cull": [
+        "Mohiuddin et al"
+      ]
+    }
+  ]
+}

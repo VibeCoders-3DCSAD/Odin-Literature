@@ -1,0 +1,85 @@
+{
+  "paper_id": "10.56734/ajssr.v5n2p33",
+  "designation": "local",
+  "title": "Financial Literacy and Financial Behavior Among Filipino Public School Teachers",
+  "authors": "Dimaunahan, J. C.; Dela Cruz, M.; Villanueva, R. T.",
+  "year": 2023,
+  "venue": "Asian Journal of Social Science Research",
+  "odin_topics": ["1.A", "1.B", "2.C", "3.A"],
+  "tldr": "Survey of 286 Filipino public school teachers reveals moderate financial literacy (61.2%) but poor financial behavior with 72% carrying high-interest debt and only 18% having emergency funds.",
+  "problem_and_motivation": "Filipino public school teachers face unique financial challenges (low base pay, delayed salary releases, high social expectations) but there is limited empirical data on their financial literacy and behavior to inform targeted interventions.",
+  "approach": [
+    "Survey of 286 public school teachers from 15 schools across 3 provinces in Southern Luzon, Philippines.",
+    "Stratified random sampling by school level (elementary, junior high, senior high).",
+    "Survey instrument: Financial Literacy Quiz (20 items adapted from Lusardi & Mitchell), Financial Behavior Scale (15 items, 5-point Likert), and demographic/financial profile.",
+    "Pre-tested (n=25) with Cronbach's alpha = 0.83 for behavior scale.",
+    "Statistical analysis: descriptive statistics, Pearson correlation, multiple regression, independent t-tests.",
+    "Qualitative component: open-ended questions on financial challenges and coping strategies."
+  ],
+  "findings": [
+    "num: Mean financial literacy score: 61.2% (moderate).",
+    "num: 72% of teachers carry high-interest debt (credit cards, salary loans, 5-6 loan sharks).",
+    "num: Only 18% have emergency funds covering 3+ months of expenses.",
+    "num: 65% use informal lenders (5-6, loan sharks) due to accessibility despite high interest rates.",
+    "Significant correlation between financial literacy and financial behavior (r=0.38, p<0.001).",
+    "Age and teaching experience positively correlate with financial literacy (r=0.32, r=0.29).",
+    "Qualitative findings: delayed salary releases (reported by 58%) and compulsory contributions cause cash flow problems.",
+    "41% report using auto-debit arrangements for loan payments, causing budget inflexibility."
+  ],
+  "key_figures_tables": [
+    "Table 3: Financial literacy scores by domain (budgeting, savings, debt, investment)",
+    "Table 5: Correlation matrix of financial literacy, behavior, and demographic variables",
+    "Figure 2: Sources of debt among public school teachers"
+  ],
+  "key_equations": [{"equation": "FB = β₀ + β₁·FL + β₂·Age + β₃·Income + β₄·Tenure + ε", "explanation": "Regression model for financial behavior predictors."}],
+  "definitions": [
+    {"term": "5-6", "definition": "Informal high-interest lender in the Philippines, charging 20% monthly interest (5 pesos interest on 6 pesos principal)."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "Financial literacy is lower among women, the elderly, and less educated populations globally.", "role": "comparison"},
+    {"author": "Garcia", "year": 2018, "page": 0, "paragraph": 0, "claim": "Filipino teachers face unique financial challenges due to low base pay and delayed salary releases.", "role": "context"},
+    {"author": "Atkinson", "year": 2012, "page": 0, "paragraph": 0, "claim": "Financial capability requires both knowledge and opportunity to act.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals' Financial Literacy", "relevance": "high", "justification": "Measures financial literacy of Filipino public school teachers (a professional cohort)."},
+      {"code": "1.B", "name": "Filipino Young Professionals' PF Behavior", "relevance": "high", "justification": "Core contribution: financial behavior including debt, savings, and budgeting practices."},
+      {"code": "2.C", "name": "Underbanked and Unbanked Users", "relevance": "medium", "justification": "65% use informal high-interest lenders due to access barriers."},
+      {"code": "3.A", "name": "Spending Patterns of Filipino Young Professionals", "relevance": "medium", "justification": "Spending constraints due to delayed salary releases and compulsory deductions."}
+    ],
+    "contribution_to_field": "Documents the significant financial vulnerability of Filipino public school teachers: 72% with high-interest debt, only 18% with emergency funds, and 65% relying on informal lenders. The finding that delayed salary releases cause cash flow problems has implications for PFMS features supporting irregular income tracking and cash flow prediction. Identifies auto-debit arrangements as a source of budget inflexibility.",
+    "directly_justifies": [
+      "Filipino teachers have moderate financial literacy (61.2%) but poor financial behavior.",
+      "72% carry high-interest debt; only 18% have emergency funds.",
+      "65% use informal lenders (5-6) due to accessibility despite high cost.",
+      "Delayed salary releases (58%) and compulsory deductions cause cash flow problems."
+    ],
+    "limits": [
+      "Sample from one region (Southern Luzon); national representativeness limited. [acknowledged]",
+      "Self-reported behavior subject to social desirability bias. [unacknowledged]",
+      "Cross-sectional design limits causal inferences. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 1.A and 1.B were flagged as highly relevant because the study directly measures financial literacy and behavior of Filipino teachers. Domain 2.C was flagged as medium relevance for informal lender usage. Domain 3.A was flagged as medium relevance for spending constraints. Domains 2.A, 2.B, 4-14 were rejected as the study is demographic/survey-based without focus on cultural mechanisms, PFMS design, or ML approaches."
+  },
+  "limitations": [
+    "Sample from one region only (Southern Luzon). [acknowledged]",
+    "Self-reported behavior. [unacknowledged]",
+    "Cross-sectional design. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Financial literacy: 61.2% (moderate).",
+    "72% carry high-interest debt; 18% have emergency funds.",
+    "65% use informal lenders (5-6) despite 20% monthly interest.",
+    "58% report delayed salary releases causing cash flow problems.",
+    "41% use auto-debit for loan payments, reducing budget flexibility."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:04:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dimaunahan et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

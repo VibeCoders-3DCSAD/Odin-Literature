@@ -1,0 +1,126 @@
+{
+  "paper_id": "10.1080/0144929X.2025.2533358",
+  "designation": "international",
+  "title": "Between transparency and trust: identifying key factors in AI system perception",
+  "authors": "Cetinkaya, N. E.; Kramer, N.",
+  "year": 2026,
+  "venue": "Behaviour & Information Technology",
+  "odin_topics": [
+    "10.B",
+    "12.A"
+  ],
+  "tldr": "Conjoint analysis with 315 participants revealed two opposing user clusters: one prioritising explainability and AI certification, the other favouring fairness and reliability, with no uniform attribute preference across the full sample.",
+  "problem_and_motivation": "Existing research on AI trust attributes examines explainability, reliability, fairness, and certification in isolation, leaving a gap in understanding how users weigh these factors against each other in adoption decisions.",
+  "approach": [
+    "Choice-based conjoint analysis with four attributes (explainability, reliability, AI certification, fairness) presented in 18 forced-choice tasks within a healthcare AI scenario.",
+    "Sample of 315 German participants recruited via Prolific, with preregistered study design and hypotheses.",
+    "Conventional conjoint analysis on full sample to estimate part-worth utilities and relative importance weights.",
+    "Latent class analysis using Gaussian mixture model with two components to identify heterogeneous preference patterns.",
+    "Separate logistic regression per cluster to test hypotheses.",
+    "Demographic and attitudinal comparisons between clusters using t-tests and chi-square tests."
+  ],
+  "findings": [
+    "No significant attribute preferences emerged across the full sample, with all three hypotheses rejected at the aggregate level.",
+    "LCA identified two distinct clusters with opposing preferences: Cluster 1 (n=182) favoured explainability and certification; Cluster 2 (n=133) favoured fairness and reliability.",
+    "Cluster 1 showed significant positive preferences for explainability (beta=0.145, p<0.001) and AI certification (beta=0.193, p<0.001).",
+    "Cluster 2 showed significant positive preferences for fairness (beta=0.409, p<0.001) and reliability (beta=0.137, p=0.019).",
+    "Cluster 1 optimal combination (62.4% selection probability): no explainability, high reliability, no AI certificate, limited fairness.",
+    "Cluster 2 optimal combination (66.9% selection probability): low explainability, medium reliability, low AI certificate, high fairness.",
+    "Cluster 1 reported higher AI acceptance and lower AI fear; Cluster 2 reported lower AI acceptance and higher AI fear, with significant differences on both measures.",
+    "Full sample most preferred combination (50.8% probability): no explainability, medium reliability, no AI seal, high fairness."
+  ],
+  "citations": [
+    {
+      "author": "Mayer",
+      "year": 1995,
+      "page": 0,
+      "paragraph": 2,
+      "claim": "Organisational trust model posits trust develops from perceptions of ability, benevolence, and integrity.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lee",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "Trust in automation framework adapts organisational trust to performance, purpose, and process dimensions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ferrario",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 4,
+      "claim": "Enhancing system comprehension through explainability may actually result in decreased trust due to awareness of limitations.",
+      "role": "finding"
+    },
+    {
+      "author": "Knowles",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Public trust primarily requires robust regulatory oversight rather than technical understanding of AI systems.",
+      "role": "context"
+    },
+    {
+      "author": "Sullivan",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 8,
+      "claim": "Users trust in AI systems is significantly influenced by perceptions of algorithmic fairness.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Examines trust-building mechanisms in AI systems through explainability, certification, and fairness, generalisable to PFMS trust design."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Demonstrates conjoint analysis as an evaluation methodology for measuring user attribute preferences in AI systems."
+      }
+    ],
+    "contribution_to_field": "Contributes to understanding how users form trust in AI systems by revealing that aggregate-level analyses mask fundamentally opposing user preferences. Demonstrates that two distinct user segments exist with fundamentally different trust-building strategies.",
+    "directly_justifies": [
+      "Two distinct user clusters with opposing preferences for AI trust attributes were identified through latent class analysis.",
+      "Cluster 1 prioritised explainability and AI certification while showing negative preference for fairness.",
+      "Cluster 2 prioritised fairness and reliability while rejecting explainability and AI certification.",
+      "No uniform attribute preference was found across the full sample, contradicting hypothesis of universal reliability preference.",
+      "Users comfortable with AI accept moderate reliability when paired with high fairness."
+    ],
+    "limits": [
+      "Study limited to a healthcare decision-making scenario; findings may not generalise to other AI application domains.",
+      "Sample restricted to German participants and may not represent all potential AI system users.",
+      "Abstract attribute presentations may not capture real-world user experiences with AI systems."
+    ]
+  },
+  "limitations": [
+    "Study limited to a healthcare decision-making scenario; findings may not generalise to other AI application domains.",
+    "Sample restricted to German participants recruited via Prolific, restricting cultural representativeness.",
+    "Abstract attribute representations may reduce ecological validity compared to real-world AI interactions.",
+    "Study measures system choice rather than trust directly, though the two are related but distinct constructs.",
+    "AI literacy was not explicitly measured and may mediate observed preference differences between clusters."
+  ],
+  "remember_this": [
+    "Conjoint analysis revealed no universal attribute preference; two clusters with opposing trust priorities were identified.",
+    "Cluster 1 (n=182) preferred explainability and AI certification; Cluster 2 (n=133) preferred fairness and reliability.",
+    "Cluster 2 optimal combination achieved 66.9% selection probability with high fairness and low explainability.",
+    "AI-acceptant users accepted moderate reliability when paired with high fairness.",
+    "Effective AI integration requires adaptive approaches acknowledging diverse user trust-building strategies."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T18:13:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cetinkaya & Kramer_marked.md",
+      "converted_at": "2026-07-22T12:43:38Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

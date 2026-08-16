@@ -1,0 +1,88 @@
+{
+  "paper_id": "10.1186/s13731-022-",
+  "designation": "local",
+  "title": "Financial Literacy and Spending Behavior of Filipino Young Professionals",
+  "authors": "Integrative Business; Economics Research",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "12.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "This study examines how myopic decision-making influences the business performance of micro-enterprises operated by low-income households in Manila, with access to finance as a moderating variable. The research addresses the critical question: How does myopic influence micro-enterprise business decision-making of performance when moderated by access to finance? Through quantitative analysis of mic",
+  "problem_and_motivation": "This study examines how myopic decision-making influences the business performance of micro-enterprises operated by low-income households in Manila, with access to finance as a moderating variable. The research addresses the critical question: How does myopic influence micro-enterprise business decision-making of performance when moderated by access to finance? Through quantitative analysis of micro- entrepreneurs in Manila, the study reveals that myopic decision-making significantly impacts bus",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Financial Literacy and Spending Behavior of Filipino Young Professionals"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Financial Literacy and Spending Behavior of Filipino Young Professionals",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ong H. et al_marked.md",
+      "converted_at": "2026-07-21T07:57:37Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

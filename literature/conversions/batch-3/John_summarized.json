@@ -1,0 +1,258 @@
+{
+  "paper_id": "10.XXXX/unknown",
+  "designation": "international-algorithm-specific",
+  "title": "Fair and Explainable Credit-Scoring under Concept Drift: Adaptive Explanation Frameworks for Evolving Populations",
+  "authors": "John, S.",
+  "year": 2024,
+  "venue": "Unknown",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.B",
+    "7.C",
+    "8.A",
+    "8.B",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Adaptive SHAP-based explanation frameworks improve temporal stability and reduce fairness disparities in credit-scoring models under concept drift without sacrificing predictive accuracy.",
+  "problem_and_motivation": "Conventional explainability techniques like SHAP assume static data and fail under concept drift, leading to unstable and potentially unfair explanations. Financial institutions require transparent and fair credit decisions for regulatory compliance and trust. A gap exists in maintaining interpretability and fairness as data distributions evolve over time.",
+  "approach": [
+    "Used a multi-year lending dataset (2015-2024) with demographic, financial, and socioeconomic features to simulate real-world credit systems.",
+    "Trained XGBoost baseline models using an expanding-window validation strategy, with Logistic Regression and Random Forest for comparison.",
+    "Proposed three adaptive SHAP variants: Method A (drift-weighted adjustment), Method B (sliding-window background sampling), and Method C (online surrogate Ridge recalibration).",
+    "Evaluated methods against static SHAP using predictive performance (AUC, F1), explanation stability (cosine similarity, Kendall tau, Jaccard overlap), and fairness metrics (DPD, EOD).",
+    "Conducted robustness tests including counterfactual perturbations, background sensitivity analysis, and proxy-variable detection."
+  ],
+  "findings": [
+    "num: XGBoost test AUC remained moderate and stable between 0.63 and 0.66 across all test years.",
+    "num: Baseline SHAP explanations showed high directional stability (cosine 0.991-0.998) but moderate rank stability (Kendall tau 0.758-0.912).",
+    "num: Method B reduced the mean DPD difference by approximately 0.026 compared to baseline (p < 0.05) while maintaining AUC performance.",
+    "num: In the final test year (2024), top predictive features by SHAP value were loan_amount (0.055), dti (0.034), and credit_score (0.023).",
+    "num: Decreasing credit_score by 10% increased default probability by approximately 0.05, while a 10% increase reduced it by about 0.035.",
+    "Adaptive methods, particularly Method B and Method C, achieved higher top-10 Jaccard overlaps than the baseline, preserving a more consistent set of key predictors.",
+    "Methods B and C achieved explanation stability with cosine ≈ 0.995 and Kendall τ ≈ 0.89, substantially improving temporal stability.",
+    "Proxy variable detection identified loan_amount, credit_score, and annual_income as statistically associated with race (p < 0.01; η² = 0.017–0.045)."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Loan default rate by year → Default rates increased from ~15% in 2015 to over 23% in 2024.",
+    "Figure 2: PSI for annual_income and credit_score → PSI reached ~0.16 and 0.017 by 2019, indicating ongoing population drift.",
+    "Figure 5: DPD over time by model for race → Fairness disparities were most pronounced during 2020-2021 recessionary period.",
+    "Figure 7: DPD before and after method B recalibration → Method B recalibration significantly reduced disparity for race attribute.",
+    "Figure 10: Kendall tau and Cosine similarity over test years for adaptive methods → Method B achieved the highest stability scores year-over-year.",
+    "Figure 12: Number of harmful features detected by each method → Adaptive methods reduced the frequency of proxy features associated with race."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "Explainable artificial intelligence, methods to interpret model decisions."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, a game-theoretic approach to explain machine learning model outputs."
+    },
+    {
+      "term": "PSI",
+      "definition": "Population Stability Index, a metric to measure distributional shift in numerical features."
+    },
+    {
+      "term": "DPD",
+      "definition": "Demographic Parity Difference, a fairness metric measuring disparity in positive prediction rates across groups."
+    },
+    {
+      "term": "EOD",
+      "definition": "Equal Opportunity Difference, a fairness metric comparing true positive rates across groups."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Widmer",
+      "year": 1996,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Concept drift occurs when relationships learned from past data stop holding as underlying patterns change direction.",
+      "role": "context"
+    },
+    {
+      "author": "Gama",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Research has focused on detecting and correcting drift for accuracy but has preserved interpretability as data shifts.",
+      "role": "critique"
+    },
+    {
+      "author": "Barocas",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fairness in AI cannot be separated from the environments in which models operate.",
+      "role": "context"
+    },
+    {
+      "author": "Ribeiro",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explanations influence how people trust AI systems.",
+      "role": "context"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP provides a mathematically grounded way to assign feature importance using cooperative game theory.",
+      "role": "methodology"
+    },
+    {
+      "author": "Doshi-Velez",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Interpretability should be built on consistent, scientific reasoning rather than heuristics.",
+      "role": "context"
+    },
+    {
+      "author": "Lu",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Concept drift is a core challenge in machine learning for financial systems where borrower characteristics and market conditions rarely stay still.",
+      "role": "context"
+    },
+    {
+      "author": "Mehrabi",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Algorithms can unintentionally reinforce social biases through unbalanced data, proxy variables, or skewed feature design.",
+      "role": "context"
+    },
+    {
+      "author": "Slack",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Common explanation tools like LIME and SHAP can be manipulated by adversarial changes, leading to misleading interpretations.",
+      "role": "critique"
+    },
+    {
+      "author": "Alvarez-Melis",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Small data changes can cause large swings in explanation outputs due to lack of stability mechanisms.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses XGBoost, Logistic Regression, and Random Forest for credit default prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Applies expanding-window validation and tracks longitudinal model performance."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides background on credit decision-making but not budget recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "low",
+        "justification": "Not a focus; the study centers on explanation stability rather than optimization."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Detects concept drift as anomalous data shifts affecting model reliability."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Uses PSI, KS tests, and JS divergence to detect distributional anomalies."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions regulatory compliance but does not address privacy mechanisms."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly discusses how explanation stability and fairness build trust with users and regulators."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops a comprehensive evaluation pipeline covering predictive performance, stability, fairness, and robustness."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates and compares three adaptive SHAP methods against a static baseline."
+      }
+    ],
+    "contribution_to_field": "This paper contributes an adaptive explainability framework for credit-scoring that explicitly addresses concept drift by extending SHAP with three temporal recalibration strategies. It establishes that explanation stability and fairness can be maintained under evolving data distributions without degrading predictive performance. The work bridges gaps between explainability, fairness, and drift adaptation, providing empirical evidence that interpretability must be treated as a dynamic property. It also introduces a rigorous longitudinal evaluation pipeline with robustness tests that can serve as a template for future research in adaptive XAI.",
+    "directly_justifies": [
+      "Conventional SHAP explanations assume static data and become unstable under concept drift.",
+      "Adaptive explanation methods improve temporal stability and reduce fairness disparities without degrading predictive accuracy.",
+      "Method B (sliding-window background sampling) delivers the most consistent stability improvements.",
+      "Changing input distributions directly affects fairness behavior even when model architecture remains constant.",
+      "Adaptive recalibration based on evolving feature-group relationships can effectively reduce disparity without compromising predictive strength."
+    ],
+    "limits": [
+      "The paper does not evaluate budget recommendation systems or allocation optimization, limiting direct relevance to topic 7.C.",
+      "The paper focuses on credit default prediction, not personal spending or saving behaviors, making topics 1.A-3.C only contextually relevant.",
+      "User trust is discussed at a high level but not empirically measured, limiting direct applicability to topic 10.B for system design.",
+      "The fairness analysis focuses on single attributes rather than intersecting demographic factors, limiting relevance to complex bias scenarios."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains identified two primary areas of high relevance: predictive modeling (6.A, 6.B) and evaluation frameworks (12.A, 12.B), as the paper centers on developing and benchmarking adaptive SHAP algorithms. Medium relevance was assigned to anomaly detection (8.A, 8.B) due to the use of drift detection metrics to identify distributional shifts. High relevance was assigned to user trust (10.B) because the paper explicitly discusses how explanation stability and fairness build trust. Contextual relevance was assigned to budget recommendation (7.B) as the paper provides background on financial decision-making but does not address budgeting per se. Topics related to personal financial behavior (1.A-3.C), culturally specific practices (2.A-2.D), and savings/debt management (13.A-13.C) were rejected as not covered. Similarly, topics on synthetic data generation (14.A), ML deployment (14.B-14.C), and mobile design (9.A-9.C) were not addressed. The overall coverage is strong in algorithmic fairness, concept drift, and evaluation methodology for credit-scoring systems."
+  },
+  "limitations": [
+    "SHAP analysis is computationally heavy, especially when applied repeatedly across large datasets or time windows, affecting scalability and real-time use. [unacknowledged]",
+    "Fairness assessment focuses mainly on single attributes like race or gender, while real-world fairness often involves multiple intersecting factors. [acknowledged]",
+    "The study uses simulated economic conditions (e.g., recessionary periods in 2020-2021) rather than actual historical data, which may limit generalizability. [unacknowledged]",
+    "Recalibration was done manually at intervals rather than continuously, which may not reflect fully automated deployment scenarios. [acknowledged]"
+  ],
+  "remember_this": [
+    "Adaptive SHAP methods improve explanation stability without reducing predictive accuracy.",
+    "Sliding-window background sampling (Method B) delivered the most consistent stability gains.",
+    "Method B reduced demographic parity difference by approximately 0.026 compared to baseline.",
+    "Explanation stability under concept drift is essential for regulatory compliance and user trust.",
+    "Proxy variable detection identified features statistically associated with race that adaptive methods mitigated."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "John_marked.md",
+      "converted_at": "2026-07-21T13:39:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

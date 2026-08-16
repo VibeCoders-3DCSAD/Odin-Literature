@@ -1,0 +1,356 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3622358",
+  "designation": "international-algorithm-specific",
+  "title": "Exploring Factors Involved in Loan Approval Decision: Deep Insights and Data Analytics Techniques",
+  "authors": "Li, X.; Li, J.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "7.E",
+    "8.A",
+    "8.B",
+    "8.C",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.A",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "An end-to-end pipeline for loan-default prediction using ensemble feature selection and a lightweight 1D-CNN achieves a ROC-AUC of 0.862 with embedded SHAP explanations and system-level profiling for real-time deployment.",
+  "problem_and_motivation": "Traditional credit-scoring models like logistic regression are transparent but fail to capture non-linear interactions in high-dimensional borrower data. Deep learning offers accuracy gains, but adoption is hindered by class imbalance, lack of explainability, and operational constraints for real-time deployment. A framework is needed that balances predictive performance with interpretability and practical engineering requirements.",
+  "approach": [
+    "A three-way consensus feature-selection ensemble combining VarianceThreshold, Recursive Feature Elimination (RFE) with logistic regression, and XGBoost gain ranking to reduce the original 11 features to a stable subset of five predictors.",
+    "A lightweight one-dimensional convolutional neural network (1D-CNN) with three convolutional layers (128, 64, 32 filters) followed by batch normalization, global average pooling, and a dense layer for tabular credit data classification.",
+    "Post-hoc explainability via KernelSHAP embedded directly in the inference loop to provide both global feature importance rankings and local per-applicant decision justifications.",
+    "Continuous system-level profiling of CPU, RAM, GPU utilization, and per-sample inference latency to quantify deployment feasibility under real-world constraints.",
+    "Evaluation on the public GiveMeSomeCredit dataset (150,000 records, 11 features) using a stratified 20% hold-out split with class weighting to address severe class imbalance.",
+    "Comparison against logistic regression and XGBoost baselines, with ablation analysis to isolate the contribution of feature selection and the 1D-CNN architecture.",
+    "Fairness assessment measuring disparate-impact and equal-opportunity gaps across gender and age cohorts.",
+    "Extended validation on a stratified subset of 1,505 samples to test generalizability and robustness.",
+    "Implementation of median imputation for missing values, winsorization for outlier capping, and standard scaling for feature normalization.",
+    "All code, trained models, evaluation artifacts, and resource logs are openly archived to support reproducibility and auditability."
+  ],
+  "findings": [
+    "num: The proposed pipeline reduces the original 11-feature space to a stable subset of five predictors, achieving a ROC-AUC of 0.862 and an F1-score of 0.55 on a stratified 20% hold-out.",
+    "num: The model surpasses the logistic regression and XGBoost baselines by 9% and 4% ROC-AUC, respectively.",
+    "num: Ablation analysis reveals that the consensus feature selection contributes 57 percent of the total accuracy gain, while the 1D-CNN architecture contributes an additional 38 percent.",
+    "num: Fairness assessment shows disparate-impact and equal-opportunity gaps below 5 percent across gender and age cohorts, aligning with emerging EU AI Act thresholds.",
+    "num: End-to-end inference averages 18 milliseconds on CPU-only hardware, confirming real-time viability.",
+    "num: Class weighting achieved the highest overall F1-score of 0.72 for imbalance handling, outperforming SMOTE and baseline.",
+    "The 1D-CNN model demonstrated stable training with fast convergence by epoch 5 and avoided overfitting as indicated by validation accuracy remaining higher than training accuracy.",
+    "SHAP summary plots identified age, MonthlyIncome, and NumberOfTimes90DaysLate as the most influential features, with younger applicants showing higher SHAP contributions toward default.",
+    "The feature-selection ensemble produced a compact subset of five predictors: age, MonthlyIncome, DebtRatio, NumberOfTimes90DaysLate, and RevolvingUtilizationOfUnsecuredLines.",
+    "Calibration evaluation revealed slight overconfidence in higher probability bins, highlighting the importance of calibration analysis alongside accuracy measures."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Overall framework of proposed pipeline → Ensemble feature selection and 1D-CNN classification workflow.",
+    "Figure 2: Pipeline flowchart → Complete lifecycle from data preprocessing to SHAP-based interpretability and decision storage.",
+    "Figure 3: Distribution of Revolving Utilization Of Unsecured Lines → Highly skewed feature requiring capping or log transformation.",
+    "Figure 4: Age distribution stratified by default status → Defaulters tend to be younger with wider spread.",
+    "Figure 5: Debt ratio distribution across default classes → Long tail of extreme values requiring outlier treatment.",
+    "Figure 6: Missing value distribution per feature → MonthlyIncome has up to 30,000 missing values.",
+    "Figure 13: Agreement matrix across VarianceThreshold, RFE, and XGBoost → Features selected by at least two methods were retained.",
+    "Figure 14: Correlation heatmap of input features → Strong multicollinearity among delinquency-related variables (correlation > 0.98).",
+    "Figure 15: Comparison of imbalance handling techniques → Class weighting provided the most balanced performance with F1-score of 0.72.",
+    "Figure 22: Reliability diagram of proposed CNN model → Slight overconfidence in higher probability bins."
+  ],
+  "key_equations": [
+    {
+      "equation": "D = \\{(x_i, y_i)\\}_{i=1}^N, \\ x_i \\in \\mathbb{R}^d, \\ y_i \\in \\{0, 1\\}",
+      "explanation": "Dataset definition with feature vectors and binary labels."
+    },
+    {
+      "equation": "\\hat{p}_i = P_\\theta(y_i = 1 | x_i)",
+      "explanation": "Predicted probability of default given borrower features."
+    },
+    {
+      "equation": "\\text{Decision} = \\begin{cases} \\text{Reject} & \\text{if } \\hat{p}_i > \\tau \\\\ \\text{Approve} & \\text{otherwise} \\end{cases}, \\quad \\tau = 0.5",
+      "explanation": "Threshold-based loan approval decision rule."
+    },
+    {
+      "equation": "\\text{Precision} = \\frac{TP}{TP + FP}",
+      "explanation": "Precision metric for classification performance."
+    },
+    {
+      "equation": "\\text{Recall} = \\frac{TP}{TP + FN}",
+      "explanation": "Recall metric for classification performance."
+    },
+    {
+      "equation": "\\text{F1-Score} = 2 \\cdot \\frac{\\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}",
+      "explanation": "F1-score metric balancing precision and recall."
+    },
+    {
+      "equation": "\\begin{bmatrix} TP & FN \\\\ FP & TN \\end{bmatrix}",
+      "explanation": "Confusion matrix of classification results."
+    }
+  ],
+  "definitions": [
+    { "term": "1D-CNN", "definition": "One-dimensional Convolutional Neural Network optimized for tabular data." },
+    { "term": "RFE", "definition": "Recursive Feature Elimination, a wrapper method for feature selection." },
+    { "term": "XGBoost", "definition": "Extreme Gradient Boosting, a scalable tree boosting system." },
+    { "term": "SHAP", "definition": "SHapley Additive exPlanations, a game-theoretic approach for model interpretability." },
+    { "term": "ROC-AUC", "definition": "Receiver Operating Characteristic - Area Under the Curve, a measure of classification performance." },
+    { "term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique for handling class imbalance." },
+    { "term": "ECE", "definition": "Expected Calibration Error, a measure of probability calibration quality." }
+  ],
+  "citations": [
+    {
+      "author": "Louzada",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit scoring classification methods: systematic review and overall comparison.",
+      "role": "context"
+    },
+    {
+      "author": "He",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Learning from imbalanced data presents challenges for classification.",
+      "role": "context"
+    },
+    {
+      "author": "Rudin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Argues for interpretable models over explaining black box models for high-stakes decisions.",
+      "role": "critique"
+    },
+    {
+      "author": "Sculley",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hidden technical debt in machine learning systems.",
+      "role": "context"
+    },
+    {
+      "author": "Guyon",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduction to variable and feature selection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XGBoost: A scalable tree boosting system.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep convolutional neural networks for credit scoring.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A unified approach to interpreting model predictions using SHAP.",
+      "role": "methodology"
+    },
+    {
+      "author": "Saeys",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review of feature selection techniques in bioinformatics.",
+      "role": "context"
+    },
+    {
+      "author": "Lessmann",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Benchmarking state-of-the-art classification algorithms for credit scoring.",
+      "role": "baseline"
+    },
+    {
+      "author": "Nguyen",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Benchmarking lightweight 1D-CNN and TabNet for loan default prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lopez",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Feature selection in credit scoring using hybrid RFE and XGBoost.",
+      "role": "baseline"
+    },
+    {
+      "author": "Albanesi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit risk and consumer payment behavior using deep learning models.",
+      "role": "finding"
+    },
+    {
+      "author": "Baylor",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning lifecycle management with experiment tracking and versioning.",
+      "role": "context"
+    },
+    {
+      "author": "Feurer",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Auto-sklearn: Efficient and robust automated machine learning.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on loan-default prediction using a 1D-CNN model."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "1D-CNN processes ordered feature vectors as sequences, capturing local dependencies."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Credit risk context provides domain knowledge applicable to budgeting strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Approach could inform budget recommendation, but not directly addressed."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "Threshold-based decision making shares conceptual similarity with constrained optimization."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "low",
+        "justification": "Not directly addressed, but feature selection methodology could be relevant."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Default prediction involves identifying anomalous high-risk borrowers."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "1D-CNN and SHAP used for anomaly detection in credit risk."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Not directly addressed, but class weighting addresses data sparsity."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Comprehensive evaluation with ROC-AUC, F1-score, precision, recall, and calibration metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Ablation analysis separately evaluates feature selection and model architecture contributions."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Evaluation methodology could be adapted to budget recommendation systems."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "contextual",
+        "justification": "Not used, but mentioned as future work direction."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "high",
+        "justification": "System-level profiling and CPU deployment feasibility explicitly addressed."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "medium",
+        "justification": "CPU-only inference performance measured, relevant to on-device deployment."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a fully integrated, reproducible pipeline for credit-risk prediction that addresses the gap between accurate deep learning models and practical regulatory requirements. It demonstrates that a lightweight 1D-CNN with ensemble feature selection can achieve competitive ROC-AUC while maintaining CPU-level inference speed. The work provides a comprehensive evaluation framework that includes both predictive performance metrics and operational profiling, establishing a blueprint for deployable credit-scoring systems. The embedded SHAP explanations during inference offer a novel integration of interpretability directly into the scoring loop, satisfying regulatory transparency demands. The ablation analysis provides valuable insights into the relative contributions of feature selection and architecture design, guiding future research in financial machine learning.",
+    "directly_justifies": [
+      "A three-way consensus feature-selection ensemble reduces redundancy and improves model generalization.",
+      "Lightweight 1D-CNN achieves competitive ROC-AUC while remaining efficient for CPU-based deployment.",
+      "Embedded SHAP explanations enable local decision justifications required for compliant lending systems.",
+      "System-level profiling provides actionable insights for validating deployment feasibility.",
+      "Consensus feature selection contributes 57 percent of total accuracy gain."
+    ],
+    "limits": [
+      "Validation was performed on a single public dataset (GiveMeSomeCredit), limiting generalizability to other populations.",
+      "Fairness analyses were outside the scope, though initial assessment showed gaps below 5 percent.",
+      "Online drift handling was not explored, limiting applicability to streaming data scenarios.",
+      "Concurrent load testing under real-world production conditions was not performed."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains identified high relevance for predictive modeling (6.A) and evaluation frameworks (12.A, 12.B), as the paper's core contribution is a novel 1D-CNN pipeline with comprehensive performance assessment. The paper provides medium relevance to forecasting algorithms (6.B) and anomaly detection (8.A, 8.B) through its sequence-based processing and default identification. ML deployment topics (14.B, 14.C) received high and medium relevance due to the explicit CPU profiling and inference latency measurements. Budget-related topics (7.A-E) were assessed as contextual or low relevance, as the paper focuses on credit risk rather than budget management, though the methodological approaches could be transferred. Topics related to Filipino demographics, cultural practices, and user-declared preferences (1.A-2.D) were rejected as the dataset is international and focuses on objective credit bureau data. The paper's primary contribution lies in algorithmic methodology for financial prediction with practical deployment considerations, making the algorithmic-specific designation most appropriate."
+  },
+  "limitations": [
+    "Recall was modest for the minority class, indicating opportunities for improved sampling or threshold tuning [unacknowledged].",
+    "Validation was performed on a single public dataset (GiveMeSomeCredit), limiting generalizability.",
+    "Fairness analyses were outside the scope, though initial assessment showed gaps below 5 percent.",
+    "Online drift handling was not explored, limiting applicability to streaming data scenarios.",
+    "Concurrent load testing under real-world production conditions was not performed [unacknowledged]."
+  ],
+  "remember_this": [
+    "The 1D-CNN pipeline achieved a ROC-AUC of 0.862 on credit default prediction.",
+    "Ensemble feature selection contributed 57% of total accuracy gain, architecture contributed 38%.",
+    "Inference averages 18 milliseconds on CPU-only hardware, enabling real-time deployment.",
+    "SHAP explanations embedded in inference provide both global rankings and per-applicant justifications.",
+    "Class weighting achieved a balanced F1-score of 0.72 for handling severe class imbalance."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li & Li_marked.md",
+      "converted_at": "2026-07-21T13:58:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

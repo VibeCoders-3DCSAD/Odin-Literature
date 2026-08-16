@@ -1,0 +1,112 @@
+{
+  "paper_id": "a2ed3794-1551-564a-a191-45f0638bd9d8",
+  "designation": "local",
+  "title": "Behavioral and Psychological Drivers of Sustainable Saving and Financial Resilience among Community Households",
+  "authors": "Erno, G. Y. L.; Grefalde, J. Q.",
+  "year": 2026,
+  "venue": "Journal of Daoist Studies",
+  "odin_topics": [
+    "2.A",
+    "7.A",
+    "13.A",
+    "1.C"
+  ],
+  "tldr": "Community households in Surigao del Sur show strong debt management but weak budgeting, saving, and investment practices, resulting in low financial resilience.",
+  "problem_and_motivation": "Sustainable saving behavior and financial capability are critical for household resilience, yet resource-constrained community settings face unique behavioral and psychological barriers.",
+  "approach": [
+    "Quantitative descriptive design with 300 household financial decision-makers across barangays in Tago, Surigao del Sur, Philippines.",
+    "Structured survey measuring financial capability domains (budgeting, saving, debt, investment) and resilience indicators.",
+    "Anchored in social cognitive theory and behavioral economics.",
+    "Analyzes risk perception, decision fatigue, self-control, and emotional management."
+  ],
+  "findings": [
+    "Overall financial capability mean of 2.76 indicates partial capability development with significant asymmetry.",
+    "Budgeting domain mean of 2.35 indicates weak systematic financial planning.",
+    "Saving domain mean of 2.44 reveals limited institutionalized saving behavior.",
+    "Strong debt management with prudent borrowing and repayment discipline.",
+    "Overall financial resilience level was low."
+  ],
+  "key_figures_tables": [
+    "Table 1: Financial capability across four domains → Asymmetric with debt strength, budgeting weakness.",
+    "Table 2: Financial resilience level → Low overall resilience reflecting capability gaps."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Resilience",
+      "definition": "Ability to absorb financial shocks, manage unexpected expenses, and recover from financial disruptions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Philippines-specific community household financial practices documented."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Detailed findings on budgeting practices in community households."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Examines sustainable saving behavior and its determinants."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Studies financial behavior of Filipino households."
+      }
+    ],
+    "contribution_to_field": "Provides empirical evidence of asymmetric financial capability in Philippine community households. Shows financial resilience requires balanced integration across all capability domains, not just isolated strengths.",
+    "directly_justifies": [
+      "Households demonstrate strong debt discipline but weak forward-looking planning.",
+      "Financial resilience requires balanced integration across all domains."
+    ],
+    "limits": [
+      "Single municipality study limits geographic generalizability.",
+      "Cross-sectional design limits causal claims."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 2.A, 7.A, 13.A (high), 1.C (medium). Rejected algorithmic topics."
+  },
+  "limitations": [
+    "Single municipality (Tago, Surigao del Sur) limits generalizability.",
+    "Cross-sectional design captures point-in-time behaviors only.",
+    "Self-reported data may introduce response bias."
+  ],
+  "remember_this": [
+    "Strong debt discipline masks weak budgeting and saving practices.",
+    "Overall financial capability is moderate (2.76/5) with significant asymmetry.",
+    "Financial resilience requires balanced capability across all domains."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Erno & Grefalde_marked.md",
+      "converted_at": "2026-07-22T13:15:33Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

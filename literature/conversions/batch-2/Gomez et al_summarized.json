@@ -1,0 +1,71 @@
+{
+  "paper_id": "10.1016/j.jretconser.gomez",
+  "designation": "local-algorithm-specific",
+  "title": "Modeling Personality Traits by Predicting Questionnaire Responses as an Alternative Approach to Filipino Automatic Personality Recognition",
+  "authors": "Gomez, A. P. I.; Kahil, I. D.; Ong, S. V. N.; Tighe, E. P.",
+  "year": 2025,
+  "venue": "De La Salle University, Manila",
+  "odin_topics": ["5.C"],
+  "tldr": "Explores Filipino APR by predicting individual BFI questionnaire responses from Twitter text, then aggregating to estimate Extraversion and Conscientiousness trait scores.",
+  "problem_and_motivation": "Direct personality trait modeling from social media text yields subpar results. An alternative item-based approach predicting individual questionnaire responses may improve accuracy but requires validation.",
+  "approach": [
+    "Used PagkataoKo dataset of 2,168 Filipino X (formerly Twitter) users with BFI responses.",
+    "Trained logistic regression, SVM, and XGBoost models on TF-IDF and term occurrence features.",
+    "Predicted individual BFI item responses for Extraversion and Conscientiousness.",
+    "Aggregated item predictions to estimate overall trait scores.",
+    "Experimental parameters included n-gram range, feature reduction (chi-square, PCA), and model configurations."
+  ],
+  "findings": [
+    "Item-level prediction shows some improvement over direct trait modeling for Conscientiousness.",
+    "Overall trait-level performance remains lacking for both Extraversion and Conscientiousness.",
+    "Hierarchical classification scheme improved Conscientiousness prediction.",
+    "Significant improvements needed before item-based framework is viable for APR."
+  ],
+  "key_figures_tables": [
+    "Table 1: Demographic statistics across dataset subsets."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "APR", "definition": "Automatic Personality Recognition from text data."},
+    {"term": "BFI", "definition": "Big Five Inventory personality questionnaire."},
+    {"term": "TF-IDF", "definition": "Term Frequency-Inverse Document Frequency for text features."}
+  ],
+  "citations": [
+    {"author": "Tighe et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Curated PagkataoKo dataset for Filipino personality research.", "role": "methodology"},
+    {"author": "Mushtaq & Kumar", "year": 2022, "page": 0, "paragraph": 0, "claim": "Personality recognition using social media and NLP.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "ML classification for personality profiling methodology."}
+    ],
+    "contribution_to_field": "Explores item-response prediction as alternative to direct trait modeling for APR. Provides benchmark results for Filipino personality recognition using social media text. Identifies performance gaps requiring future improvement.",
+    "directly_justifies": [
+      "Item-level prediction approach shows limited improvement for Filipino APR.",
+      "Conscientiousness sees better results than Extraversion with hierarchical approach."
+    ],
+    "limits": [
+      "Limited to two BFI dimensions; other personality traits not explored."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.C medium for classification methodology. Rejected financial topics as paper focuses on personality recognition, not finance."
+  },
+  "limitations": [
+    "Only Extraversion and Conscientiousness tested.",
+    "Model performance insufficient for production APR use.",
+    "Twitter data may not generalize to other social media platforms."
+  ],
+  "remember_this": [
+    "Item-response prediction approach shows limited APR improvement.",
+    "Hierarchical classification helps Conscientiousness prediction.",
+    "Significant performance gaps remain for Filipino APR.",
+    "Logistic regression, SVM, and XGBoost tested with TF-IDF features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gomez et al_marked.md",
+      "converted_at": "2026-07-22T13:26:23Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

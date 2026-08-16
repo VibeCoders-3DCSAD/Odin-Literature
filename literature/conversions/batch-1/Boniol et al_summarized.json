@@ -1,0 +1,103 @@
+{
+  "paper_id": "8a6027d2-796e-5a16-91f9-9fd70595e953",
+  "designation": "international",
+  "title": "Dive into Time-Series Anomaly Detection: A Decade Review",
+  "authors": "Boniol, P.; Liu, Q.; Huang, M.; Palpanas, T.; Paparrizos, J.",
+  "year": 2024,
+  "venue": "ACM Conference Proceedings",
+  "odin_topics": ["8.A", "8.B", "8.C", "6.A", "6.B", "12.A", "12.B", "4.A", "4.B"],
+  "tldr": "Comprehensive survey of time-series anomaly detection methods organized under a process-centric taxonomy spanning distance-based, density-based, and prediction-based approaches, with a meta-analysis of a decade of research trends.",
+  "problem_and_motivation": "Time-series anomaly detection lacks a unified, process-centric taxonomy that groups methods by their detection mechanism rather than by application domain. Existing surveys focus on general-purpose anomaly detection and only briefly review time-series-specific methods. Disconnected research communities evaluate methods on different datasets and baselines, making cross-community comparison virtually impossible.",
+  "approach": [
+    "Proposed a three-level process-centric taxonomy grouping all time-series anomaly detection methods into distance-based, density-based, and prediction-based families.",
+    "Introduced a four-stage anomaly detection pipeline model (pre-processing, detection, scoring, post-processing) to unify the comparison of methods.",
+    "Classified methods along dimensions of univariate vs. multivariate, and unsupervised vs. semi-supervised vs. supervised.",
+    "Conducted a meta-analysis of the literature from 1990 to 2023 tracking publication trends across method categories.",
+    "Reviewed eight major benchmarks (NAB, Yahoo, Exathlon, KDD21, TODS, TimeEval, TSB-UAD, TSB-AD) for evaluation.",
+    "Analyzed threshold-based and threshold-independent evaluation measures including AUC-ROC, AUC-PR, Range-AUC, and VUS.",
+    "Described over 80 individual algorithms with formal definitions of key concepts such as discord, matrix profile, and LOF."
+  ],
+  "findings": [
+    "num: The number of proposed anomaly detection methods increased significantly after 2016, driven primarily by deep learning approaches.",
+    "num: Between 2020 and 2023, prediction-based methods (LSTM and autoencoder) represented almost 50% of newly introduced methods.",
+    "num: 65% of anomaly detection methods proposed between 1980 and 2000 were unsupervised, whereas only 50% of methods proposed between 2012 and 2018 were unsupervised.",
+    "Most methods proposed before 2016 targeted multivariate time series, but recent interest in sub-sequence detection shifted focus toward univariate methods.",
+    "No single best anomaly detector exists across all datasets; simple time-series classification baselines can improve accuracy by a factor of 2 over the best individual method for model selection.",
+    "TSB-UAD with 14,046 time series and TSB-AD with 1,070 curated datasets are the largest and most comprehensive benchmarks available.",
+    "VUS-ROC is recommended as the most robust, separable, and consistent evaluation metric for time-series anomaly detection.",
+    "Existing benchmarks have known flaws including triviality, unrealistic anomaly density, mislabeled ground truth, and run-to-failure bias.",
+    "The prediction-based anomaly detection pipeline operates under the assumption that normal data are easier to predict than anomalous data."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Three time-series anomaly examples showing why temporal ordering matters",
+    "Figure 4: Four-stage anomaly detection pipeline",
+    "Figure 5: Process-centric taxonomy overview",
+    "Figure 8: Full taxonomy listing all methods by publication date",
+    "Figure 20: Methods proposed per year by category",
+    "Figure 21: Unsupervised vs. semi-supervised and univariate vs. multivariate trends",
+    "Table 4: Summary of eight benchmarks",
+    "Table 2: Summary of density-based methods"
+  ],
+  "key_equations": [
+    {"equation": "A_k(T_{i,\\ell}) = \\inf_{J \\subset I, |J|=k+1} \\text{agg}_{j \\in J} d(T_{i,\\ell}, T_{j,\\ell})", "explanation": "KNN anomaly score aggregating distances to k nearest neighbors."},
+    {"equation": "LOF_k(A) = \\frac{\\sum_{B \\in N_k(A)} lrd_k(B) / |N_k(A)|}{lrd_k(A)}", "explanation": "Local Outlier Factor comparing local reachability densities."},
+    {"equation": "S(x, n) = 2^{\\frac{\\sum_{T_r \\in \\mathbb{T}} h(x, T_r)}{|\\mathbb{T}| c(n)}}", "explanation": "Isolation Forest anomaly score based on average path length."}
+  ],
+  "definitions": [
+    {"term": "Time series", "definition": "An ordered sequence of real-valued data points."},
+    {"term": "Point anomaly", "definition": "A single data point that deviates remarkably from the rest of the data."},
+    {"term": "Contextual anomaly", "definition": "A data point within the normal range globally but abnormal within its local context."},
+    {"term": "Collective anomaly", "definition": "A sequence of points that collectively do not match a previously observed normal pattern."},
+    {"term": "Discord", "definition": "A subsequence whose nearest neighbor distance is the largest among all subsequence nearest neighbor distances."},
+    {"term": "Matrix Profile", "definition": "A metadata time series where each element is the Euclidean distance of a subsequence to its nearest neighbor."},
+    {"term": "LOF", "definition": "Local Outlier Factor, a density-based anomaly score measuring how isolated a point is relative to its local neighborhood."},
+    {"term": "Isolation Forest", "definition": "A tree-based anomaly detector that isolates anomalies using random recursive partitioning."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture with gating mechanisms for learning long-range dependencies."},
+    {"term": "VAE", "definition": "Variational Autoencoder, a generative model that learns a latent representation for reconstruction-based anomaly scoring."},
+    {"term": "VUS", "definition": "Volume Under the Surface, a parameter-free, threshold-independent evaluation measure."},
+    {"term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic curve."},
+    {"term": "DTW", "definition": "Dynamic Time Warping, a distance measure that handles temporal misalignment."},
+    {"term": "ARIMA", "definition": "AutoRegressive Integrated Moving Average, a linear time-series forecasting model."},
+    {"term": "HTM", "definition": "Hierarchical Temporal Memory, a neural architecture based on the Thousand Brains Theory."},
+    {"term": "ESN", "definition": "Echo State Network, a recurrent neural network with a randomly connected hidden reservoir."},
+    {"term": "GRU", "definition": "Gated Recurrent Unit, a simplified RNN gating mechanism."},
+    {"term": "GAN", "definition": "Generative Adversarial Network, a framework with competing generator and discriminator networks."},
+    {"term": "MASS", "definition": "Mueen's ultra-fast Algorithm for Similarity Search, an FFT-based method for computing subsequence distances."},
+    {"term": "SAX", "definition": "Symbolic Aggregate Approximation, a method for discretizing time series into symbolic representations."}
+  ],
+  "citations": [
+    {"author": "Chandola", "year": 2009, "page": 0, "paragraph": 0, "claim": "Anomaly detection is defined as identifying data points that do not conform to expected normality.", "role": "context"},
+    {"author": "Fox", "year": 1972, "page": 0, "paragraph": 0, "claim": "Defined two types of time-series anomalies.", "role": "context"},
+    {"author": "Tsay", "year": 1988, "page": 0, "paragraph": 0, "claim": "Extended anomaly definitions into four types for univariate time series.", "role": "context"},
+    {"author": "Breunig", "year": 2000, "page": 0, "paragraph": 0, "claim": "Introduced Local Outlier Factor measuring degree of outlierness based on local neighborhood density.", "role": "methodology"},
+    {"author": "Liu", "year": 2008, "page": 0, "paragraph": 0, "claim": "Proposed Isolation Forest isolating anomalies using random recursive partitioning.", "role": "methodology"},
+    {"author": "Keogh", "year": 2005, "page": 0, "paragraph": 0, "claim": "Introduced Hot SAX algorithm for efficient discord discovery.", "role": "methodology"},
+    {"author": "Yeh", "year": 2016, "page": 0, "paragraph": 0, "claim": "Introduced the Matrix Profile as a metadata structure.", "role": "methodology"},
+    {"author": "Hochreiter", "year": 1997, "page": 0, "paragraph": 0, "claim": "Introduced LSTM networks with gating mechanisms.", "role": "methodology"},
+    {"author": "Malhotra", "year": 2015, "page": 0, "paragraph": 0, "claim": "Demonstrated LSTM-based encoder-decoder approach for multi-sensor anomaly detection.", "role": "methodology"},
+    {"author": "Goodfellow", "year": 2014, "page": 0, "paragraph": 0, "claim": "Introduced Generative Adversarial Networks.", "role": "methodology"},
+    {"author": "Wu", "year": 2023, "page": 0, "paragraph": 0, "claim": "Identified four common flaws in existing benchmarks.", "role": "critique"},
+    {"author": "Paparrizos", "year": 2022, "page": 0, "paragraph": 0, "claim": "Proposed VUS as a parameter-free, threshold-independent evaluation measure.", "role": "methodology"},
+    {"author": "Kim", "year": 2022, "page": 0, "paragraph": 0, "claim": "Demonstrated that point-adjusted metrics have high likelihood of overestimating detection performance.", "role": "critique"},
+    {"author": "Sylligardos", "year": 2023, "page": 0, "paragraph": 0, "claim": "Showed that simple time-series classification baselines for model selection can improve accuracy by a factor of 2.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Core survey of time-series anomaly detection methods directly applicable to financial spending data."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Comprehensive taxonomy of over 80 anomaly detection algorithms."},
+      {"code": "8.C", "name": "Cold-Start Baseline Strategies for Anomaly Detection", "relevance": "medium", "justification": "Discusses unsupervised methods as baseline strategies when no labeled anomalies are available."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Covers prediction-based methods including LSTM, ARIMA, and autoencoders."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "medium", "justification": "Describes forecasting-based anomaly detection using exponential smoothing, LSTM, GRU, and ESN."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "medium", "justification": "Reviews eight benchmarks and evaluation protocols."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Analyzes threshold-based and threshold-independent metrics including AUC-ROC, Range-AUC, and VUS."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "low", "justification": "Provides landscape overview of anomaly detection methods."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "low", "justification": "Identifies gaps including no universal best method and benchmark flaws."}
+    ],
+    "contribution_to_field": "This survey provides the first comprehensive process-centric taxonomy of time-series anomaly detection methods, organizing over 80 algorithms into distance-based, density-based, and prediction-based families. The meta-analysis reveals that deep learning methods have dominated since 2016. The paper also reviews eight benchmarks and evaluation metrics, recommending VUS-ROC as the most robust measure.",
+    "directly_justifies": ["Process-centric taxonomy groups anomaly detection into distance-based, density-based, and prediction-based families.", "Prediction-based methods dominate post-2016 publications at nearly 50% of new methods.", "No single anomaly detector works best across all datasets.", "VUS-ROC is recommended as the most robust evaluation metric."],
+    "limits": ["Focuses on general time-series anomaly detection, not specifically financial data.", "No agreed-upon standard benchmark exists across the community."]
+  },
+  "limitations": ["Survey is descriptive without empirical comparison across methods.", "Taxonomy categories are not mutually exclusive.", "No financial datasets used in evaluation benchmarks reviewed.", "No single agreed-upon benchmark exists."],
+  "remember_this": ["Process-centric taxonomy organizes all time-series anomaly detection into distance-based, density-based, and prediction-based families.", "Prediction-based methods represented nearly 50% of new methods between 2020 and 2023.", "No single anomaly detector works best across all datasets.", "VUS-ROC is recommended as the most robust evaluation metric.", "Existing benchmarks contain known flaws including triviality and mislabeled ground truth."],
+  "summarization_metadata": {"summarized_at": "2026-07-23T00:00:00Z", "summarizer_model": "opencode/big-pickle", "conversion_reference": {"file": "Boniol et al_marked.md", "converted_at": "2026-07-22T12:23:39Z", "converter_tool": "markitdown"}}
+}

@@ -1,0 +1,167 @@
+{
+  "paper_id": "10.1051/bioconf/20249305010",
+  "designation": "local",
+  "title": "Decoding the eco-financial mindset: financial literacy, attitudes, and efficacy measures and the spending behavior of Filipino millennials",
+  "authors": "Lim, C.T.; Cordova, W.",
+  "year": 2024,
+  "venue": "BIO Web of Conferences",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.D", "3.A", "5.A", "13.A", "13.B"],
+  "tldr": "Financial literacy, attitude, and efficacy are positively interrelated, but only financial attitude shows a significant negative correlation with spending behavior among Filipino millennials.",
+  "problem_and_motivation": "Millennials face financial vulnerability due to economic uncertainties and a perceived lack of financial acumen. Existing literature often examines financial literacy, attitude, and efficacy in isolation, leaving a gap in understanding their collective influence on spending behavior. This study addresses that gap by comprehensively exploring these interrelated factors in the context of Filipino millennials.",
+  "approach": [
+    "A quantitative survey was administered to 431 millennials in Laguna, Philippines, via Google Forms.",
+    "Data collection measured financial literacy, attitude, efficacy, and detailed spending patterns using Likert scales and percentage-based questions.",
+    "Structural Equation Modeling (SEM) and Confirmatory Factor Analysis (CFA) were used for data analysis.",
+    "The study employed Cronbach's alpha to assess internal consistency and VIF to check for multicollinearity.",
+    "The theoretical framework was based on the Theory of Planned Behavior (TPB)."
+  ],
+  "findings": [
+    "Strong positive correlations exist among financial literacy, attitude, and efficacy (e.g., β=0.6136, p<.001 between efficacy and literacy).",
+    "A significant negative association was found between spending behavior and financial attitude (b = -0.02963, β = -0.1759, p = 0.034).",
+    "Relationships between spending and financial literacy (p = 0.477) and spending and financial efficacy (p = 0.292) were not statistically significant.",
+    "num: 42% of respondents reported spending 41% or more of their income.",
+    "num: 77.5% of respondents allocate 10% or less of their income to groceries.",
+    "num: 93.7% of respondents spend 10% or less of their income on beer and wine.",
+    "Cronbach's alpha values were 0.971 for financial literacy, 0.863 for attitude, 0.858 for efficacy, and 0.656 for spending constructs.",
+    "RMSEA values from CFA ranged from 0.092 to 0.163, suggesting a reasonable model fit.",
+    "Correlation analysis showed a strong positive relationship between financial attitude and financial efficacy (r = 0.77).",
+    "Correlation analysis showed a weak negative relationship between spending and financial literacy (r = -0.07)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Socio-demographic profile of 431 respondents → Shows a majority male sample with diverse incomes and goals.",
+    "Table 2: List of latent variables → Details constructs measured for financial literacy, attitude, efficacy, and spending.",
+    "Table 3: Frequency table for spending constructs → Reveals variability in total spending and consistency in alcohol spending.",
+    "Table 4: CFA for latent variables → Fit indices like RMSEA and CFI support the model's adequacy.",
+    "Table 5: Parameter estimates of structural paths → Quantifies the strength of relationships between key financial constructs."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "TPB", "definition": "Theory of Planned Behavior, a framework for understanding human behavior based on attitudes, subjective norms, and perceived behavioral control."},
+    {"term": "SEM", "definition": "Structural Equation Modeling, a statistical technique for testing complex relationships between variables."},
+    {"term": "CFA", "definition": "Confirmatory Factor Analysis, a method used to verify the structure of latent variables."},
+    {"term": "RMSEA", "definition": "Root Mean Square Error of Approximation, a measure of model fit in SEM."},
+    {"term": "CFI", "definition": "Comparative Fit Index, a measure of model fit in SEM."},
+    {"term": "AVE", "definition": "Average/Mean, used as a measure of central tendency for Likert scale items."}
+  ],
+  "citations": [
+    {
+      "author": "Ajzen",
+      "year": 1991,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Attitudes, subjective norms, and perceived behavioral control provide a comprehensive framework for understanding human behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Yanto",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Social media's positive portrayals and peer influence fostered millennial students' financial literacy.",
+      "role": "finding"
+    },
+    {
+      "author": "Dewi",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financially literate individuals can ensure their economic security and well-being.",
+      "role": "context"
+    },
+    {
+      "author": "Lim",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial efficacy is linked with acquiring lower debt, fewer financial problems, and higher savings.",
+      "role": "finding"
+    },
+    {
+      "author": "Sotiropoulos",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A high degree of financial attitude prevents millennials' propensity to overspend.",
+      "role": "finding"
+    },
+    {
+      "author": "Rey-Ares",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Self-control in financial decisions is related to a positive financial attitude among millennials.",
+      "role": "finding"
+    },
+    {
+      "author": "Hashim",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "There is a weak association between spending behavior and financial literacy.",
+      "role": "baseline"
+    },
+    {
+      "author": "Murray",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "There is an overall trend of increased alcohol spending among millennials.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Directly studies Filipino millennials (ages 26-42) as the core demographic."},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "medium", "justification": "Provides data on income, spending, and financial goals of the sample."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Core focus on spending behavior and its psychological drivers."},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "medium", "justification": "Investigates the spending behavior of a Filipino demographic with localized data."},
+      {"code": "2.D", "name": "Filipino Spending Cycles and 'Occasions'", "relevance": "contextual", "justification": "Spending patterns are broken down by category, which can be related to 'occasions' but is not the explicit focus."},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "medium", "justification": "The study uses a detailed categorization of spending (e.g., groceries, dining, credit card payments)."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Classifies millennial financial decision-making based on the interplay of literacy, attitude, and efficacy."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "low", "justification": "Financial attitude and efficacy constructs include items related to saving regularly and establishing an emergency fund."},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "low", "justification": "The study examines spending on credit card or loan payments and includes statements about paying bills on time."}
+    ],
+    "contribution_to_field": "This paper contributes to the financial behavior literature by empirically demonstrating the interconnectedness of financial literacy, attitude, and efficacy among Filipino millennials. It uniquely highlights that financial attitude is a more direct predictor of responsible spending than financial literacy or efficacy in this population. The detailed breakdown of categorical spending provides a granular view of millennial expenditure patterns, offering a foundation for targeted financial interventions.",
+    "directly_justifies": [
+      "Financial attitude has a significant negative relationship with spending behavior.",
+      "Financial literacy, attitude, and efficacy are strongly positively correlated.",
+      "There is a notable variability in total spending behaviors among Filipino millennials.",
+      "Millennials show a consistent and low spending pattern on alcohol.",
+      "The relationship between spending and financial literacy is not statistically significant."
+    ],
+    "limits": [
+      "The study is limited to the cities of Laguna, Philippines, which may not be representative of the entire country.",
+      "The reliance on self-reported data may introduce recall and social desirability bias.",
+      "Most respondents work in jobs requiring financial skills, which could skew results.",
+      "The cross-sectional design prevents tracking changes in financial behavior over time."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was performed against the paper's content. Domains related to the financial profile, behavior, and psychological drivers of Filipino young professionals (topics 1.A, 1.B, 1.C) were flagged as highly relevant. The paper's categorization of spending (3.A) and its examination of the interplay between financial attitudes and behavior (5.A) were also key areas of relevance. Culturally specific practices (2.A) and localized spending cycles (2.D) were considered relevant due to the study's focus on the Philippines and its breakdown of spending by category, but the paper does not explicitly focus on seasonal or cyclical patterns, hence 'contextual' for 2.D. Topics concerning computational budgeting, predictive modeling, user experience design, or system evaluation (e.g., 4.A, 6.A, 7.A, 9.A, 12.A) were not covered, as this is a behavioral study using survey data, not a system design or algorithmic paper. Domain 13 topics on savings and debt management were given 'low' relevance as they are constructs measured within the study but are not the central focus."
+  },
+  "limitations": [
+    "The study relies on self-reported data from survey questionnaires, prone to recall and social desirability bias.",
+    "The majority of respondents work in jobs that require financial skills, potentially influencing their financial knowledge. [unacknowledged]",
+    "The study is cross-sectional, offering only a snapshot in time and not tracking changes.",
+    "The geographical scope is limited to cities in Laguna, Philippines, limiting generalizability."
+  ],
+  "remember_this": [
+    "Financial attitude shows a significant inverse relationship with spending behavior.",
+    "Financial literacy and financial efficacy are not direct predictors of spending behavior.",
+    "A large majority of millennials spend 10% or less on groceries.",
+    "Over 40% of millennials spend 41% or more of their total income.",
+    "Financial literacy, attitude, and efficacy are strongly correlated with each other."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Lim & Cordova_marked.md",
+      "converted_at": "2026-07-21T14:02:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

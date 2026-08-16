@@ -1,0 +1,94 @@
+{
+  "paper_id": "01fde784-cb30-5f30-8fae-7cc4eeec864d",
+  "designation": "local",
+  "title": "Understanding Monetary Policy: Student Awareness, Perceptions, and Financial Behaviors in the Philippine Context",
+  "authors": "Atento, R. G.; Espelita, C. A. M.; Rao, L.; Tian, Y.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.A",
+    "1.C"
+  ],
+  "tldr": "Filipino students show moderate monetary policy awareness, positively associated with saving and investment behaviors (R²=.22 and R²=.15) but not spending behavior.",
+  "problem_and_motivation": "Monetary policy awareness affects financial behaviors, but the relationship between knowledge, perceptions, and financial actions in the Philippine student context is underexplored.",
+  "approach": [
+    "Descriptive-correlational survey with 200 respondents across senior high, undergraduate, and graduate levels in Philippine institutions.",
+    "Measures monetary policy awareness, perceptions of effectiveness, and financial behaviors.",
+    "Correlation and regression analysis guided by Theory of Reasoned Action and Theory of Planned Behavior."
+  ],
+  "findings": [
+    "Overall awareness of monetary policy is moderate; graduate and business/economics students show higher understanding.",
+    "Awareness positively associated with saving behavior (r=0.31, p<.001) and investment behavior (r=0.24, p=.001).",
+    "No significant relationship between awareness and spending behavior.",
+    "Awareness and perceptions predict saving (R²=.22) and investment (R²=.15) but not spending (R²=.04)."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Monetary Policy Awareness",
+      "definition": "Understanding of central bank policies regarding inflation, interest rates, and economic stability."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Studies Filipino students as future young professionals."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Directly measures saving, investment, and spending behaviors of Filipino students."
+      }
+    ],
+    "contribution_to_field": "Establishes empirical links between monetary policy awareness and financial behaviors among Filipino students. Confirms knowledge shapes attitudes and influences saving and investment but not spending.",
+    "directly_justifies": [
+      "Monetary policy awareness predicts saving behavior (R²=.22).",
+      "Monetary policy awareness predicts investment behavior (R²=.15)."
+    ],
+    "limits": [
+      "Sample limited to selected Philippine institutions.",
+      "Cross-sectional design limits causal claims."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 1.A, 1.C (high). Rejected algorithmic topics and topic-specific domains as this is a survey-based behavioral economics study."
+  },
+  "limitations": [
+    "Limited to 200 students from selected Philippine institutions.",
+    "Cross-sectional design cannot establish causal relationships. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Monetary policy awareness is moderate among Filipino students.",
+    "Awareness predicts saving and investment but not spending.",
+    "Graduate and business/economics students show higher awareness."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Espelita et-al_marked.md",
+      "converted_at": "2026-07-22T13:16:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

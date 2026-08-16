@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.56734/ajssr.v5n1p15",
+  "designation": "local",
+  "title": "Remittance Management and Its Impact on Household Financial Well-Being: A Qualitative Study of Filipino Overseas Workers' Families",
+  "authors": "Dimaranan, R. B.; Dy, K. A.",
+  "year": 2023,
+  "venue": "Asian Journal of Social Science Research",
+  "odin_topics": ["2.A", "3.B", "12.A", "13.A"],
+  "tldr": "Qualitative study of 24 Filipino OFW families reveals that remittance management follows a three-phase cycle (anticipation, allocation, depletion) with significant financial stress during the depletion phase due to irregular remittance schedules.",
+  "problem_and_motivation": "Filipino Overseas Foreign Workers (OFWs) send substantial remittances (over $35B annually), but there is limited understanding of how recipient families manage these funds and the financial dynamics within the remittance household context.",
+  "approach": [
+    "Qualitative phenomenological study using semi-structured interviews with 24 OFW family financial managers across Luzon, Visayas, and Mindanao.",
+    "Purposeful sampling: families receiving remittances for at least 2 years, diverse OFW destinations and household compositions.",
+    "Interview protocol explored: remittance receipt patterns, allocation decisions, savings practices, financial challenges, coping mechanisms.",
+    "Data analysis: thematic analysis using Braun & Clarke's 6-phase approach with NVivo coding.",
+    "Member checking and peer debriefing for trustworthiness.",
+    "Cross-case analysis by OFW destination, household composition, and remittance regularity."
+  ],
+  "findings": [
+    "Remittance management follows three phases: anticipation (waiting for remittance), allocation (distributing within days of receipt), depletion (scarcity before next remittance).",
+    "Depletion phase lasts 40-60% of the remittance cycle, causing significant financial stress.",
+    "Allocation priorities: household expenses (100%), education (83%), savings (54%), debt repayment (46%), investments (12%).",
+    "Informal savings mechanisms preferred: paluwagan (63%), home savings (50%); only 29% use formal bank savings.",
+    "Remittance irregularity (frequency and amount) is the primary source of financial stress.",
+    "Digital PFMS are used primarily for remittance receipt tracking, not for budgeting or savings management.",
+    "Collective decision-making is common; the family financial manager is usually female (79%).",
+    "Social obligations (fiestas, family events, community contributions) create budget pressure during allocation."
+  ],
+  "key_figures_tables": [
+    "Table 2: Thematic analysis results with representative quotes",
+    "Figure 1: The three-phase remittance management cycle model",
+    "Table 4: Allocation priorities and percentages"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Remittance management cycle", "definition": "The recurring three-phase pattern (anticipation, allocation, depletion) of managing OFW remittances."},
+    {"term": "OFW", "definition": "Overseas Foreign Worker — Filipino citizen working abroad and sending remittances to family in the Philippines."}
+  ],
+  "citations": [
+    {"author": "BSP", "year": 2022, "page": 0, "paragraph": 0, "claim": "OFW remittances reached $36.1B in 2022, accounting for 8.9% of Philippine GDP.", "role": "context"},
+    {"author": "Yang", "year": 2011, "page": 0, "paragraph": 0, "claim": "Remittances smooth consumption but irregularity creates financial vulnerability.", "role": "context"},
+    {"author": "De La Cruz", "year": 2019, "page": 0, "paragraph": 0, "claim": "OFW families show distinct savings patterns compared to non-OFW families.", "role": "comparison"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "2.A", "name": "Cultural Nuances in Financial Decision-Making", "relevance": "high", "justification": "Core focus on unique OFW remittance dynamics and Filipino family financial practices."},
+      {"code": "3.B", "name": "Income Sources and Stability", "relevance": "high", "justification": "OFW remittances as a major income source; irregularity as a key challenge."},
+      {"code": "12.A", "name": "PF Engagement and Usability", "relevance": "medium", "justification": "PFMS usage limited to remittance tracking; implications for engagement design."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Savings practices (mostly informal) and allocation decisions discussed."}
+    ],
+    "contribution_to_field": "Provides the first qualitative model of OFW remittance management (anticipation-allocation-depletion cycle) that has direct implications for PFMS design. The depletion phase lasting 40-60% of the cycle suggests PFMS features for irregular income smoothing, savings commitment during allocation, and predictive alerts during depletion. The preference for informal savings highlights opportunities for PFMS to bridge formal-informal financial services.",
+    "directly_justifies": [
+      "Irregular remittance schedules create a predictable depletion phase causing financial stress.",
+      "OFW families use PFMS primarily for receipt tracking, not budgeting/savings management.",
+      "Allocation decisions prioritize household expenses > education > savings > debt > investments.",
+      "The family financial manager is usually female (79%)."
+    ],
+    "limits": [
+      "Qualitative study with 24 families — not statistically generalizable. [acknowledged]",
+      "Single-country focus limits cross-cultural applicability. [unacknowledged]",
+      "Self-reported allocation may not match actual spending. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 2.A (cultural nuances) and 3.B (income sources) were flagged as highly relevant because the study explores the unique OFW remittance dynamic and irregular income patterns. Domain 12.A was flagged as medium relevance for PFMS usage insights. Domain 13.A was flagged as medium relevance for savings practices. Domains 1, 4-11, 14 were rejected as the study is a qualitative exploration of OFW family financial management without connection to young professionals, ML, or system design."
+  },
+  "limitations": [
+    "Qualitative study with 24 families — not generalizable. [acknowledged]",
+    "Self-reported allocation data. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Remittance cycle: anticipation → allocation → depletion (40-60% of cycle).",
+    "Depletion phase causes significant financial stress due to irregular schedules.",
+    "PFMS used primarily for remittance tracking, not budgeting.",
+    "Allocation priorities: expenses > education > savings > debt > investments.",
+    "79% of financial managers are female.",
+    "Informal savings preferred (paluwagan 63%, home savings 50%)."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:04:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dimaranan & Dy_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

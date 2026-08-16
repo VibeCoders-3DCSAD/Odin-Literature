@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3541878",
+  "designation": "international-algorithm-specific",
+  "title": "A Novel Weighted Loss TabTransformer Integrating Explainable AI for Imbalanced Credit Risk Datasets",
+  "authors": "Hartomo, K. D.; Arthur, C.; Nataliani, Y.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": ["5.C", "7.C", "8.A", "10.A"],
+  "tldr": "Proposes a weighted loss TabTransformer with SHAP-based explainability for imbalanced credit risk assessment, improving accuracy from 86.35% to 89.27% on BISAID and 93% to 95% on German Credit.",
+  "problem_and_motivation": "Credit risk assessment suffers from class imbalance and opaque machine learning models, leading to biased predictions that hinder stakeholder trust. Information asymmetry between lenders and borrowers exacerbates the challenge in developing economies.",
+  "approach": [
+    "Combined TabTransformer architecture with weighted cross-entropy loss to address class imbalance in credit datasets.",
+    "Applied SHAP (SHapley Additive exPlanations) for model interpretability and to identify key predictors.",
+    "Evaluated on two datasets: BISAID (Indonesian MSME credit data) and German Credit (UCI repository).",
+    "Compared against baseline deep learning and tree-based models for predictive performance.",
+    "Integrated fairness mechanisms through weighted loss to mitigate bias against minority class borrowers."
+  ],
+  "findings": [
+    "num: Accuracy improved from 86.35% to 89.27% on BISAID dataset with weighted loss TabTransformer.",
+    "num: Accuracy improved from 93% to 95% on German Credit dataset.",
+    "SHAP analysis revealed Financing Needs and Credit Amount as the most critical predictors.",
+    "Weighted loss enhanced minority class AUC and precision-recall metrics.",
+    "XAI integration provided human-readable explanations for credit decisions."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "TabTransformer", "definition": "Transformer architecture adapted for tabular data"},
+    {"term": "SHAP", "definition": "SHapley Additive exPlanations, an XAI method"},
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence"},
+    {"term": "MSME", "definition": "Micro, Small, and Medium Enterprises"}
+  ],
+  "citations": [
+    {"author": "Reference 15", "year": 0, "page": 0, "paragraph": 0, "claim": "Conventional ML models are black boxes lacking interpretability.", "role": "context"},
+    {"author": "Reference 40", "year": 0, "page": 0, "paragraph": 0, "claim": "TabTransformer outperforms state-of-the-art deep learning on tabular data by 1.0% mean AUC.", "role": "methodology"},
+    {"author": "Reference 36", "year": 2017, "page": 0, "paragraph": 0, "claim": "Introduced Transformer architecture with self-attention mechanisms.", "role": "methodology"},
+    {"author": "Reference 41", "year": 0, "page": 0, "paragraph": 0, "claim": "Weighted loss functions allocate higher penalties to minority classes.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "Credit risk classification methodology maps to financial profile classification."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "low", "justification": "Weighted loss optimization shares conceptual overlap with constrained resource allocation."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "low", "justification": "Detecting credit default risk shares characteristics with financial anomaly detection."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "contextual", "justification": "XAI for transparency indirectly relates to trust in financial systems."}
+    ],
+    "contribution_to_field": "This paper demonstrates that combining TabTransformer with weighted loss effectively addresses class imbalance in credit risk assessment while preserving interpretability through SHAP. It provides an empirical comparison showing accuracy improvements of 2-3 percentage points on two standard datasets. The work advances the application of explainable deep learning to financial decision-making in developing economy contexts.",
+    "directly_justifies": [
+      "Weighted loss TabTransformer improves credit risk accuracy by 2-3 percentage points.",
+      "SHAP provides interpretable explanations for credit decisions.",
+      "Financing Needs and Credit Amount are the most critical predictors of credit risk."
+    ],
+    "limits": [
+      "Evaluation on only two datasets limits generalizability across financial contexts.",
+      "No comparison with tree-based ensemble methods like XGBoost or LightGBM.",
+      "Indonesian MSME focus may not transfer to Philippine or other markets."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 5 (Classification of Profiles) was flagged as medium relevance because credit risk classification relates to financial profile classification. Domain 7 (Budgeting) and Domain 8 (Anomaly Detection) received low relevance as the weighted loss and risk assessment concepts are tangential. Domain 10 (Privacy) received contextual relevance due to XAI transparency considerations. All other domains were rejected."
+  },
+  "limitations": [
+    "Evaluation on only two datasets limits generalizability to other credit contexts.",
+    "No real-world deployment validation of the proposed framework. [unacknowledged]",
+    "SHAP explanations may still be complex for non-expert stakeholders."
+  ],
+  "remember_this": [
+    "Weighted loss TabTransformer improved accuracy by 2-3% on imbalanced credit data.",
+    "SHAP-enabled explainability identifies Financing Needs as top predictor.",
+    "Model addresses both class imbalance and black-box opacity in credit scoring.",
+    "Approach validated on Indonesian MSME and German Credit datasets."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hartomo et al_marked.md",
+      "converted_at": "2026-07-22T13:31:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.1145/3610219",
+  "designation": "international",
+  "title": "Understanding the Role of Human Intuition on Reliance in Human-AI Decision-Making with Explanations",
+  "authors": "Chen, V.; Liao, Q.; Vaughan, J.; Bansal, G.",
+  "year": 2023,
+  "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
+  "odin_topics": ["10.B", "11.A"],
+  "tldr": "Through a think-aloud study, identifies three intuition-driven pathways that decision-makers use to override AI predictions and shows example-based explanations outperform feature-based ones.",
+  "problem_and_motivation": "AI explanations are meant to improve human-AI decision-making but empirical studies show they can increase overreliance on incorrect AI predictions. The role of human intuition in processing explanations is poorly understood.",
+  "approach": [
+    "Conducts a think-aloud mixed-methods study with 26 participants comparing feature-based and example-based explanations.",
+    "Uses two decision tasks: income prediction from tabular data and profession classification from text biographies.",
+    "Identifies three types of intuition through qualitative coding of think-aloud transcripts.",
+    "Measures decision accuracy and reliance rates across explanation types.",
+    "Analyzes post-study interviews for subjective perceptions."
+  ],
+  "findings": [
+    "Three intuition types identified: intuition about outcome, features, and AI limitations.",
+    "Three pathways to override AI: strong outcome disagreement, feature-based reasoning discrediting AI, and recognizing AI unreliability.",
+    "Feature-based explanations did not improve accuracy and increased overreliance on incorrect AI.",
+    "Example-based explanations reduced overreliance and enabled complementary human-AI performance."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence methods for model interpretability"},
+    {"term": "Feature-based explanations", "definition": "Shows feature contribution weights to a model's prediction"},
+    {"term": "Example-based explanations", "definition": "Shows similar instances with the model's prediction and ground truth"},
+    {"term": "Overreliance", "definition": "Tendency to follow AI predictions even when the AI system is wrong"}
+  ],
+  "citations": [
+    {"author": "Lai", "year": 2023, "page": 2, "paragraph": 1, "claim": "Survey of empirical XAI studies for decision support.", "role": "context"},
+    {"author": "Wang", "year": 2021, "page": 2, "paragraph": 2, "claim": "Example-based explanations underperform feature-based for reliance.", "role": "baseline"},
+    {"author": "Bu\u00e7inca", "year": 2021, "page": 5, "paragraph": 1, "claim": "Cognitive forcing functions improve reliance with explanations.", "role": "methodology"},
+    {"author": "Vasconcelos", "year": 2023, "page": 5, "paragraph": 1, "claim": "Cost-benefit framework for cognitive engagement with explanations.", "role": "methodology"},
+    {"author": "Chen", "year": 2023, "page": 5, "paragraph": 2, "claim": "Conceptual framework distinguishing model vs task decision boundaries.", "role": "methodology"},
+    {"author": "Ribeiro", "year": 2016, "page": 3, "paragraph": 2, "claim": "Proposed LIME for local interpretable model-agnostic explanations.", "role": "methodology"},
+    {"author": "Lundberg", "year": 2017, "page": 3, "paragraph": 2, "claim": "Proposed SHAP for unified feature attribution.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Studies how explanations affect human reliance on AI decisions relevant to financial system trust"},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "medium", "justification": "Examines cognitive engagement pathways that determine whether users follow or override AI recommendations"}
+    ],
+    "contribution_to_field": "This paper provides a grounded understanding of how human intuition interacts with AI explanations in decision-making. It identifies three types of intuition and three pathways to non-reliance, explaining why feature-based explanations cause overreliance while example-based explanations enable complementary performance. The findings inform the design of AI decision-support systems that better accommodate human reasoning processes.",
+    "directly_justifies": [
+      "Feature-based explanations increased overreliance on incorrect AI predictions.",
+      "Example-based explanations enabled human-AI complementary performance.",
+      "Three intuition-driven pathways to non-reliance on AI were identified."
+    ],
+    "limits": [
+      "Small sample size (N=26) limits quantitative generalizability.",
+      "Study tasks (income prediction, profession classification) may not fully represent finance domain complexity.",
+      "Participants recruited from crowdsourcing may not represent domain experts."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topic 10.B (User Trust) was rated medium because the paper studies reliance on AI predictions, which directly relates to user trust in automated financial systems. Topic 11.A (Engagement Dynamics) was rated medium as the study examines cognitive engagement pathways. Topics 1.x-9.x and 12.x-14.x were rejected as the paper is a general HCI study on human-AI interaction not specific to personal finance system design or algorithms."
+  },
+  "limitations": [
+    "Small sample size (N=26) limits statistical power of quantitative results.",
+    "Study participants were crowdsourced workers, not domain experts.",
+    "Tasks may not capture full complexity of financial decision-making contexts."
+  ],
+  "remember_this": [
+    "Three intuition types: outcome, features, and AI limitations.",
+    "Feature-based explanations increased overreliance on wrong AI predictions.",
+    "Example-based explanations enabled complementary human-AI performance.",
+    "Strong outcome intuition led participants to override AI predictions.",
+    "Example-based explanations supported inductive reasoning about features."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Chen V. et al_marked.md",
+      "converted_at": "2026-07-22T12:54:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

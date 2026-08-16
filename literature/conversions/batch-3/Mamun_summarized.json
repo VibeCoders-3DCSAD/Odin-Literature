@@ -1,0 +1,330 @@
+{
+  "paper_id": "10.63125/9b316w70",
+  "designation": "international-algorithm-specific",
+  "title": "Advancements in Machine Learning for Customer Retention: A Systematic Literature Review of Predictive Models and Churn Analysis",
+  "authors": "Mamun, M. N. H.",
+  "year": 2025,
+  "venue": "Journal of Sustainable Development and Policy",
+  "odin_topics": [
+    "5.A",
+    "5.B",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "8.A",
+    "8.B",
+    "10.A",
+    "10.B",
+    "11.A",
+    "12.A",
+    "12.B",
+    "14.A"
+  ],
+  "tldr": "A systematic review and meta-analysis of 112 studies shows ensemble and deep learning models consistently outperform traditional classifiers for customer churn prediction across telecom, banking, e-commerce, and subscription services.",
+  "problem_and_motivation": "Customer churn causes billions in annual revenue loss, yet organizations lack a consolidated understanding of which machine learning techniques perform best across industries. This gap hinders the adoption of accurate, interpretable, and ethically compliant predictive retention systems.",
+  "approach": [
+    "Conducted a systematic literature review and meta-analysis following PRISMA guidelines.",
+    "Searched 6 academic databases (Scopus, Web of Science, IEEE Xplore, ACM Digital Library, ScienceDirect, Google Scholar) using Boolean keyword combinations.",
+    "Screened 1,268 initial articles down to 116 empirical studies meeting inclusion criteria (2005–2025, peer-reviewed, ML applied to churn data with quantitative metrics).",
+    "Coded each study for algorithm type, dataset, evaluation metrics, sample size, industry domain, and publication year.",
+    "Standardized performance metrics (AUC-ROC, F1-score) and treated each model as a separate effect size entry.",
+    "Used R with 'metafor' package for fixed- and random-effects models, Hedges' g, heterogeneity (Q, I²), and subgroup analyses.",
+    "Assessed publication bias with funnel plots, Egger's test, and trim-and-fill procedure.",
+    "Conducted sensitivity analysis with leave-one-out diagnostics and influence plots."
+  ],
+  "findings": [
+    "num: Ensemble models (gradient boosting, random forests) yielded the highest pooled AUC-ROC and F1-scores across datasets.",
+    "num: Deep learning models (RNNs, LSTMs, CNNs) excelled on time-series/behavioral data, reducing false-negative churn predictions by up to 30% relative to static models.",
+    "num: Feature engineering with RFM, lag variables, and temporal aggregations improved lift scores by 8–15 percentage points.",
+    "num: High-performing models consistently exhibited AUC-ROC above 0.80 and F1-scores above 0.70.",
+    "num: Imputation techniques improved lift scores by up to 15% compared to case-wise deletion.",
+    "num: CNN-based detectors reported up to ten-point AUC-ROC gains over gradient boosting when unstructured log data were available.",
+    "num: Deep Feature Synthesis (DFS) delivered lift gains of up to eight percentage points in SaaS churn competitions.",
+    "num: Incorporating network centrality measures in Graph Neural Networks improved churn AUC by capturing peer contagion effects.",
+    "num: SMOTE and cost-sensitive learning significantly improved recall in imbalanced datasets.",
+    "Public datasets (IBM Telco, Orange Telecom, UCI Bank) provided benchmarks with AUC-ROC spreads of 0.75–0.92 for state-of-the-art models."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Theoretical framework for ML-based customer retention → links churn prediction to proactive retention interventions.",
+    "Figure 2: ML-driven churn prediction process pipeline → illustrates data preprocessing, feature engineering, model training, and evaluation workflow.",
+    "Figure 3: ML-driven retention and churn prediction overview → synthesizes key components and their interconnections.",
+    "Figure 4: Customer retention, churn, and their interrelationships → distinguishes voluntary, involuntary, complete, partial, and hidden churn.",
+    "Figure 5: Overall traditional churn prediction models → summarizes logistic regression, discriminant analysis, survival analysis, and decision trees.",
+    "Figure 6: Emergence of ML in retention analytics → contrasts traditional vs. ML approaches and shows timeline of adoption.",
+    "Figure 7: Comprehensive deep learning and advanced techniques framework → covers CNNs, RNNs, LSTMs, attention, GNNs, autoencoders.",
+    "Figure 8: Feature engineering and data preparation strategies → maps preprocessing, RFM, sentiment, and automated feature synthesis.",
+    "Figure 9: Key metrics and validation techniques → illustrates accuracy, precision, recall, F1, AUC-ROC, PR curves, calibration, lift, cross-validation.",
+    "Figure 10: Comparative framework across telecom, finance, e-commerce, and retail → shows sector-specific model preferences and feature sets."
+  ],
+  "key_equations": [
+    {
+      "equation": "CLV = \\sum_{t=1}^{T} \\frac{M_t \\cdot r_t}{(1+d)^t}",
+      "explanation": "Customer lifetime value linking margin, retention rate, and discount factor."
+    }
+  ],
+  "definitions": [
+    { "term": "CLV", "definition": "Customer Lifetime Value, the total worth of a customer to a business over the entire relationship." },
+    { "term": "RFM", "definition": "Recency, Frequency, Monetary value, a framework for customer segmentation and churn prediction." },
+    { "term": "AUC-ROC", "definition": "Area Under the Receiver Operating Characteristic Curve, a metric for classifier discrimination ability." },
+    { "term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique, used to address class imbalance." },
+    { "term": "SHAP", "definition": "SHapley Additive exPlanations, a method for explaining black-box model predictions." },
+    { "term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations, a local surrogate explanation method." },
+    { "term": "XAI", "definition": "Explainable Artificial Intelligence, focusing on model interpretability and transparency." },
+    { "term": "GDPR", "definition": "General Data Protection Regulation, European data privacy and protection regulation." }
+  ],
+  "citations": [
+    {
+      "author": "Zdziebko",
+      "year": 2024,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Customer retention is a key performance indicator reflecting satisfaction, product quality, and service effectiveness.",
+      "role": "context"
+    },
+    {
+      "author": "Darzi",
+      "year": 2018,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Customer churn is defined as the rate at which customers stop doing business with a company.",
+      "role": "context"
+    },
+    {
+      "author": "Sjarif",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Acquiring a new customer can cost five to seven times more than retaining an existing one.",
+      "role": "context"
+    },
+    {
+      "author": "Gattermann-Itschert",
+      "year": 2022,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Predictive analytics applies statistical techniques and ML to historical customer data to forecast future behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Jajam",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 0,
+      "claim": "Feature engineering transforms raw data into informative variables that enhance model predictive power.",
+      "role": "methodology"
+    },
+    {
+      "author": "Singh",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 0,
+      "claim": "Sentiment features from textual data add a qualitative dimension to churn analysis.",
+      "role": "methodology"
+    },
+    {
+      "author": "Joshi",
+      "year": 2019,
+      "page": 4,
+      "paragraph": 0,
+      "claim": "Accuracy can be misleading in imbalanced datasets where the majority class dominates.",
+      "role": "critique"
+    },
+    {
+      "author": "Kaya",
+      "year": 2018,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "In telecom, churn is critical due to high customer acquisition costs and ease of switching providers.",
+      "role": "context"
+    },
+    {
+      "author": "Zhu",
+      "year": 2023,
+      "page": 8,
+      "paragraph": 0,
+      "claim": "The performance gap between logistic regression and advanced models narrowed when proper feature engineering and class imbalance handling were applied.",
+      "role": "finding"
+    },
+    {
+      "author": "Saha",
+      "year": 2024,
+      "page": 11,
+      "paragraph": 0,
+      "claim": "CNNs extract hierarchical abstractions from raw behavioral logs, enabling detection of subtle churn indicators.",
+      "role": "methodology"
+    },
+    {
+      "author": "Khattak",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 1,
+      "claim": "LSTM and GRU architectures achieve superior recall of early-stage churners compared with fixed-window classifiers.",
+      "role": "finding"
+    },
+    {
+      "author": "Bauer",
+      "year": 2023,
+      "page": 20,
+      "paragraph": 0,
+      "claim": "Black-box models lack explicit rules or clear reasoning pathways, making them difficult for stakeholders to validate.",
+      "role": "critique"
+    },
+    {
+      "author": "Caigny",
+      "year": 2024,
+      "page": 20,
+      "paragraph": 0,
+      "claim": "The trade-off between accuracy and transparency remains a central dilemma in AI deployment for customer analytics.",
+      "role": "critique"
+    },
+    {
+      "author": "Bogaert",
+      "year": 2023,
+      "page": 22,
+      "paragraph": 1,
+      "claim": "Core modeling techniques such as decision trees, neural networks, and ensemble methods recur with consistent success across sectors.",
+      "role": "finding"
+    },
+    {
+      "author": "Sikri",
+      "year": 2024,
+      "page": 27,
+      "paragraph": 0,
+      "claim": "Ensemble techniques yield superior predictive accuracy by automatically capturing nonlinear feature interactions without extensive manual feature engineering.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Reviews ML models for classifying customer churn behavior and retention patterns."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "medium",
+        "justification": "Discusses concept drift and dynamic customer behavior, relevant to profile changes."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Extensively compares supervised, unsupervised, and hybrid classification techniques for churn."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus: systematic review of predictive ML models for churn and retention."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Reviews RNNs, LSTMs, and TCNs for temporal customer behavior and sequential data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Mentions retention strategies as cost-effective alternatives to acquisition, but not direct budgeting."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Not directly addressed; focus is on churn prediction, not allocation recommendations."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Autoencoders and unsupervised methods discussed for anomaly detection in churn contexts."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Variational autoencoders and outlier detection methods reviewed for churn warnings."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Discusses GDPR, differential privacy, federated learning, and privacy-preserving churn modeling."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Links model interpretability (XAI, SHAP, LIME) to managerial trust and adoption."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Reviews engagement decline as a churn indicator and proactive retention interventions."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Systematically reviews evaluation metrics (AUC-ROC, F1, lift, calibration) for churn models."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Meta-analysis compares performance of logistic regression, tree ensembles, deep learning, etc."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Mentions generative adversarial networks and variational autoencoders for synthetic churn data."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive, evidence-based synthesis of machine learning techniques for customer churn prediction through a rigorous meta-analysis of 116 empirical studies. It establishes that ensemble methods (gradient boosting, random forests) and deep learning architectures (RNNs, LSTMs, CNNs) consistently outperform traditional statistical models, with quantified performance advantages across multiple industries. The study systematically maps the evolution of churn analytics from traditional regression to advanced representation learning, while identifying critical research gaps in model interpretability, privacy preservation, and cross-sectoral generalizability. By aggregating performance metrics and documenting the impact of feature engineering, data preprocessing, and evaluation frameworks, it offers a foundational reference that bridges academic methodology and practical deployment considerations. The paper also advances the field by highlighting emerging directions such as explainable AI, federated learning, and hybrid architectures, thus guiding future research toward more transparent, adaptable, and ethically compliant retention systems.",
+    "directly_justifies": [
+      "Ensemble learning models consistently outperform traditional classifiers in churn prediction across diverse datasets.",
+      "Deep learning models excel in time-series and behavioral data, reducing false-negative churn predictions by up to 30%.",
+      "Feature engineering with RFM, lag variables, and temporal aggregations improves lift scores by 8–15 percentage points.",
+      "Model interpretability is a critical adoption factor; post-hoc tools like SHAP and LIME increase managerial trust.",
+      "Industry context significantly influences model selection—telecom favors ensembles, banking prioritizes interpretability, e-commerce adopts deep learning."
+    ],
+    "limits": [
+      "Does not provide primary empirical data—findings are aggregated from secondary studies.",
+      "Focuses on general churn prediction; does not address culturally specific financial practices or Filipino-specific contexts.",
+      "Does not evaluate budget recommendation systems or allocation constraints directly."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper directly addresses predictive modeling (6.A), classification approaches (5.C), and evaluation frameworks (12.A, 12.B) as its primary contributions. It provides strong supporting evidence for financial behavioral profiles (5.A), forecasting algorithms (6.B), and data privacy (10.A). Medium relevance was assigned to anomaly detection (8.A, 8.B), user trust (10.B), engagement dynamics (11.A), and synthetic data (14.A) because these are discussed but are not central. Profile dynamics (5.B) was rated medium due to coverage of concept drift. Budgeting topics (7.A, 7.B) were considered but rejected or rated low/contextual because the paper does not address budget allocation or recommendation. The paper has no relevance to Filipino young professionals (1.A–1.C), culturally specific practices (2.A–2.D), expense categorization (3.A–3.C), or mobile-first design (9.A–9.C), which were therefore excluded. The overall coverage is strongly centered on machine learning methodology and evaluation for churn prediction."
+  },
+  "limitations": [
+    "The review relies on published studies, which may overrepresent positive results due to publication bias. [unacknowledged]",
+    "Meta-analysis pooled results across heterogeneous datasets and evaluation protocols, potentially obscuring domain-specific nuances. [unacknowledged]",
+    "The paper does not address real-time deployment challenges or latency constraints of deep learning models. [unacknowledged]",
+    "Self-identified limitation: inconsistent reporting of model calibration across reviewed studies.",
+    "Self-identified limitation: limited availability of longitudinal datasets and underutilization of hybrid models in smaller firms."
+  ],
+  "remember_this": [
+    "Ensemble models (gradient boosting, random forests) consistently achieve the highest AUC-ROC and F1-scores for churn prediction.",
+    "Deep learning reduces false-negative churn predictions by up to 30% compared to static feature models on sequential data.",
+    "Feature engineering with RFM, lagged variables, and sentiment features improves lift scores by 8–15 percentage points.",
+    "Model interpretability is critical—post-hoc tools like SHAP and LIME bridge the gap between accuracy and managerial trust.",
+    "Industry context shapes model selection: telecom favors ensembles, banking prioritizes interpretability, e-commerce adopts deep learning."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mamun_marked.md",
+      "converted_at": "2026-07-21T14:10:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

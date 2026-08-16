@@ -1,0 +1,85 @@
+{
+  "paper_id": "10.62345/jads.2025.14.3.1",
+  "designation": "local",
+  "title": "Inequality, Education and Occupational Change in the Philippines",
+  "authors": "Hassine, N. B.; Fernandez, F. C.; Lavin, B. A.",
+  "year": 2025,
+  "venue": "Journal of Asian Development Studies",
+  "odin_topics": ["1.A", "1.B"],
+  "tldr": "Examines how education levels and occupational structure have shaped wage inequality in the Philippines from 2002 to 2024 using Labor Force Survey data and RIF regressions.",
+  "problem_and_motivation": "Despite sustained economic growth and poverty reduction, inequality in the Philippines remains among the highest in Southeast Asia. The relationship between education, employment structure, and wage inequality over the past two decades in the Philippines remains underexplored.",
+  "approach": [
+    "Analyzed Labor Force Survey (LFS) data from 2002 to 2024 and Family Income and Expenditure Survey (FIES) data.",
+    "Constructed an occupational crosswalk harmonizing PSOC 1992 and PSOC 2012 codes across 22 consistent categories.",
+    "Applied Recentered Influence Function (RIF) regressions following Firpo et al. (2018) methodology.",
+    "Classified occupations into high-skill, middle-skill routine/non-routine, and low-skill categories.",
+    "Focused on employed wage workers aged 15+ to analyze wage distribution dynamics."
+  ],
+  "findings": [
+    "num: Slow expansion of college-educated workers maintained a high wage premium for skilled labor, sustaining inequality.",
+    "num: Returns to college education and high-skill occupations increase monotonically across the wage distribution.",
+    "num: Education gaps account for approximately 30% of the Gini coefficient in 2023.",
+    "num: Wage Gini declined from 40-41% (2002-2012) to 32% by 2024.",
+    "Occupational structure shifted with middle-skilled employment peaking between 2012 and 2016."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Income and Wage Inequality trends 2002-2024 → Shows Gini decline after 2012.",
+    "Figure 2: Density of Log Wages 2002-2024 → More compressed distribution in later years."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "RIF", "definition": "Recentered Influence Function, a regression method for distributional analysis"},
+    {"term": "LFS", "definition": "Labor Force Survey of the Philippine Statistics Authority"},
+    {"term": "FIES", "definition": "Family Income and Expenditure Survey"},
+    {"term": "PSOC", "definition": "Philippine Standard Occupational Classification"},
+    {"term": "Gini coefficient", "definition": "Measure of statistical dispersion representing income inequality"}
+  ],
+  "citations": [
+    {"author": "Autor et al.", "year": 2003, "page": 0, "paragraph": 0, "claim": "Documented job polarization with growth in high- and low-skill occupations.", "role": "methodology"},
+    {"author": "Acemoglu & Autor", "year": 2011, "page": 0, "paragraph": 0, "claim": "Constructed task-based models classifying occupations into skill levels.", "role": "methodology"},
+    {"author": "Firpo et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Employed reweighted RIF regressions to analyze wage distribution changes.", "role": "methodology"},
+    {"author": "Gochoco-Bautista et al.", "year": 2013, "page": 0, "paragraph": 0, "claim": "Reported modest income polarization declines in the Philippines.", "role": "context"},
+    {"author": "Balisacan", "year": 2019, "page": 0, "paragraph": 0, "claim": "Sectoral composition, human capital, and infrastructure drive income variation.", "role": "context"},
+    {"author": "Pernia", "year": 2008, "page": 0, "paragraph": 0, "claim": "International remittances reduce poverty but widen inequality.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "medium", "justification": "Analyzes wage and education dynamics for Philippine workforce including young professionals."},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Directly examines wage structure, income inequality, and returns to education in the Philippines."}
+    ],
+    "contribution_to_field": "This paper provides a comprehensive two-decade analysis of wage inequality in the Philippines, documenting how slow educational expansion maintains high skill premiums. It constructs a harmonized occupational crosswalk enabling consistent longitudinal analysis across PSOC classification changes. The RIF regression approach reveals monotonic increases in returns to education across the wage distribution, explaining persistent inequality despite overall economic growth.",
+    "directly_justifies": [
+      "Slow college-educated worker supply growth maintains high skill wage premiums.",
+      "Education gaps account for 30% of Philippine income inequality in 2023.",
+      "Returns to education increase monotonically across the wage distribution from 2002-2024."
+    ],
+    "limits": [
+      "Focuses on wage workers, excluding self-employed and informal sector.",
+      "Does not directly examine personal financial management or budgeting behavior.",
+      "Macro-level analysis may not capture individual-level financial decision patterns."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 1 (Filipino Young Professionals as a Demographic, Financial Structure) was flagged as the primary relevant domain because the paper analyzes Philippine wage structure and education-driven inequality. All other domains (2-14) were rejected as the paper does not address financial behavior, expense categorization, budgeting, predictive modeling, anomaly detection, mobile UX, or ML serving. Borderline: Domain 1.C (Financial Behavior) was considered but rejected as the focus is wage structure, not individual financial behavior."
+  },
+  "limitations": [
+    "Excludes self-employed and informal sector workers, comprising a large portion of Philippine employment.",
+    "Occupational crosswalk may introduce classification inconsistencies across PSOC versions. [unacknowledged]",
+    "Does not address personal financial management or household budgeting behavior."
+  ],
+  "remember_this": [
+    "Education gaps account for 30% of Philippine income inequality in 2023.",
+    "Slow college graduate supply growth sustains high skill wage premiums.",
+    "Wage Gini declined from 41% (2002-2012) to 32% by 2024.",
+    "Returns to education increase across the wage distribution monotonically."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hassine et al_marked.md",
+      "converted_at": "2026-07-22T13:32:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

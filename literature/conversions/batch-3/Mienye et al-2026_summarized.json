@@ -1,0 +1,297 @@
+{
+  "paper_id": "10.3390/info17040395",
+  "designation": "international",
+  "title": "Deep Learning for Credit Risk Prediction: A Survey of Methods, Applications, and Challenges",
+  "authors": "Mienye, I. D.; Esenogho, E.; Modisane, C.",
+  "year": 2026,
+  "venue": "Information",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.A",
+    "4.B",
+    "5.A",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+ "8.A",
+    "8.B",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.A"
+  ],
+  "tldr": "A comprehensive review of deep learning methods for credit risk prediction, covering MLP, CNN, RNN, transformer, and GNN architectures, and synthesizing applications, challenges, and research directions.",
+  "problem_and_motivation": "Traditional credit risk models struggle to capture nonlinear relationships and temporal dynamics in modern, high-dimensional borrower data. There is a gap in the review literature for a unified, model-family-level synthesis of modern deep learning methods tailored specifically to borrower-level credit risk prediction. This survey addresses that gap by organizing recent DL methods, cataloging applications, and synthesizing deployment-relevant challenges.",
+  "approach": [
+    "Conducted a structured literature search across IEEE Xplore, Scopus, ACM, ScienceDirect, SpringerLink, Web of Science, and Google Scholar for studies from 2015–2025.",
+    "Screened 380 initial records, retaining 140 deep learning application studies and 18 survey papers through a two-stage screening process.",
+    "Organized the review by data modality (tabular, sequential, textual, relational) and model architecture (MLP, CNN, RNN/LSTM/GRU, Transformer, GNN, hybrid).",
+    "Extracted data on credit product segment, prediction target, and reported evaluation metrics for each included study.",
+    "Synthesized findings and challenges to derive a taxonomy linking model families to data structures and credit-risk objectives."
+  ],
+  "findings": [
+    "num: Deep tabular models such as TabNet-Stacking reached an accuracy of 0.979 and AUC of 0.941 on large-scale (≈800,000 cases) credit datasets.",
+    "num: Residual-enhanced BiLSTM with multi-head attention achieved an AUC of 0.982 and F1 of 0.958 on the Freddie Mac Single-Family dataset, outperforming baseline recurrent and CNN models.",
+    "num: LSTM networks reduced MAE from 0.095 to 0.072 and RMSE from 0.119 to 0.093 when forecasting monthly default rates compared to ARIMA, SVM, and ANN.",
+    "num: A multi-head RGAT model on SME relational graphs achieved an AUC of 0.799 and KS of 0.528, demonstrating the predictive power of relational signals.",
+    "num: A large-scale industrial GNN pipeline with 23.4M nodes for supply-chain mining and 8.6M nodes for default prediction achieved an AUC of 0.995 for link mining and 0.701 for loan-default prediction.",
+    "Deep models outperform traditional scorecard and ensemble methods when trained on sufficiently large, temporally representative datasets with rich behavioral and relational information.",
+    "A non-trivial portion of deep credit risk studies still relies on random cross-validation splits, weakening external validity and complicating model comparisons.",
+    "Interpretability and fairness are often treated as add-ons rather than integrated requirements, with few studies optimizing fairness-aware objectives during training.",
+    "Reporting standards are inconsistent, with limited use of temporally valid evaluation, calibration metrics (e.g., Brier score, ECE), and cost-aligned performance reporting.",
+    "Probability calibration is rarely assessed, despite its centrality to decisioning and risk quantification, leading to potentially unstable approval rates and mis-priced credit."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA flowchart of literature search and screening → Summarizes the study selection process resulting in 140 application studies and 18 surveys.",
+    "Table 1: Summary of related reviews on credit risk modelling → Places this survey in the context of existing review literature.",
+    "Table 2: Summary of benchmark datasets commonly used in credit risk prediction → Lists key datasets, sample sizes, feature counts, and descriptions.",
+    "Table 3: Summary of deep learning architectures for credit risk modelling → Provides a comparison of model classes, input modalities, core mechanisms, strengths, and limitations.",
+    "Table 4: Summary of deep learning applications in credit risk prediction → Consolidates peer-reviewed DL applications by modelling focus, reference, year, and methods.",
+    "Table 5: Challenges in deep learning credit risk modelling and aligned research directions → Maps challenges to emerging research directions."
+  ],
+  "key_equations": [
+    {
+      "equation": "EL = PD \\times LGD \\times EAD",
+      "explanation": "Expected loss as a product of PD, LGD, and EAD."
+    },
+    {
+      "equation": "P(y=1 | x) = \\frac{1}{1 + \\exp(-w^\\top x - b)}",
+      "explanation": "Logistic regression model for probability of default."
+    },
+    {
+      "equation": "h^{(l)} = \\phi(W^{(l)} h^{(l-1)} + b^{(l)})",
+      "explanation": "Forward propagation in a multi-layer perceptron."
+    },
+    {
+      "equation": "h_t = \\tanh(W_h h_{t-1} + W_x x_t + b)",
+      "explanation": "RNN hidden state update at time step t."
+    },
+    {
+      "equation": "\\text{Attention}(Q, K, V) = \\text{softmax}(QK^\\top / \\sqrt{d_k}) V",
+      "explanation": "Scaled dot-product attention mechanism."
+    },
+    {
+      "equation": "h_v^{(l+1)} = \\sigma(\\sum_{u \\in N(v)} \\frac{1}{c_{vu}} W^{(l)} h_u^{(l)})",
+      "explanation": "Message passing update rule in a GNN."
+    }
+  ],
+  "definitions": [
+    { "term": "AUC", "definition": "Area under the receiver operating characteristic curve." },
+    { "term": "AUPRC", "definition": "Area under the precision–recall curve." },
+    { "term": "CNN", "definition": "Convolutional neural network." },
+    { "term": "DL", "definition": "Deep learning." },
+    { "term": "EAD", "definition": "Exposure at default." },
+    { "term": "EL", "definition": "Expected loss." },
+    { "term": "GNN", "definition": "Graph neural network." },
+    { "term": "GRU", "definition": "Gated recurrent unit." },
+    { "term": "LGD", "definition": "Loss given default." },
+    { "term": "LR", "definition": "Logistic regression." },
+    { "term": "LSTM", "definition": "Long short-term memory." },
+    { "term": "ML", "definition": "Machine learning." },
+    { "term": "MLP", "definition": "Multi-layer perceptron." },
+    { "term": "MLOps", "definition": "Machine learning operations." },
+    { "term": "PD", "definition": "Probability of default." },
+    { "term": "RNN", "definition": "Recurrent neural network." },
+    { "term": "RWA", "definition": "Risk-weighted asset." },
+    { "term": "SME", "definition": "Small and medium enterprise." },
+    { "term": "TCN", "definition": "Temporal convolutional network." },
+    { "term": "XAI", "definition": "Explainable artificial intelligence." }
+  ],
+  "citations": [
+    {
+      "author": "Rudin",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Post hoc explanation tools may not provide stable, counterfactual-faithful explanations.",
+      "role": "critique"
+    },
+    {
+      "author": "Lessmann",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Small benchmarks create high-variance evaluation regimes where apparent performance differences are unstable.",
+      "role": "context"
+    },
+    {
+      "author": "Hayashi",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Identifies emerging DL techniques for credit scoring but emphasizes tabular models.",
+      "role": "context"
+    },
+    {
+      "author": "Gunnarsson",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Empirical study on when deep learning is beneficial for credit scoring.",
+      "role": "baseline"
+    },
+    {
+      "author": "Guo",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Post hoc methods like Platt scaling and temperature scaling can improve calibration.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hardt",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Equalised odds is a fairness metric rarely integrated into training objectives.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Discusses feature types (demographic, financial) but not specific expense categorization."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Reviews DL models for credit scoring but not expense category design."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Reviews credit scoring systems as a subset of personal finance."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Dedicated section identifies limitations of current credit risk models."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Reviews sequential models that capture behavioral trajectories."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Comprehensive review of predictive DL models for credit risk."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Reviews LSTM, GRU, and TCN for sequential borrower data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Reviews credit risk modeling, not budgeting strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses probability of default but not budget recommendations."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Covers adversarial robustness, a form of anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Mentions adversarial robustness but not specific algorithms for spending anomalies."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses privacy-preserving learning and differential privacy."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Frames interpretability as a factor in trust but does not study user trust."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Dedicated subsection on evaluation integrity and calibration."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Critiques common evaluation practices like reliance on AUC."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Discusses evaluation but not specifically for budget recommendation."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Mentions synthetic data generation for privacy."
+      }
+    ],
+    "contribution_to_field": "This survey provides a unified, modality-aware taxonomy of deep learning methods for credit risk prediction, organizing them by architecture (MLP, CNN, RNN, transformer, GNN) and data structure. It synthesizes peer-reviewed applications across consumer, corporate, and peer-to-peer lending, and critically assesses methodological and operational challenges. The paper derives concrete research directions for developing trustworthy, regulation-ready deep learning solutions, addressing evaluation integrity, fairness, robustness, and governance.",
+    "directly_justifies": [
+      "Deep models outperform traditional scorecard and ensemble methods on large, temporally representative datasets.",
+      "A non-trivial portion of deep credit risk studies relies on random splits, weakening external validity.",
+      "Probability calibration is rarely assessed, despite being central to risk quantification.",
+      "Interpretability and fairness are often treated as add-ons rather than integrated requirements.",
+      "GNNs are most compelling when relational structure is intrinsic to the risk problem."
+    ],
+    "limits": [
+      "The survey is limited to peer-reviewed English-language studies in major databases.",
+      "Does not cover proprietary implementations or regulatory grey literature.",
+      "Does not apply a formal risk-of-bias scoring protocol due to the non-systematic scope."
+    ],
+    "topic_mapping_rationale": "A systematic scan was conducted across all 37 topic codes. The paper is a survey of DL methods for credit risk, so many topics related to specific personal finance features (e.g., Filipino demographics, culturally specific practices, mobile-first design) were deemed irrelevant. Topics in the Predictive Modeling domain were flagged as high relevance, as the paper's core contribution is a review of predictive algorithms. Evaluation Frameworks topics were also high relevance due to a dedicated section on evaluation integrity. Topics related to limitations of existing systems, behavioral profiles, and sequential forecasting were marked medium, as they are discussed but are not the central focus. Privacy and synthetic data topics were marked medium due to mentions in the challenges section. The analysis revealed that the paper is most relevant to topics concerning predictive models and their evaluation, with peripheral relevance to behavioral tracking and system limitations."
+  },
+  "limitations": [
+    "Relies on random cross-validation splits in a non-trivial portion of studies, weakening external validity.",
+    "Probability calibration is rarely assessed, leading to potential unstable approval rates and mis-priced credit.",
+    "Interpretability and fairness are often treated as add-ons rather than integrated training objectives.",
+    "Existing studies seldom incorporate drift-aware retraining or automated change detection. [unacknowledged]",
+    "The marginal benefit of GNNs is limited when relational information is weak or unavailable."
+  ],
+  "remember_this": [
+    "Deep models outperform classical methods on large, temporally representative credit datasets.",
+    "A non-trivial portion of deep credit risk studies still relies on random cross-validation splits.",
+    "Probability calibration is rarely assessed despite being central to risk quantification.",
+    "Interpretability and fairness are often treated as add-ons rather than integrated requirements.",
+    "GNNs are most effective when relational structure is intrinsic to the risk problem."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mienye et al-2026_marked.md",
+      "converted_at": "2026-07-21T14:16:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

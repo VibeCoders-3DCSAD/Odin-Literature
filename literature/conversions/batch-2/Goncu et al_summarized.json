@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.1016/j.bir.2025.100800",
+  "designation": "international-algorithm-specific",
+  "title": "Machine learning for risk profiling: An analysis of pension fund participants",
+  "authors": "Goncu, A.; Kuzubas, T. U.; Saltoglu, B.",
+  "year": 2026,
+  "venue": "Borsa Istanbul Review",
+  "odin_topics": ["5.B", "5.C", "6.A", "7.E", "12.B"],
+  "tldr": "Compares ML models to regulatory benchmark for profiling risk of 81,563 Turkish pension fund participants, finding boosting methods yield modest improvements and 4 variables match full questionnaire performance.",
+  "problem_and_motivation": "Risk profiling in pension systems relies on lengthy questionnaires causing participant friction and low completion rates. ML may identify informative variables and capture nonlinear relationships missed by regulatory scoring.",
+  "approach": [
+    "Analyzed 81,563 participants from a major Turkish pension fund company (2018-2022).",
+    "Compared various ML models (boosting, random forest, SVM, etc.) to the regulatory CMB risk score.",
+    "Used Recursive Feature Elimination (RFE) to identify most informative predictors.",
+    "Evaluated models on predicting actual portfolio risk (continuous measure from fund allocations).",
+    "Tested 4-variable reduced model against full questionnaire models."
+  ],
+  "findings": [
+    "num: Boosting methods yield modest improvements in predictive accuracy relative to regulatory risk score.",
+    "num: All models show modest explanatory power (R-squared 0.13-0.17).",
+    "num: Performance using just 4 variables is comparable to using full questionnaire.",
+    "Self-reported risk attitude and age (nonlinear relationship) are most important predictors.",
+    "Age shows inverted-U relationship with risk-taking, peaking at 35-44 age group.",
+    "ML can enhance risk profiling by identifying informative variables and capturing nonlinearities."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Relationship between age and average portfolio risk (inverted-U pattern).",
+    "Table 1: Demographic characteristics of 81,563 pension participants.",
+    "Table 2: Survey responses and portfolio risk by education, marital status, and gender.",
+    "Table 3: Questionnaire responses and portfolio risk across age categories."
+  ],
+  "key_equations": [
+    {"equation": "sigma_f = sqrt(m/T * sum(r_{f,t} - mean_r)^2)", "explanation": "Fund volatility calculation for portfolio risk score."}
+  ],
+  "definitions": [
+    {"term": "RFE", "definition": "Recursive Feature Elimination for identifying important predictors."},
+    {"term": "CMB", "definition": "Capital Markets Board of Turkiye regulatory body."},
+    {"term": "Portfolio risk", "definition": "Weighted average of fund risk scores based on volatility."},
+    {"term": "Suitability", "definition": "Regulatory mandate to align advice with client risk profiles."}
+  ],
+  "citations": [
+    {"author": "Brayman et al.", "year": 2015, "page": 0, "paragraph": 0, "claim": "Risk assessments often fail to fulfill their intended purpose.", "role": "critique"},
+    {"author": "Bouchey", "year": 2004, "page": 0, "paragraph": 0, "claim": "Questionnaires may not meet psychometric standards.", "role": "critique"},
+    {"author": "Roszkowski & Grable", "year": 2005, "page": 0, "paragraph": 0, "claim": "Questionnaires show limited ability to predict actual investment behavior.", "role": "critique"},
+    {"author": "Reisen et al.", "year": 2024, "page": 0, "paragraph": 0, "claim": "Move toward hybrid and explainable models for regulatory acceptance.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.B", "name": "Profile Dynamics and the Cold-Start Problem", "relevance": "high", "justification": "Risk profiling for new pension participants without extensive history."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Compares ML classification methods for risk profiling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Predictive models for portfolio risk based on questionnaire responses."},
+      {"code": "7.E", "name": "Onboarding and Cold-Start for Budget Recommendation", "relevance": "medium", "justification": "Shortening onboarding questionnaires relates to cold-start budget recommendation."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Rigorous cross-validation comparison of ML vs regulatory benchmark."}
+    ],
+    "contribution_to_field": "Demonstrates ML can enhance regulatory risk profiling by identifying key predictive variables and capturing nonlinear age effects. Shows 4-variable model matches full questionnaire performance, enabling simplified onboarding. Provides empirical evidence that boosting methods modestly outperform regulatory risk scores.",
+    "directly_justifies": [
+      "Boosting methods modestly improve accuracy over regulatory risk score.",
+      "Four variables match performance of full risk questionnaire.",
+      "Self-reported risk attitude and age are strongest predictors.",
+      "Age shows inverted-U relationship with portfolio risk."
+    ],
+    "limits": ["R-squared remains modest (0.13-0.17) across all models."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.B, 5.C, 6.A, 12.B high relevance. Assigned 7.E medium for onboarding. Rejected mobile UX and security topics as paper focuses on ML profiling."
+  },
+  "limitations": [
+    "Modest explanatory power (R-squared 0.13-0.17) across all models.",
+    "Single Turkish pension company data may not generalize to other markets.",
+    "Cross-sectional design limits causal inference about risk preferences."
+  ],
+  "remember_this": [
+    "Boosting methods modestly outperform regulatory risk scoring.",
+    "Four variables match full questionnaire prediction performance.",
+    "Age shows inverted-U relationship with portfolio risk.",
+    "All models have modest R-squared (0.13-0.17).",
+    "Self-reported risk attitude is the strongest single predictor."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Goncu et al_marked.md",
+      "converted_at": "2026-07-22T13:26:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

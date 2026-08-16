@@ -1,0 +1,228 @@
+{
+  "paper_id": "10.1016/j.eswa.2023.120131",
+  "designation": "international-algorithm-specific",
+  "title": "Integration of Explainability in Recommender Systems to Enhance Enterprise Value Strategies",
+  "authors": "Andrea Montagna",
+  "year": 2023,
+  "venue": "Ph.D. Thesis, University of Padova",
+  "odin_topics": [
+    "4.B",
+    "7.B",
+    "8.A",
+    "12.A"
+  ],
+  "tldr": "Explores value-aware recommender systems (VARS) and explainable AI (XAI) integration to balance business value generation with recommendation transparency in enterprise contexts.",
+  "problem_and_motivation": "Recommender systems are widely deployed in e-commerce, streaming, and advertising, but most focus on accuracy rather than business value. Companies need recommendations that optimize economic indicators like revenue, profit, and customer lifetime value. However, end-users must understand recommendations to achieve the best trade-off between demand and response, creating a need for explainable value-aware systems.",
+  "approach": [
+    "Conducted the first systematic literature review on Value-Aware Recommender Systems (VARS) following PRISMA guidelines, analyzing 109 studies from IEEE Xplore, Scopus, ACM, and Springer.",
+    "Proposed a novel VARS taxonomy dividing algorithms into in-processing and post-processing approaches, further classified as value objective, value reinforcement, value ranking, and value policy.",
+    "Developed XVMF (Explainable Value-aware Matrix Factorization), a novel model balancing recommendation profit and explainability using regularization terms.",
+    "Surveyed graph-based explainable recommender systems (GxRS) and identified the lack of standardized evaluation methods for explanation quality in graph-based models.",
+    "Evaluated XVMF on Yelp and Amazon datasets comparing against standard MF and EMF baselines using accuracy, ranking, and explanation quality metrics.",
+    "Designed an extension of Matrix Factorization that incorporates item value information and produces explainable recommendations simultaneously.",
+    "Formulated the trade-off between value optimization and explainability as a multi-objective problem controlled by regularization parameters."
+  ],
+  "findings": [
+    "num: PRISMA review identified 109 VARS studies from 45,614 initial records, with 4 main technical categories identified in the proposed taxonomy.",
+    "num: VARS algorithms are predominantly applied in product recommendation (most frequent), advertising, news, and media recommendation domains.",
+    "num: In-processing algorithms (value objective, value reinforcement) modify model objectives to directly optimize value, while post-processing algorithms rerank existing recommendations.",
+    "num: Reinforcement learning approaches in VARS define reward functions based on business value metrics like customer lifetime value and click-conversion rate.",
+    "num: Graph-based explainable recommender systems lack standardized evaluation frameworks for explanation quality, hindering comparability.",
+    "num: XVMF model on Yelp dataset showed that increasing explainability regularization reduces ranking quality (NDCG) but improves explanation metrics (E-NDCG).",
+    "num: The trade-off between business value and explainability can be systematically controlled via regularization parameters in matrix factorization.",
+    "num: Post-processing value ranking approaches use weighted interest formulas (r_hat * v_i) to balance accuracy with profitability.",
+    "num: Dynamic pricing integration in VARS enables personalized price optimization based on customer willingness to pay.",
+    "num: Knowledge Graphs and GNNs show promise for explainable recommendations but explanation evaluation remains insufficiently rigorous."
+  ],
+  "key_figures_tables": [
+    "Figure 2.1: PRISMA flow diagram of systematic literature review (page 14).",
+    "Figure 2.2: Value-aware recommender algorithm taxonomy (page 17).",
+    "Table 2.1: Application domains of VARS with techniques and optimized values (page 20).",
+    "Table 2.2-2.5: Domain-specific VARS categorizations for product, advertising, news, and media.",
+    "Table 2.6: Datasets used in VARS literature.",
+    "Table 3.1: Most used evaluation metrics for Recommender Systems.",
+    "Table 3.2: List of explanation styles.",
+    "Table 3.5-3.6: Evaluation metrics (MF, EMF, XVMF) for Yelp and Amazon datasets.",
+    "Table 4.1: Graph-based explainable recommender systems surveyed, grouped by method and evaluation approach."
+  ],
+  "key_equations": [
+    {
+      "equation": "argmax_{Y_{u,k}} sum_{i in Y_{u,k}} r_hat_{u,i}",
+      "explanation": "Standard recommendation objective: maximize expected user interest by selecting top-k items with highest predicted scores."
+    },
+    {
+      "equation": "argmax_{Y_{u,k}} sum_{i in Y_{u,k}} r_hat_{u,i} * v_i",
+      "explanation": "Value ranking objective: incorporates item value v_i to balance user interest with business value."
+    },
+    {
+      "equation": "argmax_{Y_{u,k}} sum_{i in Y_{u,k}} (1 - alpha) * r_hat_{u,i} + alpha * v_i",
+      "explanation": "Trade-off objective: regularization parameter alpha controls balance between accuracy and profitability."
+    },
+    {
+      "equation": "r_hat_{u,i} = p_u^T * q_i",
+      "explanation": "Matrix factorization prediction: dot product of user latent vector p_u and item latent vector q_i."
+    },
+    {
+      "equation": "max E[Omega(tau)], Omega(tau) = sum_{t=0}^{tau} gamma^t * omega(a_t, s_t)",
+      "explanation": "Reinforcement learning objective: maximize expected discounted cumulative reward where reward incorporates item value."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Value-Aware Recommender System (VARS)",
+      "definition": "Recommender systems designed to directly maximize one or more business indicators (e.g., revenue, profit, CTR) to achieve business objectives."
+    },
+    {
+      "term": "Explainable Artificial Intelligence (XAI)",
+      "definition": "AI methods that promote transparency in recommender systems by providing understandable explanations for recommendations to users."
+    },
+    {
+      "term": "Explainable Value-aware Matrix Factorization (XVMF)",
+      "definition": "A novel recommender model proposed in this thesis that balances business profit generation with explainability features through regularization."
+    },
+    {
+      "term": "Post-processing algorithms",
+      "definition": "VARS methods applied after any base recommendation algorithm to re-rank outputs based on economic value without modifying the original model."
+    },
+    {
+      "term": "In-processing algorithms",
+      "definition": "VARS methods that modify the objective function or architecture of the recommendation algorithm itself to directly optimize business value."
+    }
+  ],
+  "citations": [
+    {
+      "author": "De Biasio et al.",
+      "year": 2023,
+      "page": 5,
+      "paragraph": 2,
+      "claim": "Published a systematic review of value-aware recommender systems in Expert Systems with Applications.",
+      "role": "foundation"
+    },
+    {
+      "author": "Jannach and Zanker",
+      "year": 2022,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "Proposed a taxonomy of five business value definitions for recommendations: CTR, adoption/conversion rate, sales/revenue, sales distribution effects, and user engagement.",
+      "role": "context"
+    },
+    {
+      "author": "Miles",
+      "year": 1961,
+      "page": 10,
+      "paragraph": 3,
+      "claim": "Defined value concepts including use value, estimated value, cost value, and exchange value.",
+      "role": "context"
+    },
+    {
+      "author": "Montagna et al.",
+      "year": 2023,
+      "page": 5,
+      "paragraph": 3,
+      "claim": "Published a position paper on evaluation of graph-based explainable recommendation systems at CHItaly'23.",
+      "role": "foundation"
+    },
+    {
+      "author": "Adomavicius and Tuzhilin",
+      "year": 2005,
+      "page": 8,
+      "paragraph": 1,
+      "claim": "Provided foundational taxonomy of recommender systems dividing algorithms into content-based, collaborative filtering, and hybrid approaches.",
+      "role": "context"
+    },
+    {
+      "author": "Koren et al.",
+      "year": 2009,
+      "page": 20,
+      "paragraph": 3,
+      "claim": "Introduced matrix factorization techniques for collaborative filtering that decompose user-item interaction matrices.",
+      "role": "context"
+    },
+    {
+      "author": "Sutton and Barto",
+      "year": 2018,
+      "page": 21,
+      "paragraph": 2,
+      "claim": "Provided the theoretical foundation for reinforcement learning as a framework for sequential decision-making.",
+      "role": "context"
+    },
+    {
+      "author": "Abdollahi and Nasraoui",
+      "year": 2017,
+      "page": 19,
+      "paragraph": 1,
+      "claim": "Proposed explainable matrix factorization (EMF) methods for generating interpretable recommendations.",
+      "role": "context"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2018,
+      "page": 20,
+      "paragraph": 2,
+      "claim": "Introduced Knowledge Graph-based recommendation methods for explainable recommendations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.B",
+        "name": "Machine Learning Algorithms",
+        "relevance": "high",
+        "justification": "Thesis proposes XVMF, a novel matrix factorization algorithm, and surveys ML-based recommender algorithms including RL, GNN, and KG methods."
+      },
+      {
+        "code": "7.B",
+        "name": "Financial Technology",
+        "relevance": "high",
+        "justification": "Focuses on business value generation through recommender systems for enterprise applications including e-commerce and advertising."
+      },
+      {
+        "code": "8.A",
+        "name": "Explainable AI",
+        "relevance": "high",
+        "justification": "Core contribution is integrating explainability (XAI) into recommender systems; includes taxonomy of explanation styles and evaluation methods."
+      },
+      {
+        "code": "12.A",
+        "name": "Systematic Reviews & Surveys",
+        "relevance": "high",
+        "justification": "Contains a PRISMA-based systematic literature review of VARS with 109 included studies and a taxonomy of value-aware algorithms."
+      }
+    ],
+    "contribution_to_field": "Provides the first PRISMA-based systematic literature review of Value-Aware Recommender Systems with a novel technical taxonomy, proposes XVMF as a model balancing business value and explainability, and identifies critical gaps in evaluation of graph-based explainable recommender systems.",
+    "directly_justifies": [
+      "Selection of ML algorithms (matrix factorization, RL, GNN) for value-aware and explainable recommendation in Odin's budget management features.",
+      "Framework for evaluating trade-offs between predictive accuracy and business value in recommender systems."
+    ],
+    "limits": [
+      "Thesis primarily focuses on e-commerce and media domains rather than personal finance management.",
+      "VARS taxonomy does not extensively cover budget management or personal financial planning applications.",
+      "Only available as a Ph.D. thesis which may limit accessibility."
+    ],
+    "topic_mapping_rationale": "Primary topics 4.B (ML algorithms for recommendation), 7.B (fintech value generation), 8.A (explainable AI), and 12.A (systematic review methodology)."
+  },
+  "limitations": [
+    "PRISMA review limited to four databases (IEEE, Scopus, ACM, Springer) and English-language peer-reviewed articles only.",
+    "Graduate theses and doctoral dissertations were excluded from the systematic review.",
+    "VARS research predominantly focuses on product recommendation; personal finance applications remain underexplored.",
+    "Graph-based explainable recommender evaluation lacks standardized quantitative benchmarks.",
+    "XVMF model tested only on two datasets (Yelp, Amazon) limiting generalizability."
+  ],
+  "remember_this": [
+    "First PRISMA systematic review of Value-Aware Recommender Systems with 109 studies.",
+    "XVMF balances business value and explainability via regularization in matrix factorization.",
+    "Graph-based explainable RS lack standardized evaluation frameworks for explanation quality.",
+    "Reinforcement learning enables long-term value optimization in recommendation through reward design.",
+    "Post-processing reranking can inject value awareness into any existing recommender system."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Montagna_marked.md",
+      "converted_at": "2026-07-21T07:36:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

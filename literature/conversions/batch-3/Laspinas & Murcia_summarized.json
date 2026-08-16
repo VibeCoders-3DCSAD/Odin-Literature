@@ -1,0 +1,199 @@
+{
+  "paper_id": "10.5281/zenodo.10049652#134",
+  "designation": "local-algorithm-specific",
+  "title": "Machine Learning Approaches in Classifying Income Levels",
+  "authors": "Laspiñas, E. L.; Murcia, J. V. B.",
+  "year": 2024,
+  "venue": "TWIST",
+  "odin_topics": ["6.A", "6.B", "12.B"],
+  "tldr": "A comparison of six machine learning classifiers for binary income prediction shows RandomForest and Random Tree achieve the highest accuracy and F-measures on the Adult Income dataset.",
+  "problem_and_motivation": "Conventional econometric models are limited by linear assumptions and cannot fully capture the complex, non-linear dynamics of income distribution. There is a research gap in the systematic application and comparison of machine learning classifiers for income level prediction. This study addresses the need for a more accurate and data-driven approach to socioeconomic forecasting.",
+  "approach": [
+    "Used the Adult Income Prediction dataset from Kaggle with 16,281 instances and 13 mixed-type features.",
+    "Applied Weka's InfoGainAttributeEval and Ranker for feature selection based on information gain.",
+    "Evaluated Logistic, J48, RandomForest, Random Tree, IBk (k-NN), and NaiveBayes classifiers.",
+    "Tuned J48 confidence factors (0.25, 0.50, 0.75) and k-NN k-values (3, 5, 7, 9).",
+    "Assessed performance using 10-fold cross-validation and metrics: TP rate, FP rate, precision, recall, F-measure."
+  ],
+  "findings": [
+    "num: RandomForest and Random Tree achieved the highest accuracy at 98.35% and 98.37%, respectively.",
+    "num: RandomForest and Random Tree attained the highest F-measures of 0.983 and 0.984.",
+    "num: J48 accuracy improved from 87.21% to 90.84% as confidence increased from 0.25 to 0.75.",
+    "num: IBk accuracy decreased from 89.11% (k=3) to 85.74% (k=9), contradicting some prior work.",
+    "Relationship, marital status, and capital gain were the most predictive attributes.",
+    "Ensemble methods (RandomForest, Random Tree) demonstrated strong generalization and resistance to overfitting.",
+    "Increasing the confidence factor in J48 led to decreased F-measure, suggesting potential overfitting.",
+    "NaiveBayes had the lowest accuracy at 82.24% but remains viable for its simplicity and scalability."
+  ],
+  "key_figures_tables": [
+    "Table 2: Classification accuracy for 11 classifier variants → Random Tree highest at 98.37%, NaiveBayes lowest at 82.24%.",
+    "Table 3: Detailed performance metrics (TP, FP, precision, recall, F-measure) → RandomForest and Random Tree dominate across all."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "ML", "definition": "Machine learning."},
+    {"term": "k-NN", "definition": "k-nearest neighbors."},
+    {"term": "TP rate", "definition": "True positive rate."},
+    {"term": "FP rate", "definition": "False positive rate."},
+    {"term": "J48", "definition": "A decision tree classifier implementation in Weka."},
+    {"term": "IBk", "definition": "Weka's implementation of the k-nearest neighbors algorithm."},
+    {"term": "Weka", "definition": "Waikato Environment for Knowledge Analysis, a suite of machine learning software."},
+    {"term": "F-measure", "definition": "Harmonic mean of precision and recall."}
+  ],
+  "citations": [
+    {
+      "author": "Patki",
+      "year": 0,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "The Adult Income Prediction dataset is a collection of demographic and employment information for income forecasting.",
+      "role": "methodology"
+    },
+    {
+      "author": "Peng",
+      "year": 2002,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Logistic regression is an effective classifier for binary outcomes.",
+      "role": "context"
+    },
+    {
+      "author": "Liaw",
+      "year": 2002,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "Ensemble methods like RandomForest improve prediction accuracy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kohavi",
+      "year": 1995,
+      "page": 3,
+      "paragraph": 5,
+      "claim": "10-fold cross-validation provides a balanced and unbiased estimation of model performance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dudani",
+      "year": 1978,
+      "page": 3,
+      "paragraph": 4,
+      "claim": "Modifying k in k-NN decreases error probabilities.",
+      "role": "methodology"
+    },
+    {
+      "author": "Martin",
+      "year": 2006,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Socioeconomic factors are associated with familial financial structures.",
+      "role": "context"
+    },
+    {
+      "author": "Schoeni",
+      "year": 1995,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Marital status has significant economic implications.",
+      "role": "context"
+    },
+    {
+      "author": "Frank",
+      "year": 2010,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Financial transactions and investments directly impact income.",
+      "role": "context"
+    },
+    {
+      "author": "Alejandrino",
+      "year": 2023,
+      "page": 3,
+      "paragraph": 4,
+      "claim": "The efficacy of k-NN improves as k increases.",
+      "role": "baseline"
+    },
+    {
+      "author": "Rajesh",
+      "year": 2017,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "A higher confidence level may improve the efficacy of the J48 classifier.",
+      "role": "baseline"
+    },
+    {
+      "author": "Zhou",
+      "year": 2020,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Random Tree benefited from random feature selection, contributing to robust performance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Aria",
+      "year": 2021,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Ensemble methods prevent overfitting and provide consistently high performance.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Compares classifiers for income prediction, applicable to financial forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Focuses on classification, not sequential time-series forecasting."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Directly evaluates classifier performance using multiple metrics and cross-validation."
+      }
+    ],
+    "contribution_to_field": "This paper provides a systematic empirical comparison of six machine learning classifiers for binary income classification using a standard public dataset. It contributes benchmark performance results and demonstrates the superiority of ensemble methods (RandomForest and Random Tree) over simpler classifiers. The study also highlights the importance of hyperparameter tuning, showing non-monotonic effects for J48 and k-NN. The findings support the broader adoption of machine learning for socioeconomic prediction tasks and offer practical guidance for model selection.",
+    "directly_justifies": [
+      "RandomForest and Random Tree achieved the highest accuracy at 98.35% and 98.37%.",
+      "Relationship, marital status, and capital gain are the most predictive attributes.",
+      "There is no universal classifier; selection depends on the task and dataset.",
+      "Ensemble methods prevent overfitting and provide consistently high performance."
+    ],
+    "limits": [
+      "The study uses only one dataset (Adult Income) from a non-Philippine source, limiting direct applicability to local contexts.",
+      "The paper does not address feature engineering, data preprocessing, or handling of missing values.",
+      "No comparison to deep learning or more recent advanced algorithms is provided."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was performed. The paper was flagged for relevance to Predictive Modeling (6.A) due to its core focus on comparing ML models. It was also relevant to Evaluation of Algorithmic Modules (12.B) because it systematically evaluates classifier performance. It was considered for Forecasting Algorithms (6.B) but rejected because the outcome is a binary classification task, not sequential spending data. Other domains, such as financial behavior, budgeting, and mobile design, were rejected as the paper does not address these areas. The paper does not touch upon personal finance management, expense categorization, or Filipino-specific financial practices. Overall, the topical coverage is limited to algorithmic benchmarking for income prediction."
+  },
+  "limitations": [
+    "The study relies on a single, non-Philippine dataset (Adult Income from Kaggle), limiting generalizability to local contexts.",
+    "No deep learning or state-of-the-art algorithms (e.g., XGBoost) are included in the comparison. [unacknowledged]",
+    "The paper does not discuss feature engineering, data cleaning, or handling of class imbalance. [unacknowledged]"
+  ],
+  "remember_this": [
+    "RandomForest and Random Tree achieved accuracy of 98.35% and 98.37% on the Adult Income dataset.",
+    "Relationship status was the single most predictive feature for income classification.",
+    "Ensemble methods like RandomForest offer robust performance and resist overfitting.",
+    "Hyperparameter tuning is critical, as J48 and k-NN showed non-monotonic performance changes.",
+    "Model selection must be tailored to the specific dataset and task requirements."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Laspinas & Murcia_marked.md",
+      "converted_at": "2026-07-21T13:54:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

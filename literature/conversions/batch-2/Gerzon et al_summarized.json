@@ -1,0 +1,73 @@
+{
+  "paper_id": "10.52006/main.v6i2.752",
+  "designation": "local",
+  "title": "Financial Literacy and Financial Well-Being of Nurses of a First-Class Province in the Philippines",
+  "authors": "Gerzon, R. A.; Lopena, G. L.",
+  "year": 2023,
+  "venue": "Main",
+  "odin_topics": ["1.A", "1.B", "1.C"],
+  "tldr": "Assesses financial literacy and well-being of 178 nurses in a Philippine province, finding high literacy and great well-being with a significant positive correlation between them.",
+  "problem_and_motivation": "Financial literacy is critical for financial well-being, but limited research examines this relationship among Filipino healthcare professionals. Nurses face unique financial challenges yet lack targeted financial education.",
+  "approach": [
+    "Used descriptive-correlational design with researcher-made questionnaire.",
+    "Sampled 178 nurses using stratified random sampling from a first-class province in the Philippines.",
+    "Applied Pearson, Point Biserial, Rank Biserial, and Spearman Rank correlation analyses.",
+    "Measured financial literacy and financial well-being levels using Likert-scale instruments.",
+    "Analyzed demographic associations with both literacy and well-being."
+  ],
+  "findings": [
+    "num: Overall financial literacy was High (M=3.22, SD=0.39) and financial well-being was Great (M=3.03, SD=0.46).",
+    "num: Significant positive correlation between financial literacy and financial well-being (rs=0.660, p=0.000).",
+    "num: Monthly income was significantly associated with financial literacy (r=0.223, p=0.003).",
+    "No significant relationship between demographics and financial well-being.",
+    "Higher financial literacy correlates with better financial well-being among nurses."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Financial well-being", "definition": "Extent of financial security and freedom from financial stress."},
+    {"term": "Descriptive-correlational", "definition": "Design describing variables and examining relationships between them."}
+  ],
+  "citations": [
+    {"author": "Kumari", "year": 2020, "page": 0, "paragraph": 0, "claim": "Financial literacy contributes to sound financial systems and economic growth.", "role": "context"},
+    {"author": "GFLEC", "year": 2022, "page": 0, "paragraph": 0, "claim": "Only 33% of adults worldwide are financially literate.", "role": "context"},
+    {"author": "Bashir & Qureshi", "year": 2023, "page": 0, "paragraph": 0, "claim": "Financial well-being influenced by macroeconomic to personal factors.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "high", "justification": "Focuses on Filipino nurses as a professional demographic group."},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "high", "justification": "Examines income, financial literacy levels, and financial well-being."},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Assesses relationship between financial literacy and well-being."}
+    ],
+    "contribution_to_field": "Provides empirical data on financial literacy and well-being levels among Filipino nurses. Demonstrates a strong positive correlation between literacy and well-being in this population. Identifies monthly income as the only demographic factor associated with literacy, suggesting structural rather than personal determinants.",
+    "directly_justifies": [
+      "Filipino nurses have high financial literacy and great financial well-being.",
+      "Financial literacy and well-being are strongly positively correlated.",
+      "Monthly income significantly influences financial literacy levels."
+    ],
+    "limits": [
+      "Limited to one province, not nationally representative."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 1.A, 1.B, 1.C high relevance for Filipino professional demographic financial assessment. Rejected algorithmic and system topics (3.A-14.C) as the paper uses descriptive and correlational statistical methods only."
+  },
+  "limitations": [
+    "Single province sample limits generalizability to all Filipino nurses.",
+    "Researcher-made questionnaire may have construct coverage gaps.",
+    "Cross-sectional design prevents causal inference."
+  ],
+  "remember_this": [
+    "Nurses show high financial literacy and great financial well-being.",
+    "Literacy and well-being are strongly positively correlated.",
+    "Monthly income is the key demographic factor for literacy.",
+    "No demographic link found with financial well-being."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gerzon et al_marked.md",
+      "converted_at": "2026-07-22T13:25:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

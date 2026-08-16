@@ -1,0 +1,99 @@
+{
+  "paper_id": "3916120d-e59e-5daf-8c2f-5457ac2e3d01",
+  "designation": "international-algorithm-specific",
+  "title": "A Conformal Martingales Approach for Recurrent Concept Drift",
+  "authors": "Eliades, C.; Papadopoulos, H.",
+  "year": 2025,
+  "venue": "Proceedings of Machine Learning Research 266, Conformal and Probabilistic Prediction with Applications",
+  "odin_topics": [
+    "8.B",
+    "6.B"
+  ],
+  "tldr": "Pool ICM framework reuses previously trained models upon recurrent concept drift detection, cutting retraining events by up to 94% with less than 3 percentage points accuracy loss.",
+  "problem_and_motivation": "In data stream classification, recurrent concept drift causes previously seen distributions to reappear. Existing methods retrain after every detected drift, wasting computational resources even when a previously trained model could be reused.",
+  "approach": [
+    "Extends Inductive Conformal Martingales (ICM) for concept drift detection with model reuse capability.",
+    "Upon drift detection, selects model from a pool if ICM fails to reject exchangeability between recent data and the model's training window.",
+    "Second criterion: model's F1 score on current window exceeds a threshold from historical performance.",
+    "Trains new model only when no stored model satisfies both criteria.",
+    "Evaluated on STAGGER, Airlines, and ELEC public data streams."
+  ],
+  "findings": [
+    "num: Cuts retraining events by up to 94% compared to always retraining.",
+    "num: Reduces wasted training instances by 22-33%.",
+    "num: Limits accuracy loss to less than 3 percentage points relative to always retraining."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Recurrent Concept Drift",
+      "definition": "Type of concept drift where previously seen data distributions reappear over time."
+    },
+    {
+      "term": "Pool ICM",
+      "definition": "Extended Inductive Conformal Martingales framework enabling model reuse upon recurrent drift."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Drift detection methodology applicable to anomaly detection but not direct focus."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Streaming data classification algorithm; sequential data methodology."
+      }
+    ],
+    "contribution_to_field": "Introduces a novel approach to handling recurrent concept drift that reuses previously trained models. The dual-criteria selection combining exchangeability testing with performance evaluation is original. Demonstrates significant computational savings with minimal accuracy trade-off.",
+    "directly_justifies": [
+      "Model reuse upon recurrent drift cuts retraining events by up to 94%.",
+      "Exchangeability testing effectively identifies previously seen concepts for model reuse."
+    ],
+    "limits": [
+      "Not evaluated in personal finance or spending data contexts.",
+      "Accuracy slightly below approaches that always retrain."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains. No high relevance matches; 8.B (low) and 6.B (low) for methodological relation to anomaly detection and sequential data. Paper focuses on data stream classification, not personal finance."
+  },
+  "limitations": [
+    "Accuracy slightly below approaches that always retrain on every drift.",
+    "Evaluated on only three benchmark datasets."
+  ],
+  "remember_this": [
+    "Pool ICM cuts retraining events by up to 94%.",
+    "Dual-criteria selection: exchangeability test + F1 threshold.",
+    "Accuracy loss limited to less than 3 percentage points."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Eliades & Papadopoulos_marked.md",
+      "converted_at": "2026-07-22T13:14:38Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

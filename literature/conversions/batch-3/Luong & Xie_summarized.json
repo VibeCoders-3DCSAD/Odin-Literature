@@ -1,0 +1,290 @@
+{
+  "paper_id": "10.1016/j.jfds.2026.100195",
+  "designation": "international-algorithm-specific",
+  "title": "Explainable ensemble machine learning for financial transaction fraud detection: Insights from XGBoost and deep neural networks",
+  "authors": "Luong, N.D.A.; Xie, S.",
+  "year": 2026,
+  "venue": "The Journal of Finance and Data Science",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B",
+    "14.A"
+  ],
+  "tldr": "Presents a hybrid XGBoost and deep neural network ensemble for financial fraud detection, achieving superior performance on imbalanced data with SHAP-based interpretability.",
+  "problem_and_motivation": "Financial fraud detection is challenged by extreme class imbalance, high-dimensional data, and the need for interpretable models compliant with regulations. Traditional rule-based systems and standard machine learning models fail to adapt to evolving fraud tactics or provide the necessary balance between recall and precision. A unified framework addressing imbalance, feature engineering, and interpretability was needed.",
+  "approach": [
+    "Merged IEEE-CIS transaction and identity datasets to create a comprehensive feature set with transactional, temporal, and identity-linked attributes.",
+    "Applied cost-sensitive learning with class weighting for XGBoost and focal loss for deep neural networks to mitigate severe class imbalance.",
+    "Engineered a temporal feature (hour_of_day) and used label encoding for categorical variables, with median imputation and z-score normalization for neural network inputs.",
+    "Trained and compared Logistic Regression, Random Forest, XGBoost, Enhanced XGBoost, ANN, and DNN, plus a hybrid XGBoost + DNN ensemble with a 0.6/0.4 weighting.",
+    "Optimized decision thresholds post-training to maximize F1-score on a validation set, addressing the precision-recall trade-off.",
+    "Applied SHAP (SHapley Additive exPlanations) for global and local feature interpretability to provide granular insights into fraud risk drivers."
+  ],
+  "findings": [
+    "num: The proposed XGB + DNN ensemble achieved the highest F1-score of 0.74 and PR-AUC of 0.7897.",
+    "num: Enhanced XGBoost outperformed standard XGBoost with a recall of 0.83 vs. 0.81 and precision of 0.42 vs. 0.22.",
+    "num: Cost-sensitive learning with class weighting and focal loss significantly outperformed SMOTE-based sampling (ROC-AUC 0.9638 vs. 0.9037).",
+    "num: Transaction amount (TransactionAmt) was the most influential feature, followed by identity-related features like card6, C14, and C1.",
+    "Fraud activity peaks during late-night hours and is concentrated in specific product categories (e.g., category C) and regions.",
+    "num: The ensemble achieved a statistically significant ROC-AUC improvement over Enhanced XGBoost (0.9274 ± 0.0025 vs. 0.9223 ± 0.0019, p=0.0054).",
+    "LSTM models performed poorly (ROC-AUC 0.502) on this tabular dataset, confirming that temporal dependencies are weak without user-level sequences.",
+    "num: The XGB + DNN ensemble showed competitive ROC-AUC (0.9638) compared to top Kaggle solutions for the IEEE-CIS dataset (0.94-0.95)."
+  ],
+  "key_figures_tables": [
+    "Figure 2: Fraud vs. legitimate transaction amount distribution → Fraud concentrated at very low and very high amounts.",
+    "Figure 3: Temporal and spatial fraud patterns → Fraud peaks at night and varies significantly by region and country.",
+    "Figure 4: Identity-based fraud patterns → Free email domains and mobile devices show higher fraud rates.",
+    "Figure 6: Global SHAP feature importance → TransactionAmt and identity features (card6, C14) dominate fraud prediction.",
+    "Figure 7: SHAP beeswarm plot → High transaction amounts and specific identity indicators increase fraud likelihood.",
+    "Table 4: Comparative model performance → XGB + DNN ensemble achieves highest F1, PR-AUC, and competitive inference time."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\hat{y}_i = \\lambda \\cdot \\hat{y}_i^{XGB} + (1 - \\lambda) \\cdot \\hat{y}_i^{DNN}",
+      "explanation": "Weighted average ensemble prediction combining XGBoost and DNN."
+    },
+    {
+      "equation": "L_{focal} = -\\sum [\\alpha(1-\\hat{y}_i)^\\gamma y_i \\log\\hat{y}_i + (1-\\alpha)\\hat{y}_i^\\gamma (1-y_i)\\log(1-\\hat{y}_i)]",
+      "explanation": "Focal loss function to focus learning on hard misclassified fraud examples."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XGBoost",
+      "definition": "Extreme Gradient Boosting, a scalable gradient boosting algorithm for tabular data."
+    },
+    {
+      "term": "DNN",
+      "definition": "Deep Neural Network, a neural network with multiple hidden layers."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations, a method for interpreting model predictions based on game theory."
+    },
+    {
+      "term": "PR-AUC",
+      "definition": "Area Under the Precision-Recall Curve, a metric for imbalanced classification performance."
+    },
+    {
+      "term": "Focal Loss",
+      "definition": "A loss function that down-weights well-classified examples to focus on hard, misclassified cases."
+    },
+    {
+      "term": "IEEE-CIS",
+      "definition": "IEEE Computational Intelligence Society dataset for fraud detection from a Kaggle competition."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Broby",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Rapid digitalization of financial services has increased fraud exposure.",
+      "role": "context"
+    },
+    {
+      "author": "Ding",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit card fraud causes direct monetary losses and erodes public trust.",
+      "role": "context"
+    },
+    {
+      "author": "Bolton",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Rule-based systems initially flagged suspicious transactions but fail to adapt.",
+      "role": "methodology"
+    },
+    {
+      "author": "Roseline",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning can automatically learn non-linear patterns and adapt to fraud tactics.",
+      "role": "context"
+    },
+    {
+      "author": "Breskuviene",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fraud often accounts for less than 1% of transactions, leading to severe class imbalance.",
+      "role": "context"
+    },
+    {
+      "author": "Alfaiz",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Pairing CatBoost with AllKNN undersampling achieves state-of-the-art performance.",
+      "role": "baseline"
+    },
+    {
+      "author": "Shimin",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Combining transaction data with identity features enhanced XGBoost's ROC-AUC to 0.942.",
+      "role": "finding"
+    },
+    {
+      "author": "Bahnsen",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Modeling periodic spending patterns yielded a 13% reduction in financial losses.",
+      "role": "finding"
+    },
+    {
+      "author": "Lei",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Distributed deep neural networks balance predictive accuracy with user privacy.",
+      "role": "methodology"
+    },
+    {
+      "author": "Taha",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "OLightGBM achieved ROC-AUC of 0.9288 as a strong benchmark.",
+      "role": "baseline"
+    },
+    {
+      "author": "Deotte",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Kaggle 1st place solution used an ensemble of gradient boosting algorithms with feature engineering.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lin",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SHAP-based methods can reveal complex relationships between financial features.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Features like product category and transaction amount are used as predictive signals, not for user expense categorization."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses ML and DL approaches in finance but primarily fraud detection, not PFMS."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "low",
+        "justification": "Identifies challenges in fraud detection like class imbalance and interpretability, which are relevant to PFMS."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus on predictive modeling (fraud detection) using ensemble methods and neural networks."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Evaluates LSTM for sequential modeling but finds it unsuitable, offering a negative result of interest."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Fraud detection is a direct application of anomaly detection in financial transactions."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Directly compares and proposes algorithms (XGBoost, DNN, ensemble) for anomaly detection in spending data."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Discusses class imbalance and threshold optimization, but not cold-start scenarios explicitly."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Employs a multi-metric evaluation (F1, PR-AUC, ROC-AUC, inference time) tailored for imbalanced data."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Provides a systematic comparison of seven ML algorithms, including statistical significance testing."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Compares the proposed cost-sensitive approach against SMOTE, a synthetic data generation technique."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a comprehensive evaluation of ensemble and deep learning methods for financial fraud detection, systematically addressing class imbalance and interpretability. It provides empirical evidence that a hybrid XGBoost-DNN ensemble outperforms individual models and prior benchmarks on the IEEE-CIS dataset. The study advances the field by demonstrating the effectiveness of cost-sensitive learning over SMOTE-based sampling for tabular fraud data. Additionally, it contributes a detailed SHAP-based interpretability analysis, showing that transaction amounts and identity-linked features are key drivers of fraud predictions.",
+    "directly_justifies": [
+      "Cost-sensitive learning with focal loss and class weighting improves fraud detection over SMOTE.",
+      "Hybrid XGBoost and DNN ensemble achieves superior performance with an F1-score of 0.74.",
+      "Transaction amount and identity features are the most important predictors for fraud.",
+      "LSTM models are not effective for this tabular dataset without user-level sequential data.",
+      "The ensemble provides a robust balance of predictive performance and interpretability."
+    ],
+    "limits": [
+      "The anonymized dataset lacks contextual features (e.g., merchant codes, demographics), limiting interpretability.",
+      "Evaluation is offline; real-time constraints, drift, and adversarial conditions are not simulated.",
+      "Interpretability for deep neural networks remains less developed than for tree-based models.",
+      "The dataset is a fixed historical snapshot, and the models are not evaluated for concept drift adaptation."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core focus is on algorithmic fraud detection, which directly maps to topics 6.A (Predictive Modeling), 8.A (Anomaly Detection), and 8.B (Anomaly Detection Algorithms). The rigorous model comparison and evaluation framework strongly align with topics 12.A and 12.B. The use of SMOTE for comparison relates to 14.A (Synthetic Data). Topic 6.B (Forecasting Algorithms) was flagged as 'medium' due to the LSTM negative result, which is a relevant finding. Topics 3.A, 4.A, 4.B, and 8.C were considered but assigned 'low' or 'contextual' relevance, as the paper does not directly address user expense categorization, PFMS landscape, or cold-start baselines; its contributions are methodological and predictive. The analysis confirms the paper's primary relevance lies in algorithmic anomaly detection and evaluation methodologies."
+  },
+  "limitations": [
+    "Anonymized dataset lacks contextual features such as merchant codes and customer demographics. [unacknowledged]",
+    "Offline validation does not simulate real-time latency, streaming, or concept drift. [unacknowledged]",
+    "Interpretability techniques for deep neural networks are less mature than for tree-based models. [unacknowledged]",
+    "The evaluation is conducted on a static dataset, and the models' ability to handle concept drift is not tested. [unacknowledged]",
+    "Hyperparameters were chosen pragmatically rather than through exhaustive grid search, potentially limiting optimality. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Hybrid XGBoost and DNN ensemble achieves an F1-score of 0.74 for fraud detection.",
+    "Cost-sensitive learning significantly outperforms SMOTE for tabular imbalanced data.",
+    "Transaction amount and identity features are the top predictors for fraud risk.",
+    "LSTM models are ineffective for this dataset due to weak user-level temporal structure.",
+    "SHAP analysis reveals that feature contributions are context-dependent and non-linear."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Luong & Xie_marked.md",
+      "converted_at": "2026-07-21T14:07:05Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

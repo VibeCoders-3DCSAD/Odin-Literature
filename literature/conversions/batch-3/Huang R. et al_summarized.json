@@ -1,0 +1,373 @@
+{
+  "paper_id": "10.1145/3766918.3766944",
+  "designation": "international-algorithm-specific",
+  "title": "Wealth-Voyager: Navigating Intelligent Wealth Management with a Multi-Agent Framework",
+  "authors": "Huang, R.; Zhao, Z.; Chen, S.; Wu, X.; Zhao, J. L.",
+  "year": 2025,
+  "venue": "2025 International Conference on Generative Artificial Intelligence for Business (GAIB 2025)",
+  "odin_topics": [
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "9.A",
+    "9.B",
+    "10.A",
+    "10.B",
+    "11.A",
+    "11.B",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.A",
+    "14.B"
+  ],
+  "tldr": "Introduces a multi-agent framework integrating strategic asset allocation with adaptive tactical adjustments, combining a quantitative engine with a BDI-grounded role-playing simulation to manage behavioral biases and deliver personalized wealth management.",
+  "problem_and_motivation": "Traditional wealth management models lack scalability, cost-efficiency, and objectivity, failing to meet the demand for hyper-personalized advice. While AI solutions exist, they are fragmented and do not integrate long-term strategy with dynamic behavioral adaptation. A unified framework is needed to bridge this gap.",
+  "approach": [
+    "Proposes Wealth-Voyager, a multi-agent framework with four specialized modules: AssistHub (behavioral profiling), NewsCrawler (real-time intelligence), AlphaForge (quantitative optimization), and DualAdvisor (BDI-based advisory simulation).",
+    "AssistHub uses a guided multi-round dialogue on the Dify platform, powered by GPT-4, to replace static questionnaires with dynamic user profiling.",
+    "NewsCrawler operates as an MCP server for real-time aggregation of market data and personalized news feeds.",
+    "AlphaForge employs a constrained mean-variance engine with liquidity caps, drawdown limits, and leverage controls for long-term strategic asset allocation.",
+    "DualAdvisor uses two LLM agents (Advisor and User) in a role-playing simulation to generate tactical advice by modeling advisor-client interactions.",
+    "The User Agent's internal deliberation is modeled using the Belief-Desire-Intention (BDI) framework.",
+    "Dialogue between agents follows a four-phase process: Rational Initialization, Behavioral Response, Cognitive Debiasing, and Iterative Consensus.",
+    "The system integrates Monte Carlo-based risk modeling and an LLM-driven re-sampling loop for adaptive portfolio generation.",
+    "A proof-of-concept case study was conducted with a single user under live market conditions from April 2 to May 2, 2025.",
+    "Performance was evaluated against a passive baseline and compared to existing market solutions (Ant Fortune, JD Xiaobei, Ping An Intelligent Wealth Butler)."
+  ],
+  "findings": [
+    "num: The tactical approach reduced losses during the initial shock phase (-2.56% vs. -2.79% for the passive baseline).",
+    "num: The tactical strategy captured greater upside in the rebound phase (3.24% vs. 2.16%).",
+    "num: Behavioral anchoring improved annual return from 3.72% to 6.53% and reduced annual volatility from 18.08% to 9.42%.",
+    "num: The tactical strategy achieved a cumulative return of 1.86% with annual volatility of 12.10%.",
+    "num: The adaptive advice outperformed the passive baseline by +1.62 percentage points during a period of elevated macro uncertainty.",
+    "num: Strategic allocations improved the user's risk-return trade-off by +2.81 percentage points in annualized return and -8.66 percentage points in volatility.",
+    "Qualitative feedback indicated that the dual-agent simulation enhances user trust and self-awareness by exposing cognitive biases.",
+    "The system's ability to explain investment logic in plain language improved user engagement and understanding.",
+    "Wealth-Voyager supports adaptive intraday rebalancing and integrates behavioral finance signals.",
+    "The comparison with existing solutions shows Wealth-Voyager offers superior dynamic responsiveness, personalization depth, and educational engagement."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Architecture of the Wealth-Voyager framework → Shows the integration of four modules and their interaction.",
+    "Figure 2: Segment-level returns for passive and tactical portfolios → Tactical strategy consistently outperforms passive during the study period.",
+    "Table 1: Comparison between user-declared baseline and AI-optimized allocation → AI optimization improves diversification and reduces REIT exposure.",
+    "Table 2: Performance comparison across portfolio strategies → Anchoring and tactical rebalancing improve returns and reduce volatility.",
+    "Table 3: Capability comparison with market offerings → Wealth-Voyager supports dynamic adjustment, personalization, and education."
+  ],
+  "key_equations": [
+    {
+      "equation": "L(w) = -Sharpe(w) + λ IlliqPenalty(w)",
+      "explanation": "Objective function for portfolio optimization with illiquidity penalty."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LLM",
+      "definition": "Large Language Model."
+    },
+    {
+      "term": "BDI",
+      "definition": "Belief-Desire-Intention, a framework for modeling rational agency."
+    },
+    {
+      "term": "SAA",
+      "definition": "Strategic Asset Allocation, a long-term policy portfolio."
+    },
+    {
+      "term": "TAA",
+      "definition": "Tactical Asset Allocation, short-term adjustments to the strategic portfolio."
+    },
+    {
+      "term": "AUM",
+      "definition": "Assets Under Management."
+    },
+    {
+      "term": "MCS",
+      "definition": "Monte Carlo Simulation."
+    },
+    {
+      "term": "CVaR",
+      "definition": "Conditional Value at Risk."
+    },
+    {
+      "term": "MCP",
+      "definition": "Model Context Protocol."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Liu",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FinLLM applies instruction tuning to provide personalized advice to retail investors.",
+      "role": "context"
+    },
+    {
+      "author": "Wu",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "BloombergGPT demonstrates advantages of domain-specific pretraining for financial tasks.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lakkaraju",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLM-Advisor integrates real-time news summarization into an interactive advisory workflow.",
+      "role": "context"
+    },
+    {
+      "author": "Dong",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLM-Survey offers an overview of LLMs in the asset management lifecycle.",
+      "role": "context"
+    },
+    {
+      "author": "Brinson",
+      "year": 1986,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Asset allocation is responsible for over 90% of portfolio performance variance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ibbotson",
+      "year": 2000,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Asset allocation policy explains 40, 90, or 100 percent of performance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Yu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FinCon incorporates LLMs as coordinators for reflective belief revision in volatile environments.",
+      "role": "baseline"
+    },
+    {
+      "author": "Li",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MASA introduces a role-based structure with agents adapting via deep reinforcement learning.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lee",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MAPS modularizes strategy generation and asset evaluation for diversity and scalability.",
+      "role": "baseline"
+    },
+    {
+      "author": "Huang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MSPM modularizes reinforcement learning for financial portfolio management.",
+      "role": "baseline"
+    },
+    {
+      "author": "Guo",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MASS uses multi-agent simulation scaling for portfolio construction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Xiao",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TradingAgents simulate collaborative trading desks with LLM-driven agents.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chandra",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Embedding behavioral profiling in robo-advisors improves trust and engagement.",
+      "role": "finding"
+    },
+    {
+      "author": "Eichler",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Cognitive-aware advisors demonstrate improved trust and engagement.",
+      "role": "finding"
+    },
+    {
+      "author": "Takayanagi",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Trust-aware GAI advisors provide personalized, trust-sensitive interaction.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Paper's core contribution is a BDI-grounded behavioral profile with a nine-dimensional bias vector."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Details construction of a behavioral vector using LLM-assisted extraction and default mapping."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "AlphaForge uses predictive modeling for portfolio optimization and risk metrics."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Paper focuses on asset returns and volatility forecasts, not spending data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Asset allocation strategies are analogous to budgeting strategies in personal finance."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "DualAdvisor provides personalized, adaptive investment recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "high",
+        "justification": "AlphaForge uses constrained mean-variance optimization for portfolio allocation."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "low",
+        "justification": "Paper does not address mobile design; it is an academic framework."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "No discussion of mobile UX; the system is presented as a framework."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions trust and transparency but not specific privacy or security mechanisms."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses trust and transparency as design goals; qualitative feedback indicates trust enhancement."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Discusses user engagement and financial literacy improvement through dialogue."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "low",
+        "justification": "No specific retention mechanisms discussed."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Presents a month-long pilot study with quantitative and qualitative evaluation."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates performance of SAA and TAA modules with live market data."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Uses portfolio performance metrics like return, volatility, and drawdown to evaluate recommendations."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "low",
+        "justification": "No synthetic data generation; uses live market data."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "low",
+        "justification": "Mentions deployment in a sandbox but not serving infrastructure."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel multi-agent framework that integrates behavioral profiling, real-time market intelligence, and quantitative optimization for personalized wealth management. It introduces a BDI-grounded role-playing simulation to model and mitigate cognitive biases in investment decisions. The framework demonstrates a layered decision architecture combining strategic and tactical asset allocation. Its proof-of-concept deployment provides empirical evidence of improved risk-return trade-offs and user engagement. The work advances the integration of behavioral finance principles with generative AI for interactive financial advisory.",
+    "directly_justifies": [
+      "Wealth-Voyager outperforms a passive baseline by +1.62 percentage points during elevated macro uncertainty.",
+      "Behavioral anchoring improves annual return from 3.72% to 6.53% and reduces volatility from 18.08% to 9.42%.",
+      "The tactical strategy achieves a cumulative return of 1.86% with annual volatility of 12.10%.",
+      "The dual-agent simulation enhances user trust and self-awareness by exposing cognitive biases."
+    ],
+    "limits": [
+      "The prototype was evaluated on a single user, limiting statistical generalizability.",
+      "Performance is contingent on the underlying LLM (GPT-4).",
+      "The asset universe was limited, restricting the scope of the evaluation.",
+      "The paper does not compare its performance against other state-of-the-art multi-agent frameworks."
+    ],
+    "topic_mapping_rationale": "A systematic scan was performed across all 18 topic domains. The paper directly addresses behavioral profiling (5.A) and classification (5.C) through its BDI framework. It is highly relevant to predictive modeling (6.A) and constrained optimization (7.C) via AlphaForge. Budget recommendation (7.B) and evaluation (12.A, 12.B) are also strongly supported. The paper's behavioral discussion justifies medium relevance for budgeting strategies (7.A) and trust (10.B), and engagement (11.A). It was judged low for mobile design (9.A, 9.B), privacy (10.A), retention (11.B), synthetic data (14.A), and deployment (14.B), as these are not addressed. The overall coverage is concentrated on algorithmic personalization and evaluation."
+  },
+  "limitations": [
+    "The prototype was evaluated on a single user and a limited asset universe. [unacknowledged]",
+    "Performance is contingent on the underlying LLM (GPT-4). [unacknowledged]",
+    "The asset universe was limited, restricting the scope of the evaluation. [unacknowledged]",
+    "The paper acknowledges the need for larger, longitudinal studies with diverse cohorts.",
+    "The paper acknowledges the need to test the framework under varied market regimes.",
+    "The paper acknowledges the need for systematic benchmarking against state-of-the-art systems."
+  ],
+  "remember_this": [
+    "Wealth-Voyager is a multi-agent framework for personalized wealth management.",
+    "It integrates behavioral profiling with strategic and tactical asset allocation.",
+    "The tactical strategy achieved a cumulative return of 1.86% over the evaluation period.",
+    "Behavioral anchoring improved annual return from 3.72% to 6.53%.",
+    "The framework enhances user trust and financial literacy through explainable dialogue."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Huang R. et al_marked.md",
+      "converted_at": "2026-07-21T13:34:21Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

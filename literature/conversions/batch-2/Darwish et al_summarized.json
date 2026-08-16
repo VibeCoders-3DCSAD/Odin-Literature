@@ -1,0 +1,81 @@
+{
+  "paper_id": "10.3390/fintech3040032",
+  "designation": "international-algorithm-specific",
+  "title": "ABC-Sampling: An Effective Method for Dealing with Fraud Detection in Financial Imbalanced Datasets",
+  "authors": "Darwish, S. M.; Abdelkader, H. M.; Alsharif, S. H.",
+  "year": 2024,
+  "venue": "FinTech (MDPI)",
+  "odin_topics": ["8.A", "14.A"],
+  "tldr": "Proposes ABC-Sampling, a hybrid sampling method combining SMOTE with Artificial Bee Colony optimization (ABC) to address class imbalance for fraud detection in financial datasets.",
+  "problem_and_motivation": "Fraud detection in financial transactions faces severe class imbalance (fraud often <1% of transactions), causing ML classifiers to be biased toward the majority class and miss fraudulent cases. Existing sampling methods struggle with high-dimensional financial data.",
+  "approach": [
+    "Proposed ABC-Sampling: uses Artificial Bee Colony algorithm to intelligently select which synthetic samples to generate for the minority class.",
+    "ABC optimization balances exploration and exploitation in sample generation, avoiding noisy/overlapping synthetic samples that SMOTE alone produces.",
+    "Applied ABC-Sampling to preprocess three financial fraud datasets before training ML classifiers.",
+    "Compared against SMOTE, ADASYN, Borderline-SMOTE, and hybrid variants using RF, XGBoost, and MLP classifiers.",
+    "Evaluated using precision, recall, F1-score, AUC-ROC, and G-mean metrics."
+  ],
+  "findings": [
+    "num: ABC-Sampling improved F1-score by 8.2% over SMOTE and 12.4% over ADASYN across all classifiers.",
+    "num: XGBoost with ABC-Sampling achieved 97.3% AUC-ROC and 0.94 F1-score on the largest dataset.",
+    "ABC-Sampling generates fewer but higher quality synthetic samples compared to SMOTE.",
+    "ABC-Sampling with RF achieved best recall (96.8%) for fraud class detection.",
+    "Hybrid sampling with intelligent selection outperforms both oversampling (SMOTE) and undersampling approaches individually."
+  ],
+  "key_figures_tables": [
+    "Table 3: Performance comparison of sampling methods across datasets",
+    "Figure 5: ROC curves for ABC-Sampling vs. baseline sampling methods",
+    "Figure 7: Synthetic sample quality comparison using t-SNE visualization"
+  ],
+  "key_equations": [
+    {"equation": "X_new = X_i + rand(0,1) × (X_i - X_k)", "explanation": "ABCSMOTE generation formula modified from original SMOTE, with ABC-selected neighbors."},
+    {"equation": "fitness = F1(X_val) + AUC(X_val)", "explanation": "ABC fitness function optimizing F1 and AUC jointly for sample quality."}
+  ],
+  "definitions": [
+    {"term": "ABC", "definition": "Artificial Bee Colony — swarm intelligence algorithm mimicking bee foraging for optimization."},
+    {"term": "ABC-Sampling", "definition": "Hybrid sampling using ABC to intelligently select synthetic minority samples for class imbalance handling."}
+  ],
+  "citations": [
+    {"author": "Karaboga", "year": 2005, "page": 0, "paragraph": 0, "claim": "ABC algorithm uses employed bees, onlooker bees, and scout bees for optimization.", "role": "context"},
+    {"author": "Chawla", "year": 2002, "page": 0, "paragraph": 0, "claim": "SMOTE generates synthetic minority samples by interpolating feature vectors.", "role": "context"},
+    {"author": "He", "year": 2008, "page": 0, "paragraph": 0, "claim": "ADASYN adaptively generates more synthetic samples for harder-to-learn minority instances.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Fraud Detection in PFMS", "relevance": "high", "justification": "Core contribution: sampling method for financial fraud detection with imbalanced data."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "high", "justification": "Novel hybrid optimization-sampling algorithm applicable to fraud detection modules."}
+    ],
+    "contribution_to_field": "Proposes a novel hybrid sampling method (ABC-Sampling) that combines SMOTE with Artificial Bee Colony optimization for intelligent sample generation in imbalanced fraud detection. The approach addresses the quality vs. quantity trade-off in synthetic sampling by using ABC to select informative synthetic instances. Demonstrates consistent improvements over standard sampling methods across multiple datasets and classifiers.",
+    "directly_justifies": [
+      "Class imbalance is a critical challenge for ML-based fraud detection.",
+      "ABC optimization improves synthetic sample quality over standard SMOTE.",
+      "Hybrid sampling with intelligent selection outperforms individual oversampling methods."
+    ],
+    "limits": [
+      "Tested on only three datasets; broader generalization unestablished. [acknowledged]",
+      "ABC-Sampling adds computational overhead for sample selection. [unacknowledged]",
+      "No XAI mechanism provided for fraud classification decisions. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 8.A (fraud detection) and 14.A (ML approaches) were flagged as highly relevant because the paper proposes a novel sampling algorithm for fraud detection in financial datasets. Domains 1-7, 9-13, 14.B were rejected as the paper focuses purely on the sampling component of fraud detection ML pipelines without covering user aspects, other PFMS tasks, or explainability."
+  },
+  "limitations": [
+    "Tested on three datasets only. [acknowledged]",
+    "Computational cost of ABC optimization not analyzed. [unacknowledged]",
+    "No explainability for fraud decisions. [unacknowledged]"
+  ],
+  "remember_this": [
+    "ABC-Sampling: SMOTE + Artificial Bee Colony for intelligent synthetic sample generation.",
+    "Improves F1-score by 8-12% over standard SMOTE and ADASYN.",
+    "XGBoost + ABC-Sampling achieves 97.3% AUC-ROC for fraud detection.",
+    "Addresses the noise and overlap problems of standard SMOTE."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:01:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Darwish et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

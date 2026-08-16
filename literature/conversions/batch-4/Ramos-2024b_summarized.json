@@ -1,0 +1,74 @@
+{
+  "paper_id": "10.1515/jbnst-2018-0022",
+  "designation": "local",
+  "title": "Essays on the Causes and Demographic Consequences of Employment Uncertainty",
+  "authors": "Demographic Consequences",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "13.B"
+  ],
+  "tldr": "The adverse effects of COVID-19 on labour market outcomes are amplified by and partly attributable to the imposition of extreme mobility restrictions. While gendered disparities in job losses and working hours reduction are demonstrated in the literature, is an informalization of employment observed, and is this phenomenon likewise gendered? This article analyses the Philippines, a country that im",
+  "problem_and_motivation": "The adverse effects of COVID-19 on labour market outcomes are amplified by and partly attributable to the imposition of extreme mobility restrictions. While gendered disparities in job losses and working hours reduction are demonstrated in the literature, is an informalization of employment observed, and is this phenomenon likewise gendered? This article analyses the Philippines, a country that imposed one of the world’s longest and strictest lockdowns, specifically how its imposition affected i",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Essays on the Causes and Demographic Consequences of Employment Uncertainty"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Essays on the Causes and Demographic Consequences of Employment Uncertainty",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Ramos-2024b_marked.md",
+      "converted_at": "2026-07-21T08:16:44Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

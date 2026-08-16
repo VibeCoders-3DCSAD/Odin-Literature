@@ -1,0 +1,333 @@
+{
+  "paper_id": "10.1002/cfp2.1194",
+  "designation": "international",
+  "title": "Perceptions or behavior? An evaluation of CFPB's financial well-being scale using household financial ratios",
+  "authors": "Khashadourian, E.; Harrison, A. L.",
+  "year": 2024,
+  "venue": "Financial Planning Review",
+  "odin_topics": [
+    "1.C",
+    "2.A",
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "12.A",
+    "12.C",
+    "13.A"
+  ],
+  "tldr": "Evaluates the correspondence between objective household financial ratios and subjective CFPB Financial Well-Being Scale scores through discriminant analysis to identify four distinct financial well-being categories.",
+  "problem_and_motivation": "Existing financial well-being scales are almost entirely subjective, and the relationship between objective financial ratios and subjective well-being measures remains poorly understood. A conjoined theoretical model combining both types of data has yet to be developed, limiting the actionability of financial well-being assessments.",
+  "approach": [
+    "Developed an online survey with 40 multicomponent questions covering household budget, assets, liabilities, and the CFPB Financial Well-Being Scale.",
+    "Collected data from 416 US respondents aged 25-60 with proportional income stratification from Qualtrics in April-May 2022.",
+    "Calculated four financial ratios: Estimated Monthly Savings Rate, Percentage of Fixed Expenses, Credit Insolvency Ratio, and Average Liquidity Ratio.",
+    "Used linear discriminant analysis to identify the optimal number of financial well-being categories among 4-, 5-, and 6-category candidate variables.",
+    "Applied one-way ANOVA with post-hoc comparisons to evaluate differences in CFPB scores across the identified financial well-being categories.",
+    "Included random effects in the ANOVA model to improve within-group variability and group-level effects."
+  ],
+  "findings": [
+    "num: Discriminant analysis identified 4 distinct stages of financial well-being with 81.3% classification accuracy (Model 3).",
+    "num: ANOVA revealed significant main effect for financial well-being categories on CFPB scores, F(3,406)=32.99, p<0.001, η²=0.197.",
+    "num: Mean CFPB scores declined monotonically: Flourishing=63.08, Stable=51.31, Fragile=48.76, Distressed=47.57.",
+    "All discriminant functions were significant for the 4-category model (Wilk's=0.827, χ²(2)=76.52, p<0.001), indicating strong discriminatory power.",
+    "The CFPB scale's coefficient of variation (24%) matched the national dataset (25%), suggesting potential noise in the CFPB data.",
+    "Saving behavior was confirmed as a critical predictor, with the EMH framework showing progressive interaction of four financial ratios.",
+    "Random effects inclusion improved pairwise comparisons, but nonoverlapping confidence intervals were not achieved across all four categories.",
+    "The Financially Fragile and Financially Distressed categories exhibited substantial overlap in CFPB score confidence intervals.",
+    "Post-hoc tests found all pairwise comparisons significant at α=0.1 except between Financially Fragile and Financially Distressed.",
+    "The EMH framework posits a hierarchy: positive savings rate → fixed expenses ≤65% → nonmortgage debt ≤15% → liquid assets ≥200% of monthly expenses."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Estimated Marginal Means of CFPB Financial Well-Being Score → Mean CFPB scores decline monotonically across the four financial well-being categories.",
+    "Table 2: Ordinal Rankings of household financial status in the EMH framework → Shows 16 possible ranks based on combinations of four binary financial ratio conditions.",
+    "Table 3: Financial and demographic characteristics of respondents → Provides comprehensive breakdown of the 416-participant sample demographics.",
+    "Table 4: Eigenvalues and canonical correlations → First discriminant function explains 61% of variance in the 4-category model.",
+    "Table 5: Test of discriminant function and classification overall hit rate → The 4-category model achieved the highest hit rate (81.3%) with all discriminant functions significant.",
+    "Table 6: Structure matrix of correlations between each variable and discriminant function → Shows ALR and CIR correlations with expected signs per EMH.",
+    "Table 7: Stages of financial well-being → Reports frequencies and mean CFPB scores for each of the four categories.",
+    "Table 8: Confidence intervals around the mean with and without inclusion of random effects → Random effects improved group-level separation for the first three categories.",
+    "Table 9: Description of financial well-being categories within the EMH model → Provides actionable descriptions and corresponding CFPB score ranges for practitioners."
+  ],
+  "key_equations": [
+    {
+      "equation": "EMS = (MNI - TME) / MGI × 100",
+      "explanation": "Estimated Monthly Savings Rate as percentage of gross income."
+    },
+    {
+      "equation": "PFE = FE / MNI × 100",
+      "explanation": "Percentage of Fixed Expenses relative to net monthly income."
+    },
+    {
+      "equation": "CIR = MPO / MNI × 100",
+      "explanation": "Credit Insolvency Ratio measuring nonmortgage debt payments."
+    },
+    {
+      "equation": "ALR = LNLA / TME × 100",
+      "explanation": "Average Liquidity Ratio measuring liquid assets relative to expenses."
+    },
+    {
+      "equation": "DFij = αij + β1i z1j + β2i z2j + β3i z3j + β4ij z4j",
+      "explanation": "Discriminant function combining four financial ratios with coefficients."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "EMH",
+      "definition": "Equilibrium Model of the Household: a framework positing that financial well-being progresses through establishing positive cash flow, flexible budgets, manageable debt, and adequate liquidity."
+    },
+    {
+      "term": "CFPB",
+      "definition": "Consumer Financial Protection Bureau: US agency that introduced a 10-item Financial Well-Being Scale in 2015."
+    },
+    {
+      "term": "EMS",
+      "definition": "Estimated Monthly Savings Rate: difference between monthly net income and monthly expenses as a share of monthly gross income."
+    },
+    {
+      "term": "PFE",
+      "definition": "Percentage of Fixed Expenses: proportion of fixed expenses to net monthly expenses, with ≤65% considered healthy."
+    },
+    {
+      "term": "CIR",
+      "definition": "Credit Insolvency Ratio: proportion of monthly nonmortgage payments to net monthly income, with <15% recommended."
+    },
+    {
+      "term": "ALR",
+      "definition": "Average Liquidity Ratio: amount of liquid assets relative to monthly expenses, with 200% as benchmark."
+    },
+    {
+      "term": "LDA",
+      "definition": "Linear Discriminant Analysis: mathematical maximization procedure used to identify optimal number of financial well-being categories."
+    }
+  ],
+  "citations": [
+    {
+      "author": "CFPB",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 1,
+      "claim": "Introduced Financial Well-Being Scale as a 10-item survey to gauge effectiveness of financial interventions.",
+      "role": "methodology"
+    },
+    {
+      "author": "CFPB",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 2,
+      "claim": "None of the objective measures can independently determine financial well-being due to high score distribution standard deviation.",
+      "role": "finding"
+    },
+    {
+      "author": "Comerton-Forde",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Both self-reported subjective scale and 'observed' scale maintained high consistency in discriminating between financial outcomes.",
+      "role": "finding"
+    },
+    {
+      "author": "Comerton-Forde",
+      "year": 2022,
+      "page": 147,
+      "paragraph": 0,
+      "claim": "Saving behavior was the single most important predictor of financial well-being on both subjective and observed scales.",
+      "role": "finding"
+    },
+    {
+      "author": "Anvari-Clark",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 7,
+      "claim": "When saving increased by one standard deviation, CFPB score increased by 0.437 standard deviations.",
+      "role": "finding"
+    },
+    {
+      "author": "Brunetti",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 10,
+      "claim": "Classified households into four categories based on income-expense balance and liquid asset sufficiency.",
+      "role": "methodology"
+    },
+    {
+      "author": "Greninger",
+      "year": 1996,
+      "page": 0,
+      "paragraph": 6,
+      "claim": "Identified financial ratios and benchmarks using Delphi method with 156 financial planners and educators.",
+      "role": "methodology"
+    },
+    {
+      "author": "Brüggen",
+      "year": 2017,
+      "page": 234,
+      "paragraph": 0,
+      "claim": "The gap in literature on correspondence between objective and subjective financial well-being measures has not been properly addressed.",
+      "role": "context"
+    },
+    {
+      "author": "Gutman",
+      "year": 2015,
+      "page": 0,
+      "paragraph": 3,
+      "claim": "Defined seven distinct financial health segments within three tiers based on 24 objective and subjective questions.",
+      "role": "baseline"
+    },
+    {
+      "author": "DeVaney",
+      "year": 1994,
+      "page": 0,
+      "paragraph": 8,
+      "claim": "Household financial ratio analysis serves to objectively measure family finance, track progress, and guide financial educators.",
+      "role": "context"
+    },
+    {
+      "author": "Garrett",
+      "year": 2013,
+      "page": 0,
+      "paragraph": 9,
+      "claim": "Examined the relationship between household financial satisfaction and financial ratios.",
+      "role": "context"
+    },
+    {
+      "author": "Nanda",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 2,
+      "claim": "Individuals or households with identical objective characteristics may have different perceptions of financial well-being.",
+      "role": "critique"
+    },
+    {
+      "author": "Enete",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 30,
+      "claim": "Negative and positive emotions influence individual perceptions of financial well-being in negative and positive ways respectively.",
+      "role": "context"
+    },
+    {
+      "author": "Riitsalu",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 31,
+      "claim": "Financial well-being may mean different things to people in different age groups.",
+      "role": "context"
+    },
+    {
+      "author": "CFPB",
+      "year": 2017,
+      "page": 20,
+      "paragraph": 0,
+      "claim": "There seems to be no single set of characteristics or circumstances that lead an individual to have higher or lower financial well-being.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Study focuses on US households and financial behavior patterns, providing generalizable behavioral context."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "US-based study with general financial behavior patterns not specifically culturally tied."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Defines PFE and expense categorization through fixed vs. variable expense ratios."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews and evaluates CFPB scale and CFSI Financial Health Segments as existing systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gap in conjoined theoretical models and critiques CFPB scale's noise and reliability issues."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Defines four behavioral profiles: Distressed, Fragile, Stable, and Flourishing based on financial ratios."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Uses LDA to classify households into behavioral profiles with 81.3% accuracy."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Evaluates CFPB scale's construct validity and actionability through objective-subjective comparison."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Provides methodological framework for evaluating categorization systems applicable to budget recommendation."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Identifies savings rate as critical predictor and EMH hierarchy starts with positive cash flow for savings."
+      }
+    ],
+    "contribution_to_field": "This paper makes a significant contribution to financial well-being research by empirically validating the correspondence between objective household financial ratios and subjective CFPB scale scores. It introduces the Equilibrium Model of the Household (EMH), a novel conceptual framework that establishes a progressive hierarchy of four financial ratios to define distinct stages of financial well-being. The study provides evidence supporting construct validity of the CFPB scale while simultaneously raising important questions about its reliability due to potential noise in the data. By demonstrating that financial ratios can effectively categorize financial well-being with 81.3% accuracy, the paper bridges a critical gap between objective and subjective measurement approaches that has persisted in the literature. The research also offers practitioners actionable score ranges for the CFPB scale, enhancing its utility for financial counseling and coaching applications.",
+    "directly_justifies": [
+      "Financial ratios can effectively categorize financial well-being into four distinct stages.",
+      "CFPB scores decline monotonically across the four EMH financial well-being categories.",
+      "The claim that CFPB scale measures something beyond traditional financial measures is imprecise and may reflect data noise.",
+      "Saving behavior is the most important predictor of financial well-being on both subjective and objective scales.",
+      "The progressive interaction of four financial ratios follows an ordered hierarchy toward financial flourishing."
+    ],
+    "limits": [
+      "Study focuses on US households aged 25-60, limiting generalizability to other populations.",
+      "Relies on self-reported financial data, which may introduce nonsystematic measurement errors.",
+      "Sample size (n=416) is relatively small compared with similar studies, with 18% data exclusion.",
+      "Unable to define nonoverlapping confidence intervals for all four financial well-being categories.",
+      "Potential systematic errors may arise from assuming all household transactions occur through a single financial intermediary.",
+      "Does not address the role of emotional and mental states on financial well-being perceptions."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains was conducted to assess relevance. Topics 3.A (Expense Categorization Frameworks), 4.A and 4.B (Existing Systems and Limitations), 5.A and 5.C (Behavioral Profiles and Classification), and 12.A (Evaluation Frameworks) were flagged as high relevance because the paper directly addresses expense ratio definitions, evaluates the CFPB scale, introduces the EMH classification system, and evaluates construct validity. Topics 12.C and 13.A were deemed medium relevance as the methodology and savings findings are applicable to budget recommendation and savings goal systems. Topic 1.C received contextual relevance as US financial behavior patterns provide general behavioral context, though not specific to Filipino young professionals. Topic 2.A was considered contextual as the study examines US household practices. The borderline case of Topic 4.B (Limitations) was selected as high relevance because the paper explicitly critiques the CFPB scale's noise and reliability. Topics 2.B (Seasonal Spending), 2.C (User-Declared Preferences), and 2.D (Spending Cycles) were rejected as the study does not examine these specific patterns. The overall topical coverage centers on financial well-being measurement and classification, with strong relevance to behavioral profiling and system evaluation."
+  },
+  "limitations": [
+    "Reliance on self-reported financial data, which may introduce nonsystematic measurement errors.",
+    "Sample size was relatively small (n=416) compared with similar studies [unacknowledged].",
+    "18% of the original sample was excluded due to missing or inconsistent data.",
+    "Unable to define nonoverlapping and exhaustive intervals of CFPB scores across all four categories.",
+    "Potential systematic errors when collecting data from a single financial institution. [unacknowledged]",
+    "Study may not generalize beyond the US population aged 25-60.",
+    "High standard deviation in CFPB scores may indicate noise in the data, raising questions about reliability. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Discriminant analysis identifies four financial well-being stages with 81.3% accuracy.",
+    "Mean CFPB scores decline from 63.08 for Flourishing to 47.57 for Distressed.",
+    "Positive savings rate is the foundational requirement for financial well-being.",
+    "CFPB scale may contain substantial noise, with coefficient of variation at 24%.",
+    "Financial ratios can objectively categorize well-being, supporting CFPB scale validity."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Khashadourian & Harrison_marked.md",
+      "converted_at": "2026-07-21T13:47:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

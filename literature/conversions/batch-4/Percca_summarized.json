@@ -1,0 +1,95 @@
+{
+  "paper_id": "10.1023/A:1010933404324",
+  "designation": "local-algorithm-specific",
+  "title": "Unveiling the Financial Wellbeing Ecosystem: A Data-Driven Framework of Six Behavioral Profiles",
+  "authors": "Financial Wellbeing Ecosystem; Driven Framework; Six Behavioral",
+  "year": 2017,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "12.A",
+    "5.C",
+    "6.A"
+  ],
+  "tldr": "Daniel Fernando Masias Percca, Universidad ESAN, Lima, Peru Jr. Alonso de Molina 1652, Lima, Peru dmasias@esan.edu.pe",
+  "problem_and_motivation": "Daniel Fernando Masias Percca, Universidad ESAN, Lima, Peru Jr. Alonso de Molina 1652, Lima, Peru dmasias@esan.edu.pe",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Unveiling the Financial Wellbeing Ecosystem: A Data-Driven Framework of Six Beha"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Unveiling the Financial Wellbeing Ecosystem: A Data-Driven Framework of Six Beha",
+    "Year: 2017",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Percca_marked.md",
+      "converted_at": "2026-07-21T08:07:17Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

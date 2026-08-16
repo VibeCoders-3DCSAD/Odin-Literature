@@ -1,0 +1,227 @@
+{
+  "paper_id": "10.63125/0nbg6w69",
+  "designation": "international-algorithm-specific",
+  "title": "Machine Learning–Based Transaction Risk Scoring Models for Financial Compliance Monitoring in Foreign Exchange Operations",
+  "authors": "Rukaiya Khatun Moury",
+  "year": 2026,
+  "venue": "International Journal of Scientific Interdisciplinary Research, 7(1), 172-203",
+  "odin_topics": [
+    "4.B",
+    "5.C",
+    "7.D",
+    "12.A"
+  ],
+  "tldr": "A quantitative cross-study synthesis of 124 analytic records from 89 publications on ML-based transaction risk scoring for FX compliance monitoring, revealing ensemble model dominance and critical gaps in governance instrumentation.",
+  "problem_and_motivation": "Foreign exchange operations involve high-velocity, high-volume transactions requiring automated compliance monitoring for anti-money laundering, sanctions screening, and fraud detection. Machine learning risk scoring models are proposed as solutions, but heterogeneous reporting, inconsistent evaluation practices, and limited governance documentation hinder comparability and operational deployment. No prior study has systematically quantified the landscape of model families, feature engineering strategies, validation designs, and governance controls across the FX compliance risk scoring literature.",
+  "approach": [
+    "Designed a structured coding and extraction protocol converting heterogeneous research into standardized variables across model family, feature construction, validation design, labeling strategy, evaluation metrics, and governance controls.",
+    "Sampled 124 analytic records from 89 publications using purposive criteria-based systematic review methodology with explicit inclusion and exclusion rules.",
+    "Computed descriptive statistics for model families, feature groups, evaluation metrics, and governance indicators across the coded dataset.",
+    "Constructed four composite indices (Governance Maturity, Auditability Readiness, Documentation Completeness, Evidence Quality) with Cronbach's alpha reliability testing.",
+    "Conducted logistic regression modeling high predictive performance reporting as a function of model family, validation type, and feature usage.",
+    "Performed linear regression modeling Governance Maturity Score against study type, model family, calibration reporting, and evidence quality.",
+    "Conducted subgroup analyses by FX context (cross-border corridor, correspondent banking, retail/remittance) and sensitivity analyses on higher-evidence-quality subsets."
+  ],
+  "findings": [
+    "num: Ensemble models were the most frequently evaluated (44.4% of records), followed by logistic regression/GLM (37.1%), decision trees (33.9%), neural architectures (29.8%), and unsupervised/semi-supervised methods (26.6%).",
+    "num: Customer-profile variables (69.4%), geographic corridor indicators (62.1%), and temporal aggregation features (57.3%) were the most common feature groups; network-based features appeared in 41.9%.",
+    "num: Discrimination metrics dominated evaluation (82.3%), while ranking metrics (61.3%), calibration measures (34.7%), and cost-sensitive analyses (28.2%) were less reported.",
+    "num: Governance and auditability constructs were underreported: access control in 29.8%, traceability artifacts in 22.6% of records.",
+    "num: Ensemble models (OR=2.27, p=0.008), neural models (OR=1.99, p=0.041), and out-of-time validation (OR=2.83, p=0.004) were significantly associated with high predictive performance reporting.",
+    "num: Operational studies were strongly associated with higher governance maturity scores (beta=1.12, p<0.001) compared to experimental benchmarking studies.",
+    "num: Internal consistency was strong for Governance Maturity (alpha=0.86) and Documentation Completeness (alpha=0.84) indices.",
+    "num: Network feature usage was significantly associated with high performance reporting (chi-square, p=0.015).",
+    "num: 68.5% of records were published between 2018-2023, indicating concentration of recent research.",
+    "num: SAR-derived labels were most common (46.8%), followed by investigation outcomes (28.2%), rule proxies (17.7%), and hybrid approaches (7.3%)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Publication and Context Characteristics (N=124 records) - year, venue, study type, dataset, label source.",
+    "Table 2: Model, Feature, and Governance Characteristics - frequencies by model family and feature group.",
+    "Table 3: Prevalence of Major Construct Families - labeling, modeling, and features.",
+    "Table 4: Evaluation, Thresholding, and Governance Construct Reporting.",
+    "Table 5: Cronbach's Alpha Reliability Results for four composite indices.",
+    "Table 6: Item-Total Diagnostics for Evidence Quality Index refinement.",
+    "Table 7: Logistic Regression Predicting High Predictive Performance Reporting with odds ratios.",
+    "Table 8: Linear Regression Predicting Governance Maturity Score.",
+    "Table 9: Hypothesis Testing Decisions based on regression results.",
+    "Table 10: Supplementary Association Tests and untestable propositions.",
+    "Figure 1-11: FX ML Risk Framework, methodology diagrams, and evaluation metric frameworks."
+  ],
+  "key_equations": [
+    {
+      "equation": "OR = 2.27 (Ensemble), OR = 1.99 (Neural), OR = 2.83 (Out-of-time validation)",
+      "explanation": "Logistic regression odds ratios showing significantly higher odds of reporting strong predictive performance for these configurations."
+    },
+    {
+      "equation": "Governance Maturity = beta_0 + 1.12*Operational + 0.46*Neural + 0.39*Ensemble + 0.84*Calibration + 1.27*Logging + 0.58*EvidenceQuality",
+      "explanation": "Linear regression model predicting governance maturity score from study and methodological characteristics (Adjusted R-squared=0.48)."
+    },
+    {
+      "equation": "Cronbach's alpha = 0.86 (Governance Maturity), 0.84 (Documentation Completeness), 0.79 (Auditability Readiness), 0.76 (Evidence Quality)",
+      "explanation": "Reliability coefficients for the four composite indices used to measure governance and reporting quality."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Transaction risk scoring",
+      "definition": "Analytical process through which a transaction is evaluated for potential association with regulatory breaches, financial crime indicators, or policy nonconformity using measurable features from transaction records."
+    },
+    {
+      "term": "Foreign exchange (FX) compliance monitoring",
+      "definition": "Continuous control activity ensuring currency trading and settlement transactions conform to AML, CTF, sanctions screening, and institutional risk governance rules."
+    },
+    {
+      "term": "Governance Maturity Index",
+      "definition": "Composite measure (8 binary items) capturing access control, approval workflow, role separation, change control, threshold governance, incident response, accountability, and compliance alignment."
+    },
+    {
+      "term": "Out-of-time validation",
+      "definition": "Temporal validation approach where models are trained on earlier periods and evaluated on later periods to simulate real deployment conditions and assess temporal stability."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Srokosz et al.",
+      "year": 2023,
+      "page": 173,
+      "paragraph": 1,
+      "claim": "Defined transaction risk scoring as the analytical process evaluating transactions for regulatory breaches.",
+      "role": "context"
+    },
+    {
+      "author": "Bhatore et al.",
+      "year": 2020,
+      "page": 174,
+      "paragraph": 1,
+      "claim": "Cross-border currency movements can be exploited for money laundering, sanctions evasion, and illicit capital flight.",
+      "role": "context"
+    },
+    {
+      "author": "Jullum et al.",
+      "year": 2020,
+      "page": 176,
+      "paragraph": 2,
+      "claim": "Binary labeling is commonly adopted for modeling simplicity in compliance analytics.",
+      "role": "context"
+    },
+    {
+      "author": "Lee et al.",
+      "year": 2021,
+      "page": 182,
+      "paragraph": 2,
+      "claim": "High-volume FX monitoring requires low-latency scoring to support operational controls.",
+      "role": "context"
+    },
+    {
+      "author": "Bücker et al.",
+      "year": 2022,
+      "page": 182,
+      "paragraph": 1,
+      "claim": "Stability of feature attributions is critical for explainability in compliance settings.",
+      "role": "context"
+    },
+    {
+      "author": "Alkhalili et al.",
+      "year": 2021,
+      "page": 179,
+      "paragraph": 1,
+      "claim": "Unsupervised anomaly scoring can produce high false-positive volumes without domain-encoded feature engineering.",
+      "role": "context"
+    },
+    {
+      "author": "Esenogho et al.",
+      "year": 2022,
+      "page": 194,
+      "paragraph": 2,
+      "claim": "Label-driven risk modeling aligns with earlier AML literature treating SARs as dominant measurable endpoints.",
+      "role": "context"
+    },
+    {
+      "author": "Dressler and Paunovic",
+      "year": 2021,
+      "page": 195,
+      "paragraph": 1,
+      "claim": "Rule-trigger proxies continue as secondary labeling strategy when investigation outcomes are unavailable.",
+      "role": "context"
+    },
+    {
+      "author": "Mukherjee et al.",
+      "year": 2024,
+      "page": 194,
+      "paragraph": 3,
+      "claim": "Operational threat constructs (delays, bottlenecks, disruptions) are rarely operationalized into measurable variables.",
+      "role": "support"
+    },
+    {
+      "author": "Gao et al.",
+      "year": 2020,
+      "page": 195,
+      "paragraph": 2,
+      "claim": "Tiered labeling and confidence-aware evaluation are recommended but not widely adopted in FX monitoring.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.B",
+        "name": "Machine Learning Algorithms",
+        "relevance": "high",
+        "justification": "Systematically compares ensemble, neural, decision tree, logistic regression, and unsupervised ML models for transaction risk scoring."
+      },
+      {
+        "code": "5.C",
+        "name": "Fraud Detection & AML",
+        "relevance": "high",
+        "justification": "Core focus on AML compliance monitoring, suspicious activity detection, sanctions screening, and financial crime prevention in FX."
+      },
+      {
+        "code": "7.D",
+        "name": "Risk Management",
+        "relevance": "high",
+        "justification": "Addresses model risk, governance maturity, auditability, and regulatory compliance in financial risk scoring systems."
+      },
+      {
+        "code": "12.A",
+        "name": "Systematic Reviews & Surveys",
+        "relevance": "high",
+        "justification": "Quantitative cross-study synthesis with structured extraction protocol, composite indices, and regression analysis of literature patterns."
+      }
+    ],
+    "contribution_to_field": "Provides the first quantitative synthesis of ML-based FX compliance risk scoring literature, demonstrating that validation rigor (out-of-time testing) predicts performance more consistently than model family alone, and that governance instrumentation lags substantially behind predictive modeling focus.",
+    "directly_justifies": [
+      "Use of ensemble methods and out-of-time validation for transaction risk scoring models.",
+      "Importance of feature engineering (customer profile, geographic corridor, temporal features) over model family selection.",
+      "Need for governance and auditability instrumentation in ML-based financial systems."
+    ],
+    "limits": [
+      "Synthesis limited to published literature; proprietary institutional models may have different characteristics.",
+      "Heterogeneous reporting across studies constrains meta-analytic precision.",
+      "FX-specific focus may limit generalizability to non-FX transaction monitoring contexts."
+    ],
+    "topic_mapping_rationale": "Primary topics are ML algorithms (4.B) for transaction scoring, fraud detection/AML (5.C), risk management (7.D), and systematic review methodology (12.A)."
+  },
+  "limitations": [
+    "Cross-study synthesis constrained by heterogeneous reporting and inconsistent outcome definitions across the evidence base.",
+    "Purposive sampling may introduce selection bias toward more methodologically detailed studies.",
+    "Unable to test availability-focused threat modeling due to structural missingness in the literature.",
+    "Descriptive and associational findings cannot establish causal relationships between model choices and performance.",
+    "Majority of records rely on proprietary datasets (64.5%), limiting reproducibility and cross-validation."
+  ],
+  "remember_this": [
+    "Ensemble models dominate (44.4%) but validation rigor predicts performance more than model family.",
+    "Governance metrics lag far behind predictive metrics in compliance ML literature.",
+    "Out-of-time validation is the strongest predictor of high performance reporting (OR=2.83).",
+    "Customer profile and geographic corridor features are most commonly engineered.",
+    "Calibration and cost-sensitive evaluation are critically underreported."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Moury_marked.md",
+      "converted_at": "2026-07-21T07:40:34Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

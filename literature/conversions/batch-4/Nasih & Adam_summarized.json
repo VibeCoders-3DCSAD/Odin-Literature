@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.1177/2047173417719555",
+  "designation": "international",
+  "title": "How do young people perceive financial literacy, and what role do they believe it plays in their future success Mohamed Nasih1 and  Aminath Shafiya Adam2",
+  "authors": "Mohamed Nasih; Aminath Shafiya Adam",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.C",
+    "11.A",
+    "2.A",
+    "4.A",
+    "4.B",
+    "7.B"
+  ],
+  "tldr": "Financial literacy has become increasingly critical for young adults, navigating complex financial",
+  "problem_and_motivation": "Financial literacy has become increasingly critical for young adults, navigating complex financial",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: How do young people perceive financial literacy, and what role do they believe i"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: How do young people perceive financial literacy, and what role do they believe i",
+    "Year: 2014",
+    "Designation: international"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:35Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Nasih & Adam_marked.md",
+      "converted_at": "2026-07-21T07:44:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

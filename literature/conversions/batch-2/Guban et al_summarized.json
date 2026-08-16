@@ -1,0 +1,65 @@
+{
+  "paper_id": "10.63125/guban2025",
+  "designation": "local-algorithm-specific",
+  "title": "WEKA-Based Decision-Tree Model for User Subscription Plan Prediction",
+  "authors": "Guban, J. C. R.; Menderico, C. D. R.; Montalban, D. M. G.",
+  "year": 2025,
+  "venue": "Technological University of the Philippines - Manila",
+  "odin_topics": ["5.C", "6.A"],
+  "tldr": "Develops a J48 decision-tree model in WEKA to predict streaming subscription plans from 2,500 user records, achieving 72% accuracy with country, age, and device as top predictors.",
+  "problem_and_motivation": "Understanding user preferences in subscription plan selection is vital for data-driven strategies. Predictive models can inform plan design and targeted marketing but require interpretable outputs.",
+  "approach": [
+    "Used dataset of 2,500 anonymized user records from a major streaming platform.",
+    "Features included age, gender, country, device type, and subscription start month.",
+    "Applied J48 decision-tree algorithm in WEKA for supervised classification.",
+    "Used 80/20 train-test split with cross-validation.",
+    "Evaluated using accuracy, Kappa statistic, precision, recall, F-measure, and ROC area."
+  ],
+  "findings": [
+    "num: Model achieved 72% overall accuracy in predicting Basic, Standard, or Premium plans.",
+    "Country was the most influential predictor, followed by age and device type.",
+    "Interpretable decision rules highlight complex attribute combinations.",
+    "Younger smartphone users subscribing later in year often chose Premium.",
+    "Older users on Smart TVs tended toward Standard or Basic tiers."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "J48", "definition": "WEKA implementation of C4.5 decision tree algorithm."},
+    {"term": "Kappa statistic", "definition": "Measure of agreement between predicted and actual classifications."}
+  ],
+  "citations": [],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Decision-tree classification of user preferences by demographic/behavioral attributes."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Predictive modeling approach transferable to finance subscription prediction."}
+    ],
+    "contribution_to_field": "Demonstrates interpretable decision-tree classification for user subscription prediction. Shows country, age, and device type as key determinants of plan choice. Provides example of transforming user data into actionable business insights.",
+    "directly_justifies": [
+      "Decision trees provide interpretable subscription plan prediction rules.",
+      "Country, age, and device type are top predictors of plan choice."
+    ],
+    "limits": ["Limited to streaming data; not directly personal finance."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.C high for classification. Assigned 6.A medium for predictive modeling. Rejected personal finance-specific topics as paper addresses streaming subscription prediction."
+  },
+  "limitations": [
+    "Single-platform data limits generalizability.",
+    "Only 72% accuracy leaves room for improvement.",
+    "No comparison with other algorithm types beyond J48."
+  ],
+  "remember_this": [
+    "J48 decision tree achieves 72% accuracy for subscription prediction.",
+    "Country is the strongest predictor, followed by age and device.",
+    "Interpretable rules reveal complex user attribute combinations.",
+    "Younger smartphone users tend toward Premium subscriptions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Guban et al_marked.md",
+      "converted_at": "2026-07-22T13:27:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

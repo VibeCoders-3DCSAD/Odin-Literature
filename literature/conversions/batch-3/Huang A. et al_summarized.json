@@ -1,0 +1,258 @@
+{
+  "paper_id": "10.4018/JGIM.395852",
+  "designation": "international-algorithm-specific",
+  "title": "Dynamic Calibration of Decision Thresholds for Financial Anomaly Detection: Verification With Payment Platform Information and Data",
+  "authors": "Huang, A.; Zhang, X.; Wang, Y.; Tsai, S.; Zhou, P.; Chen, L.",
+  "year": 2025,
+  "venue": "Journal of Global Information Management",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.D",
+    "8.A",
+    "8.B",
+    "8.C",
+    "12.B",
+    "14.A",
+    "14.C"
+  ],
+  "tldr": "Proposes a Temporal-Attention Isolation Forest with Dynamic Calibration that adaptively updates decision thresholds online and encodes short-range temporal dependencies to improve fraud detection under non-stationary payment streams.",
+  "problem_and_motivation": "Static anomaly score thresholds in Isolation Forest-based fraud detection degrade performance when transaction distributions shift or are manipulated. A robust, feedback-aware method to adjust cutoffs in unsupervised streaming settings remains underexplored.",
+  "approach": [
+    "Transaction stream is segmented into sliding windows to enable temporal modeling and online calibration.",
+    "A temporal attention encoder captures periodic patterns and behavior drift using time encoding and scaled dot-product attention.",
+    "Isolation Forest computes anomaly scores on attention-enhanced transaction representations.",
+    "Dynamic threshold calibration updates the decision boundary via a smoothed percentile-based rule and optional feedback-informed correction using false positive/negative counts.",
+    "Evaluation uses five datasets (IEEE-CIS, PaySim, CCFD, SFD-FD, BankSim) under streaming protocols with induced drift and delayed labels.",
+    "Benchmarked against Online-iForest, Hybrid-AI, GNN-IF, XGB-Anomaly, SSR-RVFL, and an autoencoder-based detector.",
+    "Hyperparameters include 100 IF trees, subsample size 256, calibration window 2,000 transactions, attention window 15 steps, and smoothing factor 0.1.",
+    "Drift detection via Kolmogorov–Smirnov distance triggers partial reset of threshold calibrator.",
+    "Latency, precision, recall, F1, and AUC are reported under prequential replay.",
+    "Ablation studies isolate the contribution of dynamic calibration and temporal attention."
+  ],
+  "findings": [
+    "num: TA-IFDC achieves F1 0.927 and AUC 0.974 on IEEE-CIS at 29 ms per record, outperforming baselines.",
+    "num: Removing dynamic threshold calibration drops recall from 0.918 to 0.835 and F1 from 0.927 to 0.852 on IEEE-CIS.",
+    "num: Temporal attention increases AUC from 0.938 to 0.968 and recall from 0.848 to 0.904 on PaySim.",
+    "num: Under concept drift on SFD-FD, TA-IFDC F1 drops only 0.012 (0.914 to 0.902), versus 0.085 for Online-iForest.",
+    "num: On CCFD minority fraud class, TA-IFDC achieves F1 0.896, precision 0.903, and recall 0.889.",
+    "num: Cross-dataset generalization from PaySim to CCFD yields TA-IFDC F1 0.841 and AUC 0.904.",
+    "num: Operational CPU overhead is below 8% over static IF, processing 25–30k transactions per second.",
+    "num: Manual review time reduced by approximately 12% in pilot replay due to stabilized alert volumes.",
+    "Qualitative case: A high-value early morning transaction was flagged only by TA-IFDC due to time-aware scoring.",
+    "Qualitative case: A legitimate charity transfer, often misclassified by static models, was correctly identified by TA-IFDC after feedback adjustment."
+  ],
+  "key_figures_tables": [
+    "Figure 2: Bar charts comparing F1 and latency on IEEE-CIS → TA-IFDC has highest F1 (0.927) and moderate latency (29 ms).",
+    "Figure 3: Ablation of dynamic threshold on IEEE-CIS → Recall drops sharply without calibration, confirming its importance.",
+    "Figure 4: ROC curves on PaySim → Temporal attention raises AUC from 0.938 to 0.968.",
+    "Figure 5: F1 before/after concept drift on SFD-FD → TA-IFDC shows smallest drop (−0.012).",
+    "Figure 6: F1 and latency across window sizes on BankSim → TA-IFDC maintains F1 ~0.91 with latency 26–31 ms.",
+    "Figure 7: Minority class and cross-dataset performance on CCFD → TA-IFDC outperforms SSR-RVFL and XGB-Anomaly."
+  ],
+  "key_equations": [
+    {
+      "equation": "s(z_i) = 2^{-E(h(z_i))/c(n)}",
+      "explanation": "Isolation Forest anomaly score from average path length."
+    },
+    {
+      "equation": "\\theta_k = (1-\\lambda)\\theta_{k-1} + \\lambda \\cdot \\text{Quantile}_\\beta(\\mathcal{S}_k)",
+      "explanation": "Smoothed percentile-based update for dynamic threshold."
+    },
+    {
+      "equation": "\\Delta\\theta_k = \\eta \\cdot (\\alpha \\cdot FP_k/W - (1-\\alpha) \\cdot FN_k/W)",
+      "explanation": "Feedback correction term using false counts."
+    },
+    {
+      "equation": "c(n) = 2H(n-1) - 2(n-1)/n",
+      "explanation": "Normalization factor for Isolation Forest scoring."
+    }
+  ],
+  "definitions": [
+    { "term": "IF", "definition": "Isolation Forest, an unsupervised anomaly detection algorithm." },
+    { "term": "TA-IFDC", "definition": "Temporal-Attention Isolation Forest with Dynamic Calibration, the proposed framework." },
+    { "term": "DTC", "definition": "Dynamic Threshold Calibration module that adaptively adjusts decision boundaries." },
+    { "term": "AUC", "definition": "Area Under the Receiver Operating Characteristic Curve." },
+    { "term": "F1", "definition": "Harmonic mean of precision and recall." },
+    { "term": "IEEE-CIS", "definition": "IEEE Computational Intelligence Society fraud detection dataset from Kaggle 2019 challenge." },
+    { "term": "CCFD", "definition": "Credit Card Fraud Detection dataset from a European card issuer." },
+    { "term": "SFD-FD", "definition": "Synthetic Financial Dataset for Fraud Detection published by IBM." }
+  ],
+  "citations": [
+    {
+      "author": "Liu",
+      "year": 0,
+      "page": 3,
+      "paragraph": 0,
+      "claim": "Original Isolation Forest algorithm isolates anomalies by random feature and split selection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2022,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Fraud patterns are becoming increasingly fragmented and adaptive.",
+      "role": "context"
+    },
+    {
+      "author": "Vanini",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Transaction labels often arrive late or not at all in streaming settings.",
+      "role": "context"
+    },
+    {
+      "author": "Leveni",
+      "year": 2025,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Online-iForest enables incremental ensemble updates for streaming data.",
+      "role": "baseline"
+    },
+    {
+      "author": "Chen",
+      "year": 2022,
+      "page": 3,
+      "paragraph": 3,
+      "claim": "GNN-IF embeds transaction records into account-entity graphs for relational signals.",
+      "role": "baseline"
+    },
+    {
+      "author": "Almazroi",
+      "year": 2023,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Supervised models like XGBoost deliver strong accuracy when abundant labeled data exist.",
+      "role": "context"
+    },
+    {
+      "author": "Mazumder",
+      "year": 2025,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Autoencoders are a deep architecture used for fraud detection.",
+      "role": "baseline"
+    },
+    {
+      "author": "Attar",
+      "year": 2024,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Dynamic calibration and temporal context can be treated as core parts of a detector.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lin",
+      "year": 2024,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Hierarchical context and self-adaptive thresholding improve multivariate anomaly detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Tokovarov",
+      "year": 2022,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "A probabilistic generalization of Isolation Forest improves detection for contextual anomalies.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Presents a novel anomaly detection framework with temporal modeling."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Uses temporal attention to encode dependencies in sequential transaction data."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "contextual",
+        "justification": "Dynamic threshold calibration adapts to distribution shifts, related to constraint handling."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core problem addressed is financial fraud anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Proposes an algorithm (TA-IFDC) specifically for detecting anomalous transactions."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "contextual",
+        "justification": "Discusses challenges with new devices/users but does not propose a cold-start solution."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Ablation studies and benchmark comparisons evaluate the novel modules."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Uses synthetic datasets (PaySim, SFD-FD, BankSim) for evaluation."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "contextual",
+        "justification": "Mentions low latency (29 ms) and optional GPU acceleration, relevant to deployment modes."
+      }
+    ],
+    "contribution_to_field": "This paper introduces a dynamic threshold calibration mechanism for Isolation Forest, addressing a gap in adaptive decision-making under non-stationary fraud data. It demonstrates that combining temporal attention with online calibration significantly improves recall and robustness under concept drift. The work provides empirical evidence that threshold adaptation should be treated as a core component rather than a post-hoc step. The framework's low latency and modular design offer a practical solution for high-throughput transaction systems.",
+    "directly_justifies": [
+      "Fixed anomaly thresholds are brittle under non-stationary traffic and degrade performance.",
+      "Dynamic calibration improves recall and F1 in streaming fraud detection.",
+      "Temporal attention captures short-range dependencies that enhance detection of sequential anomalies.",
+      "TA-IFDC maintains strong performance under concept drift with minimal latency overhead.",
+      "Calibration reduces false positives and manual review time in real-world deployment."
+    ],
+    "limits": [
+      "Efficacy depends on availability of transaction timestamps and temporal continuity.",
+      "Feedback module relies on soft adjustment from model consensus, not direct supervisory signals.",
+      "Legacy infrastructures with coarse logging may lack the required data granularity.",
+      "Assumes continuous, time-stamped streams; may need ordering shims for asynchronous logs."
+    ],
+    "topic_mapping_rationale": "A systematic scan of the topic taxonomy identified high relevance to anomaly detection algorithms (8.A, 8.B) and predictive modeling (6.A, 6.B). The paper's core contribution—dynamic threshold calibration—directly addresses algorithmic evaluation (12.B). Synthetic dataset usage is medium relevance (14.A). The discussion of deployment latency touches on inference modes (14.C), and the infeasibility handling theme is contextual (7.D). Topics related to Filipino demographics, user financial behavior, and mobile-first design were rejected as they are not addressed by the paper. Borderline case: while the paper evaluates on five datasets, it does not generate new synthetic data, so 14.A is 'medium' rather than 'high'. Overall, the paper is centrally focused on algorithmic anomaly detection in financial streams."
+  },
+  "limitations": [
+    "Relies on availability of transaction timestamps and temporal continuity [unacknowledged].",
+    "Feedback module does not use direct supervisory signals, only model-derived agreement.",
+    "Performance may degrade in legacy systems with coarse or asynchronous logging.",
+    "Efficacy under extreme label scarcity is not fully evaluated [unacknowledged]."
+  ],
+  "remember_this": [
+    "TA-IFDC achieves F1 0.927 and AUC 0.974 on IEEE-CIS at 29 ms per record.",
+    "Dynamic threshold calibration improves recall from 0.835 to 0.918 in ablation tests.",
+    "Temporal attention raises AUC from 0.938 to 0.968 on PaySim.",
+    "Under concept drift, TA-IFDC F1 drops only 0.012 versus 0.085 for Online-iForest.",
+    "The framework reduces manual review time by approximately 12% in pilot replay."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Huang A. et al_marked.md",
+      "converted_at": "2026-07-21T13:34:03Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

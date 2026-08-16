@@ -1,0 +1,199 @@
+{
+  "paper_id": "9c9bb8a0-4fe0-5135-84ec-6c5d0f073901",
+  "designation": "local",
+  "title": "Artificial Intelligence and the Philippine Labor Market: Mapping Occupational Exposure and Complementarity",
+  "authors": "Cucio, M.; Hennig, T.",
+  "year": 2025,
+  "venue": "IMF Working Paper, WP/25/43",
+  "odin_topics": ["10.A", "14.B"],
+  "tldr": "Combines AI exposure and complementarity scores with Philippine Labor Force Survey microdata to find one-third of workers highly AI-exposed, with 61% of those showing high complementarity suggesting augmentation rather than displacement.",
+  "problem_and_motivation": "Rapid advances in generative AI are likely to transform labor markets globally, but granular analyses for emerging economies like the Philippines were lacking. The Philippines\u2019 large BPO sector and unique occupational structure required a country-specific assessment of which jobs face displacement versus augmentation from AI.",
+  "approach": [
+    "Merged AI Occupational Exposure (AIOE) scores from Felten et al. (2021) and complementarity indices from Pizzinelli et al. (2023) with Philippine Statistics Authority October 2022 Labor Force Survey microdata (183,602 observations, 52 variables).",
+    "Occupations classified into three categories: high exposure/high complementarity, high exposure/low complementarity, and low exposure, using median score cutoffs for both dimensions.",
+    "AIOE scores constructed from ten AI application capabilities mapped to O*NET occupational abilities via crowd-sourced relevance ratings, covering 774 occupations at 4-digit ISCO-08 level.",
+    "Complementarity index aggregates six O*NET components (communication, responsibility, physical conditions, criticality, routine, skills) to assess substitution versus augmentation likelihood.",
+    "Descriptive analysis correlated exposure and complementarity with demographic dimensions: gender, age, education, wage quintile, urban/rural location, and economic sector."
+  ],
+  "findings": [
+    "num: 36% of Philippine workers are highly exposed to AI; 22% of the workforce is highly exposed with high complementarity, 14% with low complementarity.",
+    "num: 61% of highly exposed jobs are also highly complementary, suggesting AI will augment rather than replace most exposed roles.",
+    "num: BPO sector: 73% of workers are contact center clerks with high exposure and low complementarity, but BPO represents only 3% of total workforce.",
+    "num: BPO sector revenues were US$35.5 billion in 2023, accounting for 7.4% of GDP, comparable to overseas remittances.",
+    "College-educated, young, urban, female, and well-paid workers in the services sector are most exposed to AI.",
+    "Female workers are substantially more exposed than male workers due to concentration in clerical, service, and sales roles.",
+    "Education sector has the highest proportion of high exposure/high complementarity roles, suggesting AI augmentation potential.",
+    "Real average daily basic pay rose ~30% since 2009, but NCR minimum wage stagnated in real terms post-COVID."
+  ],
+  "key_figures_tables": [
+    "Table 2: AI Exposure and Complementarity in the Philippines \u2014 22% high-high, 14% high-low, 64% low exposure.",
+    "Figure 7: AI Exposure by occupation \u2014 managers/professionals high complementarity, clerical high displacement risk.",
+    "Figure 8: Exposure by demographics \u2014 women, urban, college-educated, and high-wage workers most exposed.",
+    "Figure 4: BPO export revenues reached US$35.5B in 2023, growing 9% year-on-year.",
+    "Figure 6: Exposure vs complementarity scatter across occupations \u2014 professionals cluster high-high."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "AIOE", "definition": "AI Occupational Exposure \u2014 score measuring overlap between AI capabilities and occupational task requirements"},
+    {"term": "Complementarity Index", "definition": "Score assessing whether AI augments or substitutes human labor in an occupation"},
+    {"term": "BPO", "definition": "Business Process Outsourcing"},
+    {"term": "O*NET", "definition": "Occupational Information Network database sponsored by the U.S. Department of Labor"},
+    {"term": "ISCO-08", "definition": "International Standard Classification of Occupations, 2008 revision"}
+  ],
+  "citations": [
+    {
+      "author": "Felten",
+      "year": 2021,
+      "page": 13,
+      "paragraph": 1,
+      "claim": "Introduces AI Occupational Exposure (AIOE) measure evaluating overlap between AI capabilities and occupational tasks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pizzinelli",
+      "year": 2023,
+      "page": 13,
+      "paragraph": 2,
+      "claim": "Introduces complementarity index accounting for skill level and societal context shielding jobs from AI replacement.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cazzaniga",
+      "year": 2024,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Proposes occupational classification framework combining AI exposure and complementarity.",
+      "role": "methodology"
+    },
+    {
+      "author": "Acemoglu",
+      "year": 2019,
+      "page": 11,
+      "paragraph": 1,
+      "claim": "Develops task-based model for studying automation impact on labor through displacement, productivity, and reinstatement channels.",
+      "role": "methodology"
+    },
+    {
+      "author": "Acemoglu",
+      "year": 2024,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "AI will bring only marginal TFP improvements of no more than 0.71% over ten years.",
+      "role": "finding"
+    },
+    {
+      "author": "Korinek",
+      "year": 2024,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "Artificial general intelligence will make all human work obsolete, driving labor income share to zero.",
+      "role": "finding"
+    },
+    {
+      "author": "Brynjolfsson",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "Generative AI increases novice contact center worker productivity most; experienced workers benefit little.",
+      "role": "finding"
+    },
+    {
+      "author": "Hui",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "Writing occupations saw 2.0% decline in monthly jobs and 5.2% decrease in wages after public GenAI availability.",
+      "role": "finding"
+    },
+    {
+      "author": "Ng",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 0,
+      "claim": "GenAI can unlock US$79.3 billion in productive capacity for the Philippines by 2030.",
+      "role": "finding"
+    },
+    {
+      "author": "Gaspar",
+      "year": 2020,
+      "page": 12,
+      "paragraph": 0,
+      "claim": "Non-production workers in the Philippines have better job prospects due to less automatable roles.",
+      "role": "context"
+    },
+    {
+      "author": "ILO",
+      "year": 2017,
+      "page": 12,
+      "paragraph": 0,
+      "claim": "89% of BPO workforce at high risk of automation from modern algorithms and programs.",
+      "role": "finding"
+    },
+    {
+      "author": "Gmyrek",
+      "year": 2023,
+      "page": 11,
+      "paragraph": 2,
+      "claim": "Employs GPT-4 itself to estimate task-level AI exposure scores.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses AI regulatory framework gaps and ethical AI governance, but not specific to personal finance or data privacy."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "low",
+        "justification": "Addresses AI adoption in workforce and productivity impacts, but does not cover ML serving or deployment architecture."
+      }
+    ],
+    "contribution_to_field": "This paper provides the first granular, microdata-driven analysis of AI exposure and complementarity specifically for the Philippine labor market. It adapts the international AIOE and complementarity frameworks to a developing country context by merging occupational scores with domestic labor force survey data. The finding that female, college-educated, urban, and services-sector workers are most exposed while also being most complementary provides nuanced evidence for the displacement-versus-augmentation debate. The identification of BPO as the highest-risk sector with macro-critical spillover potential contributes sector-specific evidence to the AI-and-labor literature for emerging economies. The paper also documents the Philippines\u2019 AI preparedness gaps in regulation, infrastructure, and workforce reskilling.",
+    "directly_justifies": [
+      "One-third of Philippine workers are highly exposed to AI; 61% of those have high complementarity suggesting augmentation.",
+      "BPO sector workers are most at risk of displacement with 73% in high-exposure, low-complementarity contact center roles.",
+      "College-educated, urban, female, and well-paid workers are most AI-exposed but also most complementary.",
+      "Regulatory gaps, infrastructure needs, and reskilling requirements are critical for maximizing AI benefits."
+    ],
+    "limits": [
+      "Analysis is static (October 2022 snapshot) and cannot capture long-term adaptation, retraining, or new job creation.",
+      "AI exposure and complementarity scores derived from U.S. O*NET data assume identical occupational tasks across countries, potentially underestimating exposure for developing economies.",
+      "Does not address impacts from automation or robotics, only generative AI capabilities.",
+      "BPO sector spillover effects to the broader economy acknowledged but not quantitatively modeled."
+    ],
+    "topic_mapping_rationale": "Systematic scan of all 14 topic domains was conducted. Domains flagged as relevant: Domain 10 (Data Privacy and Security) \u2014 code 10.A (low, discusses AI regulatory gaps and ethical governance broadly, not specific to personal finance); Domain 14 (ML Model Serving and Deployment) \u2014 code 14.B (low, addresses AI adoption and productivity in the workforce but not ML serving architecture). All other domains were rejected: Domain 1 (Filipino Young Professionals) \u2014 paper studies AI labor impact, not demographic financial behavior; Domain 2 (Culturally Specific Financial Practices), Domain 3 (Expense Categorization), Domain 4 (Personal Finance Systems), Domain 5 (Financial Behavioral Profiles), Domain 6 (Predictive Modeling), Domain 7 (Budgeting Strategies), Domain 8 (Anomaly Detection), Domain 9 (Mobile-First), Domain 11 (Engagement), Domain 12 (Evaluation Frameworks), Domain 13 (Savings/Debt), and Domain 14 codes 14.A and 14.C \u2014 none are addressed by this macro-labor-economics paper. The paper\u2019s topical coverage of the Odin topic taxonomy is minimal, providing only contextual background on AI adoption and regulatory environment rather than directly informing personal finance system design."
+  },
+  "limitations": [
+    "Static snapshot analysis cannot capture worker adaptation, retraining, or new job creation over time.",
+    "U.S.-derived O*NET scores may not accurately reflect occupational task composition in the Philippines, potentially understating exposure.",
+    "Analysis limited to generative AI capabilities; does not cover automation, robotics, or other AI subfields.",
+    "BPO spillover effects acknowledged but not quantitatively modeled in the analysis.",
+    "Exposure and complementarity scores rely on median cutoffs, which are inherently arbitrary threshold choices."
+  ],
+  "remember_this": [
+    "36% of Philippine workers are highly exposed to AI, but 61% of those have high complementarity.",
+    "BPO sector: 73% of workers at displacement risk, yet only 3% of total workforce.",
+    "College-educated, urban, female, and well-paid workers are most AI-exposed and also most complementary.",
+    "Philippines lacks a comprehensive AI legal framework despite having a National AI Strategy Roadmap.",
+    "GenAI could unlock US$79.3 billion in Philippine productive capacity by 2030."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Cucio & Hennig_marked.md",
+      "converted_at": "2026-07-22T13:02:45Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "paper_id": "10.xxxx/placeholder",
+  "designation": "international-algorithm-specific",
+  "title": "Consumers semi-intertemporally make intertemporal decisions: insights from the payday effects",
+  "authors": "Ma, C.; Gu, Y.; Chong, J. K.",
+  "year": 0,
+  "venue": "Unknown",
+  "odin_topics": [
+    "2.A",
+    "2.D",
+    "3.A",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "8.A",
+    "8.B",
+    "10.A"
+  ],
+  "tldr": "Analyzes retail transaction data to show consumers self-impose monthly mental budgets, renewing them on paydays and reducing spending over subsequent trips until the next payday.",
+  "problem_and_motivation": "Consumers are neither fully rational long-horizon optimizers nor completely myopic, yet existing models lack empirical evidence on how they manage spending across pay cycles. This paper investigates whether consumers use monthly mental budgets as an internal self-control device, even without liquidity constraints.",
+  "approach": [
+    "Analyzes individual-level transaction data from a global cosmetic retail chain in a Southeast Asian country from 2011 to 2015.",
+    "Focuses on 600,000+ member customers, with transactions containing detailed product-level information.",
+    "Uses a regression discontinuity design with a 25-day window around the 26th of each month to estimate payday effects.",
+    "Controls for customer, store, year, month, day-of-week, and public-holiday fixed effects, plus daily discount rates.",
+    "Conditional-on-visit regressions isolate spending behavior from shopping likelihood.",
+    "Examines real effects including variety seeking, new-product trying, product upgrading, and purchase mistakes.",
+    "Tests mental budgeting by comparing expenditures across trips within a paycheck cycle.",
+    "Identifies salience effects by contrasting first trips on payday versus one day after payday.",
+    "Builds a stylized model formalizing mental budgeting, salience, and projection bias.",
+    "Disconfirms liquidity effects by comparing cash versus credit card users and high- vs low-income cities."
+  ],
+  "findings": [
+    "num: 4.7% increase in unconditional daily expenditure on paydays.",
+    "num: 3.3% increase in per-trip expenditure conditional on store visit on paydays.",
+    "num: Payday effect increases probability of purchasing a new variety by 0.63%.",
+    "num: Payday effect increases probability of making a purchase mistake by 1.08%.",
+    "Per-trip expenditures decrease over trips within a paycheck cycle, indicating monthly mental budgeting.",
+    "Expenditure on the first trip after payday is flat across non-payday days, suggesting bracket-specific mental accounts.",
+    "num: For credit card users, mental-budget renewing and salience contribute 55% and 45% to payday spending elevation, respectively.",
+    "num: For cash users, mental-budget renewing and salience contribute 75% and 25%, respectively.",
+    "Salience of paydays triggers projection bias, while mental-budget renewing does not.",
+    "Payday effects generate real economic impact through variety seeking, upgrading, and mistakes, not just stockpiling."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Unconditional daily expenditure → spike at payday for credit card users.",
+    "Figure 2: Conditional expenditure per trip → spike at payday, not driven by shopping likelihood.",
+    "Figure 3: Real effects (variety seeking, new-product trying, upgrading, consumption rate) → payday increases all.",
+    "Figure 4: Purchase mistakes → payday increases probability of buying never-repurchased varieties.",
+    "Figure 5: Salience effect → sharp drop from payday to day after, then flat.",
+    "Table 4: Monthly mental accounting → per-trip expenditure decreases over trips in cycle."
+  ],
+  "key_equations": [
+    {
+      "equation": "y_{it} = \\gamma_0 + \\gamma_1 I(\\tau_t \\geq 0) + f(\\tau_t) + \\beta X_{it} + \\epsilon_{it}",
+      "explanation": "RD regression for payday effect on daily expenditure."
+    },
+    {
+      "equation": "y_{it} = \\omega I(\\text{1st trip in cycle}) + \\sum_{l=0}^{26} \\lambda_l I(\\text{1st trip} \\& \\text{days after payday}=l) + \\gamma_0 + \\beta X_{it} + \\epsilon_{it}",
+      "explanation": "Decomposes mental-budget renewing and salience effects on first-trip expenditure."
+    },
+    {
+      "equation": "\\frac{1 - \\delta^{\\bar{t}}}{1 - \\delta} \\frac{1}{\\bar{t}} u'\\left(\\frac{e}{\\bar{t}}\\right) - g'(h-e) = 0",
+      "explanation": "First-order condition for storable product expenditure given mental budget cushion."
+    },
+    {
+      "equation": "u(b, \\text{payday}) = \\omega u(b), \\quad \\omega > 1",
+      "explanation": "Payday increases utility flow from consumption, driving projection bias."
+    },
+    {
+      "equation": "g'(h-e|\\text{payday}) < g'(h-e|\\text{non-payday})",
+      "explanation": "Pain from spending is lower on paydays, enabling overspending."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Mental accounting",
+      "definition": "Cognitive process of categorizing and tracking spending in separate budgets."
+    },
+    {
+      "term": "Payday effect",
+      "definition": "Increase in consumer spending on days when paychecks are received."
+    },
+    {
+      "term": "Salience",
+      "definition": "Psychological prominence of paydays that reduces self-control and increases spending."
+    },
+    {
+      "term": "Projection bias",
+      "definition": "Tendency to overestimate how much future preferences will resemble current ones."
+    },
+    {
+      "term": "Storable products",
+      "definition": "Goods that can be purchased and consumed over multiple periods (e.g., cosmetics)."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Amador",
+      "year": 2006,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Optimal commitment imposes a minimum savings level each period.",
+      "role": "methodology"
+    },
+    {
+      "author": "Thaler",
+      "year": 2004,
+      "page": 3,
+      "paragraph": 2,
+      "claim": "Commitment savings products increase financial responsibility.",
+      "role": "context"
+    },
+    {
+      "author": "Carvalho",
+      "year": 2016,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Payday spending can be driven by liquidity constraints.",
+      "role": "baseline"
+    },
+    {
+      "author": "Stephens",
+      "year": 2006,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Consumers without liquidity constraints also spend more on paydays.",
+      "role": "context"
+    },
+    {
+      "author": "Loewenstein",
+      "year": 2003,
+      "page": 31,
+      "paragraph": 5,
+      "claim": "Projection bias predicts utility misprediction across states.",
+      "role": "methodology"
+    },
+    {
+      "author": "Conlin",
+      "year": 2007,
+      "page": 32,
+      "paragraph": 7,
+      "claim": "Projection bias degree is between 1/3 and 0.5 in catalog orders.",
+      "role": "baseline"
+    },
+    {
+      "author": "Huffman",
+      "year": 2005,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Credit card users' consumption declines between paydays and jumps at next payday.",
+      "role": "context"
+    },
+    {
+      "author": "Heath",
+      "year": 1996,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Consumers have separate mental budgets across product categories.",
+      "role": "context"
+    },
+    {
+      "author": "Dai",
+      "year": 2014,
+      "page": 22,
+      "paragraph": 2,
+      "claim": "Temporal landmarks motivate aspirational behaviors.",
+      "role": "context"
+    },
+    {
+      "author": "Agarwal",
+      "year": 2024,
+      "page": 15,
+      "paragraph": 1,
+      "claim": "Cash users feel more attached to money than digital users.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Documents nationwide payday (26th) and mental accounting practices in Southeast Asia."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and 'Occasions'",
+        "relevance": "medium",
+        "justification": "Analyzes monthly paycheck cycles and payday as a spending occasion."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Proposes bracket-specific mental accounts (e.g., storable vs. instantaneous goods)."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Distinguishes cash vs. credit card user behavioral profiles and their payday responses."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Classifies users by payment method and spending patterns across pay cycles."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Provides empirical patterns (per-trip expenditure decrease) that could inform predictive models."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Documents sequential spending decay patterns that could be used as forecasting benchmarks."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Directly studies rule-of-thumb mental budgeting and self-imposed savings targets."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Identifies payday overspending and purchase mistakes as behavioral anomalies."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "Provides empirical patterns of overspending that anomaly detection systems might target."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Uses rich transaction data, but privacy is not a focus."
+      }
+    ],
+    "contribution_to_field": "This paper provides empirical evidence for monthly mental budgeting as an intrinsic self-control device, showing that consumers without liquidity constraints still reduce spending over pay cycles. It identifies payday salience as a distinct mechanism from mental-budget renewing, with differential effects on cash versus credit card users. The study also demonstrates that payday effects on storable goods generate real economic impacts through variety seeking, upgrading, and purchase mistakes, not just stockpiling. These findings bridge gaps between self-control, mental accounting, and payday effect literatures.",
+    "directly_justifies": [
+      "Consumers self-impose monthly mental budgets even without liquidity constraints.",
+      "Payday receipt triggers both mental-budget renewing and salience effects.",
+      "Per-trip expenditures decrease over trips within a paycheck cycle.",
+      "Salience of paydays triggers projection bias, but mental-budget renewing does not.",
+      "Cash users are less susceptible to salience than credit card users."
+    ],
+    "limits": [
+      "Analysis focuses on a single retail chain of a high-end cosmetic brand, limiting generalizability to other product categories.",
+      "Data are from a single Southeast Asian country with a specific payday structure, which may not apply elsewhere.",
+      "The paper does not provide a DOI or publication venue in the source material.",
+      "Cash users may include self-employed individuals who do not receive paychecks on the national payday.",
+      "Projection bias tests rely on purchase mistakes as a proxy, which may have measurement error."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. The paper was flagged as highly relevant to Culturally Specific Financial Practices (2.A), Expense Categorization Frameworks (3.A), and Budgeting Strategies (7.A) because it directly examines mental accounting and payday spending. Medium relevance was assigned to Filipino Spending Cycles (2.D) due to the Southeast Asian setting, Financial Behavioral Profiles (5.A) for differentiating cash/credit card users, and Anomaly Detection (8.A) due to overspending and purchase mistakes. Low relevance was assigned to Predictive Modeling (6.A) and Forecasting Algorithms (6.B) because the paper is empirical rather than algorithmic. Contextual relevance was assigned to Data Privacy (10.A) as transaction data are used but privacy is not discussed. Domains like Mobile-First Design (9.A), Engagement Dynamics (11.A), and Savings Goal Management (13.A) were rejected as the paper does not address these areas. Overall, the paper primarily contributes to behavioral economics and consumer finance research on mental accounting, self-control, and payday effects."
+  },
+  "limitations": [
+    "Single retail chain analysis limits generalizability to other product categories. [unacknowledged]",
+    "Data from a specific Southeast Asian country may not generalize to other regions. [unacknowledged]",
+    "No DOI or publication venue identified in the source.",
+    "Cash users may include self-employed individuals not subject to the national payday. [unacknowledged]",
+    "Mistake proxy (never purchased again) may include measurement error. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Payday increases unconditional daily expenditure by 4.7%.",
+    "Per-trip spending declines over trips within a pay cycle.",
+    "Cash users are 25% salience-driven; credit card users are 45%.",
+    "Salience triggers mistakes; mental budgeting does not.",
+    "Payday effects are real, not just stockpiling."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Ma C. et al_marked.md",
+      "converted_at": "2026-07-21T14:08:06Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "paper_id": "10.XXXX/ebh.v4i2.263",
+  "designation": "local-algorithm-specific",
+  "title": "The Influence of E-Wallets on The Consumptive Behavior Generation Z: Systematic Review",
+  "authors": "Kuswardhani, E. L.; Sari, M. A. N. P.; Yuniawan, A.; Kusumawardhani, A.",
+  "year": 2025,
+  "venue": "Economic and Business Horizon",
+  "odin_topics": [
+    "1.C",
+    "2.D",
+    "3.A",
+    "5.A",
+    "6.B",
+    "8.A",
+    "10.A",
+    "11.A",
+    "12.A"
+  ],
+  "tldr": "Systematic review of 28 empirical studies finds e-wallet usage positively correlates with increased consumptive behavior among Generation Z, driven by reduced payment friction, digital promotions, and behavioral design features.",
+  "problem_and_motivation": "E-wallets enable seamless digital transactions but their impact on Generation Z's consumptive behavior is not systematically synthesized. The intersection of persuasive technology and consumer psychology raises concerns about impulsive spending and reduced financial discipline among young users.",
+  "approach": [
+    "Conducted a systematic literature review following the PRISMA framework.",
+    "Searched Scopus, Web of Science, ScienceDirect, ProQuest, and Google Scholar for publications from January 2020 to April 2025.",
+    "Used keywords including e-wallet, Generation Z, digital payments, consumer behavior, mobile wallet, impulsive buying, and fintech.",
+    "Included 28 empirical, peer-reviewed studies focused on individuals aged 18-27 that directly examine e-wallet use and spending behavior.",
+    "Excluded theoretical papers, studies on older demographics, and non-full-text articles.",
+    "Synthesized findings across themes of purchase frequency, impulse buying, promotional influences, behavioral triggers, and financial awareness.",
+    "Discussed findings through behavioral economics lenses including mental accounting and digital nudges.",
+    "Identified gaps in financial literacy and integrated budgeting tools as critical moderating factors.",
+    "Proposed design and policy interventions for responsible digital financial inclusion.",
+    "Highlighted gender- and context-based variations in spending behavior as secondary patterns."
+  ],
+  "findings": [
+    "num: E-wallet usage positively correlates with increased consumption among Generation Z.",
+    "num: Frequent e-wallet users show noticeable increase in daily or weekly transaction counts.",
+    "num: Digital promotions (cashback, discounts, loyalty points) significantly influence consumer decision-making.",
+    "num: Lestari et al. (2021) found e-wallets and e-money influence consumer behavior with p=0.000 (<0.005).",
+    "Real-time transactions and reduced payment friction encourage impulsive purchasing.",
+    "Behavioral design elements (push notifications, gamification, personalized offers) condition repeat consumption.",
+    "Most e-wallet applications lack integrated budgeting and financial tracking tools.",
+    "Many Gen Z users rely on balance visibility rather than structured financial planning.",
+    "Female users more responsive to aesthetic and promotional messaging; male users to gaming-based rewards.",
+    "Urban Gen Z users exhibit higher transaction frequency and broader e-wallet application."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Generation Z",
+      "definition": "Individuals born between 1997 and 2012, the first generation to grow up entirely in a digital world."
+    },
+    {
+      "term": "E-wallet",
+      "definition": "Electronic wallet enabling real-time digital transactions, electronic money storage, and access to financial services via smartphones or other devices."
+    },
+    {
+      "term": "Consumptive behavior",
+      "definition": "Spending patterns characterized by frequent, impulsive, or emotion-driven purchases often beyond basic needs."
+    },
+    {
+      "term": "Mental decoupling",
+      "definition": "Psychological phenomenon where users disconnect the act of purchasing from the awareness of spending actual money in digital transactions."
+    },
+    {
+      "term": "Digital nudge",
+      "definition": "Subtle cues embedded in fintech platforms aimed at influencing users' financial decisions."
+    },
+    {
+      "term": "PRISMA",
+      "definition": "Preferred Reporting Items for Systematic Reviews and Meta-Analyses, a framework for conducting systematic literature reviews."
+    },
+    {
+      "term": "Fintech",
+      "definition": "Financial technology innovations that deliver financial services through digital platforms and applications."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Chatterjee",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Consumer acceptance of mobile wallet in India, noting convenience and perceived usefulness as key drivers.",
+      "role": "context"
+    },
+    {
+      "author": "Kim",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Digital nudges can promote financial discipline but current implementations often drive spending.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lestari",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "E-wallet promotional features significantly influence online shopping behavior.",
+      "role": "finding"
+    },
+    {
+      "author": "Liu",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mobile payment convenience and promotional features positively correlate with impulse buying tendencies.",
+      "role": "finding"
+    },
+    {
+      "author": "Mustafa",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Perceived ease of use, usefulness, and security influence behavioral intentions toward e-wallets.",
+      "role": "context"
+    },
+    {
+      "author": "Rahi",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Higher financial literacy levels equip individuals to better manage digital expenditures.",
+      "role": "finding"
+    },
+    {
+      "author": "Thaler",
+      "year": 1985,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mental accounting theory explains how individuals categorize and treat money differently based on source and intended use.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Positive correlation between digital payment frequency and impulsive buying tendencies in young adults.",
+      "role": "finding"
+    },
+    {
+      "author": "Yeo",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "E-wallets reduce perceived friction in spending, encouraging higher consumption levels.",
+      "role": "context"
+    },
+    {
+      "author": "Khasanah",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Blurring of boundaries between user empowerment and manipulation in digitally fluent but financially inexperienced generations.",
+      "role": "critique"
+    },
+    {
+      "author": "Marpaung",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Role of Gen-Z in supporting sustainable development through green economy.",
+      "role": "context"
+    },
+    {
+      "author": "Suparjo",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Corporate social responsibility and reputation management in global marketing success.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Focuses on Generation Z consumptive behavior and spending patterns, relevant to young professional financial behavior."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and \"Occasions\"",
+        "relevance": "low",
+        "justification": "Discusses general spending triggers and promotional influences, not specific to Filipino occasions."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Mentions lack of budgeting tools and spending categorization features in e-wallets."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Directly examines impulsive vs. restrained spending behaviors and psychological drivers among young users."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "Contextually relevant to spending pattern analysis but no forecasting algorithms are proposed."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions overspending and lack of alerts, indirectly related to anomaly detection."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions perceived security as a driver but does not deeply address privacy or security mechanisms."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "high",
+        "justification": "Analyzes how gamification, notifications, and promotional features drive user engagement and spending."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Synthesizes findings from multiple studies but does not propose an evaluation framework."
+      }
+    ],
+    "contribution_to_field": "This paper provides a systematic synthesis of empirical evidence on e-wallet influence on Generation Z consumptive behavior. It consolidates fragmented findings across geographies into coherent themes of frequency, impulsivity, and promotional influence. The review applies behavioral economics frameworks (mental accounting, digital nudging) to explain observed spending patterns. It identifies critical gaps in financial literacy and built-in budgeting tools within e-wallet platforms. The study offers an integrated perspective on both the enabling and disruptive roles of digital payment systems in youth financial behavior.",
+    "directly_justifies": [
+      "E-wallet usage positively correlates with increased consumption among Generation Z.",
+      "Digital promotions and gamification features create addictive spending patterns.",
+      "Reduced perceived payment friction leads to diminished financial restraint.",
+      "Lack of integrated budgeting tools contributes to long-term consumptive behavior.",
+      "Financial literacy moderates the relationship between e-wallet use and spending."
+    ],
+    "limits": [
+      "Systematic review without meta-analysis, limiting quantitative synthesis of effect sizes.",
+      "Search restricted to English-language publications, potentially missing regional studies.",
+      "Focus on individuals aged 18-27 may not capture all Generation Z spending behaviors.",
+      "Geographic context variations noted but not systematically analyzed as moderators. [unacknowledged]",
+      "Does not include longitudinal studies that could establish causal relationships. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains 1.C, 5.A, and 11.A were flagged as high relevance because the paper directly analyzes financial behavior, behavioral profiles, and engagement mechanics in digital finance. Domains 3.A and 12.A were assigned contextual relevance as the paper discusses categorization gaps and synthesizes findings but does not propose frameworks. Domains 2.D, 6.B, 8.A, and 10.A received low or contextual relevance because they are only tangentially mentioned (spending occasions, forecasting, anomaly detection, privacy). Borderline cases included 2.D (spending cycles) and 8.A (anomaly detection) where the paper mentions triggers and overspending but lacks specific focus on cycles or detection algorithms. Domains 1.A, 1.B, 2.A, 2.B, 2.C, 3.B, 3.C, 4.A, 4.B, 5.B, 5.C, 6.A, 7.A, 7.B, 7.C, 7.D, 7.E, 8.B, 8.C, 9.A, 9.B, 9.C, 10.B, 10.C, 11.B, 12.B, 12.C, 13.A, 13.B, 13.C, 14.A, 14.B, 14.C were considered and rejected as they are not addressed or only peripherally related to the paper's systematic review focus. The paper's overall topical coverage centers on behavioral economics of digital payments, youth financial habits, and design influences on spending, with secondary relevance to categorization and engagement dynamics."
+  },
+  "limitations": [
+    "Systematic review without meta-analysis limits quantitative synthesis of effect sizes.",
+    "Search restricted to English-language publications, potentially missing regional studies. [unacknowledged]",
+    "Focus on individuals aged 18-27 may not capture all Generation Z spending behaviors. [unacknowledged]",
+    "Geographic context variations noted but not systematically analyzed as moderators. [unacknowledged]",
+    "Does not include longitudinal studies that could establish causal relationships. [unacknowledged]",
+    "Gender-based differences observed but not explored in depth. [unacknowledged]"
+  ],
+  "remember_this": [
+    "E-wallet usage positively correlates with increased Generation Z consumption.",
+    "Reduced payment friction diminishes the pain of paying and encourages impulsive purchases.",
+    "Promotional features like cashback and rewards drive higher transaction frequency.",
+    "Most e-wallets lack budgeting tools, contributing to financial oversight and overspending.",
+    "Financial literacy is a critical moderator that can mitigate consumptive behavior."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kuswardhani et al_marked.md",
+      "converted_at": "2026-07-21T13:53:58Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

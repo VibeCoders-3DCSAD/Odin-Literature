@@ -1,0 +1,246 @@
+{
+  "paper_id": "10.5555/12345678",
+  "designation": "international-algorithm-specific",
+  "title": "Clustering and Similarity Learning in Financial Markets: A Tutorial for the Practitioners",
+  "authors": "Mehta, D.; Thompson, J.R.J.; Lee, H.; Lee, Y.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "6.A",
+    "7.A",
+    "7.B",
+    "8.A",
+    "9.A",
+    "9.B",
+ "9.C",
+    "10.A",
+    "12.A",
+    "12.B",
+ "13.C",
+    "14.A",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Provides a pragmatic tutorial on clustering and similarity learning for finance, emphasizing adaptive, data-driven methods over static heuristics for structuring data across asset classes.",
+  "problem_and_motivation": "Traditional peer-grouping methods like industry codes or static style boxes are coarse and rigid for modern investment. There is a need for adaptive, data-driven similarity systems that quantify closeness based on actual risk and thematic exposures. This tutorial synthesizes recent advances in metric learning, graph methods, and large language models to build deployable similarity systems.",
+  "approach": [
+    "Reviews a wide range of clustering methods (partitioning, hierarchical, density-based, model-based) and similarity learning techniques (metric learning, Siamese networks, graph neural networks).",
+    "Demonstrates application across major asset classes, including fixed income, funds, companies, investors, commodities, currencies, derivatives, and real estate.",
+    "Provides case studies on bond substitution, fund categorization, company comparables, and investor clustering.",
+    "Emphasizes practical modeling choices for auditable and robust systems under regime shifts.",
+    "Outlines evaluation protocols that focus on operational validity, such as substitution fidelity and neighborhood stability.",
+    "Summarizes methods in extensive tables organized by asset class and data modality."
+  ],
+  "findings": [
+    "Modern similarity systems have moved beyond experimental prototypes and are now deployable techniques in real investment workflows.",
+    "num: Nearly one-fifth of U.S. investment-grade volume now trades in baskets, underscoring the need for robust portfolio similarity metrics.",
+    "Evaluation must shift from abstract academic metrics to operational validity, focusing on substitution fidelity, neighborhood stability, and segment utility.",
+    "Effective similarity requires fusing heterogeneous data sources, including tabular fundamentals, time-series performance, textual disclosures, and relational graph structures.",
+    "Clustering and similarity learning are essential for structuring complex financial data and are core components of investment analytics, portfolio construction, and risk management systems."
+  ],
+  "key_figures_tables": [
+    "Exhibit 1: Usecases of clustering and similarity in finance → Visual summary of applications like style drift detection and relative valuation.",
+    "Exhibit 2: Common distance metrics for clustering by data type → Guidance on choosing metrics like Gower for mixed-type data and DTW for time series.",
+    "Exhibit 3: Clustering methods across data modalities in finance → Overview of k-means, hierarchical, density-based, and other methods for tabular, time series, and graph data.",
+    "Exhibit 4: Similarity learning methods (supervised and semi-supervised) → Breakdown of metric learning, kernel methods, Siamese networks, and contrastive learning.",
+    "Exhibit 5: Evaluation methodologies: academic vs. practitioner perspectives → Highlights the move from cohesion/separation metrics to practitioner-focused validation like substitution fidelity."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "DTW", "definition": "Dynamic Time Warping, a method for measuring similarity between time series."},
+    {"term": "GNN", "definition": "Graph Neural Network, a method for learning from graph-structured data."},
+    {"term": "KYC", "definition": "Know-Your-Client, the process of verifying the identity of clients."},
+    {"term": "LLM", "definition": "Large Language Model, a type of AI model trained on vast amounts of text data."},
+ {"term": "MBS", "definition": "Mortgage-Backed Security, a type of asset-backed security secured by a collection of mortgages."}
+  ],
+  "citations": [
+    {
+      "author": "Jeyapaulraj",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Random Forest proximities can learn bond–bond distances aligned with desk use cases.",
+      "role": "methodology"
+    },
+    {
+      "author": "Saha",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A CatBoost-based framework learns muni–muni distances for pricing and surveillance.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mehta",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Supervised validation frameworks show fund categories are systematic and reproducible.",
+      "role": "finding"
+    },
+    {
+      "author": "Desai",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Clustering outcomes depend heavily on feature choice and distance metrics, not just label quality.",
+      "role": "critique"
+    },
+    {
+      "author": "Thompson",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Clustering can reveal misalignments between elicited investor profiles and observed decision-making.",
+      "role": "finding"
+    },
+    {
+      "author": "Cao",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CompanyKG provides a large-scale graph for company similarity quantification.",
+      "role": "baseline"
+    },
+    {
+      "author": "Ghashti",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Feature-weighted similarity methods emphasize attributes most relevant to the task.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rosaler",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Quantum-cognition metric learning improves on tree models in high-yield markets.",
+      "role": "methodology"
+    },
+    {
+      "author": "Li",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "STRAPSim matches bonds at the constituent and weight level for portfolio trade alignment.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhou",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Graph neural networks on temporal bipartite fund–bond graphs improve price and yield prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Hwang",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "SimStock treats time periods as separate domains to model parameter drift.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vamvourellis",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LLM-based methods embed company descriptions to reproduce GICS-like structures.",
+      "role": "methodology"
+    },
+    {
+      "author": "Dolphin",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Contrastive learning is applied to time-series representation and volatility regime learning.",
+      "role": "methodology"
+    },
+    {
+      "author": "Feng",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Open-set recognition with Random Forests can detect when a fund lies outside recognized clusters.",
+      "role": "methodology"
+    },
+    {
+      "author": "Barberis",
+      "year": 2005,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Peer groups should explain return co-movement better than GICS or SIC codes.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "contextual", "justification": "Discusses categorization reproducibility for funds as an analogy."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "low", "justification": "Reviews landscape of methods in financial similarity, applicable to PFMS."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Explicitly critiques static and coarse traditional peer-grouping methods."},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Dedicated section on investor clustering and behavioral profiling."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "medium", "justification": "Discusses predictive modeling for fund alpha and stock returns."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "low", "justification": "Mention of domain knowledge for operational relevance, but not core focus."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "contextual", "justification": "Investor risk profiling is analogous to budget recommendations."},
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "medium", "justification": "Discusses outlier detection for funds and open-set recognition for anomalies."},
+      {"code": "9.A", "name": "Mobile-First Design Principles and Rationale", "relevance": "low", "justification": "Not a focus, but scalability for production systems is mentioned."},
+      {"code": "9.B", "name": "Mobile UX Design for Personal Finance", "relevance": "contextual", "justification": "Not a focus, but touches on interpretability for user-facing systems."},
+      {"code": "9.C", "name": "Offline-First Architecture", "relevance": "contextual", "justification": "Planning for scale and production includes considerations for deployment."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "contextual", "justification": "Mentions governance, compliance, and data provenance."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Central theme, with a dedicated section on shifting from academic to operational metrics."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Deep dive into evaluating clustering and similarity algorithms."},
+      {"code": "13.C", "name": "End-of-Period Surplus as a Savings Input", "relevance": "contextual", "justification": "Mention of scenario generation for financial planning, but not a core topic."},
+      {"code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "contextual", "justification": "Mentions GANs for scenario generation, a related concept."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Practical tips include planning for scale and production deployment."},
+      {"code": "14.C", "name": "On-Device vs. Server Inference", "relevance": "contextual", "justification": "Mention of approximate nearest neighbors for scaling, implying deployment considerations."}
+    ],
+    "contribution_to_field": "This tutorial provides a comprehensive synthesis of clustering and similarity learning methods tailored for financial applications. It bridges the gap between academic methodologies and practitioner needs by emphasizing operational validity and practical deployment. The paper categorizes techniques by data modality and asset class, offering a structured guide for building auditable and robust similarity systems. It also highlights underexplored domains like private markets and ESG, setting an agenda for future research.",
+    "directly_justifies": [
+      "Traditional peer-grouping methods are coarse and rigid.",
+      "Evaluation must shift from abstract academic metrics to operational validity.",
+      "Effective similarity requires fusing heterogeneous data sources.",
+      "Similarity systems have moved beyond experimental prototypes and are now deployable.",
+      "Clustering and similarity learning are indispensable for structuring financial data."
+    ],
+    "limits": [
+      "The paper is a tutorial and does not present novel empirical results.",
+      "It does not provide a comparative benchmark of the methods it reviews.",
+      "The framework for evaluating similarity systems remains conceptual and lacks standardized metrics.",
+      "Practical implementation details like computational costs for each method are not deeply discussed."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to financial behavior (5.A), gaps in existing systems (4.B), algorithmic evaluation (12.A, 12.B), and model deployment (14.B) were flagged as highly relevant due to the paper's focus on clustering/similarity methods and practical evaluation frameworks. Domains like mobile design (9.A), privacy (10.A), and budgeting (7.A) were considered low or contextual, as the paper discusses them in passing (e.g., privacy under governance, scalability under production) but does not delve into their specifics. Borderline cases like 'Anomaly Detection' (8.A) and 'Predictive Modeling' (6.A) were selected due to clear sections covering outlier detection and predictive use cases for similarity. The overall topical coverage is broad, positioning this tutorial as a foundational reference for applying clustering and similarity learning across multiple financial technology domains."
+  },
+  "limitations": [
+    "The paper is a tutorial and does not present novel empirical results.",
+    "No comparative benchmark of the reviewed methods is provided.",
+    "The framework for evaluating similarity systems remains conceptual and lacks standardized, universally accepted metrics. [unacknowledged]",
+    "Practical implementation details like computational costs for each method are not deeply discussed. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Adaptive similarity systems are replacing static peer-grouping methods.",
+    "Evaluation must prioritize operational validity over abstract academic metrics.",
+    "Heterogeneous data fusion is essential for robust financial similarity.",
+    "num: 20% of U.S. investment-grade volume trades in baskets, requiring portfolio similarity.",
+    "Clustering and similarity are now deployable techniques in modern investment workflows."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mehta et al_marked.md",
+      "converted_at": "2026-07-21T14:13:31Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

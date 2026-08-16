@@ -1,0 +1,329 @@
+{
+  "paper_id": "10.1145/3787120.3787130",
+  "designation": "international-algorithm-specific",
+  "title": "Segmented Confidence Sequences and Multi-Scale Adaptive Confidence Segments for Anomaly Detection in Nonstationary Time Series",
+  "authors": "Li, M. A.; Gautam, A.",
+  "year": 2025,
+  "venue": "2025 5th International Conference on Artificial Intelligence and Application Technologies (AIAT 2025)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "8.C"
+  ],
+  "tldr": "Introduces two adaptive thresholding frameworks for anomaly detection that use segmentation and multi-scale analysis to maintain statistical guarantees under nonstationary conditions.",
+  "problem_and_motivation": "Static and fixed-window thresholds fail under regime shifts and concept drift. Existing adaptive methods struggle with multi-scale changes and sudden distributional shifts. There is a need for a thresholding framework that adapts to both abrupt and gradual changes simultaneously.",
+  "approach": [
+    "Segmented Confidence Sequences (SCS) partitions time series into locally stationary segments using APCA or K-means.",
+    "SCS maintains independent Hoeffding-style confidence bounds per segment, calibrated to local variance.",
+    "Multi-Scale Adaptive Confidence Segments (MACS) maintains confidence sequences at short, medium, and long window lengths.",
+    "MACS uses an attention mechanism that dynamically weights scales based on local variance patterns.",
+    "MACS employs a CUSUM-like regime change detector and a dual-detection decision rule.",
+    "Both methods use a composite detection criterion that combines confidence bound violations with a percentile filter.",
+    "The percentile filter can be disabled to maximize recall at the cost of precision.",
+    "Experiments run from July 5 to July 31, 2025, over a month."
+  ],
+  "findings": [
+    "num: SCS and MACS with 𝛼=0.99 increase F1-score approximately two times compared to the 99th percentile baseline.",
+    "num: At 𝛼=0.95, both methods yield over a two times increase in F1-score relative to baseline.",
+    "num: SCS APCA at 𝛼=0.99 achieves a recall delta of 3.9952 and F1-score delta of 1.9074 on the Wafer Manufacturing dataset.",
+    "num: MACS at 𝛼=0.99 achieves a recall delta of 3.9952 and F1-score delta of 2.1705 on the Wafer Manufacturing dataset.",
+    "num: SCS APCA at 𝛼=0.95 achieves a recall delta of 6.1595 and F1-score delta of 2.1289 on the Wafer Manufacturing dataset.",
+    "num: MACS at 𝛼=0.95 achieves a recall delta of 5.6595 and F1-score delta of 2.2349 on the Wafer Manufacturing dataset.",
+    "num: Both SCS and MACS at 𝛼=0.99 identify 30 true positive anomalies, a fivefold increase over the baseline's 6 true positives.",
+    "Precision consistently declines in exchange for increased recall, reflecting enhanced sensitivity.",
+    "Improvements are strongest on datasets with pronounced regime shifts or multiscale anomalies.",
+    "Gains are less pronounced but still positive on noisier or more stationary data."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Illustration of the SCS flow → Shows segmentation and per-segment confidence bound flow.",
+    "Figure 2: Illustration of the MACS flow → Shows multi-scale windows and attention-weighted combination.",
+    "Figure 3: Wafer Manufacturing results at 𝛼=0.99 → Significant F1 improvement over baseline.",
+    "Figure 4: Wafer Manufacturing results at 𝛼=0.95 → Further recall increase at 𝛼=0.95.",
+    "Figure 5: Thresholding strategy comparison → Visual comparison of static, SCS, and MACS thresholds.",
+    "Table 1: Overview of evaluated datasets → Six public benchmark datasets with anomaly label sources.",
+    "Table 2: Cross-dataset F1-score delta → Full comparative results across all datasets.",
+    "Table 3: Performance delta on Wafer Manufacturing → All metrics for both confidence levels.",
+    "Table 4: Anomaly count comparison → TP, TN, FP, FN counts showing fivefold TP increase."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\text{total\\_error} = \\text{left\\_error} + \\text{right\\_error}",
+      "explanation": "Reconstruction error for APCA split evaluation."
+    },
+    {
+      "equation": "\\text{left\\_error} = \\sum (x_i - \\bar{x}_{\\text{left}})^2",
+      "explanation": "Left segment reconstruction error sum."
+    },
+    {
+      "equation": "\\text{right\\_error} = \\sum (x_j - \\bar{x}_{\\text{right}})^2",
+      "explanation": "Right segment reconstruction error sum."
+    },
+    {
+      "equation": "\\text{min\\_error} < \\text{no\\_split\\_error} \\times \\text{improvement\\_threshold}",
+      "explanation": "Acceptance condition for APCA split."
+    },
+    {
+      "equation": "\\text{bound\\_width} = 1.5 \\times \\text{std\\_score}",
+      "explanation": "Initial confidence bound width for SCS and MACS."
+    },
+    {
+      "equation": "\\text{lower\\_bound} = \\bar{x} - \\text{bound\\_width}, \\quad \\text{upper\\_bound} = \\bar{x} + \\text{bound\\_width}",
+      "explanation": "Final confidence interval for each score."
+    },
+    {
+      "equation": "\\text{final\\_anomalies} = \\text{anomalies} \\land \\text{percentile\\_filter}",
+      "explanation": "Composite detection rule with percentile filtering."
+    },
+    {
+      "equation": "\\text{combined\\_bound} = \\sum_{i=1}^3 \\text{weight}_i \\cdot \\text{bound}_i",
+      "explanation": "Attention-weighted combination of multi-scale bounds."
+    },
+    {
+      "equation": "\\text{mean\\_change} = \\frac{\\bar{x}_{\\text{current}} - \\bar{x}_{\\text{historical}}}{\\text{std}_{\\text{historical}} + 10^{-8}}",
+      "explanation": "Normalized mean change for regime detection."
+    },
+    {
+      "equation": "\\text{std\\_change} = \\frac{\\text{std}_{\\text{current}} - \\text{std}_{\\text{historical}}}{\\text{std}_{\\text{historical}} + 10^{-8}}",
+      "explanation": "Normalized standard deviation change for regime detection."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "SCS",
+      "definition": "Segmented Confidence Sequences."
+    },
+    {
+      "term": "MACS",
+      "definition": "Multi-Scale Adaptive Confidence Segments."
+    },
+    {
+      "term": "APCA",
+      "definition": "Adaptive Piecewise Constant Approximation."
+    },
+    {
+      "term": "CS",
+      "definition": "Confidence Sequences."
+    },
+    {
+      "term": "EWMA",
+      "definition": "Exponential Weighted Moving Average."
+    },
+    {
+      "term": "EVT",
+      "definition": "Extreme Value Theory."
+    },
+    {
+      "term": "POT",
+      "definition": "Peak-Over-Threshold."
+    },
+    {
+      "term": "ARIMA",
+      "definition": "Autoregressive Integrated Moving Average."
+    },
+    {
+      "term": "GCP",
+      "definition": "Google Cloud Platform."
+    },
+    {
+      "term": "MSL",
+      "definition": "Mars Science Laboratory."
+    },
+    {
+      "term": "SMD",
+      "definition": "Server Machine Dataset."
+    },
+    {
+      "term": "CUSUM",
+      "definition": "Cumulative Sum."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Chandola",
+      "year": 2009,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Anomaly detection is crucial for preventing faults, reducing risk, and ensuring operational reliability.",
+      "role": "context"
+    },
+    {
+      "author": "Howard",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 4,
+      "claim": "Confidence sequences enable rigorous thresholding in nonstationary data with error rate control under arbitrary stopping.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 4,
+      "claim": "Confidence sequences can maintain bounds for quantiles or means, enabling adaptive scoring robust to drift.",
+      "role": "methodology"
+    },
+    {
+      "author": "Benidis",
+      "year": 2022,
+      "page": 1,
+      "paragraph": 3,
+      "claim": "Fixed-window or global percentile strategies fail to capture local variations or produce excessive false positives.",
+      "role": "critique"
+    },
+    {
+      "author": "Aghabozorgi",
+      "year": 2015,
+      "page": 2,
+      "paragraph": 5,
+      "claim": "APCA and clustering can segment time series into locally stationary regimes for threshold estimation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Aggarwal",
+      "year": 2015,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Adaptive methods use sliding windows to recalculate thresholds over a recent window.",
+      "role": "baseline"
+    },
+    {
+      "author": "Blázquez-García",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "EWMA improves rapid adaptation but window size is hard to tune.",
+      "role": "context"
+    },
+    {
+      "author": "Brockwell and Davis",
+      "year": 2016,
+      "page": 2,
+      "paragraph": 3,
+      "claim": "Forecasting-model-based detection fits models and tests for outliers in residuals.",
+      "role": "baseline"
+    },
+    {
+      "author": "Ahmad",
+      "year": 2017,
+      "page": 2,
+      "paragraph": 3,
+      "claim": "Autoencoders and deep networks can learn context-sensitive anomaly scores.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gent",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 1,
+      "claim": "Percentile approaches falter under persistent distributional drift or nonstationarity.",
+      "role": "critique"
+    },
+    {
+      "author": "Rousseeuw",
+      "year": 2020,
+      "page": 2,
+      "paragraph": 2,
+      "claim": "Non-parametric dynamic models reduce reliance on distributional assumptions and are superior in recall.",
+      "role": "context"
+    },
+    {
+      "author": "Sun",
+      "year": 2024,
+      "page": 2,
+      "paragraph": 4,
+      "claim": "Applying confidence sequence-based threshold selection to streaming anomaly detection is a promising direction.",
+      "role": "context"
+    },
+    {
+      "author": "Keogh",
+      "year": 2001,
+      "page": 2,
+      "paragraph": 5,
+      "claim": "Segmenting time series brings statistical homogeneity to threshold estimation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Xue",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 3,
+      "claim": "Reinforcement learning agents can directly optimize detection performance.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides adaptive time series modeling techniques applicable to spending prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Directly evaluates algorithms for sequential data with regime shifts and nonstationarity."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Focuses on anomaly detection in nonstationary time series, core to personal finance systems."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Introduces and evaluates two novel anomaly detection algorithms for streaming time series."
+      },
+      {
+        "code": "8.C",
+        "name": "Cold-Start Baseline Strategies for Anomaly Detection",
+        "relevance": "low",
+        "justification": "Mentions model-free, unsupervised nature but does not address cold-start specifically."
+      }
+    ],
+    "contribution_to_field": "This paper contributes two novel adaptive thresholding frameworks for anomaly detection in nonstationary time series. It provides a principled integration of confidence sequence theory with segmentation and multi-scale analysis. The work empirically demonstrates significant improvements over traditional static percentile and rolling quantile approaches across six benchmark datasets. The proposed methods offer interpretable bounds and maintain statistical guarantees on false alarm rates without requiring labeled anomalies. The paper also identifies key trade-offs between recall and precision in adaptive detection settings.",
+    "directly_justifies": [
+      "SCS and MACS substantially boost recall and F1-score over traditional static percentile baselines.",
+      "Improvements are strongest on datasets with pronounced regime shifts or multiscale anomalies.",
+      "Precision consistently declines in exchange for increased recall.",
+      "Both SCS and MACS at 𝛼=0.99 identify 30 true positive anomalies, a fivefold increase.",
+      "SCS is particularly well-suited to abrupt regime shifts and piecewise stationarity.",
+      "MACS is more flexible across a wider range of temporal patterns."
+    ],
+    "limits": [
+      "SCS performance is sensitive to time series structure and may fail on highly stationary or noisy data.",
+      "MACS effectiveness hinges on appropriate calibration of attention weights and confidence levels.",
+      "The study used fixed window sizes for MACS and did not explore adaptive window scaling.",
+      "The paper does not address multi-variate time series or correlated input streams."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The predictive modeling domains (6.A, 6.B) were flagged as medium relevance because the paper introduces adaptive time series techniques that could apply to spending forecasting, though it does not directly address personal finance data. The anomaly detection domains (8.A, 8.B) were flagged as high relevance because the paper directly focuses on anomaly detection algorithms for streaming nonstationary time series. The cold-start topic (8.C) was flagged as low relevance because the paper mentions unsupervised operation but does not specifically address cold-start baselines. All other topic domains were considered and rejected as they pertain to personal finance-specific contexts (e.g., Filipino demographics, financial structures, budgeting strategies) not covered by this algorithmic paper. The overall topical coverage is centered on statistical anomaly detection methods with broad applicability to any streaming time series domain."
+  },
+  "limitations": [
+    "SCS performance is sensitive to time series structure and may fail on highly stationary or noisy data. [unacknowledged]",
+    "MACS effectiveness hinges on appropriate calibration of attention weights and confidence levels.",
+    "The study used fixed window sizes for MACS and did not explore adaptive window scaling. [unacknowledged]",
+    "The paper does not address multi-variate time series or correlated input streams. [unacknowledged]",
+    "The performance of SCS depends on segmentation quality; poorly defined segments can reduce detection quality."
+  ],
+  "remember_this": [
+    "SCS and MACS increase F1-score approximately two times over static percentile baselines.",
+    "At 𝛼=0.95, both methods yield over a two times F1-score increase relative to baseline.",
+    "The methods achieve a fivefold increase in true positive detection compared to traditional thresholds.",
+    "Precision declines in exchange for increased recall due to enhanced sensitivity.",
+    "SCS suits abrupt regime shifts while MACS handles multi-scale temporal patterns."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li & Gautam_marked.md",
+      "converted_at": "2026-07-21T13:58:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

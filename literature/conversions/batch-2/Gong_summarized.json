@@ -1,0 +1,73 @@
+{
+  "paper_id": "10.1051/itmconf/20268402004",
+  "designation": "international",
+  "title": "Research Progress and Trends of Deep Learning in Stock Price Prediction: A Systematic Review from LSTM to Transformer",
+  "authors": "Gong, H.",
+  "year": 2026,
+  "venue": "ITM Web of Conferences (ATCIDS 2026)",
+  "odin_topics": ["6.A", "6.B"],
+  "tldr": "Systematically reviews deep learning methods for stock price prediction from LSTM to Transformer, comparing ARIMA, GARCH, SVM, LSTM, and Transformer models on data requirements, indicators, and performance.",
+  "problem_and_motivation": "Stock price prediction is challenged by high volatility, non-linearity, and non-stationarity. Traditional methods (ARIMA, GARCH) capture linear patterns but fail on nonlinear financial data. Deep learning offers improved accuracy but faces data noise and overfitting issues.",
+  "approach": [
+    "Systematically reviews the evolution from traditional statistical models (ARIMA, GARCH) to ML (SVM, Random Forest) to deep learning (LSTM, Transformer).",
+    "Compares LSTM and Transformer architectures for sequential financial data modeling.",
+    "Analyzes data sets, evaluation metrics, and empirical performance across studies.",
+    "Discusses challenges including data noise, overfitting, interpretability, and computational efficiency.",
+    "Identifies future directions: multimodal information fusion, explainable AI, and real-time adaptive learning."
+  ],
+  "findings": [
+    "LSTM excels at capturing long-term dependencies in sequential stock price data.",
+    "Transformer models offer parallel computation advantages over sequential LSTM processing.",
+    "Data noise and non-stationarity remain significant challenges for all models.",
+    "Multimodal data fusion (text, news, social media) with price data improves prediction.",
+    "Explainable AI is needed to address the black-box nature of deep learning stock models."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "LSTM", "definition": "Long Short-Term Memory network for sequential data with gating mechanisms."},
+    {"term": "Transformer", "definition": "Attention-based architecture enabling parallel sequence processing."},
+    {"term": "ARIMA", "definition": "Autoregressive Integrated Moving Average for time series forecasting."},
+    {"term": "GARCH", "definition": "Generalized Autoregressive Conditional Heteroskedasticity for volatility modeling."}
+  ],
+  "citations": [
+    {"author": "Krizhevsky et al.", "year": 2012, "page": 0, "paragraph": 0, "claim": "Deep learning breakthrough in image recognition.", "role": "context"},
+    {"author": "Radford et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "GPT series for language modeling and generation.", "role": "context"},
+    {"author": "Kenton & Toutanova", "year": 2019, "page": 0, "paragraph": 0, "claim": "BERT for bidirectional language understanding.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Directly reviews deep learning models for financial prediction."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Compares LSTM and Transformer for sequential financial time series."}
+    ],
+    "contribution_to_field": "Provides a systematic technical roadmap from traditional to deep learning methods for stock price prediction. Highlights the progression from ARIMA/GARCH through SVM/Random Forest to LSTM and Transformer architectures. Identifies key remaining challenges and promising research directions in the field.",
+    "directly_justifies": [
+      "LSTM captures long-term dependencies in sequential price data.",
+      "Transformers offer parallel computation advantages over LSTMs.",
+      "Multimodal fusion improves prediction accuracy."
+    ],
+    "limits": [
+      "Review paper without original empirical experiments."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 6.A and 6.B high relevance for predictive modeling and forecasting algorithms. Rejected behavioral, system design, and evaluation topics as the paper focuses purely on forecasting methodology."
+  },
+  "limitations": [
+    "Review paper without original experimental validation.",
+    "Limited coverage of ensemble and hybrid deep learning approaches. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Deep learning progresses from LSTM to Transformer for stock prediction.",
+    "LSTM captures long-term dependencies; Transformers enable parallel processing.",
+    "Data noise and non-stationarity persist as major challenges.",
+    "Multimodal fusion and explainable AI are key future directions."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gong_marked.md",
+      "converted_at": "2026-07-22T13:26:52Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "paper_id": "10.XXXX/2026.jcssr.168",
+  "designation": "international-algorithm-specific",
+  "title": "Research on Personalized Asset Allocation Using AI Agents in Robo-Advisory Scenarios",
+  "authors": "Li, J.",
+  "year": 2026,
+  "venue": "Journal of Computer, Signal, and System Research",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "8.A",
+    "9.A",
+    "10.A",
+    "10.B",
+    "11.A"
+  ],
+  "tldr": "Reviews AI-driven personalized asset allocation in robo-advisory, covering risk profiling, dynamic allocation, behavioral finance integration, and challenges in transparency and regulation.",
+  "problem_and_motivation": "Standard robo-advisory models use generalized algorithms that fail to address individual financial circumstances and risk tolerances. Traditional investment approaches based on age and questionnaires deliver limited personalization. This gap motivates the development of AI-driven techniques for dynamic, personalized asset allocation.",
+  "approach": [
+    "Systematic review of literature on AI techniques for personalized asset allocation in robo-advisory.",
+    "Examines risk profiling using deep learning and NLP to analyze transaction history, portfolio composition, and textual data.",
+    "Reviews dynamic asset allocation strategies, comparing static vs. dynamic approaches and reinforcement learning for adaptive portfolios.",
+    "Analyzes integration of behavioral finance principles to mitigate cognitive biases like loss aversion and confirmation bias.",
+    "Compares AI algorithms including deep learning, reinforcement learning, and genetic algorithms for portfolio optimization.",
+    "Discusses challenges in transparency, explainability, data privacy, security, and regulatory compliance (GDPR, CCPA).",
+    "Identifies future trends including federated learning, explainable AI, and alternative data integration."
+  ],
+  "findings": [
+    "num: AI-driven approaches show improved portfolio performance in volatile markets compared to rule-based systems.",
+    "num: Traditional risk profiling models often exhibit low R2 values, indicating poor fit.",
+    "num: RL agents optimize asset allocation based on individual utility functions and can handle high-dimensional state spaces.",
+    "Deep learning models, particularly RNNs, excel at capturing temporal dependencies in financial data.",
+    "Integration of behavioral finance insights allows AI to quantify bias influence using bias scores.",
+    "Lack of transparency in black-box AI models erodes user trust in robo-advisory systems.",
+    "Federated learning offers potential for personalization while preserving user privacy.",
+    "Explainable AI (XAI) is crucial for regulatory compliance and trust-building."
+  ],
+  "key_figures_tables": [
+    "Table 1: Comparison of early robo-advisory models → rule-based systems lacked adaptability and dynamic adjustment.",
+    "Table 2: Timeline of AI integration in robo-advisory → evolution from personalized agents to reinforcement learning and evolutionary algorithms.",
+    "Table 3: Comparison of risk profiling methods → AI-enhanced profiling uses diverse data and deep learning for dynamic personalization.",
+    "Table 4: Behavioral biases and mitigation strategies in AI robo-advisors → bias scores quantify influence of cognitive biases.",
+    "Table 5: Key challenges and mitigation strategies → data privacy, regulation, ethics, and trust require comprehensive safeguards."
+  ],
+  "key_equations": [
+    {
+      "equation": "A_t = f(M_t, I_t)",
+      "explanation": "Optimal asset allocation at time t depends on market conditions and investor needs."
+    },
+    {
+      "equation": "\\sum_{t=0}^{T} \\gamma^t r_t",
+      "explanation": "Cumulative discounted reward maximized by RL agent over time horizon."
+    },
+    {
+      "equation": "\\pi(a_t | s_t)",
+      "explanation": "Policy mapping states to actions for optimal portfolio allocation."
+    },
+    {
+      "equation": "f(x)",
+      "explanation": "Function representing investor risk preferences from diverse data inputs."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "RL",
+      "definition": "Reinforcement learning, a machine learning paradigm where agents learn optimal actions through trial and error."
+    },
+    {
+      "term": "RNN",
+      "definition": "Recurrent neural network, a deep learning model for sequential or time-series data."
+    },
+    {
+      "term": "NLP",
+      "definition": "Natural language processing, techniques for analyzing and extracting insights from textual data."
+    },
+    {
+      "term": "XAI",
+      "definition": "Explainable artificial intelligence, methods to make AI decisions interpretable to humans."
+    },
+    {
+      "term": "MDP",
+      "definition": "Markov Decision Process, a mathematical framework for modeling sequential decision-making under uncertainty."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Shetty",
+      "year": 2026,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Robo-advisors democratize investment management by offering automated, low-cost services.",
+      "role": "context"
+    },
+    {
+      "author": "Abbas",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-powered robo-advisors represent a rise in financial technology integration.",
+      "role": "context"
+    },
+    {
+      "author": "Feng",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Early robo-advisors used rule-based systems that lacked adaptability to changing conditions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Shen",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Machine learning enables personalized portfolios tailored to individual risk preferences and needs.",
+      "role": "finding"
+    },
+    {
+      "author": "Tahvildari",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reinforcement learning models optimize asset allocation based on individual utility functions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhu",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional risk questionnaires have low R2 values, indicating poor predictive fit.",
+      "role": "critique"
+    },
+    {
+      "author": "Litty",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Dynamic asset allocation adjusts portfolio mix in response to evolving market conditions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Khosravi",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reinforcement learning agents learn optimal trading strategies by interacting with the market environment.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rizinski",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI agents can be programmed to recognize and mitigate cognitive biases like loss aversion.",
+      "role": "finding"
+    },
+    {
+      "author": "Akhtar",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Performance of AI algorithms for asset allocation depends on data quality and parameter tuning.",
+      "role": "finding"
+    },
+    {
+      "author": "Bhardwaj",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Black-box deep learning models lack transparency, eroding user trust in investment decisions.",
+      "role": "critique"
+    },
+    {
+      "author": "Koneti",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deployment of AI in finance raises data privacy, security, and regulatory compliance concerns.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "Discusses asset allocation categorization, not expense categorization."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides a comprehensive review of robo-advisory systems and AI integration."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Explicitly identifies limitations of rule-based and static allocation approaches."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Covers risk profiling, investor segmentation, and persona creation using AI."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Reviews clustering and classification models for investor segmentation."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses RL and deep learning for predicting optimal asset allocations."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "RNNs capture temporal dependencies, but focus is on trading, not spending."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Mentions financial planning but not budgeting strategies specifically."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Discusses personalized financial advice but not budget recommendation per se."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "Portfolio optimization involves constraints, but not budget allocation frameworks."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Data privacy and security concerns mentioned, but not anomaly detection algorithms."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "low",
+        "justification": "Briefly mentions accessible solutions but no mobile design discussion."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Dedicates a section to data privacy, security, and encryption requirements."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Discusses trust erosion from black-box AI and need for transparency."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "low",
+        "justification": "Mentions enhanced user engagement and satisfaction briefly."
+      }
+    ],
+    "contribution_to_field": "This paper provides a systematic review of AI-driven personalized asset allocation within robo-advisory platforms. It synthesizes current research on risk profiling, dynamic asset allocation, and behavioral finance integration. The review identifies key challenges including transparency, data privacy, and regulatory compliance. It also outlines future research directions such as federated learning, explainable AI, and alternative data integration. The paper serves as a comprehensive reference for researchers and practitioners in AI-enabled financial technology.",
+    "directly_justifies": [
+      "AI-driven approaches show improved portfolio performance in volatile markets compared to rule-based systems.",
+      "Traditional risk questionnaires fail to capture dynamic risk preferences, often showing low R2 values.",
+      "Reinforcement learning agents optimize asset allocation based on individual utility functions.",
+      "Lack of transparency in black-box AI models erodes user trust in investment decisions.",
+      "Federated learning offers personalization while preserving user privacy."
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "All topic domains from the taxonomy were systematically scanned against the paper's content. Domains 4.A, 4.B, 5.A, 10.A, and 10.B were flagged as high relevance due to the paper's comprehensive review of robo-advisory systems, their limitations, investor profiling, and data privacy/trust concerns. Domains 5.C and 6.A received medium relevance for their coverage of classification approaches and predictive modeling, though not as central. Domains 3.A, 6.B, 7.A, 7.B, 7.C, 8.A, and 11.A were rejected or low/contextual because the paper focuses on asset allocation rather than expense categorization, budgeting, or anomaly detection, and mobile design is only tangentially mentioned. The paper's core contribution lies in reviewing algorithmic personalization of investment portfolios, which maps most directly to the landscape of financial systems, behavioral profiling, and trust/privacy domains."
+  },
+  "limitations": [
+    "The review does not present original empirical data or experiments. [unacknowledged]",
+    "Comparisons of algorithm performance are qualitative, not quantitative. [unacknowledged]",
+    "Does not address implementation challenges of deploying AI in real-world robo-advisory platforms. [unacknowledged]",
+    "The paper acknowledges challenges remain in explainability, bias mitigation, and robustness.",
+    "Further research is needed to build trust and enhance practical applicability."
+  ],
+  "remember_this": [
+    "AI-driven asset allocation improves portfolio performance in volatile markets.",
+    "Traditional risk questionnaires often have low predictive accuracy.",
+    "Reinforcement learning enables dynamic portfolio adaptation to market conditions.",
+    "Black-box AI models erode user trust in financial recommendations.",
+    "Federated learning offers privacy-preserving personalization for robo-advisors."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Li J._marked.md",
+      "converted_at": "2026-07-21T14:00:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

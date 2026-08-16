@@ -1,0 +1,253 @@
+{
+  "paper_id": "10.46932/sfjdv7n4-005",
+  "designation": "local",
+  "title": "The importance of financial literacy for young adults: a guide to smart money management",
+  "authors": "Mercado, M. D.; Castillo, A. P.; Araves, J. A.",
+  "year": 2026,
+  "venue": "South Florida Journal of Development",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.D",
+    "3.A",
+    "9.A",
+    "11.A",
+    "13.A"
+  ],
+  "tldr": "Financial literacy is a fundamental life skill that enables young adults to make informed decisions about budgeting, saving, debt, and investing.",
+  "problem_and_motivation": "Young adults face complex financial decisions early in life but lack foundational financial literacy. This gap leads to debt, financial stress, and delayed life milestones.",
+  "approach": [
+    "Synthesizes global survey data from OECD, FINRA, and Federal Reserve on young adult financial literacy.",
+    "Summarizes financial literacy as encompassing budgeting, saving, debt management, and investing.",
+    "Identifies key barriers: lack of education, emotional factors, and low confidence.",
+    "Documents consequences: credit card mismanagement, no emergency savings, delayed milestones.",
+    "Presents a guide based on the 50/30/20 budget rule and compound interest principles.",
+    "Reviews digital tools, community programs, and policy recommendations.",
+    "Uses tables and figures to summarize survey data and illustrate financial concepts.",
+    "Advocates for integrating personal finance into school curricula and community programs."
+  ],
+  "findings": [
+    "num: 65% of young adults report difficulty repaying student loan debt.",
+    "num: 58% live paycheck to paycheck.",
+    "num: 54% have no emergency savings.",
+    "num: 72% have little to no investment knowledge.",
+    "num: Over 50% of young adults cannot define APR.",
+    "num: 60% lack understanding of credit scores.",
+    "num: 43% have failed to make a credit card payment in the past 12 months.",
+    "num: Only 36% have sufficient savings to cover a $500 emergency.",
+    "Financial illiteracy leads to delayed home buying, retirement saving, and family planning.",
+    "Emotional factors like stress and shame contribute to avoidance of financial decisions."
+  ],
+  "key_figures_tables": [
+    "Table 1: Financial challenges → High rates of debt, paycheck living, and low savings.",
+    "Figure 1: Knowledge gaps → Most struggle with credit, investing, and budgeting.",
+    "Table 2: Consequences → Debt and stress affect individuals and society.",
+    "Figure 2: Delayed milestones → 72% delay retirement saving due to finances.",
+    "Table 3: 50/30/20 rule → A simple framework for budgeting.",
+    "Figure 3: Early saving → Starting at 22 yields much more than starting at 30.",
+    "Figure 4: Intersection → Digital, education, and community support together improve literacy."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "APR",
+      "definition": "Annual percentage rate, the yearly interest rate on loans or credit cards."
+    },
+    {
+      "term": "Financial literacy",
+      "definition": "The ability to understand and effectively use various financial skills, including personal financial management, budgeting, and investing."
+    },
+    {
+      "term": "Financial self-efficacy",
+      "definition": "An individual's belief in their ability to manage financial tasks and overcome financial challenges."
+    },
+    {
+      "term": "OECD",
+      "definition": "Organisation for Economic Co-operation and Development."
+    },
+    {
+      "term": "FINRA",
+      "definition": "Financial Industry Regulatory Authority."
+    }
+  ],
+  "citations": [
+    {
+      "author": "OECD",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Less than a third of youth aged 18-25 can answer simple questions on interest, budgeting, and savings.",
+      "role": "finding"
+    },
+    {
+      "author": "FINRA",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Over half of young adults cannot define APR.",
+      "role": "finding"
+    },
+    {
+      "author": "Federal Reserve",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Average credit card balance for U.S. adults 18-29 is over $3,200.",
+      "role": "finding"
+    },
+    {
+      "author": "Bankrate",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Only 36% of young adults have sufficient savings for a $500 emergency.",
+      "role": "finding"
+    },
+    {
+      "author": "American Psychological Association",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Money is the number one stressor among adults under 30.",
+      "role": "finding"
+    },
+    {
+      "author": "Lusardi",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial literacy is linked to better financial planning and outcomes.",
+      "role": "context"
+    },
+    {
+      "author": "Mandell",
+      "year": 2012,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Young American adults have low levels of financial literacy.",
+      "role": "finding"
+    },
+    {
+      "author": "Shim",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Parents, work, and education all play a role in financial socialization.",
+      "role": "context"
+    },
+    {
+      "author": "Lyons",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Behavioral factors influence college students' financial decisions.",
+      "role": "context"
+    },
+    {
+      "author": "Xiao",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Meta-analysis shows financial education improves behavior.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "low",
+        "justification": "Paper focuses on young adults globally with no specific Filipino focus."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "low",
+        "justification": "No Philippines-specific financial structure data."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "low",
+        "justification": "Behavioral insights are general, not Filipino-specific."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "Mentions cultural pressures like consumerism but no specific cultural practices."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and \"Occasions\"",
+        "relevance": "low",
+        "justification": "No mention of Filipino spending cycles or occasions."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Presents the 50/30/20 budget rule as a categorization framework."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "medium",
+        "justification": "Reviews budgeting apps, savings helpers, and investment platforms."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Discusses gamification and interactive tools for user engagement."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "medium",
+        "justification": "Advocates for emergency funds and goal-based saving strategies."
+      }
+    ],
+    "contribution_to_field": "This paper synthesizes existing survey data to highlight the prevalence of financial illiteracy among young adults and its consequences. It provides a practical, non-technical guide to core financial literacy topics, emphasizing budgeting, saving, debt management, and investing. The paper advocates for systemic changes in education and technology access to address the literacy gap.",
+    "directly_justifies": [
+      "Young adults lack foundational financial literacy despite being surrounded by financial products.",
+      "Financial illiteracy leads to debt, stress, and delayed life milestones.",
+      "Digital tools can make financial education more accessible and engaging.",
+      "Schools and community programs are essential to closing the literacy gap."
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains revealed relevance primarily in expense categorization (3.A), mobile finance tools (9.A), engagement dynamics (11.A), and savings goal management (13.A). The paper provides a general overview of financial literacy for young adults, not a technical or algorithmic contribution. Topics related to Filipino-specific demographics (1.A, 1.B, 1.C, 2.A, 2.D) were considered but rejected due to the paper's global scope. Algorithmic or modeling topics (4-8, 12, 14) were not applicable. Overall, the paper serves as a foundational resource for understanding the problem of financial illiteracy and the importance of accessible education and tools."
+  },
+  "limitations": [
+    "The paper does not present original empirical research but synthesizes secondary survey data.",
+    "Recommendations are general and not tailored to specific cultural or economic contexts. [unacknowledged]",
+    "The paper does not address the effectiveness of specific digital tools or interventions. [unacknowledged]",
+    "The guide is prescriptive and does not account for individual variability in financial circumstances. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Financial literacy is as fundamental as reading and writing.",
+    "65% of young adults struggle with student loan debt.",
+    "Less than a third of youth can answer basic financial questions.",
+    "Starting to save early dramatically increases long-term wealth.",
+    "Budgeting, saving, and investing are learnable skills."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mercado M. et al_marked.md",
+      "converted_at": "2026-07-21T14:14:40Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

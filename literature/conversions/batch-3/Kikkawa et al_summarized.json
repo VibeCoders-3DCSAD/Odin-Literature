@@ -1,0 +1,202 @@
+{
+  "paper_id": "10.22617/WPS240025-2",
+  "designation": "local-algorithm-specific",
+  "title": "Measuring the contribution of international remittances to household expenditures and economic output: A micro-macro analysis for the Philippines",
+  "authors": "Kikkawa, A.; Gaspar, R.; Kim, K.; Mariasingham, M. J.; Zamora, C. M.",
+  "year": 2024,
+  "venue": "ADB Economics Working Paper Series",
+  "odin_topics": [
+    "1.B",
+    "1.C",
+    "2.B",
+    "2.D",
+    "3.A",
+    "3.C",
+    "4.A",
+    "4.B",
+    "5.A",
+    "6.A",
+    "7.A",
+    "7.B",
+    "12.C",
+    "13.A",
+    "13.C",
+    "14.A"
+  ],
+  "tldr": "Integrates household expenditure data with input-output analysis to find that remittance-financed consumption and investment contributed 3.5% of output, 3.4% of GDP, and 3.7% of employment in the Philippines in 2018.",
+  "problem_and_motivation": "Microeconomic and macroeconomic studies of remittances use different definitions and data sources, making consistent assessment of their economic contribution difficult. The discrepancy in remittance growth between micro and macro data sources is large and poorly understood. A method is needed to evaluate remittance contributions using a unified definition across both levels of analysis.",
+  "approach": [
+    "Uses the 2018 Family Income and Expenditure Surveys (FIES) to identify remittance income and expenditure patterns of Filipino households.",
+    "Estimates consumption equations via seemingly unrelated regression to derive marginal propensities to consume across 16 commodity categories, allowing variation by income quintile and remittance dependency.",
+    "Maps FIES commodity expenditure items to the 80-sector 2018 Philippine input-output table using a concordance matrix and trade margin adjustments.",
+    "Calculates remittance-financed household final demand (consumption plus savings/investment) and applies the Leontief inverse matrix to estimate direct and indirect effects on sectoral output and value added.",
+    "Simulates a hypothetical 10% increase in remittance income to examine reallocation effects and macroeconomic impacts via the integrated micro-macro model."
+  ],
+  "findings": [
+    "num: Remittance-financed household consumption and investment totaled ₱742.2 billion ($14.1 billion) in 2018.",
+    "num: Remittances contributed 3.5% of the country's total output, 3.4% of GDP, and 3.7% of total employment.",
+    "num: Household-reported remittance income (₱742.2 billion) was 43.8% of the central bank's aggregate remittance figure (₱1.7 trillion).",
+    "Manufacturing received the largest share of remittance-financed consumption (35.0%), followed by wholesale/retail trade (13.2%) and agriculture (12.8%).",
+    "The savings/investment portion of remittances flowed primarily to construction (72.7%).",
+    "num: A 10% increase in remittance income would raise GDP by 0.34 percentage points (≈$1.2 billion) and employment by 0.36 percentage points (≈150,000 jobs).",
+    "Remittance-receiving households spend a lower share on food and higher shares on education, health, and real property compared to non-recipients.",
+    "The manufacturing sector generated the largest gross output contribution (₱455 billion, 35.5%) and value added (₱143 billion, 23%) from remittance-induced demand."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Remittance-receiving households are more concentrated in higher income quintiles → migration costs constrain access for poorer households.",
+    "Figure 2: Remittance recipients spend less on food (35.6% vs 42%) and more on education, health, and housing → remittances enable productive investment.",
+    "Figure 3: Expenditure differences by remittance status are more pronounced in higher income quintiles → income level mediates spending reallocation.",
+    "Figure 4: Remittance recipients with bank accounts have slightly higher savings rates (26.3%) than non-recipients (24.4%) → financial inclusion modestly amplifies savings.",
+    "Figure 5: Manufacturing has the highest forward (2.97) and backward (1.33) linkage indices → high multiplier effects amplify remittance impact.",
+    "Figure 6: A 10% remittance increase reduces food expenditure share by 0.09 percentage points and raises bank savings/investments by 0.03 percentage points → reallocation toward investment.",
+    "Table 2: Remittance-receiving households allocate 2 percentage points more to real estate and 1 point more to education than non-recipients → distinct consumption preferences.",
+    "Table 4: Agriculture employs 644,000 (43%) of remittance-induced jobs → remittances have strong rural employment effects.",
+    "Table 5: A 10% remittance increase raises manufacturing output by 0.42% and construction output by 0.39% → downstream sectors benefit from investment reallocation."
+  ],
+  "key_equations": [
+    {
+      "equation": "C_{ij} = \\alpha_i + \\beta_i TInc_j + \\sum_{n=1}^{4} \\gamma_{in} remidependency_j + \\sum_{n=1}^{4} \\rho_{in} (TInc_j \\times remidependency_j) + \\delta \\mathbf{X}_j + \\varepsilon_{ij}",
+      "explanation": "Consumption equation estimating share of expenditure item i by household j."
+    },
+    {
+      "equation": "\\mathbf{x}^{\\text{remit}} = \\mathbf{B} \\cdot \\mathbf{y}^{\\text{remit}}",
+      "explanation": "Leontief inverse transforms remittance-induced final demand into sectoral gross output."
+    }
+  ],
+  "definitions": [
+    { "term": "FIES", "definition": "Family Income and Expenditure Survey, the Philippine national household survey." },
+    { "term": "I-O", "definition": "Input-Output, a macroeconomic framework representing sectoral interdependencies." },
+    { "term": "BSP", "definition": "Bangko Sentral ng Pilipinas, the Philippine central bank." },
+    { "term": "GDP", "definition": "Gross Domestic Product." },
+    { "term": "Leontief inverse", "definition": "Matrix (I - A)^{-1} capturing direct and indirect output requirements per unit of final demand." },
+    { "term": "Backward linkage", "definition": "Extent to which a sector's production depends on inputs from other sectors." },
+    { "term": "Forward linkage", "definition": "Extent to which a sector's output is used as input by other sectors." },
+    { "term": "Marginal propensity to consume", "definition": "Change in consumption share per unit change in income." }
+  ],
+  "citations": [
+    {
+      "author": "Clemens",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Discrepancy in remittance growth between micro and macro data ranges from 8% (Pakistan) to 72% (El Salvador).",
+      "role": "context"
+    },
+    {
+      "author": "Yang",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Exogenous remittance increases from exchange rate shocks were used for education and microenterprise investment in the Philippines.",
+      "role": "finding"
+    },
+    {
+      "author": "Adams",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Remittance-receiving Guatemalan households spent 194% more on education and 81% more on housing.",
+      "role": "finding"
+    },
+    {
+      "author": "Goce-Dakila",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A 5% reduction in remittances in the Philippines decreases gross output by less than 0.5 percentage points.",
+      "role": "baseline"
+    },
+    {
+      "author": "Dridi",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Countries with intricate industrial linkages benefit more from remittance-led demand.",
+      "role": "methodology"
+    },
+    {
+      "author": "Glytsos",
+      "year": 1993,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Remittances contributed 4.1% of gross output and created 74,000 jobs in Greece.",
+      "role": "methodology"
+    },
+    {
+      "author": "Wang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Remittances in Kyrgyzstan showed a 0.0001 percentage point reduction in food share per income increase.",
+      "role": "baseline"
+    },
+    {
+      "author": "Mishra",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A 10% remittance increase in Nepal raises food consumption by 0.9% and education spending by 8%.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      { "code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "contextual", "justification": "Provides income composition data but not age-specific breakdowns." },
+      { "code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "low", "justification": "Discusses spending patterns but not disaggregated by age group." },
+      { "code": "2.B", "name": "Seasonal and Cyclical Spending Patterns", "relevance": "medium", "justification": "Uses annual FIES data capturing cyclical expenditure." },
+      { "code": "2.D", "name": "Filipino Spending Cycles and \"Occasions\"", "relevance": "low", "justification": "Not directly addressed but embedded in FIES expenditure categories." },
+      { "code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "high", "justification": "Develops a 16-category expenditure classification mapped to I-O sectors." },
+      { "code": "3.C", "name": "User-Defined Allocation Constraints", "relevance": "low", "justification": "Not a focus; uses aggregate expenditure patterns rather than user constraints." },
+      { "code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "contextual", "justification": "Contextualizes remittance flows but does not survey PFMS." },
+      { "code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "medium", "justification": "Identifies gap between micro and macro remittance definitions as a key limitation." },
+      { "code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "high", "justification": "Characterizes spending patterns of remittance-receiving vs non-receiving households." },
+      { "code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "contextual", "justification": "Does not build predictive models but simulates income shocks." },
+      { "code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "high", "justification": "Directly estimates marginal propensities to consume and expenditure allocation." },
+      { "code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "medium", "justification": "Provides baseline expenditure patterns that could inform budget allocation rules." },
+      { "code": "12.C", "name": "Evaluation Methodologies for Budget Recommendation Systems", "relevance": "medium", "justification": "Uses I-O multiplier analysis to evaluate economic impact, analogous to system evaluation." },
+      { "code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "high", "justification": "Measures savings/investment allocation of remittance income by sector." },
+      { "code": "13.C", "name": "End-of-Period Surplus as a Savings Input", "relevance": "medium", "justification": "Treats the residual of income minus consumption as savings/investment." },
+      { "code": "14.A", "name": "Synthetic Data Generation for Financial ML", "relevance": "contextual", "justification": "No synthetic data generation; uses real FIES survey data." }
+    ],
+    "contribution_to_field": "This paper makes a methodological contribution by integrating household survey microdata with an input-output framework to provide a unified assessment of remittances' economic contribution. It empirically quantifies the large gap between household-reported remittance income and central bank aggregate figures, demonstrating the definitional divide between micro and macro studies. The approach reveals sectoral propagation mechanisms, showing how manufacturing, agriculture, and construction benefit disproportionately due to multiplier effects. By simulating a 10% remittance increase, the paper also provides a counterfactual analysis of reallocation effects, offering a template for other migrant-sending countries.",
+    "directly_justifies": [
+      "Remittance-financed consumption and investment contributed 3.5% of total output and 3.4% of GDP.",
+      "Manufacturing captured 35% of remittance-financed consumption but only 23% of value added due to import content.",
+      "A 10% remittance increase would raise GDP by 0.34 percentage points and employment by 0.36 percentage points.",
+      "Household-reported remittance income is only 43.8% of central bank aggregate remittances.",
+      "Remittance recipients allocate more to education, health, and real estate than non-recipients."
+    ],
+    "limits": [
+      "The study uses a single-year (2018) cross-section, limiting causal inference and temporal generalizability.",
+      "FIES does not identify expenditures financed specifically by remittances versus other income sources, relying on fungibility assumptions.",
+      "Limited details on family business investments financed by remittances, as FIES reports only net business profits.",
+      "The analysis does not account for remittances sent to migrants' own bank accounts or diaspora investments, which are excluded from household surveys.",
+      "Applies only to the Philippines; findings may not generalize to other migrant-sending countries with different economic structures."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 16 topic domains was conducted to classify the paper's coverage. The paper directly addresses financial behavior (1.C) through consumption equation estimation, expense categorization (3.A) via the 16-commodity classification, and behavioral profiling (5.A) by contrasting remittance-receiving and non-receiving households. It provides domain knowledge for budgeting strategies (7.A) through marginal propensities to consume and savings management (13.A) via savings/investment allocation. Topics related to algorithmic techniques (6.A, 14.A) were classified as contextual because the paper does not build predictive models or generate synthetic data, though it simulates shocks. PFMS landscape topics (4.A, 4.B) were flagged as medium/contextual because the paper identifies definitional gaps but does not survey systems. Seasonal spending (2.B) received medium relevance as the annual FIES captures cyclical patterns indirectly. Age-specific demographics (1.B) were classified as contextual due to lack of age disaggregation, and user-defined constraints (3.C) were rejected as irrelevant. Overall, the paper is most relevant to macro-level economic impact assessment and household expenditure analysis rather than system design or algorithmic development."
+  },
+  "limitations": [
+    "The study assumes remittance income is fully fungible with other income sources, an assumption that may not hold for all households.",
+    "FIES does not allow identification of expenditures specifically financed by remittances, limiting attribution accuracy.",
+    "Limited details on remittance-funded family business investments, as only net business profits are reported. [unacknowledged]",
+    "Savings/investment allocation relies on residual calculation (income minus consumption), which may conflate savings with measurement error.",
+    "The analysis uses a single-year cross-section, preventing causal identification of remittance effects over time. [unacknowledged]",
+    "The I-O framework assumes fixed input coefficients, which may not capture dynamic adjustments in production technology."
+  ],
+  "remember_this": [
+    "Remittance-financed demand contributed 3.5% of Philippine output and 3.4% of GDP in 2018.",
+    "Household-reported remittance income was only 44% of central bank aggregate figures.",
+    "Manufacturing captured 35% of remittance consumption but only 23% of value added due to imports.",
+    "Remittance recipients spend more on education, health, and real estate than non-recipients.",
+    "A 10% remittance increase would generate 0.34% GDP growth and 150,000 additional jobs."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kikkawa et al_marked.md",
+      "converted_at": "2026-07-21T13:47:27Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

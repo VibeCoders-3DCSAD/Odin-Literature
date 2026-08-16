@@ -1,0 +1,316 @@
+{
+  "paper_id": "10.1080/24751839.2026.2674344",
+  "designation": "international-algorithm-specific",
+  "title": "Drift-driven collaborative learning for non-stationary time series: a COVID-19 case study",
+  "authors": "Jouini, K.; Jemili, F.; Korbaa, O.",
+  "year": 2026,
+  "venue": "Journal of Information and Telecommunication",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.D",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "Introduces EFRT-DD, an eager incremental regression tree with continuous structural revision, and CDR, a collaborative framework integrating incremental and batch learners for non-stationary stream regression.",
+  "problem_and_motivation": "Concept drift degrades batch model performance, while incremental models trade accuracy for responsiveness. Existing approaches treat batch and incremental learning as mutually exclusive, failing to combine their complementary strengths in a unified, drift-aware manner.",
+  "approach": [
+    "Proposes EFRT-DD, an eager incremental regression tree that splits as soon as a split is statistically preferred over no split and continuously reevaluates and revises its internal structure.",
+    "Proposes CDR, a collaborative framework that coordinates incremental (EFRT-DD) and batch (Decision Tree) regressors with drift detection (ADWIN) and dynamic selection based on recent performance.",
+    "Uses a multi-country COVID-19 dataset from Our World in Data with daily new cases and deaths per million as targets, featuring ≈177k samples from 219 countries over 31 months.",
+    "Implements EFRT-DD and CDR using MOA, Scikit-Multiflow, and Scikit-Learn, with default settings and ADWIN confidence d = 0.2%.",
+    "Evaluates using prequential protocol, comparing against HT, HAT, and FIMT-DD, and against a batch regression tree retrained every ≈3 months.",
+    "Uses MAE and RMSE as evaluation metrics and reports average run times over three consecutive runs.",
+    "Compares single-country (Tunisia) vs. multi-country training to assess temporal coherence.",
+    "Configures batch models with three-week windows (two weeks before, one week after drift detection).",
+    "Discusses practical relevance for volatile domains such as financial markets and energy demand forecasting.",
+    "Acknowledges limitations: retrospective data, pandemic-specific validation, computational overhead of eager splitting."
+  ],
+  "findings": [
+    "num: EFRT-DD improves over FIMT-DD by 2.38%–9.78% (world) and 13.82%–168.67% (Tunisia) across RMSE/MAE for deaths and cases.",
+    "num: CDR improves over FIMT-DD by 3.61%–14.77% (world) and 27.34%–149% (Tunisia) across RMSE/MAE for deaths and cases.",
+    "num: CDR outperforms batch decision tree retrained every 3 months by 21.85%–131.61% (world) and 93.06%–167.08% (Tunisia) across RMSE/MAE.",
+    "num: EFRT-DD is 5 to 6 times slower than FIMT-DD due to continuous structural revision.",
+    "Structural reactivity through eager induction mitigates short-term underfitting and long-term structural bias.",
+    "Drift-triggered collaborative adaptation combines high-frequency responsiveness with stabilising batch retraining on recent data.",
+    "Temporal coherence in multi-source learning: single-country training outperforms multi-country training due to asynchronous drifts.",
+    "EFRT-DD and FIMT-DD outperform HAT and HT in almost all cases.",
+    "CDR achieves best overall predictive performance across all compared methods.",
+    "Drift-driven retraining yields better predictive performance than fixed-interval retraining."
+  ],
+  "key_figures_tables": [
+    "Table 1: MAE and RMSE for CDR and incremental learners → CDR achieves lowest errors across all metrics and datasets.",
+    "Figure 3: World daily new cases MAE over time → CDR consistently outperforms all incremental learners.",
+    "Figure 4: World daily new deaths MAE over time → CDR maintains lowest MAE across the forecasting horizon.",
+    "Table 2: CDR vs batch decision tree for cases → CDR achieves substantial improvements over batch retraining.",
+    "Table 3: CDR vs batch decision tree for deaths → CDR shows largest improvements on Tunisian data.",
+    "Figure 1: CDR learning process → illustrates incremental and batch regressor coexistence with drift-driven invalidation.",
+    "Figure 2: CDR inference process → shows dynamic model selection based on sliding window performance.",
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\epsilon = \\sqrt{\\frac{R^2 \\ln(1/\\delta)}{2n}}",
+      "explanation": "Hoeffding bound for split confidence."
+    },
+    {
+      "equation": "\\text{SDR}(X) = \\text{sd}(l) - \\left( \\frac{N_l}{N} \\text{sd}(l_l) + \\frac{N_r}{N} \\text{sd}(l_r) \\right)",
+      "explanation": "Standard deviation reduction for split evaluation."
+    },
+    {
+      "equation": "\\text{SD}_{\\text{ratio}}(X) = \\frac{\\text{sd}(\\text{parent}) - \\text{sumSD}_{\\text{childs}}(X)}{\\text{sd}(\\text{parent})}",
+      "explanation": "EFRT-DD splitting criterion."
+    },
+    {
+      "equation": "m = \\frac{2}{\\frac{1}{|W_0|} + \\frac{1}{|W_1|}}, \\quad \\epsilon_{\\text{cut}} = \\sqrt{\\frac{1}{2m} \\ln\\frac{4|W|}{\\delta}}",
+      "explanation": "ADWIN drift detection cut computation."
+    },
+    {
+      "equation": "\\frac{\\text{SDR}(X_b)}{\\text{SDR}(X_a)} < 1 - \\epsilon",
+      "explanation": "FIMT-DD split condition."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Concept drift",
+      "definition": "Changes in the underlying data-generating process over time, causing the relationship between inputs and target to evolve."
+    },
+    {
+      "term": "Incremental learning",
+      "definition": "Learning paradigm where models are continuously updated on small amounts of data as they arrive, rather than trained in batch."
+    },
+    {
+      "term": "Batch learning",
+      "definition": "Conventional machine learning where models are trained on a fixed, complete dataset before deployment."
+    },
+    {
+      "term": "EFRT-DD",
+      "definition": "Extremely Fast Regression Tree with Drift Detection: eager incremental regression tree with continuous structural revision."
+    },
+    {
+      "term": "CDR",
+      "definition": "Collaborative Drift-Driven Regression: framework integrating incremental and batch learners with drift detection and dynamic selection."
+    },
+    {
+      "term": "ADWIN",
+      "definition": "ADaptive WINdowing: assumption-free drift detector that maintains a variable-length sliding window."
+    },
+    {
+      "term": "FIMT-DD",
+      "definition": "Fast Incremental Model Tree with Drift Detection: state-of-the-art incremental regression tree with lazy splitting."
+    },
+    {
+      "term": "Hoeffding Tree",
+      "definition": "De facto standard for stream mining: uses Hoeffding bound to choose optimal splitting attributes from limited data."
+    },
+    {
+      "term": "Prequential evaluation",
+      "definition": "Evaluation scheme where models are tested on each new data point before updating, simulating real-time deployment."
+    },
+    {
+      "term": "Standard Deviation Reduction",
+      "definition": "Splitting criterion that measures reduction in variance achieved by partitioning data on an attribute."
+    },
+    {
+      "term": "MAE",
+      "definition": "Mean Absolute Error: average absolute difference between predicted and actual values."
+    },
+    {
+      "term": "RMSE",
+      "definition": "Root Mean Squared Error: square root of average squared differences, more sensitive to large errors."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Bifet",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Concept drift refers to temporal changes in the relationship between input data and learning target.",
+      "role": "context"
+    },
+    {
+      "author": "Montiel",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Batch model performance deteriorates under concept drift as models remain calibrated on historical data.",
+      "role": "finding"
+    },
+    {
+      "author": "Bifet",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Incremental learning enables anytime predictions and continuous updates on small data amounts.",
+      "role": "methodology"
+    },
+    {
+      "author": "Domingos",
+      "year": 2000,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hoeffding Tree uses the Hoeffding bound to choose optimal split attributes from limited data with high confidence.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ikonomovska",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "FIMT-DD uses SDR as splitting criterion and trains perceptrons at leaves with Page-Hinkley drift detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Manapragada",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Lazy induction strategies delay splits and make irrevocable decisions, causing divergence from asymptotic batch learners.",
+      "role": "critique"
+    },
+    {
+      "author": "Montiel",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fast and slow classifiers can be unified in a batch/stream framework.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADWIN detects drifts by partitioning a window and comparing averages of two sub-windows.",
+      "role": "methodology"
+    },
+    {
+      "author": "Miralles-Pechuán",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Training on country clusters with DTW outperformed single-country and global training; batch learners often achieved higher accuracy than incremental.",
+      "role": "finding"
+    },
+    {
+      "author": "Gomes",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Most incremental algorithms focus on classification, ignoring regression tasks.",
+      "role": "critique"
+    },
+    {
+      "author": "Camargo",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Genetic algorithm with ARIMA models predicts SEIRD variables but lacks explicit drift-aware lifecycle management.",
+      "role": "baseline"
+    },
+    {
+      "author": "Cramer",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Ensemble probabilistic forecasts improve reliability but lack dynamic coordination under distributional changes.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kumar",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid fuzzy time series with LSTM and PSO models successive pandemic waves but remains batch-anchored.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gomes",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adaptive random forests for data stream regression use perceptrons and drift detection.",
+      "role": "baseline"
+    },
+    {
+      "author": "Mouss",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Page-Hinkley test detects changes in error rate for drift handling.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Provides general predictive modeling framework for non-stationary time series."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Presents and evaluates forecasting algorithms (EFRT-DD, CDR) for sequential data."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "low",
+        "justification": "Concept of handling suboptimal splits via pruning and reevaluation is structurally analogous."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Directly evaluates EFRT-DD and CDR algorithmically with prequential protocol and comparison to baselines."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Prequential evaluation approach is transferable to budget recommendation evaluation."
+      }
+    ],
+    "contribution_to_field": "This paper advances non-stationary time-series forecasting by introducing a structurally reactive incremental regression tree with eager induction and continuous revision, addressing the limitations of lazy incremental trees. It contributes a collaborative framework that dynamically coordinates incremental and batch learners using drift detection, reconciling responsiveness with predictive strength. The work provides empirical evidence that drift-triggered retraining on recent data outperforms fixed-interval retraining for pandemic forecasting. The paper also demonstrates the importance of temporal coherence in multi-source learning, showing that single-country training preserves drift signals better than naive aggregation.",
+    "directly_justifies": [
+      "Eager induction with continuous structural revision mitigates both short-term underfitting and long-term structural bias.",
+      "Drift-triggered collaborative adaptation combines high-frequency responsiveness with stabilising batch retraining.",
+      "Single-country training preserves temporal coherence and enables clearer drift detection.",
+      "EFRT-DD achieves 5 to 6 times slower training but improves predictive performance over FIMT-DD.",
+      "CDR outperforms batch decision tree retraining every 3 months by 21.85% to 167.08%."
+    ],
+    "limits": [
+      "No explicit connection to personal finance or spending data; pandemic forecasting domain may not generalise.",
+      "No discussion of user-level constraints, budgets, or savings goals.",
+      "Lacks evaluation on financial time-series datasets to validate applicability to personal finance.",
+      "Computational overhead of eager splitting may challenge high-throughput deployment."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all 14 topic domains was performed. Domains 1.A–1.C (Filipino young professionals, financial structure, behavior) were rejected as the paper contains no demographic, structural, or behavioral finance content. Domains 2.A–2.D (cultural practices, seasonal patterns, preferences, spending cycles) were rejected—no culturally specific, seasonal, or user-declared financial preferences are discussed. Domains 3.A–3.C (expense categorisation, design, allocation constraints) were rejected—no category design or allocation constraints. Domains 4.A–4.B (existing systems, limitations) were rejected—no PFMS landscape analysis. Domains 5.A–5.C (behavioural profiles, cold-start, classification) were rejected—no user profiling. Domain 6.A (predictive modeling) was flagged medium: general time-series forecasting framework. Domain 6.B (forecasting algorithms) was flagged medium: EFRT-DD and CDR are forecasting algorithms. Domain 7.D (infeasibility handling) was flagged low: structural pruning is loosely analogous. Domains 8.A–8.C (anomaly detection) were rejected—no anomaly detection. Domains 9.A–9.C (mobile-first, UX, offline) were rejected. Domains 10.A–10.C (privacy, trust, consent) were rejected. Domain 11.A–11.B (engagement, retention) were rejected. Domain 12.A (evaluation frameworks) was flagged contextual: overall paper is an evaluation of algorithms. Domain 12.B (evaluation of algorithmic modules) was flagged high: direct algorithmic evaluation of EFRT-DD and CDR. Domain 12.C (evaluation methodologies) was flagged contextual: prequential evaluation is transferable. Domains 13.A–13.C (savings, debt, surplus) were rejected—no financial goal management. Domains 14.A–14.C (synthetic data, deployment, inference) were rejected. Overall, the paper is primarily relevant to algorithmic forecasting and evaluation, with moderate relevance to predictive modeling broadly, and only contextual or low relevance to other PFMS topics."
+  },
+  "limitations": [
+    "Evaluation relies on retrospectively consolidated datasets, not reflecting real-time operational uncertainties such as reporting delays or data revisions [unacknowledged].",
+    "Current focus on pandemic data leaves external validity across other non-stationary domains unconfirmed [unacknowledged].",
+    "Computational overhead induced by eager splitting may pose a challenge for deployment in high-throughput environments [unacknowledged].",
+    "Model sensitivity to drift detection threshold δ (ADWIN confidence) may affect robustness to small fluctuations [unacknowledged]."
+  ],
+  "remember_this": [
+    "EFRT-DD improves over FIMT-DD by up to 9.78% on world data and 168.67% on single-country data.",
+    "CDR outperforms batch decision tree by up to 131.61% on world data and 167.08% on single-country data.",
+    "Eager induction with continuous structural revision enables rapid model adaptation to concept drifts.",
+    "CDR combines incremental responsiveness with batch accuracy through drift-triggered collaboration.",
+    "Single-country training preserves temporal coherence better than multi-country aggregation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20260514",
+    "conversion_reference": {
+      "file": "Jouini et al_marked.md",
+      "converted_at": "2026-07-21T13:40:15Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

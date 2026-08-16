@@ -1,0 +1,181 @@
+{
+  "paper_id": "ssrn:6170273",
+  "designation": "international-algorithm-specific",
+  "title": "Non-Stationarity in Financial Time Series: A Unifying Survey on Drift Detection, Adaptive Learning, and Evaluation",
+  "authors": "Davi M. Cabral, Adriano M. A. Lima, Gustavo H. F. M. Oliveira, Adriano L. I. Oliveira",
+  "year": 2026,
+  "venue": "Neurocomputing (preprint, not peer reviewed)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B"
+  ],
+  "tldr": "Surveys drift detection, adaptive learning, and evaluation for non-stationary financial time series, proposing a unified four-axis taxonomy and a five-pillar pipeline connecting representation, detection, adaptation, and evaluation.",
+  "problem_and_motivation": "Financial time series are inherently non-stationary: distribution shifts, regime transitions, and structural breaks degrade model performance precisely when decisions matter most. The literature is fragmented across econometrics, statistical monitoring, and machine learning with divergent terminology and incompatible evaluation protocols, hindering cumulative evidence and practical adoption.",
+  "approach": [
+    "Unified four-axis taxonomy of non-stationarity: temporal (how/when), statistical (what changes), spatial (where), and ontological (structure/state), with causal drivers as a foundational layer",
+    "Five-pillar pipeline: non-stationarity characterization, drift-aware representations (endogenous embeddings, exogenous context, multimodal), change detection, continuous adaptation, and evaluation",
+    "Layered representation approach spanning internal signals, exogenous context, latent regime structure, and downstream-task-oriented features",
+    "Review of change-detection methods: segmentation (PELT, Bai-Perron), sequential monitoring (CUSUM, EWMA, DDM), Bayesian (BOCPD, HMM), embedding-based OOD, and structural dependence methods",
+    "Adaptation strategies: parametric (TVP/Kalman, TAR/STAR, HMM), dynamic ensembles (gating, adaptive weighting, expert retirement), and hybrid flows combining detection with updating",
+    "Continual learning, test-time adaptation, meta-learning, and parameter-efficient fine-tuning of foundation models for rapid adaptation",
+    "Evaluation protocols: prequential evaluation, detection delay (MTTD), false-alarm control (ARL0), missed detection rate, and finance-specific utility metrics",
+    "Benchmark recipe specifying drift signatures via four-axis taxonomy, data instantiation, online protocol, and evaluation mapping for reproducible comparison"
+  ],
+  "findings": [
+    "num: Literature corpus of 289 candidate references narrowed to 174 cited works from 2000-2025",
+    "num: Terminological equivalences mapped across machine learning, econometrics, statistics, and quantitative finance for 5 distribution-shift types",
+    "num: BOCPD complexity is O(nR_max) with truncation, enabling online use; CUSUM/EWMA are O(n) with O(1) memory for low-latency monitoring",
+    "num: PELT achieves O(n) average time for segmentation but is offline; HMM forward filtering is O(nS^2) online",
+    "No universally optimal detector or adaptation strategy exists; method selection must align with expected drift type, scale, and dynamics",
+    "Evaluation and benchmarking practices remain underdeveloped with limited standardization, weak replicability, and insufficient consideration of operational constraints",
+    "Key stability-plasticity trade-off: aggressive adaptation amplifies noise and transaction costs; conservative updates risk sustained degradation after regime changes",
+    "Financial time series exhibit strong temporal dependence (autocorrelation, heteroskedasticity) that i.i.d. assumptions within regimes fail to capture"
+  ],
+  "key_figures_tables": [
+    "Figure 1: Extended taxonomy of non-stationarity along five axes",
+    "Figure 2: Temporal morphology of drifts (abrupt, gradual, incremental, recurrent)",
+    "Table 1: Terminological equivalences across traditions (broad-sense concept drift)",
+    "Figure 10: Layered representation pipeline for financial time series",
+    "Figure 12: Multimodal fusion strategies (early, intermediate/cross-attention, late fusion)",
+    "Figure 15: Decision tree for choosing change-detection method families",
+    "Table 7: Computational complexity of change-detection methods",
+    "Table 8: Comparison of adaptation methods across operational dimensions",
+    "Figure 17: Scenario specification schema for benchmark design",
+    "Table 6: Change axes and indicative methods (compact view)"
+  ],
+  "key_equations": [
+    {
+      "equation": "P_t(X, Y) = P_t(Y | X) P_t(X) = P_t(X | Y) P_t(Y)",
+      "explanation": "Joint distribution factorization used to classify statistical drift types: which component (P(X), P(Y), P(Y|X), P(X|Y)) changes primarily"
+    },
+    {
+      "equation": "S_t ∈ {1, ..., K}, P(S_t = j | S_{t-1} = i) = Π_{ij}",
+      "explanation": "Hidden Markov Model regime dynamics: latent state S_t follows a first-order Markov chain with transition matrix Π"
+    },
+    {
+      "equation": "y_t = β_t^⊤ x_t + ε_t, β_t = β_{t-1} + u_t",
+      "explanation": "Time-varying parameter (TVP) model where coefficients evolve as a random walk, estimated via Kalman filter"
+    },
+    {
+      "equation": "ϕ(s) = (Temporal, Statistical, Spatial, Ontological)",
+      "explanation": "Benchmark scenario drift signature defined by the four-axis taxonomy for comparable evaluation"
+    },
+    {
+      "equation": "B = {(D_s, ϕ(s), Π_s, E_s)}",
+      "explanation": "Benchmark specification tuple: data instantiation, drift signature, online protocol, and evaluation mapping"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Concept drift (restricted sense)",
+      "definition": "Change in the conditional distribution P_t(Y|X), i.e., the relationship between inputs and targets"
+    },
+    {
+      "term": "Covariate/virtual drift",
+      "definition": "Change in P_t(X) while P_t(Y|X) remains approximately invariant"
+    },
+    {
+      "term": "Prior/label shift",
+      "definition": "Change in P_t(Y) (class proportions) while conditional relations are stable"
+    },
+    {
+      "term": "Regime",
+      "definition": "Persistent mode of operation with stable patterns; transitions require persistence, distinctiveness, and possible recurrence"
+    },
+    {
+      "term": "Regime drift vs. mechanism drift",
+      "definition": "Regime drift: transitions between discrete latent states (e.g., bull/bear). Mechanism drift: fundamental change in causal/structural relationships (e.g., stock-bond correlation sign reversal)"
+    },
+    {
+      "term": "Prequential evaluation",
+      "definition": "Sequential predictive test where model is trained up to time t, generates predictions, and training set is updated as new observations arrive"
+    }
+  ],
+  "citations": [
+    {"author": "Gama, J.", "year": 2014, "page": 0, "paragraph": 0, "claim": "Comprehensive survey on concept drift adaptation across ML and data mining", "role": "context"},
+    {"author": "Page, E. S.", "year": 1954, "page": 0, "paragraph": 0, "claim": "Introduced CUSUM for sequential change-point detection in time series", "role": "methodology"},
+    {"author": "Killick, R.", "year": 2012, "page": 0, "paragraph": 0, "claim": "PELT segmentation achieves O(n) average complexity for change-point detection", "role": "methodology"},
+    {"author": "Adams, R. P.", "year": 2007, "page": 0, "paragraph": 0, "claim": "Bayesian online change-point detection (BOCPD) with O(nR_max) complexity", "role": "methodology"},
+    {"author": "Basseville, M.", "year": 1993, "page": 0, "paragraph": 0, "claim": "Foundational text on detection of abrupt changes in signals and systems", "role": "context"},
+    {"author": "Ditzler, G.", "year": 2015, "page": 0, "paragraph": 0, "claim": "Survey on learning in nonstationary environments and ensemble adaptation", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection — Statistical & Proximity-Based",
+        "relevance": "high",
+        "justification": "Paper surveys change-point detection methods (CUSUM, EWMA, BOCPD) that are foundational for statistical anomaly detection in financial time series"
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection — Isolation-Based & Reconstruction",
+        "relevance": "medium",
+        "justification": "Reviews embedding-based OOD detection in latent spaces for identifying anomalous regimes and distribution shifts"
+      },
+      {
+        "code": "6.A",
+        "name": "Forecasting — Financial & Economic Forecasting",
+        "relevance": "high",
+        "justification": "Core focus on financial time series forecasting under non-stationarity, including adaptive models for price, volatility, and risk prediction"
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting — Adaptive & Online Learning",
+        "relevance": "high",
+        "justification": "Dedicated sections on continuous adaptation, online learning, dynamic ensembles, and prequential evaluation protocols"
+      },
+      {
+        "code": "5.A",
+        "name": "Classification — Supervised & Ensemble Learning",
+        "relevance": "contextual",
+        "justification": "Discusses dynamic ensembles and gated model selection as adaptation mechanisms for classification under drift"
+      },
+      {
+        "code": "1.A",
+        "name": "Data Preprocessing — Feature Engineering & Representation Learning",
+        "relevance": "medium",
+        "justification": "Surveys drift-aware representations including embeddings, multiscale features, and multimodal context integration"
+      }
+    ],
+    "contribution_to_field": "This survey provides the first unified framework organizing drift detection, adaptive learning, and evaluation specifically for financial time series across three typically siloed communities: econometrics, machine learning, and quantitative finance. The four-axis taxonomy (temporal, statistical, spatial, ontological) offers a consistent vocabulary for describing non-stationarity phenomena, directly addressing the terminology fragmentation problem. The five-pillar pipeline connecting representation, detection, adaptation, evaluation, and benchmarking provides a structured design space for practitioners building adaptive financial systems. The evaluation recipe and scenario-coverage benchmark suite constitute a concrete methodological contribution toward reproducible and comparable research in this domain.",
+    "directly_justifies": [
+      "Adopting change-point detection (CUSUM, BOCPD) for monitoring financial time series in Odin's anomaly detection pipeline",
+      "Using prequential evaluation and temporal validation protocols for online model assessment",
+      "Implementing adaptive retraining strategies when distribution shifts are detected in budget forecasting",
+      "Considering multimodal context (macroeconomic indicators, news) alongside price series for better regime awareness"
+    ],
+    "limits": [
+      "Survey scope excludes MLOps/operational monitoring, temporal fairness, privacy/federated learning, and real-time data revisions",
+      "No empirical benchmarks or experimental comparisons are conducted; remains at the conceptual and methodological survey level",
+      "Financial examples are illustrative from US/Western markets; emerging market coverage is limited",
+      "Deep reinforcement learning and knowledge representation are identified as adjacent but not explored in depth"
+    ],
+    "topic_mapping_rationale": "The paper focuses on drift detection and adaptive learning in financial time series, directly intersecting Odin's anomaly detection requirements (codes 8.A and 8.B) and forecasting needs (codes 6.A and 6.B). A systematic scan of the abstract, keywords, section headings, and research questions (RQ1-RQ7) confirmed that the paper's primary contributions are to the drift detection (foundational for anomaly detection) and adaptive learning (core to online forecasting) domains. The evaluation protocol work is also relevant to benchmarking methodology. Classification (5.A) and representation learning (1.A) appeared as supporting themes rather than primary contributions, hence contextual or medium relevance."
+  },
+  "limitations": [
+    "No new empirical experiments or benchmarks are conducted; remains a conceptual survey",
+    "Deliberately deprioritizes MLOps, temporal fairness, federated learning, and real-time data revisions",
+    "Relies on 289 candidate references narrowed to 174; some relevant works may have been excluded",
+    "Financial examples primarily drawn from US/Western developed markets, limiting geographic generalizability",
+    "Practical computational constraints and deployment costs are discussed qualitatively but not empirically measured"
+  ],
+  "remember_this": [
+    "Four-axis taxonomy: temporal, statistical, spatial, ontological",
+    "No single best detector; match method to drift type",
+    "Prequential evaluation is the gold standard for online settings",
+    "Stability-plasticity trade-off central to adaptive learning",
+    "Evaluation must cover detection delay, false-alarm control, and economic utility"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T14:30:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Cabral et al_marked.md",
+      "converted_at": "2026-07-22T12:32:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

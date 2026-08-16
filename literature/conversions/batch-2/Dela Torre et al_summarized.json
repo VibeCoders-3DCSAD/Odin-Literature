@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.56734/eurasianjr.v3n1p45",
+  "designation": "local",
+  "title": "Budgeting Skills and Financial Management Practices Among Filipino College Students",
+  "authors": "Dela Torre, M. A.; Garcia, L.; Villanueva, R.",
+  "year": 2023,
+  "venue": "Eurasian Journal of Research and Development",
+  "odin_topics": ["1.A", "1.B", "3.A", "4.A"],
+  "tldr": "Survey of 420 Filipino college students reveals poor budgeting skills (mean score 52.3/100), heavy reliance on family allowances (78%), and significantly worse financial management among students without part-time jobs.",
+  "problem_and_motivation": "College students face unique financial challenges with limited income and developing financial independence, but there is insufficient data on budgeting skills of Filipino college students to inform educational interventions and PFMS targeting.",
+  "approach": [
+    "Survey of 420 Filipino college students from 5 universities across Metro Manila.",
+    "Stratified random sampling by year level and academic program.",
+    "Survey instrument: Budgeting Skills Assessment (20 items, 5-point Likert), Financial Management Practices scale (15 items), demographic and financial profile questionnaire.",
+    "Pilot tested (n=30) with Cronbach's alpha = 0.87 for reliability.",
+    "Statistical analysis: descriptive statistics, independent t-tests, ANOVA, Pearson correlation.",
+    "Comparative analysis between students with and without part-time employment."
+  ],
+  "findings": [
+    "num: Mean budgeting skills score: 52.3/100 (low proficiency).",
+    "num: 78% of students rely primarily on family allowances as income source.",
+    "num: Only 15% maintain written budgets; 8% use budgeting apps.",
+    "num: Students with part-time jobs score 18% higher on financial management practices than those without.",
+    "Num: 45% of students report running out of money before the end of the month.",
+    "Significant positive correlation (r=0.42) between budgeting skills and year level.",
+    "No significant difference in budgeting skills between male and female students."
+  ],
+  "key_figures_tables": [
+    "Table 3: Mean budgeting skills scores by demographic and academic factors",
+    "Figure 2: Budgeting tools used by students (notebook 72%, app 8%, other 20%)",
+    "Table 5: Correlation matrix of financial management practices and demographic variables"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Budgeting skills", "definition": "Ability to plan, track, and adjust personal income and expense allocation effectively."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2010, "page": 0, "paragraph": 0, "claim": "College students exhibit low financial literacy, with fewer than 30% able to answer basic financial questions.", "role": "comparison"},
+    {"author": "Chen", "year": 1998, "page": 0, "paragraph": 0, "claim": "Financial management practices include budgeting, saving, credit management, and insurance.", "role": "context"},
+    {"author": "Shim", "year": 2009, "page": 0, "paragraph": 0, "claim": "Parental financial socialization is the strongest predictor of young adults' financial behavior.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals' Financial Literacy", "relevance": "high", "justification": "Measures budgeting skills (a component of financial literacy) in Filipino college students."},
+      {"code": "1.B", "name": "Filipino Young Professionals' PF Behavior", "relevance": "high", "justification": "Surveys financial management practices and budgeting behavior of Filipino students."},
+      {"code": "3.A", "name": "Spending Patterns of Filipino Young Professionals", "relevance": "medium", "justification": "Documents spending and money management patterns of college students."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "low", "justification": "Reports only 8% use budgeting apps, contextualizing PFMS adoption among students."}
+    ],
+    "contribution_to_field": "Provides baseline data on budgeting skills of Filipino college students (mean 52.3/100), a target demographic for PFMS. The finding that only 8% use budgeting apps despite widespread smartphone ownership suggests strong potential for PFMS adoption. The positive correlation between part-time employment and financial management practices has implications for PFMS features supporting irregular income tracking.",
+    "directly_justifies": [
+      "Filipino college students have poor budgeting skills (mean 52.3/100).",
+      "Only 8% of students use budgeting apps.",
+      "Students with part-time jobs score 18% higher on financial management."
+    ],
+    "limits": [
+      "Sample limited to Metro Manila universities; regional representation unclear. [acknowledged]",
+      "Self-reported budgeting skills may not reflect actual behavior. [unacknowledged]",
+      "Cross-sectional design prevents tracking skill development. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 1.A and 1.B were flagged as highly relevant because the study directly surveys Filipino college students' budgeting skills and financial management practices. Domain 3.A was flagged as medium relevance for spending and money management patterns. Domain 4.A was flagged as low relevance for the 8% PFMS adoption rate finding. Domains 2, 5-14 were rejected as the study is demographic/survey-based without ML, system design, or specific cultural mechanisms analysis."
+  },
+  "limitations": [
+    "Sample limited to Metro Manila universities. [acknowledged]",
+    "Self-reported skills may not reflect actual behavior. [unacknowledged]",
+    "Cross-sectional design. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Mean budgeting skills score: 52.3/100 (low proficiency).",
+    "8% use budgeting apps; 15% maintain written budgets.",
+    "45% run out of money before end of the month.",
+    "Part-time employment linked to 18% higher financial management scores."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:03:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dela Torre et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

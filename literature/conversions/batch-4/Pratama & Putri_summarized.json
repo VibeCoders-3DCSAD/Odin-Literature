@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.47738/ijaim.v4i4.92",
+  "designation": "international-algorithm-specific",
+  "title": "The Effect of Financial Literacy on Investment Decision Making",
+  "authors": "International Journal; Applied Information Management",
+  "year": 2014,
+  "venue": "Unknown",
+  "odin_topics": [
+    "11.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "7.B",
+    "8.A"
+  ],
+  "tldr": "User profiling based on financial transaction patterns is crucial for improving customer segmentation and personalizing financial services. This study uses clustering techniques, specifically K-means, to analyze transaction data and segment users based on transaction amounts, times, and types. Three clusters were identified, each demonstrating distinct transaction behaviors: Cluster 0, primarily f",
+  "problem_and_motivation": "User profiling based on financial transaction patterns is crucial for improving customer segmentation and personalizing financial services. This study uses clustering techniques, specifically K-means, to analyze transaction data and segment users based on transaction amounts, times, and types. Three clusters were identified, each demonstrating distinct transaction behaviors: Cluster 0, primarily focused on purchases and occurring early in the week; Cluster 1, which emphasizes transfers and highe",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.A",
+        "name": "5.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: The Effect of Financial Literacy on Investment Decision Making"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: The Effect of Financial Literacy on Investment Decision Making",
+    "Year: 2014",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pratama & Putri_marked.md",
+      "converted_at": "2026-07-21T08:12:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

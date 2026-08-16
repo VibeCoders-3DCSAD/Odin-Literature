@@ -1,0 +1,83 @@
+{
+  "paper_id": "uuid-v5: 6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "designation": "international-algorithm-specific",
+  "title": "Machine Learning Time Series Forecasting: A Comprehensive Survey and Stock Market Application",
+  "authors": "Hall, T.",
+  "year": 2025,
+  "venue": "University of Georgia, Master of Science Thesis",
+  "odin_topics": ["6.A", "6.B", "7.B", "7.C"],
+  "tldr": "Surveys top-performing ML methods for time series prediction and applies LightGBM with engineered features to day trading, achieving returns several orders above human traders.",
+  "problem_and_motivation": "Time series prediction across domains lacks meaningful model comparisons due to heterogeneous experimental setups. Day trading, constrained by human cognitive limits, requires automated systems that can process large-scale tick data.",
+  "approach": [
+    "Conducted a comprehensive survey of 79 papers comparing tree-based and deep learning methods under identical experimental conditions from Web of Science.",
+    "Applied LightGBM models with extensive feature engineering across multi-timeframe technical indicators and contextual stock attributes.",
+    "Used two years of second-by-second trade and quote data from all U.S. equities to estimate risk-reward ratios over multiple forward time horizons.",
+    "Simulated day trading with realistic execution constraints including transaction costs and market impact.",
+    "Evaluated performance against human day trader benchmarks using daily returns as the primary metric."
+  ],
+  "findings": [
+    "num: LightGBM-based model yielded daily returns several orders of magnitude higher than human day traders.",
+    "Tree-based methods like LightGBM and deep learning methods like RNN deliver best time series forecasting performance.",
+    "Tree-based methods offer significant computational efficiency advantages over deep learning approaches.",
+    "Feature engineering with multi-timeframe indicators was critical for prediction performance in day trading."
+  ],
+  "key_figures_tables": [
+    "Figure 2.3: Overall Model Performance FPA and WRA scores → Tree-based models outperform DL on average.",
+    "Figure 3.2: Model 1 Cumulative Profit → ML trading strategy shows exponential profit growth over human baseline.",
+    "Table 3.1: Model 1 Performance Metrics → Quantitative results for the day trading ML model."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "LightGBM", "definition": "Light Gradient-Boosting Machine, a tree-based ML algorithm by Microsoft"},
+    {"term": "FPA", "definition": "Fractional Performance Advantage, a normalized comparison metric"},
+    {"term": "WRA", "definition": "Weighted Rank Advantage, a multi-model ranking metric"},
+    {"term": "GBDT", "definition": "Gradient-Boosted Decision Trees"}
+  ],
+  "citations": [
+    {"author": "Chen", "year": 2014, "page": 0, "paragraph": 0, "claim": "Introduced XGBoost with significant speed improvements over traditional GBDT.", "role": "methodology"},
+    {"author": "Ke et al.", "year": 2017, "page": 0, "paragraph": 0, "claim": "Developed LightGBM with histogram-based binning and leaf-wise growth.", "role": "methodology"},
+    {"author": "Prokhorenkova et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Introduced CatBoost with symmetric trees and target encoding for categorical data.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is ML time series forecasting methodology directly applicable to financial prediction."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Surveys and applies forecasting algorithms (LightGBM, RNN, LSTM) on sequential financial data."},
+      {"code": "7.B", "name": "Budget Recommendation in Personal Finance Systems", "relevance": "low", "justification": "Day trading focus is tangentially related to budget recommendation through predictive methodology."},
+      {"code": "7.C", "name": "Constrained Optimization Approaches for Budget Allocation", "relevance": "low", "justification": "Risk-reward optimization in trading shares conceptual overlap with constrained allocation."}
+    ],
+    "contribution_to_field": "This thesis provides a structured survey that enables direct comparison of tree-based and deep learning methods for time series prediction, filling a gap caused by heterogeneous experimental setups in prior reviews. It demonstrates that LightGBM with engineered features can outperform human traders in day trading, establishing a benchmark for ML-based financial forecasting. The work establishes practical recommendations for model selection based on dataset size, task type, and computational budget.",
+    "directly_justifies": [
+      "Tree-based and deep learning methods both deliver top performance in time series forecasting.",
+      "LightGBM-based day trading model achieved returns exceeding human traders by orders of magnitude.",
+      "Computational efficiency favors tree-based methods for production forecasting systems."
+    ],
+    "limits": [
+      "Day trading application is specific to high-frequency equity markets, not personal budget forecasting.",
+      "Survey covers 2017-2024 but LLM-based forecasting methods are not included.",
+      "Real-world trading results are simulated with assumed execution constraints."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 6 (Predictive Modeling and Forecasting) was flagged as high relevance because the paper's core contribution is ML time series forecasting methodology and its application to financial data. Domain 7 (Budgeting) received low relevance as day trading differs from personal budget recommendation but shares constrained optimization concepts. All other domains (1-5, 8-14) were rejected as the paper does not address demographics, financial behavior, expense categorization, anomaly detection, mobile UX, privacy, engagement, evaluation frameworks, savings, synthetic data, or ML serving. Borderline case: Domain 7.C was included at low relevance because risk-reward optimization in trading parallels constrained budget allocation."
+  },
+  "limitations": [
+    "Simulated trading results may not replicate in live markets due to slippage and execution uncertainty.",
+    "Survey limited to papers comparing both TBML and DL within the same experimental setup. [unacknowledged]",
+    "LightGBM model performance may degrade under different market regimes not present in training data."
+  ],
+  "remember_this": [
+    "LightGBM outperforms human day traders by orders of magnitude in simulated trading.",
+    "Tree-based methods offer competitive accuracy with significantly lower computational cost than DL.",
+    "Survey of 79 papers provides practical model selection guidelines for time series tasks.",
+    "Feature engineering with multi-timeframe indicators is critical for financial time series prediction."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hall_marked.md",
+      "converted_at": "2026-07-22T13:29:36Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

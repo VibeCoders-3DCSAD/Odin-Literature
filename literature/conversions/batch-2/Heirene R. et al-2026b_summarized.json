@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.1556/2006.2025.00525",
+  "designation": "international-algorithm-specific",
+  "title": "Predicting problem gambling among online sports and race bettors: Assessing the value of machine learning using behavioural and self-reported data",
+  "authors": "Heirene, R. M.; Vanichkina, D.; Zhang, E.; Huynh, E. L. Y.; De Leu, C. T.; Gainsbury, S. M.",
+  "year": 2026,
+  "venue": "Journal of Behavioral Addictions",
+  "odin_topics": ["5.A", "5.C", "6.A"],
+  "tldr": "Applies machine learning to predict high-risk gambling among 1,470 Australian online sports bettors, finding 30 days of behavioural data achieves AUROC 0.74-0.75 and survey data improves it to 0.85.",
+  "problem_and_motivation": "Online gambling operators need effective risk detection systems, but optimal data windows and the value of combining behavioural with self-reported data remain unclear. Regulatory frameworks increasingly emphasize timely intervention, requiring clarity on minimal sufficient data.",
+  "approach": [
+    "Collected survey data (PGSI, employment, income, gambling satisfaction) from 1,470 Australian sports and race betting customers.",
+    "Built machine learning models to classify participants into risk groups (PGSI 1-7 vs PGSI >=8).",
+    "Compared model performance using 30-day vs 6-month behavioural data windows.",
+    "Tested models with and without self-reported survey variables as features.",
+    "Identified most predictive account-based and self-reported variables."
+  ],
+  "findings": [
+    "num: Behavioural-only models achieved AUROC 0.74-0.75 with similar performance across 30-day and 6-month windows.",
+    "num: Combining behavioural and self-reported data enhanced performance to AUROC 0.76-0.85.",
+    "Most predictive account-based variables: age, deposits per active day, average stake, days since betting.",
+    "Two self-reported variables drove improvements: number of gambling accounts and gambling satisfaction.",
+    "30-day behavioural data window is sufficient for adequate risk classification."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "PGSI", "definition": "Problem Gambling Severity Index"},
+    {"term": "AUROC", "definition": "Area Under the Receiver Operating Characteristic curve"},
+    {"term": "VSE", "definition": "Voluntary Self-Exclusion"}
+  ],
+  "citations": [
+    {"author": "Auer & Griffiths", "year": 2022, "page": 0, "paragraph": 0, "claim": "Random Forest models performed well predicting self-reported problem gambling.", "role": "finding"},
+    {"author": "Hopfgartner et al.", "year": 2024, "page": 0, "paragraph": 0, "claim": "Regional differences in gambling behavior may impact model efficacy.", "role": "context"},
+    {"author": "Catania & Griffiths", "year": 2021, "page": 0, "paragraph": 0, "claim": "50% of VSE users played less than a week before self-excluding.", "role": "critique"},
+    {"author": "Andersson et al.", "year": 2025, "page": 0, "paragraph": 0, "claim": "Models trained on 30, 60, 90 days performed similarly, marginally better with shorter windows.", "role": "finding"},
+    {"author": "Murch et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Final model retained 10 variables with AUC of 84% for problem gambling prediction.", "role": "baseline"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Classifies gamblers into risk profiles using behavioral data, methodology applicable to financial profiling."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Core contribution is ML classification of behavioral risk profiles from transactional data."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Applies predictive ML models to financial transactional data for risk prediction."}
+    ],
+    "contribution_to_field": "This paper demonstrates that machine learning models using only 30 days of behavioural data can adequately classify at-risk gamblers, with comparable performance to models using six months of data. It establishes that minimal self-reported variables (gambling accounts and satisfaction) can significantly enhance predictive accuracy. The work provides evidence that short data windows are sufficient for risk detection, supporting timely intervention requirements.",
+    "directly_justifies": [
+      "30 days of behavioural data achieves AUROC 0.74-0.75 for risk classification.",
+      "Adding two self-reported survey variables improves AUROC to 0.76-0.85.",
+      "Age, deposits per active day, and average stake are top predictive features."
+    ],
+    "limits": [
+      "Sample limited to Australian online sports and race bettors (84.6% male).",
+      "Self-reported PGSI may not perfectly align with objective harm measures.",
+      "Results may not generalize to other gambling modalities or jurisdictions."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 5 (Profiles and Classification) was flagged as high relevance because ML classification of behavioral risk profiles is the core methodology. Domain 6 (Predictive Modeling) was flagged as high because the paper applies predictive ML to transactional data. All other domains (1-4, 7-14) were rejected."
+  },
+  "limitations": [
+    "Single-country, single-modality gambling context limits generalizability.",
+    "PGSI self-report as ground truth may misclassify some at-risk individuals. [unacknowledged]",
+    "No external validation of the model on holdout operators or time periods."
+  ],
+  "remember_this": [
+    "30 days of behavioural data suffices for adequate risk classification (AUROC 0.74).",
+    "Adding 2 self-reported variables improves AUROC to 0.85.",
+    "Deposits per active day and average stake are top predictive behavioural features.",
+    "Machine learning models can detect at-risk gamblers without protracted data windows."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Heirene R. et al-2026b_marked.md",
+      "converted_at": "2026-07-22T13:33:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

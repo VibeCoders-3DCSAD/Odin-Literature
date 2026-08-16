@@ -1,0 +1,315 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3625441",
+  "designation": "international-algorithm-specific",
+  "title": "Deep Feature Extraction Method for Automatic Classification and Processing of Accounting Information",
+  "authors": "Liu, F.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "3.A",
+    "3.B",
+    "4.B",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "10.A",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "A convolutional autoencoder framework with adversarial training learns hierarchical feature representations directly from raw journal entries, improving classification and anomaly detection.",
+  "problem_and_motivation": "Traditional accounting classification systems lack adaptability to evolving data and depend heavily on manual feature engineering. Shallow models and rule-based systems fail to capture the complex, non-linear relationships in modern financial datasets.",
+  "approach": [
+    "Proposes a deep feature extraction framework using a convolutional autoencoder with a dual-objective design for reconstruction and classification.",
+    "Incorporates adversarial training to enhance generalization against class imbalance and input noise.",
+    "Introduces FinGraphNet, a graph-based model for temporal reasoning over financial entities with dynamic encoding and constraint-aware optimization.",
+    "Employs Audit-Informed Reinforcement Planning (AIRP) to integrate compliance constraints into policy learning.",
+    "Evaluated on Compustat, EDGAR, Orbis, and CSMAR datasets using a Transformer-based architecture with learned positional encodings.",
+    "Compares against ARIMA, VAR, Random Forest, XGBoost, LSTM, GRU, Transformer, Informer, N-BEATS, and DeepAR.",
+    "Uses MAE, RMSE, MAPE, and R2 for evaluation, with a train/validation/test split of 70/15/15."
+  ],
+  "findings": [
+    "num: Achieves the lowest MAE of 9.84 and a MAPE of 7.29 on the Compustat dataset.",
+    "num: Attains an R2 of 0.869 on the EDGAR dataset.",
+    "num: On the Orbis dataset, achieves an MAE of 9.96 and an R2 of 0.896.",
+    "num: On the CSMAR dataset, achieves a MAPE of 8.21 and an R2 of 0.872.",
+    "num: Under high noise (σ=0.15), FinGraphNet achieves an MAE of 0.832 and R2 of 0.781, outperforming LSTM and GRU.",
+    "Ablation studies confirm each core component (dynamic graph encoding, temporal-aware propagation, risk-driven policy learning) contributes significantly to overall performance.",
+    "Constraint penalty weight λ in [1.0, 2.0] yields a favorable trade-off between compliance and reward."
+  ],
+  "key_figures_tables": [
+    "Figure 1: High-level architecture of FinGraphNet → Shows data flow from raw accounting data to reinforcement planning.",
+    "Figure 2: Detailed dynamic graph encoder → Illustrates node/edge feature construction and consistency constraints.",
+    "Figure 3: AIRP module → Shows integration of audit-informed constraints and quadratic programming projection.",
+    "Figure 4: Constraint-Aware MDP Cell → Outlines the single-step decision process in AIRP.",
+    "Table 1: Glossary of key accounting terms → Defines terms like assets, liabilities, liquidity, and audit constraints.",
+    "Table 2: Comparison on Compustat and EDGAR → Our method outperforms SOTA baselines across all metrics.",
+    "Table 3: Comparison on Orbis and CSMAR → Our method consistently achieves the lowest error and highest R2.",
+    "Table 6: Robustness evaluation under high noise → FinGraphNet shows superior resilience to noise.",
+    "Table 7: Sensitivity to constraint penalty weight λ → λ in [1.0, 2.0] balances performance and compliance."
+  ],
+  "key_equations": [
+    {
+      "equation": "S_t = (A_t, L_t, R_t, C_t, E_t)",
+      "explanation": "Financial state as asset, liability, revenue, cost, equity."
+    },
+    {
+      "equation": "LQ_{t+1} = LQ_t + (\\sum_i R_t^{(i)} - \\sum_j C_t^{(j)}) - D_t",
+      "explanation": "Liquidity evolution with cash inflows and outflows."
+    },
+    {
+      "equation": "J = E[\\sum_{t=1}^T \\gamma^t U(S_t, U_t)]",
+      "explanation": "Discounted utility of financial strategies."
+    },
+    {
+      "equation": "\\mathbf{x}_i^{(t)} = \\phi(v_i^{(t)}) = [\\text{hist}_i^{(t)}, \\text{sector}_i, \\text{risk}_i, \\text{flow}_i^{(t)}]",
+      "explanation": "Node feature vector construction."
+    },
+    {
+      "equation": "\\mathbf{h}_i^{(t+1)} = \\sigma(\\sum_{j \\in \\mathcal{N}(i)} \\alpha_{ij}^{(t)} \\mathbf{W}_{ij}^{(t)} \\mathbf{h}_j^{(t)} + \\mathbf{U} \\mathbf{x}_i^{(t)} + \\mathbf{b}_i)",
+      "explanation": "Attention-weighted message passing update."
+    },
+    {
+      "equation": "\\hat{\\mathbf{x}}^{(t+1)} = \\arg\\min_{\\mathbf{x} \\in \\mathcal{F}} \\|\\mathbf{x} - \\tilde{\\mathbf{x}}^{(t+1)}\\|_2^2",
+      "explanation": "Quadratic programming for constraint projection."
+    }
+  ],
+  "definitions": [
+    { "term": "CNN", "definition": "Convolutional Neural Network." },
+    { "term": "RNN", "definition": "Recurrent Neural Network." },
+    { "term": "LSTM", "definition": "Long Short-Term Memory." },
+    { "term": "GRU", "definition": "Gated Recurrent Unit." },
+    { "term": "ERP", "definition": "Enterprise Resource Planning." },
+    { "term": "RPA", "definition": "Robotic Process Automation." },
+    { "term": "XAI", "definition": "Explainable Artificial Intelligence." },
+    { "term": "GNN", "definition": "Graph Neural Network." },
+    { "term": "MDP", "definition": "Markov Decision Process." },
+    { "term": "AIRP", "definition": "Audit-Informed Reinforcement Planning." },
+    { "term": "MAE", "definition": "Mean Absolute Error." },
+    { "term": "RMSE", "definition": "Root Mean Square Error." },
+    { "term": "MAPE", "definition": "Mean Absolute Percentage Error." }
+  ],
+  "citations": [
+    {
+      "author": "Bushman",
+      "year": 2001,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial accounting information and corporate governance",
+      "role": "context"
+    },
+    {
+      "author": "Ballou",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data-driven decision-making and its impact on accounting curriculum",
+      "role": "context"
+    },
+    {
+      "author": "Sun",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Applying deep learning to audit procedures",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Application of data mining and machine learning in management accounting",
+      "role": "methodology"
+    },
+    {
+      "author": "Cho",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Learning from machine learning in accounting and assurance",
+      "role": "methodology"
+    },
+    {
+      "author": "Askary",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Artificial intelligence and reliability of accounting information",
+      "role": "context"
+    },
+    {
+      "author": "Chakraborty",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Automatic classification of accounting literature",
+      "role": "baseline"
+    },
+    {
+      "author": "Garnsey",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Automatic classification of financial accounting concepts",
+      "role": "baseline"
+    },
+    {
+      "author": "Yang",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Strengthening accounting information systems with big data mining",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhang",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable AI in auditing",
+      "role": "context"
+    },
+    {
+      "author": "Xiuguo",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Financial statement fraud detection using deep learning",
+      "role": "finding"
+    },
+    {
+      "author": "Craja",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning for detecting financial statement fraud",
+      "role": "finding"
+    },
+    {
+      "author": "Li",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit risk prediction using CNN-LSTM and attention",
+      "role": "methodology"
+    },
+    {
+      "author": "Ayash",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Compustat financial statement data articulation",
+      "role": "context"
+    },
+    {
+      "author": "Oreshkin",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "N-BEATS neural network for mid-term electricity load forecasting",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "high",
+        "justification": "Proposes deep learning for automatic classification of accounting entries."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "medium",
+        "justification": "Discusses challenges in handling noisy, imbalanced, and ambiguous transaction data."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Explicitly addresses limitations of rule-based and shallow machine learning systems."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Presents forecasting models evaluated on financial datasets."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Compares LSTM, GRU, Transformer, and other sequence models."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reports F1-score improvements for anomaly detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Uses adversarial training to improve robustness against anomalies."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions regulatory compliance but does not focus on privacy or security."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Uses MAE, RMSE, MAPE, R2 and ablation studies for evaluation."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Ablation studies validate individual components."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel deep feature extraction framework combining convolutional autoencoders with adversarial training for accounting classification. It introduces FinGraphNet, a graph-based temporal reasoning model for financial management, and AIRP, a reinforcement learning module integrating compliance constraints. The framework addresses the limitations of rule-based and shallow models, providing a scalable and interpretable solution for automated accounting.",
+    "directly_justifies": [
+      "Deep feature extraction eliminates the need for manual feature engineering.",
+      "Adversarial training improves robustness against class imbalance and input noise.",
+      "The framework achieves SOTA results across four financial datasets.",
+      "FinGraphNet captures temporal and structural dependencies in financial data.",
+      "AIRP integrates audit constraints directly into policy learning."
+    ],
+    "limits": [
+      "The paper focuses on general accounting classification rather than personal finance or Filipino contexts.",
+      "The datasets used (Compustat, EDGAR, Orbis, CSMAR) are predominantly corporate finance datasets.",
+      "Does not address user-declared preferences or culturally specific practices.",
+      "No evaluation on mobile-first or offline-first design principles."
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned. The paper shows high relevance to expense categorization (3.A, 3.B) and limitations of existing systems (4.B), as it directly proposes a deep learning solution to replace manual feature engineering and rule-based methods. It has high relevance to predictive modeling (6.A, 6.B) due to its forecasting experiments and comparison of sequence models. Anomaly detection (8.A, 8.B) is relevant through its reported F1-score improvements and adversarial robustness. Evaluation frameworks (12.A, 12.B) are covered by the comprehensive experimental setup and ablation studies. The paper touches on data privacy (10.A) only in passing, so it is low relevance. Domains related to personal finance (1.A, 1.C, etc.), budgeting strategies (7.A-E), mobile-first design (9.A-C), engagement (11.A-B), and savings/debt management (13.A-C) were rejected as the paper focuses on corporate accounting rather than personal finance. Synthetic data generation (14.A) and ML deployment (14.B-C) are not addressed."
+  },
+  "limitations": [
+    "May struggle with extremely sparse or irregular financial data that lacks sufficient structure for convolutional learning.",
+    "Adversarial training introduces additional computational complexity and sensitivity to hyperparameters.",
+    "Graph operations have quadratic time complexity O(n²), creating a potential bottleneck in large-scale systems.",
+    "Deep architecture may overfit small-scale or low-diversity accounting datasets. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Convolutional autoencoder improves classification accuracy by 12 percentage points.",
+    "Anomaly detection F1-score improved by 15 percentage points.",
+    "FinGraphNet achieves R2 scores above 0.869 across all evaluated datasets.",
+    "Constraint-aware learning ensures regulatory compliance in financial decisions.",
+    "Audit-informed reinforcement planning integrates compliance into policy learning."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Liu_marked.md",
+      "converted_at": "2026-07-21T14:03:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

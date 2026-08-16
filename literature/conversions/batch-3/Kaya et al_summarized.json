@@ -1,0 +1,310 @@
+{
+  "paper_id": "10.1109/ACCESS.2026.3663161",
+  "designation": "international",
+  "title": "Explainable Artificial Intelligence (XAI): Concepts, Applications, Challenges, and Future Perspectives",
+  "authors": "Kaya, O.; Shah, A. F. M. S.; Karabulut, M. A.; Karahan, S. N.; Osmanca, M. S.; Acır, N.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "8.A",
+    "8.B",
+    "10.A",
+    "10.B",
+    "11.A",
+    "12.A"
+  ],
+  "tldr": "Explanations create adversarial vulnerabilities and often fail human-centered evaluation, while regulatory requirements lack clear technical implementation, necessitating a shift from explanation generation to human-aligned, robust, and regulation-aware XAI 2.0 systems.",
+  "problem_and_motivation": "Black-box AI models are deployed in high-stakes domains, creating a need for transparency. However, current XAI methods generate explanations that are vulnerable to adversarial manipulation and are primarily evaluated with computational metrics. This undermines user trust and real-world deployment, particularly given unclear regulatory standards.",
+  "approach": [
+    "Thematic synthesis of XAI literature from 2018 to 2025 across IEEE Xplore, ACM Digital Library, Scopus, and arXiv.",
+    "Structured taxonomy organizing XAI methods by model dependency, scope of explanation, and timing (ante-hoc vs. post-hoc).",
+    "Domain-oriented analysis of XAI applications in finance, healthcare, and cybersecurity.",
+    "Systematic review of security threats to XAI, including adversarial attacks and fairwashing, and defense mechanisms.",
+    "Evaluation of current XAI assessment practices, emphasizing human-centered frameworks over computational metrics.",
+    "Examination of regulatory-technical gaps, particularly the GDPR right to explanation.",
+    "Synthesis of challenges and future directions toward XAI 2.0, including scalability limits and multimodal explainability."
+  ],
+  "findings": [
+    "num: Adversarial attacks can change 90% of SHAP explanations while preserving 75% of the model's original accuracy.",
+    "num: Only 26% of XAI user studies follow established human-centered evaluation frameworks.",
+    "num: Fewer than 23% of XAI studies involve domain experts in evaluation.",
+    "num: Certified robust explanation methods reduce attack success from 90% to 34%, but are underutilized.",
+    "num: Explanation methods can increase explanation time by 3 to 5 times due to computational overhead.",
+    "num: In foundation models, current methods can explain only 65% of model variance.",
+    "num: Multimodal medical AI integrating imaging and clinical notes outperforms unimodal approaches by up to 6.2 percentage points in AUC.",
+    "num: XAI explanations can reduce false positive investigation time in fraud detection by 60%.",
+    "Human-centered evaluation shows explanations can increase acceptance of incorrect AI recommendations.",
+    "Current XAI evaluation practices rely primarily on computational metrics, explaining lab-to-deployment failures."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual classification of XAI methods by model dependency, scope, and timing → visual overview of XAI design space.",
+    "Figure 2: Schematic overview of literature search and selection process → methodology for review.",
+    "Figure 3: Human-in-the-loop XAI development and evaluation lifecycle → iterative human-centric system design.",
+    "Table 1: Difference between this survey and other survey papers → comparison of scope and coverage.",
+    "Table 2: XAI concepts and taxonomies → systematic organization of explanation methods.",
+    "Table 3: Practical guide matching XAI methods to user needs → matching techniques to users and contexts.",
+    "Table 4: Domain-specific applications of XAI → overview of use cases in finance, healthcare, and cybersecurity.",
+    "Table 5: Security and robustness perspectives in XAI → taxonomy of threats and defenses.",
+    "Table 6: Evaluating XAI disclosures → framework for human-centered and technical evaluation.",
+    "Table 7: Challenges and future research directions in XAI → synthesis of open problems.",
+    "Table 8: Comparison between XAI 1.0 and XAI 2.0 paradigms → shift from technical transparency to human-aligned systems."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "Explainable artificial intelligence; techniques and methods to make AI behavior and predictions understandable to humans."
+    },
+    {
+      "term": "Ante-hoc",
+      "definition": "Interpretability integrated directly into the model architecture by design, e.g., linear regression or decision trees."
+    },
+    {
+      "term": "Post-hoc",
+      "definition": "Explanation techniques applied after a model is trained to interpret its decisions, e.g., LIME and SHAP."
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations; trains simple surrogate models for local explanations."
+    },
+    {
+      "term": "SHAP",
+      "definition": "Shapley Additive exPlanations; uses Shapley values to attribute feature contributions to model predictions."
+    },
+    {
+      "term": "Grad-CAM",
+      "definition": "Gradient-weighted Class Activation Mapping; visual explanations for CNNs using heatmaps."
+    },
+    {
+      "term": "GDPR",
+      "definition": "General Data Protection Regulation; EU regulation mandating transparency in automated decision-making."
+    },
+    {
+      "term": "Fairwashing",
+      "definition": "Manipulating explanations to conceal algorithmic bias or discrimination."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Slack",
+      "year": 2020,
+      "page": 180,
+      "paragraph": 1,
+      "claim": "LIME and SHAP explanations can be manipulated with attacks changing 90% of explanations while preserving 75% of accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Zhang",
+      "year": 2018,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Adversarial attacks can manipulate explanations of medical images with 95% success rate.",
+      "role": "finding"
+    },
+    {
+      "author": "Edwards",
+      "year": 2018,
+      "page": 46,
+      "paragraph": 1,
+      "claim": "GDPR entitles individuals affected by automated decisions to an explanation.",
+      "role": "context"
+    },
+    {
+      "author": "Rudin",
+      "year": 2019,
+      "page": 206,
+      "paragraph": 1,
+      "claim": "Interpretable models can achieve competitive performance in high-stakes decisions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Schlegel",
+      "year": 2021,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "LIME explanations can be unstable in high-dimensional data.",
+      "role": "finding"
+    },
+    {
+      "author": "Lundberg",
+      "year": 2020,
+      "page": 56,
+      "paragraph": 1,
+      "claim": "Tree SHAP calculates explanations in polynomial time, 2.5 times faster than Kernel SHAP.",
+      "role": "methodology"
+    },
+    {
+      "author": "Akhtar",
+      "year": 2024,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Only 26% of XAI studies utilize established human-centered evaluation frameworks.",
+      "role": "finding"
+    },
+    {
+      "author": "Aïvodji",
+      "year": 2019,
+      "page": 161,
+      "paragraph": 1,
+      "claim": "Fairwashing uses biased models that generate explanations concealing discrimination to evade oversight.",
+      "role": "finding"
+    },
+    {
+      "author": "Bansal",
+      "year": 2021,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Explanations increased users' likelihood of accepting AI suggestions regardless of accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Anthropic",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Current methods can explain around 65% of the variance in Claude 3 Sonnet.",
+      "role": "finding"
+    },
+    {
+      "author": "Anthropic",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Internal strategies in reasoning models deviate from generated explanations in over 97% of instances.",
+      "role": "finding"
+    },
+    {
+      "author": "Pahud de Mortanges",
+      "year": 2024,
+      "page": 195,
+      "paragraph": 1,
+      "claim": "Multimodal medical AI systems outperform unimodal approaches by up to 6.2 percentage points in AUC.",
+      "role": "finding"
+    },
+    {
+      "author": "Shu",
+      "year": 2025,
+      "page": 1713,
+      "paragraph": 1,
+      "claim": "Current XAI techniques struggle to isolate modality-specific causal contributions in vision-language models.",
+      "role": "methodology"
+    },
+    {
+      "author": "Goodman",
+      "year": 2017,
+      "page": 50,
+      "paragraph": 1,
+      "claim": "Bridging the gap between GDPR and technical capabilities requires interdisciplinary collaboration.",
+      "role": "context"
+    },
+    {
+      "author": "Longo",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Moving from XAI 1.0 to XAI 2.0 requires systems that are human-aligned, robust, and regulation-aware.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides context on XAI use in finance, but focuses on general AI transparency."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "contextual",
+        "justification": "Discusses limitations of XAI methods like scalability and evaluation, relevant to financial systems."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Cites XAI in credit risk modeling as an application, but not the core focus."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions fraud detection as a domain for XAI applications."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "contextual",
+        "justification": "Discusses XAI for fraud detection algorithms, but not specific spending data."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Highlights privacy leakage risks from explanations, relevant to financial data."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses user trust, over-reliance, and misinterpretation of explanations in decision-making."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "Mentions trust and decision-making, but not specific engagement metrics."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Critiques current evaluation practices (computational vs. human-centered) relevant to all systems."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive synthesis of XAI research, integrating technical taxonomy with application-domain analysis and critical evaluation of security and robustness. It systematically identifies three fundamental gaps—adversarial vulnerability, inadequate human-centered evaluation, and regulatory-technical misalignment—that explain the limited real-world success of XAI. The paper contributes a forward-looking framework for XAI 2.0, emphasizing the need for human-aligned, adversarially robust, and legally compliant systems.",
+    "directly_justifies": [
+      "Adversarial attacks can manipulate explanations while preserving model accuracy.",
+      "Only 26% of XAI studies use established human-centered evaluation frameworks.",
+      "Regulatory requirements like the GDPR right to explanation lack clear technical implementation.",
+      "Current XAI research emphasizes algorithmic innovation over practical deployment.",
+      "Moving toward reliable AI requires shifting from XAI 1.0 to XAI 2.0."
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. Domains related to personal finance systems (4.A, 4.B, 6.A, 8.A, 8.B, 10.A, 10.B, 11.A, 12.A) were flagged because the paper explicitly discusses XAI applications in finance and credit risk, which are relevant to the financial structure and behavior of any population. However, the paper is a general survey of XAI and does not directly address Filipino young professionals, culturally specific practices, or budget recommendation algorithms. Therefore, all relevant topics were assigned a 'contextual' or 'medium' relevance level. User trust (10.B) and evaluation frameworks (12.A) received 'medium' relevance because they are central to the paper's critique of XAI deployment challenges and are directly applicable to personal finance systems. Topics related to Filipino demographics, cultural practices, and specific budget recommendation algorithms were considered and rejected as the paper provides no specific evidence or claims pertaining to these areas. The paper's overall contribution is to the broader field of trustworthy AI and XAI methodology."
+  },
+  "limitations": [
+    "Restriction to English-language publications may exclude significant research from non-English-speaking regions. [unacknowledged]",
+    "The databases used may systematically underrepresent technical reports, industry white papers, and negative results. [unacknowledged]",
+    "Domain focus on finance, healthcare, and cybersecurity may not generalize to other application areas like legal reasoning or education. [unacknowledged]",
+    "Thematic analysis prioritizes conceptual synthesis over exhaustive documentation, reducing reproducibility. [unacknowledged]",
+    "Rapid evolution of XAI means methods in this review may be superseded quickly. [acknowledged]"
+  ],
+  "remember_this": [
+    "Adversarial attacks can alter 90% of SHAP explanations while keeping 75% of model accuracy.",
+    "Only one in four XAI studies use established human-centered evaluation methods.",
+    "Certified robust explanation methods reduce attack success from 90% to 34%.",
+    "Current methods can explain only 65% of variance in state-of-the-art foundation models.",
+    "XAI 2.0 requires human-aligned, adversarially robust, and regulation-aware systems."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T09:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kaya et al_marked.md",
+      "converted_at": "2026-07-21T13:43:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

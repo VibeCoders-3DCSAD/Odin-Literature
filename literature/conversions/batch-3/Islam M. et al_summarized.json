@@ -1,0 +1,214 @@
+{
+  "paper_id": "10.1311-1728.2025.38.8s.861",
+  "designation": "international-algorithm-specific",
+  "title": "AI-DRIVEN FRAUD DETECTION AND PREVENTION USING HUMAN BEHAVIOR ANALYSIS TO ENHANCE US SOCIAL AND FINANCIAL SECURITY",
+  "authors": "Islam, M. M.; Parveen, R.; Mim, S. S.; Anika, A.; Hassan, M. M.; Al Nahid, M. A.",
+  "year": 2025,
+  "venue": "International Journal of Applied Mathematics",
+  "odin_topics": [
+    "8.A",
+    "8.B",
+    "6.A",
+    "6.B",
+    "12.A",
+    "12.B",
+    "14.A",
+    "14.B",
+    "14.C",
+    "10.A",
+    "10.B",
+    "11.A"
+  ],
+  "tldr": "Presents a fraud detection system combining behavioral biometrics with a mixture-of-experts architecture and drift adaptation, achieving 96.5% recall and 92.0% precision on synthetic US data.",
+  "problem_and_motivation": "Existing AI-based fraud systems process events in isolation and fail to capture continuous behavioral signatures, making them vulnerable to generative AI-driven mimicry and concept drift. A system is needed that integrates temporal behavioral patterns with transaction risk to adapt to evolving fraud tactics.",
+  "approach": [
+    "Extracts behavioral signals (keystroke timing, gesture trajectories, navigation transitions) from user interaction streams.",
+    "Introduces a Behavioral Trust Vectorization Engine (BTVE) that creates a per-user dynamic embedding with trust weights based on risk posture.",
+    "Uses a mixture-of-experts architecture with sequence, anomaly, and supervised experts to produce fraud probabilities.",
+    "Employs a gating network to dynamically weight expert outputs based on current behavioral and transaction context.",
+    "Monitors KL divergence, residual error, and gating shifts to detect drift and trigger retraining or BTVE resets.",
+    "Evaluates on a simulated dataset of 800,000 user sessions with 16 million event records.",
+    "Compares against transaction-only, behavior-only, fixed fusion, and hybrid MoE baselines."
+  ],
+  "findings": [
+    "num: Achieved 96.5% recall, 92.0% precision, and a false positive rate below 1.6%.",
+    "num: Maintained average inference latency of approximately 8.2 ms.",
+    "num: Without adaptation, recall dropped to 89.8% after simulated mimicry; with drift adaptation, recall recovered to 95.2% within two days.",
+    "num: Gating weights averaged 42% supervised, 33% sequence, and 25% anomaly over flagged fraud events.",
+    "The system successfully detected an account takeover attempt in a real-time illustrative case."
+  ],
+  "key_figures_tables": [
+    "Figure 4: Expert weight distribution across flagged fraud events → Supervised expert dominates at 42%."
+  ],
+  "key_equations": [
+    {
+      "equation": "v_{(t)} = \\alpha_{(t)} \\odot (b_{(u)} + \\Delta v_{(t)})",
+      "explanation": "Computes trust-weighted behavioral embedding."
+    },
+    {
+      "equation": "p_{(t)} = \\sum_{i} w_{i} p_{i}",
+      "explanation": "Fuses expert fraud probabilities via gating weights."
+    },
+    {
+      "equation": "b_{(u)} \\leftarrow (1 - \\eta) b_{(u)} + \\eta (v_{(t)} - \\Delta v_{(t)})",
+      "explanation": "Slowly updates the stable base embedding."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "BTVE",
+      "definition": "Behavioral Trust Vectorization Engine; maintains per-user dynamic behavioral embeddings with trust weighting."
+    },
+    {
+      "term": "MoE",
+      "definition": "Mixture-of-Experts; architecture combining multiple specialized models via a gating mechanism."
+    },
+    {
+      "term": "KL divergence",
+      "definition": "Kullback-Leibler divergence; measures difference between embedding distributions."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Vallarino",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid MoE with RNNs, transformers, and autoencoders for fraud detection achieved 98.7% accuracy.",
+      "role": "baseline"
+    },
+    {
+      "author": "Finnegan",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Scoping review identifies wide variety of behavioral biometric modalities and measures in authentication studies.",
+      "role": "context"
+    },
+    {
+      "author": "Zhang",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MoE can counteract feature and relation camouflage in fraud detection by dividing relational graph structure.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zhao",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ADMoE demonstrates mixture-of-experts can effectively learn from noisy labels on anomaly detection tasks.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus is fraud detection as a financial anomaly detection problem."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "high",
+        "justification": "Presents and evaluates a novel MoE and embedding-based anomaly detection algorithm."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops a predictive model for fraud probability using sequential and transactional data."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Uses sequence modeling (LSTM/transformer) to analyze temporal trajectories of embeddings."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Evaluates using recall, precision, FPR, AUC, and latency metrics."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "medium",
+        "justification": "Compares against multiple baselines and analyzes expert weight distribution and drift adaptation."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Uses a simulated dataset of 800,000 user sessions for training and evaluation."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Discusses real-time constraints and mentions potential for deployment in banks and social networks."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "contextual",
+        "justification": "Implicitly relevant due to latency requirements, but not explicitly discussed."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Acknowledges privacy issues with behavioral data collection in limitations."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions reducing false positives to build user trust, but not a primary focus."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "Mentions reducing friction for legitimate users, but engagement is not studied."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a novel algorithm for fraud detection that integrates behavioral biometrics with a mixture-of-experts and an adaptive trust-weighted embedding mechanism. It addresses the gap in handling concept drift and adversarial mimicry in real-time financial systems. The proposed Behavioral Trust Vectorization Engine provides a new formalism for dynamic, risk-sensitive user representation. The work also demonstrates a practical system design with low-latency inference suitable for deployment.",
+    "directly_justifies": [
+      "Behavioral profiling can minimize false positives by differentiating genuine users from imposters.",
+      "Mixture-of-experts systems can effectively learn from noisy labels on anomaly detection tasks.",
+      "The proposed BTVE dynamically adjusts embedding reliability in response to contextual risk."
+    ],
+    "limits": [
+      "The paper's findings are based on synthetic data, not real-world financial transactions.",
+      "Privacy concerns around behavioral data collection are acknowledged but not addressed algorithmically.",
+      "The system's robustness against sophisticated adversarial mimicry is not empirically validated with real attacks."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's primary contribution lies in algorithmic fraud detection (8.A, 8.B) using predictive modeling (6.A) with a novel MoE and embedding architecture, making these the high-relevance topics. The evaluation methodology (12.A, 12.B) and use of synthetic data (14.A) are medium-relevance supporting elements. Deployment considerations (14.B, 14.C) and privacy/user trust (10.A, 10.B) are touched upon contextually but are not the paper's focus. Topics related to Filipino demographics, financial structure, budgeting, and mobile-first design (1.A-7.E, 9.A-9.C, 13.A-13.C) were considered and rejected as the paper focuses on US fraud detection without addressing those specific domains."
+  },
+  "limitations": [
+    "Evaluation is conducted only on synthetic data, limiting generalizability to real-world financial systems. [unacknowledged]",
+    "Behavioral data collection raises privacy issues that are discussed but not solved. [unacknowledged]",
+    "Performance against sophisticated adversarial mimicry attacks remains unproven. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Achieved 96.5% recall and 92.0% precision on synthetic US financial-social data.",
+    "Maintains real-time inference latency below 10 ms (8.2 ms average).",
+    "Drift adaptation recovered recall from 89.8% to 95.2% after simulated mimicry.",
+    "Introduces Behavioral Trust Vectorization Engine for dynamic, risk-weighted user embeddings.",
+    "Uses mixture-of-experts with supervised, sequence, and anomaly experts fused by gating."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T14:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Islam M. et al_marked.md",
+      "converted_at": "2026-07-21T13:36:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "paper_id": "10.1057/s41599-024-03605-1",
+  "designation": "international",
+  "title": "A Qualitative Investigation of Financial Decision-Making and Enabling Factors Among Ethnic Minority Young Adults in Hong Kong",
+  "authors": "Cho, E.",
+  "year": 2024,
+  "venue": "Humanities and Social Sciences Communications",
+  "odin_topics": ["1.A", "1.B", "1.C", "2.A", "2.D", "3.A", "5.A", "13.A", "13.B"],
+  "tldr": "Qualitative study of 53 ethnic minority young adults in Hong Kong examining budgeting, spending, saving, investing, debt, and fraud detection practices with identified enabling factors including family social capital.",
+  "problem_and_motivation": "Financial decision-making among racial/ethnic minority young adults is underexamined, especially in non-Western contexts. Day-to-day financial behaviors, younger minorities, and qualitative perspectives are lacking in the predominantly quantitative Western literature.",
+  "approach": [
+    "Conducted individual interviews with 53 participants aged 18-29 of Pakistani, Indian, Nepalese, and Filipino backgrounds in Hong Kong.",
+    "Used qualitative approach to examine personal budgeting, spending, financial planning, product use, debt management, and fraud detection.",
+    "Identified enabling factors through thematic analysis of interview data.",
+    "Analyzed budgeting strategies, spending philosophies, saving tactics, investment behaviors, borrowing patterns, and credit card usage."
+  ],
+  "findings": [
+    "Many saved approximately one-third of their income using various tactics and setting financial goals.",
+    "One-third of participants used credit cards with accompanying occasional risks.",
+    "Informal borrowing from family and friends was common; some sought alternative loans.",
+    "Five enabling factor categories identified: family social capital, intrapersonal characteristics, social dynamics, knowledge, and facilitative contextual circumstances.",
+    "Participants employed budgeting strategies but found budgeting challenging due to limited funds and high living expenses.",
+    "Despite protective tactics, some still fell victim to financial scams."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Family social capital", "definition": "Resources and support from family relationships for financial decision-making"},
+    {"term": "Mental accounting", "definition": "Cognitive operations to organize and track money in separate mental categories"}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2011, "page": 10, "paragraph": 1, "claim": "Financial literacy around the world: survey overview.", "role": "context"},
+    {"author": "Lusardi", "year": 2010, "page": 3, "paragraph": 1, "claim": "Financial literacy among the young shows low knowledge levels.", "role": "context"},
+    {"author": "Kaiser", "year": 2020, "page": 3, "paragraph": 1, "claim": "Meta-analysis of financial education effectiveness.", "role": "context"},
+    {"author": "Thaler", "year": 1985, "page": 12, "paragraph": 2, "claim": "Mental accounting theory of how people organize financial decisions.", "role": "methodology"},
+    {"author": "Hung", "year": 2009, "page": 3, "paragraph": 1, "claim": "Financial literacy definition combining knowledge and skills.", "role": "context"},
+    {"author": "Danes", "year": 1994, "page": 12, "paragraph": 1, "claim": "Financial socialization theory and parental influence.", "role": "methodology"},
+    {"author": "Furstenberg", "year": 2004, "page": 11, "paragraph": 2, "claim": "Family social capital framework for material and symbolic resources.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals as a Demographic", "relevance": "medium", "justification": "Includes Filipino participants (among others) aged 18-29 in Hong Kong"},
+      {"code": "1.B", "name": "Financial Structure of Filipino Young Professionals", "relevance": "medium", "justification": "Examines income, saving, and spending patterns of young ethnic minorities"},
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Covers budgeting, spending, saving, investing, debt, and fraud behaviors in detail"},
+      {"code": "2.A", "name": "Culturally Specific Financial Practices", "relevance": "high", "justification": "Reveals culturally-specific practices including informal borrowing and family-based financial socialization"},
+      {"code": "2.D", "name": "Filipino Spending Cycles and Occasions", "relevance": "medium", "justification": "Documents spending on family remittances and home-country investments"},
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "low", "justification": "Participants used mental bucketing and budgeting strategies"},
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Identifies diverse spending philosophies and saving personality types"},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "high", "justification": "Documents saving goals: education, housing, family, business, retirement"},
+      {"code": "13.B", "name": "Debt Management in PFMS", "relevance": "medium", "justification": "Covers informal borrowing, credit card debt, and lending institution loans"}
+    ],
+    "contribution_to_field": "This qualitative study provides an in-depth examination of financial decision-making among ethnic minority young adults in a non-Western context. It reveals budgeting challenges, modest spending patterns, one-third income saving rates, diverse investment behaviors, informal borrowing practices, and fraud vulnerabilities. The enabling factors framework (family social capital, intrapersonal characteristics, social dynamics, knowledge, contextual circumstances) extends financial socialization theory by recognizing the persistent influence of ethnic minority parents.",
+    "directly_justifies": [
+      "Many ethnic minority young adults save approximately one-third of their income.",
+      "Family social capital is the primary enabling factor for financial decision-making.",
+      "Informal borrowing from family and friends is common among ethnic minorities in Hong Kong."
+    ],
+    "limits": [
+      "Small qualitative sample (N=53) limits generalizability.",
+      "Ethnic Chinese young adults not included in the sample.",
+      "Interviews in English may exclude less proficient speakers.",
+      "Sample skewed toward higher education levels."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was conducted. Topics 1.C (Financial Behavior), 2.A (Culturally Specific Practices), and 13.A (Savings Goal Management) were rated high as core contributions. Topics 1.A and 1.B (Young Professionals demographics and financial structure) and 2.D (Spending Cycles) were rated medium. Topics 5.A (Behavioral Profiles) and 13.B (Debt Management) were rated medium. Topic 3.A (Expense Categorization) was rated low for mental bucketing references. Topics 4.x, 6.x, 7.x, 8.x, 9.x, 10.x, 11.x, 12.x, and 14.x were rejected as the paper does not address algorithmic systems, system design, or technical solutions."
+  },
+  "limitations": [
+    "Small qualitative sample (N=53) limits broader generalization.",
+    "Ethnic Chinese young adults were not included in the study.",
+    "English-language interviews may have excluded less proficient speakers.",
+    "Sample skewed toward higher education and socio-economic status."
+  ],
+  "remember_this": [
+    "Participants saved approximately one-third of their income on average.",
+    "Family social capital is the primary enabler of financial decision-making.",
+    "Informal borrowing from family and friends is a common practice.",
+    "Five enabling factor categories were identified for financial literacy.",
+    "One-third of participants used credit cards with occasional risks."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "big-pickle",
+    "conversion_reference": {
+      "file": "Cho_marked.md",
+      "converted_at": "2026-07-22T12:56:58Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

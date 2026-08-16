@@ -1,0 +1,235 @@
+{
+  "paper_id": "10.1371/journal.pone.0294466",
+  "designation": "international",
+  "title": "Impact of financial literacy, mental budgeting and self control on financial wellbeing: Mediating impact of investment decision making",
+  "authors": "Bai, R.",
+  "year": 2023,
+  "venue": "PLoS ONE",
+  "odin_topics": [
+    "5.A",
+    "7.A",
+    "7.B",
+    "2.C",
+    "4.B",
+    "1.C"
+  ],
+  "tldr": "Financial literacy, mental budgeting, and self-control significantly and positively influence subjective financial well-being, with investment decision-making partially mediating these relationships among Chinese university students.",
+  "problem_and_motivation": "Financial distress undermines mental health and workplace productivity, yet limited empirical evidence exists on how cognitive factors interact to shape financial well-being. Understanding the mediating role of investment decision-making behavior between cognitive factors and financial well-being remains underexplored. The Great Recession and COVID-19 pandemic have intensified the need to identify pathways that improve financial outcomes.",
+  "approach": [
+    "Collected survey data from 449 Chinese university students using convenience sampling across physical and electronic channels.",
+    "Employed Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyze relationships between cognitive factors and financial well-being.",
+    "Used a seven-item financial literacy scale, four-item mental budgeting scale, and nine-item self-control scale adapted from prior validated instruments.",
+    "Measured financial well-being through two dimensions: financial anxiety and financial security, using 5-point Likert scales.",
+    "Tested seven hypotheses including direct effects and mediation paths through investment decision-making behavior using Baron and Kenny method."
+  ],
+  "findings": [
+    "num: 0.299 is the highest beta coefficient, showing financial literacy has the strongest direct effect on financial well-being.",
+    "num: 0.182 beta for self-control and 0.102 beta for mental budgeting also significantly predict financial well-being (all p < 0.001).",
+    "num: 0.017, 0.016, and 0.019 indirect effects through investment decision-making confirm partial mediation for all three cognitive factor paths.",
+    "All constructs meet reliability and validity thresholds with composite reliability from 0.714 to 0.845 and AVE from 0.692 to 0.811.",
+    "All seven hypotheses (H1 through H7) are supported based on path analysis and mediation testing."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Research conceptual model of hypothesized variable relationships → visualizes the mediation framework tested.",
+    "Table 2: Factor loadings, reliability, and validity metrics for all constructs → all constructs meet psychometric thresholds.",
+    "Table 3: Path coefficients and significance levels for all seven hypotheses → all paths supported at p < 0.001.",
+    "Table 4: Mediation analysis results showing direct and indirect effects → investment decision-making partially mediates all three paths."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial Literacy",
+      "definition": "Knowledge of basic financial concepts and ability to apply financial skills to manage resources effectively and make informed decisions."
+    },
+    {
+      "term": "Mental Budgeting",
+      "definition": "Cognitive process of categorizing, evaluating, and tracking financial activities including expenses and income."
+    },
+    {
+      "term": "Self-Control",
+      "definition": "Ability to manage one's conduct, emotions, and impulses to achieve long-term goals and avoid temptation."
+    },
+    {
+      "term": "Investment Decision-Making Behavior",
+      "definition": "Process of making financial and investment decisions influenced by knowledge, attitudes, self-control, and psychological biases."
+    },
+    {
+      "term": "Financial Wellbeing",
+      "definition": "Subjective evaluation of one's present and future financial situation encompassing financial anxiety and financial security."
+    },
+    {
+      "term": "PLS-SEM",
+      "definition": "Partial Least Squares Structural Equation Modeling, a statistical technique for path analysis flexible with sample sizes."
+    },
+    {
+      "term": "AVE",
+      "definition": "Average Variance Extracted, a measure of convergent validity in measurement models."
+    },
+    {
+      "term": "CR",
+      "definition": "Composite Reliability, a measure of internal consistency in measurement models."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Thaler",
+      "year": 1981,
+      "page": 5,
+      "paragraph": 3,
+      "claim": "The concept of self-control may be applied to the individual as if they were an organization.",
+      "role": "context"
+    },
+    {
+      "author": "Thaler",
+      "year": 1999,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "Mental accounting is the cognitive process people use to organize, evaluate, and track financial activities.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chun",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 6,
+      "claim": "Consumers with superior mental budgeting skills are more resistant to store promotions and price fluctuations.",
+      "role": "finding"
+    },
+    {
+      "author": "Tangney",
+      "year": 2004,
+      "page": 5,
+      "paragraph": 7,
+      "claim": "High self-control predicts good adjustment, less pathology, better grades, and interpersonal success.",
+      "role": "finding"
+    },
+    {
+      "author": "Baron",
+      "year": 1986,
+      "page": 9,
+      "paragraph": 4,
+      "claim": "Simultaneously considering direct and indirect effects is necessary to conclude mediation tests.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hair",
+      "year": 1993,
+      "page": 9,
+      "paragraph": 2,
+      "claim": "PLS-SEM is more flexible with sample sizes and less vulnerable to violations of multivariate data assumptions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Xiao",
+      "year": 2018,
+      "page": 2,
+      "paragraph": 5,
+      "claim": "Mental budgeting aids in spending tracking, goal setting, and financial decision-making.",
+      "role": "finding"
+    },
+    {
+      "author": "Shefrin",
+      "year": 1988,
+      "page": 5,
+      "paragraph": 5,
+      "claim": "Most individuals are preoccupied with challenges and rewards of the present rather than advantages of the long term.",
+      "role": "context"
+    },
+    {
+      "author": "Younas",
+      "year": 2019,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "Self-control and financial knowledge improve financial well-being.",
+      "role": "finding"
+    },
+    {
+      "author": "Antonides",
+      "year": 2011,
+      "page": 4,
+      "paragraph": 4,
+      "claim": "Mental budgeting positively affects personal financial management and reduces unduly risky personal investment behavior.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Studies cognitive factors shaping financial well-being"
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Mental budgeting is a core construct studied"
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Empirical evidence that budgeting practices improve outcomes"
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "low",
+        "justification": "Uses self-reported financial wellbeing and anxiety scales"
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "low",
+        "justification": "Identifies gaps in cognitive-financial well-being research"
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Studies young adults' financial behavior, not Filipino"
+      }
+    ],
+    "contribution_to_field": "This study provides empirical evidence on the simultaneous effects of financial literacy, mental budgeting, and self-control on subjective financial well-being, filling a gap in the literature where these cognitive factors had been studied in isolation. The paper establishes that investment decision-making behavior partially mediates the relationship between cognitive factors and financial well-being, offering a more nuanced understanding of the pathways through which these factors influence financial outcomes.",
+    "directly_justifies": [
+      "Financial literacy has the strongest direct effect on financial well-being (beta = 0.299).",
+      "Mental budgeting positively and significantly influences financial well-being (beta = 0.102).",
+      "Self-control significantly predicts financial well-being (beta = 0.182).",
+      "Investment decision-making behavior partially mediates all three cognitive factor paths to financial well-being.",
+      "Subjective financial well-being is a better indicator of financial health than objective measures alone."
+    ],
+    "limits": [
+      "Convenience sampling of Chinese university students limits generalizability to broader and more diverse populations.",
+      "Cross-sectional design prevents establishing causal relationships between financial literacy, mental budgeting, self-control, and financial well-being.",
+      "Self-reported measures may introduce response biases and social desirability effects."
+    ],
+    "topic_mapping_rationale": "All 14 topic domains from the taxonomy were systematically scanned for relevance. Domain 5 (Financial Behavioral Profiles) was flagged with 5.A at high relevance because the paper directly examines how cognitive and behavioral factors shape financial well-being profiles. Domain 7 (Budgeting Strategies) was flagged with 7.A at high relevance because mental budgeting is a central construct, and 7.B at medium relevance because the findings empirically support the value of budgeting practices for financial outcomes."
+  },
+  "limitations": [
+    "Convenience sampling of Chinese university students limits generalizability to broader and more diverse populations.",
+    "Cross-sectional design prevents establishing causal relationships between the variables investigated.",
+    "Self-reported measures may introduce response biases and social desirability effects."
+  ],
+  "remember_this": [
+    "Financial literacy has the strongest direct effect on financial well-being among the three cognitive factors.",
+    "Mental budgeting positively influences financial well-being through expense categorization and monitoring.",
+    "Self-control significantly predicts financial well-being by enabling disciplined financial decision-making.",
+    "num: Investment decision-making partially mediates all three paths with indirect effects of 0.017, 0.016, and 0.019.",
+    "Convenience sample of 449 Chinese university students constrains generalizability of findings."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T15:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Bai_marked.md",
+      "converted_at": "2026-07-22T12:07:18Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "paper_id": "d3d1afb1-7131-5b5d-ac4f-ede4f0618bd0",
+  "designation": "local-algorithm-specific",
+  "title": "Data-Driven Decision Making in Scholarship Programs: Leveraging Decision Trees and Clustering Algorithms",
+  "authors": "Espiritu, F. V.; Natividad, M. C. B.; Velasco, R. A.",
+  "year": 2024,
+  "venue": "International Journal in Information Technology in Governance, Education and Business",
+  "odin_topics": [
+    "None"
+  ],
+  "tldr": "Decision trees and clustering algorithms applied to BRO-Ed scholarship program in Isabela province streamline application processing and optimize budget allocation.",
+  "problem_and_motivation": "The BRO-Ed scholarship program faces challenges handling a growing number of applications efficiently. Manual processes are inadequate for managing increasing application volumes.",
+  "approach": [
+    "Implements decision tree and clustering algorithms for scholarship application processing.",
+    "Includes systematic data integration, preprocessing, and online platform development.",
+    "Integrates machine learning into existing scholarship management workflow.",
+    "Creates user-friendly online platform to enhance accessibility."
+  ],
+  "findings": [
+    "Initial results show significant increase in success rate for scholarship processing.",
+    "Data-driven approach enables streamlined application processing and informed decisions."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "BRO-Ed",
+      "definition": "Scholarship program of Isabela province providing educational assistance to underprivileged students."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "Paper focuses on scholarship program management, not personal finance systems."
+      }
+    ],
+    "contribution_to_field": "Demonstrates application of data mining techniques to educational scholarship management. Provides a model for integrating decision trees and clustering into administrative decision-making.",
+    "directly_justifies": [],
+    "limits": [
+      "Not directly relevant to personal finance management systems.",
+      "No quantitative algorithm performance metrics reported."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. No topic codes matched. Focuses on scholarship program data mining, not personal finance."
+  },
+  "limitations": [
+    "No quantitative algorithm performance metrics reported.",
+    "Not evaluated in personal finance domain context."
+  ],
+  "remember_this": [
+    "Decision trees and clustering improve scholarship processing efficiency.",
+    "Data integration approach streamlines application management."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Espiritu F. et al_marked.md",
+      "converted_at": "2026-07-22T13:16:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

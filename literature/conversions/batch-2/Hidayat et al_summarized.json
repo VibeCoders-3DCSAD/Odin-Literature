@@ -1,0 +1,82 @@
+{
+  "paper_id": "uuid-v5: 6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+  "designation": "international",
+  "title": "Gen-Z Saving Behavior: The Role Financial Literacy in Digital Payment Mediated",
+  "authors": "Hidayat, A.; Nurhadi N, M.; Nurhidayah; Tanjung, A.; Muliani, M.; Musdalifah",
+  "year": 2025,
+  "venue": "ICONBIT 2025 Conference Proceedings",
+  "odin_topics": ["1.C", "2.C", "13.A"],
+  "tldr": "Analyzes how financial literacy affects Generation Z saving behavior in Makassar, Indonesia, finding that digital payment fully mediates the relationship between financial literacy and saving behavior.",
+  "problem_and_motivation": "Generation Z in Indonesia shows low saving behavior (56.6% rarely save) and high digital payment usage, but the mechanism linking financial literacy to saving through digital payment adoption is not well understood.",
+  "approach": [
+    "Surveyed 150 Generation Z respondents aged 18-25 in Makassar City who use digital payments and have savings accounts.",
+    "Applied Partial Least Squares Structural Equation Modeling (PLS-SEM) for data analysis.",
+    "Measured financial literacy, digital payment usage, and saving behavior constructs using validated scales.",
+    "Tested direct and indirect effects of financial literacy on saving behavior with digital payment as mediator.",
+    "Used SmartPLS software with outer loading threshold of 0.7 and bootstrapping for significance testing."
+  ],
+  "findings": [
+    "num: Direct effect of financial literacy on saving behavior was not significant.",
+    "num: Financial literacy had a significant direct effect on digital payment usage.",
+    "num: Digital payment had a significant direct effect on saving behavior.",
+    "num: Digital payment significantly mediated the relationship between financial literacy and saving behavior.",
+    "Sample: 59% male, 41% female; 45% aged 23-25 years."
+  ],
+  "key_figures_tables": [
+    "Table 1: Respondent Profile → Age and gender distribution of the 150 Gen Z respondents.",
+    "Table 2: Validity test Outer Model → All factor loadings above 0.7 threshold.",
+    "Table 3: Construct Reliability and Validity → Cronbach's alpha > 0.8 for all constructs."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "PLS-SEM", "definition": "Partial Least Squares Structural Equation Modeling"},
+    {"term": "Gen Z", "definition": "Generation Z, individuals born between 1997 and 2012"}
+  ],
+  "citations": [
+    {"author": "Katadata Insight Center", "year": 2021, "page": 0, "paragraph": 0, "claim": "56.6% of Gen Z respondents rarely or never save.", "role": "context"},
+    {"author": "OECD", "year": 2022, "page": 0, "paragraph": 0, "claim": "Financial literacy includes understanding budgeting, saving, investing, and debt management.", "role": "context"},
+    {"author": "OJK", "year": 2024, "page": 0, "paragraph": 0, "claim": "Gen Z financial literacy index is 51.70%, lowest among generations.", "role": "context"},
+    {"author": "OCBC NISP", "year": 2023, "page": 0, "paragraph": 0, "claim": "Average financial health of Indonesia's young generation is only 41.16%.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.C", "name": "Financial Behavior of Filipino Young Professionals", "relevance": "high", "justification": "Directly examines saving behavior and digital payment use of young adults (Gen Z)."},
+      {"code": "2.C", "name": "User-Declared Financial Preferences", "relevance": "medium", "justification": "Analyzes self-reported financial literacy and saving preferences through survey data."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "medium", "justification": "Focus on saving behavior as the dependent variable of interest."}
+    ],
+    "contribution_to_field": "This paper provides empirical evidence that digital payment mediates the relationship between financial literacy and saving behavior among Generation Z in Indonesia. It demonstrates that financial literacy alone does not directly drive saving behavior; rather, it operates through digital payment adoption as a behavioral pathway. The findings highlight the importance of digital finance platforms as channels for translating financial knowledge into saving habits.",
+    "directly_justifies": [
+      "Financial literacy affects saving behavior indirectly through digital payment usage.",
+      "Digital payment has a significant positive effect on saving behavior.",
+      "Direct effect of financial literacy on saving is not significant for Gen Z."
+    ],
+    "limits": [
+      "Small sample (n=150) from a single city limits generalizability.",
+      "Cross-sectional design cannot establish causal direction between literacy, payment use, and saving.",
+      "Limited to Indonesian Gen Z; may not generalize to other age groups or countries."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 1.C (Financial Behavior) was flagged as high relevance because the paper directly studies Gen Z saving and payment behavior. Domain 2.C (User-Declared Preferences) received medium relevance for the self-reported survey methodology. Domain 13.A (Savings Goal Management) received medium relevance as saving behavior is the outcome variable. All other domains were rejected."
+  },
+  "limitations": [
+    "Small sample (n=150) with purposive sampling limits statistical power and generalizability.",
+    "No longitudinal data to establish temporal ordering between variables. [unacknowledged]",
+    "Indonesian context may not generalize to Philippine Gen Z populations."
+  ],
+  "remember_this": [
+    "Digital payment fully mediates the literacy-saving behavior relationship for Gen Z.",
+    "Financial literacy alone does not directly increase saving behavior.",
+    "56.6% of Indonesian Gen Z rarely or never save (Katadata 2021).",
+    "Digital payment platforms can serve as channels to promote saving habits."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hidayat et al_marked.md",
+      "converted_at": "2026-07-22T13:34:08Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

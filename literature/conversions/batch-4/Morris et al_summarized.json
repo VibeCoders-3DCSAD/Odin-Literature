@@ -1,0 +1,219 @@
+{
+  "paper_id": "10.1108/IJBM-07-2022-0298",
+  "designation": "international",
+  "title": "Understanding financial professionals' perceptions of their clients' financial behaviors",
+  "authors": "Tania Morris, Lamine Kamano, Stéphanie Maillet",
+  "year": 2023,
+  "venue": "International Journal of Bank Marketing, 41(7), 1585-1610",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.D"
+  ],
+  "tldr": "Investigates financial professionals' perceptions of client financial behaviors through 26 semi-structured interviews, revealing psychological factors, financial habits, and system flexibility as key explanatory factors beyond financial knowledge.",
+  "problem_and_motivation": "Financial illiteracy persists worldwide despite educational interventions, and low financial literacy translates to suboptimal financial behaviors affecting well-being. Research on financial literacy and its relationship to financial decision-making remains unclear, with many studies focusing narrowly on financial knowledge. This study provides a novel perspective by examining financial professionals' perceptions of their clients' financial behaviors across debt, savings, and investment domains.",
+  "approach": [
+    "Conducted qualitative interpretive research using semi-structured interviews with 26 financial professionals from depository institutions, investment services, accounting firms, and insurance in New Brunswick, Canada.",
+    "Used thematic analysis following an inductive approach with NVivo 12 software to code and categorize interview data into themes and sub-themes.",
+    "Developed a conceptual framework positioning financial behavior as the outcome of interrelated elements including knowledge, psychological factors, habits, and financial system flexibility.",
+    "Analyzed professionals' perceptions across four domains: debt financing, debt repayment, savings, and investment behaviors.",
+    "Categorized findings by debt financing (credit abuse, insisting on credit, misuse of products), debt repayment (insufficient payments, credit-to-credit repayment), savings (lack of savings, late start), and investment (underutilizing programs, risk aversion, excessive risk).",
+    "Linked observed behaviors to explanatory factors including instant gratification, lifestyle mismatch, lack of budgeting, psychological biases, and system flexibility."
+  ],
+  "findings": [
+    "Financial professionals identified psychological factors (instant gratification, financial bias, lack of long-term awareness), financial habits (lifestyle, lack of planning/discipline), and system flexibility as key drivers of poor financial behavior.",
+    "Credit abuse is widespread: clients maximize credit limits, borrow beyond needs, and continuously refinance homes without paying off debt.",
+    "Clients often insist on obtaining more credit despite excessive debt, threatening to take business to competitors if denied.",
+    "Many clients make only minimum credit card payments and use revolving credit to pay off other revolving credit, creating debt cycles.",
+    "Clients lack savings for both unforeseeable emergencies and foreseeable needs like property taxes; only about 10% save properly for retirement according to professionals.",
+    "Investors fail to take advantage of government programs (RRSPs, TFSAs, RESPs) due to lack of knowledge about these instruments.",
+    "Both excessive risk aversion (investing in low-yield GICs below inflation) and excessive risk-taking (lack of diversification, market timing, leveraged lending) are observed.",
+    "The 40% debt-to-income ratio used by financial institutions is outdated and does not account for modern financial commitments like cell phone plans and childcare.",
+    "Professionals noted that knowledge-based interventions alone are insufficient; psychological and habitual factors are more fundamental in explaining debt and savings behaviors.",
+    "Financial knowledge appears more critical for investment decisions than for debt and savings behaviors where psychology and habits dominate."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Conceptual framework on financial professionals' perceptions regarding clients' financial behaviors (page 1590).",
+    "Table 1: Profile of 26 respondents including position, institution type, age, and gender (page 1591).",
+    "Figure 2: Financial behaviors related to borrowing (page 1596).",
+    "Figure 3: Debt repayment behaviors (page 1597).",
+    "Figure 4: Savings behaviors (page 1600).",
+    "Figure 5: Financial behaviors related to investments (page 1601)."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": "Study uses qualitative methodology and does not employ mathematical equations."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Financial literacy",
+      "definition": "A combination of awareness, knowledge, skills, attitudes, and behaviors needed to make sound financial decisions and achieve financial well-being (OECD definition)."
+    },
+    {
+      "term": "Subjective financial knowledge",
+      "definition": "Self-assessed level of financial knowledge measured by asking individuals to rate their own financial expertise."
+    },
+    {
+      "term": "Objective financial knowledge",
+      "definition": "Financial knowledge measured through knowledge-based test questions with correct/incorrect answers."
+    },
+    {
+      "term": "Maturity synchronization",
+      "definition": "The principle of matching debt repayment terms with the useful life of the asset being financed, commonly applied in corporate finance."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Allgood and Walstad",
+      "year": 2016,
+      "page": 1588,
+      "paragraph": 2,
+      "claim": "Financial knowledge positively influences financial behavior; people with lower knowledge are more likely to make minimum credit card payments.",
+      "role": "context"
+    },
+    {
+      "author": "Gathergood and Weber",
+      "year": 2017,
+      "page": 1589,
+      "paragraph": 1,
+      "claim": "Short-term biases and self-reported impulsiveness influence mortgage choice determinants.",
+      "role": "context"
+    },
+    {
+      "author": "Lusardi and Tufano",
+      "year": 2015,
+      "page": 1593,
+      "paragraph": 3,
+      "claim": "Lower financial literacy is linked to higher propensity to accumulate debt and higher borrowing costs.",
+      "role": "context"
+    },
+    {
+      "author": "Kaiser and Menkhoff",
+      "year": 2017,
+      "page": 1588,
+      "paragraph": 3,
+      "claim": "Financial education interventions have mixed effectiveness depending on targeted areas and context.",
+      "role": "context"
+    },
+    {
+      "author": "Netemeyer et al.",
+      "year": 2018,
+      "page": 1586,
+      "paragraph": 2,
+      "claim": "Financial well-being consists of stress of managing daily finances and sense of future financial security.",
+      "role": "context"
+    },
+    {
+      "author": "Henager and Cude",
+      "year": 2016,
+      "page": 1589,
+      "paragraph": 2,
+      "claim": "Financial literacy positively influences both long-term and short-term financial behaviors across age groups.",
+      "role": "context"
+    },
+    {
+      "author": "Davies",
+      "year": 2015,
+      "page": 1594,
+      "paragraph": 3,
+      "claim": "Financial literacy framework must include responsibility of the financial industry and government, not just individuals.",
+      "role": "support"
+    },
+    {
+      "author": "Hamid and Loke",
+      "year": 2021,
+      "page": 1594,
+      "paragraph": 3,
+      "claim": "People with more than two credit cards have more difficulty making payments.",
+      "role": "context"
+    },
+    {
+      "author": "Mpaata et al.",
+      "year": 2021,
+      "page": 1599,
+      "paragraph": 2,
+      "claim": "Self-control positively influences savings-related behaviors.",
+      "role": "context"
+    },
+    {
+      "author": "Lee and Kim",
+      "year": 2020,
+      "page": 1593,
+      "paragraph": 3,
+      "claim": "Planning is negatively related to credit card cash advances; lack of budgeting impacts financial commitments.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Personal Finance Behavior",
+        "relevance": "high",
+        "justification": "Core subject is understanding financial behaviors of individuals and households across debt, savings, and investment domains."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Literacy & Education",
+        "relevance": "high",
+        "justification": "Extensively reviews financial literacy definitions, measurement, and the effectiveness of financial education interventions."
+      },
+      {
+        "code": "1.C",
+        "name": "Debt Management",
+        "relevance": "high",
+        "justification": "Major findings section on debt financing, credit abuse, debt repayment behaviors, and systemic credit access issues."
+      },
+      {
+        "code": "2.A",
+        "name": "Behavioral Finance",
+        "relevance": "high",
+        "justification": "Identifies psychological factors (instant gratification, biases, overconfidence) and habits as primary drivers of financial behaviors."
+      },
+      {
+        "code": "2.D",
+        "name": "Retirement & Investment Planning",
+        "relevance": "high",
+        "justification": "Substantial findings on savings for retirement, investment behaviors, risk aversion, and government program utilization."
+      }
+    ],
+    "contribution_to_field": "Provides a unique qualitative perspective on financial behavior determinants from financial professionals who observe client patterns firsthand. Reveals that psychological factors and habits dominate debt and savings behaviors while knowledge is more critical for investment decisions.",
+    "directly_justifies": [
+      "Inclusion of behavioral psychology factors (instant gratification, self-control, biases) in financial literacy and budget management system design.",
+      "Need for multi-faceted financial literacy approaches combining knowledge, psychological awareness, and habit formation."
+    ],
+    "limits": [
+      "Qualitative methodology with 26 participants from a single Canadian province limits generalizability.",
+      "Study captures only professional perspectives, not client self-reported behaviors or motivations.",
+      "Sample skews toward depository institutions; client demographics vary across professional types."
+    ],
+    "topic_mapping_rationale": "Primary subjects are personal financial behavior (1.A), financial literacy (1.B), debt management (1.C), behavioral finance/psychology (2.A), and retirement/investment planning (2.D)."
+  },
+  "limitations": [
+    "Qualitative design with 26 participants from one Canadian province limits statistical generalizability.",
+    "Only captures financial professionals' perceptions, not clients' own reported behaviors or motivations.",
+    "Participants vary by institutional type and clientele, potentially introducing perspective bias.",
+    "Cross-sectional interview design cannot track behavior changes over time.",
+    "Social desirability bias may influence professional responses about their clients."
+  ],
+  "remember_this": [
+    "Psychological factors outweigh knowledge for debt and savings behaviors.",
+    "Financial knowledge is more critical for investment than for debt/savings decisions.",
+    "System flexibility (easy credit access) enables over-indebtedness.",
+    "Professionals observe both under-saving and late saving as widespread problems.",
+    "The 40% debt ratio is outdated and excludes modern commitments."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Morris et al_marked.md",
+      "converted_at": "2026-07-21T07:38:25Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

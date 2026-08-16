@@ -1,0 +1,238 @@
+{
+  "paper_id": "10.XXXX/2026-02",
+  "designation": "local",
+  "title": "Profiling Platform Workers in the Philippines: Evidence from the Jobs and Skills Survey",
+  "authors": "Jandoc, K.R.L.; Martinez, A.; Bulan, J.A.N.; Molato, R.; Guyos, A.",
+  "year": 2026,
+  "venue": "UP School of Economics Discussion Papers",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.C",
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "7.A",
+    "9.A",
+    "10.A",
+    "10.B"
+  ],
+  "tldr": "Provides a nationally representative profile of Filipino platform workers, revealing they are young, urban, highly educated, and face heterogeneous working conditions with both opportunity-driven and necessity-driven motivations.",
+  "problem_and_motivation": "The Philippines lacks nationally representative evidence on the scale, demographics, and working conditions of platform workers, hindering the development of inclusive labor policies. This gap is critical given the rapid growth of non-traditional work and persistent structural challenges in the labor market. The study addresses this by providing a unified, task-based, and policy-relevant analysis using new survey data.",
+  "approach": [
+    "Uses data from the 2025 Jobs and Skills Survey, a nationally representative rider to the Labor Force Survey.",
+    "Defines non-traditional work as platform-mediated labor based on actual platform use, not employment status.",
+    "Constructs a Routine Task Intensity (RTI) index following the task-based framework of Autor and Dorn (2009) and Goos et al. (2014).",
+    "Employs weighted descriptive statistics and cross-tabulations to profile platform workers.",
+    "Uses logit and logistic regressions to estimate determinants of platform work participation and access to employment benefits.",
+    "Controls for a comprehensive set of worker, job, and firm characteristics in regression models."
+  ],
+  "findings": [
+    "num: Platform workers constitute 8.2% of the workforce (nearly 4.1 million), with 84.5% reporting platform work as their sole job.",
+    "num: Platform workers are more likely to be female (55.6%), urban (74.0%), and have higher education (69.7%) compared to the national average.",
+    "num: Platform workers have significantly lower Routine Task Intensity (RTI: -0.19) than non-platform workers (+0.56).",
+    "num: Overskilling is more prevalent among platform workers, with 22.5% of daily users reporting being overskilled vs. 14.8% of non-users.",
+    "Platform workers report high job satisfaction and better access to workplace amenities compared to non-platform workers.",
+    "Flexibility (88.9%) and ease of entry (79.6%) are the primary motivations, but necessity-driven motives are stronger for drivers and delivery workers.",
+    "Platform workers, particularly home-based, delivery, and outside-home workers, face systematically lower odds of receiving employer-provided pension, health insurance, and separation benefits.",
+    "A key finding is the coexistence of opportunity and vulnerability, with platform work being attractive for some but a necessity for others."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Sectoral productivity vs. employment change → Shows labor moved to low-productivity services, reinforcing non-traditional work.",
+    "Figure 2: Mean standardized RTI by platform worker type → Platform work is less routine, especially for home-based workers.",
+    "Table 2: Online platform use and worker characteristics → Platform workers are distinct: more female, urban, and educated.",
+    "Table 7: Motivations by characteristic → Flexibility is key, but necessity drives transport workers.",
+    "Table 13: Logit regressions of employment benefits → Platform workers face benefit deficits even with controls."
+  ],
+  "key_equations": [
+    {
+      "equation": "RTI = \\log(Routine\\ Cognitive\\ Tasks) - \\log(Non\\text{-}Routine\\ Cognitive\\ Tasks)",
+      "explanation": "Measures a job's reliance on routine vs. non-routine cognitive tasks."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Non-traditional work",
+      "definition": "Platform-mediated labor where workers use online or app-based platforms for paid tasks, including remote digital work and location-based gig activities."
+    },
+    {
+      "term": "Routine Task Intensity (RTI)",
+      "definition": "An index measuring the extent to which a job relies on routine, codifiable tasks relative to non-routine tasks."
+    },
+    {
+      "term": "JSS",
+      "definition": "Jobs and Skills Survey, a nationally representative survey of Filipino workers."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Beerepoot",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Online freelancers in the Philippines are typically young, well-educated, and urban.",
+      "role": "context"
+    },
+    {
+      "author": "Caboverde",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Flexibility and autonomy are central to digital and location-based gig work.",
+      "role": "context"
+    },
+    {
+      "author": "Gianan",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 5,
+      "claim": "Delivery riders are predominantly male and rely on gig work for primary income.",
+      "role": "context"
+    },
+    {
+      "author": "ILO",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 7,
+      "claim": "Only about 41% of online platform workers globally have health insurance, and 20% have pension protection.",
+      "role": "context"
+    },
+    {
+      "author": "Esguerra",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 7,
+      "claim": "Philippine labor laws poorly fit platform work, systematically excluding workers from protections.",
+      "role": "critique"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "high",
+        "justification": "Provides detailed demographic profile of platform workers, who are prime-age and urban."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Discusses platform work as a primary livelihood, indicating its role in income generation for this demographic."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Analyzes motivations for entering platform work, revealing push and pull factors influencing financial decisions."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "contextual",
+        "justification": "Situates platform work within the Philippine context of structural transformation and informal labor."
+      },
+      {
+        "code": "2.C",
+        "name": "User-Declared Financial Preferences",
+        "relevance": "high",
+        "justification": "Directly measures worker motivations, including flexibility and autonomy preferences."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Tangentially related via discussion of income and benefits, but not a core focus."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Background on social protection systems and their limitations for platform workers."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies significant gaps in social protection coverage for platform workers."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "high",
+        "justification": "Profiles workers based on motivations and vulnerability, highlighting heterogeneous financial behaviors."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Classifies platform workers into types (home-based, outside-home, drivers, delivery) with distinct characteristics."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Has policy recommendations related to income stability and protection, not budgeting per se."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "Mentions platform use but does not focus on design principles."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions algorithmic management but not data privacy or security as a primary focus."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Discusses job satisfaction but not trust in the financial system."
+      }
+    ],
+    "contribution_to_field": "This paper makes its primary contribution by providing the first nationally representative evidence on the scale, demographics, and working conditions of non-traditional platform workers in the Philippines. It advances the literature by integrating digital, location-based, and hybrid forms of platform work into a single analytical framework, using a comprehensive set of task, skill, and job-quality indicators. The study also makes a methodological contribution by demonstrating how survey data can be used to construct indices like Routine Task Intensity to assess the nature of work. Furthermore, it provides a nuanced understanding of platform work by distinguishing between opportunity-driven and necessity-driven motivations, and by rigorously disentangling the effect of platform work on social protection deficits from the effects of other worker and firm characteristics.",
+    "directly_justifies": [
+      "Platform workers are disproportionately young, urban, and highly educated.",
+      "Flexibility and autonomy attract many workers, while drivers and delivery workers often enter due to limited alternatives.",
+      "Platform work exhibits lower Routine Task Intensity and strong digital complementarity.",
+      "Platform workers face lower access to employer-provided pension, health insurance, and separation benefits.",
+      "The coexistence of opportunity and vulnerability underscores the need for differentiated policy responses."
+    ],
+    "limits": [
+      "The study is cross-sectional and cannot establish causality.",
+      "The definition of platform work may still miss some workers, such as those who use platforms in informal ways or only occasionally.",
+      "Data on earnings and platform-specific working conditions (e.g., algorithmic management) is limited."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Domains related to the demographic and socio-economic profile of Filipino workers (1.A, 1.B, 1.C) were flagged as highly relevant, as the paper provides extensive data on these aspects. Topics concerning worker motivations and preferences (2.C) also received high relevance due to direct measurement. Domains on the landscape and gaps in personal finance systems (4.A, 4.B) were considered relevant, with 4.B receiving high relevance due to the paper's clear identification of social protection deficits. The classification of financial behavioral profiles (5.A, 5.C) is a central theme, leading to high and medium relevance assignments. Topic 2.A (Culturally Specific Practices) and 9.A (Mobile-First Design) were assigned contextual relevance, as they provide background framing without being a direct focus. Topics on budgeting (7.A), data privacy (10.A), and user trust (10.B) were considered low relevance, as these concepts are not directly examined. Borderline cases included topic 2.A, which was contextual due to the paper's link to broader Philippine economic context. The overall coverage is centered on labor economics and social policy, with indirect implications for financial behavior and technology use."
+  },
+  "limitations": [
+    "Cross-sectional design prevents causal interpretation.",
+    "Reliance on self-reported survey data may introduce recall and social desirability bias. [unacknowledged]",
+    "The definition of platform work may be broad and could include workers who use platforms infrequently. [unacknowledged]",
+    "The study does not include detailed earnings data, limiting analysis of income volatility.",
+    "Survey design cannot capture the full impact of algorithmic management on worker well-being."
+  ],
+  "remember_this": [
+    "Platform workers are 8.2% of the workforce, nearly 4.1 million Filipinos, and mostly prime-age and urban.",
+    "Flexibility is the main draw, but drivers and delivery workers are often pushed by limited alternatives.",
+    "Platform work is less routine than traditional work, but skill overskilling is high.",
+    "Benefit gaps persist for platform workers, even after accounting for worker and firm characteristics.",
+    "A dual nature of opportunity and vulnerability characterizes platform work in the Philippines."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Jandoc et al_marked.md",
+      "converted_at": "2026-07-21T13:37:12Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

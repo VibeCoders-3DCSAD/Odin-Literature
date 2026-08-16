@@ -1,0 +1,236 @@
+{
+  "paper_id": "10.1145/XXXXXXX.XXXXXXX",
+  "designation": "international-algorithm-specific",
+  "title": "Proteus: Shapeshifting Desktop Visualizations for Mobile via Multi-level Intelligent Adaptation",
+  "authors": "Liu, C.; Cheng, S.; Liang, F.; Jiang, Z.; Huang, L.; Athapaththu, K.; Wang, Y.",
+  "year": 2026,
+  "venue": "Proceedings of ACM Designing Interactive Systems Conference (DIS '26)",
+  "odin_topics": [
+    "9.A",
+    "9.B",
+    "6.A",
+    "6.B",
+    "11.A",
+    "11.B",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.B"
+  ],
+  "tldr": "Desktop visualizations are adapted for mobile screens through a multi-level design space and an LLM-driven multi-agent system that plans and generates equivalent, readable mobile visualizations.",
+  "problem_and_motivation": "Users increasingly consume data visualizations on mobile devices, yet most visualizations are authored for desktops. Direct scaling causes illegible text, information loss, and interaction failures due to viewport and interaction paradigm differences.",
+  "approach": [
+    "A multi-level design space is defined with three hierarchical levels: Global Topology, Reference Frame, and Visual Elements.",
+    "The design space models constraint propagation from global structure to individual visual marks.",
+    "Proteus is a five-agent system consisting of a Semantic Parser, Data Extractor, Design Planner, Frontend Engineer, and Visual Critic.",
+    "The pipeline accepts HTML/SVG source and raster snapshots of desktop visualizations as input.",
+    "The Semantic Parser performs multimodal analysis of the source code and rendered images to identify chart topology and components.",
+    "The Data Extractor recovers underlying dataset and visual specifications using reverse engineering of the source structure.",
+    "The Design Planner generates a transformation action plan by selecting operators from the design space based on the recovered data.",
+    "The Frontend Engineer implements the plan as a React/Next.js component using TypeScript and Recharts.",
+    "The Visual Critic evaluates the rendered mobile visualization on data fidelity, plan adherence, text readability, and aesthetics.",
+    "The system iteratively refines the implementation or plan based on critic feedback until the result is certified as mobile-ready."
+  ],
+  "findings": [
+    "num: Proteus achieved a 91.8% render success rate compared to 87.8% for the baseline.",
+    "num: Proteus significantly outperforms the baseline on data fidelity and text readability with p < 0.05.",
+    "num: Proteus significantly outperforms the baseline on interaction reasonableness and visual aesthetics with p < 0.001.",
+    "A multi-level design space effectively organizes adaptation decisions for mobile visualization transformation.",
+    "The critic agent is essential for converging on functional mobile variants.",
+    "The framework handles canonical chart types with high fidelity and efficiency.",
+    "The system can preserve original color schemes when constrained, achieving good usability while matching source style."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Multi-level design space with three layers → shows the hierarchy of transformation operators.",
+    "Figure 2: Multi-agent framework architecture → illustrates the iterative workflow of Proteus.",
+    "Figure 3: Five case studies → demonstrates mobile adaptations preserving data and interactions.",
+    "Figure 4: User study results → Proteus significantly outperforms baseline across all dimensions.",
+    "Figure 5: Comparison on representative cases → shows Proteus preserves data distribution better than baseline.",
+    "Figure 6: Style preservation example → adaptation can maintain source color scheme on mobile."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LLM",
+      "definition": "Large Language Model"
+    },
+    {
+      "term": "SVG",
+      "definition": "Scalable Vector Graphics"
+    },
+    {
+      "term": "DOM",
+      "definition": "Document Object Model"
+    },
+    {
+      "term": "RV",
+      "definition": "Responsive Visualization"
+    },
+    {
+      "term": "MAS",
+      "definition": "Multi-Agent System"
+    }
+  ],
+  "citations": [
+    {
+      "author": "Hoffswell",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Established a design space for flexible visualizations, categorizing techniques into layout adjustments, scale modifications, and encoding changes.",
+      "role": "context"
+    },
+    {
+      "author": "MobileVisFixer",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Automates adaptation by operating on rendered SVG visualizations through an intermediate structured representation.",
+      "role": "baseline"
+    },
+    {
+      "author": "Kim",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Provides a declarative grammar for responsive visualization transformations, allowing design-agnostic adaptation rules to be reused.",
+      "role": "context"
+    },
+    {
+      "author": "Wu",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Employs a reinforcement learning framework trained on human preferences to automatically re-scale and reposition SVG elements.",
+      "role": "baseline"
+    },
+    {
+      "author": "Zeng",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Utilized simulated annealing to preserve spatial relationships in dashboards for responsive design.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2026,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Uses multiple collaborating agents to enable more accurate intent interpretation for adding interaction to an existing visualization.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "high",
+        "justification": "Paper's core motivation is adapting desktop visualizations for mobile consumption, grounded in mobile-first principles."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "contextual",
+        "justification": "Generalizable to personal finance but not specifically addressed."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides algorithmic architecture but not specific to financial prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Not about forecasting; adaptation of visualizations."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "medium",
+        "justification": "Mobile adaptation improves readability and interaction, which may impact engagement."
+      },
+      {
+        "code": "11.B",
+        "name": "Retention Mechanisms and Engagement Design",
+        "relevance": "low",
+        "justification": "Not directly addressed; focus is on adaptation quality."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "User study with 12 participants evaluating readability, aesthetics, fidelity, and interaction quality."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Compares Proteus against a multi-agent LLM baseline using the Gemini 3.0 API."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Methodology for evaluating visualization adaptation, not budget recommendation."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "System uses API-based LLM inference for multi-agent orchestration."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "low",
+        "justification": "Not discussed; inference is server-side via API."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a multi-level design space that moves beyond flat responsive taxonomies by modeling hierarchical constraint propagation in visualization adaptation. It introduces Proteus, an LLM-driven multi-agent system that automates the semantic re-authoring of desktop visualizations for mobile devices, addressing gaps in prior work that focused primarily on geometric resizing. The work provides empirical evidence through a user study that semantic adaptation significantly outperforms generic LLM approaches across fidelity, readability, interaction quality, and aesthetics.",
+    "directly_justifies": [
+      "Existing responsive visualization techniques treat adaptation as a layout puzzle, lacking semantic understanding of the data.",
+      "The integration of a multi-level design space significantly improves readability, aesthetics, and data fidelity of mobile adaptations.",
+      "Proteus significantly outperforms a generic LLM-based baseline in rendering success and all five evaluation dimensions.",
+      "The visual critic agent is essential for converging on functional mobile variants through iterative refinement."
+    ],
+    "limits": [
+      "The framework's evaluation focuses on canonical chart types from standard galleries, not the long tail of bespoke, artistic designs.",
+      "The system does not directly assess whether adapted visualizations support the same analytic tasks as the original designs.",
+      "The study does not compare against prior systems like MobileVisFixer or Cicero due to differences in task setting.",
+      "The current implementation operates primarily on vector-based specifications and does not handle raster-only visualizations."
+    ],
+    "topic_mapping_rationale": "All topic domains from the taxonomy were systematically scanned against the paper's content. The most relevant topics are 9.A (Mobile-First Design Principles) and 12.A/12.B (Evaluation Frameworks), as the paper is fundamentally about adapting visualizations for mobile consumption and includes a user study comparing algorithmic performance. Topic 14.B (ML Model Serving) is relevant because the system uses an API-based LLM. Topics 11.A and 14.B were flagged as medium relevance due to their indirect applicability. Topics 6.A, 6.B, 9.B, 12.C, and 14.C were considered and rejected as either contextual or low relevance because they either focus on personal finance specifically (which is not the domain of this paper) or are not addressed (e.g., forecasting, on-device inference). The paper's contribution is primarily to visualization adaptation rather than personal finance, though its techniques are generalizable."
+  },
+  "limitations": [
+    "Evaluation focuses on canonical chart types and may not generalize to bespoke, artistic designs [unacknowledged].",
+    "The system does not assess whether adapted visualizations support the same analytic tasks as the original designs [unacknowledged].",
+    "The framework operates on vector-based specifications and does not handle raster-only visualizations [unacknowledged].",
+    "Inference latency increases with structural complexity of the SVG or DOM representation [acknowledged].",
+    "Preserving subtle aesthetic and stylistic qualities of bespoke visualizations remains difficult [acknowledged]."
+  ],
+  "remember_this": [
+    "Multi-level design space organizes adaptation from global structure to individual marks.",
+    "Proteus uses five specialized LLM agents to parse, plan, implement, and critique mobile adaptations.",
+    "User study with 12 participants shows Proteus significantly outperforms baseline on all quality dimensions.",
+    "Proteus achieved 91.8% render success rate compared to 87.8% for the baseline.",
+    "Visual critic agent is essential for iterative refinement and convergence on functional mobile variants."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Liu et al_marked.md",
+      "converted_at": "2026-07-21T14:03:37Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

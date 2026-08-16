@@ -1,0 +1,258 @@
+{
+  "paper_id": "10.3390/app15074044",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Cluster-Based Normalization for Robust TOPSIS in Multicriteria Decision-Making",
+  "authors": "Anes, V.; Abreu, A.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "odin_topics": [
+    "None"
+  ],
+  "tldr": "An adaptive cluster-based normalization method combining fuzzy-number clustering with logarithmic normalization improves TOPSIS ranking stability and outlier robustness in multicriteria decision-making.",
+  "problem_and_motivation": "Traditional TOPSIS normalization techniques such as Min-Max and Z-score struggle with datasets containing outliers, large variances, or skewed distributions, leading to biased rankings. Conventional clustering methods impose rigid, data-driven categories that misclassify alternatives sharing features with multiple groups. There is a lack of studies combining fuzzy clustering with centroid-based distance allocation and logarithmic normalization within MCDM frameworks.",
+  "approach": [
+    "Introduced Clustering Using Fuzzy Numbers and Centroid-Based Distance Allocation, where expert-defined ideal cluster centroids replace data-driven centroid computation.",
+    "Alternatives are represented as triangular fuzzy numbers (a, b, c) and converted to crisp centroid values using the arithmetic mean of the three components.",
+    "Euclidean distance between alternative centroids and predefined cluster centroids determines cluster assignment via minimum-distance criterion.",
+    "Integrated logarithmic normalization X = (log(X) - log(Xmin)) / (log(Xmax) - log(Xmin)) within each cluster before TOPSIS ranking.",
+    "Weights for each criterion per cluster are derived directly from normalized cluster centroids, eliminating subjective weighting procedures.",
+    "Applied the method to a case study of 12 Asian cities evaluated on four criteria: cost, infrastructure, safety, and accessibility.",
+    "Compared the proposed method against Fuzzy K-Means clustering, Min-Max normalization, and standard TOPSIS as baselines."
+  ],
+  "findings": [
+    "Proposed clustering method and Fuzzy K-Means produced nearly identical assignments for 11 of 12 cities, with the proposed method more logically classifying City K into Cluster 1.",
+    "Logarithmic and Min-Max normalizations produced nearly identical TOPSIS outcomes when no significant outliers were present.",
+    "num: In Cluster 3, City E scored 0.747 under Min-Max but 0.886 under logarithmic normalization, showing 18.6% improvement in ranking stability with outliers.",
+    "num: City C achieved a perfect TOPSIS score of 1.000 under both normalization methods in Cluster 2.",
+    "num: City K consistently scored approximately 0.887 across both normalization methods as the top alternative in Cluster 1.",
+    "The proposed clustering method is deterministic, computationally simpler, and avoids iterative recalculation compared to Fuzzy K-Means.",
+    "Logarithmic normalization compresses extreme values and prevents any single criterion from dominating the TOPSIS ranking."
+  ],
+  "key_figures_tables": [
+    "Table 2: Summary of optimal cluster centroid scores defined using fuzzy numbers for four criteria across three clusters.",
+    "Table 5: Euclidean distances from each city to all three cluster centroids, determining cluster assignment.",
+    "Table 7: Comparison of proposed clustering vs Fuzzy K-Means showing 11 of 12 assignments match.",
+    "Table 8: Logarithmic normalization results showing compressed, balanced value distributions across clusters.",
+    "Table 9: Min-Max normalization results showing exaggerated differences when outliers are present.",
+    "Table 11: TOPSIS scores under logarithmic normalization with best alternatives per cluster highlighted.",
+    "Table 12: TOPSIS scores under Min-Max normalization for direct comparison with Table 11."
+  ],
+  "key_equations": [
+    {
+      "equation": "C_{wj} = \\frac{a_w + b_w + c_w}{3}",
+      "explanation": "Computes cluster centroid from predefined fuzzy number components."
+    },
+    {
+      "equation": "C_{Aij} = \\frac{a_i + b_i + c_i}{3}",
+      "explanation": "Computes alternative centroid from its fuzzy number components per criterion."
+    },
+    {
+      "equation": "D_{iw} = \\sqrt{\\sum_{j=1}^{m}(C_{Aij} - C_{wj})^2}",
+      "explanation": "Euclidean distance between alternative centroid and cluster centroid."
+    },
+    {
+      "equation": "C_i = \\arg\\min_w D_{iw}",
+      "explanation": "Assigns alternative to cluster with minimum centroid distance."
+    },
+    {
+      "equation": "X = \\frac{\\log(X) - \\log(X_{\\min})}{\\log(X_{\\max}) - \\log(X_{\\min})}",
+      "explanation": "Logarithmic normalization compresses extreme values while preserving relative rankings."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "TOPSIS",
+      "definition": "Technique for Order of Preference by Similarity to Ideal Solution; ranks alternatives by closeness to an ideal solution and distance from a worst-case scenario."
+    },
+    {
+      "term": "MCDM",
+      "definition": "Multicriteria Decision-Making; a set of methodologies for evaluating and prioritizing multiple conflicting factors in decision processes."
+    },
+    {
+      "term": "Fuzzy Number",
+      "definition": "A representation of uncertainty using a triplet (a, b, c) denoting lower bound, central value, and upper bound of a value range."
+    },
+    {
+      "term": "Cluster Centroid",
+      "definition": "The ideal reference point for a cluster, defined a priori by expert judgment using fuzzy numbers, fixed across all alternatives."
+    },
+    {
+      "term": "Alternative Centroid",
+      "definition": "The centroid computed from an alternative's fuzzy scores, varying per alternative and used for distance-based cluster assignment."
+    },
+    {
+      "term": "Logarithmic Normalization",
+      "definition": "A transformation technique using logarithmic scaling to compress large numerical variations and reduce outlier influence in MCDM."
+    },
+    {
+      "term": "VIKOR",
+      "definition": "VlseKriterijumska Optimizacija I Kompromisno Resenje; an MCDM method for ranking alternatives based on compromise solutions."
+    },
+    {
+      "term": "PROMETHEE",
+      "definition": "Preference Ranking Organization Method for Enrichment of Evaluations; an outranking-based MCDM method for pairwise comparisons."
+    },
+    {
+      "term": "AHP",
+      "definition": "Analytic Hierarchy Process; an MCDM method using pairwise comparisons and hierarchical structuring to derive criteria weights."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Stilic",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MCDM methods are critical in environmental management, engineering, and economics for addressing complex multi-factor decisions.",
+      "role": "context"
+    },
+    {
+      "author": "Hajduk",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TOPSIS is widely used for its simplicity and ability to handle both qualitative and quantitative data in ranking alternatives.",
+      "role": "context"
+    },
+    {
+      "author": "Madi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Researchers have explored linking input uncertainty with output uncertainty within the TOPSIS framework for uncertain data interpretation.",
+      "role": "context"
+    },
+    {
+      "author": "Salabun",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comparative study of TOPSIS, VIKOR, COPRAS, and PROMETHEE II benchmarks MCDA method performance.",
+      "role": "baseline"
+    },
+    {
+      "author": "Lim",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Traditional clustering methods rely on crisp boundaries, assigning each data point to a single cluster, which can lead to inaccurate groupings.",
+      "role": "baseline"
+    },
+    {
+      "author": "Krasnov",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fuzzy C-Means allows data points to belong to multiple clusters with varying membership degrees, enabling more nuanced classification.",
+      "role": "methodology"
+    },
+    {
+      "author": "Al-Augby",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fuzzy C-Means requires continuous updating of membership probabilities and objective function optimization, making it computationally expensive.",
+      "role": "finding"
+    },
+    {
+      "author": "Vafaei",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Normalization ensures criteria measured on different scales can be compared meaningfully in MCDM processes.",
+      "role": "methodology"
+    },
+    {
+      "author": "Aytekin",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The choice of normalization method can significantly influence the ranking of alternatives in MCDM processes.",
+      "role": "finding"
+    },
+    {
+      "author": "Zavadskas",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A novel logarithmic normalization method demonstrated effectiveness in separating normalized values more efficiently than conventional approaches in game theory.",
+      "role": "methodology"
+    },
+    {
+      "author": "Zolfani",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "VIKOR and TOPSIS reanalysis based on logarithmic normalization showed benefits for handling high-variance MADM data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nabeeh",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Hybrid model combining OWA operator with TOPSIS and neutrosophic logic enhances reliability in uncertain multi-criteria environments.",
+      "role": "baseline"
+    },
+    {
+      "author": "Magableh",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Integrated fuzzy MCDM method combining clustering techniques enhances crisis recovery strategy assessment in supply chains.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Proposes evaluation framework for MCDM systems, tangentially related to personal finance evaluation contexts."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "contextual",
+        "justification": "Evaluates clustering and normalization algorithm modules, though not applied to personal finance domains."
+      }
+    ],
+    "contribution_to_field": "This paper contributes two methodological innovations to the MCDM field: a fuzzy-number-based clustering approach with expert-defined centroid profiles and logarithmic normalization for TOPSIS. The clustering method decouples cluster definition from data distribution, enabling deterministic, transparent, and computationally efficient classification compared to iterative methods like Fuzzy K-Means. The logarithmic normalization technique provides a robust alternative to Min-Max and Z-score methods, particularly effective in handling outliers and high-variance datasets. Together, these methods improve the accuracy and stability of TOPSIS rankings without adding implementation complexity, offering a scalable framework applicable across diverse decision-making domains including logistics, finance, environmental planning, and strategic prioritization.",
+    "directly_justifies": [
+      "Logarithmic normalization compresses extreme values and preserves proportional differences, improving ranking stability in TOPSIS.",
+      "Expert-defined cluster centroids allow decision-makers to define ideal profiles independently of the dataset for context-aware classification.",
+      "Proposed clustering method achieves nearly identical results to Fuzzy K-Means with significantly lower computational overhead.",
+      "City E showed 18.6% higher TOPSIS score under logarithmic normalization (0.886) versus Min-Max (0.747) in the presence of outliers.",
+      "Weights are derived directly from cluster centroids, eliminating the need for subjective weighting procedures."
+    ],
+    "limits": [
+      "The definition of ideal cluster centroids relies on expert judgment, which may introduce subjectivity into the clustering process.",
+      "Performance in large-scale or high-dimensional problems has not been tested.",
+      "Applicability has been demonstrated only within the TOPSIS framework; integration with VIKOR, PROMETHEE, and AHP remains unexplored.",
+      "Case study uses only 12 alternatives and 4 criteria, limiting generalizability to larger real-world datasets."
+    ]
+  },
+  "limitations": [
+    "Expert-defined cluster centroids introduce subjectivity that may affect reproducibility and consistency across different decision-makers.",
+    "Case study limited to 12 alternatives and 4 criteria; scalability to large-scale or high-dimensional problems is unvalidated.",
+    "Applicability tested only within TOPSIS framework; generalizability to other MCDM models such as VIKOR, PROMETHEE, and AHP is unproven.",
+    "No sensitivity analysis on how variations in expert-defined fuzzy centroid values affect final cluster assignments and rankings."
+  ],
+  "remember_this": [
+    "Fuzzy-number clustering with expert-defined centroids achieves nearly identical results to Fuzzy K-Means with lower computational cost.",
+    "Logarithmic normalization performs equally to Min-Max on clean data but outperforms it when outliers are present.",
+    "num: City E scored 0.886 under logarithmic normalization versus 0.747 under Min-Max, an 18.6% improvement.",
+    "Weights derived directly from cluster centroids eliminate the need for subjective weighting procedures in TOPSIS.",
+    "The deterministic assignment of alternatives to clusters enhances transparency and interpretability compared to soft clustering methods."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:30:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Anes & Abreu_marked.md",
+      "converted_at": "2026-07-22T11:57:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.5281/zenodo.gavric2023",
+  "designation": "international-algorithm-specific",
+  "title": "Data reduction and feature generation techniques for classification algorithms on heterogeneous behavioural data",
+  "authors": "Gavric, M.; Zorko, M.; Slijepcevic, S.",
+  "year": 2023,
+  "venue": "Cantab Predictive Intelligence, Cambridge",
+  "odin_topics": ["5.C", "6.A", "12.B", "14.B"],
+  "tldr": "Introduces an abstract semi-automated feature generation framework for classification on heterogeneous behavioral data that improves model accuracy 3-fold over fully automated approaches.",
+  "problem_and_motivation": "Automated feature generation often results in model under-performance for business classification tasks involving time series and tabular data. Expert-knowledge-driven feature engineering is critical but lacks a scalable framework.",
+  "approach": [
+    "Develops abstract data structure unifying event, customer segmentation, and outcome tables across use cases.",
+    "Semi-automated feature generation procedure incorporating expert knowledge via configurable statistics and parameters.",
+    "Six-step feature generation process: triggers segmentation, response aggregation, recency/frequency analysis, trend computation, segmentation interactions, and outcome alignment.",
+    "Validated on three production use cases: predicting engagement, propensity to buy, and behavioral credit scoring.",
+    "Deployed on AWS infrastructure using R, Apache Spark, and mlr3/tidymodels frameworks."
+  ],
+  "findings": [
+    "num: Proposed feature generation improves model accuracy 3-fold or more vs automated-only approaches.",
+    "num: Feature generation contributes more to accuracy than model choice or parameter fine-tuning.",
+    "num: AUC range of 0.76-0.86 across three production use cases with 284 selected features from 26,637 generated.",
+    "Data leakage prevention requires both time-split and customer-split validation strategies.",
+    "Content labeling across channels is critical for engagement prediction use case.",
+    "Overdraft history, age, and transaction amount percentiles are top features for credit scoring."
+  ],
+  "key_figures_tables": [
+    "Table 1-3: Abstract data structures for events, customer segments, and outcomes.",
+    "Table 10: Top features with importance for credit scoring use case.",
+    "Figure 5: ROC curve for credit scoring model example."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Trigger segment", "definition": "Categorical variable describing marketing content type."},
+    {"term": "Customer segment", "definition": "Demographic or location-based customer grouping."},
+    {"term": "Data leakage", "definition": "Test set information contaminating training data."},
+    {"term": "Content labelling", "definition": "Categorizing marketing content for trigger segments."}
+  ],
+  "citations": [
+    {"author": "Shi et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Deep learning feature generation for traffic classification.", "role": "methodology"},
+    {"author": "Li et al.", "year": 2019, "page": 0, "paragraph": 0, "claim": "ML feature generation strategies for depression recognition.", "role": "methodology"},
+    {"author": "Yu & Zhang", "year": 2022, "page": 0, "paragraph": 0, "claim": "Label-specific feature generation for multi-label classification.", "role": "methodology"},
+    {"author": "Mumuni & Mumuni", "year": 2024, "page": 0, "paragraph": 0, "claim": "Automated feature engineering survey for deep learning.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Classification framework for behavioral data including credit scoring."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Predictive models for engagement, purchase, and credit default."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Rigorous evaluation with AUC, time-split, customer-split validation."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "high", "justification": "Production deployment on AWS with detailed infrastructure."}
+    ],
+    "contribution_to_field": "Provides a formal abstract framework for feature generation on heterogeneous behavioral data combining time series and tabular sources. Demonstrates that expert-guided semi-automated feature engineering dramatically outperforms fully automated approaches. Validates framework across multiple production business use cases including credit scoring.",
+    "directly_justifies": [
+      "Expert-guided feature generation improves accuracy 3-fold vs automated.",
+      "Feature generation contributes more to accuracy than model selection.",
+      "Abstract framework unifies engagement, purchase, and credit scoring use cases.",
+      "Time-split and customer-split validation prevents data leakage."
+    ],
+    "limits": ["Framework requires expert knowledge investment.", "Single company context may limit generalizability."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.C, 6.A, 12.B, 14.B high relevance for classification, prediction, evaluation, and deployment. Rejected demographic and mobile topics as paper focuses on ML framework."
+  },
+  "limitations": [
+    "Framework requires significant expert knowledge investment.",
+    "Production examples from single company context.",
+    "Scalability to very large datasets not thoroughly addressed."
+  ],
+  "remember_this": [
+    "Semi-automated feature generation improves accuracy 3-fold vs automated.",
+    "Feature engineering matters more than model selection for business data.",
+    "Abstract framework unifies engagement, purchases, and credit scoring.",
+    "Data leakage prevention requires both time and customer split.",
+    "Production deployment uses R, Spark, and AWS infrastructure."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Gavric et al_marked.md",
+      "converted_at": "2026-07-22T13:24:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

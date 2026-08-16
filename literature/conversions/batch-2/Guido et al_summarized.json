@@ -1,0 +1,67 @@
+{
+  "paper_id": "10.1007/s00500-022-06768-8",
+  "designation": "international-algorithm-specific",
+  "title": "A hyper-parameter tuning approach for cost-sensitive support vector machine classifiers",
+  "authors": "Guido, R.; Groccia, M. C.; Conforti, D.",
+  "year": 2023,
+  "venue": "Soft Computing",
+  "odin_topics": ["5.C", "8.B", "12.B"],
+  "tldr": "Proposes a multi-objective genetic algorithm approach for tuning cost-sensitive SVM hyper-parameters, with improved GA+DT version reducing computation time on imbalanced data.",
+  "problem_and_motivation": "Class imbalance degrades classifier performance and hyper-parameter tuning is computationally expensive. Existing methods do not jointly optimize multiple imbalanced data performance measures.",
+  "approach": [
+    "Develops bi-objective optimization maximizing balanced accuracy and minimizing false positive rate for SVM.",
+    "Basic version uses genetic algorithms to search SVM cost, gamma, and class-weight parameters.",
+    "Improved version combines genetic algorithms with decision trees to reduce computational time.",
+    "Tests approach on benchmark imbalanced datasets from UCI repository.",
+    "Implements both serial and parallel versions."
+  ],
+  "findings": [
+    "num: Improved GA+DT version strongly reduces computational time compared to basic GA version.",
+    "Multi-objective optimization finds SVM configurations balancing sensitivity and specificity.",
+    "Suitable evaluation measures (balanced accuracy, G-mean) are critical for imbalanced data.",
+    "Parallel implementation scales effectively across multiple processors."
+  ],
+  "key_figures_tables": [],
+  "key_equations": [],
+  "definitions": [
+    {"term": "Cost-sensitive SVM", "definition": "SVM with different misclassification costs per class."},
+    {"term": "Balanced accuracy", "definition": "Average of sensitivity and specificity."},
+    {"term": "G-mean", "definition": "Geometric mean of sensitivity and specificity."}
+  ],
+  "citations": [
+    {"author": "Vapnik", "year": 1998, "page": 0, "paragraph": 0, "claim": "SVM foundation and statistical learning theory.", "role": "methodology"},
+    {"author": "Cristianini & Shawe-Taylor", "year": 2000, "page": 0, "paragraph": 0, "claim": "SVM and kernel methods introduction.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "SVM methods applicable to financial profile classification."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "low", "justification": "Imbalanced classification relevant to rare anomaly detection."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "medium", "justification": "Proposes evaluation framework for imbalanced classifiers."}
+    ],
+    "contribution_to_field": "Proposes multi-objective hyper-parameter tuning for SVM on imbalanced datasets. Demonstrates GA+DT combination reduces optimization time. Highlights appropriate evaluation metrics for imbalanced classification.",
+    "directly_justifies": [
+      "Multi-objective GA improves SVM on imbalanced data.",
+      "GA+DT combination reduces hyper-parameter search time."
+    ],
+    "limits": ["Not evaluated on financial data specifically."],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 5.C and 12.B medium for classification relevance. Assigned 8.B low for anomaly detection. Rejected personal finance topics as paper focuses on general ML."
+  },
+  "limitations": [
+    "Benchmark datasets only; no financial domain validation.",
+    "Limited comparison with non-SVM classifiers."
+  ],
+  "remember_this": [
+    "Multi-objective GA tunes SVM for imbalanced classification.",
+    "GA+DT reduces computational time significantly.",
+    "Balanced accuracy and G-mean are critical for imbalanced data."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Guido et al_marked.md",
+      "converted_at": "2026-07-22T13:28:13Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

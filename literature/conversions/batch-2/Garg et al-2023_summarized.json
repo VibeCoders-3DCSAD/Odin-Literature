@@ -1,0 +1,86 @@
+{
+  "paper_id": "10.63282/3050-9262.IJAIDSML-V4I3P107",
+  "designation": "international-algorithm-specific",
+  "title": "Leveraging IoT-Driven Customer Intelligence for Adaptive Financial Services",
+  "authors": "Garg, A.; Mishra, S.; Jain, A.",
+  "year": 2023,
+  "venue": "International Journal of Artificial Intelligence, Data Science, and Machine Learning",
+  "odin_topics": ["4.A", "4.B", "10.A", "10.B", "11.A"],
+  "tldr": "Proposes an IoT-driven layered architecture for personalized banking using real-time contextual data from wearables, ATMs, and mobile devices with AI analytics for adaptive financial services.",
+  "problem_and_motivation": "Traditional banking relies on rigid product offerings and static personalization. IoT enables context-aware banking but faces challenges in data privacy, legacy system integration, and interoperability across fragmented device ecosystems.",
+  "approach": [
+    "Uses hybrid methodology combining qualitative synthesis of academic and industrial sources with systems architecture modeling.",
+    "Designs a 5-layer architecture: Perception (IoT sensors), Network (5G/WiFi), Data Processing (real-time analytics), Service (personalized offers), and Feedback Loop.",
+    "Defines personalization scoring equation PScore_i = sum(w_j * x_ij) for service matching.",
+    "Reviews IoT use cases across global banking institutions including smart ATMs, wearables, geofencing, and voice banking.",
+    "Evaluates ROI benefits, security challenges, and implementation barriers."
+  ],
+  "findings": [
+    "IoT in banking enables hyper-personalized services through real-time behavioral data from multiple touchpoints.",
+    "Key use cases include smart ATMs with biometrics, wearable-based payments, geofenced offers, and voice banking.",
+    "Data privacy, cybersecurity risks, and legacy system integration are primary adoption barriers.",
+    "Context-aware banking shifts from reactive to predictive service delivery.",
+    "ROI improvement through increased customer engagement and operational efficiency."
+  ],
+  "key_figures_tables": [
+    "Table 1: Summary of IoT use cases in global banking with example institutions.",
+    "Table 2: IoT technologies used for personalization in banking.",
+    "Table 3: Core components of the personalization framework."
+  ],
+  "key_equations": [
+    {"equation": "PScore_i = sum(w_j * x_ij)", "explanation": "Personalization score weighted by behavioral attributes."}
+  ],
+  "definitions": [
+    {"term": "IoT", "definition": "Internet of Things network of interconnected physical devices with sensors."},
+    {"term": "Context-aware banking", "definition": "Dynamic tailoring of services using real-time sensor data."},
+    {"term": "Personalization scoring", "definition": "Weighted calculation matching services to individual behavior profiles."}
+  ],
+  "citations": [
+    {"author": "Atzori et al.", "year": 2010, "page": 0, "paragraph": 0, "claim": "Described basic IoT architecture for large-scale applications.", "role": "context"},
+    {"author": "Gubbi et al.", "year": 2013, "page": 0, "paragraph": 0, "claim": "IoT systems require scalable cloud infrastructure for real-time operation.", "role": "context"},
+    {"author": "Perera et al.", "year": 2014, "page": 0, "paragraph": 0, "claim": "Defined context-aware personalization using sensor data.", "role": "methodology"},
+    {"author": "Lin et al.", "year": 2017, "page": 0, "paragraph": 0, "claim": "IoT enables analysis of behavioral patterns and geolocation data in finance.", "role": "context"},
+    {"author": "Zanella et al.", "year": 2014, "page": 0, "paragraph": 0, "claim": "UX layer of banking must be rethought for IoT.", "role": "context"},
+    {"author": "Islam et al.", "year": 2015, "page": 0, "paragraph": 0, "claim": "ML complements IoT for anomaly detection in banking.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Reviews IoT-enabled banking personalization landscape."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies fragmentation, privacy, and legacy integration barriers."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "high", "justification": "Dedicates section to data privacy and cybersecurity challenges."},
+      {"code": "10.B", "name": "User Trust in Personal Finance Systems", "relevance": "medium", "justification": "Discusses trust issues related to data usage transparency."},
+      {"code": "11.A", "name": "Engagement Dynamics in Personal Finance Applications", "relevance": "medium", "justification": "IoT-based personalization aims to increase engagement."}
+    ],
+    "contribution_to_field": "Proposes a conceptual layered architecture for IoT-driven personalized banking. Synthesizes IoT use cases across global financial institutions. Identifies key technical and regulatory barriers for IoT adoption in banking, including data governance and interoperability issues.",
+    "directly_justifies": [
+      "IoT enables shift from reactive to predictive personalized banking.",
+      "Data privacy and legacy integration are primary adoption barriers.",
+      "Personalization scoring can match services to individual behavior profiles."
+    ],
+    "limits": [
+      "Conceptual framework without empirical validation.",
+      "No specific algorithmic implementation details provided."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all topic domains (1.A-14.C). Assigned 4.A, 4.B, 10.A high relevance for system landscape, gaps, and privacy. Assigned 10.B and 11.A medium for trust and engagement. Rejected algorithmic topics (5.A-9.C) as the paper proposes conceptual architecture rather than specific algorithms."
+  },
+  "limitations": [
+    "Conceptual framework not empirically tested or deployed.",
+    "Lacks specific algorithmic implementation or performance metrics.",
+    "Template-like formatting suggests potential quality issues."
+  ],
+  "remember_this": [
+    "IoT enables hyper-personalized banking through real-time contextual data.",
+    "Data privacy and legacy integration are key adoption barriers.",
+    "Five-layer architecture spans perception to feedback loop.",
+    "Use cases include smart ATMs, wearables, and geofenced offers."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Garg et al-2023_marked.md",
+      "converted_at": "2026-07-22T13:24:25Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

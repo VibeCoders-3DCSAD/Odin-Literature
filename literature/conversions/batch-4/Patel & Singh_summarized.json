@@ -1,0 +1,130 @@
+{
+  "paper_id": "0bcb3107-a7f9-502b-b7b6-83b6c2349171",
+  "designation": "local-algorithm-specific",
+  "title": "A Machine Learning Approach to Personal Finance Management and Budget Optimization",
+  "authors": "International Conference; Multidisciplinary Perspectives; Advanced Computing",
+  "year": 2016,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.A",
+    "10.A",
+    "11.A",
+    "12.A",
+    "4.A",
+    "4.B",
+    "5.C",
+    "6.A",
+    "7.B"
+  ],
+  "tldr": "The emergence of digital financial services such as UPI, online banking, subscriptions, and digital wallets has led to an enormous amount of scattered financial data for an individual. Handling such scattered data manually is inefficient and hinders good financial awareness and decisions. It will serve as an intelligent financial management system that automatically manages expenses, budgets, and ",
+  "problem_and_motivation": "The emergence of digital financial services such as UPI, online banking, subscriptions, and digital wallets has led to an enormous amount of scattered financial data for an individual. Handling such scattered data manually is inefficient and hinders good financial awareness and decisions. It will serve as an intelligent financial management system that automatically manages expenses, budgets, and provides financial insights, leveraging advanced full-stack technology and artificial intelligence. ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "1.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: A Machine Learning Approach to Personal Finance Management and Budget Optimizati"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: A Machine Learning Approach to Personal Finance Management and Budget Optimizati",
+    "Year: 2016",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Patel & Singh_marked.md",
+      "converted_at": "2026-07-21T08:05:39Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

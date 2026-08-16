@@ -1,0 +1,107 @@
+{
+  "paper_id": "945e445a-b2bd-5513-baf2-113a1b44d65e",
+  "designation": "international",
+  "title": "A Systematic Literature Review on Personal Financial Management Practices: Budgeting, Investment, Debt, and Saving",
+  "authors": "Elliyana, E.; Maricar, R.; Toalib, R.",
+  "year": 2025,
+  "venue": "World Journal of Economics, Business and Management",
+  "odin_topics": [
+    "1.C",
+    "7.A",
+    "13.A",
+    "13.B"
+  ],
+  "tldr": "Synthesizes 47 studies on PFM finding financial literacy as pivotal for saving, investment, and debt management, with digital tools as significant enablers despite behavioral challenges.",
+  "problem_and_motivation": "PFM practices directly influence financial well-being, but behavioral and social factors continue to challenge the efficacy of financial education and digital tool adoption.",
+  "approach": [
+    "Systematic literature review of 47 peer-reviewed studies published 2018-2024.",
+    "Synthesizes findings across multiple countries on budgeting, investment, debt, and saving.",
+    "Analyzes financial literacy, digital tools, and behavioral/social factor roles."
+  ],
+  "findings": [
+    "Financial literacy enhances saving habits, responsible investment, and effective debt management.",
+    "Digital financial tools enable financial discipline especially among youth and urban consumers.",
+    "Behavioral factors like peer influence, impulsivity, and media exposure challenge financial education."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "PFM",
+      "definition": "Personal Financial Management encompassing budgeting, saving, investing, and debt handling."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Systematic review; citations too numerous to list individually.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Reviews financial behaviors across populations including youth and urban consumers."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Core focus on budgeting practices synthesized from 47 studies."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Reviews saving practices and determinants extensively."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Reviews debt management practices and financial literacy links."
+      }
+    ],
+    "contribution_to_field": "Consolidates diverse PFM literature into a multidimensional framework showing interplay of socioeconomic, psychological, technological, and institutional factors. Demonstrates digital tools complement but cannot replace financial literacy.",
+    "directly_justifies": [
+      "Financial literacy enhances saving habits and debt management.",
+      "Digital financial tools enable financial discipline among youth."
+    ],
+    "limits": [
+      "Review covers international studies, not specifically Philippine context.",
+      "Limited to studies published 2018-2024."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 7.A, 13.A, 13.B (high), 1.C (medium). Rejected algorithmic topics as this is a literature review."
+  },
+  "limitations": [
+    "Literature review limited to 47 studies.",
+    "Geographic coverage not exhaustive for Philippine-specific PFM research."
+  ],
+  "remember_this": [
+    "Financial literacy is pivotal for all PFM dimensions.",
+    "Digital tools enable financial discipline among youth.",
+    "Behavioral factors challenge financial education efficacy."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Elliyana et al_marked.md",
+      "converted_at": "2026-07-22T13:14:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

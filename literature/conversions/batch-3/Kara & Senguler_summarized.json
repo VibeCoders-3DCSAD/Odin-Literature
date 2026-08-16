@@ -1,0 +1,114 @@
+{
+  "paper_id": "10.1111/pbaf.70008",
+  "designation": "international",
+  "title": "A Comparative Analysis of Budget Forecasting Methods: A Systematic Literature Review Covering the 1983–2024 Period",
+  "authors": "Kara, B.; Senguler, H.",
+  "year": 2025,
+  "venue": "Public Budgeting & Finance",
+  "odin_topics": ["3.A", "3.B", "4.A", "4.B", "6.A", "6.B", "7.A", "12.A", "12.B"],
+  "tldr": "A systematic review of 69 peer-reviewed studies finds no universally superior budget forecasting method; performance depends on context, supporting a pluralistic approach over reliance on a single model.",
+  "problem_and_motivation": "The literature on budget forecasting presents a fragmented and heterogeneous assessment of method performance due to variations in datasets, time periods, and contexts. There is a need for a systematic evaluation to guide method selection for both academic researchers and practitioners. This study addresses this gap by providing a comprehensive comparative review over a four-decade period.",
+  "approach": [
+    "Constructed a dataset of 69 peer-reviewed studies that compare multiple budget forecasting methods against actual outcomes.",
+    "Standardized terminology for over 40 distinct methods (e.g., consolidating variants of ANNs under a single category).",
+    "Performed descriptive statistical analysis on method frequency, publication trends, geographic distribution, and metric usage.",
+    "Conducted trend analysis to examine the evolution of method popularity over the 1983-2024 period.",
+    "Applied network analysis using Gephi to map co-occurrences of methods, method-year trends, and method-metric relationships."
+  ],
+  "findings": [
+    "num: 43% of the reviewed studies focus on the United States, with developing economies substantially underrepresented.",
+    "num: MAPE (38 studies), RMSE (36 studies), and MAE (22 studies) dominate performance evaluation, while directional metrics like MPE are largely neglected.",
+    "Optimal forecasting method choice depends critically on contextual factors such as economic environment, data quality, and forecast horizon.",
+    "The literature evolved through four phases: basic statistical methods, diversification, machine learning, and deep learning.",
+    "Simple models like official forecasts, random walk, and regression remain relevant benchmarks that complex methods must consistently outperform.",
+    "Studies comparing 3-6 methods receive the highest average citations (approximately 26), indicating an optimal range for methodological diversity.",
+    "Machine learning and deep learning methods (e.g., ANN, LSTM) show strength in short-term forecasts but are constrained for long-term horizons due to instability and overfitting risks.",
+    "Traditional statistical methods like AR and MA are used for longer average forecast horizons (14.3 and 12 years), while ML/DL methods are used for shorter horizons (e.g., LSTM at 3.3 years).",
+    "The use of MAPE, RMSE, and MAE provides a common language for comparison but ignores the asymmetric costs of directional errors in a policy context.",
+    "Hybrid and ensemble approaches are emerging as a promising direction, combining strengths of different model families to yield more robust results."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Method evolution over time → Four-stage evolution from ARIMA to LSTM and hybrid models.",
+    "Figure 2: Method co-occurrence network → Traditional methods like ARIMA are frequently compared with ML methods like ANN and SVM.",
+    "Graph 1: Popularity trends of key methods → ARIMA and COF remain consistently popular benchmarks; ANN use increased since the 2010s.",
+    "Table 2: Training dataset characteristics → Most studies (17) use 11-15 years of data; 28 use quarterly data.",
+    "Graph 3: Average forecasting horizons → AR has the longest horizon (14.3 years); LSTM has the shortest (3.3 years).",
+    "Figure 3: Method-metric network → RMSE and MAPE are strongly connected to methods like ARIMA, ANN, and VAR.",
+    "Graph 4: Methods vs. citations → Studies comparing 3-6 methods achieve the highest academic impact."
+  ],
+  "key_equations": [
+    {"equation": "\\text{MAPE} = \\frac{100}{n} \\sum_{t=1}^{n} \\left| \\frac{A_t - F_t}{A_t} \\right|", "explanation": "Mean Absolute Percentage Error, most used metric."},
+    {"equation": "\\text{RMSE} = \\sqrt{\\frac{1}{n} \\sum_{t=1}^{n} (A_t - F_t)^2}", "explanation": "Root Mean Square Error, widely used to penalize large errors."}
+  ],
+  "definitions": [
+    {"term": "MAPE", "definition": "Mean Absolute Percentage Error."},
+    {"term": "RMSE", "definition": "Root Mean Square Error."},
+    {"term": "MAE", "definition": "Mean Absolute Error."},
+    {"term": "ARIMA", "definition": "Autoregressive Integrated Moving Average, a classic time series model."},
+    {"term": "ANN", "definition": "Artificial Neural Network, a machine learning method."},
+    {"term": "LSTM", "definition": "Long Short-Term Memory, a deep learning method for sequential data."},
+    {"term": "ML", "definition": "Machine Learning."},
+    {"term": "DL", "definition": "Deep Learning."},
+    {"term": "VAR", "definition": "Vector Autoregression, a multivariate time series model."},
+    {"term": "COF", "definition": "Official forecasts, often used as a benchmark."}
+  ],
+  "citations": [
+    {"author": "McDonald", "year": 2024, "page": 0, "paragraph": 7, "claim": "Ranked-choice voting highlighted 'Data and Methods' as a top research priority, calling for improved forecast accuracy.", "role": "context"},
+    {"author": "Downs", "year": 1983, "page": 0, "paragraph": 0, "claim": "Early studies were largely confined to the US using ARMA and ARIMA models.", "role": "baseline"},
+    {"author": "Krause", "year": 2007, "page": 0, "paragraph": 2, "claim": "Efficient allocation of public resources depends on robust budget forecasts.", "role": "context"},
+    {"author": "Leal", "year": 2008, "page": 0, "paragraph": 0, "claim": "Forecast accuracy shapes public perception of government fiscal policy effectiveness.", "role": "finding"},
+    {"author": "McNab", "year": 2005, "page": 0, "paragraph": 0, "claim": "Forecast accuracy contributes to transparency, accountability, and fiscal discipline.", "role": "context"},
+    {"author": "Ghysels", "year": 2015, "page": 0, "paragraph": 0, "claim": "MIDAS approach addresses frequency mismatch and performs well in budget forecasting.", "role": "methodology"},
+    {"author": "Yang", "year": 2023, "page": 0, "paragraph": 0, "claim": "LSTM and XGBoost are cutting-edge methods tested in recent comparative analyses.", "role": "methodology"},
+    {"author": "Cooksey", "year": 2020, "page": 0, "paragraph": 0, "claim": "Descriptive statistical analysis summarizes fundamental data characteristics.", "role": "methodology"},
+    {"author": "Li", "year": 2025, "page": 0, "paragraph": 0, "claim": "Trend analysis illustrates the evolution of research domains and methodological transformations.", "role": "methodology"},
+    {"author": "Campbell", "year": 2024, "page": 0, "paragraph": 0, "claim": "Network analysis offers insights into interactions among components of the literature.", "role": "methodology"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "3.A", "name": "Expense Categorization Frameworks", "relevance": "medium", "justification": "Discusses performance metrics (MAPE, RMSE, MAE) for evaluating forecast accuracy."},
+      {"code": "3.B", "name": "Expense Category Design Considerations", "relevance": "medium", "justification": "Evaluates how different error metrics (e.g., directional vs. magnitude) inform category design."},
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "medium", "justification": "Provides a comprehensive review of budget forecasting methods used in financial systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies underrepresentation of developing economies, metric hegemony, and neglect of directional errors."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Reviews a wide range of predictive models (ARIMA, VAR, ANN, LSTM, XGBoost) for budget forecasting."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "high", "justification": "Compares time series (ARIMA, VAR) and ML/DL methods (LSTM, ANN) for sequential data."},
+      {"code": "7.A", "name": "Budgeting Strategies as Domain Knowledge", "relevance": "medium", "justification": "Discusses the strategic role of budget forecasts in policy-making and fiscal management."},
+      {"code": "12.A", "name": "Evaluation Frameworks for Personal Finance Systems", "relevance": "high", "justification": "Systematically evaluates comparative studies using performance metrics and methodological diversity."},
+      {"code": "12.B", "name": "Evaluation of Algorithmic Modules", "relevance": "high", "justification": "Provides a comprehensive evaluation of various forecasting algorithms' comparative performance."}
+    ],
+    "contribution_to_field": "This paper provides a foundational systematic review that synthesizes four decades of comparative research on budget forecasting methods. It maps the methodological evolution from simple statistical models to advanced machine learning and deep learning techniques. The study identifies critical gaps, including the geographic concentration of research in the US and the hegemony of a narrow set of evaluation metrics. By advocating for a pluralistic, context-sensitive approach, it reframes the research agenda from seeking a universal best method to identifying the right model for specific conditions.",
+    "directly_justifies": [
+      "No single forecasting method is universally superior; optimal choice depends on context.",
+      "Developing economies remain substantially underrepresented in budget forecasting research.",
+      "MAPE, RMSE, and MAE dominate evaluation, while directional errors are largely neglected.",
+      "The field has evolved through four distinct phases from statistical models to deep learning."
+    ],
+    "limits": [
+      "The paper focuses exclusively on peer-reviewed literature, excluding institutional reports that may contain practical insights.",
+      "The analysis is descriptive and does not perform a quantitative meta-analysis to aggregate effect sizes across studies.",
+      "The 69 studies included vary widely in data quality and frequency, limiting direct comparability of performance claims."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper was found to have high relevance to domains 4.B (Limitations and Gaps), 6.A (Predictive Modeling), 6.B (Forecasting Algorithms), 12.A (Evaluation Frameworks), and 12.B (Algorithm Evaluation) because it directly reviews and compares forecasting methods and identifies gaps. Medium relevance was assigned to 3.A (Expense Categorization) and 3.B (Category Design) due to its focus on error metrics, and 4.A (Landscape) and 7.A (Budgeting Strategies) due to its comprehensive review and strategic context. Domains related to Filipino demographics (1.A, 1.B, 1.C), cultural practices (2.A, 2.B, 2.C, 2.D), user allocation (3.C), behavioral profiles (5.A, 5.B, 5.C), budget recommendation (7.B, 7.C, 7.D, 7.E), anomaly detection (8.A, 8.B, 8.C), mobile design (9.A, 9.B, 9.C), privacy (10.A, 10.B, 10.C), engagement (11.A, 11.B), goal management (13.A, 13.B, 13.C), synthetic data (14.A), and deployment (14.B, 14.C) were considered and rejected as the paper does not cover these specific financial behavioral or system design aspects. The paper's coverage is methodological and evaluative, focusing on forecasting techniques rather than individual financial behavior or system features."
+  },
+  "limitations": [
+    "The analysis is descriptive and does not perform a quantitative meta-analysis to aggregate effect sizes across studies [unacknowledged].",
+    "The 69 studies included vary widely in data quality and frequency, limiting direct comparability of performance claims.",
+    "The paper focuses exclusively on peer-reviewed literature, excluding institutional reports that may contain practical insights [unacknowledged]."
+  ],
+  "remember_this": [
+    "No single forecasting method is universally superior; choice depends on context.",
+    "MAPE, RMSE, and MAE dominate metric use, but directional errors are neglected.",
+    "43% of studies focus on the US; developing economies are underrepresented.",
+    "Studies comparing 3-6 methods receive the highest average citations (26).",
+    "Traditional methods (AR, MA) are used for longer horizons; ML/DL for shorter ones."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kara & Senguler_marked.md",
+      "converted_at": "2026-07-21T13:41:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

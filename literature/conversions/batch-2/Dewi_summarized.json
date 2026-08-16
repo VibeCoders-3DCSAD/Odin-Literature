@@ -1,0 +1,85 @@
+{
+  "paper_id": "10.52628/jefas.v29i1.1234",
+  "designation": "international",
+  "title": "The Influence of Financial Literacy on Gen Z's Savings Behavior: A Systematic Literature Review",
+  "authors": "Dewi, N. P.",
+  "year": 2024,
+  "venue": "Journal of Economics, Finance and Administrative Science",
+  "odin_topics": ["1.A", "1.B", "13.A"],
+  "tldr": "Systematic literature review of 38 papers examining how financial literacy influences savings behavior among Generation Z globally, finding that digital financial literacy is emerging as a distinct and stronger predictor than traditional financial literacy.",
+  "problem_and_motivation": "Generation Z faces a unique financial environment with digital-native behaviors, easy access to digital payments, and complex financial products. Understanding how financial literacy translates to savings behavior in this cohort is essential for designing effective PFMS.",
+  "approach": [
+    "Systematic literature review following PRISMA guidelines.",
+    "Search across Scopus, Web of Science, and Google Scholar.",
+    "Inclusion criteria: empirical studies (2015-2024) focused on Gen Z (born 1997-2012) savings behavior and financial literacy.",
+    "38 papers included from 412 initial records after screening.",
+    "Data extraction: sample characteristics, measurement instruments, key relationships, moderating/mediating variables.",
+    "Synthesis using thematic analysis to identify patterns across contexts.",
+    "Sub-group analysis by country income level and cultural dimension."
+  ],
+  "findings": [
+    "num: 76% of reviewed studies find a significant positive relationship between financial literacy and savings behavior.",
+    "Digital financial literacy (understanding of digital financial products, online security, digital payments) emerges as a distinct construct from traditional financial literacy.",
+    "Digital financial literacy shows stronger effect on Gen Z savings behavior (avg β=0.38) than traditional financial literacy (avg β=0.24).",
+    "Parental financial socialization is the strongest moderator (reported in 62% of studies).",
+    "Self-control and future orientation mediate the literacy-savings relationship.",
+    "Most studies conducted in developed economies (68%); Gen Z in developing countries underrepresented.",
+    "Behavioral interventions (nudges, automatic savings) are more effective for Gen Z than educational programs alone."
+  ],
+  "key_figures_tables": [
+    "Table 2: Summary of reviewed studies by country and methodology",
+    "Figure 3: Conceptual framework of financial literacy → savings behavior pathways",
+    "Table 4: Meta-analysis of effect sizes by literacy type and country income level"
+  ],
+  "key_equations": [{"equation": "None.", "explanation": ""}],
+  "definitions": [
+    {"term": "Digital financial literacy", "definition": "Understanding of digital financial products, online security, digital payments, and the ability to use digital financial tools effectively."},
+    {"term": "Gen Z", "definition": "Individuals born between 1997 and 2012, characterized as digital natives."}
+  ],
+  "citations": [
+    {"author": "Lusardi", "year": 2014, "page": 0, "paragraph": 0, "claim": "Financial literacy is a key determinant of financial well-being globally.", "role": "context"},
+    {"author": "Shim", "year": 2009, "page": 0, "paragraph": 0, "claim": "Parental financial socialization is the strongest predictor of young adults' financial behavior.", "role": "finding"},
+    {"author": "Morgan", "year": 2019, "page": 0, "paragraph": 0, "claim": "Digital financial literacy is positively associated with financial inclusion in developing economies.", "role": "finding"},
+    {"author": "Thaler", "year": 2009, "page": 0, "paragraph": 0, "claim": "Nudges and behavioral interventions can significantly improve savings outcomes.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "1.A", "name": "Filipino Young Professionals' Financial Literacy", "relevance": "high", "justification": "Reviews financial literacy among Gen Z globally, the cohort including Filipino young professionals."},
+      {"code": "1.B", "name": "Filipino Young Professionals' PF Behavior", "relevance": "high", "justification": "Core focus on savings behavior of Gen Z, directly relevant to understanding PF behavior."},
+      {"code": "13.A", "name": "Savings Goal Management in PFMS", "relevance": "high", "justification": "Central focus: savings behavior and its determinants among Gen Z."}
+    ],
+    "contribution_to_field": "Establishes that digital financial literacy is a distinct and stronger predictor of Gen Z savings behavior than traditional literacy, which has direct implications for PFMS feature design. The finding that behavioral interventions are more effective than education alone supports incorporating nudges and automatic savings features into PFMS. Highlights underrepresentation of developing country Gen Z populations in the literature.",
+    "directly_justifies": [
+      "Digital financial literacy is a stronger predictor of Gen Z savings than traditional financial literacy.",
+      "Behavioral interventions (nudges, auto-savings) are more effective than education alone for Gen Z.",
+      "Parental financial socialization moderates the literacy-savings relationship."
+    ],
+    "limits": [
+      "Review only; no primary empirical data. [acknowledged]",
+      "68% of reviewed studies from developed economies — limited generalizability to Philippines. [acknowledged]",
+      "Heterogeneity in literacy and savings measurement across studies limits synthesis. [acknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 1.A, 1.B, and 13.A were flagged as highly relevant because the review focuses on financial literacy and savings behavior of Gen Z. Domains 2-12, 14 were rejected as the review is focused on the literacy-savings relationship without addressing cultural specifics (beyond country income grouping), PFMS design, or ML approaches."
+  },
+  "limitations": [
+    "SLR only; no primary data. [acknowledged]",
+    "Overrepresentation of developed economies (68%) limits Philippine generalizability. [acknowledged]",
+    "Measurement heterogeneity across studies. [acknowledged]"
+  ],
+  "remember_this": [
+    "76% of studies find significant positive literacy-savings relationship for Gen Z.",
+    "Digital financial literacy (β=0.38) > traditional financial literacy (β=0.24) in effect size.",
+    "Behavioral interventions (nudges, auto-savings) more effective than education for Gen Z.",
+    "Parental socialization is the strongest moderator.",
+    "Developing country Gen Z is underrepresented in the literature."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:03:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Dewi_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

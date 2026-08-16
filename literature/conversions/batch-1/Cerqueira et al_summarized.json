@@ -1,0 +1,128 @@
+{
+  "paper_id": "10.1145/3770855.3819070",
+  "designation": "international-algorithm-specific",
+  "title": "A Framework for Evaluating and Benchmarking Concept Drift Detection Methods",
+  "authors": "Cerqueira, V.; Gomes, H.M.; Heyden, M.; Pfahringer, B.; Bifet, A.",
+  "year": 2026,
+  "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+  "odin_topics": [
+    "None"
+  ],
+  "tldr": "A unified benchmarking framework for concept drift detection in data streams introduces controlled drift simulation on real datasets, timing-aware evaluation metrics, and leave-one-dataset-out hyperparameter optimization.",
+  "problem_and_motivation": "Concept drift detection methods lack unified evaluation practices, with studies relying on oversimplified synthetic data, incompatible metrics, and opaque hyperparameter selection, making fair comparisons unreliable.",
+  "approach": [
+    "A drift simulation framework injects controlled distributional changes into 7 real-world datasets via Monte Carlo trials.",
+    "Four drift types simulated: class prior, class label swap, feature permutation, and feature filtering.",
+    "An acceptable detection window defines true positives, false negatives, and false positives for timing-aware evaluation.",
+    "New evaluation metrics include F1 detection score, normalized detection time (NDT), episode recall, alarm rate, and false alarm rate.",
+    "Leave-one-dataset-out cross-validation protocol optimizes detector hyperparameters on held-out datasets.",
+    "14 drift detection methods benchmarked using a Hoeffding Tree classifier within CapyMOA Python library."
+  ],
+  "findings": [
+    "SEED and STEPD exhibit the most consistent performance across all drift types and abruptness conditions.",
+    "Gradual drifts are systematically harder to detect than abrupt ones, with most detectors showing lower median F1 scores.",
+    "Unsupervised detectors ABCD(X) and STUDD perform strongly on feature-space drifts but poorly on label-based changes.",
+    "PH and EWMA consistently rank among the worst performers across nearly all scenarios.",
+    "SEED achieves the best F1 rank while maintaining a moderate false alarm rate, making it the most balanced detector overall.",
+    "The relative ranking of detectors is largely preserved across five different classifiers, confirming results are not learner-specific.",
+    "Hyperparameter optimization improves median F1 for most detectors except SEED."
+  ],
+  "citations": [
+    {
+      "author": "Gama",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A comprehensive survey on concept drift adaptation covering detection, prediction, and handling strategies.",
+      "role": "context"
+    },
+    {
+      "author": "Bifet",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed MTFA, MDT, and MDR as standard metrics for supervised evaluation of drift detectors.",
+      "role": "baseline"
+    },
+    {
+      "author": "Bifet",
+      "year": 2007,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced ADWIN, an adaptive windowing method that detects changes in distributions mean.",
+      "role": "methodology"
+    },
+    {
+      "author": "Gama",
+      "year": 2004,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced DDM, a control chart-based approach that monitors error rate using binomial confidence bounds.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cerqueira",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced STUDD, a student-teacher method for unsupervised concept drift detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Huang",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced SEED, a volatility-shift detector for data streams based on variance monitoring.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "No topic codes from the taxonomy apply; the paper addresses data stream drift detection, not personal finance systems."
+      }
+    ],
+    "contribution_to_field": "Contributes a unified benchmarking framework for evaluating concept drift detection methods in data streams. Introduces drift simulation framework, timing-aware evaluation metrics, and leave-one-dataset-out hyperparameter optimization protocol.",
+    "directly_justifies": [
+      "SEED, STEPD, and ABCD consistently outperform other detectors across distinct drift types and abruptness conditions.",
+      "Gradual drifts are systematically harder to detect than abrupt ones.",
+      "Hyperparameter optimization using leave-one-dataset-out yields improvements for most detectors.",
+      "Unsupervised detectors excel on feature-space drifts but fail on label-based distribution changes.",
+      "The relative ranking of detectors is largely preserved across five different classifiers."
+    ],
+    "limits": [
+      "Limited to one classifier (Hoeffding Tree) in main experiments, though supplementary tests reported.",
+      "Only four drift types are simulated, excluding incremental drift, noise injection, etc.",
+      "Random shuffling removes inherent temporal structure from real-world data.",
+      "Only 7 real-world datasets used.",
+      "The prequential workflow assumes immediate label availability, which is unrealistic in many domains."
+    ]
+  },
+  "limitations": [
+    "Limited to one classifier (Hoeffding Tree) in main experiments, though supplementary tests on four additional classifiers are reported.",
+    "Only four drift types are simulated, excluding incremental drift, noise injection, heteroskedasticity, and temporal dependencies.",
+    "Random shuffling removes inherent temporal structure from real-world data to isolate controlled drift injection.",
+    "Only 7 real-world datasets used, which may not represent the full diversity of stream dynamics.",
+    "The prequential workflow assumes immediate label availability, which is unrealistic in many real-world domains with verification delay."
+  ],
+  "remember_this": [
+    "SEED and STEPD are the most consistent drift detectors across all drift types and abruptness conditions.",
+    "Gradual drifts are systematically harder to detect than abrupt ones for nearly all methods.",
+    "14 drift detection methods benchmarked across 7 real-world datasets and 4 drift types.",
+    "Leave-one-dataset-out hyperparameter optimization improves most detectors over default configurations.",
+    "Unsupervised detectors excel on feature-space drifts but fail on label-based distribution changes."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cerqueira et al_marked.md",
+      "converted_at": "2026-07-22T12:43:19Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

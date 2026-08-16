@@ -1,0 +1,158 @@
+{
+  "paper_id": "10.3390/en16155809",
+  "designation": "international-algorithm-specific",
+  "title": "Review of Family-Level Short-Term Load Forecasting and Its Application in Household Energy Management System",
+  "authors": "Ma, P.; Cui, S.; Chen, M.; Zhou, S.; Wang, K.",
+  "year": 2023,
+  "venue": "Energies",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "3.A",
+    "7.A",
+    "7.B"
+  ],
+  "tldr": "A comprehensive review of deep learning and probabilistic methods for short-term household load forecasting, emphasizing their integration into home energy management systems for improved scheduling and efficiency.",
+  "problem_and_motivation": "Individual household electricity consumption is highly variable due to human behavior and weather, making accurate short-term load forecasting more challenging than at the system level. This variability hinders the effectiveness of home energy management systems (HEMS) that depend on reliable load predictions for optimal scheduling. There is a need to synthesize current methods and identify future research directions for improving forecasting accuracy and practical feasibility.",
+  "approach": [
+    "The paper reviews the state-of-the-art in household-level STLF, focusing on deep learning algorithms like RNN, LSTM, and CNN.",
+    "It analyzes improvements in forecasting through feature extraction techniques (e.g., DWT, PCA) and adaptive online learning frameworks.",
+    "The paper explores probabilistic forecasting methods to quantify uncertainty in load predictions for use in stochastic optimization.",
+    "It investigates bottom-up approaches using appliance-level data and discusses the challenges of ultra-short-term (hourly) forecasting.",
+    "The review connects forecasting techniques to their application within HEMS for appliance scheduling and demand response."
+  ],
+  "findings": [
+    "num: The CNNGRU attention-based model achieved 92.06% accuracy in small-range load prediction and reduced prediction time by 75%.",
+    "num: The SVR-LSTM model achieved the highest correlation coefficient (R = 0.9901) for short-term load prediction in a microgrid.",
+    "num: Dimensionality reduction using PCA on weather data yielded a cumulative contribution rate of 93.93% with only three variables.",
+    "Bottom-up approaches that forecast appliance-level load first can improve overall household prediction accuracy over direct forecasting.",
+    "Data-driven models for ultra-short-term load forecasting often predict consumption trends accurately but miss peak consumption values.",
+    "Combining probabilistic forecasting with deep learning is a promising direction to capture both forecasting accuracy and uncertainty."
+  ],
+  "key_figures_tables": [
+    "Figure 1: LSTM block and unrolled sequential architecture → Shows the memory and gating mechanisms for time-series learning.",
+    "Table 1: Comparison of forecasting models → Summarizes advantages, shortcomings, and applications of classical, LSTM, and CNN models.",
+    "Figure 3: Weekly washing machine load profiles → Illustrates the variability in single-appliance usage patterns across days.",
+    "Figure 5: Probabilistic and conditional probabilistic forecasting frameworks → Depicts how uncertainty is captured in load predictions.",
+    "Figure 7: Load predictions for different appliances → Demonstrates that data-driven models miss consumption peaks in appliance-level forecasting."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    { "term": "HEMS", "definition": "Home Energy Management System" },
+    { "term": "STLF", "definition": "Short-Term Load Forecasting" },
+    { "term": "LSTM", "definition": "Long Short-Term Memory" },
+    { "term": "CNN", "definition": "Convolutional Neural Network" },
+    { "term": "PLF", "definition": "Probabilistic Load Forecasting" },
+    { "term": "NILM", "definition": "Non-Intrusive Load Monitoring" }
+  ],
+  "citations": [
+    {
+      "author": "Lusis",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Short-term load forecasting is important for energy system planning.",
+      "role": "context"
+    },
+    {
+      "author": "Zheng",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Predicting appliance-level load first and then aggregating improves overall household prediction accuracy.",
+      "role": "finding"
+    },
+    {
+      "author": "Moradzadeh",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The SVR-LSTM model achieved a high correlation coefficient (R=0.9901) for microgrid short-term load prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Cheng",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "A CNNGRU attention-based model achieved 92.06% accuracy in small-range load prediction.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Focuses on predictive models for household-level energy load forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Reviews LSTM, CNN, and hybrid models for time-series forecasting."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Discusses bottom-up approaches that categorize loads by appliance type."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Connects forecasting to HEMS scheduling and demand response."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Provides a high-level analogy for energy scheduling based on forecasts."
+      }
+    ],
+    "contribution_to_field": "This paper systematically reviews and synthesizes deep learning and probabilistic forecasting methods for residential short-term load forecasting. It provides a comparative analysis of model architectures, feature extraction techniques, and adaptive learning strategies. The review identifies key challenges, such as data quality, model generalization, and uncertainty quantification, while proposing future research directions. It also establishes a critical link between forecasting accuracy and the practical performance of home energy management systems.",
+    "directly_justifies": [
+      "Deep learning models like LSTM and CNN are the current state-of-the-art for household load forecasting.",
+      "Hybrid models combining multiple neural network architectures improve prediction accuracy.",
+      "Probabilistic forecasting methods are needed to model uncertainty in load predictions for HEMS scheduling.",
+      "Bottom-up approaches using appliance-level data can enhance forecasting performance.",
+      "Accurate STLF is essential for effective HEMS decision-making and cost reduction."
+    ],
+    "limits": [
+      "The paper is a review and does not provide a novel algorithmic contribution for personal finance applications.",
+      "Specific challenges of Filipino young professionals or culturally specific financial practices are not addressed.",
+      "The focus is on energy load forecasting, not on broader financial behavior or spending patterns."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all 18 topic domains was performed. Domains related to predictive modeling and forecasting algorithms (6.A, 6.B) were flagged as having high relevance because the paper's core content is a review of deep learning and probabilistic methods for time-series forecasting. The topic of expense categorization (3.A) was assigned medium relevance due to the paper's discussion of bottom-up forecasting frameworks that categorize and aggregate loads by appliance type, analogous to expense categories. Budgeting strategies (7.A) and budget recommendation (7.B) were considered low relevance, as the paper connects forecasting to HEMS scheduling and energy management, which can be seen as a budgeting function, but the connection is indirect. The remaining topics (e.g., Filipino young professionals, seasonal spending patterns, financial profiles, anomaly detection, engagement, etc.) were rejected as they pertain to personal finance, cultural, and behavioral domains not covered by this engineering-focused review paper. The overall topical coverage is primarily algorithmic and predictive, with secondary relevance to resource management."
+  },
+  "limitations": [
+    "The paper is a review and does not present new empirical data or a novel model. [unacknowledged]",
+    "Data quality, including missing values and noise, is identified as a significant challenge for load forecasting.",
+    "Deep learning models are prone to overfitting, especially with small datasets, limiting their generalization.",
+    "Real-time performance and handling of uncertainties from weather and user behavior remain difficult.",
+    "The interpretability of deep learning models for load forecasting is rarely addressed, limiting user trust."
+  ],
+  "remember_this": [
+    "Short-term household load forecasting is critical for effective home energy management.",
+    "LSTM and CNN are key deep learning methods for time-series load prediction.",
+    "Hybrid models and probabilistic forecasting are promising future research directions.",
+    "Bottom-up, appliance-level forecasting can improve accuracy over direct household prediction.",
+    "Model generalization, real-time performance, and interpretability remain key challenges."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:30:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Ma P. et al_marked.md",
+      "converted_at": "2026-07-21T14:08:47Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "paper_id": "10.64753/jcasc.v10i3.2426",
+  "designation": "local",
+  "title": "Cultural Factors Influencing Personal Finance Management Among Filipinos",
+  "authors": "Cultural Analysis; Social Change",
+  "year": 2014,
+  "venue": "Journal of Cultural Analysis and Social Change",
+  "odin_topics": [
+    "1.C",
+    "12.A",
+    "13.B",
+    "2.A",
+    "4.B"
+  ],
+  "tldr": "This study examined the financial management practices, challenges, and coping mechanisms of average-earning households in Bontoc, Mountain Province, within the context of cultural traditions and socioeconomic realities. Guided by a qualitative design, the research gathered insights from participants belonging to households across different barangays of Bontoc and applied thematic analysis support",
+  "problem_and_motivation": "This study examined the financial management practices, challenges, and coping mechanisms of average-earning households in Bontoc, Mountain Province, within the context of cultural traditions and socioeconomic realities. Guided by a qualitative design, the research gathered insights from participants belonging to households across different barangays of Bontoc and applied thematic analysis supported by relevant financial management theories. Findings revealed that households face persistent fina",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "2.A",
+        "name": "2.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Cultural Factors Influencing Personal Finance Management Among Filipinos"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Cultural Factors Influencing Personal Finance Management Among Filipinos",
+    "Year: 2014",
+    "Designation: local"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:37Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rosario_marked.md",
+      "converted_at": "2026-07-21T08:22:13Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "paper_id": "10.5555/ujer.2023.02.02.131",
+  "designation": "local",
+  "title": "THE STORY BEHIND \"LONDON\" (LOAN DITO, LOAN DOON): EXPLORING TEACHERS' EXPENDITURE PATTERNS AND DEBT PROFILE",
+  "authors": "Mencias-Tabernilla, M. C.",
+  "year": 2023,
+  "venue": "Universal Journal of Educational Research",
+  "odin_topics": ["1.B", "1.C", "2.A", "2.D", "3.A", "5.A", "5.B", "5.C", "7.A", "7.E", "13.B"],
+  "tldr": "Examines socio-demographic and debt profiles of public-school teachers in Aklan, Philippines, identifying expenditure patterns, debt sources, and reasons for indebtedness.",
+  "problem_and_motivation": "Public school teachers in the Philippines face significant financial strain, with many accumulating substantial debt through automatic payroll deductions and informal lenders. The extent of their expenditure patterns and the socio-demographic factors influencing debt levels are not well understood.",
+  "approach": [
+    "Descriptive correlational research design with a researcher-made questionnaire.",
+    "Sample of 276 permanent public-school teachers from the Schools Division of Aklan.",
+    "Data collected on socio-demographics, expenditure patterns, and debt profiles.",
+    "Analysis using SPSS version 26 with descriptive statistics, t-tests, and F-tests.",
+    "Used Theory of Reasoned Action and Theory of Planned Behavior as a theoretical lens."
+  ],
+  "findings": [
+    "Mean monthly take-home pay was Php16,184.54, only more than half of gross income.",
+    "Mean monthly family expenditure was Php22,265.00, with many respondents having no savings.",
+    "num: 57.25% of teachers reported having no savings at all.",
+    "Higher household size and family income were significantly associated with higher expenditure.",
+    "Older, married teachers with higher positions and longer tenure had higher cumulative debts.",
+    "num: Teachers aged 46+ had a mean cumulative debt of Php8,218.47 vs Php5,868.31 for those 30 and younger.",
+    "num: Teachers with 21+ years of service had mean debt of Php10,908.68 vs Php8,041.60 for those under 10 years.",
+    "Primary reasons for debt: education/professional growth (147 teachers) and illness/death (143 teachers).",
+    "Most cited perceived solution to debt: sound financial management (239 teachers)."
+  ],
+  "key_figures_tables": [
+    "Table 1: Detailed breakdown of average monthly expenditures by category → Mean expenditure Php22,265, food is largest category at 25.26%.",
+    "Table 2: Total monthly expenditure and savings distribution → Majority have no savings; mean savings only Php1,200.",
+    "Table 3: Cumulative debt profile by loan type → Bank loans have highest mean balance (Php156,117), followed by GSIS (Php125,617).",
+    "Table 4: Expenditure differences by socio-demographic factors → Significant differences by age, household size, income, and spouse occupation.",
+    "Table 5: Debt differences by socio-demographic factors → Significant differences by age, civil status, household size, and tenure.",
+    "Table 6: Perceived reasons and avoidance strategies for debt → Education and sound financial management are top responses."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "APDS",
+      "definition": "Automatic Payroll Deduction System for loan payments."
+    },
+    {
+      "term": "GSIS",
+      "definition": "Government Service Insurance System, a Philippine state-owned insurance corporation."
+    },
+    {
+      "term": "NTHP",
+      "definition": "Net Take Home Pay, the minimum amount a teacher must receive after deductions."
+    },
+    {
+      "term": "PERA",
+      "definition": "Personnel Economic Relief Allowance, a monthly allowance for government employees."
+    },
+    {
+      "term": "TRA",
+      "definition": "Theory of Reasoned Action, a model for predicting behavioral intentions."
+    },
+    {
+      "term": "TPB",
+      "definition": "Theory of Planned Behavior, an extension of TRA that includes perceived behavioral control."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Thompson",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Teachers around the world are overworked, underpaid, and undervalued.",
+      "role": "context"
+    },
+    {
+      "author": "Ferrer",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Indebtedness among public school teachers has long plagued the Philippine education system.",
+      "role": "context"
+    },
+    {
+      "author": "Reysio-Cruz",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Public school teachers owe at least P319 billion in combined debt.",
+      "role": "context"
+    },
+    {
+      "author": "Ajzen",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Intention is determined by attitude, subjective norms, and perceived behavioral control.",
+      "role": "methodology"
+    },
+    {
+      "author": "Nie",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Younger age groups may have higher expenditures on education, communication, and leisure.",
+      "role": "finding"
+    },
+    {
+      "author": "Casingal",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Food was the top expenditure source, followed by bills and house renovation.",
+      "role": "context"
+    },
+    {
+      "author": "Sumangil",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "New minimum wage for domestic workers in Region 12 is P3,500-4,500 per month.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Directly details income, take-home pay, and family income of teachers."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Analyzes spending patterns, savings, and debt accumulation behaviors."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Discusses practices like pawning, 'loan sharks', and support for extended family."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and 'Occasions'",
+        "relevance": "medium",
+        "justification": "Lists celebrations and occasions as a reason for debt accumulation."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Provides a detailed categorization of teacher expenditures (food, housing, bills, etc.)."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Identifies behavioral patterns like 'hand-to-mouth' spending and debt-driven lifestyles."
+      },
+      {
+        "code": "5.B",
+        "name": "Profile Dynamics and the Cold-Start Problem",
+        "relevance": "low",
+        "justification": "Provides baseline descriptive data that could inform profiling, but not dynamic modeling."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Discusses perceived ways to avoid debt, including budgeting and financial management."
+      },
+      {
+        "code": "7.E",
+        "name": "Onboarding and Cold-Start for Budget Recommendation",
+        "relevance": "contextual",
+        "justification": "Descriptive data could inform initial profiles for budget recommendations."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Core focus is on the debt profile, sources, and management of teachers."
+      }
+    ],
+    "contribution_to_field": "This paper provides a detailed empirical account of the financial realities of public school teachers in a specific Philippine province. It contributes to the understanding of the link between socio-demographic factors, expenditure patterns, and debt accumulation among a professional sector known for its financial vulnerability. The study validates the application of behavioral theories like TRA and TPB in explaining debt behavior in a developing country context.",
+    "directly_justifies": [
+      "Higher household size and family income are significantly associated with higher expenditure.",
+      "Older, married teachers with higher positions and longer tenure have higher cumulative debts.",
+      "Primary reasons for debt are education/professional growth and illness/death.",
+      "57.25% of teachers reported having no savings at all.",
+      "Sound financial management is perceived as the top way to avoid debt."
+    ],
+    "limits": [
+      "Sample is limited to one division (Aklan), limiting generalizability to all Filipino teachers.",
+      "Self-reported data may be subject to social desirability bias and inaccuracies in debt reporting.",
+      "The study is correlational and cannot establish causality between socio-demographic factors and debt.",
+      "Focuses on descriptive patterns, not on predictive or algorithmic modeling approaches."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. The paper directly addresses financial structure (1.B) and behavior (1.C) through detailed income and expenditure data. Culturally specific practices (2.A) and spending cycles (2.D) are evident in discussions of pawning, 'loan sharks', and celebrations. The detailed expenditure breakdown maps to category frameworks (3.A). While not algorithmic, it provides baseline behavioral profiles (5.A, 5.B) and contextual information for budgeting (7.A, 7.E) and debt management (13.B). Topics related to predictive modeling (6.A, 6.B), anomaly detection (8.A-C), mobile design (9.A-C), privacy (10.A-C), engagement (11.A-B), evaluation (12.A-C), synthetic data (14.A), and ML deployment (14.B-C) were considered and rejected as the paper does not address these computational or system-design areas. Borderline cases like topic 5.C (classification approaches) and 7.C (optimization) were rejected because the paper does not develop or apply formal classification or optimization techniques; it only identifies categories and relationships. The overall coverage is primarily descriptive and sociological, centered on financial behavior and debt."
+  },
+  "limitations": [
+    "Sample limited to one province (Aklan), limiting generalizability.",
+    "Self-reported data subject to recall and social desirability bias.",
+    "Correlational design cannot establish causation.",
+    "Does not track debt accumulation or expenditure over time. [unacknowledged]",
+    "Potential sample bias as teachers who refused to reveal debts were excluded. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Mean monthly take-home pay was Php16,184.54, more than half of gross income.",
+    "Over 57% of teachers had no monthly savings.",
+    "Higher household size and income significantly increased expenditure.",
+    "Top reasons for debt were education and health-related expenses.",
+    "Sound financial management was the most cited way to avoid debt."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mencias-Tabernilla_marked.md",
+      "converted_at": "2026-07-21T14:14:05Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "paper_id": "10.36227/techrxiv.173091273.31877417/v1",
+  "designation": "local-algorithm-specific",
+  "title": "Pitik: A Cebuano-Binisaya Intent-Based Chatbot for Cardiovascular Disease Patient Profiling and Risk Factor Recommendations",
+  "authors": "Cedeno, J.G.; Manteza, A.E.; Nacar, N.C.; Umbukan, M.P.; Muana, C.G.; Vasay, M.J.; Benablo, C.I.P.; Adlaon, K.M.M.",
+  "year": 2024,
+  "venue": "TechRxiv",
+  "odin_topics": [
+    "None"
+  ],
+  "tldr": "Pitik is a Cebuano-Binisaya intent-based chatbot developed to profile cardiovascular disease patients and assess risk factors using Gricean Maxims for communication validation.",
+  "problem_and_motivation": "Cardiovascular diseases are the leading cause of death in the Philippines, yet patient profiling in rural areas remains manual and relies on non-standardized records. No Cebuano-Binisaya healthcare chatbots or datasets exist.",
+  "approach": [
+    "Built a schema-guided dialogue dataset from 100 Cebuano-Binisaya-speaking participants.",
+    "Used Google DialogFlow as the conversational platform with webhook integration.",
+    "Applied Gricean Maxims (quantity, quality, relation, manner) as the framework for evaluating conversational acceptability.",
+    "Developed Pre-Intent and Post-Intent Matching algorithms within a Diag-Ex framework across three software iterations.",
+    "Trained and compared Naive Bayes, SVM, MLP, and RNN classifiers for intent recognition.",
+    "Evaluated system quality using Analytic Hierarchy Process (AHP) with Performance, Humanness, and Accessibility criteria.",
+    "Computed cardiovascular risk using the Framingham formula."
+  ],
+  "findings": [
+    "num: SVM achieved 73% accuracy in Smoking/Alcohol classification, outperforming NB (68%), MLP (68%), and RNN (60%).",
+    "num: Naive Bayes and SVM both achieved approximately 70% accuracy in Diet/Exercise classification.",
+    "num: Accessibility improved from 22% to 96% across iterations through suggestion chips and tooltips.",
+    "num: Performance improved from 65% to 79% in the third iteration with Naive Bayes post-intent matching.",
+    "num: Gricean Maxim violations decreased significantly from second to third iteration across all four maxims.",
+    "RNN consistently underperformed across both classification domains, ranging from 57% to 61% across metrics.",
+    "AHP analysis weighted Performance at 0.790, Accessibility at 0.133, and Humanness at 0.077."
+  ],
+  "citations": [
+    {
+      "author": "Cacciata",
+      "year": 2021,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "CVDs remain the leading cause of mortality in the Philippines, accounting for approximately 20% of all deaths.",
+      "role": "context"
+    },
+    {
+      "author": "Reyes",
+      "year": 2023,
+      "page": 2,
+      "paragraph": 0,
+      "claim": "Healthcare professionals conduct community outreach programs in rural and underserved areas.",
+      "role": "context"
+    },
+    {
+      "author": "Grice",
+      "year": 1975,
+      "page": 4,
+      "paragraph": 0,
+      "claim": "Four conversational maxims explain how listeners interpret utterances.",
+      "role": "methodology"
+    },
+    {
+      "author": "D Agostino",
+      "year": 2008,
+      "page": 6,
+      "paragraph": 0,
+      "claim": "Framingham formula computes cardiovascular risk factors using age, cholesterol, blood pressure, smoking, and diabetes.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "None",
+        "name": "None",
+        "relevance": "contextual",
+        "justification": "Paper addresses healthcare chatbot development and NLP, not personal finance domains."
+      }
+    ],
+    "contribution_to_field": "Contributes to conversational AI applied to healthcare by developing a Cebuano-Binisaya intent-based chatbot for cardiovascular disease patient profiling. Introduces the first schema-guided dialogue dataset tailored to a Philippine regional language for healthcare.",
+    "directly_justifies": [
+      "No topics from the personal finance taxonomy are directly addressed by this paper.",
+      "The ML classifier comparison is tangentially relevant to predictive modeling but applied to healthcare.",
+      "The AHP evaluation methodology is transferable but used to evaluate chatbot quality, not personal finance."
+    ],
+    "limits": [
+      "The paper addresses healthcare informatics and NLP, not personal finance.",
+      "The study was not conducted in a financial context.",
+      "The ML algorithms compared are applied to a narrow intent-classification domain, not financial forecasting."
+    ]
+  },
+  "limitations": [
+    "Study was limited to 100 participants not representative of the broader Cebuano-Binisaya population.",
+    "No peer review as this is a TechRxiv preprint.",
+    "Classification models were tested on only 40 records per domain, a very small evaluation set.",
+    "Paper does not address long-term deployment or real-world clinical validation."
+  ],
+  "remember_this": [
+    "Pitik is a Cebuano-Binisaya chatbot for cardiovascular disease patient profiling and risk assessment.",
+    "SVM achieved the highest accuracy at 73% for Smoking/Alcohol intent classification among four models.",
+    "Accessibility improved from 22% to 96% across iterations through suggestion chips and tooltips.",
+    "The paper uses Gricean Maxims as a framework to evaluate chatbot conversational quality.",
+    "No digitized Cebuano-Binisaya healthcare dataset previously existed for this domain."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Cedeno et al_marked.md",
+      "converted_at": "2026-07-22T12:43:09Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

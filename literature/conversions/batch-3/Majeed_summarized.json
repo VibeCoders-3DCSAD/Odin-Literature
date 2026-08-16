@@ -1,0 +1,173 @@
+{
+  "paper_id": "10.21276/ierj24012317973305",
+  "designation": "local",
+  "title": "Spending Patterns and Financial Risks Among 'Buy Now, Pay Later' (BNPL) Consumers",
+  "authors": "Majeed, K.",
+  "year": 2025,
+  "venue": "Central Philippine University",
+  "odin_topics": ["1.C", "2.A", "2.D", "3.A", "5.A", "7.A", "10.A", "11.A"],
+  "tldr": "BNPL consumers in Iloilo City show frequent purchases and high unplanned buying, with debt accumulation as the top perceived financial risk, while spending patterns differ by sex and civil status.",
+  "problem_and_motivation": "The rapid growth of Buy Now, Pay Later (BNPL) services in the Philippines presents potential risks to consumer financial health, yet empirical research on the specific spending patterns and perceived financial risks among Filipino BNPL users remains limited. This gap is critical for understanding how BNPL adoption may contribute to over-indebtedness and financial instability among young professionals and other demographic groups.",
+  "approach": [
+    "A survey-correlational research design was used with 214 BNPL consumers in Iloilo City selected through convenience sampling.",
+    "Data collection used a structured questionnaire measuring spending patterns (frequency, unplanned purchases, essential vs. non-essential items) and perceived financial risks (debt accumulation, late fees/penalties, financial instability).",
+    "Descriptive statistics included frequency counts, percentages, means, and standard deviations.",
+    "Inferential statistics employed Mann-Whitney U tests, Kruskal-Wallis H tests, and Spearman's Rho at a 0.05 significance level.",
+    "No algorithmic or predictive modeling techniques were applied; the study is purely descriptive and correlational."
+  ],
+  "findings": [
+    "num: BNPL consumers exhibited frequent purchasing behavior, a high tendency for unplanned purchases, and often prioritized essential items.",
+    "num: Perceived financial risk in terms of debt accumulation was rated high (mean > 3.5 on a 5-point scale, inferred from description).",
+    "num: Concerns about late fees/penalties and financial instability were both perceived as moderate.",
+    "Spending patterns differed significantly by sex, with males reporting higher frequent spending.",
+    "Single consumers showed significantly higher unplanned purchases and more frequent buying of non-essential items.",
+    "Perceived financial risks differed significantly by civil status and educational attainment, with single individuals and high school graduates reporting higher perceived risks.",
+    "A significant positive relationship was found between consumer spending patterns and perceived financial risks.",
+    "Males reported higher frequency of BNPL purchases compared to females."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "BNPL",
+      "definition": "Buy Now, Pay Later, a short-term financing option allowing consumers to purchase items and pay in installments."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Kumar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Examines risky indebtedness, impulse buying, and perceived risk in BNPL adoption.",
+      "role": "context"
+    },
+    {
+      "author": "Blue",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explores young adults' experiences with BNPL services and their spending behaviors.",
+      "role": "context"
+    },
+    {
+      "author": "Cornelli",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Provides a cross-country analysis of BNPL usage and its economic implications.",
+      "role": "context"
+    },
+    {
+      "author": "Powell",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Links responsible financial behaviors to financial wellbeing in the BNPL context.",
+      "role": "context"
+    },
+    {
+      "author": "Addo",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Shows how financial perceptions and behaviors vary across marital status.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Directly examines BNPL spending patterns and perceived financial risks of consumers in Iloilo City."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Focuses on BNPL usage in a Filipino urban context (Iloilo City), capturing local consumer behavior."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and 'Occasions'",
+        "relevance": "low",
+        "justification": "Discusses purchase of essential vs. non-essential items, which may relate to seasonal or occasion-based spending but does not explicitly address cycles."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "low",
+        "justification": "Uses a basic categorization of purchases into essential and non-essential items for analysis."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Identifies behavioral tendencies (frequent purchasing, unplanned buying) that could inform behavioral profiling."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "The study touches on budget constraints as a reason for limiting non-essential purchases, but does not develop budgeting strategies."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions consumer protection frameworks but does not analyze data privacy or security issues."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "BNPL usage implies engagement with financial apps, but the study does not examine engagement dynamics."
+      }
+    ],
+    "contribution_to_field": "This study contributes empirical evidence on BNPL consumer behavior in a specific Philippine urban context, filling a geographic gap in the literature. It provides a descriptive profile of spending patterns and perceived financial risks among BNPL users. The study also identifies demographic differences (sex, civil status, educational attainment) in BNPL-related behaviors and perceptions. Its findings offer baseline data for future research on financial behavior and risk perception in the Philippines. The correlational analysis establishes an association between spending patterns and perceived financial risk, generating hypotheses for causal investigation.",
+    "directly_justifies": [
+      "BNPL consumers in Iloilo City exhibit frequent purchasing behavior and a high tendency for unplanned purchases.",
+      "Debt accumulation is perceived as the highest financial risk among BNPL users.",
+      "Males report higher frequent spending on BNPL than females.",
+      "Single consumers show higher unplanned purchases and more frequent buying of non-essential items.",
+      "A significant positive relationship exists between spending patterns and perceived financial risks."
+    ],
+    "limits": [
+      "The study uses convenience sampling, which limits generalizability beyond the sample of 214 BNPL consumers in Iloilo City.",
+      "The research is descriptive and correlational, so it cannot establish causal relationships between spending patterns and financial risks.",
+      "The study relies on self-reported perceptions of financial risk rather than objective financial data."
+    ],
+    "topic_mapping_rationale": "A systematic scan of all topic domains from the taxonomy was conducted. The paper was most strongly relevant to topic 1.C (Financial Behavior) as it directly measures spending behaviors and perceived risks. Topic 2.A (Culturally Specific Financial Practices) was selected with medium relevance because the study focuses on Filipino consumers. Topic 2.D (Spending Cycles) and 3.A (Expense Categorization) were assigned low relevance due to only superficial coverage. Topic 5.A (Behavioral Profiles) was assigned medium relevance because the descriptive findings could inform user profiling. Topics 7.A (Budgeting), 10.A (Data Privacy), and 11.A (Engagement) were considered contextual or low because they are mentioned peripherally. Domains such as 6.A (Predictive Modeling), 8.A (Anomaly Detection), and 12.A (Evaluation Frameworks) were rejected as the paper does not discuss algorithmic or system evaluation topics. The paper's contribution is primarily to behavioral finance literature rather than computational personal finance systems."
+  },
+  "limitations": [
+    "Convenience sampling limits the generalizability of findings. [unacknowledged]",
+    "Self-reported data on spending and risk perceptions may be subject to recall and social desirability biases. [unacknowledged]",
+    "The study does not include objective financial data (e.g., actual spending records, credit scores). [unacknowledged]",
+    "The descriptive design cannot establish causal relationships between spending patterns and financial risks."
+  ],
+  "remember_this": [
+    "BNPL users show frequent purchases and high unplanned buying behavior.",
+    "Debt accumulation is the highest perceived financial risk among BNPL consumers.",
+    "Males use BNPL more frequently than females in this sample.",
+    "A positive relationship exists between spending patterns and perceived financial risks.",
+    "Single consumers exhibit more unplanned and non-essential BNPL purchases."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T14:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Majeed_marked.md",
+      "converted_at": "2026-07-21T14:09:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

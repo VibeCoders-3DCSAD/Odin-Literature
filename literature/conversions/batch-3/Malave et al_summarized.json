@@ -1,0 +1,346 @@
+{
+  "paper_id": "10.1016/j.mex.2026.103962",
+  "designation": "international-algorithm-specific",
+  "title": "Transforming financial documents into credit decisions using explainable artificial intelligence and optical character recognition",
+  "authors": "Malave, S.; Khemani, B.; Patil, H.; Nandurkar, S.; Nandurkar, O.; Nayak, A.",
+  "year": 2026,
+  "venue": "MethodsX",
+  "odin_topics": [
+    "3.A",
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "10.A",
+    "10.B",
+    "12.A",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "An end-to-end framework integrates OCR document parsing with XGBoost credit scoring and SHAP/LIME explanations, achieving 92.5% accuracy on a 10,000-instance dataset.",
+  "problem_and_motivation": "Existing credit scoring systems either use interpretable but limited linear models or accurate but opaque ensemble methods, while most applicant data remains trapped in unstructured documents. No unified system connects document extraction, feature engineering, and explainable prediction. This gap motivated the development of an integrated document-driven framework with human-in-the-loop validation.",
+  "approach": [
+    "OCR and PDF parsing extract 15 financial and behavioral features from Aadhaar, PAN, salary slips, and bank statements.",
+    "Extracted JSON data undergoes cleaning, normalization, cross-document verification, and logical consistency checks.",
+    "An XGBoost regressor is trained on 10,000 Kaggle instances to predict continuous credit scores from engineered features.",
+    "A rule-based decision layer maps scores to loan eligibility, tiered interest rates, and EMI-constrained loan amounts.",
+    "SHAP provides global feature importance; LIME generates instance-specific explanations for model transparency.",
+    "A human-in-the-loop review allows loan officers to validate features, predictions, and explanations before final decisions.",
+    "Performance is benchmarked against LightGBM, Random Forest, Logistic Regression, and LSTM using regression and classification metrics."
+  ],
+  "findings": [
+    "num: XGBoost achieved 92.5% accuracy, outperforming LightGBM (90.8%), Logistic Regression (91%), Random Forest (87%), and LSTM (81%).",
+    "num: XGBoost had the lowest MAE (13.71) and RMSE (18.87) among all models.",
+    "num: LightGBM obtained the highest R² score (0.9261), marginally above XGBoost (0.9243).",
+    "num: At the decision level, XGBoost achieved 93.8% precision, 94.5% recall, and a 94.2% F1-score.",
+    "SHAP analysis shows income_stability and average_month_end_balance positively impact credit scores, while bounce_count and obligation-to-income ratio have negative effects.",
+    "LIME explanations are consistent with SHAP global patterns, confirming interpretability framework reliability.",
+    "Document processing extracts identity and financial data from four categories of applicant documents.",
+    "The feature engineering pipeline produces 15 attributes divided into direct and derived features."
+  ],
+  "key_figures_tables": [
+    "Figure 1: System architecture diagram → End-to-end pipeline from documents to credit decisions.",
+    "Figure 6: Feature correlation matrix → Income stability strongly correlates with credit score.",
+    "Figure 8: Regression error comparison → XGBoost shows lowest MAE and RMSE across models.",
+    "Figure 9: Classification accuracy comparison → XGBoost achieves the highest accuracy at 92.5%.",
+    "Figure 11: SHAP global feature importance → Income stability and balance are top positive contributors.",
+    "Table 4: Regression performance metrics → XGBoost has MAE 13.71 and RMSE 18.87.",
+    "Table 5: Decision-level performance → XGBoost leads in all classification metrics."
+  ],
+  "key_equations": [
+    {
+      "equation": "EMI = P \\cdot r \\cdot \\frac{(1+r)^n}{(1+r)^n - 1}",
+      "explanation": "EMI calculation for loan repayment capacity assessment."
+    },
+    {
+      "equation": "\\text{Average Monthly Credit} = \\frac{1}{N} \\sum_{i=1}^N C_i",
+      "explanation": "Mean monthly credit inflow over observation period."
+    },
+    {
+      "equation": "\\text{Average Usable Salary} = \\frac{1}{N} \\sum_{i=1}^N (S_i - EMI_i)",
+      "explanation": "Disposable income after monthly EMI obligations."
+    },
+    {
+      "equation": "\\text{OIR} = \\frac{1}{N} \\sum_{i=1}^N \\left(\\frac{EMI_i}{S_i}\\right) \\cdot 100",
+      "explanation": "Average percentage of income committed to EMI payments."
+    },
+    {
+      "equation": "\\text{MAE} = \\frac{1}{N} \\sum_{i=1}^N |y_i - \\hat{y}_i|",
+      "explanation": "Mean absolute error for regression evaluation."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "XAI",
+      "definition": "Explainable Artificial Intelligence—methods that make model predictions interpretable."
+    },
+    {
+      "term": "OCR",
+      "definition": "Optical Character Recognition—technology to extract text from images and documents."
+    },
+    {
+      "term": "XGBoost",
+      "definition": "Extreme Gradient Boosting—a scalable tree-based ensemble learning algorithm."
+    },
+    {
+      "term": "SHAP",
+      "definition": "SHapley Additive exPlanations—a game-theoretic approach for model interpretability."
+    },
+    {
+      "term": "LIME",
+      "definition": "Local Interpretable Model-agnostic Explanations—a technique for local surrogate models."
+    },
+    {
+      "term": "EMI",
+      "definition": "Equated Monthly Instalment—fixed monthly payment for a loan."
+    },
+    {
+      "term": "MAE",
+      "definition": "Mean Absolute Error—average magnitude of prediction errors."
+    },
+    {
+      "term": "RMSE",
+      "definition": "Root Mean Squared Error—square root of average squared errors."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Zeng",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XAI interaction strategies for non-expert users in financial credit assessment.",
+      "role": "context"
+    },
+    {
+      "author": "Nwafor",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "An explainable hybrid machine learning approach for transparent credit decisions.",
+      "role": "baseline"
+    },
+    {
+      "author": "Ravi",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "XAI for credit scoring and loan approvals in financial systems.",
+      "role": "context"
+    },
+    {
+      "author": "Nallakaruppan",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Credit risk assessment using explainable artificial intelligence.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rehman",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI-based credit scoring models in microfinance for financial inclusion.",
+      "role": "context"
+    },
+    {
+      "author": "Kozodoi",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Fairness assessment and profit implications in credit scoring systems.",
+      "role": "critique"
+    },
+    {
+      "author": "Rao",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "PSO-XGBoost model for personal auto loan credit risk assessment.",
+      "role": "methodology"
+    },
+    {
+      "author": "De Lange",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable AI for credit assessment in banking institutions.",
+      "role": "context"
+    },
+    {
+      "author": "Ayari",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Systematic literature review of machine learning for financial credit scoring.",
+      "role": "context"
+    },
+    {
+      "author": "Chang",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable machine learning study for bank credit worthiness prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Li",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable AI based LightGBM for default borrower prediction.",
+      "role": "baseline"
+    },
+    {
+      "author": "Ortigossa",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey from theory to methods and applications of XAI.",
+      "role": "context"
+    },
+    {
+      "author": "Černevičienė",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Systematic literature review of XAI in finance.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Defines 15 financial features including categorized transaction types."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews traditional and ML-based credit scoring systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies gaps in document utilization and interpretability in prior systems."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Engineered features capture behavioral attributes like bounce count and gambling transactions."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "medium",
+        "justification": "Uses threshold-based classification to categorize applicants as approved or rejected."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core contribution is XGBoost-based predictive credit scoring."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "low",
+        "justification": "Uses aggregated features but does not model sequential temporal dependencies."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "low",
+        "justification": "Related indirectly through EMI capacity and income stability features."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions capacity constraints but focuses on loan decisions, not budget recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "medium",
+        "justification": "Uses EMI constraints to determine maximum loanable amount based on repayment capacity."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Describes role-based authentication, audit trails, and document deletion after processing."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "SHAP/LIME explanations are explicitly intended to enhance transparency and borrower trust."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides comprehensive evaluation using MAE, RMSE, R², accuracy, precision, recall, and F1."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Compares XGBoost against four baselines using multiple regression and classification metrics."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Not directly about budget recommendation evaluation."
+      }
+    ],
+    "contribution_to_field": "The paper contributes a fully integrated end-to-end framework that bridges document intelligence, predictive modeling, and explainable decision support for credit scoring. It demonstrates that ensemble methods can be effectively combined with XAI to achieve both high accuracy and transparency in financial risk assessment. The framework's human-in-the-loop design and systematic feature engineering from OCR-extracted data provide a practical template for regulatory-compliant automated lending. The empirical validation benchmarks XGBoost against multiple models, establishing its suitability for structured financial data and showing that interpretability does not require sacrificing predictive performance.",
+    "directly_justifies": [
+      "Combining OCR, XGBoost, and SHAP/LIME enables transparent document-driven credit scoring.",
+      "XGBoost achieves 92.5% accuracy, outperforming LightGBM, Random Forest, and Logistic Regression.",
+      "SHAP and LIME provide consistent global and local explanations that align with financial risk principles.",
+      "A human-in-the-loop mechanism improves accountability and regulatory compliance in automated lending.",
+      "EMI constraints enable principled loan amount determination based on repayment capacity."
+    ],
+    "limits": [
+      "The paper's Filipino demographic context is not investigated; the dataset is not specific to the Philippines.",
+      "No Filipino-specific cultural practices, spending patterns, or financial behaviors are analyzed.",
+      "The taxonomy's personal finance topics (e.g., budgeting strategies, spending patterns) are only peripherally related."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's core contributions fall within predictive modeling (6.A), model evaluation (12.A, 12.B), and XAI for trust (10.B)—all assigned high relevance. Medium relevance was assigned to gaps in existing systems (4.B), behavioral feature engineering (3.A, 5.A), constrained optimization via EMI (7.C), and data privacy mechanisms (10.A). Low relevance was given to forecasting sequential data (6.B) and budgeting strategies (7.A) since the paper uses aggregated features and loan-focused constraints rather than explicit budget allocation. Contextual relevance was assigned to budget recommendation topics (7.B, 12.C) as the paper addresses capacity but not recommendation systems. Domains related to Filipino demographics (1.A–1.C, 2.A–2.D), savings and debt management (13.A–13.C), synthetic data (14.A), and mobile/offline design (9.A–9.C) were rejected as the paper contains no content on these topics. Overall, the paper is primarily an algorithmic contribution to credit scoring with strong relevance to evaluation and interpretability, but limited direct applicability to personal finance management systems."
+  },
+  "limitations": [
+    "OCR accuracy varies with document quality, type, and noise level. [unacknowledged]",
+    "The model is trained on a structured Kaggle dataset that may not capture all real-world financial data diversity. [unacknowledged]",
+    "SHAP and LIME may not capture all possible model interactions, potentially hindering deeper explanation. [unacknowledged]"
+  ],
+  "remember_this": [
+    "XGBoost achieved 92.5% accuracy and 94.2% F1-score for credit scoring.",
+    "SHAP and LIME provide consistent global and local explanations for model predictions.",
+    "OCR extracts 15 features from Aadhaar, PAN, salary slips, and bank statements.",
+    "The framework includes human-in-the-loop review for accountability and compliance.",
+    "EMI constraints determine maximum loan amounts based on repayment capacity."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Malave et al_marked.md",
+      "converted_at": "2026-07-21T14:10:09Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

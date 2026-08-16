@@ -1,0 +1,235 @@
+{
+  "paper_id": "10.63282/3050-922X.IJERET-V4I4P106",
+  "designation": "international-algorithm-specific",
+  "title": "Zero Trust before the Hype: Foundational Concepts and Early AI-Driven Implementations",
+  "authors": "Mareedu, A.",
+  "year": 2023,
+  "venue": "International Journal of Emerging Research in Engineering and Technology",
+  "odin_topics": ["None"],
+  "tldr": "A review of early AI integrations in Zero Trust architectures, covering behavioural authentication, adaptive trust scoring, and federated learning, and identifying challenges and future research directions.",
+  "problem_and_motivation": "Traditional perimeter-based security models are obsolete in dynamic cloud environments with mobile workforces and evolving cyber threats. Static rules and policies in early Zero Trust implementations were insufficient, necessitating AI integration for real-time, adaptive decision-making.",
+  "approach": [
+    "This is a comprehensive review paper, not a primary research study.",
+    "Synthesizes foundational Zero Trust principles from the literature and NIST SP 800-207.",
+    "Examines pre-hype enterprise systems that used identity-based controls and early behavioural analytics.",
+    "Analyzes enabling technologies such as edge computing and secure microservices for Zero Trust.",
+    "Reviews early AI-driven implementations including behavioural authentication and predictive access modelling.",
+    "Identifies challenges in early AI-ZT models, including overfitting, policy drift, and lack of explainability.",
+    "Draws lessons from early implementations for modern, context-aware Zero Trust designs.",
+    "Discusses future trends such as autonomous agents, AI-governed policy lifecycles, and quantum resilience.",
+    "Uses a narrative review structure with conceptual figures and comparative tables.",
+    "Cites foundational works and early case studies from industry and academia."
+  ],
+  "findings": [
+    "num: Early AI-ZT models struggled with poor generalization due to training data from controlled environments.",
+    "Adaptive trust scoring replaced static rules by using AI to evaluate user behaviour, device posture, and geolocation.",
+    "Behavioural authentication monitored typing and mouse dynamics for continuous identity verification.",
+    "Predictive modelling of access patterns helped detect insider threats and lateral movement.",
+    "Smart contracts combined with AI decision engines enabled decentralized, transparent policy enforcement.",
+    "Event tokenisation with SCIM profiles allowed AI engines to ingest security logs and adapt rules in real time.",
+    "Real-time verification clashed with the complexity of deep learning models, leading to decision latency.",
+    "AI-based decisions often evolved, causing policy drift and making it difficult to revert to known-good states.",
+    "Lack of explainability hindered the auditability of AI decisions in regulated sectors.",
+    "Federated training introduced risks of data poisoning, which could corrupt trust evaluations."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Perimeter-centric vs Zero Trust architecture → Paradigm shift to identity- and behaviour-centric models.",
+    "Table 1: Traditional perimeter vs Zero Trust comparison → ZT is identity-driven, with continuous verification.",
+    "Figure 2: AI-enabled Zero Trust edge architecture → Decentralized trust anchors with local policy enforcement.",
+    "Table 2: Common limitations of AI-powered ZT → Overfitting and explainability are key challenges.",
+    "Figure 3: Evolution of Zero Trust architecture → Trend from static models to quantum-aware, AI-enhanced frameworks."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {"term": "ZT", "definition": "Zero Trust"},
+    {"term": "ZTA", "definition": "Zero Trust Architecture"},
+    {"term": "AI", "definition": "Artificial Intelligence"},
+    {"term": "ML", "definition": "Machine Learning"},
+    {"term": "IAM", "definition": "Identity and Access Management"},
+    {"term": "RBAC", "definition": "Role-Based Access Control"},
+    {"term": "ABAC", "definition": "Attribute-Based Access Control"},
+    {"term": "RAAC", "definition": "Risk-Adaptive Access Control"},
+    {"term": "MFA", "definition": "Multifactor Authentication"},
+    {"term": "UEBA", "definition": "User and Entity Behaviour Analytics"},
+    {"term": "IPS", "definition": "Intrusion Prevention System"},
+    {"term": "VPN", "definition": "Virtual Private Network"},
+    {"term": "BYOD", "definition": "Bring Your Own Device"},
+    {"term": "NIST", "definition": "National Institute of Standards and Technology"},
+    {"term": "ENISA", "definition": "European Union Agency for Cybersecurity"},
+    {"term": "ISO", "definition": "International Organization for Standardization"},
+    {"term": "XAI", "definition": "Explainable Artificial Intelligence"},
+    {"term": "LLM", "definition": "Large Language Model"},
+    {"term": "DevSecOps", "definition": "Development, Security, and Operations"},
+    {"term": "SecAI", "definition": "Security Artificial Intelligence"},
+    {"term": "CI/CD", "definition": "Continuous Integration and Continuous Delivery"}
+  ],
+  "citations": [
+    {
+      "author": "Gilman",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Zero Trust requires continuous verification and dynamic policy enforcement.",
+      "role": "context"
+    },
+    {
+      "author": "Kindervag",
+      "year": 2010,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Formal framing of Zero Trust Architecture as a strategic cybersecurity model.",
+      "role": "context"
+    },
+    {
+      "author": "NIST",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "NIST SP 800-207 provided a formal architectural framework for Zero Trust.",
+      "role": "methodology"
+    },
+    {
+      "author": "Islam",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Early Zero Trust centred on IAM, micro-segmentation, and fine-grained access policies.",
+      "role": "context"
+    },
+    {
+      "author": "Dixit",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Quantum supremacy has implications for cryptographic security.",
+      "role": "context"
+    },
+    {
+      "author": "Ghasemshirazi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "AI enhances the decision-making capability of Zero Trust systems.",
+      "role": "finding"
+    },
+    {
+      "author": "Kumar",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Zero Trust requires continuous validation of access points instead of trusting internal networks.",
+      "role": "finding"
+    },
+    {
+      "author": "Chen",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ML algorithms can detect anomalies like access at unusual times or from new locations.",
+      "role": "finding"
+    },
+    {
+      "author": "Yeoh",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Zero Trust expanded as a federal standard, indicating urgency in adopting trustless frameworks.",
+      "role": "context"
+    },
+    {
+      "author": "Ike",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Federated identity systems like SAML and OAuth enabled secure authentication.",
+      "role": "context"
+    },
+    {
+      "author": "Singh",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "MFA deployment imposed stricter access controls, aligning with 'never trust unless verified'.",
+      "role": "context"
+    },
+    {
+      "author": "Lee",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "UEBA systems established behavioural baselines, flagging anomalies like unusual login locations.",
+      "role": "finding"
+    },
+    {
+      "author": "García-García",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Early AI applications in Zero Trust confirmed the potential for minimising false positives.",
+      "role": "finding"
+    },
+    {
+      "author": "Jangid",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Efficient training data caching minimises latency in edge-based AI deployments.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kumar",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Explainable AI is crucial for transparent decision-making in access control.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "None", "name": "None", "relevance": "contextual", "justification": "contextual only"}
+    ],
+    "contribution_to_field": "This review synthesizes foundational Zero Trust concepts with early AI integrations, providing a historical perspective on the evolution of the paradigm. It systematically catalogs early AI-driven mechanisms such as behavioural authentication, adaptive trust scoring, and smart contract-based enforcement. The paper identifies key challenges in early models, including overfitting and lack of explainability, which have informed subsequent research. It also outlines future directions, such as autonomous agents and quantum-resilient cryptography, thereby contributing to the forward-looking discourse on intelligent Zero Trust systems.",
+    "directly_justifies": [
+      "Static policies are insufficient for dynamic user habits and network attacks.",
+      "Real-time behavioural analytics and dynamic risk scoring are critical capabilities enabled by AI.",
+      "Explainable AI will be crucial in Zero Trust environments to meet regulatory compliance.",
+      "Integrating Zero Trust with DevSecOps supports policy-as-code and pipeline-based security scans."
+    ],
+    "limits": [
+      "The paper's relevance is limited to the security domain, specifically Zero Trust architectures and AI integration.",
+      "As a review, it does not present empirical data on the effectiveness of the discussed techniques.",
+      "The focus is on early implementations (pre-2023), which may not reflect the most recent advancements in AI and Zero Trust.",
+      "The paper does not delve into specific algorithmic details, making it a high-level overview rather than a technical deep dive."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. The paper's content focuses exclusively on cybersecurity, Zero Trust architecture, and AI integration within that domain. It does not address financial structures, spending patterns, personal finance, or any of the topics listed in the taxonomy, which are specific to Filipino young professionals and personal finance systems. All domains (1 through 14) were considered and rejected because the paper's subject matter is technical cybersecurity, not financial behavior or personal finance management. The sole topic code 'None' was selected as a placeholder to satisfy the schema requirement, but the paper is effectively outside the scope of the provided taxonomy."
+  },
+  "limitations": [
+    "The review does not present empirical data or experimental results to validate the claims about early AI-ZT systems.",
+    "The paper focuses on early implementations and may not capture the full breadth of recent advancements in the field.",
+    "The discussion of challenges acknowledges some issues like overfitting and explainability, but does not propose concrete solutions for these limitations. [unacknowledged]",
+    "The paper is based on a narrative review of existing literature, which can be subject to selection bias. [unacknowledged]",
+    "It does not critically evaluate the methodologies of the cited works, treating them as a consensus view of the field. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Early AI-ZT models struggled with generalization and often overfit to controlled training data.",
+    "Adaptive trust scoring replaced static rules with dynamic risk-based access decisions.",
+    "Policy drift and lack of explainability were major governance challenges in early AI-ZT systems.",
+    "Future Zero Trust designs will likely incorporate autonomous agents and quantum-resistant cryptography.",
+    "Integrating Zero Trust with DevSecOps enables adaptive policy enforcement in CI/CD pipelines."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mareedu_marked.md",
+      "converted_at": "2026-07-21T14:11:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

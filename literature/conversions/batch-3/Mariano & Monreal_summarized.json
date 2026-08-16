@@ -1,0 +1,274 @@
+{
+  "paper_id": "10.1145/3785171.3785187",
+  "designation": "international-algorithm-specific",
+  "title": "Predict, Optimize, Deliver: Demand Forecasting and Resource Optimization for a Market Research Firm",
+  "authors": "Mariano, M. T. G.; Monreal, R. N.",
+  "year": 2025,
+  "venue": "The 9th International Conference on Business and Information Management (ICBIM 2025)",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "7.D",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.B"
+  ],
+  "tldr": "Developed an integrated Predict-Then-Optimize framework combining time-series forecasting (ARIMA, Holt-Winters, Prophet, LSTM) with Pyomo-based resource allocation to address demand uncertainty and workforce optimization in a market research firm.",
+  "problem_and_motivation": "Professional service firms face highly variable client demand and rely on human resources as their primary asset, but manual workforce planning fails to adapt to demand volatility. Existing forecasting-optimization frameworks are typically designed for product-based or static planning contexts and lack relevance for the time-sensitive, high-variance nature of professional services.",
+  "approach": [
+    "Historical time-tracking data from January 2018 to December 2024 was filtered to billable entries and aggregated daily.",
+    "Four forecasting models—ARIMA, Holt-Winters Exponential Smoothing, Prophet, and LSTM—were implemented in Python and tuned via grid search across multiple train-test splits (60:40, 70:30, 80:20).",
+    "Model evaluation used RMSE, MAE, and MAPE on a 30-day holdout set, with a weighted error score and additional interpretability/speed penalties for practical deployment.",
+    "Selected Prophet forecasts were operationalized as a Mixed-Integer Linear Programming (MILP) problem in Pyomo, solved with CPLEX to allocate six employees across two clients under work-hour caps and availability constraints.",
+    "The optimization model was tested under baseline, over-forecasting, and under-forecasting scenarios using RMSE-derived forecast bands.",
+    "The framework was deployed within an interactive Power BI dashboard for real-time operational visualization."
+  ],
+  "findings": [
+    "num: Prophet achieved the lowest weighted error for Client 1 (13.038) and strong results for Client 2 (27.786), outperforming ARIMA, Holt-Winters, and LSTM.",
+    "num: Prophet's overall weighted score (10.456) ranked first when interpretability and speed were factored in, compared to ARIMA (11.582), LSTM (11.634), and Holt-Winters (13.062).",
+    "num: Increasing training data size consistently improved MAE and RMSE for ARIMA and Holt-Winters, particularly for Client 1.",
+    "LSTM maintained stable performance across all training splits but showed higher complexity and data requirements that reduced practical viability.",
+    "The optimization model achieved near-zero demand gaps across all forecast scenarios while respecting capacity constraints.",
+    "num: Shared resource S2 showed slight overutilization (106%) in high-demand scenarios, flagging areas for managerial attention.",
+    "Small discrepancies in short-term forecasts were found to compound into significant cumulative cost gaps over time, reinforcing the value of dynamic short-horizon planning.",
+    "Weekly or bi-weekly use of the tool was identified as optimal for cost-effective and responsive staffing."
+  ],
+  "key_figures_tables": [
+    "Table 1: Optimization variables and thresholds → Defines the MILP model's decision variables, costs, and constraints for workforce allocation.",
+    "Table 2: Diagnostic results → Both clients show stationary additive time series with moderate trends and weak seasonality, suitable for ARIMA.",
+    "Table 3: Weighted error metrics by model and client → Prophet consistently outperforms others across both clients.",
+    "Table 4: Overall model selection score → Prophet ranks first when interpretability and speed are considered.",
+    "Table 5: Optimized average resource utilization → Baseline and adjusted scenarios show efficient but sometimes overutilized shared resources."
+  ],
+  "key_equations": [
+    {
+      "equation": "\\sum_{i \\in {E1,E2,E3,E4,S1,S2}, t} C_{regular}(x_{iC1t} + x_{iC2,t}) + C_{overtime}(O_{i,t}) + C_{penalty}(E1_t + E2_t)",
+      "explanation": "Minimizes regular, overtime, and penalty costs."
+    },
+    {
+      "equation": "\\sum_{i \\in {E1,E2,S1,S2}} x_{iC1t} = HC1_t + E1_{t-1}",
+      "explanation": "Demand satisfaction for Client 1 including backlogs."
+    },
+    {
+      "equation": "\\sum_{i \\in {E3,E4,S1,S2}} x_{iC2t} = HC2_t + E2_{t-1}",
+      "explanation": "Demand satisfaction for Client 2 including backlogs."
+    },
+    {
+      "equation": "x_{iC1,t} + x_{iC2,t} \\leq (8 + o_{i,t}) * (1 - y_{i,t})",
+      "explanation": "Working hours limit and employee availability."
+    }
+  ],
+  "definitions": [
+    { "term": "ARIMA", "definition": "Autoregressive Integrated Moving Average, a classical time-series model for stationary data." },
+    { "term": "LSTM", "definition": "Long Short-Term Memory, a recurrent neural network architecture capable of learning long-term dependencies in sequence data." },
+    { "term": "MAE", "definition": "Mean Absolute Error, the average absolute forecast error." },
+    { "term": "MAPE", "definition": "Mean Absolute Percentage Error, a relative error metric expressed as a percentage." },
+    { "term": "MILP", "definition": "Mixed-Integer Linear Programming, an optimization problem with both continuous and integer decision variables." },
+    { "term": "RMSE", "definition": "Root Mean Square Error, a metric that penalizes large forecast deviations." },
+    { "term": "RBT", "definition": "Resource-Based Theory, a strategic management framework emphasizing optimal internal resource deployment for competitive advantage." },
+    { "term": "PO", "definition": "Predict-Then-Optimize, a two-stage framework where forecasts inform an optimization model." },
+    { "term": "FTE", "definition": "Full-Time Equivalent, a measure of employee workload." }
+  ],
+  "citations": [
+    {
+      "author": "Sharma",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "RLS model for forecasting resource fulfilment in IT and consulting.",
+      "role": "context"
+    },
+    {
+      "author": "Boadi-Sarpong",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Optimal internal resource deployment contributes to sustained competitive advantage.",
+      "role": "context"
+    },
+    {
+      "author": "Ghosh",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ARIMA model applied to demand forecasting.",
+      "role": "methodology"
+    },
+    {
+      "author": "Kumar",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comparative assessment of Holt-Winters and ARIMA for inventory optimization.",
+      "role": "baseline"
+    },
+    {
+      "author": "Terrada",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "LSTM outperforms ARIMA in capturing demand fluctuations in complex, high-variance domains.",
+      "role": "finding"
+    },
+    {
+      "author": "Sharma",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Prophet decomposes time series into trend, seasonality, and holiday effects.",
+      "role": "methodology"
+    },
+    {
+      "author": "Jierula",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "RMSE, MAE, and MAPE as standard performance metrics for forecasting.",
+      "role": "methodology"
+    },
+    {
+      "author": "Seder",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "ARIMA and Prophet differ in sensitivity to metrics in call center staffing.",
+      "role": "baseline"
+    },
+    {
+      "author": "Wang",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Network flow approach to optimal scheduling in supply chain logistics.",
+      "role": "methodology"
+    },
+    {
+      "author": "Ercsey",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Multicommodity network flow model for human resource allocation.",
+      "role": "methodology"
+    },
+    {
+      "author": "Mohammadi",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Mathematical programming for resource allocation on heterogeneous clusters.",
+      "role": "methodology"
+    },
+    {
+      "author": "Lavanya",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comprehensive review of data visualization tools including Power BI.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Develops and compares four forecasting models for service demand."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Evaluates ARIMA, Holt-Winters, Prophet, and LSTM on sequential billable hours data."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Optimization model treats workforce allocation as a resource budgeting problem."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Prescriptive allocation approach offers a form of resource budget recommendation."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "high",
+        "justification": "MILP formulation with work-hour caps, availability, and cost minimization."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "low",
+        "justification": "Over- and under-forecasting scenarios test model resilience but no formal infeasibility handling described."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Weighted error metrics and overall score incorporate interpretability and speed alongside accuracy."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Systematic comparison of forecasting algorithms using MAE, RMSE, and MAPE."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Prescriptive model evaluated via cost analysis and utilization metrics."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "medium",
+        "justification": "Framework deployed in Power BI with CPLEX integration; emphasis on practical operational use."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a practical, data-driven Predict-Then-Optimize framework specifically tailored for professional service firms, addressing a gap in the literature where most forecasting-optimization systems target product-based or static planning contexts. It provides a systematic comparative evaluation of four forecasting methods (ARIMA, Holt-Winters, Prophet, LSTM) in a service-demand setting, integrating both accuracy metrics and practical deployment considerations. The work operationalizes forecast outputs through a Pyomo-based MILP model with CPLEX, demonstrating how forecast uncertainty can be incorporated via RMSE-adjusted scenarios to improve allocation robustness. Finally, it bridges predictive analytics and operational planning through an interactive Power BI dashboard, showing how advanced analytics can be made actionable for decision-makers in mid-sized firms.",
+    "directly_justifies": [
+      "Prophet offers the most effective balance of forecast accuracy, interpretability, and operational usability for short-term planning in professional service firms.",
+      "Forecast bands derived from RMSE strengthen allocation model resilience and responsiveness.",
+      "Small discrepancies in short-term forecasts compound into significant cost gaps over time.",
+      "Increasing training data size improves forecast accuracy for ARIMA and Holt-Winters.",
+      "Weekly or bi-weekly tool use is optimal for cost-effective responsive staffing."
+    ],
+    "limits": [
+      "Forecasting model uses only internal historical data and excludes external economic indicators that may influence demand.",
+      "Optimization model lacks input-level factors such as individual analyst skill or project complexity.",
+      "Long-range forecasting is cautioned against as rare high-impact events (e.g., COVID-19) are not modeled."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains identified relevance primarily in predictive modeling and forecasting algorithms (6.A, 6.B), as the paper's core contribution is comparing time-series forecasting methods. The optimization and allocation components map to budget/constraint optimization topics (7.A, 7.B, 7.C) and evaluation frameworks (12.A, 12.B, 12.C). Topics related to personal finance-specific domains like Filipino demographics (1.A–1.C), cultural practices (2.A–2.D), expense categorization (3.A–3.C), behavioral profiles (5.A–5.C), anomaly detection (8.A–8.C), mobile UX (9.A–9.C), privacy (10.A–10.C), engagement (11.A–11.B), savings/debt (13.A–13.C), and synthetic data (14.A) were not applicable—the paper addresses professional service workforce optimization, not personal finance. On-device vs. server inference (14.C) was considered but rejected as deployment is via Power BI with CPLEX, without explicit edge/cloud inference discussion. The paper's algorithmic comparison and optimization framing justify designation as international-algorithm-specific. Overall, the paper's topical coverage centers on forecasting evaluation and constrained optimization for operational workforce planning, with medium relevance to deployment considerations."
+  },
+  "limitations": [
+    "Analysis restricted to output-based variables (billable hours) at group level; input-level factors like individual analyst skill unavailable. [unacknowledged]",
+    "Forecasting model excludes external economic indicators from the outsourcing country that may influence demand.",
+    "The tool is not suitable for long-range forecasting as rare high-impact events (e.g., COVID-19) are not considered.",
+    "System effectiveness is highly dependent on consistent and accurate updating of time-tracking data."
+  ],
+  "remember_this": [
+    "Prophet achieved the lowest overall score and ranked first for practical forecasting deployment.",
+    "Forecast RMSE-derived bands improve allocation model resilience under uncertainty.",
+    "Increasing training data size reduces forecast errors for ARIMA and Holt-Winters.",
+    "Small short-term forecast errors compound into significant cumulative cost gaps.",
+    "Weekly or bi-weekly planning cycles optimize cost-effectiveness and responsiveness."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Mariano & Monreal_marked.md",
+      "converted_at": "2026-07-21T14:11:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

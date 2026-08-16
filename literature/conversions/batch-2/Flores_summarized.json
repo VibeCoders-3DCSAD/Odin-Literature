@@ -1,0 +1,129 @@
+{
+  "paper_id": "0174a967-2548-5a30-bb7f-e1b3e83c9482",
+  "designation": "local",
+  "title": "Financial Freedom of Filipinos in Personal Finance Management",
+  "authors": "Flores, C. A. R.",
+  "year": 2025,
+  "venue": "Unknown",
+  "odin_topics": [
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.D",
+    "7.A",
+    "13.A"
+  ],
+  "tldr": "Filipinos face financial literacy challenges rooted in cultural tendencies like come-what-may attitude and reliance on traditional saving methods, hindering effective budgeting and investment.",
+  "problem_and_motivation": "Many Filipinos lack financial literacy and awareness of financial instruments, resulting in poor cash management, high debt reliance, and insufficient emergency funds.",
+  "approach": [
+    "Descriptive methodology with linear regression analysis using 150 respondents from ten corporations on the Philippine Stock Exchange Index.",
+    "Examines four personal finance dimensions: cash management, debt management, risk management, and wealth management.",
+    "Evaluates impact of these dimensions on achieving financial independence."
+  ],
+  "findings": [
+    "Pervasive financial literacy challenges rooted in cultural come-what-may attitude.",
+    "Reliance on traditional saving methods (alkansya) hinders effective budgeting and investment.",
+    "Low levels of emergency fund preparedness and high debt reliance among Filipinos.",
+    "Structured financial planning enhances wealth accumulation and mitigates financial stress.",
+    "Tailored financial education programs needed for working parents and young professionals."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CDRW",
+      "definition": "Cash management, Debt management, Risk management, and Wealth management framework."
+    },
+    {
+      "term": "Alkansya",
+      "definition": "Traditional Filipino bamboo or jar used for saving money."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Studies financial structure of Filipino working professionals."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Examines cash management, debt, and investment behaviors."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Documents culturally specific come-what-may attitude and alkansya saving."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and Occasions",
+        "relevance": "medium",
+        "justification": "Discusses spending habits linked to cultural tendencies."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Core focus on cash management and budgeting practices."
+      },
+      {
+        "code": "13.A",
+        "name": "Savings Goal Management in PFMS",
+        "relevance": "high",
+        "justification": "Examines saving practices and emergency fund preparedness."
+      }
+    ],
+    "contribution_to_field": "Provides empirical evidence of financial literacy challenges among Filipino working professionals. Identifies cultural attitudes as barriers to effective personal finance management. Highlights the need for tailored financial education programs.",
+    "directly_justifies": [
+      "Cultural come-what-may attitude hinders effective financial planning.",
+      "Traditional saving methods limit investment and wealth accumulation.",
+      "Structured financial planning enhances wealth and reduces financial stress."
+    ],
+    "limits": [
+      "Sample from ten companies on PSE Index limits generalizability.",
+      "Descriptive design limits causal claims."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 1.B, 1.C, 2.A, 7.A, 13.A (high), 2.D (medium). Rejected algorithmic topics (4.B-6.B, 8.A-14.C) as this is a survey-based behavioral study."
+  },
+  "limitations": [
+    "Sample from ten PSE Index companies may not represent all Filipino workers.",
+    "Descriptive design limits ability to establish causality.",
+    "Self-reported data may introduce response bias."
+  ],
+  "remember_this": [
+    "Cultural come-what-may attitude challenges financial planning.",
+    "Traditional alkansya saving limits investment and emergency preparedness.",
+    "Tailored financial education needed for Filipino professionals."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Flores_marked.md",
+      "converted_at": "2026-07-22T13:22:59Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

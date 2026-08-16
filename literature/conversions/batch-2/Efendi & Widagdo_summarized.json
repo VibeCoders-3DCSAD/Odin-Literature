@@ -1,0 +1,101 @@
+{
+  "paper_id": "10.59890/ijaeam.v3i3.18",
+  "designation": "international",
+  "title": "Simple Financial Management in Housewife Communities: A Qualitative Study on Daily Financial Management Patterns",
+  "authors": "Efendi, M. I.; Widagdo, C. S.",
+  "year": 2025,
+  "venue": "International Journal of Applied Economics, Accounting and Management (IJAEAM)",
+  "odin_topics": [
+    "2.A",
+    "3.A",
+    "7.A"
+  ],
+  "tldr": "Housewives in Salatiga, Indonesia develop sophisticated financial management through nuanced recording systems, community-based risk management, and social financial networks.",
+  "problem_and_motivation": "Conventional understandings portray housewives in resource-constrained environments as financially vulnerable, but limited research explores their adaptive strategies and sophisticated practices.",
+  "approach": [
+    "Qualitative case study using in-depth interviews, non-participant observation, and document analysis with 25 housewives in Salatiga, Indonesia.",
+    "Data analyzed through open, axial, and selective coding to integrate findings around core themes.",
+    "Findings validated through member checking, peer debriefing, and triangulation."
+  ],
+  "findings": [
+    "Housewives develop nuanced recording systems for tracking daily financial transactions.",
+    "Community-based risk management through informal financial mechanisms provides resilience.",
+    "Social financial networks serve as both safety nets and investment vehicles.",
+    "Partial communication patterns where financial discussions limited to big decisions only."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Arisan",
+      "definition": "Indonesian rotating savings and credit association."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Documents culturally specific Indonesian household financial management practices."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "medium",
+        "justification": "Describes nuanced recording systems for categorizing daily expenses."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "high",
+        "justification": "Detailed findings on household budgeting strategies in resource-constrained settings."
+      }
+    ],
+    "contribution_to_field": "Provides rich qualitative evidence of sophisticated financial management among housewives in a developing economy. Challenges deficit-based narratives by demonstrating agency and strategic economic navigation within bounded structures.",
+    "directly_justifies": [
+      "Housewives develop complex adaptive financial strategies despite economic constraints.",
+      "Social financial networks serve as critical infrastructure for household financial resilience."
+    ],
+    "limits": [
+      "Indonesian context limits direct applicability to Filipino populations.",
+      "Qualitative design with 25 participants limits generalizability."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains. Flagged 2.A, 7.A (high), 3.A (medium). Rejected 1.A-1.C as Indonesian not Filipino context; algorithmic topics (4.B-14.C) as this is qualitative."
+  },
+  "limitations": [
+    "Single-city study in Salatiga, Indonesia limits geographic generalizability.",
+    "Small sample (25) for a qualitative study limits transferability."
+  ],
+  "remember_this": [
+    "Housewives develop sophisticated informal financial management systems.",
+    "Community-based risk management compensates for lack of formal financial access.",
+    "Social financial networks are critical for household resilience."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Efendi & Widagdo_marked.md",
+      "converted_at": "2026-07-22T13:13:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "paper_id": "10.3390/fi18030156",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Healthcare Monitoring Through Drift-Aware Edge-Cloud Intelligence",
+  "authors": "Stojnev Ilic, A.; Ilic, M.; Stojanovic, N.; Stojanovic, D.",
+  "year": 2026,
+  "venue": "Future Internet",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "7.C",
+    "7.D",
+    "9.A",
+    "9.B",
+    "9.C",
+    "12.A",
+    "12.B",
+    "12.C",
+    "14.B",
+    "14.C"
+  ],
+  "tldr": "Treats concept drift as a first-class system signal to orchestrate model adaptation across a distributed edge-cloud pipeline, demonstrating reduced prediction error and stable inference on CGM data.",
+  "problem_and_motivation": "Continuous physiological data streams are non-stationary, yet existing edge-cloud healthcare monitoring systems rely on static models or periodic retraining that is both inefficient and unresponsive to evolving user states. Treating concept drift as a maintenance signal rather than an active coordination mechanism fails to sustain accuracy and stability in distributed deployments.",
+  "approach": [
+    "Proposes a multi-tier edge-cloud architecture where edge nodes perform low-latency inference and conservative drift screening using an ensemble of lightweight detectors.",
+    "Cloud tier performs computationally intensive drift validation, orchestrates user reclassification, and manages model lifecycle via a Model-as-a-Service (MaaS) abstraction.",
+    "Implements a closed-loop feedback pipeline: drift alerts from edge are filtered and validated in the cloud, then trigger asynchronous retraining and redeployment.",
+    "Uses a four-detector edge ensemble (ADWIN, Page-Hinkley, mean-shift, variance-ratio) with a consensus voting mechanism to balance sensitivity and false positives.",
+    "Applies persistence (k consecutive windows) and cooldown (Δ t = 3600 s) constraints in the cloud to avoid oscillatory adaptations and maintain stability.",
+    "Enables dynamic user-state transitions as a lower-cost alternative to full retraining, reassigning users to existing model ensembles when appropriate.",
+    "Implemented as a containerized microservice prototype with Docker, Kafka, MLflow, and PostgreSQL, supporting both synthetic and real CGM data.",
+    "Evaluates 20 synthetic users with injected drifts and one real CGM user across four physiological phases, measuring detection delay, validation accuracy, and prediction MAE.",
+    "Compared the drift-aware pipeline against periodic retraining and performance-triggered retraining baselines on the synthetic dataset.",
+    "Conducted ablation experiments for cloud validation, single-detector use, and no cooldown to isolate the impact of each architectural component."
+  ],
+  "findings": [
+    "num: Drift-aware adaptation reduced prediction MAE by 40.6% relative to the best periodic retraining baseline (N=500), achieving 3.55 ± 0.82 mg/dL vs. 5.98 ± 1.32 mg/dL.",
+    "num: Hierarchical cloud validation reduced the false-positive retraining rate from 88.9% (edge-only) to 27.3%, filtering transient alerts.",
+    "num: End-to-end adaptation latency from drift onset to edge deployment was 66 ± 37 s across synthetic users, with retraining dominated by MLflow logging (~5 s).",
+    "num: The drift-aware pipeline required 91.9% fewer retraining events than the shortest-interval periodic baseline (85 vs. 1050), while achieving 43.3% lower MAE than performance-triggered retraining.",
+    "num: Edge drift detection added 0.009 ms overhead per sample (16.8% of inference) and consumed 0.91 MB peak memory per node.",
+    "num: The real CGM user generated ~2000 edge alerts, but cloud validation filtered them to 5 validated events that aligned with the three known physiological phase transitions.",
+    "Inference remained uninterrupted during validation, retraining, and deployment, confirming the decoupled lifecycle design.",
+    "The ensemble of four detectors detected 5.61 true drifts per user on average vs. 4.90 for ADWIN alone, with the variance-ratio monitor capturing additional variance-driven shifts.",
+    "Disabling the cooldown mechanism led to 4.2 ± 1.8 oscillatory retraining episodes per user, with no net MAE improvement.",
+    "The system performed two user reclassification events, demonstrating feasibility of state transitions as a retraining avoidance mechanism."
+  ],
+  "key_figures_tables": [
+    "Figure 1: High-level system architecture → Shows edge-cloud continuum with drift handling as first-class event.",
+    "Figure 2: Prototype implementation details → Maps components to Docker/Kafka/MLflow deployment.",
+    "Figure 3: Multi-user execution timeline → Inference continues uninterrupted through adaptation events.",
+    "Figure 4: MAE over time with and without drift-aware updates → Verified drift events align with MAE reductions for real CGM user.",
+    "Table 1: Comparison with prior works → None integrate hierarchical drift detection, user reclassification, and closed-loop adaptation.",
+    "Table 4: System performance metrics → Detection delay 60.25 ± 35.2 s, cloud validation pass rate 15.32%.",
+    "Table 5: Ablation results → Edge-only triggering increases FPR to 88.87%, no cooldown causes oscillations.",
+    "Table 6: Baseline comparison → Drift-aware achieves lowest MAE with 85 ± 34 retraining events.",
+    "Table 7: Computational overhead → 0.91 MB memory, 0.0079 KB/hour/user bandwidth for drift alerts.",
+    "Table 8: Parameter sensitivity → 100-sample feature window and 60s voting window provide balanced trade-off."
+  ],
+  "key_equations": [
+    {
+      "equation": "P(X, y) at t changes to P'(X, y) at t+Δt",
+      "explanation": "Formal definition of concept drift occurrence."
+    },
+    {
+      "equation": "Confidence = active_detectors / 4",
+      "explanation": "Edge alert confidence computed from detector consensus."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "CGM",
+      "definition": "Continuous Glucose Monitoring — minute-level physiological data used as the representative sensing modality."
+    },
+    {
+      "term": "MaaS",
+      "definition": "Model-as-a-Service — logical service for model distribution, version management, and deployment coordination."
+    },
+    {
+      "term": "ADWIN",
+      "definition": "Adaptive Windowing — drift detector with O(log N) memory complexity, sensitive to gradual drift."
+    },
+    {
+      "term": "Concept drift",
+      "definition": "Change in the joint probability distribution P(X, y) between time points, invalidating static models."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Webb",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Formal characterization of concept drift as P(X,y) changing between t and t+Δt.",
+      "role": "methodology"
+    },
+    {
+      "author": "Rahmani",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data drift degrades machine learning model performance in clinical sepsis prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Abdullahi",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Temporal dependencies and autocorrelation increase drift detection complexity in time-series.",
+      "role": "context"
+    },
+    {
+      "author": "Lu",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Comprehensive review of concept drift learning methods and challenges.",
+      "role": "context"
+    },
+    {
+      "author": "Yang",
+      "year": 2021,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Lightweight drift detection framework for IoT data streams, edge-only detection.",
+      "role": "baseline"
+    },
+    {
+      "author": "Desale",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Combined deep learning with adaptive sliding window for concept drift detection.",
+      "role": "methodology"
+    },
+    {
+      "author": "Pratyusha",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Dynamic adaptive weighted ensemble approach for IoT health data streams.",
+      "role": "baseline"
+    },
+    {
+      "author": "Gkonis",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey of IoT-edge-cloud continuum systems, static model deployments predominant.",
+      "role": "context"
+    },
+    {
+      "author": "Lukats",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No single unsupervised drift detector dominates across drift types, motivating ensemble strategies.",
+      "role": "methodology"
+    },
+    {
+      "author": "Cao",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Latency and resource expenditure are tightly coupled in distributed IoT deployments.",
+      "role": "context"
+    },
+    {
+      "author": "Stojnev Ilic",
+      "year": 2025,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Scalable edge-cloud architecture for streaming data, identified lack of continuous drift adaptation.",
+      "role": "context"
+    },
+    {
+      "author": "Toor",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Adaptive strategy for mining e-health data streams, but cloud-only deployment.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Provides architectural patterns (edge-cloud) transferable to personal finance."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Identifies static models and fixed retraining as primary gaps in distributed monitoring systems."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Demonstrates 15-min-ahead glucose prediction, analogous to expenditure prediction."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "medium",
+        "justification": "Linear regression on sequential CGM data — method transferable to spending time-series."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "low",
+        "justification": "Mentions optimization only in context of resource allocation, not formal budget optimization."
+      },
+      {
+        "code": "7.D",
+        "name": "Infeasibility Handling and Reduction Hierarchies",
+        "relevance": "low",
+        "justification": "Not addressed; adaptation avoids infeasible states via persistence checks."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "Edge tier emulates mobile/smartphone constraints, but paper is not mobile-first."
+      },
+      {
+        "code": "9.B",
+        "name": "Mobile UX Design for Personal Finance",
+        "relevance": "low",
+        "justification": "No UX discussion; visualization component only for prototyping."
+      },
+      {
+        "code": "9.C",
+        "name": "Offline-First Architecture",
+        "relevance": "medium",
+        "justification": "Edge inference continues during network interruptions and model updates — demonstrates offline-capable design."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Provides systematic performance evaluation including ablation, baselines, and sensitivity analysis."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates drift detection ensemble, validation thresholds, and cooldown mechanisms separately."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Comparison against periodic and performance-triggered baselines is methodology transferable to budget systems."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "high",
+        "justification": "MaaS component orchestrates model versioning, artifact registry, and asynchronous edge deployment."
+      },
+      {
+        "code": "14.C",
+        "name": "On-Device vs. Server Inference",
+        "relevance": "high",
+        "justification": "Explicitly assigns lightweight inference to edge and heavy validation/retraining to cloud."
+      }
+    ],
+    "contribution_to_field": "This paper contributes a distributed architecture that elevates concept drift from a passive diagnostic signal to an active coordination mechanism governing model lifecycle and user-state alignment across edge-cloud systems. It introduces a hierarchical drift-handling strategy that separates sensitive edge screening from robust cloud validation, preventing premature adaptations. The work provides a closed-loop adaptation pipeline with persistence and cooldown constraints, demonstrating that drift-triggered retraining outperforms periodic and performance-triggered approaches. Empirically, it contributes a containerized evaluation framework with both synthetic and real CGM data, offering reproducible benchmarks for adaptive streaming systems. The architectural design generalizes beyond healthcare to any IoT domain with non-stationary data and resource-constrained edge devices.",
+    "directly_justifies": [
+      "Concept drift should be treated as a first-class system-level supervisory signal for model lifecycle management.",
+      "Hierarchical drift detection separating edge screening from cloud validation prevents premature adaptations.",
+      "Persistence (k consecutive windows) and cooldown (Δt) constraints prevent oscillatory retraining from noisy signals.",
+      "Dynamic user-state transitions can reduce retraining frequency by reassigning users to compatible existing models.",
+      "Drift-aware adaptation reduces MAE by 40.6% compared to periodic retraining while using 91.9% fewer retraining events."
+    ],
+    "limits": [
+      "Evaluation performed in a containerized testbed, not real-world network conditions or clinical settings.",
+      "Only one real CGM user used; larger population studies are needed.",
+      "User reclassification optimality was not quantitatively evaluated compared to full retraining.",
+      "Privacy, regulatory compliance, and security of model distribution are explicitly excluded from scope.",
+      "Parameters for drift detectors (window sizes, thresholds) are not claimed to be universally optimal."
+    ],
+    "topic_mapping_rationale": "A systematic scan was conducted across all topic domains in the taxonomy. The paper was flagged as directly relevant to domains 4.B (Limitations and Gaps), 12.A/B/C (Evaluation Frameworks), and 14.B/C (ML Deployment and Inference) because it explicitly identifies static model deployment as a gap, provides comprehensive ablation and baseline evaluations, and designs a MaaS deployment pipeline. Medium relevance was assigned to 6.A and 6.B (Predictive Modeling) due to the glucose prediction task, and 9.C (Offline-First) because edge inference continues during updates. Low relevance was assigned to 7.C and 7.D (Budget Optimization) and 9.B (UX Design) as these are not addressed. Domains 1.A–3.C, 5.A–5.C, 8.A–8.C, 10.A–10.C, 11.A–11.B, and 13.A–13.C were considered and rejected because the paper contains no citeable claims about Filipino demographics, financial practices, user profiles, anomaly detection beyond healthcare, privacy/trust, engagement mechanisms, or savings/debt management. The paper's core contribution lies in system architecture and adaptation algorithms, not in the specific application domain of personal finance."
+  },
+  "limitations": [
+    "Evaluation scope limited to containerized testbed; does not replicate real-world network instability, device failures, or large-scale heterogeneity. [unacknowledged]",
+    "Real-world validation uses only a single CGM user; generalizability across diverse patient populations remains untested. [unacknowledged]",
+    "User reclassification optimality was not quantitatively compared against full retraining strategies. [unacknowledged]",
+    "Privacy, regulatory compliance, and security of model distribution pipeline are explicitly outside scope and left for future work.",
+    "Drift detector parameters (window sizes, thresholds) may require tuning for data streams with different temporal dynamics; not claimed as universally optimal."
+  ],
+  "remember_this": [
+    "Drift-aware adaptation reduced prediction MAE by 40.6% compared to periodic retraining.",
+    "Cloud validation reduced the false-positive retraining rate from 88.9% to 27.3%.",
+    "End-to-end adaptation latency averaged 66 seconds from drift onset to edge deployment.",
+    "The drift-aware pipeline used 91.9% fewer retraining events than the best periodic baseline.",
+    "Concept drift is treated as a first-class coordination signal, not a passive maintenance event."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Ilic et al_marked.md",
+      "converted_at": "2026-07-21T13:34:54Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

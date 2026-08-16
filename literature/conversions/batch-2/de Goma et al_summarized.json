@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1109/ACCESS.2024.3451874",
+  "designation": "local-algorithm-specific",
+  "title": "Music Recommendation System Using Collaborative Filtering and Matrix Factorization Through LightFM",
+  "authors": "de Goma, J. C.; Bermudez, J. C.; Ordonio, R. M.",
+  "year": 2024,
+  "venue": "IEEE Access",
+  "odin_topics": ["5.A", "5.B", "14.A"],
+  "tldr": "Develops a music recommendation system using LightFM (hybrid collaborative + content-based matrix factorization) with Philippine OPM music data, achieving 96.8% top-5 accuracy.",
+  "problem_and_motivation": "Discovering new music matching individual preferences is challenging due to content overload. Existing recommendation systems lack hybrid approaches that combine collaborative and content-based features for improved accuracy.",
+  "approach": [
+    "Used LightFM library implementing hybrid matrix factorization with both collaborative and content-based features.",
+    "Dataset: user-song interaction data from Last.fm including 108 OPM (Original Pilipino Music) songs and user demographic features.",
+    "Preprocessed data: encoded user features (age, gender, location) and song metadata (genre, artist, era).",
+    "Trained LightFM model with WARP (Weighted Approximate-Rank Pairwise) loss function.",
+    "Evaluated using precision@k, recall@k, and AUC metrics with k=5 and k=10.",
+    "Compared against pure collaborative filtering (SVD) and pure content-based (Cosine Similarity) baselines."
+  ],
+  "findings": [
+    "num: LightFM achieved 96.8% precision@5 and 94.2% precision@10, outperforming both baselines.",
+    "LightFM improved recall by 18% over SVD collaborative filtering.",
+    "Hybrid approach effectively handles cold-start problem for new users with demographic features.",
+    "WARP loss function optimized for ranking quality outperformed logistic loss.",
+    "Content features most important for recommendation: genre and era metadata."
+  ],
+  "key_figures_tables": [
+    "Table 4: Precision and recall comparison across models",
+    "Figure 6: AUC-ROC curves for LightFM vs. baselines",
+    "Table 6: Feature importance analysis for content-based components"
+  ],
+  "key_equations": [
+    {"equation": "P(u,i) = σ(b_u + b_i + q_u · p_i)", "explanation": "LightFM prediction: sigmoid of user bias + item bias + dot product of user and item latent vectors."},
+    {"equation": "L_{WARP} = Σ rank(i) · max(0, 1 - P(u,i) + P(u,j))", "explanation": "WARP loss penalizes ranking errors where negative item j is ranked above positive item i."}
+  ],
+  "definitions": [
+    {"term": "LightFM", "definition": "Hybrid matrix factorization model combining collaborative filtering with content-based features for recommendation."},
+    {"term": "WARP loss", "definition": "Weighted Approximate-Rank Pairwise loss — optimizes for top-k ranking quality by sampling negative items until a ranking violation is found."},
+    {"term": "Cold-start problem", "definition": "Difficulty recommending items to new users or recommending new items with no interaction history."}
+  ],
+  "citations": [
+    {"author": "Kula", "year": 2015, "page": 0, "paragraph": 0, "claim": "LightFM combines collaborative and content-based filtering through shared latent representations.", "role": "context"},
+    {"author": "Weston", "year": 2011, "page": 0, "paragraph": 0, "claim": "WARP loss optimizes for top-k ranking performance by sampling negative items.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "User Behavior Profiling for PF", "relevance": "medium", "justification": "User demographic features (age, gender, location) used for personalization — applicable to PFMS user profiling."},
+      {"code": "5.B", "name": "Recommendation Systems in PF", "relevance": "high", "justification": "LightFM is a recommendation system approach directly applicable to financial product or budget recommendations."},
+      {"code": "14.A", "name": "ML Approaches in PFMS", "relevance": "medium", "justification": "Demonstrates LightFM hybrid matrix factorization with WARP loss as a recommendation approach."}
+    ],
+    "contribution_to_field": "While applied to music recommendation, the LightFM hybrid approach and WARP loss optimization are directly transferable to PFMS recommendation tasks such as personalized budget plans, savings goals, or financial product recommendations. The paper demonstrates handling cold-start with user demographic features—a common PFMS challenge.",
+    "directly_justifies": [
+      "Hybrid matrix factorization (LightFM) outperforms pure collaborative or content-based approaches.",
+      "User demographic features effectively mitigate cold-start problems.",
+      "WARP loss optimizes for top-k recommendation quality preferred in PFMS scenarios."
+    ],
+    "limits": [
+      "Applied to music, not financial domain. [acknowledged]",
+      "Small dataset with only 108 OPM songs. [unacknowledged]",
+      "No user satisfaction or real-world deployment evaluation. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domains 5.B (recommendation systems) was flagged as high relevance because the LightFM approach is directly applicable to PFMS recommendations. Domains 5.A (user profiling) and 14.A (ML approaches) were flagged as medium relevance because user features are used and the model is an ML approach. Domains 1-4, 6-13, 14.B were rejected as the paper focuses on music recommendation, not financial systems."
+  },
+  "limitations": [
+    "Domain is music recommendation, not PFMS. [acknowledged]",
+    "Small dataset limits statistical power. [unacknowledged]",
+    "No real-world deployment evaluation. [unacknowledged]"
+  ],
+  "remember_this": [
+    "LightFM hybrid matrix factorization: collaborative + content-based features.",
+    "96.8% precision@5 for music recommendation with WARP loss.",
+    "Handles cold-start via user demographic features — applicable to PFMS.",
+    "Genre and era metadata were most important content features for music."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T10:02:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "de Goma et al_marked.md",
+      "converted_at": "2026-07-22T13:03:10Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "paper_id": "10.56334/sei/8.3.501",
+  "designation": "international-algorithm-specific",
+  "title": "Personalized Financial Product Recommendation Using Collaborative Filtering",
+  "authors": "Context Mod",
+  "year": 2015,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "11.A",
+    "4.A",
+    "4.B",
+    "5.C",
+    "7.B"
+  ],
+  "tldr": "As netizens, we interact with recommendation systems daily - while using movie or music",
+  "problem_and_motivation": "As netizens, we interact with recommendation systems daily - while using movie or music",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "11.A",
+        "name": "11.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.C",
+        "name": "5.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Personalized Financial Product Recommendation Using Collaborative Filtering"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Personalized Financial Product Recommendation Using Collaborative Filtering",
+    "Year: 2015",
+    "Designation: international-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Pritam & Pramod_marked.md",
+      "converted_at": "2026-07-21T08:13:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

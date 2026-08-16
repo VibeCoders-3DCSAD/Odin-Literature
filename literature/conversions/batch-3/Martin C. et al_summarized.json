@@ -1,0 +1,115 @@
+{
+  "paper_id": "10.XXXX/ails.2023.56-66",
+  "designation": "international-algorithm-specific",
+  "title": "Adaptive Learning Architectures for Evolving Data Streams: Challenges and Advances",
+  "authors": "Martin, C. E.; Lefèvre, H. A.; Dubois, C. R.",
+  "year": 2023,
+  "venue": "Adaptive Intelligence and Lifelong Systems",
+  "odin_topics": ["6.A", "6.B", "7.D", "14.B"],
+  "tldr": "Surveys adaptive learning architectures for evolving data streams, focusing on incremental learning, concept drift adaptation, and real-time model updating.",
+  "problem_and_motivation": "Traditional static models fail in non-stationary environments where data distributions evolve. Lifelong learning systems must retain knowledge while adapting to new information, but catastrophic forgetting and concept drift remain unsolved. There is a need for robust, scalable architectures that balance plasticity and stability under resource constraints.",
+  "approach": [
+    "Surveys incremental learning, online learning, and continual learning paradigms with emphasis on concept drift.",
+    "Reviews regularization-based methods (EWC, Synaptic Intelligence) that preserve important weights.",
+    "Examines dynamic architectures (Progressive Neural Networks, PackNet) that grow or prune networks for new tasks.",
+    "Covers ensemble-based streaming solutions (Learn++, Adaptive Random Forest) for drift handling.",
+    "Discusses meta-learning frameworks that enable rapid adaptation from limited data.",
+    "Explores open-world learning with out-of-distribution detection and memory-augmented networks.",
+    "Reviews unsupervised continual learning using self-supervised representations and dynamic clustering.",
+    "Examines federated lifelong learning with shared memory modules for decentralized knowledge transfer.",
+    "Analyzes class-imbalance-aware strategies including adaptive re-weighting and loss calibration.",
+    "Proposes a framework with stream preprocessing, dual drift detection, incremental optimization, and memory consolidation."
+  ],
+  "findings": [
+    "num: Proposed framework achieved 77.9% accuracy on Rotating MNIST, outperforming ER (74.8%) and EWC (72.1%).",
+    "num: On CIFAR-100, the method reached 64.2% accuracy versus 61.4% for ER and 55.3% for EWC.",
+    "num: Backward transfer was -5.6% on Rotating MNIST, the least negative among baselines (ER: -10.1%, EWC: -13.8%).",
+    "num: Ablating drift detection caused a 3.1–5.7% drop in average accuracy across nonstationary environments.",
+    "The combination of representation-based drift detection and selective memory replay yields optimal stability-plasticity balance.",
+    "The framework maintains computational overhead comparable to ER and EWC, suitable for edge deployment.",
+    "Dynamic drift-aware learning adjusts learning rates and regularization more effectively than static schedules."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Online-dynamic-clustering-based Soft Sensor → architecture for industrial semi-supervised streams.",
+    "Figure 2: Flowchart implemented in the Supervisor for Managing Actions → workflow for action management.",
+    "Figure 3: Adaptive Learning Rate in Dynamical Binary Environments → visualization of adaptive rates.",
+    "Figure 4: A Survey on Active Learning: State-of-the-art → overview of active learning research.",
+    "Figure 5: Performance of Network Selection Policy on Image-net → network selection results.",
+    "Figure 6: Different Network Selection Topologies → architecture variants considered.",
+    "Figure 7: Accuracy Gains at Different Layers for Early Exits → layer-wise accuracy improvements.",
+    "Table 1: Core Components of the Proposed Framework → preprocessing, drift detection, incremental update, memory management.",
+    "Table 2: System Adaptation Strategies for Different Concept Drift Types → sudden, gradual, recurring responses.",
+    "Table 3: Final Average Accuracy (%) across Tasks → comparison of all methods on four datasets.",
+    "Table 4: Backward Transfer (BWT %) → catastrophic forgetting comparison."
+  ],
+  "key_equations": [
+    {"equation": "\\mathcal{L} = \\mathbb{E}_{(x,y) \\sim P_t} \\ell(y, f_t(x;\\theta_t))", "explanation": "Expected loss over evolving data distribution."},
+    {"equation": "\\Delta = \\mu_{\\text{old}} - \\mu_{\\text{new}} > \\epsilon", "explanation": "ADWIN statistical drift detection criterion."},
+    {"equation": "\\text{Drift}_{\\text{rep}} = \\frac{1}{k} \\sum_{i=1}^k \\frac{h_t^{(i)} \\cdot h_{t-k}^{(i)}}{\\|h_t^{(i)}\\| \\|h_{t-k}^{(i)}\\|}", "explanation": "Embedding drift via cosine distance."},
+    {"equation": "\\mathcal{L}_{\\text{total}} = \\mathcal{L}_{\\text{task}} + \\frac{\\lambda}{1-\\lambda} \\cdot \\Omega", "explanation": "Adaptive regularized loss for incremental updates."},
+    {"equation": "\\Omega = \\frac{1}{2} \\sum_i F_i (\\theta_i - \\theta_i^*)^2", "explanation": "EWC regularization term using Fisher information."},
+    {"equation": "w = \\text{sim}(h_{\\text{current}}, h_{\\text{stored}}) \\cdot \\alpha", "explanation": "Recurring drift replay weight calculation."},
+    {"equation": "\\text{BWT} = \\frac{1}{T-1} \\sum_{i=1}^{T-1} (A_{T,i} - A_{i,i})", "explanation": "Backward transfer measurement for forgetting."}
+  ],
+  "definitions": [
+    {"term": "EWC", "definition": "Elastic Weight Consolidation, a regularization-based continual learning method."},
+    {"term": "LwF", "definition": "Learning without Forgetting, a method for incremental task learning."},
+    {"term": "GEM", "definition": "Gradient Episodic Memory, a replay-based continual learning approach."},
+    {"term": "ER", "definition": "Experience Replay, a memory buffer-based method for mitigating forgetting."},
+    {"term": "BWT", "definition": "Backward Transfer, a metric measuring performance degradation on previous tasks."}
+  ],
+  "citations": [
+    {"author": "Kirkpatrick", "year": 2017, "page": 0, "paragraph": 0, "claim": "EWC preserves important weights to avoid catastrophic forgetting via Fisher information regularization.", "role": "methodology"},
+    {"author": "Zenke", "year": 2017, "page": 0, "paragraph": 0, "claim": "Synaptic Intelligence calculates per-weight importance for continual learning.", "role": "methodology"},
+    {"author": "Lopez-Paz", "year": 2017, "page": 0, "paragraph": 0, "claim": "Gradient Episodic Memory enables positive backward transfer in continual learning.", "role": "baseline"},
+    {"author": "Rusu", "year": 2016, "page": 0, "paragraph": 0, "claim": "Progressive Neural Networks add task-specific submodules to avoid forgetting.", "role": "methodology"},
+    {"author": "Mallya", "year": 2018, "page": 0, "paragraph": 0, "claim": "PackNet prunes and reuses network capacity for multiple tasks.", "role": "methodology"},
+    {"author": "Gomes", "year": 2017, "page": 0, "paragraph": 0, "claim": "Adaptive Random Forests provide ensemble-based streaming classification with drift handling.", "role": "baseline"},
+    {"author": "De Lange", "year": 2021, "page": 0, "paragraph": 0, "claim": "Comprehensive survey categorizes continual learning methods by architecture, memory, and regularization.", "role": "context"},
+    {"author": "Zhang", "year": 2020, "page": 0, "paragraph": 0, "claim": "ORE framework integrates episodic memory for open-set recognition in evolving environments.", "role": "context"},
+    {"author": "Mundt", "year": 2021, "page": 0, "paragraph": 0, "claim": "Self-supervised representations and dynamic clustering enable unsupervised continual learning.", "role": "context"},
+    {"author": "Chen", "year": 2024, "page": 0, "paragraph": 0, "claim": "Federated lifelong learning architecture with shared memory modules for decentralized clients.", "role": "context"},
+    {"author": "Borsos", "year": 2020, "page": 0, "paragraph": 0, "claim": "Adaptive re-weighting and loss calibration improve rare-class performance in class-imbalanced continual learning.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "low", "justification": "Discusses predictive modeling generally, not finance-specific."},
+      {"code": "6.B", "name": "Forecasting Algorithms for Sequential Spending Data", "relevance": "low", "justification": "Covers streaming data forecasting but not spending data."},
+      {"code": "7.D", "name": "Infeasibility Handling and Reduction Hierarchies", "relevance": "contextual", "justification": "Adaptive systems handle constraints but not budget allocation specifically."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "medium", "justification": "Discusses deployment in edge and resource-constrained environments."}
+    ],
+    "contribution_to_field": "This paper provides a comprehensive survey of adaptive learning architectures for evolving data streams, synthesizing methods from regularization, dynamic architectures, ensembles, and meta-learning. It introduces a unified framework with dual drift detection and selective memory replay that achieves state-of-the-art performance on continual learning benchmarks. The work advances theoretical understanding of stability-plasticity balance and offers practical guidance for deploying lifelong learning systems in resource-constrained environments. It identifies open challenges including unsupervised drift detection, meta-learning adaptation policies, and long-term memory consolidation.",
+    "directly_justifies": [
+      "Combining representation-based drift detection with selective memory replay yields optimal stability-plasticity balance.",
+      "Dynamic drift-aware learning adjusts learning rates and regularization more effectively than static schedules.",
+      "The proposed framework maintains competitive computational overhead, suitable for edge and online deployment."
+    ],
+    "limits": [
+      "The paper focuses on classification tasks and does not address regression or sequence prediction problems.",
+      "Evaluation is limited to synthetic and structured real-world datasets; applicability to unstructured data is not explored.",
+      "The method assumes labeled data availability; unsupervised drift detection is identified as future work."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. The paper's primary relevance is to general adaptive learning and streaming systems, with only contextual or low relevance to personal finance topics. Topic 6.A (Predictive Modeling) and 6.B (Forecasting Algorithms) were flagged as low relevance because while the paper discusses predictive modeling and streaming forecasting, it does not address financial spending data specifically. Topic 7.D (Infeasibility Handling) was marked contextual due to the framework's handling of constraints but not in a budget allocation context. Topic 14.B (ML Model Serving and Deployment) was marked medium because the paper explicitly discusses deployment in edge and online systems with resource constraints, which is relevant to serving financial ML models. All other domains (Filipino demographics, financial behavior, expense categorization, UX, privacy, engagement, evaluation, savings, debt, synthetic data) were rejected as the paper contains no coverage of these topics. The paper is a general machine learning survey and does not engage with personal finance domain content."
+  },
+  "limitations": [
+    "The survey does not systematically compare the computational costs of different methods beyond training time and memory usage.",
+    "The proposed framework's performance on real-world deployment scenarios beyond the studied datasets is not evaluated. [unacknowledged]",
+    "The paper acknowledges that unsupervised drift detection and meta-learning-driven adaptation policies remain open research questions."
+  ],
+  "remember_this": [
+    "Combining representation-based drift detection with selective memory replay optimizes stability-plasticity balance.",
+    "The proposed framework outperforms EWC and ER on Rotating MNIST, CIFAR-100, Electricity, and Airline Delay.",
+    "Ablating drift detection causes a 3.1% to 5.7% accuracy drop in nonstationary environments.",
+    "The method maintains competitive computational overhead, making it practical for edge deployment.",
+    "Backward transfer is least negative at -5.6% on Rotating MNIST, confirming strong knowledge retention."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-23T10:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Martin C. et al_marked.md",
+      "converted_at": "2026-07-21T14:11:56Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

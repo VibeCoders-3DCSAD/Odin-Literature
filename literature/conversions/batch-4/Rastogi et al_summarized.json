@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.55041/IJSREM46164",
+  "designation": "local-algorithm-specific",
+  "title": "Financial Transaction Categorization Using Natural Language Processing",
+  "authors": "International Journal; Scientific Research",
+  "year": 2018,
+  "venue": "International Journal of Scientific Research in Engineering and Management (IJSREM)",
+  "odin_topics": [
+    "1.C",
+    "10.A",
+    "12.A",
+    "4.A",
+    "4.B",
+    "6.A",
+    "8.A"
+  ],
+  "tldr": "This research paper delves into the realm of artificial intelligence-driven expense tracker applications, exploring their historical progression, underlying technological frameworks, and practical utilization. Drawing from current literature, the study scrutinizes the limitations of existing systems and suggests improvements through the integration of advanced technologies such as OAuth for secure",
+  "problem_and_motivation": "This research paper delves into the realm of artificial intelligence-driven expense tracker applications, exploring their historical progression, underlying technological frameworks, and practical utilization. Drawing from current literature, the study scrutinizes the limitations of existing systems and suggests improvements through the integration of advanced technologies such as OAuth for secure login, the employment of Firebase for data management, and the utilization of TensorFlow for predic",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "8.A",
+        "name": "8.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Financial Transaction Categorization Using Natural Language Processing"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Financial Transaction Categorization Using Natural Language Processing",
+    "Year: 2018",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Rastogi et al_marked.md",
+      "converted_at": "2026-07-21T08:18:22Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "paper_id": "10.1007/s12525-024-00746-8",
+  "designation": "international-algorithm-specific",
+  "title": "SynDEc: A Synthetic Data Ecosystem",
+  "authors": "Karst, F. S.; Li, M. M.; Leimeister, J. M.",
+  "year": 2025,
+  "venue": "Electronic Markets",
+  "odin_topics": ["1.B", "3.A", "3.B", "4.A", "4.B", "6.A", "7.A", "7.B", "7.C", "8.A", "8.B", "10.A", "10.B", "12.A", "12.B", "12.C", "14.A", "14.B"],
+  "tldr": "Designs and validates a synthetic data sharing ecosystem (SynDEc) for financial institutions, demonstrating that it enables privacy-preserving data exchange and improves predictive model performance, particularly benefiting smaller banks.",
+  "problem_and_motivation": "Small and mid-sized banks lack the high-quality data volumes needed to leverage advanced AI for tasks like fraud detection. Existing solutions like open banking and federated learning face significant limitations related to privacy, scalability, and adaptability, creating a need for a secure and effective data-sharing ecosystem.",
+  "approach": [
+    "Employed Design Science Research Methodology (DSRM) in collaboration with UnionBank of the Philippines and a European neo bank.",
+    "Conducted four iterative design cycles to develop and refine design principles for a synthetic data ecosystem.",
+    "Evaluated multiple synthetic data generation algorithms (GANs, VAEs, GMMs) on real-world and simulated financial transaction datasets.",
+    "Compared the performance of machine learning models (XGBoost) trained on isolated real data vs. shared synthetic data vs. a combination of both.",
+    "Analyzed the ecosystem's performance under varied conditions, including different data distributions, participant sizes, and the presence of non-contributing entities."
+  ],
+  "findings": [
+    "TVAE (Variational Autoencoder) outperformed other tested algorithms for generating synthetic financial transaction data.",
+    "num: Combining shared synthetic data with local real data improved ROC AUC score by 1% on the IEEE-CIS dataset.",
+    "num: Models trained with shared synthetic data outperformed those without it, improving ROC AUC by 3.6% and 6.6% for fraud and anti-money laundering detection, respectively.",
+    "There is no universally optimal mix-in percentage of real and synthetic data; it is context-specific for each institution.",
+    "Training separate, pre-trained synthetic data generators for each class ('sepPre') proved to be the most beneficial setup.",
+    "Smaller banks disproportionately benefit from participating in the synthetic data ecosystem, with a negative correlation of -0.09 between bank size and performance gain.",
+    "The ecosystem remains viable and provides significant performance gains even with only 50% of institutions participating."
+  ],
+  "key_figures_tables": [
+    "Figure 4: ROC AUC scores by generation algorithm → TVAE (0.89) shows superior performance for synthetic data generation.",
+    "Figure 5: Performance comparison for data combinations → Combining synthetic and real data yields a 1% ROC AUC improvement.",
+    "Figure 7: Performance improvement across datasets → Synthetic data boosts ROC AUC by 3.6% (fraud) and 6.6% (AML) vs. no sharing.",
+    "Figure 8: Effect of mix-in percentage → Optimal mix-in percentage is context-specific and varies by institution.",
+    "Figure 10: Performance gain per bank → Smaller banks experience larger performance gains, providing a clear incentive for participation."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "SynDEc",
+      "definition": "Synthetic Data Ecosystem - a system for sharing synthetic financial transaction data between institutions."
+    },
+    {
+      "term": "GAN",
+      "definition": "Generative Adversarial Network - a model with a generator and discriminator trained to produce realistic synthetic data."
+    },
+    {
+      "term": "VAE",
+      "definition": "Variational Autoencoder - a generative model that learns a compressed representation of data to generate new samples."
+    },
+    {
+      "term": "TVAE",
+      "definition": "Triplet-based Variational Autoencoder - a VAE variant mentioned in the literature search."
+    },
+    {
+      "term": "ROC AUC",
+      "definition": "Area Under the Receiver Operating Characteristic Curve - a performance metric evaluating classifier trade-offs between sensitivity and specificity."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Gelhaar",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Cooperative challenges are a major hurdle to data ecosystem development (location approximate, see Section 2.1).",
+      "role": "context"
+    },
+    {
+      "author": "Brée",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data security and AI/ML integration are under-researched gaps in data ecosystems (location approximate, see Section 2.1).",
+      "role": "context"
+    },
+    {
+      "author": "Goodfellow",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "GANs learn by pitting a generator and discriminator against each other, creating skilled networks (location approximate, see Section 2.2).",
+      "role": "methodology"
+    },
+    {
+      "author": "Yoon",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "TimeGAN is a GAN variant that incorporates the temporal dimension between samples (location approximate, see Section 5.1).",
+      "role": "baseline"
+    },
+    {
+      "author": "Xu",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "CTGAN is a GAN variant modeling dependencies between attributes (location approximate, see Section 5.1).",
+      "role": "baseline"
+    },
+    {
+      "author": "Patki",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "The Synthetic Data Vault library was used as the basis for the SynDEc prototype (location approximate, see Section 5.2).",
+      "role": "methodology"
+    },
+    {
+      "author": "Altman",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Simulated financial transactions (IBM-AML, IBM-CCF) were used due to a lack of public data (location approximate, see Section 6).",
+      "role": "methodology"
+    },
+    {
+      "author": "Yale",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Nearest neighbor adversarial accuracy is a measure of privacy leakage through overfitting (location approximate, see Section 5.1).",
+      "role": "methodology"
+    },
+    {
+      "author": "Choi",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Membership inference risk precision measures how easy it is to predict if a record was in the training set (location approximate, see Section 5.1).",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "contextual",
+        "justification": "Paper discusses financial services in developing economies, but does not focus on Filipino young professionals specifically."
+      },
+      {
+        "code": "3.A",
+        "name": "Expense Categorization Frameworks",
+        "relevance": "contextual",
+        "justification": "The paper mentions 'transaction data' and 'spending patterns' but does not propose a categorization framework."
+      },
+      {
+        "code": "3.B",
+        "name": "Expense Category Design Considerations",
+        "relevance": "contextual",
+        "justification": "Paper does not focus on the design of expense categories."
+      },
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Comprehensively reviews and critiques existing solutions like open banking and federated learning for financial data sharing."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Explicitly identifies limitations of current data ecosystems and synthetic data generation research in the financial context."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Core focus is on using shared synthetic data to improve predictive models (XGBoost) for fraud and AML detection."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Not directly related to budgeting strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Not related to budget recommendations."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "Not related to constrained optimization for budgeting."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Fraud detection, the main application, is a primary use case for anomaly detection in finance."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "medium",
+        "justification": "Evaluates algorithms for fraud detection, a key anomaly detection task, but does not assess multiple anomaly detectors extensively."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Privacy is a central challenge and solution objective of the paper, with experiments on privacy metrics."
+      },
+      {
+        "code": "10.B",
+        "name": "User Trust in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses building trust through control mechanisms and intermediary involvement, such as regulators."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Uses a systematic DSRM approach with iterative build-and-evaluate cycles."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Rigorous comparison of synthetic data generation algorithms (CTGAN, TVAE, GMM, TimeGAN) and training schemes."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "contextual",
+        "justification": "Not related to budget recommendations."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "high",
+        "justification": "The core contribution is the design and evaluation of a system for generating and sharing synthetic financial transaction data."
+      },
+      {
+        "code": "14.B",
+        "name": "ML Model Serving and Deployment",
+        "relevance": "contextual",
+        "justification": "Paper focuses on data generation and ecosystem design, not on model serving or deployment."
+      }
+    ],
+    "contribution_to_field": "This paper contributes to the field of data ecosystems by providing prescriptive design knowledge for a synthetic data sharing ecosystem tailored for financial services. It addresses identified gaps in privacy-preserving data exchange and the use of multi-organizational data for machine learning. The study extends research on synthetic data generation by benchmarking algorithms in a novel cross-institutional context and identifying optimal training schemes. Furthermore, it demonstrates the viability and benefits of such an ecosystem, showing how it can overcome early-stage cooperative challenges and provide disproportionate benefits to smaller institutions.",
+    "directly_justifies": [
+      "Smaller banks benefit most from SynDEcs due to a negative correlation between bank size and performance gain.",
+      "TVAE is a more suitable algorithm than GANs for generating synthetic financial transaction data in this context.",
+      "Combining real and synthetic data yields better model performance than using either in isolation.",
+      "The SynDEc remains effective and provides significant gains even with only 50% participant coverage."
+    ],
+    "limits": [
+      "The study is limited to financial services and uses publicly available or simulated datasets, not real bank data.",
+      "Advanced graph-based generation methods and differentially private models were not evaluated.",
+      "The paper does not explore detailed incentive mechanisms for ecosystem usage."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was conducted. The paper was found to have high relevance to topics concerning the landscape of existing systems (4.A) and their limitations (4.B), as it reviews and critiques open banking and federated learning. It directly addresses predictive modeling (6.A) and anomaly detection (8.A) through its core experiments on fraud detection. Privacy (10.A) is a primary problem addressed, and the evaluation methodology (12.B) is a key contribution, as is the generative use of synthetic data (14.A). Medium relevance was assigned to topics like user trust (10.B) and evaluation frameworks (12.A), as they are discussed but not the primary focus. Topics related to budgeting (7.A, 7.B, 7.C, 12.C) and Filipino demographics (1.A, 1.B, 1.C, 2.A, 2.B, 2.C, 2.D) were considered but rejected due to a lack of direct or even contextual relevance. The overall coverage is centered on the design, evaluation, and privacy implications of a technical data-sharing solution."
+  },
+  "limitations": [
+    "The study was constrained by the available data, preventing the consideration of advanced graph-based generation methods. [unacknowledged]",
+    "Privacy was tested but not fully guaranteed by the models used, requiring future work on differentially private methods. [unacknowledged]",
+    "The design of an effective back-testing mechanism for the ecosystem's predictive performance was not fully explored. [unacknowledged]",
+    "The paper does not explore detailed incentive mechanisms for ecosystem usage in depth. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Synthetic data sharing improves fraud detection performance for financial institutions.",
+    "TVAE is the most effective algorithm for generating synthetic financial transaction data.",
+    "Smaller banks benefit the most from participating in a synthetic data ecosystem.",
+    "The optimal mix of real and synthetic training data varies by institution.",
+    "A synthetic data ecosystem can provide value even with partial participation."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Karst et al_marked.md",
+      "converted_at": "2026-07-21T13:41:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

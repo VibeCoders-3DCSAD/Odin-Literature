@@ -1,0 +1,110 @@
+{
+  "paper_id": "10.1109/ACCESS.2025.3589938",
+  "designation": "international",
+  "title": "Human Behavior Analysis: A Comprehensive Survey on Techniques, Applications, Challenges, and Future Directions",
+  "authors": "Essahraui, S.; Lamaakal, I.; Maleh, Y.; El Makkaoui, K.; Bouami, M. F.; Ouahbi, I.; Abd El-Latif, A. A.; Almousa, M.; Rodrigues, J. J. P. C.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "odin_topics": [
+    "5.A",
+    "6.A",
+    "10.A",
+    "8.A"
+  ],
+  "tldr": "Comprehensive survey of Human Behavior Analysis covering AI-driven methods from deep learning, NLP, and computer vision across healthcare, marketing, education, and criminal justice domains.",
+  "problem_and_motivation": "Human Behavior Analysis is a rapidly growing interdisciplinary field combining psychology, sociology, AI, and data science, but existing literature lacks a comprehensive survey covering techniques, applications, challenges, and future directions across domains.",
+  "approach": [
+    "Comprehensive survey of Human Behavior Analysis techniques from manual observation to AI-driven methods.",
+    "Explores deep learning, NLP, and computer vision approaches for behavior analysis.",
+    "Covers applications in healthcare, marketing, education, workplace productivity, activity recognition, and criminal justice.",
+    "Discusses data sources: sensor data, social media, physiological signals, and multimodal analysis.",
+    "Examines challenges: data privacy, generalization, real-time processing, scalability."
+  ],
+  "findings": [
+    "AI-driven methods such as deep learning, NLP, and computer vision dominate modern HBA approaches.",
+    "HBA enhances outcomes across healthcare, marketing, education, and criminal justice.",
+    "Major challenges include data privacy, generalization across populations, and real-time processing requirements.",
+    "Emerging trends include edge computing, Large Language Models, and privacy-preserving techniques."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Human Behavior Analysis",
+      "definition": "Interdisciplinary field combining psychology, sociology, AI, and data science to model, understand, and predict human behavior."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Survey paper; comprehensive reference list.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "HBA techniques applicable to financial behavior profiling."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Reviews predictive modeling techniques applicable to finance."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Discusses privacy-preserving techniques for behavioral data."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Activity recognition techniques could relate to anomaly detection."
+      }
+    ],
+    "contribution_to_field": "Provides a holistic review of HBA spanning traditional to AI-driven techniques across multiple domains. Highlights emerging trends including LLMs and privacy-preserving methods for future research.",
+    "directly_justifies": [
+      "HBA enhances decision-making across healthcare, marketing, education, and criminal justice.",
+      "Data privacy is a major challenge for HBA deployment."
+    ],
+    "limits": [
+      "Survey covers HBA broadly, not specifically personal finance.",
+      "Limited depth on financial behavior analysis specifically."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 5.A, 6.A, 10.A (medium), 8.A (low). Rejected Philippine-specific and budgeting-specific topics as this is a general HBA survey."
+  },
+  "limitations": [
+    "Broad survey limited depth in any specific domain.",
+    "Financial behavior analysis not a primary focus."
+  ],
+  "remember_this": [
+    "AI-driven methods dominate modern Human Behavior Analysis.",
+    "Edge computing and LLMs are emerging HBA trends.",
+    "Data privacy remains a major HBA challenge."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Essahraui et al_marked.md",
+      "converted_at": "2026-07-22T13:17:39Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

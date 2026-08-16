@@ -1,0 +1,79 @@
+{
+  "paper_id": "10.15662/IJARCST.2024.0705011",
+  "designation": "international-algorithm-specific",
+  "title": "AI-Augmented Fraud Detection in Cloud Platforms: GRA-Based Risk Ranking with Cybersecurity and Threat Prevention for SAP HANA Healthcare ERP",
+  "authors": "Holmgren, E. D. L.",
+  "year": 2024,
+  "venue": "International Journal of Advanced Research in Computer Science & Technology (IJARCST)",
+  "odin_topics": ["8.A", "8.B", "14.B"],
+  "tldr": "Proposes a DevOps-centric AI fraud detection framework combining graph-based risk ranking with supervised and unsupervised models for SAP HANA healthcare ERP, using synthetic data evaluation.",
+  "problem_and_motivation": "Traditional fraud detection systems rely on rule-based engines or batch classifiers that struggle with zero-day attacks, multi-entity fraud rings, and high false positives. They lack integration with modern DevOps workflows for rapid model iteration.",
+  "approach": [
+    "Designed a pipeline integrating data ingestion, preprocessing, feature extraction, graph construction, and model scoring stages.",
+    "Implemented a Graph-Risk-Adaptive (GRA) ranking module using entity graphs to compute risk-based rankings.",
+    "Combined supervised classification with unsupervised anomaly detection and graph-based relational risk scoring.",
+    "Built CI/CD pipeline using Azure DevOps and GitHub for automated orchestration of data and model lifecycle.",
+    "Evaluated on synthetic transactional data simulating petabyte-scale cloud-native environments with fraud rings and concept drift."
+  ],
+  "findings": [
+    "num: Hybrid supervised+GRA model consistently outperformed supervised-only and supervised+anomaly baselines.",
+    "Graph-based risk ranking captures complex fraud patterns (fraud rings, synthetic identities) missed by classifiers alone.",
+    "DevOps integration enables rapid model updates and continuous adaptation to new fraud patterns.",
+    "Combining classification with graph scoring reduces false positives by filtering out benign anomalies."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "GRA", "definition": "Graph-Risk-Adaptive ranking module"},
+    {"term": "ERP", "definition": "Enterprise Resource Planning"},
+    {"term": "CI/CD", "definition": "Continuous Integration and Continuous Deployment"}
+  ],
+  "citations": [
+    {"author": "Reference - SCARFF", "year": 0, "page": 0, "paragraph": 0, "claim": "Combined Kafka, Spark, and Cassandra for real-time fraud detection.", "role": "baseline"},
+    {"author": "Reference - PRODIGAL", "year": 0, "page": 0, "paragraph": 0, "claim": "Proactive discovery of insider threats using graph analysis and learning.", "role": "methodology"},
+    {"author": "Reference - SAMM", "year": 0, "page": 0, "paragraph": 0, "claim": "Streaming Automatic Model Monitoring for unsupervised drift detection.", "role": "context"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "8.A", "name": "Anomaly Detection in Personal Finance Systems", "relevance": "high", "justification": "Core contribution is fraud and anomaly detection in financial transaction data."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "GRA ranking and hybrid classification are novel algorithmic approaches for anomaly detection."},
+      {"code": "14.B", "name": "ML Model Serving and Deployment", "relevance": "high", "justification": "DevOps-centric CI/CD pipeline for ML model deployment is a central contribution."}
+    ],
+    "contribution_to_field": "This paper introduces a graph-based risk ranking approach to fraud detection that captures relational fraud patterns missed by traditional classifiers. It demonstrates the value of DevOps-centric pipeline orchestration for continuous model adaptation in production environments. The hybrid architecture combining supervised and graph-based methods offers a framework for reducing false positive rates while maintaining detection coverage.",
+    "directly_justifies": [
+      "Graph-based risk ranking detects fraud rings and synthetic identity fraud.",
+      "Hybrid supervised+GRA outperforms supervised-only baselines.",
+      "DevOps CI/CD integration enables rapid adaptation to evolving fraud patterns."
+    ],
+    "limits": [
+      "Evaluation on synthetic data may not fully capture real-world complexity and noise.",
+      "Healthcare ERP focus may not generalize to personal finance transaction monitoring.",
+      "Graph construction overhead at petabyte scale may become a performance bottleneck."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 8 (Anomaly Detection) was flagged as high relevance because the paper's core contribution is fraud detection methodology. Domain 14.B (ML Serving) was flagged as high because DevOps pipeline integration is a central contribution. All other domains (1-7, 9-13) were rejected as the paper addresses cloud infrastructure fraud detection, not personal finance."
+  },
+  "limitations": [
+    "Synthetic data evaluation may not generalize to real-world production environments.",
+    "Graph construction and computation overhead at petabyte scale not fully addressed.",
+    "Operational complexity of the full pipeline requires specialized engineering teams."
+  ],
+  "remember_this": [
+    "Graph-based risk ranking outperforms supervised-only fraud detection.",
+    "Hybrid approach reduces false positives by filtering benign anomalies.",
+    "DevOps CI/CD enables continuous adaptation to evolving fraud patterns.",
+    "GRA captures fraud rings and synthetic identities missed by classifiers."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Holmgren_marked.md",
+      "converted_at": "2026-07-22T13:34:47Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.47772/IJRISS.2025.91200252",
+  "designation": "local",
+  "title": "Ka-abag o Babag? Exploring the Lived Experiences in the Context of Financial Well-being of Microfinance Borrowers",
+  "authors": "Estorba, V. L.; Relativo, J. L. C.; Rellon, S. B. S.; Regis, K. J. M.",
+  "year": 2025,
+  "venue": "International Journal of Research and Innovation in Social Science (IJRISS)",
+  "odin_topics": [
+    "2.A",
+    "2.D",
+    "13.B",
+    "1.C"
+  ],
+  "tldr": "Microfinance acts as both support (ka-abag) and hindrance (babag) for Filipino borrowers, providing short-term relief while potentially perpetuating stress and debt dependency.",
+  "problem_and_motivation": "Previous research on microfinance borrowers' financial well-being focuses heavily on quantitative measures without capturing lived experiences and coping strategies.",
+  "approach": [
+    "Qualitative transcendental phenomenological design with 15 purposively selected female borrowers from Argao, Cebu.",
+    "Inclusion criteria: at least three years borrowing experience and multiple active loans.",
+    "In-depth interviews analyzed using Colaizzi's (1978) method.",
+    "Guided by Lazarus and Folkman's Transactional Model of Stress and Coping and Sen's Capability Approach."
+  ],
+  "findings": [
+    "Nine major themes emerged including Living on the Edge of Survival, Debt Burden and Psychological Strain, Adaptive Financial Management.",
+    "Microfinance provides short-term relief and promotes financial discipline.",
+    "Microfinance can also perpetuate stress and debt dependency.",
+    "Effective coping strategies enable borrowers to navigate poverty more intentionally.",
+    "Microfinance has a dual nature as both ka-abag (support) and babag (hindrance)."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Ka-abag",
+      "definition": "Cebuano term meaning support or assistance."
+    },
+    {
+      "term": "Babag",
+      "definition": "Cebuano term meaning hindrance or obstacle."
+    }
+  ],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "No external citations.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "high",
+        "justification": "Philippines-specific microfinance study using Cebuano cultural framing."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and Occasions",
+        "relevance": "medium",
+        "justification": "Explores how microfinance relates to household consumption cycles."
+      },
+      {
+        "code": "13.B",
+        "name": "Debt Management in PFMS",
+        "relevance": "high",
+        "justification": "Core focus on microfinance borrowing, debt burden, and debt management."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Studies financial behaviors of Filipino microfinance borrowers."
+      }
+    ],
+    "contribution_to_field": "Provides rich qualitative evidence of the dual nature of microfinance for Filipino borrowers. Reveals how microfinance simultaneously supports and hinders financial well-being. Documents coping strategies and psychological dimensions of debt.",
+    "directly_justifies": [
+      "Microfinance provides short-term relief but can perpetuate debt dependency.",
+      "Effective coping strategies enable borrowers to navigate poverty more intentionally.",
+      "Microfinance has a dual nature as both support and hindrance."
+    ],
+    "limits": [
+      "Qualitative design with 15 participants limits generalizability.",
+      "Single location in Argao, Cebu limits geographic scope."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 domains. Flagged 2.A, 13.B (high), 1.C, 2.D (medium). Rejected algorithmic topics. Qualitative phenomenological study."
+  },
+  "limitations": [
+    "Qualitative design with 15 female participants limits generalizability.",
+    "Single location in Argao, Cebu.",
+    "Focus on female borrowers only. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Microfinance is both support (ka-abag) and hindrance (babag).",
+    "Short-term relief can come with long-term debt dependency.",
+    "Adaptive coping strategies help borrowers navigate poverty intentionally."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Estorba et al_marked.md",
+      "converted_at": "2026-07-22T13:21:16Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

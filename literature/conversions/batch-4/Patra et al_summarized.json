@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.71443/er.ar16",
+  "designation": "local-algorithm-specific",
+  "title": "AI-Driven Goal Based Financial Planning System: A Framework for Contextual Feasibility Validation",
+  "authors": "Engineering Research",
+  "year": 2022,
+  "venue": "Unknown",
+  "odin_topics": [
+    "10.A",
+    "12.A",
+    "13.B",
+    "4.A",
+    "4.B",
+    "6.A",
+    "7.B"
+  ],
+  "tldr": "In the wake of growing complexity in financial decision-making and the ever- changing economic environment, conventional financial planning strategies have proven inadequate. This paper presents an artificial intelligence (AI) powered goal-based financial planning system with contextual feasibility analysis to improve the precision and responsiveness of financial planning. The system combines seve",
+  "problem_and_motivation": "In the wake of growing complexity in financial decision-making and the ever- changing economic environment, conventional financial planning strategies have proven inadequate. This paper presents an artificial intelligence (AI) powered goal-based financial planning system with contextual feasibility analysis to improve the precision and responsiveness of financial planning. The system combines several elements, such as personal financial data analysis, machine learning for financial predictions, ",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "6.A",
+        "name": "6.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "7.B",
+        "name": "7.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Engineering Research 3048-880X Rademics Research Institute"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Engineering Research 3048-880X Rademics Research Institute",
+    "Year: 2022",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Patra et al_marked.md",
+      "converted_at": "2026-07-21T08:06:01Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

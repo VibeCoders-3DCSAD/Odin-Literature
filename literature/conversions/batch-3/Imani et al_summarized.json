@@ -1,0 +1,283 @@
+{
+  "paper_id": "10.3390/make7030105",
+  "designation": "international",
+  "title": "Customer Churn Prediction: A Systematic Review of Recent Advances, Trends, and Challenges in Machine Learning and Deep Learning",
+  "authors": "Imani, M.; Joudaki, M.; Beikmohammadi, A.; Arabnia, H.R.",
+  "year": 2025,
+  "venue": "Machine Learning and Knowledge Extraction",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "5.A",
+    "5.C",
+    "6.A",
+    "7.A",
+    "7.B",
+    "12.A",
+    "12.B"
+  ],
+  "tldr": "Systematic review of 240 studies (2020-2024) finds ensemble ML (XGBoost, LightGBM) remains dominant, while DL (LSTM, CNN) is increasingly applied, yet gaps persist in interpretability, real-world deployment, and business-aligned evaluation.",
+  "problem_and_motivation": "Customer churn significantly impacts business revenues, with annual rates of 20-40% in some sectors. While ML and DL methods are increasingly adopted for churn prediction, a systematic synthesis of recent advancements from 2020-2024 is lacking. This review addresses the need to map the current landscape, identify trends, and highlight persistent challenges.",
+  "approach": [
+    "Conducted a systematic literature search across six major databases (Springer, IEEE, Elsevier, MDPI, ACM, Wiley) via Lens.org using a targeted query string.",
+    "Applied PRISMA 2020 guidelines with a two-phase strategy: initial screening retrieved 837 articles, refined to 240 for bibliometric analysis.",
+    "Selected 61 studies for in-depth qualitative synthesis based on relevance, citation impact, methodological novelty, and contribution to the field.",
+    "Developed a novel hierarchical taxonomy categorizing ML (profit-centric, ensemble, optimization, adaptive, explainable, data-centric, traditional) and DL approaches (deep RL, sequential, hybrid, CNN, feedforward, NLP, feature interaction).",
+    "Conducted bibliometric analysis of publisher trends, citation dynamics, open-access effects, and research domain focus using Python (matplotlib, seaborn).",
+    "Narrative synthesis was performed due to heterogeneity in datasets, evaluation protocols, and modeling objectives across studies.",
+    "Direct comparison of reported performance metrics was intentionally avoided due to substantial heterogeneity."
+  ],
+  "findings": [
+    "num: IEEE accounts for 60.4% of total publications in the reviewed corpus.",
+    "num: Ensemble ML techniques (XGBoost, LightGBM, CatBoost) are the most widely adopted, with boosted tree models achieving up to 91.4% accuracy and 94.8% AUC in banking.",
+    "num: CNN-based models (e.g., ChurnNet) achieve accuracy scores of 95.59%, 96.94%, and 97.52% across three public telecom datasets.",
+    "num: Deep Neural Networks achieved 80.62% accuracy in 68 seconds, outperforming XGBoost and Random Forest in computational efficiency.",
+    "num: Open Access papers consistently outperform non-OA articles in normalized citation impact across all years from 2020-2024.",
+    "Deep learning approaches (LSTMs, CNNs, attention-based models) are increasingly applied to complex sequential and unstructured data.",
+    "Persistent challenges include class imbalance, model interpretability, concept drift, and limited adoption of profit-oriented evaluation metrics.",
+    "Explainable AI (SHAP, LIME) and adaptive learning show potential but have limited real-world adoption."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA flowchart showing screening process from 837 to 240 to 61 selected studies.",
+    "Figure 2: IEEE accounts for 60.4% of publications, followed by Springer (12.9%) and Elsevier (11.2%).",
+    "Figure 3: IEEE publication output peaked in 2023, while other publishers remained relatively stable.",
+    "Figure 5: Elsevier and MDPI consistently outperform other publishers in normalized impact factor.",
+    "Table 1: Summary of 30 conventional ML studies with dataset types, techniques used, and evaluation metrics.",
+    "Table 2: Summary of 17 deep learning studies with dataset types, techniques used, and performance metrics."
+  ],
+  "key_equations": [
+    {
+      "equation": "Normalized IF = Total Citations / (Number of Papers × Years Since Publication)",
+      "explanation": "Calculates average annual citations per paper for fair cross-year comparison."
+    }
+  ],
+  "definitions": [
+    { "term": "Churn", "definition": "Customers discontinuing their relationship with a company." },
+    { "term": "EMPC", "definition": "Expected Maximum Profit for Customer Churn, a profit-driven metric." },
+    { "term": "SMOTE", "definition": "Synthetic Minority Over-sampling Technique for addressing class imbalance." },
+    { "term": "XAI", "definition": "Explainable Artificial Intelligence, methods to make models transparent." },
+    { "term": "Concept Drift", "definition": "The evolving nature of customer behavior over time, complicating model accuracy." },
+    { "term": "LSTM", "definition": "Long Short-Term Memory, a type of recurrent neural network for sequential data." },
+    { "term": "CNN", "definition": "Convolutional Neural Network, effective for feature extraction and hierarchical data representation." },
+    { "term": "SHAP", "definition": "SHapley Additive exPlanations, a post-hoc model interpretability technique." }
+  ],
+  "citations": [
+    {
+      "author": "Ahn",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Annual churn rates range from 20% to 40% in some sectors.",
+      "role": "context"
+    },
+    {
+      "author": "Xiaoling",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Acquiring a new customer is five to twenty-five times more expensive than retaining an existing one.",
+      "role": "context"
+    },
+    {
+      "author": "Imani",
+      "year": 2023,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Boosting algorithms demonstrate strong predictive capabilities with structured datasets.",
+      "role": "context"
+    },
+    {
+      "author": "Lemmens",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Deep learning approaches often function as black-box models, limiting interpretability.",
+      "role": "critique"
+    },
+    {
+      "author": "Imani",
+      "year": 2024,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Data imbalance biases model predictions toward non-churners.",
+      "role": "finding"
+    },
+    {
+      "author": "Höppner",
+      "year": 2020,
+      "page": 14,
+      "paragraph": 0,
+      "claim": "ProfTree uses EMPC metric for profit-driven decision trees, enhancing profit over accuracy-centric approaches.",
+      "role": "methodology"
+    },
+    {
+      "author": "Maldonado",
+      "year": 2020,
+      "page": 15,
+      "paragraph": 0,
+      "claim": "Profit-oriented MPM model integrates profit maximization directly into classifier training.",
+      "role": "methodology"
+    },
+    {
+      "author": "Liu",
+      "year": 2022,
+      "page": 16,
+      "paragraph": 0,
+      "claim": "Hybrid clustering and classification achieved 96% accuracy on Orange dataset using stacking.",
+      "role": "finding"
+    },
+    {
+      "author": "Saias",
+      "year": 2022,
+      "page": 17,
+      "paragraph": 0,
+      "claim": "Random Forest achieved 98.8% accuracy and 0.997 AUC in cloud service churn prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Maretta",
+      "year": 2021,
+      "page": 18,
+      "paragraph": 0,
+      "claim": "LightGBM achieved 91.4% accuracy, 94.8% AUC, and 87.7% recall in banking churn prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "De Bock",
+      "year": 2021,
+      "page": 21,
+      "paragraph": 0,
+      "claim": "Spline-Rule Ensemble with SGL regularization balances predictive performance and interpretability.",
+      "role": "methodology"
+    },
+    {
+      "author": "Joy",
+      "year": 2024,
+      "page": 25,
+      "paragraph": 0,
+      "claim": "Hybrid LSTM-GRU with LightGBM achieved 95.60% AUC and 90.09% F1-score in streaming service churn.",
+      "role": "finding"
+    },
+    {
+      "author": "Saha",
+      "year": 2024,
+      "page": 27,
+      "paragraph": 0,
+      "claim": "ChurnNet with attention and residual blocks achieved 95.59%, 96.94%, and 97.52% accuracy on three datasets.",
+      "role": "methodology"
+    },
+    {
+      "author": "Van-Hieu",
+      "year": 2024,
+      "page": 27,
+      "paragraph": 0,
+      "claim": "Stacked ensemble DL with logistic regression achieved 96.60% accuracy in banking churn.",
+      "role": "finding"
+    },
+    {
+      "author": "Geiler",
+      "year": 2022,
+      "page": 4,
+      "paragraph": 0,
+      "claim": "Broad survey of ML approaches for churn prediction discussing strengths, limitations, and applications.",
+      "role": "baseline"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Reviews churn prediction across sectors, not specific PFMS systems."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "high",
+        "justification": "Systematically identifies gaps: class imbalance, interpretability, concept drift, profit metrics."
+      },
+      {
+        "code": "5.A",
+        "name": "Financial Behavioral Profiles in Personal Finance",
+        "relevance": "medium",
+        "justification": "Discusses behavioral patterns in customer data (usage, engagement) across domains."
+      },
+      {
+        "code": "5.C",
+        "name": "Classification Approaches for Financial Behavioral Profiles",
+        "relevance": "high",
+        "justification": "Reviews ML/DL classification techniques for predicting churn based on behavioral patterns."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Comprehensive review of predictive models (ML/DL) for churn across domains including financial services."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Churn prediction focuses on retention, not directly on budgeting strategies."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "low",
+        "justification": "Mentions profit-driven and retention strategies but not explicit budget recommendations."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews evaluation metrics, including profit-driven metrics like EMPC and EMPB."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Assesses ML/DL module performance through accuracy, AUC, F1-score, and business-aligned metrics."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive, PRISMA-guided systematic review synthesizing 240 studies on ML and DL for churn prediction from 2020-2024. It introduces a novel hierarchical taxonomy categorizing approaches into fine-grained subgroups, including profit-centric models, optimization/metaheuristics, and explainable AI. The review integrates bibliometric analysis with methodological synthesis, identifying persistent challenges such as class imbalance, concept drift, and limited interpretability. It highlights emerging trends including profit-driven modeling and adaptive learning, while explicitly noting the gap in fairness, ethics, and bias mitigation in churn prediction research.",
+    "directly_justifies": [
+      "Ensemble ML techniques (XGBoost, LightGBM, CatBoost) remain dominant for churn prediction across industries.",
+      "DL approaches (LSTM, CNN) are increasingly applied to complex sequential and unstructured customer data.",
+      "Class imbalance continues to bias model performance toward majority classes, reducing churn detection effectiveness.",
+      "Profit-oriented evaluation metrics like EMPC are underutilized despite closer alignment with business objectives.",
+      "Interpretability remains a significant concern, especially for complex DL models functioning as black-boxes."
+    ],
+    "limits": [
+      "No direct application to personal finance systems (PFMS); reviewed sectors include telecom, banking, retail, healthcare, and insurance.",
+      "Findings on dataset characteristics and challenges (class imbalance, concept drift) are applicable but not specific to personal financial data.",
+      "The review does not evaluate PFMS-specific constraints such as transaction-level data, savings goals, or debt management.",
+      "No analysis of temporal spending patterns characteristic of PFMS (e.g., Filipino 'occasions' or seasonal cycles).",
+      "The taxonomy and findings are general to churn prediction and do not address PFMS-specific user profiles or budget recommendation tasks."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains (1.A through 14.C) was performed. Domains related to personal finance systems (PFMS) were flagged where the review provided citeable claims. Domains 4.A (Landscape) and 4.B (Limitations) were selected due to the review's comprehensive mapping of churn prediction systems and their gaps. 5.A (Profiles) and 5.C (Classification) were chosen for the review's discussion of behavioral patterns and classification approaches. 6.A (Predictive Modeling) and 12.A/B (Evaluation) were directly relevant as core contributions of the review. 7.A (Budgeting) and 7.B (Recommendation) were considered but assigned low/contextual relevance as churn prediction does not explicitly address budgeting strategies. Domains 1.A-C (Filipino demographics/financial structure/behavior) were rejected as the review has no Philippines-specific focus. 2.A-D (Cultural practices, seasonal spending) and 3.A-C (Expense categorization, allocation constraints) were rejected as the review does not discuss spending categorization. Domains 8.A-C (Anomaly detection), 9.A-C (Mobile-first design), 10.A-C (Privacy/security), 11.A-B (Engagement/retention), 13.A-C (Savings/debt/surplus), and 14.A-C (Synthetic data/deployment) were also rejected as not covered. The overall topical coverage is focused on predictive modeling methodology and evaluation, with high relevance to classification approaches and evaluation frameworks."
+  },
+  "limitations": [
+    "No formal risk of bias or certainty assessments (e.g., ROBIS, GRADE) were conducted. [unacknowledged]",
+    "Search strategy was limited to English-language peer-reviewed studies, potentially excluding relevant grey literature or non-English publications. [unacknowledged]",
+    "Substantial heterogeneity in study designs, datasets, and evaluation protocols prevented meta-analysis. [acknowledged]",
+    "Many studies relied on proprietary datasets with limited transparency, restricting generalizability. [acknowledged]",
+    "Publication and reporting biases may be present, as studies with positive results are more likely published. [acknowledged]"
+  ],
+  "remember_this": [
+    "Ensemble ML (XGBoost, LightGBM) dominates churn prediction with strong structured data performance.",
+    "DL approaches (LSTM, CNN) excel at temporal patterns but face interpretability and computational cost challenges.",
+    "Class imbalance and concept drift are persistent challenges that bias model performance over time.",
+    "Profit-driven metrics (EMPC, EMPB) are underutilized but critical for business-aligned evaluation.",
+    "Explainable AI and adaptive learning show potential but have limited real-world deployment."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T12:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Imani et al_marked.md",
+      "converted_at": "2026-07-21T13:35:07Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

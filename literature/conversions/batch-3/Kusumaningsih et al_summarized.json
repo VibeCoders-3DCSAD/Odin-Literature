@@ -1,0 +1,276 @@
+{
+  "paper_id": "10.XXXX/unknown",
+  "designation": "local",
+  "title": "EMPOWERING YOUNG ADULTS THROUGH FINANCIAL MANAGEMENT: IMPLICATIONS FOR ACHIEVING THE SDGS AMONG INDONESIAN STUDENTS IN THE PHILIPPINES",
+  "authors": "Kusumaningsih, A.; Mariana; Handayani, S.",
+  "year": 2024,
+  "venue": "The 2nd International Conference on Economic Issues (ICONES 2024)",
+  "odin_topics": [
+    "1.A",
+    "1.B",
+    "1.C",
+    "2.A",
+    "2.D",
+    "9.A",
+    "10.A",
+    "11.A"
+  ],
+  "tldr": "Indonesian students in the Philippines prioritize long-term savings, use digital tools for budgeting, and face uncontrolled spending and peer pressure, revealing gaps between financial literacy and practice.",
+  "problem_and_motivation": "Indonesian students in the Philippines face unique financial challenges from currency fluctuations, social pressures, and gaps between financial knowledge and practical application. Understanding these experiences is needed to create targeted financial literacy programs that improve financial well-being and academic success.",
+  "approach": [
+    "Qualitative descriptive study using surveys and semistructured interviews with 96 Indonesian students in the Philippines.",
+    "Participants purposefully sampled for diversity in age, gender, and academic background.",
+    "Survey measured financial goal setting, budgeting practices, and technology usage via closed- and open-ended questions.",
+    "Semistructured interviews explored personal philosophies, financial literacy notions, and technology engagement.",
+    "Thematic analysis identified patterns in financial management priorities, technology use, and barriers faced.",
+    "Triangulation, member checking, and reflective journaling ensured data reliability and objectivity."
+  ],
+  "findings": [
+    "num: 96% of students have heard of financial planning and 85% consider it very important.",
+    "num: 92% have long-term financial aspirations, with 31.6% saving, 22.8% investing, and 19.3% furthering education.",
+    "num: Only 26.9% stick to their budget despite 73.1% reporting they budget monthly.",
+    "num: 46.2% save 10% of monthly income, while 61.5% have not invested.",
+    "num: Uncontrolled spending (29.8%) and peer influence (23.4%) are the top barriers to financial planning.",
+    "num: 53.8% use digital tools for financial management, but only 23.1% rate them very effective.",
+    "Students demonstrate positive attitudes toward financial stability but weak perceived behavioral control over budgeting.",
+    "Cognitive biases like overconfidence and present bias contribute to overspending and impulsive consumption.",
+    "Peer pressure and social environments strongly influence spending, undermining long-term financial goals.",
+    "Bridging financial awareness and effective practice remains a persistent challenge."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [
+    {
+      "term": "SDGs",
+      "definition": "Sustainable Development Goals, a set of global targets including poverty reduction (SDG 1) and responsible consumption (SDG 12)."
+    },
+    {
+      "term": "TPB",
+      "definition": "Theory of Planned Behavior, which explains behavior through attitudes, subjective norms, and perceived behavioral control."
+    },
+    {
+      "term": "SCT",
+      "definition": "Social Cognitive Theory, which emphasizes observational learning, self-efficacy, and reciprocal interactions between personal, behavioral, and environmental factors."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Lusardi",
+      "year": 2020,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Financial literacy leads to sub-optimal choices, excessive indebtedness, or low savings when lacking.",
+      "role": "context"
+    },
+    {
+      "author": "Xiao",
+      "year": 2021,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Financial literacy contributes to debt management and influences wealth growth across a lifetime.",
+      "role": "context"
+    },
+    {
+      "author": "Atkinson",
+      "year": 2018,
+      "page": 1,
+      "paragraph": 1,
+      "claim": "Financial literacy helps attain SDGs by alleviating poverty and fostering economic equality.",
+      "role": "context"
+    },
+    {
+      "author": "Grohmann",
+      "year": 2018,
+      "page": 1,
+      "paragraph": 2,
+      "claim": "Financial literacy influences savings behavior and financial management among young adults.",
+      "role": "context"
+    },
+    {
+      "author": "Zhang",
+      "year": 2019,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Financial technology can make young adults better financial decision-makers.",
+      "role": "context"
+    },
+    {
+      "author": "Leitner",
+      "year": 2019,
+      "page": 3,
+      "paragraph": 1,
+      "claim": "Peer influence contributes to loss of self-control in spending, negating technological benefits.",
+      "role": "context"
+    },
+    {
+      "author": "Ajzen",
+      "year": 2020,
+      "page": 4,
+      "paragraph": 1,
+      "claim": "TPB posits that attitudes, subjective norms, and perceived behavioral control determine behavior.",
+      "role": "methodology"
+    },
+    {
+      "author": "Hirshleifer",
+      "year": 2018,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Cognitive biases like anchoring cause poor financial investment decisions.",
+      "role": "methodology"
+    },
+    {
+      "author": "Feng",
+      "year": 2017,
+      "page": 4,
+      "paragraph": 2,
+      "claim": "Emotional aspects such as fear and peer pressure play a significant role in financial management.",
+      "role": "methodology"
+    },
+    {
+      "author": "Bandura",
+      "year": 2018,
+      "page": 5,
+      "paragraph": 1,
+      "claim": "SCT explains behavior from reciprocal relationships of personal, behavioral, and environmental factors.",
+      "role": "methodology"
+    },
+    {
+      "author": "Briñol",
+      "year": 2019,
+      "page": 5,
+      "paragraph": 2,
+      "claim": "High financial self-efficacy leads to effective budgeting, saving, and investment behaviors.",
+      "role": "methodology"
+    },
+    {
+      "author": "Denzin",
+      "year": 2018,
+      "page": 6,
+      "paragraph": 1,
+      "claim": "Qualitative methods elicit rich descriptions of participants' experiences and perspectives.",
+      "role": "methodology"
+    },
+    {
+      "author": "Etikan",
+      "year": 2016,
+      "page": 6,
+      "paragraph": 2,
+      "claim": "Purposeful sampling provides insights into financial management in a foreign context.",
+      "role": "methodology"
+    },
+    {
+      "author": "Braun",
+      "year": 2016,
+      "page": 7,
+      "paragraph": 1,
+      "claim": "Thematic analysis identifies patterns in financial management practices.",
+      "role": "methodology"
+    },
+    {
+      "author": "Thaler",
+      "year": 2021,
+      "page": 8,
+      "paragraph": 3,
+      "claim": "Cognitive biases such as overconfidence and present bias cause students to squander savings.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.A",
+        "name": "Filipino Young Professionals as a Demographic",
+        "relevance": "medium",
+        "justification": "Focuses on Indonesian students in the Philippines, a young adult demographic in a foreign context."
+      },
+      {
+        "code": "1.B",
+        "name": "Financial Structure of Filipino Young Professionals",
+        "relevance": "medium",
+        "justification": "Discusses budgeting, saving, and investment behaviors of students studying in the Philippines."
+      },
+      {
+        "code": "1.C",
+        "name": "Financial Behavior of Filipino Young Professionals",
+        "relevance": "high",
+        "justification": "Core focus on financial management practices, goal setting, spending habits, and technology use."
+      },
+      {
+        "code": "2.A",
+        "name": "Culturally Specific Financial Practices",
+        "relevance": "medium",
+        "justification": "Examines sociocultural contexts shaping financial behavior for Indonesian students abroad."
+      },
+      {
+        "code": "2.D",
+        "name": "Filipino Spending Cycles and \"Occasions\"",
+        "relevance": "low",
+        "justification": "Tangentially mentions social activities and peer influence but not specific Filipino spending cycles."
+      },
+      {
+        "code": "9.A",
+        "name": "Mobile-First Design Principles and Rationale",
+        "relevance": "contextual",
+        "justification": "Mentions digital tools and apps but does not discuss design principles."
+      },
+      {
+        "code": "10.A",
+        "name": "Data Privacy and Security in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions technology use but no discussion of data privacy or security."
+      },
+      {
+        "code": "11.A",
+        "name": "Engagement Dynamics in Personal Finance Applications",
+        "relevance": "contextual",
+        "justification": "Reports low effectiveness of digital tools but does not analyze engagement dynamics."
+      }
+    ],
+    "contribution_to_field": "This paper provides empirical evidence on financial management practices among Indonesian students in the Philippines, highlighting the gap between financial literacy and practical application. It integrates the Theory of Planned Behavior, Behavioral Finance Theory, and Social Cognitive Theory to explain financial behaviors in a cross-cultural educational context. The study identifies specific barriers such as peer pressure, uncontrolled spending, and ineffective technology use that undermine financial discipline. It connects personal financial management to broader sustainable development goals, suggesting that improved financial literacy can contribute to poverty reduction and responsible consumption. The findings offer actionable insights for designing culturally tailored financial literacy interventions for international students.",
+    "directly_justifies": [
+      "Only 26.9% of students stick to their budget despite high awareness of financial planning.",
+      "Uncontrolled spending (29.8%) and peer influence (23.4%) are the top barriers to financial management.",
+      "Only 23.1% rate digital financial tools as very effective, despite 53.8% using them.",
+      "Cognitive biases like overconfidence and present bias lead to impulsive spending and poor savings.",
+      "Peer-led financial literacy workshops and mentorship programs may improve self-efficacy and financial skills."
+    ],
+    "limits": [
+      "Qualitative descriptive design limits generalizability to broader populations.",
+      "Sample is limited to Indonesian students in the Philippines, not representative of all young adults in the Philippines.",
+      "Self-reported data may introduce social desirability bias. [unacknowledged]",
+      "Does not evaluate specific financial management systems or algorithms. [unacknowledged]",
+      "Lacks longitudinal data to assess changes in financial behavior over time. [unacknowledged]"
+    ],
+    "topic_mapping_rationale": "All topic domains were systematically scanned against the paper's content. The paper was flagged for topics related to financial behavior (1.C) as its core contribution, with high relevance. Topics on demographic context (1.A) and financial structure (1.B) received medium relevance as the study focuses on young adults in a foreign setting and their financial practices. Culturally specific practices (2.A) were given medium relevance due to the sociocultural framing of Indonesian students abroad. Topics on Filipino spending cycles (2.D) were considered and rejected as the paper does not specifically address Filipino patterns but rather general student spending. Technology-related topics (9.A, 10.A, 11.A) were assessed as contextual since the paper mentions digital tool usage without examining design, privacy, or engagement dynamics. No topics on algorithmic modeling, predictive forecasting, or system evaluation were flagged, as the paper employs a qualitative descriptive methodology with no computational components. Overall, the paper's topical coverage centers on behavioral financial management and literacy, with secondary relevance to demographic and cultural factors."
+  },
+  "limitations": [
+    "Qualitative descriptive design limits generalizability to broader populations.",
+    "Sample is limited to Indonesian students in the Philippines, not representative of all young adults in the Philippines.",
+    "Self-reported data may introduce social desirability bias. [unacknowledged]",
+    "Does not evaluate specific financial management systems or algorithms. [unacknowledged]",
+    "Lacks longitudinal data to assess changes in financial behavior over time. [unacknowledged]"
+  ],
+  "remember_this": [
+    "Only 26.9% of students stick to their budget despite high awareness.",
+    "Uncontrolled spending and peer influence are top barriers to financial management.",
+    "53.8% use digital tools but only 23.1% find them very effective.",
+    "Gap between financial literacy and practice is a persistent challenge.",
+    "Peer-led workshops may improve self-efficacy and financial skills."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Kusumaningsih et al_marked.md",
+      "converted_at": "2026-07-21T13:53:48Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

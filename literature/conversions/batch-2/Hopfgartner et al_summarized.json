@@ -1,0 +1,83 @@
+{
+  "paper_id": "10.1007/s11469-024-01312-1",
+  "designation": "international-algorithm-specific",
+  "title": "Using Artificial Intelligence Algorithms to Predict Self-Reported Problem Gambling Among Online Casino Gamblers from Different Countries Using Account-Based Player Data",
+  "authors": "Hopfgartner, N.; Auer, M.; Helic, D.; Griffiths, M. D.",
+  "year": 2026,
+  "venue": "International Journal of Mental Health and Addiction",
+  "odin_topics": ["5.A", "5.C", "6.A"],
+  "tldr": "Tests five ML models to predict self-reported problem gambling across 1,743 British, Canadian, and Spanish online casino gamblers, finding behavioral variables more predictive than monetary ones.",
+  "problem_and_motivation": "Online gambling operators need predictive models for early detection of problem gambling, but existing research lacks cross-country validation and clarity on whether behavioral or monetary variables are most predictive.",
+  "approach": [
+    "Used a secondary dataset of 1,743 online casino gamblers from Britain, Canada, and Spain (39% female, mean age 42.4).",
+    "Employed hierarchical logistic regression to examine demographic, behavioral, and monetary intensity associations.",
+    "Tested five machine learning models to predict self-reported problem gambling (PGSI >=8).",
+    "Compared model performance with and without country-specific training data.",
+    "Analyzed behavioral variables including self-exclusions, in-session deposits, and account depletion."
+  ],
+  "findings": [
+    "num: 27.4% of participants scored 8+ on the PGSI (problem gambling threshold).",
+    "Behavioral variables (self-exclusions, frequent deposits, account depletion) were paramount over monetary intensity variables.",
+    "Machine learning models effectively predicted problem gambling across countries without country-specific training data.",
+    "Incorporating country-specific data improved overall model performance.",
+    "Specific behavioral patterns are universal, with nuanced cross-country differences."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {"equation": "None.", "explanation": ""}
+  ],
+  "definitions": [
+    {"term": "PGSI", "definition": "Problem Gambling Severity Index"},
+    {"term": "ML", "definition": "Machine Learning"},
+    {"term": "AUROC", "definition": "Area Under the Receiver Operating Characteristic curve (location approximate, see Methods)"}
+  ],
+  "citations": [
+    {"author": "Finkenwirth et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Variability in wagered amount was most important predictor of self-exclusion.", "role": "finding"},
+    {"author": "Hopfgartner et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Behavioral variables predicted self-exclusion better than monetary metrics.", "role": "finding"},
+    {"author": "Catania & Griffiths", "year": 2021, "page": 0, "paragraph": 0, "claim": "Self-exclusion is not a reliable proxy for problem gambling.", "role": "critique"},
+    {"author": "Murch et al.", "year": 2023, "page": 0, "paragraph": 0, "claim": "Model with 10 variables achieved AUC of 84% for problem gambling prediction.", "role": "baseline"},
+    {"author": "Perrot et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "AUC values were 83% and 74% for sports bettors and lottery players.", "role": "baseline"},
+    {"author": "Auer & Griffiths", "year": 2023, "page": 0, "paragraph": 0, "claim": "Self-reported problem gamblers lost less money but deposited more frequently per session.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "5.A", "name": "Financial Behavioral Profiles in Personal Finance", "relevance": "medium", "justification": "Classifies gamblers into risk profiles using account-based behavioral data."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "high", "justification": "Core methodology is ML classification of behavioral profiles from transactional data."},
+      {"code": "6.A", "name": "Predictive Modeling in Personal Finance Systems", "relevance": "high", "justification": "Applies predictive ML models across multiple countries to financial risk behavior."}
+    ],
+    "contribution_to_field": "This paper demonstrates that behavioral variables (self-exclusions, deposit patterns, account depletion) are more predictive of problem gambling than monetary intensity variables. It shows that ML models can generalize across countries without country-specific training, though incorporating such data improves performance. The cross-country design advances understanding of universal versus context-specific behavioral risk markers.",
+    "directly_justifies": [
+      "Behavioral variables predict problem gambling better than monetary intensity measures.",
+      "ML models predict problem gambling across countries without country-specific training data.",
+      "Country-specific training data improves cross-national model performance."
+    ],
+    "limits": [
+      "Dataset from a single operator may not represent the broader online casino population.",
+      "Self-reported PGSI as ground truth has known limitations.",
+      "Results may not generalize to other gambling modalities (sports betting, poker)."
+    ],
+    "topic_mapping_rationale": "Systematic scan across all 14 topic domains was performed. Domain 5 (Profiles and Classification) was flagged as high relevance because ML classification of behavioral risk profiles is the core methodology. Domain 6 (Predictive Modeling) was flagged as high for the same reason. All other domains (1-4, 7-14) were rejected as the paper addresses gambling risk detection, not personal finance systems."
+  },
+  "limitations": [
+    "Secondary dataset from a single operator may introduce selection bias.",
+    "PGSI self-report as ground truth may not capture all forms of gambling harm.",
+    "Limited to online casino gamblers; other modalities excluded."
+  ],
+  "remember_this": [
+    "Behavioral variables predict problem gambling better than monetary variables.",
+    "ML models generalize across countries without country-specific training.",
+    "27.4% of online casino gamblers scored PGSI 8+ (problem gambling).",
+    "Cross-country approach reveals both universal and context-specific risk patterns."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T12:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "Hopfgartner et al_marked.md",
+      "converted_at": "2026-07-22T13:35:00Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

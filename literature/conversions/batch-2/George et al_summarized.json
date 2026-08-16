@@ -1,0 +1,87 @@
+{
+  "paper_id": "10.63125/913ksy63",
+  "designation": "international",
+  "title": "Machine Learning for Fraud Detection in Digital Banking: A Systematic Literature Review",
+  "authors": "George, M. Z. H.; Alam, M. K.; Hasan, M. T.",
+  "year": 2023,
+  "venue": "ASRC Procedia: Global Perspectives in Science and Scholarship",
+  "odin_topics": ["4.A", "4.B", "5.C", "8.B", "10.A"],
+  "tldr": "Systematic review of 118 studies on ML fraud detection in digital banking, finding supervised learning dominant but deep learning emerging, with hybrid models showing superior adaptability.",
+  "problem_and_motivation": "Digital banking fraud is a growing systemic risk yet detection research remains fragmented across methodologies, regions, and regulatory contexts. No comprehensive synthesis exists.",
+  "approach": [
+    "Followed PRISMA guidelines with structured identification, screening, eligibility, and inclusion process.",
+    "Reviewed 118 peer-reviewed studies and institutional reports on ML fraud detection.",
+    "Analyzed supervised, unsupervised, deep learning, and hybrid model paradigms.",
+    "Compared cross-regional adoption patterns across EU, North America, and emerging economies.",
+    "Evaluated interpretability frameworks (SHAP, LIME) and evaluation metrics (precision, recall, F1, PR-AUC)."
+  ],
+  "findings": [
+    "Supervised learning (decision trees, logistic regression, SVM) remains dominant due to interpretability.",
+    "Deep learning (RNN, CNN, LSTM) transformative but faces interpretability and real-time deployment challenges.",
+    "Hybrid models combining supervised, unsupervised, and deep learning show superior detection accuracy.",
+    "EU emphasizes PSD2/GDPR compliance; North America leverages fintech partnerships; emerging economies face infrastructure gaps.",
+    "SHAP and LIME improve model transparency for regulatory acceptance.",
+    "Gaps remain in reproducibility, robustness under distributional shift, and criminological theory integration."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Digital Banking Fraud Detection Framework.",
+    "Figure 2: Process Flow of Fraud Detection Systems.",
+    "Figure 3: Fraud Detection Evolution in Finance.",
+    "Figure 4: Fraud Detection Machine Learning Framework."
+  ],
+  "key_equations": [],
+  "definitions": [
+    {"term": "PR-AUC", "definition": "Precision-Recall Area Under Curve for imbalanced fraud data."},
+    {"term": "SHAP", "definition": "SHapley Additive Explanations for model interpretability."},
+    {"term": "LIME", "definition": "Local Interpretable Model-agnostic Explanations."},
+    {"term": "PSD2", "definition": "EU Payment Services Directive 2 for strong customer authentication."}
+  ],
+  "citations": [
+    {"author": "Ngai et al.", "year": 2011, "page": 0, "paragraph": 0, "claim": "Supervised learning decision trees for fraud classification.", "role": "baseline"},
+    {"author": "Carcillo et al.", "year": 2021, "page": 0, "paragraph": 0, "claim": "Hybrid approaches reduce false positives while improving recall.", "role": "finding"},
+    {"author": "Susto et al.", "year": 2018, "page": 0, "paragraph": 0, "claim": "Anomaly detection extends to contexts with scarce labeled data.", "role": "methodology"},
+    {"author": "Hashemi et al.", "year": 2022, "page": 0, "paragraph": 0, "claim": "Fraud as deviation from expected behavior.", "role": "context"},
+    {"author": "Vynokurova et al.", "year": 2020, "page": 0, "paragraph": 0, "claim": "Deep learning shows strong performance on real transaction data.", "role": "finding"}
+  ],
+  "topic_relevance": {
+    "topics": [
+      {"code": "4.A", "name": "Landscape of Existing Personal Finance Systems", "relevance": "high", "justification": "Comprehensive review of fraud detection in digital banking systems."},
+      {"code": "4.B", "name": "Limitations and Gaps in Existing Systems", "relevance": "high", "justification": "Identifies gaps in reproducibility, robustness, and theory integration."},
+      {"code": "5.C", "name": "Classification Approaches for Financial Behavioral Profiles", "relevance": "medium", "justification": "Reviews classification methods for fraudulent behavior detection."},
+      {"code": "8.B", "name": "Anomaly Detection Algorithms for Personal Spending Data", "relevance": "high", "justification": "Reviews anomaly detection and deep learning for transaction monitoring."},
+      {"code": "10.A", "name": "Data Privacy and Security in Personal Finance Systems", "relevance": "medium", "justification": "Discusses regulatory compliance and data protection constraints."}
+    ],
+    "contribution_to_field": "Provides systematic synthesis of 118 studies on ML-based fraud detection. Maps methodological evolution from rule-based to hybrid deep learning systems. Identifies cross-regional regulatory and infrastructure variations affecting adoption.",
+    "directly_justifies": [
+      "Supervised learning dominates but deep learning is emerging in fraud detection.",
+      "Hybrid models combining paradigms show superior adaptability.",
+      "SHAP and LIME enhance model transparency for regulatory compliance.",
+      "Gaps remain in reproducibility and distributional shift robustness."
+    ],
+    "limits": [
+      "Review limited to studies published before search date; recent innovations may be excluded."
+    ],
+    "topic_mapping_rationale": "Systematically scanned all domains. Assigned 4.A, 4.B, 8.B high relevance. Assigned 5.C, 10.A medium. Rejected demographic and budgeting topics as paper focuses on fraud detection technology."
+  },
+  "limitations": [
+    "Review limited to 118 studies; may miss emerging work. [unacknowledged]",
+    "No original empirical experiments or model comparisons.",
+    "Cross-regional analysis may oversimplify within-region variations."
+  ],
+  "remember_this": [
+    "Supervised learning dominates; deep learning emerging for fraud detection.",
+    "Hybrid models show superior adaptability to evolving fraud tactics.",
+    "SHAP and LIME improve model transparency for regulators.",
+    "Cross-regional adoption varies by infrastructure and regulation.",
+    "Reproducibility and distributional shift robustness remain gaps."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T00:00:00Z",
+    "summarizer_model": "opencode-big-pickle",
+    "conversion_reference": {
+      "file": "George et al_marked.md",
+      "converted_at": "2026-07-22T13:25:30Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

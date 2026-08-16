@@ -1,0 +1,283 @@
+{
+  "paper_id": "10.1080/13696998.2026.2630598",
+  "designation": "international-algorithm-specific",
+  "title": "Comparing deep learning and classical regression approaches for predicting healthcare expenditure and spending: a systematic review",
+  "authors": "Lee, J. T.; Yeh, M. H.-S.; Li, V. C.-S.; Chen, H.-H.; Liu, Y.-H.; Chen, Y.-C.; Wu, D. B.-C.",
+  "year": 2023,
+  "venue": "Journal of Medical Economics",
+  "odin_topics": [
+    "6.A",
+    "6.B",
+    "7.A",
+    "7.B",
+    "7.C",
+    "8.A",
+    "8.B",
+    "12.A",
+    "12.B",
+    "12.C"
+  ],
+  "tldr": "Sequential deep learning models, especially LSTM and CNN-LSTM hybrids, consistently outperform regression and tree-based methods for longitudinal healthcare cost prediction, while tree-based methods remain highly competitive for cross-sectional tabular data.",
+  "problem_and_motivation": "Accurate individual-level healthcare cost prediction is critical for insurance underwriting, risk adjustment, and budget planning. Traditional statistical models often fail to capture complex nonlinear interactions and temporal patterns in health data, but the conditions under which deep learning provides added value remain unclear.",
+  "approach": [
+    "Conducted a systematic review (PROSPERO CRD420251129440) searching Web of Science, PubMed, Embase, and Scopus through August 2025.",
+    "Included eight studies using real-world individual-level data that compared at least one deep learning architecture with a classical regression model.",
+    "Extracted data on population, predictors, outcome horizon, model type, validation strategy, performance metrics, calibration, and interpretability.",
+    "Synthesized findings narratively, categorizing studies by model type, prediction task, and performance benchmark.",
+    "Formulated the Complexity–Performance Hypothesis to explain when deep learning outperforms classical methods."
+  ],
+  "findings": [
+    "num: Sequential deep learning models achieved approximately 10–20% reductions in RMSE/MAE over classical regression in longitudinal studies.",
+    "num: R2 improvements for deep learning over regression ranged from 0.01 to 0.15 in longitudinal prediction tasks.",
+    "num: AUROC for high-risk classification using deep learning reached up to 0.78.",
+    "Prior costs and utilization were consistently the strongest predictors across all studies.",
+    "Social determinants of health and free-text features were rarely incorporated into predictive models.",
+    "Tree-based methods (Random Forest, GBM) often matched or exceeded shallow neural networks in cross-sectional cost prediction.",
+    "Shallow feed-forward neural networks showed limited benefit over GLM for tabular cross-sectional data.",
+    "Multimodal deep learning integrating structured and unstructured EMR data reduced prediction error by roughly 12–15%.",
+    "num: In one study, a recurrent neural network increased test R2 from 0.14–0.17 to 0.30 for PMPM expenditure prediction.",
+    "Most studies relied on single-country, single-database designs with limited external validation."
+  ],
+  "key_figures_tables": [
+    "Figure 1: PRISMA flow diagram → 8 studies met inclusion criteria.",
+    "Figure 2: Model performance by data complexity → Deep learning excels in longitudinal/multimodal regimes.",
+    "Table 1: Characteristics of included studies → Eight studies across US, Europe, and Asia.",
+    "Table 2: Comparative findings of deep learning vs. classical models → LSTM and CNN-LSTM yield strongest gains.",
+    "Table 3: Neural network architectures applied → Architectures matched to data type and temporal structure.",
+    "Table 4: Challenges and strategies for deep learning in cost prediction → Five fundamental challenges identified."
+  ],
+  "key_equations": [
+    {
+      "equation": "RMSE = \\sqrt{\\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2}",
+      "explanation": "Root Mean Square Error for prediction accuracy."
+    },
+    {
+      "equation": "MAE = \\frac{1}{n} \\sum_{i=1}^{n} |y_i - \\hat{y}_i|",
+      "explanation": "Mean Absolute Error for prediction error magnitude."
+    },
+    {
+      "equation": "R^2 = 1 - \\frac{\\sum (y_i - \\hat{y}_i)^2}{\\sum (y_i - \\bar{y})^2}",
+      "explanation": "Coefficient of determination for model fit."
+    },
+    {
+      "equation": "AUROC = \\int_0^1 TPR(FPR^{-1}(x))\\,dx",
+      "explanation": "Area under ROC curve for classification performance."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "LSTM",
+      "definition": "Long Short-Term Memory, a recurrent neural network architecture for sequence data."
+    },
+    {
+      "term": "CNN",
+      "definition": "Convolutional Neural Network, used for spatial feature extraction."
+    },
+    {
+      "term": "GLM",
+      "definition": "Generalized Linear Model, a traditional regression framework."
+    },
+    {
+      "term": "GBM",
+      "definition": "Gradient Boosting Machine, an ensemble tree-based method."
+    },
+    {
+      "term": "EHR",
+      "definition": "Electronic Health Record, digital patient data from clinical settings."
+    },
+    {
+      "term": "PMPM",
+      "definition": "Per Member Per Month, a healthcare expenditure metric."
+    },
+    {
+      "term": "XAI",
+      "definition": "Explainable Artificial Intelligence, methods for model interpretability."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Esteva",
+      "year": 2019,
+      "page": 24,
+      "paragraph": 2,
+      "claim": "Deep learning offers promise for modeling high-dimensional heterogeneous health data.",
+      "role": "context"
+    },
+    {
+      "author": "Drewe-Boss",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DNN outperformed ridge regression in predicting next-year total healthcare costs in Germany.",
+      "role": "finding"
+    },
+    {
+      "author": "LeCun",
+      "year": 2015,
+      "page": 436,
+      "paragraph": 0,
+      "claim": "Deep learning learns latent feature interactions and nonlinearities.",
+      "role": "methodology"
+    },
+    {
+      "author": "Topol",
+      "year": 2019,
+      "page": 44,
+      "paragraph": 0,
+      "claim": "Many papers provide limited comparisons between neural networks and benchmarks.",
+      "role": "critique"
+    },
+    {
+      "author": "Lewis",
+      "year": 2021,
+      "page": 1164,
+      "paragraph": 0,
+      "claim": "Sequential deep models outperformed gradient boosting for preventable hospitalization prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Yang",
+      "year": 2018,
+      "page": 131,
+      "paragraph": 0,
+      "claim": "RNN increased test R2 from 0.14-0.17 to 0.30 for PMPM expenditure prediction.",
+      "role": "finding"
+    },
+    {
+      "author": "Kaushik",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Stacked LSTMs improved RMSE by nearly 19% over ARIMA for medication spending.",
+      "role": "finding"
+    },
+    {
+      "author": "Vimont",
+      "year": 2022,
+      "page": 211,
+      "paragraph": 0,
+      "claim": "Shallow MLP performed similarly to GLM but was outperformed by Random Forest.",
+      "role": "finding"
+    },
+    {
+      "author": "Yu",
+      "year": 2021,
+      "page": 107052,
+      "paragraph": 0,
+      "claim": "Multi-view DNN with structured and textual EMR data reduced prediction error by 12-15%.",
+      "role": "finding"
+    },
+    {
+      "author": "Vasey",
+      "year": 2022,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "DECIDE-AI provides principles for transparent benchmarking of decision support systems.",
+      "role": "methodology"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Directly evaluates predictive models for expenditure forecasting."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "high",
+        "justification": "Reviews LSTM, CNN-LSTM, RNN for time-series cost prediction."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "medium",
+        "justification": "Forecasting supports budget planning and resource allocation."
+      },
+      {
+        "code": "7.B",
+        "name": "Budget Recommendation in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Cost prediction informs recommendation but is not the core focus."
+      },
+      {
+        "code": "7.C",
+        "name": "Constrained Optimization Approaches for Budget Allocation",
+        "relevance": "contextual",
+        "justification": "Mentions resource allocation but does not use optimization."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "High-cost identification relates to anomaly-like detection."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "low",
+        "justification": "High-cost classification is discussed but not anomaly detection per se."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "high",
+        "justification": "Reviews validation strategies and performance metrics extensively."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Evaluates RMSE, MAE, R2, AUROC for each model family."
+      },
+      {
+        "code": "12.C",
+        "name": "Evaluation Methodologies for Budget Recommendation Systems",
+        "relevance": "medium",
+        "justification": "Discusses calibration, fairness, and benchmarking methodologies."
+      }
+    ],
+    "contribution_to_field": "This systematic review provides the first comprehensive synthesis comparing deep learning and classical regression for healthcare cost prediction. It identifies the conditions under which each approach performs best and proposes the Complexity–Performance Hypothesis as an explanatory framework. The review systematically catalogs evaluation frameworks, architectures, and performance metrics used in the literature. It also identifies five fundamental methodological challenges, including limited economic interpretability and insufficient benchmarking, and offers actionable strategies for future research.",
+    "directly_justifies": [
+      "Deep learning offers clear gains for longitudinal, sequence-rich cost forecasting.",
+      "Tree-based methods remain highly competitive for cross-sectional tabular prediction.",
+      "The predictive advantages of deep learning emerge when model capacity matches data complexity.",
+      "Prior costs and utilization are consistently the strongest predictors.",
+      "Social determinants and free-text features are rarely incorporated in current models."
+    ],
+    "limits": [
+      "Evidence is based on a small heterogeneous set of eight studies.",
+      "Most studies lack external or temporal validation across independent datasets.",
+      "Prediction horizons are predominantly short-term (one year).",
+      "Calibration, economic interpretability, and fairness are sparsely assessed.",
+      "Social determinants and behavioral predictors are rarely incorporated."
+    ],
+    "topic_mapping_rationale": "A systematic scan across all topic domains was performed. Predictive modeling (6.A) and forecasting algorithms (6.B) were flagged as highly relevant because the paper directly compares deep learning and classical methods for expenditure prediction. Evaluation frameworks (12.A, 12.B, 12.C) received high relevance due to extensive discussion of validation strategies, performance metrics, and benchmarking. Budgeting strategies (7.A) and recommendation (7.B) were rated medium/contextual as cost prediction informs but is not the central focus. Anomaly detection topics (8.A, 8.B) were rated contextual/low as high-cost identification is mentioned but not framed as anomaly detection. Domains related to Filipino demographics (1.A-1.C), culturally specific practices (2.A-2.D), expense categorization (3.A-3.C), existing systems (4.A-4.B), behavioral profiles (5.A-5.C), user engagement (11.A-11.B), savings/debt management (13.A-13.C), synthetic data generation (14.A), and ML deployment (14.B-14.C) were considered but rejected as the paper does not address these specific domains. The paper's overall coverage is methodologically focused on comparing predictive modeling approaches across different data contexts."
+  },
+  "limitations": [
+    "Only eight studies were included, limiting the evidence base.",
+    "Quantitative meta-analysis was not feasible due to heterogeneity.",
+    "Most studies relied on single-country, single-database designs.",
+    "Full external validation across independent datasets was absent.",
+    "Prediction horizons were predominantly one year, limiting assessment of long-term robustness.",
+    "Calibration, economic interpretability, and fairness were sparsely assessed [unacknowledged]."
+  ],
+  "remember_this": [
+    "Sequential deep learning models reduce prediction error by 10-20% in longitudinal healthcare cost forecasting.",
+    "Tree-based methods remain competitive for cross-sectional tabular data due to interpretability and calibration.",
+    "Prior costs and utilization are the strongest predictors across all model types.",
+    "The Complexity–Performance Hypothesis states that model capacity should match data complexity.",
+    "Shallow neural networks offer limited benefit over GLM for cross-sectional cost prediction."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-3-opus-20240229",
+    "conversion_reference": {
+      "file": "Lee J. et al_marked.md",
+      "converted_at": "2026-07-21T13:55:24Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

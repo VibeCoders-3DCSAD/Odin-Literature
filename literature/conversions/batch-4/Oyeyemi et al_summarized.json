@@ -1,0 +1,116 @@
+{
+  "paper_id": "10.37502/IJSMR.2025.81004",
+  "designation": "local-algorithm-specific",
+  "title": "Machine Learning Approaches for Credit Risk Assessment in Emerging Markets",
+  "authors": "International Journal; Management Research",
+  "year": 2014,
+  "venue": "International Journal of Scientific and Management Research",
+  "odin_topics": [
+    "1.C",
+    "10.A",
+    "12.A",
+    "13.B",
+    "4.A",
+    "4.B",
+    "5.A"
+  ],
+  "tldr": "The cultivation of sound money habits is central to individual financial wellbeing and broader economic resilience. In the digital era, consumer credit has evolved from traditional lending instruments into data-driven platforms that both enable and influence financial behavior. This systematic literature review synthesizes academic and industry research on how alternative data sources, machine lea",
+  "problem_and_motivation": "The cultivation of sound money habits is central to individual financial wellbeing and broader economic resilience. In the digital era, consumer credit has evolved from traditional lending instruments into data-driven platforms that both enable and influence financial behavior. This systematic literature review synthesizes academic and industry research on how alternative data sources, machine learning techniques, and behavioral insights are integrated into credit systems to foster healthier mon",
+  "approach": [
+    "Auto-extraction - manual review needed."
+  ],
+  "findings": [
+    "Auto-extraction - manual review needed."
+  ],
+  "key_figures_tables": [
+    "None."
+  ],
+  "key_equations": [
+    {
+      "equation": "None.",
+      "explanation": ""
+    }
+  ],
+  "definitions": [],
+  "citations": [
+    {
+      "author": "None",
+      "year": 0,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Review pending.",
+      "role": "context"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "1.C",
+        "name": "1.C",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "10.A",
+        "name": "10.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "12.A",
+        "name": "12.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "13.B",
+        "name": "13.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.A",
+        "name": "4.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "4.B",
+        "name": "4.B",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      },
+      {
+        "code": "5.A",
+        "name": "5.A",
+        "relevance": "medium",
+        "justification": "Keyword-based assignment."
+      }
+    ],
+    "contribution_to_field": "Auto-extraction pending manual review.",
+    "directly_justifies": [
+      "Paper: Machine Learning Approaches for Credit Risk Assessment in Emerging Markets"
+    ],
+    "limits": [
+      "None identified."
+    ],
+    "topic_mapping_rationale": "Keyword-based topic mapping; manual review recommended."
+  },
+  "limitations": [
+    "Auto-summarized - requires manual verification."
+  ],
+  "remember_this": [
+    "Title: Machine Learning Approaches for Credit Risk Assessment in Emerging Markets",
+    "Year: 2014",
+    "Designation: local-algorithm-specific"
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-30T15:23:36Z",
+    "summarizer_model": "opencode/big-pickle",
+    "conversion_reference": {
+      "file": "Oyeyemi et al_marked.md",
+      "converted_at": "2026-07-21T08:01:43Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}

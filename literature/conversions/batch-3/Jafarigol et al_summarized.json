@@ -1,0 +1,323 @@
+{
+  "paper_id": "10.XXXX/unknown",
+  "designation": "international-algorithm-specific",
+  "title": "A Review of Machine Learning Techniques in Imbalanced Data and Future Trends",
+  "authors": "Jafarigol, E.; Trafalis, T. B.; Mohammadi, N.",
+  "year": 2025,
+  "venue": "Elsevier",
+  "odin_topics": [
+    "4.A",
+    "4.B",
+    "6.A",
+    "6.B",
+    "8.A",
+    "8.B",
+    "7.A",
+    "12.A",
+    "12.B",
+    "14.A"
+  ],
+  "tldr": "Provides a structured review of 258 papers on imbalanced learning, covering problem definition, data processing, algorithmic approaches, applications, and future research directions.",
+  "problem_and_motivation": "Imbalanced data severely biases classifiers toward the majority class, causing poor minority class performance. Despite many proposed methods, no unified guideline exists for selecting appropriate techniques across domains. This gap motivated a comprehensive review to create a general reference for researchers and practitioners.",
+  "approach": [
+    "Conducted a literature search using technical keywords related to imbalanced learning. ",
+    "Reviewed 258 peer-reviewed papers from archival journals and conferences published between 2000 and 2020. ",
+    "Categorized methods into three main approaches: problem definition (evaluation metrics), data processing (resampling), and algorithmic (cost-sensitive, ML models, ensemble). ",
+    "Organized the review to cover evaluation metrics, resampling methods, algorithmic techniques, and real-world applications. ",
+    "Discussed future research directions including highly imbalanced data, multi-class problems, time series, online learning, and distributed frameworks. "
+  ],
+  "findings": [
+    "num: 258 peer-reviewed papers were systematically reviewed.",
+    "num: Evaluation metrics are categorized into threshold, probability, and ranking types.",
+    "num: Resampling methods include basic (RUS, ROS) and advanced (SMOTE, ADASYN) techniques.",
+    "num: Algorithmic approaches include cost-sensitive learning, SVM, tree-based models, deep learning, and ensemble methods.",
+    "num: Applications span cybersecurity, bioinformatics, finance, natural disaster prediction, and computer vision.",
+    "num: Future challenges include highly imbalanced data, multi-class problems, time series, online streaming, and distributed learning."
+  ],
+  "key_figures_tables": [
+    "Figure 1: Technical keywords used in imbalanced learning literature → Search strategy overview.",
+    "Figure 2: General approaches in imbalanced learning (problem, data, algorithmic) → High-level framework.",
+    "Figure 3: Evaluation metrics in imbalanced learning → Visual categorization of metrics.",
+    "Figure 4: Data processing methods (resampling) → Taxonomy of resampling techniques.",
+    "Figure 5: Algorithmic approaches → Structured overview of ML methods.",
+    "Figure 6: Applications of imbalanced learning → Broad application domains.",
+    "Table 1: Confusion matrix → Foundation for threshold metrics.",
+    "Table 2: Threshold metrics → Definitions of accuracy, precision, recall, F-measure, G-mean.",
+    "Table 3: Probabilistic metrics → Definitions of MRM, distance metrics, log-loss.",
+    "Table 4: Ranking metrics → Definitions of ROC curve and AUC."
+  ],
+  "key_equations": [
+    {
+      "equation": "Accuracy = \\frac{TP + TN}{TP + TN + FP + FN}",
+      "explanation": "Overall classification correctness."
+    },
+    {
+      "equation": "Precision = \\frac{TP}{TP + FP}",
+      "explanation": "Correctness among positive predictions."
+    },
+    {
+      "equation": "Recall = \\frac{TP}{TP + FN}",
+      "explanation": "Completeness of positive class capture."
+    },
+    {
+      "equation": "F-measure = \\frac{(1 + \\beta^2) \\cdot Precision \\cdot Recall}{\\beta^2 \\cdot Precision + Recall}",
+      "explanation": "Harmonic mean of precision and recall."
+    },
+    {
+      "equation": "G-mean = \\sqrt{\\frac{TP}{TP+FN} \\cdot \\frac{TN}{TN+FP}}",
+      "explanation": "Balanced performance across classes."
+    },
+    {
+      "equation": "MCC = \\frac{TP \\cdot TN - FP \\cdot FN}{\\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}",
+      "explanation": "Correlation coefficient for binary classification."
+    },
+    {
+      "equation": "H(P,Q) = -(P(0) \\log Q(0) + P(1) \\log Q(1))",
+      "explanation": "Cross-entropy loss for binary classification."
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Imbalanced Learning",
+      "definition": "A machine learning subfield focused on classification when class distributions are severely skewed."
+    },
+    {
+      "term": "Rare Events",
+      "definition": "Events that occur significantly less often than common events, making classification challenging."
+    },
+    {
+      "term": "SMOTE",
+      "definition": "Synthetic Minority Over-sampling Technique; creates synthetic minority class examples."
+    },
+    {
+      "term": "ADASYN",
+      "definition": "Adaptive Synthetic Sampling; generates synthetic data based on density distribution."
+    },
+    {
+      "term": "Cost-Sensitive Learning",
+      "definition": "Methods that incorporate different misclassification costs for different classes."
+    },
+    {
+      "term": "AUC",
+      "definition": "Area Under the ROC Curve; a threshold-invariant ranking metric for classifier evaluation."
+    },
+    {
+      "term": "G-mean",
+      "definition": "Geometric mean of sensitivity and specificity; balances performance across both classes."
+    }
+  ],
+  "citations": [
+    {
+      "author": "Ferri",
+      "year": 2009,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Experimental analysis comparing and ranking evaluation metrics for imbalanced data.",
+      "role": "methodology"
+    },
+    {
+      "author": "Musicant",
+      "year": 2003,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Developed approach to maximize F-measure using SVMs.",
+      "role": "methodology"
+    },
+    {
+      "author": "Chawla",
+      "year": 2002,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed SMOTE, a synthetic minority over-sampling technique.",
+      "role": "methodology"
+    },
+    {
+      "author": "He",
+      "year": 2008,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced ADASYN, an adaptive synthetic sampling method.",
+      "role": "methodology"
+    },
+    {
+      "author": "Vapnik",
+      "year": 1999,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Introduced kernel-based SVM for classification and regression.",
+      "role": "methodology"
+    },
+    {
+      "author": "Huang",
+      "year": 2006,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Proposed Extreme Learning Machine (ELM) for neural networks.",
+      "role": "methodology"
+    },
+    {
+      "author": "Galar",
+      "year": 2011,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reviewed ensemble methods for class imbalance, including bagging and boosting.",
+      "role": "baseline"
+    },
+    {
+      "author": "Krawczyk",
+      "year": 2016,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Identified open challenges and future directions in imbalanced learning.",
+      "role": "context"
+    },
+    {
+      "author": "Haixiang",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Reviewed methods and applications for learning from class-imbalanced data.",
+      "role": "context"
+    },
+    {
+      "author": "Luque",
+      "year": 2019,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Examined impact of class imbalance on confusion matrix-based performance metrics.",
+      "role": "context"
+    },
+    {
+      "author": "Bauder",
+      "year": 2018,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Compared resampling approaches for Medicare fraud detection.",
+      "role": "finding"
+    },
+    {
+      "author": "Fernandez-Gomez",
+      "year": 2017,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Used ensemble methods for earthquake magnitude prediction in Chile.",
+      "role": "finding"
+    },
+    {
+      "author": "Jeong",
+      "year": 2020,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Used autoencoders for multiclass kidney disease classification.",
+      "role": "finding"
+    },
+    {
+      "author": "Trafalis",
+      "year": 2014,
+      "page": 0,
+      "paragraph": 0,
+      "claim": "Applied machine learning classifiers to imbalanced tornado data.",
+      "role": "finding"
+    }
+  ],
+  "topic_relevance": {
+    "topics": [
+      {
+        "code": "4.A",
+        "name": "Landscape of Existing Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Reviews fraud detection systems as an application area."
+      },
+      {
+        "code": "4.B",
+        "name": "Limitations and Gaps in Existing Systems",
+        "relevance": "contextual",
+        "justification": "Discusses sensitivity of methods to highly imbalanced data and future research needs."
+      },
+      {
+        "code": "6.A",
+        "name": "Predictive Modeling in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Mentions classification models for bankruptcy prediction and credit scoring."
+      },
+      {
+        "code": "6.B",
+        "name": "Forecasting Algorithms for Sequential Spending Data",
+        "relevance": "contextual",
+        "justification": "Cites time series classification with imbalanced data as a future research direction."
+      },
+      {
+        "code": "8.A",
+        "name": "Anomaly Detection in Personal Finance Systems",
+        "relevance": "contextual",
+        "justification": "Fraud detection is a major application discussed for imbalanced learning."
+      },
+      {
+        "code": "8.B",
+        "name": "Anomaly Detection Algorithms for Personal Spending Data",
+        "relevance": "contextual",
+        "justification": "Discusses ensemble methods for detecting fraudulent transactions."
+      },
+      {
+        "code": "7.A",
+        "name": "Budgeting Strategies as Domain Knowledge",
+        "relevance": "contextual",
+        "justification": "Not directly addressed; paper focuses on classification, not budget allocation."
+      },
+      {
+        "code": "12.A",
+        "name": "Evaluation Frameworks for Personal Finance Systems",
+        "relevance": "medium",
+        "justification": "Extensively reviews evaluation metrics (threshold, probabilistic, ranking) for imbalanced data."
+      },
+      {
+        "code": "12.B",
+        "name": "Evaluation of Algorithmic Modules",
+        "relevance": "high",
+        "justification": "Provides detailed review of evaluation metrics like F-measure, G-mean, AUC for model assessment."
+      },
+      {
+        "code": "14.A",
+        "name": "Synthetic Data Generation for Financial ML",
+        "relevance": "medium",
+        "justification": "Reviews SMOTE and ADASYN as synthetic data generation methods."
+      }
+    ],
+    "contribution_to_field": "This paper provides a comprehensive and structured taxonomy of imbalanced learning methods, spanning evaluation metrics, data preprocessing, algorithmic approaches, and applications. It systematically reviews 258 papers to consolidate knowledge across a rapidly expanding field. The paper identifies key challenges and future research directions, including highly imbalanced data, multi-class problems, time series, online learning, and distributed frameworks. It serves as a foundational reference for researchers and practitioners entering the imbalanced learning domain.",
+    "directly_justifies": [
+      "Imbalanced data causes severe bias toward majority classes.",
+      "Resampling methods include RUS, ROS, SMOTE, and ADASYN.",
+      "Cost-sensitive learning incorporates unequal misclassification costs.",
+      "Ensemble methods improve performance on imbalanced data.",
+      "AUC is a threshold-invariant ranking metric for classifiers."
+    ],
+    "limits": [
+      "Paper is a high-level review and does not provide empirical comparisons of the surveyed methods.",
+      "Applications section focuses on general domains but lacks in-depth financial system specifics.",
+      "Does not directly address budget recommendation or financial behavioral profiling."
+    ],
+    "topic_mapping_rationale": "All topic domains from the taxonomy were systematically scanned. Domains 4.A and 4.B were flagged as contextual because the paper discusses fraud detection systems as an application but does not review specific systems. Domains 6.A and 6.B were contextual, as the paper mentions predictive modeling for credit scoring and time series as a future direction. Domain 8.A and 8.B were contextual, with fraud detection being a major application. Domain 12.A and 12.B were assigned medium and high relevance, respectively, because the paper provides an extensive review of evaluation metrics and their categorization. Domain 14.A was assigned medium relevance due to the detailed review of synthetic data generation techniques. Domains related to Filipino demographics, financial behavior, culturally specific practices, user preferences, expense categorization, user-defined constraints, behavioral profiles, cold-start, constrained optimization, infeasibility handling, mobile-first design, data privacy, user engagement, retention, savings goal management, debt management, surplus management, model serving, and on-device inference were considered but rejected as the paper is a general methodology review and does not address these specific personal finance system design concerns. The paper's coverage is primarily methodological and applicable across many domains, with finance being one of several application areas mentioned."
+  },
+  "limitations": [
+    "The review is limited to papers published between 2000 and 2020, potentially missing recent advances. [unacknowledged]",
+    "It does not provide a quantitative meta-analysis or benchmark comparison of the surveyed methods. [unacknowledged]",
+    "The paper does not address the specific challenges of financial data, such as seasonality or user-defined constraints. [unacknowledged]",
+    "Computational complexity of ensemble methods is mentioned as a limitation, but not quantified. [acknowledged]"
+  ],
+  "remember_this": [
+    "Imbalanced data requires specialized evaluation metrics beyond accuracy.",
+    "SMOTE and ADASYN are widely used synthetic oversampling techniques.",
+    "Cost-sensitive learning minimizes misclassification costs for rare classes.",
+    "Ensemble methods combining resampling and boosting show strong performance.",
+    "Future research must address online and distributed imbalanced learning."
+  ],
+  "summarization_metadata": {
+    "summarized_at": "2026-07-22T00:00:00Z",
+    "summarizer_model": "claude-sonnet-4-20250514",
+    "conversion_reference": {
+      "file": "Jafarigol et al_marked.md",
+      "converted_at": "2026-07-21T13:36:29Z",
+      "converter_tool": "markitdown"
+    }
+  }
+}
